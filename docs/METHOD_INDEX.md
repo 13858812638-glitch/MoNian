@@ -1,3 +1,5 @@
+> **2026-10-19 桌面侧栏候选更新**：无新增类原型方法。`SearchNavigatorController` 构造器/`destroy` 管理目录缓存失效订阅与桌面分栏的生命周期；`capture`/`restore` 使用现有会话的可选 `navigator.paneWidth`；`resize` 同步分栏；`_section` 在桌面投影有效时直接切换分组显隐；`_cached`/`_renderProjection` 复用物理目录计数和行。`SearchResultRendererController._isOverscrolling` 保留原边界语义，在列表原点提前返回，避免读取布局高度。内部工厂 `src/features/navigator/desktop-pane.js#createDesktopNavigatorPane` 返回 `sync`/`restore`/`destroy`，事件回调、rAF 与指针捕获由此工厂创建和释放。
+
 > **注意**：本文件含原始冻结源码的方法来源行号，只作历史溯源。当前有效的 JS 路径、导出和类装配以 `docs/MODULE_INDEX.md`、`src/` 为准。
 
 本轮 picker-ios-portal.1：移除临时 registerPickerCaretVisualProbe 与 onload 注册；未新增或移动类方法。当前生产维护源为 152 个 JS 模块、639 条静态依赖，浮窗宿主已退役。生产新增仅为 iOS Picker Portal 的 CSS 绘制盒条件。

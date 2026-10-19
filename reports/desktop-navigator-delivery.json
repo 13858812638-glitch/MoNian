@@ -1,0 +1,20 @@
+{
+  "candidate": "GLS-v5.2-desktop-sidebar-20261019",
+  "branch": "fix/desktop-sidebar",
+  "packages": [
+    {
+      "path": "/workspace/artifacts/GLS-v5.2-Desktop-Sidebar-20261019-Overlay.zip",
+      "bytes": 425108,
+      "sha256": "3422c0c9678497db4f96ca3005e89e91373267ba4aa74b48b1faf54bb27b6243",
+      "crc": "PASS",
+      "matchesBuild": true
+    },
+    {
+      "path": "/workspace/artifacts/GLS-v5.2-Desktop-Sidebar-20261019-Source.zip",
+      "bytes": 8937323,
+      "sha256": "55afeca4f9249b815cd96d7432fc7c6f19f9e038bc75ae4e1356fdea16d44312",
+      "crc": "PASS",
+      "matchesBuild": true
+    }
+  ]
+}

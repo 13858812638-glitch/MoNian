@@ -2219,8 +2219,49 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
     flex-direction: row;
 }
 .local-search-navigator[data-nav-layout="split"] .local-search-facets {
-    flex: 0 0 clamp(var(--ls-nav-facet-width), 28%, 280px);
+    flex: 0 0 clamp(180px, var(--ls-nav-pane-width, clamp(var(--ls-nav-facet-width), 28%, 280px)), calc(100% - var(--ls-nav-result-min-width)));
     border-inline-end: 1px solid var(--ls-divider);
+}
+.local-search-nav-divider.local-search-resize-handle { display: none; }
+.local-search-navigator[data-nav-layout="split"] > .local-search-workspace > .local-search-nav-divider {
+    display: block;
+    position: relative;
+    z-index: 30;
+    flex: 0 0 8px;
+    width: 8px;
+    height: auto;
+    inset: auto;
+    margin-inline: -4px;
+    align-self: stretch;
+    cursor: col-resize;
+    touch-action: none;
+    outline: none;
+}
+.local-search-nav-divider::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 3px;
+    width: 2px;
+    background: transparent;
+}
+.local-search-nav-divider:is(:hover, :focus-visible)::after,
+.is-nav-resizing .local-search-nav-divider::after { background: var(--interactive-accent); }
+.local-search-navigator.is-nav-resizing,
+.local-search-navigator.is-nav-resizing * { cursor: col-resize !important; user-select: none !important; }
+/* Desktop group headings have a management action as well as a count. */
+.local-search-navigator:not([data-nav-layout="mobile"]) .local-search-nav-section-heading {
+    --ls-nav-count-action-reserve: calc(var(--ls-window-control-size) + var(--ls-tree-trailing-gap));
+}
+/* Disclosure buttons contain a glyph, never truncated button text. Keep the
+   default desktop host's button ellipsis/overflow policy out of this slot. */
+.local-search-navigator:not([data-nav-layout="mobile"]) .local-search-move-tree-toggle {
+    overflow: visible;
+    text-overflow: clip;
+}
+.local-search-navigator:not([data-nav-layout="mobile"]) .local-search-move-tree-toggle > svg {
+    display: block;
+    flex: none;
 }
 .local-search-navigator[data-nav-layout="split"] .local-search-main-pane {
     min-width: var(--ls-nav-result-min-width);

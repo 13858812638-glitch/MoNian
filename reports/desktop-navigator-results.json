@@ -1,0 +1,368 @@
+{
+  "results": [
+    {
+      "name": "desktop-light count and management do not overlap",
+      "pass": true,
+      "evidence": [
+        {
+          "noOverlap": true,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": true,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": true,
+          "arrowFits": true,
+          "expanded": "false",
+          "icon": "chevron-right"
+        }
+      ]
+    },
+    {
+      "name": "desktop-light arrows fit their hit targets",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light mouse collapse",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light keyboard expand",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light vault glyph matches expansion",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light resize handle exists",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light drag changes width",
+      "pass": true,
+      "evidence": {
+        "before": 252,
+        "after": 337
+      }
+    },
+    {
+      "name": "desktop-light keyboard changes width",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light width survives session restore",
+      "pass": true,
+      "evidence": {
+        "before": 327,
+        "after": 327,
+        "width": 327
+      }
+    },
+    {
+      "name": "desktop-light narrow split retains result space",
+      "pass": true,
+      "evidence": {
+        "left": 327,
+        "right": 353,
+        "total": 680
+      }
+    },
+    {
+      "name": "desktop-light keyboard maximum remains bounded",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light keyboard minimum remains usable",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light Escape cancels drag and restores width",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light stack hides resize handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light reopened view restores saved width",
+      "pass": true,
+      "evidence": {
+        "actual": 180,
+        "saved": 180,
+        "current": 180,
+        "layout": "split"
+      }
+    },
+    {
+      "name": "desktop-light destroy removes owned handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark count and management do not overlap",
+      "pass": true,
+      "evidence": [
+        {
+          "noOverlap": true,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": true,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": true,
+          "arrowFits": true,
+          "expanded": "false",
+          "icon": "chevron-right"
+        }
+      ]
+    },
+    {
+      "name": "desktop-dark arrows fit their hit targets",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark mouse collapse",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark keyboard expand",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark vault glyph matches expansion",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark resize handle exists",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark drag changes width",
+      "pass": true,
+      "evidence": {
+        "before": 252,
+        "after": 337
+      }
+    },
+    {
+      "name": "desktop-dark keyboard changes width",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark width survives session restore",
+      "pass": true,
+      "evidence": {
+        "before": 327,
+        "after": 327,
+        "width": 327
+      }
+    },
+    {
+      "name": "desktop-dark narrow split retains result space",
+      "pass": true,
+      "evidence": {
+        "left": 327,
+        "right": 353,
+        "total": 680
+      }
+    },
+    {
+      "name": "desktop-dark keyboard maximum remains bounded",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark keyboard minimum remains usable",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark Escape cancels drag and restores width",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark stack hides resize handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark reopened view restores saved width",
+      "pass": true,
+      "evidence": {
+        "actual": 180,
+        "saved": 180,
+        "current": 180,
+        "layout": "split"
+      }
+    },
+    {
+      "name": "desktop-dark destroy removes owned handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "top-of-tree collapse avoids per-row layout reads",
+      "pass": true,
+      "evidence": {
+        "reads": {
+          "rect": 0,
+          "client": 0,
+          "files": 0
+        },
+        "ticks": [
+          2,
+          0.4000000001396984,
+          0.30000000004656613,
+          0.2999999998137355,
+          0.20000000018626451,
+          0.19999999995343387,
+          0.30000000004656613,
+          0.30000000004656613,
+          0.2999999998137355,
+          0.4000000001396984,
+          0.39999999990686774,
+          0.30000000004656613
+        ],
+        "projection": [
+          6.300000000046566,
+          4.7000000001862645,
+          3.800000000046566,
+          4.7000000001862645,
+          3.300000000046566,
+          4.100000000093132,
+          4.199999999953434,
+          4.300000000046566,
+          4.300000000046566,
+          4.400000000139698,
+          4.300000000046566,
+          3.3999999999068677
+        ],
+        "heightReads": 0,
+        "overscroll": false
+      }
+    },
+    {
+      "name": "folder changes reuse structural inventory",
+      "pass": true,
+      "evidence": {
+        "rect": 0,
+        "client": 0,
+        "files": 0
+      }
+    },
+    {
+      "name": "top-of-results needs no scroll extent layout read",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "structural counts invalidate on create and rename",
+      "pass": true,
+      "evidence": {
+        "added": "1 · 13",
+        "renamed": "0 · 12"
+      }
+    },
+    {
+      "name": "cached folders retain exactly the current selection",
+      "pass": true,
+      "evidence": {
+        "selected": [
+          "Folder001"
+        ],
+        "before": 600,
+        "after": 600,
+        "child": true
+      }
+    },
+    {
+      "name": "scrolled navigation retains its anchor",
+      "pass": true,
+      "evidence": {
+        "selected": [
+          "Folder001"
+        ],
+        "before": 600,
+        "after": 600,
+        "child": true
+      }
+    },
+    {
+      "name": "cached folder still expands children",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light remains mobile without desktop handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light folder disclosure still works",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light folder selection uses existing results page",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light returns to navigation",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark remains mobile without desktop handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark folder disclosure still works",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark folder selection uses existing results page",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark returns to navigation",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "passed": 47,
+  "failed": 0
+}

@@ -3959,10 +3959,11 @@
       "../../core/session-values.js",
       "../../utils/normalization.js",
       "../../ui/pickers/count-rail.js",
-      "../../core/picker-cleanup.js"
+      "../../core/picker-cleanup.js",
+      "./desktop-pane.js"
     ],
-    "lines": 1056,
-    "bytes": 62798,
+    "lines": 1272,
+    "bytes": 75848,
     "origins": [
       {
         "id": "SearchNavigatorController",
@@ -4040,6 +4041,16 @@
         "sha256": "345c3ec62bbc60875c3ac832ae671827353363a25da8c6024679110b41bacac1"
       }
     ]
+  },
+  {
+    "file": "src/features/navigator/desktop-pane.js",
+    "exports": [
+      "createDesktopNavigatorPane"
+    ],
+    "dependencies": [],
+    "lines": 123,
+    "bytes": 6278,
+    "origins": []
   },
   {
     "file": "src/features/navigator/toolbar-config.js",
@@ -7293,8 +7304,8 @@
       "./virtualization-config.js",
       "../../core/session-values.js"
     ],
-    "lines": 441,
-    "bytes": 18474,
+    "lines": 445,
+    "bytes": 18690,
     "origins": [
       {
         "id": "SearchResultRendererController.getScrollTop",

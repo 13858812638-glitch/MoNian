@@ -639,4 +639,5 @@ digraph GLS {
   "src/utils/preferred-order.js" -> "src/features/filters/pool-config.js";
   "src/utils/preferred-order.js" -> "src/utils/normalization.js";
   "src/utils/search-text.js" -> "src/utils/dom.js";
+  "src/features/navigator/SearchNavigatorController.js" -> "src/features/navigator/desktop-pane.js";
 }

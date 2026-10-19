@@ -16,6 +16,7 @@ import { createSharedPickerTreeRow } from "../../ui/pickers/tree-row.js";
 import { normalizeUniqueStringList } from "../../utils/normalization.js";
 import { SORT_FIELD_DEFS } from "../sort/sort-model.js";
 import { NavigatorCustomization } from "./NavigatorCustomization.js";
+import { createDesktopNavigatorPane } from "./desktop-pane.js";
 import { navigatorItemId } from "./customization-model.js";
 import { navigatorToolbarActionAvailable, navigatorToolbarCatalog, navigatorToolbarIcon, normalizeNavigatorToolbars } from "./toolbar-config.js";
 import { Notice, Platform, setIcon } from "obsidian";
@@ -67,6 +68,20 @@ export class SearchNavigatorController {
         this.renderRevision = -1;
         this.searchVisible = false;
         this._projectionCache = new Map();
+        // Desktop folder changes alter selection, not the physical inventory.
+        // Invalidate its derived counts on actual vault/index/settings changes.
+        if (!Platform.isMobile) {
+            const invalidateCounts = () => {
+                this._desktopFolderCounts = null;
+                this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
+                this.renderRevision = -1;
+            };
+            this.cleanups.push(core.plugin.subscribeIndexChanges(invalidateCounts));
+            for (const event of ["create", "delete", "rename"]) {
+                const ref = core.app.vault.on(event, invalidateCounts);
+                this.cleanups.push(() => core.app.vault.offref(ref));
+            }
+        }
         this.root.addClass("local-search-navigator");
         this.root.setAttribute("data-ignore-swipe", "true");
         this.header = this.root.querySelector(".local-search-header");
@@ -195,6 +210,7 @@ export class SearchNavigatorController {
         this.cleanups.push(clearTrailingTouch);
         this._listen(this.scroll, "scroll", () => { markTouchDrag(); scheduleNavigatorScrollStateSave(this); }, { passive: true });
         const win = this.root.ownerDocument.defaultView;
+        if (!Platform.isMobile) this._desktopPane = createDesktopNavigatorPane(this);
         this.observer = new win.ResizeObserver(() => this.resize());
         this.observer.observe(this.root);
         this.resize();
@@ -516,6 +532,7 @@ export class SearchNavigatorController {
 
     capture() {
         return { navigationVersion: 2, page: this.page, searchVisible: this.searchVisible,
+            ...(this._desktopPaneWidth != null ? { paneWidth: this._desktopPaneWidth } : {}),
             expanded: [...this.expanded], collapsed: [...this.collapsed],
             scrollTop: this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop };
     }
@@ -537,6 +554,7 @@ export class SearchNavigatorController {
         if (state.navigationVersion === 2 || !Platform.isMobile) this.collapsed = new Set(normalizeUniqueStringList(state.collapsed));
         this._restoreScrollTop = Math.max(0, Number(state.scrollTop) || 0);
         this._filterScrollTop = this._restoreScrollTop;
+        this._desktopPane?.restore(state.paneWidth);
         if (!this.resize()) this.syncPage();
         this.renderRevision = -1;
         this.sync();
@@ -555,6 +573,7 @@ export class SearchNavigatorController {
         const changed = next !== this.layout;
         this.layout = next;
         this.root.dataset.navLayout = next;
+        this._desktopPane?.sync();
         // One live input is moved, never cloned or replaced. An active IME stays attached.
         const parent = next === "mobile" ? this.root : this.facets;
         if (this.header.parentElement !== parent) parent.prepend(this.header);
@@ -568,6 +587,8 @@ export class SearchNavigatorController {
     refreshPreferences() {
         if (!this.core || this.core._destroyed) return;
         this._projectionCache.clear();
+        this._desktopFolderCounts = null;
+        this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
         this._cacheRevision = -1;
         this.renderRevision = -1;
         for (const ref of this.sections.values()) ref.signature = null;
@@ -784,6 +805,18 @@ export class SearchNavigatorController {
             section.dataset.navSection = id;
             const expand = () => {
                 if (this.collapsed.has(id)) this.collapsed.delete(id); else this.collapsed.add(id);
+                // Once a desktop group is current, disclosure only changes its
+                // visibility. Retain its live rows and the other groups intact.
+                if (!Platform.isMobile && this.renderRevision === this.core._resultGeneration
+                    && ref.signature && ref.generation === this.core._resultGeneration) {
+                    const [, currentTitle, currentIcon] = this._definitions().find(([key]) => key === id) || [id, title, icon];
+                    this._section(id, currentTitle, currentIcon);
+                    this.customization.decorate(ref.heading, {
+                        ...this.customization.rows.get(ref.heading), label: currentTitle, icon: currentIcon
+                    });
+                    this.core._notifyStateChange();
+                    return;
+                }
                 this.renderRevision = -1; this.sync(); this.core._notifyStateChange();
             };
             const tree = createSharedPickerTreeRow(section, { name: title, icon,
@@ -812,9 +845,16 @@ export class SearchNavigatorController {
         ref.content.hidden = this.collapsed.has(id);
         ref.manage.hidden = this.layout === "mobile";
         ref.toggle.setAttribute("aria-expanded", String(!ref.content.hidden));
-        setIcon(ref.chevron, ref.content.hidden ? "chevron-right" : "chevron-down");
+        const chevronIcon = ref.content.hidden ? "chevron-right" : "chevron-down";
+        if (ref.chevron.dataset.navIcon !== chevronIcon) {
+            setIcon(ref.chevron, chevronIcon); ref.chevron.dataset.navIcon = chevronIcon;
+        }
         ref.chevron.setAttribute("aria-expanded", String(!ref.content.hidden));
-        ref.chevron.setAttribute("aria-label", `${ref.content.hidden ? "展开" : "折叠"} ${title}`);
+        const disclosureLabel = `${ref.content.hidden ? "展开" : "折叠"} ${title}`;
+        if (ref.disclosureLabel !== disclosureLabel) {
+            ref.disclosureLabel = disclosureLabel;
+            ref.chevron.setAttribute("aria-label", disclosureLabel);
+        }
         return ref;
     }
 
@@ -907,6 +947,14 @@ export class SearchNavigatorController {
     }
 
     _cached(key, build) {
+        if (!Platform.isMobile && key === "folder-counts") {
+            const exclusions = JSON.stringify(this.core.plugin.settings.excludedFolders || []);
+            if (!this._desktopFolderCounts || this._desktopFolderCountExclusions !== exclusions) {
+                this._desktopFolderCounts = build();
+                this._desktopFolderCountExclusions = exclusions;
+            }
+            return this._desktopFolderCounts;
+        }
         if (!this._projectionCache.has(key)) this._projectionCache.set(key, build());
         return this._projectionCache.get(key);
     }
@@ -1007,8 +1055,11 @@ export class SearchNavigatorController {
         // Batch one projection per open section; no file reads and no per-row vault scans.
         const scroll = this._restoreScrollTop ?? (this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop);
         const anchorOptions = { selector: "[data-nav-id]", keyFrom: row => row.dataset.navId };
-        const scrollAnchor = this._restoreScrollTop == null ? captureScrollableAnchor(this.scroll, anchorOptions) : null;
-        const scrollBounds = this.scroll.getBoundingClientRect();
+        // At the desktop list's origin there is no displaced row to preserve.
+        // Avoid measuring every row and forcing layout on each disclosure.
+        const scrollAnchor = this._restoreScrollTop == null && (Platform.isMobile || scroll > 0)
+            ? captureScrollableAnchor(this.scroll, anchorOptions) : null;
+        const scrollBounds = scrollAnchor ? this.scroll.getBoundingClientRect() : null;
         const oldAnchors = scrollAnchor ? [...this.scroll.querySelectorAll("[data-nav-id]")].flatMap(row => {
             const rect = row.getBoundingClientRect();
             return rect.height ? [{ key: row.dataset.navId, offset: rect.top - scrollBounds.top, scrollTop: scroll }] : [];
@@ -1048,7 +1099,10 @@ export class SearchNavigatorController {
             this.customization.decorate(ref.heading, group);
             // Expanding one branch does not rebuild unrelated sections or scan the vault.
             const prefix = id === "tags" ? "tag:" : `${id}:`;
-            const signature = JSON.stringify([core._resultGeneration, this.layout, [...this.expanded].filter(key => key.startsWith(prefix))]);
+            const desktopFolder = !Platform.isMobile && id === "folder";
+            const signature = JSON.stringify([desktopFolder ? this._desktopFolderEpoch || 0 : core._resultGeneration,
+                this.layout, [...this.expanded].filter(key => key.startsWith(prefix)),
+                ...(desktopFolder ? [core.plugin.settings.excludedFolders || []] : [])]);
             let count = 0, selected = false;
             if (id === "folder") {
                 count = navigation.all.length;
@@ -1070,8 +1124,24 @@ export class SearchNavigatorController {
             // when a descendant folder/tag/property is the actual selection.
             ref.heading.classList.remove("is-selected");
             ref.heading.dataset.hasAppliedChildren = String(selected);
+            if (ref.signature === signature && desktopFolder) {
+                // Scope selection never changes the folder inventory or tree.
+                // Update only the previous/new selected surfaces, without
+                // sorting, rebuilding row descriptors, or restamping labels.
+                for (const tree of ref.rows?.values() || []) {
+                    const options = tree._navOptions;
+                    if (options?.navDescriptor?.kind !== "folder") continue;
+                    const active = state.folders.has(options.navDescriptor.key);
+                    if (options.active === active) continue;
+                    options.active = active;
+                    tree.row.classList.toggle("is-selected", active);
+                    tree.button.setAttribute("aria-pressed", String(active));
+                }
+                ref.generation = core._resultGeneration;
+            }
             if (ref.content.hidden || ref.signature === signature) continue;
             ref.signature = signature;
+            ref.generation = core._resultGeneration;
             ref.usedRows = new Set();
             ref.rowCursor = ref.content.firstElementChild;
             if (id === "folder") {
@@ -1189,6 +1259,9 @@ export class SearchNavigatorController {
         if (this._projectionTimer != null) this.root.ownerDocument.defaultView.clearTimeout(this._projectionTimer);
         this._projectionTimer = null;
         this.observer?.disconnect();
+        this._desktopPane?.destroy();
+        this._desktopPane = null;
+        this._desktopFolderCounts = null;
         this.customization?.destroy();
         for (const cleanup of this.cleanups.splice(0)) cleanup();
         this.root.removeClass("local-search-navigator", "is-nav-search-visible", "has-nav-query");

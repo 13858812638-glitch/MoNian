@@ -90,8 +90,12 @@ export const SearchResultRendererController_viewport_geometry_methods = {
         const list = this.owner?.resultsContainer;
         if (!isDomHTMLElement(list)) return false;
         const top = Number(list.scrollTop) || 0;
+        // max is always >= 0: the origin cannot be beyond the bottom. Avoid
+        // a forced layout while fresh result cards are being inserted there.
+        if (top < -0.5) return true;
+        if (top <= 0.5) return false;
         const max = Math.max(0, list.scrollHeight - list.clientHeight);
-        return top < -0.5 || top > max + 0.5;
+        return top > max + 0.5;
     },
 
 

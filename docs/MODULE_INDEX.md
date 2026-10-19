@@ -1,8 +1,8 @@
-# GLS v5.2 · 模块归一 v2 候选 · 当前 146 模块职责索引
+# GLS v5.2 · 桌面侧栏优化候选 · 模块职责索引
 
-> **以本文件为准定位当前 `src/`。** v5.2「独立浮窗退役」仍为唯一正式冻结基线；模块归一 v1 / v2 均为未冻结候选。不得依据旧版 152/153 模块文档回填代码。
+> 当前候选见 `DESKTOP_NAVIGATOR_20261019.md`，冻结状态以该文档和 AGENTS.md 顶部为准。新增桌面分栏模块及本轮修改模块的信息已同步；其它条目保留历史职责描述。
 
-- 当前源模块：**146**；静态导入边：**635**；工程检查：**PASS-ENGINEERING**。
+- 当前源模块（含入口）：**150**；静态导入边：**644**；工程检查：**PASS-ENGINEERING**。
 - 所有运行模块路径均来自当前 `src/`，没有孤立或已经退役的旧文件。
 - 方法归属由当前 `src/` 及 `composeClassMethods()` 确定；`METHOD_INDEX.md` 的原始行号仅是旧源码溯源，不应作为当前行号。
 - 普通属性目录正式 Owner：`src/features/plugin/property-catalog-methods.js`；当前运行源码不再使用旧项目目录模块。
@@ -61,8 +61,9 @@
 | `src/features/folders/exclusions.js` | 89 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeExcludedFolders`、`isFolderExclusionInherited`、`toggleFolderExclusionSelection` 等 4 项 |
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
 | `src/features/navigator/NavigatorCustomization.js` | 605 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
-| `src/features/navigator/SearchNavigatorController.js` | 1056 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
+| `src/features/navigator/SearchNavigatorController.js` | 1272 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId` 等 5 项 |
+| `src/features/navigator/desktop-pane.js` | 123 | 桌面分栏拖动、键盘调整、宽度恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid` 等 10 项 |
 | `src/features/plugin/content-cache-methods.js` | 193 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_content_cache_methods` |
 | `src/features/plugin/external-properties-methods.js` | 272 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_external_properties_methods` |
@@ -98,7 +99,7 @@
 | `src/features/results/result-card-methods.js` | 207 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS` 等 11 项 |
 | `src/features/results/viewport-anchors-methods.js` | 397 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_anchors_methods` |
-| `src/features/results/viewport-geometry-methods.js` | 441 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
+| `src/features/results/viewport-geometry-methods.js` | 445 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
 | `src/features/results/virtual-window-methods.js` | 441 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
 | `src/features/results/virtualization-config.js` | 51 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_WINDOW_MOUNT_MIN`、`RESULT_WINDOW_MOUNT_MAX`、`RESULT_WINDOW_BUFFER_MIN` 等 6 项 |
 | `src/features/search/QueryState.js` | 19 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `QueryState` |
@@ -419,8 +420,8 @@
 - **导出**：`NavigatorCustomization`
 
 ### `src/features/navigator/SearchNavigatorController.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1056 行，62,798 字节。
-- **直接依赖**：`../../core/picker-cleanup.js`、`../../core/session-values.js`、`../../data/folders/folder-tree.js`、`../../data/formats/file-types.js`、`../../data/properties/property-catalog.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-tree.js`、`../../data/tags/tag-values.js`、`../../interactions/scroll-anchor.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/normalization.js`、`../sort/sort-model.js`、`./NavigatorCustomization.js`、`./customization-model.js`、`./toolbar-config.js`、`obsidian`
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1272 行，75,848 字节。
+- **直接依赖**：`../../core/picker-cleanup.js`、`../../core/session-values.js`、`../../data/folders/folder-tree.js`、`../../data/formats/file-types.js`、`../../data/properties/property-catalog.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-tree.js`、`../../data/tags/tag-values.js`、`../../interactions/scroll-anchor.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/normalization.js`、`../sort/sort-model.js`、`./NavigatorCustomization.js`、`./desktop-pane.js`、`./customization-model.js`、`./toolbar-config.js`、`obsidian`
 - **导出**：`SearchNavigatorController`
 
 ### `src/features/navigator/customization-model.js`
@@ -604,7 +605,7 @@
 - **导出**：`SearchResultRendererController_viewport_anchors_methods`
 
 ### `src/features/results/viewport-geometry-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；441 行，18,474 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；445 行，18,690 字节。
 - **直接依赖**：`../../core/session-values.js`、`../../interactions/SwipeActionCoordinator.js`、`../../utils/dom.js`、`./virtualization-config.js`
 - **导出**：`SearchResultRendererController_viewport_geometry_methods`
 
@@ -888,3 +889,8 @@
 - **直接依赖**：无
 - **导出**：`normalizeVaultFolderPath`、`isSameOrDescendantVaultPath`
 
+
+### `src/features/navigator/desktop-pane.js`
+- **职责**：桌面分栏控制；123 行，6,278 字节。宽度保存在现有 Navigator 会话，移动端不创建该控件。
+- **直接依赖**：无静态导入；接收唯一 Navigator Owner。
+- **导出**：`createDesktopNavigatorPane`（内部工厂，返回 `sync` / `restore` / `destroy`；非公开插件 API）。

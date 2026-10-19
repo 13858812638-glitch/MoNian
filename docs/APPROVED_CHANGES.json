@@ -1,8 +1,8 @@
 {
-  "revision": "2026-10-19-navigator-contextual-operations-v2-candidate",
+  "revision": "2026-10-19-desktop-navigator-performance-resize-candidate",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "Navigator category-scoped drag, immutable tag/folder creation owners, fixed Picker frame, precise scroll snapshot cleanup, audited cross-key text/list migration with full preflight; all new/changed source bytes individually approved within the candidate only.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -103,7 +103,8 @@
     "createSharedPickerTreeShell",
     "normalizeEditableTagValue",
     "renderSharedFolderTreePicker",
-    "sharedFolderChildren"
+    "sharedFolderChildren",
+    "SearchResultRendererController._isOverscrolling"
   ],
   "files": [
     {
@@ -236,7 +237,7 @@
       "file": "src/features/navigator/SearchNavigatorController.js",
       "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
       "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
-      "after": "c2d3818cf969210b3729740b975f2f051ad91c35fa0d84b24c1a71dfeb8842dd"
+      "after": "b70a63ef83f23576f562371e7b8dd5ce4b4ee8f3eba91d2382551015eca5c173"
     },
     {
       "file": "src/features/navigator/toolbar-config.js",
@@ -374,7 +375,7 @@
       "file": "src/styles/styles.css",
       "baseline": "baseline/modular.3-source/styles/styles.css",
       "before": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad",
-      "after": "12599c5794c5199fcf10a42534bdb9229b9e4c3e9b1a01de51ca496f1a3c7d40"
+      "after": "3608da6c5764afbbcfd82284db55cdd97c36871787f0378135ffaf04b722d8d6"
     },
     {
       "file": "src/ui/components/input-controls.js",
@@ -453,6 +454,12 @@
       "baseline": "baseline/modular.3-source/ui/views/SearchView.js",
       "before": "413a4b595d37d199328fe5cbaa3c6034288598f276f434ffbdc116a21bd54863",
       "after": "f047f543d2e47400c5bd1462de25459181b321021f9ca6d260ebc4a2c4b25415"
+    },
+    {
+      "file": "src/features/results/viewport-geometry-methods.js",
+      "baseline": "baseline/modular.3-source/features/results/viewport-geometry-methods.js",
+      "before": "758128bd7cd446455dcd90a3cbdf5d9db026ce427e80df565167566cc4131524",
+      "after": "89d09c34033618bf37493a1c9ce453edb67fa4cb0bbde191a9ab19c9729e3dd1"
     }
   ],
   "retiredFiles": [
@@ -540,6 +547,10 @@
     {
       "file": "src/features/plugin/property-catalog-methods.js",
       "sha256": "c232ea5d80184017b65e7406a4dee2c72c97922b4c7ad4ac09f62117d54edc83"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "sha256": "3672c9e97e19e4bdab04a172a096c19cf7dd4c0ec74cc9eb2a648c0aa09963f7"
     }
   ]
 }

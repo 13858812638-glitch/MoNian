@@ -1,0 +1,22 @@
+{
+  "mode": "overlay",
+  "file": "artifacts/GLS-Stability-1-Sidebar-NoKeyboardFollow-1-双文件覆盖包.zip",
+  "bytes": 425108,
+  "sha256": "3422c0c9678497db4f96ca3005e89e91373267ba4aa74b48b1faf54bb27b6243",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1738469,
+      "sha256": "863a17cadf930beb0c6e9c6cd99aab4981ad735165e8a603ca5c8c081f52be6a"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 262103,
+      "sha256": "3608da6c5764afbbcfd82284db55cdd97c36871787f0378135ffaf04b722d8d6"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "results": [
+    {
+      "name": "desktop-light count and management do not overlap",
+      "pass": false,
+      "evidence": [
+        {
+          "noOverlap": false,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": false,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": false,
+          "arrowFits": true,
+          "expanded": "false",
+          "icon": "chevron-right"
+        }
+      ]
+    },
+    {
+      "name": "desktop-light arrows fit their hit targets",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light mouse collapse",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light keyboard expand",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light resize handle exists",
+      "pass": false,
+      "evidence": null
+    },
+    {
+      "name": "desktop-light destroy removes owned handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark count and management do not overlap",
+      "pass": false,
+      "evidence": [
+        {
+          "noOverlap": false,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": false,
+          "arrowFits": true,
+          "expanded": "true",
+          "icon": "chevron-down"
+        },
+        {
+          "noOverlap": false,
+          "arrowFits": true,
+          "expanded": "false",
+          "icon": "chevron-right"
+        }
+      ]
+    },
+    {
+      "name": "desktop-dark arrows fit their hit targets",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark mouse collapse",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark keyboard expand",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark resize handle exists",
+      "pass": false,
+      "evidence": null
+    },
+    {
+      "name": "desktop-dark destroy removes owned handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "top-of-tree collapse avoids per-row layout reads",
+      "pass": false,
+      "evidence": {
+        "reads": {
+          "rect": 1812,
+          "client": 1740,
+          "files": 12
+        },
+        "ticks": [
+          7.099999999976717,
+          11,
+          4.400000000023283,
+          11.400000000023283,
+          3.900000000023283,
+          11,
+          3.699999999953434,
+          10.70000000006985,
+          4,
+          10.599999999976717,
+          3.900000000023283,
+          10
+        ],
+        "projection": [
+          21.199999999953434,
+          14.099999999976717,
+          12.5,
+          17.199999999953434,
+          13,
+          12,
+          12.100000000093132,
+          11.70000000006985,
+          12.199999999953434,
+          11.900000000023283,
+          13,
+          14.300000000046566
+        ],
+        "heightReads": 1,
+        "overscroll": false
+      }
+    },
+    {
+      "name": "folder changes reuse structural inventory",
+      "pass": false,
+      "evidence": {
+        "rect": 1812,
+        "client": 1740,
+        "files": 12
+      }
+    },
+    {
+      "name": "top-of-results needs no scroll extent layout read",
+      "pass": false,
+      "evidence": 1
+    },
+    {
+      "name": "structural counts invalidate on create and rename",
+      "pass": true,
+      "evidence": {
+        "added": "1 · 13",
+        "renamed": "0 · 12"
+      }
+    },
+    {
+      "name": "mobile-light remains mobile without desktop handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light folder disclosure still works",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light folder selection uses existing results page",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light returns to navigation",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark remains mobile without desktop handle",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark folder disclosure still works",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark folder selection uses existing results page",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark returns to navigation",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "passed": 17,
+  "failed": 7
+}
