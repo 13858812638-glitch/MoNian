@@ -1,0 +1,78 @@
+{
+  "frozen": {
+    "pass": 68,
+    "total": 126,
+    "areas": {
+      "folder": [
+        6,
+        22
+      ],
+      "tags": [
+        6,
+        16
+      ],
+      "properties": [
+        6,
+        16
+      ],
+      "heading": [
+        34,
+        48
+      ],
+      "sort": [
+        4,
+        4
+      ],
+      "maintenance": [
+        4,
+        12
+      ],
+      "disabled": [
+        4,
+        4
+      ],
+      "pageerrors": [
+        4,
+        4
+      ]
+    }
+  },
+  "candidate": {
+    "pass": 126,
+    "total": 126,
+    "areas": {
+      "folder": [
+        22,
+        22
+      ],
+      "tags": [
+        16,
+        16
+      ],
+      "properties": [
+        16,
+        16
+      ],
+      "heading": [
+        48,
+        48
+      ],
+      "sort": [
+        4,
+        4
+      ],
+      "maintenance": [
+        12,
+        12
+      ],
+      "disabled": [
+        4,
+        4
+      ],
+      "pageerrors": [
+        4,
+        4
+      ]
+    }
+  }
+}

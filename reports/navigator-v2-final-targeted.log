@@ -1,0 +1,412 @@
+TAP version 13
+# Subtest: metadata folder is visible in navigator, protected from ordinary picker, and globally blocked folder stays hidden
+ok 1 - metadata folder is visible in navigator, protected from ordinary picker, and globally blocked folder stays hidden
+  ---
+  duration_ms: 2.750093
+  type: 'test'
+  ...
+# Subtest: folder direct and recursive physical counts ignore user global exclusion, never result-only hiding
+ok 2 - folder direct and recursive physical counts ignore user global exclusion, never result-only hiding
+  ---
+  duration_ms: 0.598026
+  type: 'test'
+  ...
+# Subtest: folder icon reflects the real expansion state, not every row as open
+ok 3 - folder icon reflects the real expansion state, not every row as open
+  ---
+  duration_ms: 0.270798
+  type: 'test'
+  ...
+# Subtest: navigation folder scope ignores result-only exclusions while search results still respect them
+ok 4 - navigation folder scope ignores result-only exclusions while search results still respect them
+  ---
+  duration_ms: 1.659983
+  type: 'test'
+  ...
+# Subtest: full write integration: A list value enters existing B text, preserves other A values
+ok 5 - full write integration: A list value enters existing B text, preserves other A values
+  ---
+  duration_ms: 171.696802
+  type: 'test'
+  ...
+# Subtest: full write integration: A text moves into B list, never loses existing B elements
+ok 6 - full write integration: A text moves into B list, never loses existing B elements
+  ---
+  duration_ms: 54.742396
+  type: 'test'
+  ...
+# Subtest: full write integration: conflicting destination B text blocks *all* files before mutation
+ok 7 - full write integration: conflicting destination B text blocks *all* files before mutation
+  ---
+  duration_ms: 60.93571
+  type: 'test'
+  ...
+# Subtest: Navigator touch feedback uses one existing delegated owner for native primary hit + count
+ok 8 - Navigator touch feedback uses one existing delegated owner for native primary hit + count
+  ---
+  duration_ms: 1.397126
+  type: 'test'
+  ...
+# Subtest: Cancelled drag is excluded from transient pressed only, maintaining Selected and custom backgrounds
+ok 9 - Cancelled drag is excluded from transient pressed only, maintaining Selected and custom backgrounds
+  ---
+  duration_ms: 0.973216
+  type: 'test'
+  ...
+# Subtest: Swipe shelf edges use the exact card content inset in both directions and constrain available width
+ok 10 - Swipe shelf edges use the exact card content inset in both directions and constrain available width
+  ---
+  duration_ms: 0.632525
+  type: 'test'
+  ...
+# Subtest: return projection is limited to real mobile Results -> Filters navigation
+ok 11 - return projection is limited to real mobile Results -> Filters navigation
+  ---
+  duration_ms: 1.732454
+  type: 'test'
+  ...
+# Subtest: consume the existing scheduled projection before first visible frame
+ok 12 - consume the existing scheduled projection before first visible frame
+  ---
+  duration_ms: 0.851357
+  type: 'test'
+  ...
+# Subtest: CSS Snapshot promotes the two requested IDs and their root variables to 6px
+ok 13 - CSS Snapshot promotes the two requested IDs and their root variables to 6px
+  ---
+  duration_ms: 0.686308
+  type: 'test'
+  ...
+# Subtest: unrequested detailed and compact densities retain their defaults
+ok 14 - unrequested detailed and compact densities retain their defaults
+  ---
+  duration_ms: 1.817712
+  type: 'test'
+  ...
+# Subtest: cross key: list A one value -> empty text B; retain other A entries
+ok 15 - cross key: list A one value -> empty text B; retain other A entries
+  ---
+  duration_ms: 2.246314
+  type: 'test'
+  ...
+# Subtest: cross key: text A -> existing list B is append-only, no loss or dup
+ok 16 - cross key: text A -> existing list B is append-only, no loss or dup
+  ---
+  duration_ms: 0.394335
+  type: 'test'
+  ...
+# Subtest: cross key: existing different text B is a hard preflight conflict
+ok 17 - cross key: existing different text B is a hard preflight conflict
+  ---
+  duration_ms: 0.420877
+  type: 'test'
+  ...
+# Subtest: cross key: nontext, date, malformed YAML and system values are blocked
+ok 18 - cross key: nontext, date, malformed YAML and system values are blocked
+  ---
+  duration_ms: 0.257561
+  type: 'test'
+  ...
+# Subtest: cross key: unmatched A is unchanged and target B not touched
+ok 19 - cross key: unmatched A is unchanged and target B not touched
+  ---
+  duration_ms: 0.234697
+  type: 'test'
+  ...
+# Subtest: Navigator: same coordinator, local type scope and no independent all-category entry
+ok 20 - Navigator: same coordinator, local type scope and no independent all-category entry
+  ---
+  duration_ms: 1.465254
+  type: 'test'
+  ...
+# Subtest: Navigator: root folder, peer/child tag and key-value creation entry all exposed
+ok 21 - Navigator: root folder, peer/child tag and key-value creation entry all exposed
+  ---
+  duration_ms: 1.719761
+  type: 'test'
+  ...
+# Subtest: Navigator: fixed Picker frame and explicit rename scroll snapshot
+ok 22 - Navigator: fixed Picker frame and explicit rename scroll snapshot
+  ---
+  duration_ms: 3.739774
+  type: 'test'
+  ...
+# Subtest: Desktop retains Picker until explicit property-value drag; value rows appear temporarily
+ok 23 - Desktop retains Picker until explicit property-value drag; value rows appear temporarily
+  ---
+  duration_ms: 1.14352
+  type: 'test'
+  ...
+# Subtest: Mobile uses a configurable cancellable timer; desktop keeps contextmenu
+ok 24 - Mobile uses a configurable cancellable timer; desktop keeps contextmenu
+  ---
+  duration_ms: 2.643274
+  type: 'test'
+  ...
+# Subtest: Typed object action menu delegates to current facet maintenance owner
+ok 25 - Typed object action menu delegates to current facet maintenance owner
+  ---
+  duration_ms: 1.017888
+  type: 'test'
+  ...
+# Subtest: Navigator action Picker restores shared fixed-height frame
+ok 26 - Navigator action Picker restores shared fixed-height frame
+  ---
+  duration_ms: 0.960748
+  type: 'test'
+  ...
+# Subtest: Text and multitext property collisions retain all unique values
+ok 27 - Text and multitext property collisions retain all unique values
+  ---
+  duration_ms: 6.554571
+  type: 'test'
+  ...
+# Subtest: Rename conflicts preserve folder file names, tag hierarchy and property catalog
+ok 28 - Rename conflicts preserve folder file names, tag hierarchy and property catalog
+  ---
+  duration_ms: 0.278361
+  type: 'test'
+  ...
+# Subtest: P4: 400 Picker projections produce exactly one last-frame reveal
+ok 29 - P4: 400 Picker projections produce exactly one last-frame reveal
+  ---
+  duration_ms: 3.514934
+  type: 'test'
+  ...
+# Subtest: P4: successful frame settles and a later projection can schedule anew
+ok 30 - P4: successful frame settles and a later projection can schedule anew
+  ---
+  duration_ms: 0.42175
+  type: 'test'
+  ...
+# Subtest: P4: last frame is cancelled on panel disposal; no late UI work
+ok 31 - P4: last frame is cancelled on panel disposal; no late UI work
+  ---
+  duration_ms: 0.513128
+  type: 'test'
+  ...
+# Subtest: P4: cleanup remains idempotent and post-close requeue is rejected
+ok 32 - P4: cleanup remains idempotent and post-close requeue is rejected
+  ---
+  duration_ms: 0.678167
+  type: 'test'
+  ...
+# Subtest: P4: detached panels or lists do not run pending work
+ok 33 - P4: detached panels or lists do not run pending work
+  ---
+  duration_ms: 0.562024
+  type: 'test'
+  ...
+# Subtest: P4: detached panel or list refuses to arm a new frame
+ok 34 - P4: detached panel or list refuses to arm a new frame
+  ---
+  duration_ms: 0.666194
+  type: 'test'
+  ...
+# Subtest: P4: malformed callbacks cannot create work
+ok 35 - P4: malformed callbacks cannot create work
+  ---
+  duration_ms: 0.549878
+  type: 'test'
+  ...
+# Subtest: P4: requestAnimationFrame id zero can still be cancelled correctly
+ok 36 - P4: requestAnimationFrame id zero can still be cancelled correctly
+  ---
+  duration_ms: 1.064991
+  type: 'test'
+  ...
+# Subtest: P4: sibling Picker Surfaces have independent frame owners
+ok 37 - P4: sibling Picker Surfaces have independent frame owners
+  ---
+  duration_ms: 1.702536
+  type: 'test'
+  ...
+# Subtest: P4: nested picker cleanup chain continues to release other resources
+ok 38 - P4: nested picker cleanup chain continues to release other resources
+  ---
+  duration_ms: 1.079502
+  type: 'test'
+  ...
+# Subtest: P4: scheduler never calls native focus, blur or scroll directly
+ok 39 - P4: scheduler never calls native focus, blur or scroll directly
+  ---
+  duration_ms: 0.252942
+  type: 'test'
+  ...
+# Subtest: P4: all three tree Picker call sites use the shared cancelable owner
+ok 40 - P4: all three tree Picker call sites use the shared cancelable owner
+  ---
+  duration_ms: 2.151254
+  type: 'test'
+  ...
+# Subtest: property real counts do not absorb the previously selected project
+ok 41 - property real counts do not absorb the previously selected project
+  ---
+  duration_ms: 66.9519
+  type: 'test'
+  ...
+# Subtest: one YAML file with two values counts once per value, once under OR
+ok 42 - one YAML file with two values counts once per value, once under OR
+  ---
+  duration_ms: 15.598507
+  type: 'test'
+  ...
+# Subtest: missing vs empty YAML property are separate counted states
+ok 43 - missing vs empty YAML property are separate counted states
+  ---
+  duration_ms: 18.030039
+  type: 'test'
+  ...
+# Subtest: catalog-only value count remains zero under a different selected project
+ok 44 - catalog-only value count remains zero under a different selected project
+  ---
+  duration_ms: 32.199661
+  type: 'test'
+  ...
+# Subtest: frozen sidebar CSS snapshot defaults are 6px and 2px
+ok 45 - frozen sidebar CSS snapshot defaults are 6px and 2px
+  ---
+  duration_ms: 1.697373
+  type: 'test'
+  ...
+# Subtest: composer: root one level
+ok 46 - composer: root one level
+  ---
+  duration_ms: 1.701887
+  type: 'test'
+  ...
+# Subtest: composer: under existing parent
+ok 47 - composer: under existing parent
+  ---
+  duration_ms: 0.189479
+  type: 'test'
+  ...
+# Subtest: composer: under two levels
+ok 48 - composer: under two levels
+  ---
+  duration_ms: 0.087824
+  type: 'test'
+  ...
+# Subtest: composer: original full path still works
+ok 49 - composer: original full path still works
+  ---
+  duration_ms: 0.19221
+  type: 'test'
+  ...
+# Subtest: composer: original quick relative path works
+ok 50 - composer: original quick relative path works
+  ---
+  duration_ms: 0.107998
+  type: 'test'
+  ...
+# Subtest: composer: strip leading hashtag
+ok 51 - composer: strip leading hashtag
+  ---
+  duration_ms: 0.074586
+  type: 'test'
+  ...
+# Subtest: composer: preserve original display case
+ok 52 - composer: preserve original display case
+  ---
+  duration_ms: 0.134564
+  type: 'test'
+  ...
+# Subtest: composer: empty candidate
+ok 53 - composer: empty candidate
+  ---
+  duration_ms: 0.05926
+  type: 'test'
+  ...
+# Subtest: composer rejects whitespace
+ok 54 - composer rejects whitespace
+  ---
+  duration_ms: 0.638352
+  type: 'test'
+  ...
+# Subtest: composer rejects hash in segment
+ok 55 - composer rejects hash in segment
+  ---
+  duration_ms: 0.501856
+  type: 'test'
+  ...
+# Subtest: composer rejects empty slash segment
+ok 56 - composer rejects empty slash segment
+  ---
+  duration_ms: 0.201255
+  type: 'test'
+  ...
+# Subtest: composer rejects invalid parent segment
+ok 57 - composer rejects invalid parent segment
+  ---
+  duration_ms: 0.068771
+  type: 'test'
+  ...
+# Subtest: drill: type trailing slash
+ok 58 - drill: type trailing slash
+  ---
+  duration_ms: 0.119808
+  type: 'test'
+  ...
+# Subtest: drill: nested shortcut
+ok 59 - drill: nested shortcut
+  ---
+  duration_ms: 0.041013
+  type: 'test'
+  ...
+# Subtest: drill: paste entire hierarchy then slash
+ok 60 - drill: paste entire hierarchy then slash
+  ---
+  duration_ms: 0.044302
+  type: 'test'
+  ...
+# Subtest: drill: not a shortcut
+ok 61 - drill: not a shortcut
+  ---
+  duration_ms: 0.0327
+  type: 'test'
+  ...
+# Subtest: drill: reject repeated slash
+ok 62 - drill: reject repeated slash
+  ---
+  duration_ms: 0.031206
+  type: 'test'
+  ...
+# Subtest: drill: reject invalid content
+ok 63 - drill: reject invalid content
+  ---
+  duration_ms: 0.047585
+  type: 'test'
+  ...
+# Subtest: drill: reject empty
+ok 64 - drill: reject empty
+  ---
+  duration_ms: 0.050159
+  type: 'test'
+  ...
+# Subtest: breadcrumb chain can return directly to any ancestor
+ok 65 - breadcrumb chain can return directly to any ancestor
+  ---
+  duration_ms: 1.062311
+  type: 'test'
+  ...
+# Subtest: tree navigation reuses real hierarchy and original casing
+ok 66 - tree navigation reuses real hierarchy and original casing
+  ---
+  duration_ms: 1.691012
+  type: 'test'
+  ...
+# Subtest: a virtual parent can become a navigation path without writing a parent tag
+ok 67 - a virtual parent can become a navigation path without writing a parent tag
+  ---
+  duration_ms: 0.542383
+  type: 'test'
+  ...
+1..67
+# tests 67
+# suites 0
+# pass 67
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15346.215201

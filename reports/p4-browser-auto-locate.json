@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "label": "desktop-light",
+      "case": "close-cancels-stale-reveal",
+      "passed": true,
+      "evidence": {
+        "detached": true,
+        "cleanupCleared": true,
+        "stillOpen": false,
+        "lateCalls": 0,
+        "panelOpen": false,
+        "mobileFrameOwners": 0,
+        "errors": []
+      }
+    },
+    {
+      "label": "desktop-light",
+      "case": "last-frame-keeps-native-focus",
+      "passed": true,
+      "evidence": {
+        "calls": 1,
+        "activeSame": true,
+        "inputSame": true,
+        "remainsOpen": true,
+        "errors": []
+      }
+    },
+    {
+      "label": "desktop-dark",
+      "case": "close-cancels-stale-reveal",
+      "passed": true,
+      "evidence": {
+        "detached": true,
+        "cleanupCleared": true,
+        "stillOpen": false,
+        "lateCalls": 0,
+        "panelOpen": false,
+        "mobileFrameOwners": 0,
+        "errors": []
+      }
+    },
+    {
+      "label": "desktop-dark",
+      "case": "last-frame-keeps-native-focus",
+      "passed": true,
+      "evidence": {
+        "calls": 1,
+        "activeSame": true,
+        "inputSame": true,
+        "remainsOpen": true,
+        "errors": []
+      }
+    },
+    {
+      "label": "mobile-light",
+      "case": "close-cancels-stale-reveal",
+      "passed": true,
+      "evidence": {
+        "detached": true,
+        "cleanupCleared": true,
+        "stillOpen": false,
+        "lateCalls": 0,
+        "panelOpen": false,
+        "mobileFrameOwners": 0,
+        "errors": []
+      }
+    },
+    {
+      "label": "mobile-light",
+      "case": "last-frame-keeps-native-focus",
+      "passed": true,
+      "evidence": {
+        "calls": 1,
+        "activeSame": true,
+        "inputSame": true,
+        "remainsOpen": true,
+        "errors": []
+      }
+    },
+    {
+      "label": "mobile-dark",
+      "case": "close-cancels-stale-reveal",
+      "passed": true,
+      "evidence": {
+        "detached": true,
+        "cleanupCleared": true,
+        "stillOpen": false,
+        "lateCalls": 0,
+        "panelOpen": false,
+        "mobileFrameOwners": 0,
+        "errors": []
+      }
+    },
+    {
+      "label": "mobile-dark",
+      "case": "last-frame-keeps-native-focus",
+      "passed": true,
+      "evidence": {
+        "calls": 1,
+        "activeSame": true,
+        "inputSame": true,
+        "remainsOpen": true,
+        "errors": []
+      }
+    }
+  ],
+  "passed": 8,
+  "failed": 0,
+  "chromiumMockHost": true,
+  "nativeIosWebkitVerified": false
+}

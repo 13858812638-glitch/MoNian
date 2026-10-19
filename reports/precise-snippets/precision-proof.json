@@ -1,0 +1,54 @@
+{
+  "testEnvironment": "Chromium mock Obsidian; not native iOS",
+  "status": "PASS",
+  "assertions": [
+    {
+      "files": 300,
+      "platform": "mobile",
+      "offscreenSnippetsBefore": 216,
+      "offscreenSnippetsAfter": 0,
+      "domMutationRecordsBefore": 648,
+      "domMutationRecordsAfter": 0,
+      "visibleRowBuilds": 1,
+      "visibleSnippetUpdates": 1,
+      "lateScrollVisibleSnippets": 18
+    },
+    {
+      "files": 300,
+      "platform": "desktop",
+      "offscreenSnippetsBefore": 216,
+      "offscreenSnippetsAfter": 0,
+      "domMutationRecordsBefore": 648,
+      "domMutationRecordsAfter": 0,
+      "visibleRowBuilds": 1,
+      "visibleSnippetUpdates": 1,
+      "lateScrollVisibleSnippets": 18
+    },
+    {
+      "files": 3000,
+      "platform": "mobile",
+      "offscreenSnippetsBefore": 216,
+      "offscreenSnippetsAfter": 0,
+      "domMutationRecordsBefore": 648,
+      "domMutationRecordsAfter": 0,
+      "visibleRowBuilds": 1,
+      "visibleSnippetUpdates": 1,
+      "lateScrollVisibleSnippets": 18
+    },
+    {
+      "race": "race-final-offscreen.json",
+      "passed": true,
+      "secondHost": false
+    },
+    {
+      "race": "race-final-visible.json",
+      "passed": true,
+      "secondHost": false
+    },
+    {
+      "race": "race-multi.json",
+      "passed": true,
+      "secondHost": true
+    }
+  ]
+}

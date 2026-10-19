@@ -1,0 +1,545 @@
+{
+  "revision": "2026-10-19-navigator-contextual-operations-v2-candidate",
+  "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
+  "sourceManifest": "baseline/modular.3-source-manifest.json",
+  "reason": "Navigator category-scoped drag, immutable tag/folder creation owners, fixed Picker frame, precise scroll snapshot cleanup, audited cross-key text/list migration with full preflight; all new/changed source bytes individually approved within the candidate only.",
+  "changedOriginIds": [
+    "BatchMetadataController._renderTagPicker",
+    "BatchMetadataController.open",
+    "BatchMetadataService",
+    "DEFAULT_SETTINGS",
+    "EXTERNAL_SEARCH_API_CAPABILITIES",
+    "EXTERNAL_SEARCH_API_VERSION",
+    "LocalSearchPlugin",
+    "LocalSearchPlugin._addPropertyCatalogValues",
+    "LocalSearchPlugin._connectDidaProjectCatalog",
+    "LocalSearchPlugin._deleteVaultPropertyKey",
+    "LocalSearchPlugin._deleteVaultPropertyValue",
+    "LocalSearchPlugin._flushIndexQueue",
+    "LocalSearchPlugin._handleFileRename",
+    "LocalSearchPlugin._handleFolderDelete",
+    "LocalSearchPlugin._handleFolderRename",
+    "LocalSearchPlugin._invalidatePropertyCatalogViews",
+    "LocalSearchPlugin._normalizeSettingsInPlace",
+    "LocalSearchPlugin._publishIndexChanges",
+    "LocalSearchPlugin._publishProjectChanges",
+    "LocalSearchPlugin._publishPropertyCatalogChanges (catalog-only notification)",
+    "LocalSearchPlugin._queueFileIndex",
+    "LocalSearchPlugin._refreshDidaProjectCatalog",
+    "LocalSearchPlugin._remapPropertyValueCatalog",
+    "LocalSearchPlugin._renameVaultPropertyKey",
+    "LocalSearchPlugin._renameVaultPropertyValue",
+    "LocalSearchPlugin._rewriteInlineTagPositions",
+    "LocalSearchPlugin.constructor",
+    "LocalSearchPlugin.getIndexedProjectGroups",
+    "LocalSearchPlugin.getIndexedPropertyCatalog",
+    "LocalSearchPlugin.getProjectOwnerMigration",
+    "LocalSearchPlugin.migrateVaultTagTreePrefix",
+    "LocalSearchPlugin.onload",
+    "LocalSearchPlugin.onunload",
+    "LocalSearchPlugin.openFloatingSearch",
+    "LocalSearchPlugin.openSearchModal",
+    "LocalSearchPlugin.propertyCatalogKeys",
+    "LocalSearchPlugin.propertyCatalogValues",
+    "LocalSearchPlugin.saveIndexCache",
+    "LocalSearchPlugin.subscribeProjectPropertyChanges",
+    "LocalSearchPlugin.throttleSaveCache",
+    "LocalSearchSettingTab",
+    "MobileFrameController",
+    "NAVIGATOR_VISIBLE_SECTION_DEFS",
+    "NavigatorCustomization",
+    "NavigatorCustomization.renderSeparator",
+    "PointerSortCoordinator",
+    "ResultRanker",
+    "SearchCore",
+    "SearchCore._applyResultQuickFilter",
+    "SearchCore._clearSearchContext",
+    "SearchCore._clearUiRefs",
+    "SearchCore._commitSearchInputValue",
+    "SearchCore._compareResults",
+    "SearchCore._navigationCandidates",
+    "SearchCore._onFilterChanged",
+    "SearchCore._openResultFromSearch",
+    "SearchCore._recomputeCurrentResults",
+    "SearchCore._syncResultStateRow",
+    "SearchCore.constructor",
+    "SearchCreateController._leaveDerivedCreateView",
+    "SearchCreateController.clearActiveInput",
+    "SearchCreateController.clearActiveInput (deduplicate)",
+    "SearchCreateController.syncDerivedCreateViewState",
+    "SearchDropdownController",
+    "SearchFacetController",
+    "SearchFacetController._buildPropertyTreeModel",
+    "SearchFacetController._propertyValues",
+    "SearchFacetController.buildTypeActions",
+    "SearchFacetController.openAttachmentTypePicker",
+    "SearchFacetController.openPropertyPicker",
+    "SearchFacetController.openTagPicker",
+    "SearchFacetController.runSidebarMaintenance",
+    "SearchFacetController.showFolderDropdown",
+    "SearchFloatingHost",
+    "SearchNavigatorController",
+    "SearchResultControlsController.buildToolbar",
+    "SearchResultControlsController.syncInputActions",
+    "SearchResultControlsController.syncInputActions (create-busy guard)",
+    "SearchResultRendererController._appendChannelGroup",
+    "SearchResultRendererController._lazyFillSnippet",
+    "SearchResultRendererController._shiftWindowRange",
+    "SearchResultRendererController.constructor",
+    "SearchResultRendererController.destroy",
+    "SearchResultRendererController.refreshChangedRows",
+    "SearchResultRendererController.renderPage",
+    "SearchResultRendererController.renderPage (atomic staged commit + rollback)",
+    "SearchSortController",
+    "SearchView",
+    "SearchWindowSession",
+    "SearchWorkspaceCapabilities",
+    "attachPickerHeaderModes",
+    "bindInputFocusGuard",
+    "buildPropertyUsageStats",
+    "commitFacetSelectionState",
+    "createDialogSession",
+    "createFacetPickerSelectionMode",
+    "createSharedPickerTreeShell",
+    "normalizeEditableTagValue",
+    "renderSharedFolderTreePicker",
+    "sharedFolderChildren"
+  ],
+  "files": [
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "baseline": "baseline/modular.3-source/core/LocalSearchPlugin.js",
+      "before": "bee47b9dbee454de976459da331e1e7098ee737b91467da48446ac4f8227b051",
+      "after": "86480cba2ef9e5d56b696d92649be6b90188f408e3c714bd577a6df462d197e5"
+    },
+    {
+      "file": "src/core/SearchCore.js",
+      "baseline": "baseline/modular.3-source/core/SearchCore.js",
+      "before": "43ae35bce521aa1a5dffe80e8159b46e3a7409e1bfb7d9527eaa660b3edc5424",
+      "after": "5a81dbc84b6441f73824a3edbfa456a5928e06bc7284d45a80b4f51a6573a65d"
+    },
+    {
+      "file": "src/core/default-settings.js",
+      "baseline": "baseline/modular.3-source/core/default-settings.js",
+      "before": "e1f28ce207e307edd275eca532c6edee2ce9ca83851df0a913f8deb94e531dfa",
+      "after": "0942191aa8fbdc7631e8b1dceb638f9cff304b4ae0909d78a827ff875ace9c2e"
+    },
+    {
+      "file": "src/core/search/file-actions-methods.js",
+      "baseline": "baseline/modular.3-source/core/search/file-actions-methods.js",
+      "before": "a95233145b04beed5a35453b23708264e18bbbfaa5ceb0965f596f84559a5ad4",
+      "after": "451fe867533c4f34e3da216855533f36c8c72f753cf2880537b1a51da840df8b"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "baseline": "baseline/modular.3-source/core/search/input-and-filters-methods.js",
+      "before": "3ca8c8ddedfa70f381e7a9dd240075df6ba8662c71183658f9b60045b9f9fa43",
+      "after": "2989f1dc21fcb519b5f33359d84ee5203db806159a515f83318f5429939c3752"
+    },
+    {
+      "file": "src/core/search/search-and-ranking-methods.js",
+      "baseline": "baseline/modular.3-source/core/search/search-and-ranking-methods.js",
+      "before": "dab97abbcf776f5adb6c7baddab2e3a66bd986ea87fd1da9686cdf313e5551b1",
+      "after": "eabd50e64aa2dc5214318684ca1376c8a42282eea21e009429c5c800e99f3e5b"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "baseline": "baseline/modular.3-source/core/search/shell-methods.js",
+      "before": "e44ace692869d9688cd982f0225bb0a5e7ba1dc6aa55d2dd7253fca39fa986fa",
+      "after": "379e956d83bd74fe01fd4089207acc321cf6bb2b32ba14424ca7d912d4fdb3c4"
+    },
+    {
+      "file": "src/data/folders/folder-tree.js",
+      "baseline": "baseline/modular.3-source/data/folders/folder-tree.js",
+      "before": "95d45f7a555c5c9e6db46eab6091e5ff7ebc980592dbf2d8d3136d94da80fa09",
+      "after": "6a7fb8a7ea7943f904957f6da02c3184b16ed2e9f170f16ad711ff65dc930108"
+    },
+    {
+      "file": "src/data/properties/property-types.js",
+      "baseline": "baseline/modular.3-source/data/properties/property-types.js",
+      "before": "69c5d074d8710ef94a52ae17fa137abedb7ae5a66c4e6ae7b4fd7e7c785c02fa",
+      "after": "3782c276c986c4f0852366e2a3693065413296bcd4f63f7b628244237dcec43d"
+    },
+    {
+      "file": "src/data/properties/property-values.js",
+      "baseline": "baseline/modular.3-source/data/properties/property-values.js",
+      "before": "9fa45630875b0f61d82fe99f838fc0ade8e2548e30f2d9ea1511cf6a5e15d954",
+      "after": "3d62afc259c1af55e2115aabccedaaa249060e9f122762972f4edefbdd4002d6"
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "baseline": "/mnt/data/gls_fix/baseline/modular.3-source/features/batch/property-editor-methods.js",
+      "before": "615cdbe4d4e9b0f97e34254391e2298986bf4a0c81bfb8238dc3b04b2a0e9240",
+      "after": "cc44dbb7ba6ebeaab2d6fc1a26a9612f0241295e14dbf46ea3629f7552c6483e"
+    },
+    {
+      "file": "src/features/batch/tag-editor-methods.js",
+      "baseline": "baseline/modular.3-source/features/batch/tag-editor-methods.js",
+      "before": "9d1d6b090da0c8da72a323d6e339ed0eafb078f5dfe4e93a5377a92310dffdbc",
+      "after": "44f69c9aa08e4646ff2992c3cb709d16c933cdda31cb60af2a77ea01d7c55e4b"
+    },
+    {
+      "file": "src/features/create/input-mode-methods.js",
+      "baseline": "baseline/modular.3-source/features/create/input-mode-methods.js",
+      "before": "3ff013349efb26727b827a548aaba0cb9d703fbca1cd433fa7d84752fa152de2",
+      "after": "0145a02f576708d752ca1fd1e7a2b6e6a74781b1c6f12ef1a11e5e729bdf7af4"
+    },
+    {
+      "file": "src/features/facets/SearchFacetController.js",
+      "baseline": "baseline/modular.3-source/features/facets/SearchFacetController.js",
+      "before": "53e3836ff649326e672986ffa36441e95e7afa9755b0080ba551c232d7017e30",
+      "after": "8fe1465fd961f60c897b0601d4ad4eb1a20b640f921794cef88a5fc442efd070"
+    },
+    {
+      "file": "src/features/facets/folder-picker-methods.js",
+      "baseline": "baseline/modular.3-source/features/facets/folder-picker-methods.js",
+      "before": "7d38779d3017ac0e1e63160b5a0c8665438ef33def7a1fb0651733c5a1eb4438",
+      "after": "d6d97c2906aaaaf0f9e2131cf3bd2e992cdc56dd178f7550e9a090ba81667adf"
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "baseline": "baseline/modular.3-source/features/facets/property-picker-methods.js",
+      "before": "49d1f1c6e9899cfb57660214efdff09b50731a252fe6638046a24a198fd73b98",
+      "after": "212e41416c17da0da7a5177a1d01a929dd1575f850b0e77638d192447a855832"
+    },
+    {
+      "file": "src/features/facets/sidebar-maintenance-methods.js",
+      "baseline": "baseline/modular.3-source/features/facets/sidebar-maintenance-methods.js",
+      "before": "c02839bf006dfc96e2c54957f91567c1bc1f6d759ff94477676abf673fbb5d3d",
+      "after": "0019c61b749ea36d85bc9ff0349b7ba25f95b913a5ab420c5fdb13156a9949da"
+    },
+    {
+      "file": "src/features/facets/tag-picker-methods.js",
+      "baseline": "baseline/modular.3-source/features/facets/tag-picker-methods.js",
+      "before": "5e6d15d857b851caf4caf6318069ad4fd4682ae2e7d78923989c7ad9859ff216",
+      "after": "2fabd924996a6cc299fce8d5f0a66ed946ad884cc8ada37f1fe1039aa5849859"
+    },
+    {
+      "file": "src/features/facets/type-picker-methods.js",
+      "baseline": "baseline/modular.3-source/features/facets/type-picker-methods.js",
+      "before": "cb03ad893d26dfb0bf6547e44377dbd3830688bab0d5bebcb744dfe032389d47",
+      "after": "adfbfdfc3713b9b7fda30bfe17091ced71f23682b18b4e5f902ccc71af4a08d9"
+    },
+    {
+      "file": "src/features/filters/filter-state.js",
+      "baseline": "baseline/modular.3-source/features/filters/filter-state.js",
+      "before": "704cf5f2d99d0668b61c366bbb44d5c4d5ba6e175269f2e66b802492447c43ab",
+      "after": "f09f8ca1797c025b08948fdd8157df2361cafdfdc656f1754e8a52dbc47f33ac"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "baseline": "baseline/modular.3-source/features/navigator/NavigatorCustomization.js",
+      "before": "3e10a9d5bc687ef6e316b8253e257db8db0a7fd36d9849fe295c153118c46c81",
+      "after": "3a12b92507585c31461fb8f47f50938970cdc566964a55bf4db4319bc50de2b2"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
+      "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
+      "after": "c2d3818cf969210b3729740b975f2f051ad91c35fa0d84b24c1a71dfeb8842dd"
+    },
+    {
+      "file": "src/features/navigator/toolbar-config.js",
+      "baseline": "baseline/modular.3-source/features/navigator/toolbar-config.js",
+      "before": "895c2f9cd68c923b2483b783de2029888c767118a859621db665c23cb35f5df7",
+      "after": "2d13e87101559e63b142a52987edba8ed8dec08b739590ac26e54a31002e0b68"
+    },
+    {
+      "file": "src/features/plugin/content-cache-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/content-cache-methods.js",
+      "before": "8724751cc29743c64cd01e61757971c779cd78ad3da006e1ad9aa4ab51898b5d",
+      "after": "4e22229c1842e9a77ad8556798e78ae56129f6261007737563f1e7c5bf43d96a"
+    },
+    {
+      "file": "src/features/plugin/external-search-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/external-search-methods.js",
+      "before": "abab9cb157aa328c1e73d73c4f44e824e7cc7f97a0a1a2e11dfbce8c3b796e05",
+      "after": "7e9ff3392f39bbcbdbad45a7a67add46a13f978e98d3a0b492756c48a6c217df"
+    },
+    {
+      "file": "src/features/plugin/file-command-actions-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/file-command-actions-methods.js",
+      "before": "0bf802ce14820e147fcb8c3f945d1fd4696db593ba155257bbeaf3c1b9007a5e",
+      "after": "6bfe962404faa3dfc441cb3b509b0e9c8352abac15c5723b6ffd2aeecd13fe1d"
+    },
+    {
+      "file": "src/features/plugin/index-queue-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/index-queue-methods.js",
+      "before": "26a42c60b6ab43e0cbf878ece769eb70d3b21b7086dac56cd210d78ee2dbe882",
+      "after": "d8530ec6eeec8923058033414a7268610887b3a035e16c26a50777238cc9a0d8"
+    },
+    {
+      "file": "src/features/plugin/index-storage-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/index-storage-methods.js",
+      "before": "43b39a81d8d90bab604924f48bad4cb78015048b34781b5a6b89fbdb949094f2",
+      "after": "7bf749679650ca198851817bf4b7c44d1cb526e41c028d3ca0ec8eea30054449"
+    },
+    {
+      "file": "src/features/plugin/path-lifecycle-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/path-lifecycle-methods.js",
+      "before": "0fca8a656e639d2d11903786d25c08b9efb13e24f3feb708ab8493332ee65006",
+      "after": "de9daea5b7519e5f0f3dfa23da8252fb40774831f5027627154d7aa7fd5c64ee"
+    },
+    {
+      "file": "src/features/plugin/property-maintenance-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/property-maintenance-methods.js",
+      "before": "174f416612c250c8a7ae5b9fa52cf580fc2b3b9c316b866c69b738a8d3168bdf",
+      "after": "ca6f6a442aa74d02d9bc622c0ad7a2da6249bd6befa9d2f834d2065e2b95fd60"
+    },
+    {
+      "file": "src/features/plugin/recent-history-state-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/recent-history-state-methods.js",
+      "before": "affb7dc2890a3fe7d202f632e641c5ce81dd51445a5971d86f1024fd094d2643",
+      "after": "e0b3589fce7d0f90db0f96da3a4be154768d684934a760eaf68303d7a47a1241"
+    },
+    {
+      "file": "src/features/plugin/settings-storage-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/settings-storage-methods.js",
+      "before": "59ca639d5259db7c4c9abe2f9fe01447f0cb900b2974db77b3e51d53b61a24c4",
+      "after": "2907d25196fab6549a3e5f4d4b5b4d8b2f79f8da208077098b0b939436b03bc0"
+    },
+    {
+      "file": "src/features/plugin/tree-maintenance-methods.js",
+      "baseline": "baseline/modular.3-source/features/plugin/tree-maintenance-methods.js",
+      "before": "9a984ef3881f0e721f50901704216870b02ab0409e9effc658c67eb18dc4556d",
+      "after": "708936052dc8fcd6e68a015ab7be22d72c242f3860faf731546baee2248b2e9c"
+    },
+    {
+      "file": "src/features/result-controls/toolbar-methods.js",
+      "baseline": "baseline/modular.3-source/features/result-controls/toolbar-methods.js",
+      "before": "0d0fa0316b76360b4b50cb9b5df0bfe09cfcb92c017add4b266bcfff9d62e498",
+      "after": "2d248a15eabafa1c2e808ab349eae0e756e887345e10a3f03315e8fdb8628d0b"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "baseline": "baseline/modular.3-source/features/result-controls/view-composer-methods.js",
+      "before": "ba784c192abd2685d3206b41d631a5a5cf52842cb998afd1b9d2bb1ce4eab30f",
+      "after": "8e0d2ed2916e9b7e80a7fb29832427d98d57c80cbcb26995627455a6eb5bf3ac"
+    },
+    {
+      "file": "src/features/results/SearchResultRendererController.js",
+      "baseline": "baseline/modular.3-source/features/results/SearchResultRendererController.js",
+      "before": "0b43ca6f4788812bb082fc955345c3f50008306de85d36ac92edf14980145c10",
+      "after": "d941d9c1c97bc7eb6ac849b909aaa137ae1b6e6bae078b6e7dd8d4c4f48e06ca"
+    },
+    {
+      "file": "src/features/results/page-and-snippets-methods.js",
+      "baseline": "baseline/modular.3-source/features/results/page-and-snippets-methods.js",
+      "before": "483a79ba8690243d6554a5cc19113f56fa9df33fc0d6fdb44257f317da22e994",
+      "after": "268dfe2e8db32db9741b227d7bfef32870d439c8a86e312f807d4c50ecc3c3f4"
+    },
+    {
+      "file": "src/features/results/virtual-window-methods.js",
+      "baseline": "baseline/modular.3-source/features/results/virtual-window-methods.js",
+      "before": "fcb1fafb28503461a0d772218259af784a566259e3b49600e698993924c5cf07",
+      "after": "6abbd1801296340f46009cd7c4ba7d3c78b355a727f553bda64d5ce0301e5744"
+    },
+    {
+      "file": "src/features/search/ResultRanker.js",
+      "baseline": "baseline/modular.3-source/features/search/ResultRanker.js",
+      "before": "69672b616b3b85c45f253aeae1bda98d4d32a25db1087b14a1a963659fa6cfee",
+      "after": "557fdf77628e81ef01f0c29985ab0e68baed673c5077e996ae76676cc1dbc04f"
+    },
+    {
+      "file": "src/features/sort/SearchSortController.js",
+      "baseline": "baseline/modular.3-source/features/sort/SearchSortController.js",
+      "before": "94abaf42794fde9d964ba9471fe22cf7c693e4b1dbc1cbe9565889a5429b0636",
+      "after": "25b69689a3f6945f79da329ce49bab56870101feac71e5dd3020a850aa1ddcf4"
+    },
+    {
+      "file": "src/integrations/SearchWorkspaceCapabilities.js",
+      "baseline": "baseline/modular.3-source/integrations/SearchWorkspaceCapabilities.js",
+      "before": "0b255851542a65a4023029125b626e9e4dfae6f6e955572fd677b0113290dc21",
+      "after": "91c9dbcec7f4d5aae65f51eefeb6389769ae00bd1b5bdaf004f0cc7c121b26ef"
+    },
+    {
+      "file": "src/integrations/public-contract.js",
+      "baseline": "baseline/modular.3-source/integrations/public-contract.js",
+      "before": "a14cbb1f94ddefe69877565062ab5162fc8ca22046573c10674be0ad12150bf2",
+      "after": "09044b6a6f33549d2b607aaea35a308d701035959cd82b8a85a40159ecf97d22"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "baseline": "/mnt/data/gls_fix/baseline/modular.3-source/interactions/PointerSortCoordinator.js",
+      "before": "ab6bfc6e1d9c00d9c146e8edabf83926e5cc916158b8923554e2c92d2f651760",
+      "after": "ef26ba9152544c50cab40256a7159ed91442c1122e69fe74bcf6a29fff46c451"
+    },
+    {
+      "file": "src/services/BatchMetadataService.js",
+      "baseline": "baseline/modular.3-source/services/BatchMetadataService.js",
+      "before": "cdf30775f8c4a7def0d0e95fe51a72d94c9568f2315f9dfa5f9d4e966fdd3d19",
+      "after": "5a82955dfcfeebd61d6249c058504ab94d92e4b92be7ab980bcc5544227df34c"
+    },
+    {
+      "file": "src/styles/styles.css",
+      "baseline": "baseline/modular.3-source/styles/styles.css",
+      "before": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad",
+      "after": "12599c5794c5199fcf10a42534bdb9229b9e4c3e9b1a01de51ca496f1a3c7d40"
+    },
+    {
+      "file": "src/ui/components/input-controls.js",
+      "baseline": "baseline/modular.3-source/ui/components/input-controls.js",
+      "before": "4d068faa3dc64f8d0283f8693dfc33a2748e2832cb424adf03d9c2695057fb57",
+      "after": "61fbcf0c3a9e7123e2b4d43bcaf5c91f48947f8eddf5224a97d8de9efcf24c4f"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "baseline": "baseline/modular.3-source/ui/dialogs/dialog-session.js",
+      "before": "c1fc3d78c2f13a9102914b76fe66f2259ebb60ecffbf8636807c08bb36d35758",
+      "after": "0ec332f20538c4aabfe247e37930fcef8cae498f106246edd7001224bd9963e1"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "baseline": "baseline/modular.3-source/ui/hosts/SearchWindowSession.js",
+      "before": "1790828c755f810db9a0e605acd03e499a466cf41b1bcab3eb14a832d7575fbd",
+      "after": "60ed2265832e16ebf668ec8de0ee80e93c2a95a6c43f8a75f1556b45d15645cf"
+    },
+    {
+      "file": "src/ui/hosts/modal-host.js",
+      "baseline": "baseline/modular.3-source/ui/hosts/modal-host.js",
+      "before": "b374aca701f8dc5000301aae3f6cd9cd6f8265d3e1b240217ecaf2e49eecd313",
+      "after": "effd420306f5c50a1ea02e217ab63333c010e01fc999a99d19b5772ae82d2552"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "baseline": "baseline/modular.3-source/ui/mobile/mobile-frame.js",
+      "before": "c9236a58325218edd1884db138cf5b39ad0f10ac10fb92029ffcb0937d123759",
+      "after": "358b29f6a6e24e0468cbd981a4943d9c6d708ce35c238396ad7aa019f5ca3fd3"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "baseline": "baseline/modular.3-source/ui/overlays/SearchDropdownController.js",
+      "before": "d9520e2d9f9718bde77361f4995cea61172d6b100ce583d060f2afb396f81f22",
+      "after": "dbe31ddb8df4c48ea5e51112b63c1ae7196b24cf165669e0de69f77ca523a9b4"
+    },
+    {
+      "file": "src/ui/pickers/folder-picker.js",
+      "baseline": "baseline/modular.3-source/ui/pickers/folder-picker.js",
+      "before": "4c41813086661873943bc6449df6e18965cc2350e5e62a2dcad32621d1467e9b",
+      "after": "767b39e0966d1fe185d43239c6a664b05196593c5931b6bfc146824328d5482d"
+    },
+    {
+      "file": "src/ui/pickers/header-modes.js",
+      "baseline": "baseline/modular.3-source/ui/pickers/header-modes.js",
+      "before": "d115d0d8ba01e29d3d193ff89ec39d8d7b93e3c85f6e386506f97c7e8c20b2a3",
+      "after": "3ba606e38477515868143d011080086b43ad85ea0b21b6036adb68306b4ec497"
+    },
+    {
+      "file": "src/ui/pickers/picker-shell.js",
+      "baseline": "baseline/modular.3-source/ui/pickers/picker-shell.js",
+      "before": "9325885e12909c3cf9fb00ec7efa4721ebfc77ab2ec521684f14862ece1a58cf",
+      "after": "e9d390f48d1b167afddac9b0afb8072a5ad623b46595b96816b2f88669522be3"
+    },
+    {
+      "file": "src/ui/pickers/selection-mode.js",
+      "baseline": "baseline/modular.3-source/ui/pickers/selection-mode.js",
+      "before": "5a332824953fd3cbdcb6dfad444317f6d8e4c62979eded8885d055cd0d165f31",
+      "after": "633e993aeb55b74fe4e951195092e4dc9fd7f893871af9cc532bd2f46c0d3692"
+    },
+    {
+      "file": "src/ui/pickers/sort-mode.js",
+      "baseline": "baseline/modular.3-source/ui/pickers/sort-mode.js",
+      "before": "9ba6cb28c4ab439e235dbcd8a6da6c7625c08fc2ce0b2b38107cf7d473a8db46",
+      "after": "c99f06c6a9520e7076d6b35cd5d643226e4e6f5cdc76bdfbf6764409b27f66ab"
+    },
+    {
+      "file": "src/ui/settings/LocalSearchSettingTab.js",
+      "baseline": "baseline/modular.3-source/ui/settings/LocalSearchSettingTab.js",
+      "before": "9bd0ed894d174e0865b32e30b269bfdbe6168b6ce54ef0cbbcd5d45649e29461",
+      "after": "99608552b197e83d7aa45742e45981f9679cbe0ab6e7eb639f305bdc6f74f8e1"
+    },
+    {
+      "file": "src/ui/views/SearchView.js",
+      "baseline": "baseline/modular.3-source/ui/views/SearchView.js",
+      "before": "413a4b595d37d199328fe5cbaa3c6034288598f276f434ffbdc116a21bd54863",
+      "after": "f047f543d2e47400c5bd1462de25459181b321021f9ca6d260ebc4a2c4b25415"
+    }
+  ],
+  "retiredFiles": [
+    {
+      "file": "src/ui/hosts/floating-host.js",
+      "frozenSha256": "231255f46683ff021e55b19582f169cbe1a041bf948eeba357ab660ef09ac4ca",
+      "reason": "Remove the desktop-only modeless search host; Modal, Tab, and Sidebar remain."
+    },
+    {
+      "file": "src/core/ui-reference-keys.js",
+      "frozenSha256": "ff883ed584cea4e79c417f6f58d1ffd691ff5f357c224c31669f4d15d003d995",
+      "reason": "v5.2 consolidation: single-consumer pure helper moved into its owner; no runtime feature removed"
+    },
+    {
+      "file": "src/ui/hosts/modal-chrome.js",
+      "frozenSha256": "8d3c6820b363fbdd2517a40d58ae0d3fa23eba39e202b54f21956766a7f61d4c",
+      "reason": "v5.2 consolidation: single-consumer pure helper moved into its owner; no runtime feature removed"
+    },
+    {
+      "file": "src/utils/text-collator.js",
+      "frozenSha256": "b779f31fb47672d1ddd46b954a4cb030a778c7f05d88335eb4bf798ef1e0ef55",
+      "reason": "v5.2 consolidation: single-consumer pure helper moved into its owner; no runtime feature removed"
+    },
+    {
+      "file": "src/core/search/open-selection-methods.js",
+      "frozenSha256": "807471377e984629729fdc10e740c36a2cc5c48af20792997cb8cffe4b7374a1",
+      "reason": "v5.2 phase2: move only one controller method group into its existing owner; preserve separate exports and compose order"
+    },
+    {
+      "file": "src/features/plugin/recent-history-storage-methods.js",
+      "frozenSha256": "e043a441247e38ee17d0bab0797c2e78b0902d1d308b46b097a59e683b9f2ce4",
+      "reason": "v5.2 phase2: move only one controller method group into its existing owner; preserve separate exports and compose order"
+    },
+    {
+      "file": "src/features/facets/picker-model-methods.js",
+      "frozenSha256": "039dba97865be29442dcbf8f84734043af97b7121f91d1d167040a84cb779d5b",
+      "reason": "v5.2 phase2: move only one controller method group into its existing owner; preserve separate exports and compose order"
+    }
+  ],
+  "retiredOriginIds": [
+    "LocalSearchPlugin._mergeRecentOpenedHistory",
+    "LocalSearchPlugin._notifyRecentOpened",
+    "LocalSearchPlugin._throttleSaveRecentOpenedHistory",
+    "LocalSearchPlugin.getAuthoritativeFileTime",
+    "LocalSearchPlugin.getRecentOpenedHistory",
+    "LocalSearchPlugin.loadRecentOpenedHistory",
+    "LocalSearchPlugin.markOpenedFromExternal",
+    "LocalSearchPlugin.saveRecentOpenedHistory",
+    "LocalSearchPlugin.subscribeRecentOpened",
+    "RESULT_TEXT_COLLATOR",
+    "SEARCH_CORE_UI_REF_KEYS",
+    "SearchCore._chooseExternalFile",
+    "SearchCore._resolveResultElement",
+    "SearchCore.clearSelected",
+    "SearchCore.openSelectedNote",
+    "SearchFacetController._buildPropertyTreeModel",
+    "SearchFacetController._expandTreeAncestors",
+    "SearchFacetController._propertyValues",
+    "SearchFacetController._syncHeaderCount",
+    "SearchFloatingHost",
+    "stripObsidianModalChrome"
+  ],
+  "renamedFiles": [
+    {
+      "from": "src/features/plugin/project-catalog-methods.js",
+      "to": "src/features/plugin/property-catalog-methods.js",
+      "frozenSha256": "7883491085a972b8de03b29fb584198eaf090078d4b9cee5c7e314f1de0805ad",
+      "after": "c232ea5d80184017b65e7406a4dee2c72c97922b4c7ad4ac09f62117d54edc83",
+      "reason": "The implementation is generic ordinary-property catalog; no project-specific persistence or filtering."
+    }
+  ],
+  "addedFiles": [
+    {
+      "file": "src/data/properties/cross-key-transfer.js",
+      "sha256": "dbf304fee2142cb2fc66f3b53921e63e4ba0d67952fb76be62c816f12a52a1a1"
+    },
+    {
+      "file": "src/data/properties/key-merge.js",
+      "sha256": "60172e697467fda99a0fff84f658714199df8f66f63fba924666af5d54a6623c"
+    },
+    {
+      "file": "src/features/batch/tag-hierarchy-compose.js",
+      "sha256": "5202346afcfbf072c3b9413843ec892fd668ea8f05eac8eaa60e1b53e921a1ef"
+    },
+    {
+      "file": "src/features/plugin/property-catalog-methods.js",
+      "sha256": "c232ea5d80184017b65e7406a4dee2c72c97922b4c7ad4ac09f62117d54edc83"
+    }
+  ]
+}

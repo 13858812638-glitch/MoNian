@@ -1,0 +1,212 @@
+{
+  "engine": "Chromium 144.0.7559.96",
+  "host": "mock Obsidian",
+  "modes": [
+    "mobile-light",
+    "desktop-light"
+  ],
+  "results": [
+    {
+      "mobile": true,
+      "step": "01-initial",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "02-composition-deferred",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "03-search-results",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "04-folder-picker",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "05-picker-search-focus",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "06-folder-and-erase",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "07-clear-conditions",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "08-batch-range",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "09-batch-all-and-exit",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "10-rename-dialog",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "11-rename-submit",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "12-dialog-cancel",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "13-delete-dialog",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "14-delete-submit",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "15-derived-create",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "16-create-commit",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "17-close-cleanup",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "18-pointer-sort-and-cancel",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "19-swipe-owner-and-native-scroll",
+      "status": "PASS"
+    },
+    {
+      "mobile": true,
+      "step": "20-workbench-embedded-api",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "01-initial",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "02-composition-deferred",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "03-search-results",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "04-folder-picker",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "05-picker-search-focus",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "06-folder-and-erase",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "07-clear-conditions",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "08-batch-range",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "09-batch-all-and-exit",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "10-rename-dialog",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "11-rename-submit",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "12-dialog-cancel",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "13-delete-dialog",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "14-delete-submit",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "15-derived-create",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "16-create-commit",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "17-close-cleanup",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "18-pointer-sort-and-cancel",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "19-swipe-owner-and-native-scroll",
+      "status": "PASS"
+    },
+    {
+      "mobile": false,
+      "step": "20-workbench-embedded-api",
+      "status": "PASS"
+    }
+  ],
+  "passed": 40,
+  "failed": 0
+}

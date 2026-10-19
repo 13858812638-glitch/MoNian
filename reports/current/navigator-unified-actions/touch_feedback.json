@@ -1,0 +1,285 @@
+{
+  "source": "/mnt/data/GLS-v5.2-Navigator统一操作面板-v1-候选/Source",
+  "checks": [
+    {
+      "theme": "light",
+      "case": "badge.press.feedback",
+      "ok": true,
+      "detail": {
+        "pressed": true,
+        "selected": false,
+        "background": "color(srgb 0.958 0.958 0.981333)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "badge.release.clean+single-action",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [
+          {
+            "kind": "folder",
+            "value": "项目"
+          }
+        ],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "blank.press.feedback",
+      "ok": true,
+      "detail": {
+        "pressed": true,
+        "selected": false,
+        "background": "color(srgb 0.958 0.958 0.981333)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "blank.release.clean+single-action",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [
+          {
+            "kind": "folder",
+            "value": "项目"
+          }
+        ],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "movement.clears-feedback",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "movement.end.clean",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "cancel.cleans-feedback",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "disclosure.no-proxy-pressed",
+      "ok": true,
+      "detail": {
+        "heading": {
+          "x": 26,
+          "y": 35,
+          "disabled": false
+        },
+        "state": {
+          "pressedRows": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "case": "disabled.no-pressed",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "sort.no-pressed",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "light",
+      "case": "no-pageerrors",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "theme": "dark",
+      "case": "badge.press.feedback",
+      "ok": true,
+      "detail": {
+        "pressed": true,
+        "selected": false,
+        "background": "color(srgb 0.155647 0.155647 0.17898)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "badge.release.clean+single-action",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [
+          {
+            "kind": "folder",
+            "value": "项目"
+          }
+        ],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "blank.press.feedback",
+      "ok": true,
+      "detail": {
+        "pressed": true,
+        "selected": false,
+        "background": "color(srgb 0.155647 0.155647 0.17898)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "blank.release.clean+single-action",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [
+          {
+            "kind": "folder",
+            "value": "项目"
+          }
+        ],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "movement.clears-feedback",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "movement.end.clean",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "cancel.cleans-feedback",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "disclosure.no-proxy-pressed",
+      "ok": true,
+      "detail": {
+        "heading": {
+          "x": 26,
+          "y": 35,
+          "disabled": false
+        },
+        "state": {
+          "pressedRows": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "disabled.no-pressed",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "sort.no-pressed",
+      "ok": true,
+      "detail": {
+        "pressed": false,
+        "selected": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "filterHits": [],
+        "layout": "mobile"
+      }
+    },
+    {
+      "theme": "dark",
+      "case": "no-pageerrors",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "pass": 22,
+  "total": 22
+}

@@ -1,0 +1,32 @@
+{
+  "beforeRelease": {
+    "gen": 4,
+    "oldGeneration": 3,
+    "inFlight": 0,
+    "loaded": true,
+    "events": [
+      "old-start",
+      "new-start"
+    ],
+    "snippet": "产品测试笔记0 测试正文0"
+  },
+  "afterSnippet": "产品测试笔记0 测试正文0",
+  "domSnippet": "产品测试笔记0 测试正文0",
+  "events": [
+    "old-start",
+    "new-start",
+    "old-release"
+  ],
+  "pending": 0,
+  "listenerCount": 7,
+  "retainedPaths": 400,
+  "secondHost": {
+    "visible": 21,
+    "loaded": 21,
+    "pending": 0,
+    "sameSearch": true
+  },
+  "destroyed": true,
+  "pendingAfterDestroy": 0,
+  "pageErrors": []
+}

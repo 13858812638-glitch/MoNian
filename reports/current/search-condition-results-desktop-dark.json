@@ -1,0 +1,1757 @@
+{
+  "engine": "Chromium 144.0.7559.96",
+  "nativeObsidian": false,
+  "baseline": "frozen modular.2 subject and stylesheet",
+  "results": [
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "pure-title-query-no-condition-rail",
+      "pass": true,
+      "evidence": {
+        "query": "周报",
+        "input": "周报",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "项目/周报.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 3,
+        "cacheRevision": 3,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "zero-query-default-create-no-phantom-condition",
+      "pass": true,
+      "evidence": {
+        "query": "不存在的词甲",
+        "input": "不存在的词甲",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [
+            "note"
+          ],
+          "fileType": "note",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": true,
+        "explicit": false,
+        "results": [],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 3,
+        "cacheRevision": 3,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "mixed-title-body-switch-still-works",
+      "pass": true,
+      "evidence": {
+        "query": "鞋垫",
+        "input": "鞋垫",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "资料/鞋垫方案.md",
+          "资料/图片规范.md"
+        ],
+        "railHidden": false,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "标题 · 1正文 · 1",
+        "channelsHidden": false,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 3,
+        "cacheRevision": 3,
+        "searchTimer": false,
+        "before": [
+          "资料/鞋垫方案.md"
+        ],
+        "after": [
+          "资料/图片规范.md"
+        ]
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "draft-folder-eraser-restores-empty-search-state",
+      "pass": true,
+      "evidence": {
+        "draft": {
+          "query": "不存在的词甲",
+          "input": "不存在的词甲",
+          "filter": {
+            "tags": [],
+            "folders": [
+              "资料"
+            ],
+            "properties": [],
+            "fileTypes": [
+              "note"
+            ],
+            "fileType": "note",
+            "dateRange": null,
+            "tagMatchMode": "all",
+            "propertyMatchMode": "all"
+          },
+          "searchFilter": {
+            "tags": [],
+            "folders": [],
+            "properties": [],
+            "fileTypes": [],
+            "fileType": "all",
+            "dateRange": null,
+            "tagMatchMode": "all",
+            "propertyMatchMode": "all"
+          },
+          "derived": true,
+          "explicit": false,
+          "results": [],
+          "railHidden": false,
+          "clearHidden": false,
+          "chips": "文件夹：[资料]清除筛选条件 文件夹：[资料]",
+          "chipCount": 1,
+          "channels": "",
+          "channelsHidden": true,
+          "page": "results",
+          "layout": "split",
+          "counts": {
+            "folder": 6,
+            "tags": 6,
+            "properties": 4
+          },
+          "generation": 3,
+          "cacheRevision": 3,
+          "searchTimer": false
+        },
+        "after": {
+          "query": "",
+          "input": "",
+          "filter": {
+            "tags": [],
+            "folders": [],
+            "properties": [],
+            "fileTypes": [],
+            "fileType": "all",
+            "dateRange": null,
+            "tagMatchMode": "all",
+            "propertyMatchMode": "all"
+          },
+          "searchFilter": {
+            "tags": [],
+            "folders": [],
+            "properties": [],
+            "fileTypes": [],
+            "fileType": "all",
+            "dateRange": null,
+            "tagMatchMode": "all",
+            "propertyMatchMode": "all"
+          },
+          "derived": false,
+          "explicit": false,
+          "results": [
+            "画板.canvas",
+            "图片.png",
+            "项目/排期.md",
+            "项目/周报.md",
+            "资料/图片规范.md",
+            "资料/鞋垫方案.md"
+          ],
+          "railHidden": true,
+          "clearHidden": true,
+          "chips": "",
+          "chipCount": 0,
+          "channels": "",
+          "channelsHidden": true,
+          "page": "results",
+          "layout": "split",
+          "counts": {
+            "folder": 6,
+            "tags": 6,
+            "properties": 4
+          },
+          "generation": 4,
+          "cacheRevision": 4,
+          "searchTimer": false
+        }
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "draft-tags-eraser-discards-draft-only-chip",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "draft-property-eraser-discards-draft-only-chip",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "draft-eraser-restores-original-real-filter",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [
+            "项目"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [
+            "项目"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "项目/排期.md",
+          "项目/周报.md"
+        ],
+        "railHidden": false,
+        "clearHidden": false,
+        "chips": "文件夹：[项目]清除筛选条件 文件夹：[项目]",
+        "chipCount": 1,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 2,
+          "properties": 2
+        },
+        "generation": 5,
+        "cacheRevision": 5,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "draft-new-query-restores-chip-projection",
+      "pass": true,
+      "evidence": {
+        "query": "周报",
+        "input": "周报",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "项目/周报.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "real-filter-clear-remains-functional",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "toolbar-return-clears-query-and-refreshes-counts",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "filters",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "toolbar-return-keeps-real-filter-not-draft",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [
+            "项目"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [
+            "项目"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "项目/排期.md",
+          "项目/周报.md"
+        ],
+        "railHidden": false,
+        "clearHidden": false,
+        "chips": "文件夹：[项目]清除筛选条件 文件夹：[项目]",
+        "chipCount": 1,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "filters",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 2,
+          "properties": 2
+        },
+        "generation": 5,
+        "cacheRevision": 5,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "back-route-uses-the-same-query-reset",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "filters",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "collapse-route-uses-the-same-query-reset",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "filters",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "pending-debounce-cannot-revive-returned-query",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "filters",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "pending-new-word-then-facet-uses-live-input",
+      "pass": true,
+      "evidence": {
+        "query": "鞋垫",
+        "input": "鞋垫",
+        "filter": {
+          "tags": [],
+          "folders": [
+            "资料"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [
+            "资料"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "资料/鞋垫方案.md",
+          "资料/图片规范.md"
+        ],
+        "railHidden": false,
+        "clearHidden": false,
+        "chips": "文件夹：[资料]清除筛选条件 文件夹：[资料]",
+        "chipCount": 1,
+        "channels": "标题 · 1查看标题匹配 1 个结果正文 · 1查看正文 1 个结果",
+        "channelsHidden": false,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 2,
+          "properties": 2
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "clear-uses-committed-query-even-if-dom-already-empty",
+      "pass": true,
+      "evidence": {
+        "cleared": true,
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "composition-facet-does-not-submit-partial-word",
+      "pass": true,
+      "evidence": {
+        "deferred": true,
+        "query": "鞋垫",
+        "input": "鞋垫",
+        "filter": {
+          "tags": [],
+          "folders": [
+            "资料"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [
+            "资料"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "资料/鞋垫方案.md",
+          "资料/图片规范.md"
+        ],
+        "railHidden": false,
+        "clearHidden": false,
+        "chips": "文件夹：[资料]清除筛选条件 文件夹：[资料]",
+        "chipCount": 1,
+        "channels": "标题 · 1查看标题匹配 1 个结果正文 · 1查看正文 1 个结果",
+        "channelsHidden": false,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 2,
+          "properties": 2
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "explicit-create-back-is-single-level",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [
+            "资料"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [
+            "资料"
+          ],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": false,
+        "clearHidden": false,
+        "chips": "文件夹：[资料]清除筛选条件 文件夹：[资料]",
+        "chipCount": 1,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 2,
+          "properties": 2
+        },
+        "generation": 3,
+        "cacheRevision": 3,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "repeated-draft-enter-exit-no-ghost-chips",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "results",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 12,
+        "cacheRevision": 12,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "unload-cancels-pending-search-and-projection",
+      "pass": true,
+      "evidence": {
+        "destroyed": true,
+        "timer": null,
+        "registered": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "picker-cycle-global-listener-release",
+      "pass": true,
+      "evidence": {
+        "remainingGlobalListeners": []
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "already-filter-page-return-clears-dormant-query",
+      "pass": true,
+      "evidence": {
+        "query": "",
+        "input": "",
+        "filter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "searchFilter": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "derived": false,
+        "explicit": false,
+        "results": [
+          "画板.canvas",
+          "图片.png",
+          "项目/排期.md",
+          "项目/周报.md",
+          "资料/图片规范.md",
+          "资料/鞋垫方案.md"
+        ],
+        "railHidden": true,
+        "clearHidden": true,
+        "chips": "",
+        "chipCount": 0,
+        "channels": "",
+        "channelsHidden": true,
+        "page": "filters",
+        "layout": "split",
+        "counts": {
+          "folder": 6,
+          "tags": 6,
+          "properties": 4
+        },
+        "generation": 4,
+        "cacheRevision": 4,
+        "searchTimer": false
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "native-click-caret-folder",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "native-click-caret-tags",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "native-click-caret-property-key",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "native-click-caret-property-value",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "native-click-caret-create-folder",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "native-click-caret-create-tags",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "native-click-caret-create-property",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "focused-main-to-picker-folder",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "focused-main-to-picker-tags",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "focused-main-to-picker-property-key",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "focused-main-to-picker-property-value",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "focused-main-to-picker-create-folder",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "focused-main-to-picker-create-tags",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "case": "focused-main-to-picker-create-property",
+      "pass": true,
+      "evidence": {
+        "active": true,
+        "start": 2,
+        "end": 2,
+        "value": "资料",
+        "readonly": false,
+        "disabled": false,
+        "caret": "rgb(238, 238, 238)",
+        "text": "rgb(238, 238, 238)",
+        "font": "12px",
+        "select": "text",
+        "opacity": "1",
+        "height": 38,
+        "hit": true,
+        "connected": true
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "configuration": "desktop-dark",
+      "case": "pure-title-query-no-condition-rail",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "zero-query-default-create-no-phantom-condition",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "mixed-title-body-switch-still-works",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "draft-folder-eraser-restores-empty-search-state",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "draft-tags-eraser-discards-draft-only-chip",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "draft-property-eraser-discards-draft-only-chip",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "draft-eraser-restores-original-real-filter",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "draft-new-query-restores-chip-projection",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "real-filter-clear-remains-functional",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "toolbar-return-clears-query-and-refreshes-counts",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "toolbar-return-keeps-real-filter-not-draft",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "back-route-uses-the-same-query-reset",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "collapse-route-uses-the-same-query-reset",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "pending-debounce-cannot-revive-returned-query",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "pending-new-word-then-facet-uses-live-input",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "clear-uses-committed-query-even-if-dom-already-empty",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "composition-facet-does-not-submit-partial-word",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "explicit-create-back-is-single-level",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "repeated-draft-enter-exit-no-ghost-chips",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "unload-cancels-pending-search-and-projection",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "picker-cycle-global-listener-release",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "already-filter-page-return-clears-dormant-query",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "native-click-caret-folder",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "native-click-caret-tags",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "native-click-caret-property-key",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "native-click-caret-property-value",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "native-click-caret-create-folder",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "native-click-caret-create-tags",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "native-click-caret-create-property",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "focused-main-to-picker-folder",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "focused-main-to-picker-tags",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "focused-main-to-picker-property-key",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "focused-main-to-picker-property-value",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "focused-main-to-picker-create-folder",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "focused-main-to-picker-create-tags",
+      "A": null,
+      "B": true,
+      "fixed": false
+    },
+    {
+      "configuration": "desktop-dark",
+      "case": "focused-main-to-picker-create-property",
+      "A": null,
+      "B": true,
+      "fixed": false
+    }
+  ],
+  "Bpassed": 36,
+  "Bfailed": 0,
+  "reproducedAndFixed": 0,
+  "errors": [],
+  "limitations": [
+    "Four configurations include repeated tests of the same paths",
+    "No native iOS/Android/WebKit or real Obsidian",
+    "CSS/native-caret paint not proven by computed color alone",
+    "No user theme, CSS snippets or live data provided"
+  ]
+}

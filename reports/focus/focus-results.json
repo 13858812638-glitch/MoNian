@@ -1,0 +1,4456 @@
+{
+  "baseline": "modular.3",
+  "candidate": "0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1",
+  "engine": "Chromium 144.0.7559.96",
+  "nativeIOS": false,
+  "nativeObsidian": false,
+  "rows": [
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-main-focus-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "main-focus-does-not-lock-without-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "main-focus-stable-geometry-and-surface",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "active": false,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        },
+        "after": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        }
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-width-host-resize-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "restore-at-same-width-still-projects-page",
+      "passed": true,
+      "evidence": {
+        "page": "filters",
+        "facetsHidden": false,
+        "resultsHidden": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "new-picker-sees-already-open-keyboard-before-tap",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "one-global-keyboard-subscription-for-two-surfaces",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-native-handoff-keeps-input-and-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "late-hide-does-not-override-visible-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-picker-text-and-collapsed-selection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-keyboard-close-unlocks-even-if-input-still-focused",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 2,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "shared-search-touch-contract-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "shared-search-touch-contract-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "shared-search-touch-contract-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "shared-search-touch-contract-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "shared-search-touch-contract-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "shared-search-touch-contract-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "shared-search-touch-contract-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "viewport-alone-cannot-create-keyboard-state",
+      "passed": false,
+      "evidence": {
+        "main": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": true,
+          "keyboard": true,
+          "inset": "326px",
+          "metrics": {
+            "tools": 0,
+            "mutation": 2,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        },
+        "picker": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            66,
+            51,
+            291,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": true,
+          "keyboard": true,
+          "inset": "194.734375px",
+          "metrics": {
+            "tools": 0,
+            "mutation": 5,
+            "childChanges": 0,
+            "position": 1
+          },
+          "programmatic": [
+            {
+              "action": "blur",
+              "target": "local-search-search-text-input local-search-input"
+            }
+          ],
+          "globalKeyboardListeners": 7
+        }
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "composition-keeps-same-native-input",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "卫康",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 2,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "all-global-keyboard-listeners-released",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-main-focus-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "main-focus-does-not-lock-without-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "main-focus-stable-geometry-and-surface",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "active": false,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 0
+        },
+        "after": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 0
+        }
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-width-host-resize-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "restore-at-same-width-still-projects-page",
+      "passed": true,
+      "evidence": {
+        "page": "filters",
+        "facetsHidden": false,
+        "resultsHidden": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "new-picker-sees-already-open-keyboard-before-tap",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "one-global-keyboard-subscription-for-two-surfaces",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-native-handoff-keeps-input-and-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "late-hide-does-not-override-visible-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-picker-text-and-collapsed-selection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-keyboard-close-unlocks-even-if-input-still-focused",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "shared-search-touch-contract-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "shared-search-touch-contract-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "shared-search-touch-contract-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "shared-search-touch-contract-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "shared-search-touch-contract-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "shared-search-touch-contract-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "shared-search-touch-contract-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "viewport-alone-cannot-create-keyboard-state",
+      "passed": true,
+      "evidence": {
+        "main": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 0
+        },
+        "picker": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            66,
+            51,
+            291,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(37, 37, 37)",
+          "font": "12px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 3,
+            "childChanges": 0,
+            "position": 1
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        }
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "composition-keeps-same-native-input",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "卫康",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "all-global-keyboard-listeners-released",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-main-focus-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "main-focus-does-not-lock-without-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "main-focus-stable-geometry-and-surface",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "active": false,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        },
+        "after": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        }
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-width-host-resize-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "restore-at-same-width-still-projects-page",
+      "passed": true,
+      "evidence": {
+        "page": "filters",
+        "facetsHidden": false,
+        "resultsHidden": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "new-picker-sees-already-open-keyboard-before-tap",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "one-global-keyboard-subscription-for-two-surfaces",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-native-handoff-keeps-input-and-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "late-hide-does-not-override-visible-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-picker-text-and-collapsed-selection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-keyboard-close-unlocks-even-if-input-still-focused",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 2,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "viewport-alone-cannot-create-keyboard-state",
+      "passed": false,
+      "evidence": {
+        "main": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": true,
+          "keyboard": true,
+          "inset": "326px",
+          "metrics": {
+            "tools": 0,
+            "mutation": 2,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        },
+        "picker": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            66,
+            51,
+            291,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": true,
+          "keyboard": true,
+          "inset": "194.734375px",
+          "metrics": {
+            "tools": 0,
+            "mutation": 5,
+            "childChanges": 0,
+            "position": 1
+          },
+          "programmatic": [
+            {
+              "action": "blur",
+              "target": "local-search-search-text-input local-search-input"
+            }
+          ],
+          "globalKeyboardListeners": 7
+        }
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "composition-keeps-same-native-input",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "卫康",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 2,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "all-global-keyboard-listeners-released",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-main-focus-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "main-focus-does-not-lock-without-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "main-focus-stable-geometry-and-surface",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "active": false,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 0
+        },
+        "after": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 0
+        }
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-width-host-resize-no-navigation-projection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "restore-at-same-width-still-projects-page",
+      "passed": true,
+      "evidence": {
+        "page": "filters",
+        "facetsHidden": false,
+        "resultsHidden": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "new-picker-sees-already-open-keyboard-before-tap",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "one-global-keyboard-subscription-for-two-surfaces",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-native-handoff-keeps-input-and-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "late-hide-does-not-override-visible-keyboard",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-picker-text-and-collapsed-selection",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-keyboard-close-unlocks-even-if-input-still-focused",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "shared-search-touch-contract-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-focus-no-keyboard-no-frame-mutation-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "viewport-alone-cannot-create-keyboard-state",
+      "passed": true,
+      "evidence": {
+        "main": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            24,
+            62,
+            342,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 0,
+            "childChanges": 0,
+            "position": 0
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 0
+        },
+        "picker": {
+          "active": true,
+          "connected": true,
+          "value": "",
+          "selection": [
+            0,
+            0
+          ],
+          "box": [
+            66,
+            51,
+            291,
+            38
+          ],
+          "tapHighlight": "rgba(0, 0, 0, 0)",
+          "caret": "rgb(238, 238, 238)",
+          "font": "12px",
+          "background": "rgba(0, 0, 0, 0)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "transition": "0s",
+          "locked": false,
+          "keyboard": false,
+          "inset": "",
+          "metrics": {
+            "tools": 0,
+            "mutation": 3,
+            "childChanges": 0,
+            "position": 1
+          },
+          "programmatic": [],
+          "globalKeyboardListeners": 7
+        }
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "composition-keeps-same-native-input",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "卫康",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "all-global-keyboard-listeners-released",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "passed": 56,
+  "failed": 0,
+  "baselineFailToCandidatePass": 2,
+  "errors": [],
+  "limitations": [
+    "Keyboard events, viewport and IME are controlled test signals, not real OS devices.",
+    "No iOS/WebKit caret-paint verification.",
+    "Theme uses controlled host CSS, not the user CSS snippets."
+  ]
+}

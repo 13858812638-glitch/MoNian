@@ -1,0 +1,374 @@
+{
+  "formalFrozenSourceSha256": "34609f69d6fe86398a5606bb17b7a5e9e70686c6388fdaabef948680037344f1",
+  "candidateMainSha256": "4fc91c8adfdc8a8defaa879df6c3a0a898615f49caa147d5f5dea5844401749f",
+  "candidateMainBytes": 1652853,
+  "candidateCssSha256": "d82b51abc8e65e93c760dc88e33c813ca26b8a192b34cf9a7e8b4d417bfaf99b",
+  "candidateCssBytes": 256174,
+  "changeType": "single synchronous intermediate-list-render suppression",
+  "status": "candidate-NOT-frozen",
+  "changedSourceFiles": [
+    {
+      "file": "src/ui/pickers/selection-mode.js",
+      "before": "8254a8c7b7534731ecef9030ff809e32fd2e49070464a40990e600baf050d5ca",
+      "after": "633e993aeb55b74fe4e951195092e4dc9fd7f893871af9cc532bd2f46c0d3692"
+    },
+    {
+      "file": "src/ui/pickers/header-modes.js",
+      "before": "d115d0d8ba01e29d3d193ff89ec39d8d7b93e3c85f6e386506f97c7e8c20b2a3",
+      "after": "3ba606e38477515868143d011080086b43ad85ea0b21b6036adb68306b4ec497"
+    },
+    {
+      "file": "src/ui/pickers/sort-mode.js",
+      "before": "a527820275ebe1b1fe85fcd282cd8efe72aa1fd368add8b6741d6cd3e5a5cf9f",
+      "after": "c99f06c6a9520e7076d6b35cd5d643226e4e6f5cdc76bdfbf6764409b27f66ab"
+    },
+    {
+      "file": "src/features/facets/tag-picker-methods.js",
+      "before": "398848911ab5d3615764e2d81c079988b9718ff6395af5f0a4bd20352878936f",
+      "after": "66efe54d29b5e47c34b3bd094f77ec663753f55ee9fafad8b33d16b2ee97f197"
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "before": "460aed3cdd5d95d47af69af677de7506381016d934fabc1ae701b028fabbb07d",
+      "after": "a0b8b82f2791fb5a6d60471184c339cd88ae32ffc288cec70558998d7bf3ec76"
+    }
+  ],
+  "sourceModuleCount": 146,
+  "dependencyEdges": 635,
+  "currentAcceptance": {
+    "mobile-light": {
+      "passed": 36,
+      "failed": 0,
+      "errors": []
+    },
+    "desktop-light": {
+      "passed": 36,
+      "failed": 0,
+      "errors": []
+    },
+    "mobile-dark": {
+      "passed": 36,
+      "failed": 0,
+      "errors": []
+    },
+    "desktop-dark": {
+      "passed": 36,
+      "failed": 0,
+      "errors": []
+    }
+  },
+  "performanceRows": [
+    {
+      "kind": "tag",
+      "action": "selection",
+      "before": {
+        "kind": "tag",
+        "action": "selection",
+        "n": 10,
+        "sync_click_p50_ms": 18.55,
+        "sync_click_p95_ms": 21.88,
+        "tree_full_clear_p50": 2.0,
+        "dom_records_p50": 1640.0,
+        "dom_records_p95": 1640.0,
+        "tree_mutations_p50": 321.0,
+        "tree_added_p50": 293.0,
+        "tree_removed_p50": 78.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "tag",
+        "action": "selection",
+        "n": 10,
+        "sync_click_p50_ms": 13.85,
+        "sync_click_p95_ms": 15.775,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 833.0,
+        "dom_records_p95": 833.0,
+        "tree_mutations_p50": 294.0,
+        "tree_added_p50": 267.0,
+        "tree_removed_p50": 52.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "tag",
+      "action": "sort",
+      "before": {
+        "kind": "tag",
+        "action": "sort",
+        "n": 10,
+        "sync_click_p50_ms": 8.8,
+        "sync_click_p95_ms": 11.25,
+        "tree_full_clear_p50": 2.0,
+        "dom_records_p50": 1638.0,
+        "dom_records_p95": 1638.0,
+        "tree_mutations_p50": 321.0,
+        "tree_added_p50": 293.0,
+        "tree_removed_p50": 78.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "tag",
+        "action": "sort",
+        "n": 10,
+        "sync_click_p50_ms": 2.4,
+        "sync_click_p95_ms": 2.765,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 831.0,
+        "dom_records_p95": 831.0,
+        "tree_mutations_p50": 294.0,
+        "tree_added_p50": 267.0,
+        "tree_removed_p50": 52.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "tag",
+      "action": "maintenance",
+      "before": {
+        "kind": "tag",
+        "action": "maintenance",
+        "n": 10,
+        "sync_click_p50_ms": 15.3,
+        "sync_click_p95_ms": 18.335,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 934.0,
+        "dom_records_p95": 934.0,
+        "tree_mutations_p50": 346.0,
+        "tree_added_p50": 319.0,
+        "tree_removed_p50": 52.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "tag",
+        "action": "maintenance",
+        "n": 10,
+        "sync_click_p50_ms": 14.05,
+        "sync_click_p95_ms": 18.68,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 934.0,
+        "dom_records_p95": 934.0,
+        "tree_mutations_p50": 346.0,
+        "tree_added_p50": 319.0,
+        "tree_removed_p50": 52.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "property",
+      "action": "selection",
+      "before": {
+        "kind": "property",
+        "action": "selection",
+        "n": 10,
+        "sync_click_p50_ms": 7.95,
+        "sync_click_p95_ms": 8.5,
+        "tree_full_clear_p50": 2.0,
+        "dom_records_p50": 212.0,
+        "dom_records_p95": 212.0,
+        "tree_mutations_p50": 41.0,
+        "tree_added_p50": 36.0,
+        "tree_removed_p50": 9.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "property",
+        "action": "selection",
+        "n": 10,
+        "sync_click_p50_ms": 5.6,
+        "sync_click_p95_ms": 6.455,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 124.0,
+        "dom_records_p95": 124.0,
+        "tree_mutations_p50": 37.0,
+        "tree_added_p50": 33.0,
+        "tree_removed_p50": 6.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "property",
+      "action": "sort",
+      "before": {
+        "kind": "property",
+        "action": "sort",
+        "n": 10,
+        "sync_click_p50_ms": 4.55,
+        "sync_click_p95_ms": 5.475,
+        "tree_full_clear_p50": 2.0,
+        "dom_records_p50": 200.0,
+        "dom_records_p95": 200.0,
+        "tree_mutations_p50": 41.0,
+        "tree_added_p50": 36.0,
+        "tree_removed_p50": 9.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "property",
+        "action": "sort",
+        "n": 10,
+        "sync_click_p50_ms": 2.7,
+        "sync_click_p95_ms": 3.175,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 112.0,
+        "dom_records_p95": 112.0,
+        "tree_mutations_p50": 37.0,
+        "tree_added_p50": 33.0,
+        "tree_removed_p50": 6.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "property",
+      "action": "maintenance",
+      "before": {
+        "kind": "property",
+        "action": "maintenance",
+        "n": 10,
+        "sync_click_p50_ms": 5.6,
+        "sync_click_p95_ms": 6.01,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 133.0,
+        "dom_records_p95": 133.0,
+        "tree_mutations_p50": 43.0,
+        "tree_added_p50": 39.0,
+        "tree_removed_p50": 6.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "property",
+        "action": "maintenance",
+        "n": 10,
+        "sync_click_p50_ms": 5.8,
+        "sync_click_p95_ms": 6.4,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 133.0,
+        "dom_records_p95": 133.0,
+        "tree_mutations_p50": 43.0,
+        "tree_added_p50": 39.0,
+        "tree_removed_p50": 6.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "folder",
+      "action": "selection",
+      "before": {
+        "kind": "folder",
+        "action": "selection",
+        "n": 10,
+        "sync_click_p50_ms": 6.15,
+        "sync_click_p95_ms": 6.755,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 957.0,
+        "dom_records_p95": 957.0,
+        "tree_mutations_p50": 331.0,
+        "tree_added_p50": 300.0,
+        "tree_removed_p50": 60.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "folder",
+        "action": "selection",
+        "n": 10,
+        "sync_click_p50_ms": 5.8,
+        "sync_click_p95_ms": 7.24,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 957.0,
+        "dom_records_p95": 957.0,
+        "tree_mutations_p50": 331.0,
+        "tree_added_p50": 300.0,
+        "tree_removed_p50": 60.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "folder",
+      "action": "sort",
+      "before": {
+        "kind": "folder",
+        "action": "sort",
+        "n": 10,
+        "sync_click_p50_ms": 3.05,
+        "sync_click_p95_ms": 4.005,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 949.0,
+        "dom_records_p95": 949.0,
+        "tree_mutations_p50": 331.0,
+        "tree_added_p50": 300.0,
+        "tree_removed_p50": 60.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "folder",
+        "action": "sort",
+        "n": 10,
+        "sync_click_p50_ms": 2.6,
+        "sync_click_p95_ms": 2.755,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 949.0,
+        "dom_records_p95": 949.0,
+        "tree_mutations_p50": 331.0,
+        "tree_added_p50": 300.0,
+        "tree_removed_p50": 60.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    },
+    {
+      "kind": "folder",
+      "action": "maintenance",
+      "before": {
+        "kind": "folder",
+        "action": "maintenance",
+        "n": 10,
+        "sync_click_p50_ms": 8.2,
+        "sync_click_p95_ms": 11.76,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 1045.0,
+        "dom_records_p95": 1045.0,
+        "tree_mutations_p50": 391.0,
+        "tree_added_p50": 360.0,
+        "tree_removed_p50": 60.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      },
+      "after": {
+        "kind": "folder",
+        "action": "maintenance",
+        "n": 10,
+        "sync_click_p50_ms": 7.6,
+        "sync_click_p95_ms": 9.77,
+        "tree_full_clear_p50": 1.0,
+        "dom_records_p50": 1045.0,
+        "dom_records_p95": 1045.0,
+        "tree_mutations_p50": 391.0,
+        "tree_added_p50": 360.0,
+        "tree_removed_p50": 60.0,
+        "filter_changes_sum": 0,
+        "result_page_calls_sum": 0
+      }
+    }
+  ],
+  "historicalBrowserAB": "known 04-folder-picker stale historical count mismatch, not pass",
+  "limitations": [
+    "No native iOS WebKit or Obsidian real device",
+    "no original manifest in source upload",
+    "small headless synchronous click P50 sample"
+  ]
+}

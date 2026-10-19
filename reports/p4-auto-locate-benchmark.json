@@ -1,0 +1,198 @@
+{
+  "method": "synthetic rAF callback count, old direct scheduling pattern vs actual P4 scheduler",
+  "runs": [
+    {
+      "count": 1,
+      "closeBeforeFrame": false,
+      "baseline": {
+        "count": 1,
+        "optimized": false,
+        "closeBeforeFrame": false,
+        "requested": 1,
+        "canceled": 0,
+        "invoked": 1,
+        "reveals": 1,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 1,
+        "optimized": true,
+        "closeBeforeFrame": false,
+        "requested": 1,
+        "canceled": 0,
+        "invoked": 1,
+        "reveals": 1,
+        "pending": 0
+      }
+    },
+    {
+      "count": 1,
+      "closeBeforeFrame": true,
+      "baseline": {
+        "count": 1,
+        "optimized": false,
+        "closeBeforeFrame": true,
+        "requested": 1,
+        "canceled": 0,
+        "invoked": 1,
+        "reveals": 0,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 1,
+        "optimized": true,
+        "closeBeforeFrame": true,
+        "requested": 1,
+        "canceled": 1,
+        "invoked": 0,
+        "reveals": 0,
+        "pending": 0
+      }
+    },
+    {
+      "count": 10,
+      "closeBeforeFrame": false,
+      "baseline": {
+        "count": 10,
+        "optimized": false,
+        "closeBeforeFrame": false,
+        "requested": 10,
+        "canceled": 0,
+        "invoked": 10,
+        "reveals": 10,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 10,
+        "optimized": true,
+        "closeBeforeFrame": false,
+        "requested": 10,
+        "canceled": 9,
+        "invoked": 1,
+        "reveals": 1,
+        "pending": 0
+      }
+    },
+    {
+      "count": 10,
+      "closeBeforeFrame": true,
+      "baseline": {
+        "count": 10,
+        "optimized": false,
+        "closeBeforeFrame": true,
+        "requested": 10,
+        "canceled": 0,
+        "invoked": 10,
+        "reveals": 0,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 10,
+        "optimized": true,
+        "closeBeforeFrame": true,
+        "requested": 10,
+        "canceled": 10,
+        "invoked": 0,
+        "reveals": 0,
+        "pending": 0
+      }
+    },
+    {
+      "count": 100,
+      "closeBeforeFrame": false,
+      "baseline": {
+        "count": 100,
+        "optimized": false,
+        "closeBeforeFrame": false,
+        "requested": 100,
+        "canceled": 0,
+        "invoked": 100,
+        "reveals": 100,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 100,
+        "optimized": true,
+        "closeBeforeFrame": false,
+        "requested": 100,
+        "canceled": 99,
+        "invoked": 1,
+        "reveals": 1,
+        "pending": 0
+      }
+    },
+    {
+      "count": 100,
+      "closeBeforeFrame": true,
+      "baseline": {
+        "count": 100,
+        "optimized": false,
+        "closeBeforeFrame": true,
+        "requested": 100,
+        "canceled": 0,
+        "invoked": 100,
+        "reveals": 0,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 100,
+        "optimized": true,
+        "closeBeforeFrame": true,
+        "requested": 100,
+        "canceled": 100,
+        "invoked": 0,
+        "reveals": 0,
+        "pending": 0
+      }
+    },
+    {
+      "count": 400,
+      "closeBeforeFrame": false,
+      "baseline": {
+        "count": 400,
+        "optimized": false,
+        "closeBeforeFrame": false,
+        "requested": 400,
+        "canceled": 0,
+        "invoked": 400,
+        "reveals": 400,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 400,
+        "optimized": true,
+        "closeBeforeFrame": false,
+        "requested": 400,
+        "canceled": 399,
+        "invoked": 1,
+        "reveals": 1,
+        "pending": 0
+      }
+    },
+    {
+      "count": 400,
+      "closeBeforeFrame": true,
+      "baseline": {
+        "count": 400,
+        "optimized": false,
+        "closeBeforeFrame": true,
+        "requested": 400,
+        "canceled": 0,
+        "invoked": 400,
+        "reveals": 0,
+        "pending": 0
+      },
+      "candidate": {
+        "count": 400,
+        "optimized": true,
+        "closeBeforeFrame": true,
+        "requested": 400,
+        "canceled": 400,
+        "invoked": 0,
+        "reveals": 0,
+        "pending": 0
+      }
+    }
+  ],
+  "notMeasured": "FPS, wall-clock latency, iOS keyboard, real vault load"
+}

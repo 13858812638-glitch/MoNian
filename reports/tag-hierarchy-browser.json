@@ -1,0 +1,676 @@
+{
+  "browser": "Chromium 144.0.7559.96",
+  "results": [
+    {
+      "case": "mobile-light-390 opens tag editor",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 one input only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 hierarchy bar visible and fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 drill existing parent",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "运动"
+        ],
+        "parent": "运动",
+        "add": 0,
+        "button": null
+      }
+    },
+    {
+      "case": "mobile-light-390 native search node stays stable and focusable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 composed full-path preview",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 child-action mobile hit target >=44px",
+      "pass": true,
+      "detail": {
+        "w": 44,
+        "h": 44
+      }
+    },
+    {
+      "case": "mobile-light-390 virtual parent, still no staged tags",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 empty Backspace navigates to parent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 trailing slash drills into virtual child",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 stage only leaf, search clears",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 leaf appears in scoped list",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 composing input does not drill",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 slash drills after composition ends",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 second slash drills immediately",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 Enter creates leaf only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 staged draft does not write before confirm",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 cancel discards draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 duplicate Enter cannot remove existing tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 old slash path compatible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 confirm saves through current metadata service",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 new-file draft stages nested label",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 new-file draft commits through existing target only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-light-390 very deep breadcrumb remains inside panel",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "部门",
+          "运营",
+          "活动",
+          "渠道",
+          "直播",
+          "内容",
+          "主题"
+        ],
+        "left": 70,
+        "client": 320,
+        "total": 390,
+        "scrollBehavior": "auto",
+        "bar": {
+          "x": 21,
+          "y": 47,
+          "width": 348,
+          "height": 30,
+          "top": 47,
+          "right": 369,
+          "bottom": 77,
+          "left": 21
+        },
+        "panel": {
+          "x": 12,
+          "y": 0,
+          "width": 366,
+          "height": 704.734375,
+          "top": 0,
+          "right": 378,
+          "bottom": 704.734375,
+          "left": 12
+        }
+      }
+    },
+    {
+      "case": "mobile-light-390 no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "case": "mobile-dark-320 opens tag editor",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 one input only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 hierarchy bar visible and fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 drill existing parent",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "运动"
+        ],
+        "parent": "运动",
+        "add": 0,
+        "button": null
+      }
+    },
+    {
+      "case": "mobile-dark-320 native search node stays stable and focusable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 composed full-path preview",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 child-action mobile hit target >=44px",
+      "pass": true,
+      "detail": {
+        "w": 44,
+        "h": 44
+      }
+    },
+    {
+      "case": "mobile-dark-320 virtual parent, still no staged tags",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 empty Backspace navigates to parent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 trailing slash drills into virtual child",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 stage only leaf, search clears",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 leaf appears in scoped list",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 composing input does not drill",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 slash drills after composition ends",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 second slash drills immediately",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 Enter creates leaf only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 staged draft does not write before confirm",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 cancel discards draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 duplicate Enter cannot remove existing tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 old slash path compatible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 confirm saves through current metadata service",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 new-file draft stages nested label",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 new-file draft commits through existing target only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "mobile-dark-320 very deep breadcrumb remains inside panel",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "部门",
+          "运营",
+          "活动",
+          "渠道",
+          "直播",
+          "内容",
+          "主题"
+        ],
+        "left": 140,
+        "client": 250,
+        "total": 390,
+        "scrollBehavior": "auto",
+        "bar": {
+          "x": 21,
+          "y": 47,
+          "width": 278,
+          "height": 30,
+          "top": 47,
+          "right": 299,
+          "bottom": 77,
+          "left": 21
+        },
+        "panel": {
+          "x": 12,
+          "y": 0,
+          "width": 296,
+          "height": 704.734375,
+          "top": 0,
+          "right": 308,
+          "bottom": 704.734375,
+          "left": 12
+        }
+      }
+    },
+    {
+      "case": "mobile-dark-320 no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "case": "desktop-light-1100 opens tag editor",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 one input only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 hierarchy bar visible and fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 drill existing parent",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "运动"
+        ],
+        "parent": "运动",
+        "add": 0,
+        "button": null
+      }
+    },
+    {
+      "case": "desktop-light-1100 native search node stays stable and focusable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 composed full-path preview",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 virtual parent, still no staged tags",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 empty Backspace navigates to parent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 trailing slash drills into virtual child",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 stage only leaf, search clears",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 leaf appears in scoped list",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 composing input does not drill",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 slash drills after composition ends",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 second slash drills immediately",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 Enter creates leaf only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 staged draft does not write before confirm",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 cancel discards draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 duplicate Enter cannot remove existing tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 old slash path compatible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 confirm saves through current metadata service",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 new-file draft stages nested label",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 new-file draft commits through existing target only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-light-1100 very deep breadcrumb remains inside panel",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "部门",
+          "运营",
+          "活动",
+          "渠道",
+          "直播",
+          "内容",
+          "主题"
+        ],
+        "left": 51,
+        "client": 339,
+        "total": 390,
+        "scrollBehavior": "auto",
+        "bar": {
+          "x": 168,
+          "y": 178,
+          "width": 382,
+          "height": 30,
+          "top": 178,
+          "right": 550,
+          "bottom": 208,
+          "left": 168
+        },
+        "panel": {
+          "x": 159,
+          "y": 131,
+          "width": 400,
+          "height": 560,
+          "top": 131,
+          "right": 559,
+          "bottom": 691,
+          "left": 159
+        }
+      }
+    },
+    {
+      "case": "desktop-light-1100 no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "case": "desktop-dark-870 opens tag editor",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 one input only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 hierarchy bar visible and fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 drill existing parent",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "运动"
+        ],
+        "parent": "运动",
+        "add": 0,
+        "button": null
+      }
+    },
+    {
+      "case": "desktop-dark-870 native search node stays stable and focusable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 composed full-path preview",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 virtual parent, still no staged tags",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 empty Backspace navigates to parent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 trailing slash drills into virtual child",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 stage only leaf, search clears",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 leaf appears in scoped list",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 composing input does not drill",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 slash drills after composition ends",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 second slash drills immediately",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 Enter creates leaf only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 staged draft does not write before confirm",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 cancel discards draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 duplicate Enter cannot remove existing tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 old slash path compatible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 confirm saves through current metadata service",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 new-file draft stages nested label",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 new-file draft commits through existing target only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "case": "desktop-dark-870 very deep breadcrumb remains inside panel",
+      "pass": true,
+      "detail": {
+        "crumbs": [
+          "全部标签",
+          "部门",
+          "运营",
+          "活动",
+          "渠道",
+          "直播",
+          "内容",
+          "主题"
+        ],
+        "left": 51,
+        "client": 339,
+        "total": 390,
+        "scrollBehavior": "auto",
+        "bar": {
+          "x": 68,
+          "y": 178,
+          "width": 382,
+          "height": 30,
+          "top": 178,
+          "right": 450,
+          "bottom": 208,
+          "left": 68
+        },
+        "panel": {
+          "x": 59,
+          "y": 131,
+          "width": 400,
+          "height": 560,
+          "top": 131,
+          "right": 459,
+          "bottom": 691,
+          "left": 59
+        }
+      }
+    },
+    {
+      "case": "desktop-dark-870 no page errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "passed": 98,
+  "failed": 0
+}

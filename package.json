@@ -1,0 +1,38 @@
+{
+  "name": "gls-modular-engineering",
+  "version": "0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "acorn": "8.15.0",
+    "acorn-walk": "8.3.4",
+    "jszip": "3.10.1",
+    "typescript": "5.8.3"
+  },
+  "description": "Modular GLS Navigator maintenance: search/filter state ownership and regression audit",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:esbuild": "node esbuild.config.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/run-browser.mjs",
+    "verify": "npm run check && npm run build && npm test && npm run test:browser && npm run test:acceptance && npm run audit:source && npm run test:focus && npm run test:focus-repair && npm run test:feishu-focus && npm run test:picker-caret && npm run test:picker-portal",
+    "pack:overlay": "npm run build && node scripts/pack.mjs overlay",
+    "pack:source": "npm run build && node scripts/pack.mjs source",
+    "pack:install": "node scripts/pack.mjs install",
+    "release": "npm run verify && npm run pack:overlay && npm run pack:source",
+    "test:acceptance": "python3 scripts/search_condition_audit.py",
+    "audit:source": "python3 scripts/audit-source-style.py",
+    "test:focus": "python3 scripts/focus_audit.py",
+    "test:focus-repair": "python3 scripts/focus_repair_audit.py",
+    "test:feishu-focus": "python3 scripts/compare_feishu_focus.py",
+    "test:picker-caret": "python3 scripts/picker_caret_audit.py",
+    "test:picker-portal": "python3 scripts/picker_portal_audit.py",
+    "test:mobile-sidebar": "python3 scripts/mobile_sidebar_stability_audit.py",
+    "test:index-retry": "node scripts/index_queue_stability_audit.mjs",
+    "test:navigation-browse": "node --test tests/navigation-browse-scope.test.mjs && python3 scripts/navigation_browse_audit.py"
+  }
+}

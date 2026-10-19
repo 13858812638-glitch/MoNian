@@ -1,0 +1,21 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 check
+> node scripts/check.mjs
+
+{
+  "status": "PASS-ENGINEERING",
+  "modules": 146,
+  "importEdges": 635,
+  "cycles": [],
+  "external": [
+    "obsidian"
+  ],
+  "unresolvedSymbols": 0,
+  "sourceFragments": 826,
+  "byteExactFragments": 734,
+  "approvedMaintenanceFragments": 87,
+  "cssByteExact": false,
+  "fullTypescriptTypeCheck": "not-applicable: JavaScript sources; unresolved-symbol check only",
+  "manifestStatus": "BLOCKED: absent from uploaded baseline; plugin ID/release version cannot be verified",
+  "failures": []
+}

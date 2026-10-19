@@ -1,0 +1,697 @@
+{
+  "source": "actual compiled GLS subject in Chromium synthetic Obsidian host",
+  "ios_webkit_verified": false,
+  "checks": [
+    {
+      "configuration": "light-390",
+      "name": "initial-vault-has-tag-branches",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "initial-vault-has-property-values",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "live-mobile-layout",
+      "ok": true,
+      "evidence": {
+        "layout": "mobile"
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "CSS Snapshot root pad-x 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "CSS Snapshot standard pad-y 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "select-location-enter-results",
+      "ok": true,
+      "evidence": {
+        "page": "results"
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "hidden-navigation-is-not-eagerly-rendered",
+      "ok": true,
+      "evidence": {
+        "generation": 3,
+        "renderRevision": 2,
+        "rendered": 0
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "return-shows-visible-filters",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "return-is-fresh-before-first-frame",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "return-tags-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "return-properties-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "single-visible-projection",
+      "ok": true,
+      "evidence": {
+        "rendered": 1
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "no-late-content-swap-after-frame",
+      "ok": true,
+      "evidence": {
+        "rendered": 1,
+        "atFirstPaint": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1",
+          "renderRevision": 3,
+          "generation": 3,
+          "timer": null,
+          "scrollTop": 0
+        },
+        "after": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1"
+        }
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "rapid-new-folder-immediate-projection",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0计划1周报1",
+        "props": "所属项目2",
+        "revision": 4,
+        "generation": 4
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "return-clears-only-live-query",
+      "ok": true,
+      "evidence": {
+        "query": "",
+        "folders": [
+          "项目"
+        ],
+        "rev": 6,
+        "gen": 6
+      }
+    },
+    {
+      "configuration": "light-390",
+      "name": "return-does-not-refocus-search-input",
+      "ok": true,
+      "evidence": {
+        "active": "local-search-window-action local-search-nav-show-results local-search-nav-tool"
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "initial-vault-has-tag-branches",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "initial-vault-has-property-values",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "live-mobile-layout",
+      "ok": true,
+      "evidence": {
+        "layout": "mobile"
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "CSS Snapshot root pad-x 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "CSS Snapshot standard pad-y 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "select-location-enter-results",
+      "ok": true,
+      "evidence": {
+        "page": "results"
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "hidden-navigation-is-not-eagerly-rendered",
+      "ok": true,
+      "evidence": {
+        "generation": 3,
+        "renderRevision": 2,
+        "rendered": 0
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "return-shows-visible-filters",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "return-is-fresh-before-first-frame",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "return-tags-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "return-properties-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "single-visible-projection",
+      "ok": true,
+      "evidence": {
+        "rendered": 1
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "no-late-content-swap-after-frame",
+      "ok": true,
+      "evidence": {
+        "rendered": 1,
+        "atFirstPaint": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1",
+          "renderRevision": 3,
+          "generation": 3,
+          "timer": null,
+          "scrollTop": 0
+        },
+        "after": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1"
+        }
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "rapid-new-folder-immediate-projection",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0计划1周报1",
+        "props": "所属项目2",
+        "revision": 4,
+        "generation": 4
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "return-clears-only-live-query",
+      "ok": true,
+      "evidence": {
+        "query": "",
+        "folders": [
+          "项目"
+        ],
+        "rev": 6,
+        "gen": 6
+      }
+    },
+    {
+      "configuration": "dark-390",
+      "name": "return-does-not-refocus-search-input",
+      "ok": true,
+      "evidence": {
+        "active": "local-search-window-action local-search-nav-show-results local-search-nav-tool"
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "initial-vault-has-tag-branches",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "initial-vault-has-property-values",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "live-mobile-layout",
+      "ok": true,
+      "evidence": {
+        "layout": "mobile"
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "CSS Snapshot root pad-x 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "CSS Snapshot standard pad-y 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "select-location-enter-results",
+      "ok": true,
+      "evidence": {
+        "page": "results"
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "hidden-navigation-is-not-eagerly-rendered",
+      "ok": true,
+      "evidence": {
+        "generation": 3,
+        "renderRevision": 2,
+        "rendered": 0
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "return-shows-visible-filters",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "return-is-fresh-before-first-frame",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "return-tags-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "return-properties-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "single-visible-projection",
+      "ok": true,
+      "evidence": {
+        "rendered": 1
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "no-late-content-swap-after-frame",
+      "ok": true,
+      "evidence": {
+        "rendered": 1,
+        "atFirstPaint": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1",
+          "renderRevision": 3,
+          "generation": 3,
+          "timer": null,
+          "scrollTop": 0
+        },
+        "after": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1"
+        }
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "rapid-new-folder-immediate-projection",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0计划1周报1",
+        "props": "所属项目2",
+        "revision": 4,
+        "generation": 4
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "return-clears-only-live-query",
+      "ok": true,
+      "evidence": {
+        "query": "",
+        "folders": [
+          "项目"
+        ],
+        "rev": 6,
+        "gen": 6
+      }
+    },
+    {
+      "configuration": "light-320",
+      "name": "return-does-not-refocus-search-input",
+      "ok": true,
+      "evidence": {
+        "active": "local-search-window-action local-search-nav-show-results local-search-nav-tool"
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "initial-vault-has-tag-branches",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "initial-vault-has-property-values",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签2计划1图片1运动1周报1",
+        "props": "所属项目4项目负责人1"
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "live-mobile-layout",
+      "ok": true,
+      "evidence": {
+        "layout": "mobile"
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "CSS Snapshot root pad-x 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "CSS Snapshot standard pad-y 6px",
+      "ok": true,
+      "evidence": {
+        "computed": "6px"
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "select-location-enter-results",
+      "ok": true,
+      "evidence": {
+        "page": "results"
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "hidden-navigation-is-not-eagerly-rendered",
+      "ok": true,
+      "evidence": {
+        "generation": 3,
+        "renderRevision": 2,
+        "rendered": 0
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "return-shows-visible-filters",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "return-is-fresh-before-first-frame",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "return-tags-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "return-properties-correct-without-wait",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0图片1运动1",
+        "props": "所属项目2项目负责人1",
+        "renderRevision": 3,
+        "generation": 3,
+        "timer": null,
+        "scrollTop": 0
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "single-visible-projection",
+      "ok": true,
+      "evidence": {
+        "rendered": 1
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "no-late-content-swap-after-frame",
+      "ok": true,
+      "evidence": {
+        "rendered": 1,
+        "atFirstPaint": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1",
+          "renderRevision": 3,
+          "generation": 3,
+          "timer": null,
+          "scrollTop": 0
+        },
+        "after": {
+          "tags": "无标签0图片1运动1",
+          "props": "所属项目2项目负责人1"
+        }
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "rapid-new-folder-immediate-projection",
+      "ok": true,
+      "evidence": {
+        "tags": "无标签0计划1周报1",
+        "props": "所属项目2",
+        "revision": 4,
+        "generation": 4
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "return-clears-only-live-query",
+      "ok": true,
+      "evidence": {
+        "query": "",
+        "folders": [
+          "项目"
+        ],
+        "rev": 6,
+        "gen": 6
+      }
+    },
+    {
+      "configuration": "dark-320",
+      "name": "return-does-not-refocus-search-input",
+      "ok": true,
+      "evidence": {
+        "active": "local-search-window-action local-search-nav-show-results local-search-nav-tool"
+      }
+    }
+  ],
+  "failures": [],
+  "passed": 64,
+  "failed": 0
+}

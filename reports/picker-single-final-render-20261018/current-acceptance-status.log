@@ -1,0 +1,48 @@
+START mobile-light 2026-10-18T08:55:13+00:00
+END mobile-light exit=0 2026-10-18T08:55:32+00:00
+mobile-light B focused-main-to-picker-property-value True
+mobile-light B focused-main-to-picker-create-folder True
+mobile-light B focused-main-to-picker-create-tags True
+mobile-light B focused-main-to-picker-create-property True
+{
+  "Bpassed": 36,
+  "Bfailed": 0,
+  "reproducedAndFixed": 0,
+  "errors": []
+}
+START desktop-light 2026-10-18T08:55:32+00:00
+END desktop-light exit=0 2026-10-18T08:55:50+00:00
+desktop-light B focused-main-to-picker-property-value True
+desktop-light B focused-main-to-picker-create-folder True
+desktop-light B focused-main-to-picker-create-tags True
+desktop-light B focused-main-to-picker-create-property True
+{
+  "Bpassed": 36,
+  "Bfailed": 0,
+  "reproducedAndFixed": 0,
+  "errors": []
+}
+START mobile-dark 2026-10-18T08:55:50+00:00
+END mobile-dark exit=0 2026-10-18T08:56:09+00:00
+mobile-dark B focused-main-to-picker-property-value True
+mobile-dark B focused-main-to-picker-create-folder True
+mobile-dark B focused-main-to-picker-create-tags True
+mobile-dark B focused-main-to-picker-create-property True
+{
+  "Bpassed": 36,
+  "Bfailed": 0,
+  "reproducedAndFixed": 0,
+  "errors": []
+}
+START desktop-dark 2026-10-18T08:56:09+00:00
+END desktop-dark exit=0 2026-10-18T08:56:28+00:00
+desktop-dark B focused-main-to-picker-property-value True
+desktop-dark B focused-main-to-picker-create-folder True
+desktop-dark B focused-main-to-picker-create-tags True
+desktop-dark B focused-main-to-picker-create-property True
+{
+  "Bpassed": 36,
+  "Bfailed": 0,
+  "reproducedAndFixed": 0,
+  "errors": []
+}

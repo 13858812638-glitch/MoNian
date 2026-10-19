@@ -1,0 +1,566 @@
+[
+  {
+    "configuration": "desktop-light",
+    "passed": 19,
+    "observations": [
+      {
+        "name": "navigator-mounted",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "whole-vault-available",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 6
+        }
+      },
+      {
+        "name": "query-refines-results",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md",
+            "资料/图片规范.md"
+          ]
+        }
+      },
+      {
+        "name": "query-does-not-prune-facets",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-do-not-prune-folder-tree",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-scope-changed",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "transient-facets-dropped",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "text-query-cleared",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-result-scope",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/图片规范.md",
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "two-level-candidates",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 2
+        }
+      },
+      {
+        "name": "tag-candidates-from-folder",
+        "ok": true,
+        "details": {
+          "tags": [
+            "运动",
+            "图片"
+          ]
+        }
+      },
+      {
+        "name": "folder-property-catalog",
+        "ok": true,
+        "details": {
+          "keys": [
+            "所属项目",
+            "项目负责人",
+            "tags"
+          ]
+        }
+      },
+      {
+        "name": "tag-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "labels": [
+            "图片标签 图片1",
+            "运动标签 运动1",
+            "没有标签没有标签·0"
+          ]
+        }
+      },
+      {
+        "name": "property-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "text": "所属项目进入所属项目多选2当前文件范围总数 2搜索所属项目值…卫康所属项目：卫康2确定确认多选筛选，已选 0 项所属项目"
+        }
+      },
+      {
+        "name": "property-and-tag-intersection",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "sibling-candidates-remain-visible",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-clears-refinements",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-results",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tap-active-location-clears",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "configuration": "desktop-dark",
+    "passed": 19,
+    "observations": [
+      {
+        "name": "navigator-mounted",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "whole-vault-available",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 6
+        }
+      },
+      {
+        "name": "query-refines-results",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md",
+            "资料/图片规范.md"
+          ]
+        }
+      },
+      {
+        "name": "query-does-not-prune-facets",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-do-not-prune-folder-tree",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-scope-changed",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "transient-facets-dropped",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "text-query-cleared",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-result-scope",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/图片规范.md",
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "two-level-candidates",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 2
+        }
+      },
+      {
+        "name": "tag-candidates-from-folder",
+        "ok": true,
+        "details": {
+          "tags": [
+            "运动",
+            "图片"
+          ]
+        }
+      },
+      {
+        "name": "folder-property-catalog",
+        "ok": true,
+        "details": {
+          "keys": [
+            "所属项目",
+            "项目负责人",
+            "tags"
+          ]
+        }
+      },
+      {
+        "name": "tag-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "labels": [
+            "图片标签 图片1",
+            "运动标签 运动1",
+            "没有标签没有标签·0"
+          ]
+        }
+      },
+      {
+        "name": "property-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "text": "所属项目进入所属项目多选2当前文件范围总数 2搜索所属项目值…卫康所属项目：卫康2确定确认多选筛选，已选 0 项所属项目"
+        }
+      },
+      {
+        "name": "property-and-tag-intersection",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "sibling-candidates-remain-visible",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-clears-refinements",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-results",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tap-active-location-clears",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "configuration": "mobile-light",
+    "passed": 19,
+    "observations": [
+      {
+        "name": "navigator-mounted",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "whole-vault-available",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 6
+        }
+      },
+      {
+        "name": "query-refines-results",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md",
+            "资料/图片规范.md"
+          ]
+        }
+      },
+      {
+        "name": "query-does-not-prune-facets",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-do-not-prune-folder-tree",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-scope-changed",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "transient-facets-dropped",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "text-query-cleared",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-result-scope",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/图片规范.md",
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "two-level-candidates",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 2
+        }
+      },
+      {
+        "name": "tag-candidates-from-folder",
+        "ok": true,
+        "details": {
+          "tags": [
+            "运动",
+            "图片"
+          ]
+        }
+      },
+      {
+        "name": "folder-property-catalog",
+        "ok": true,
+        "details": {
+          "keys": [
+            "所属项目",
+            "项目负责人",
+            "tags"
+          ]
+        }
+      },
+      {
+        "name": "tag-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "labels": [
+            "图片1",
+            "运动1",
+            "没有标签·0"
+          ]
+        }
+      },
+      {
+        "name": "property-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "text": "所属项目2卫康2确定"
+        }
+      },
+      {
+        "name": "property-and-tag-intersection",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "sibling-candidates-remain-visible",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-clears-refinements",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-results",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tap-active-location-clears",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "configuration": "mobile-dark",
+    "passed": 19,
+    "observations": [
+      {
+        "name": "navigator-mounted",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "whole-vault-available",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 6
+        }
+      },
+      {
+        "name": "query-refines-results",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md",
+            "资料/图片规范.md"
+          ]
+        }
+      },
+      {
+        "name": "query-does-not-prune-facets",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-do-not-prune-folder-tree",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-scope-changed",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "transient-facets-dropped",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "text-query-cleared",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "folder-result-scope",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/图片规范.md",
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "two-level-candidates",
+        "ok": true,
+        "details": {
+          "all": 6,
+          "scope": 2
+        }
+      },
+      {
+        "name": "tag-candidates-from-folder",
+        "ok": true,
+        "details": {
+          "tags": [
+            "运动",
+            "图片"
+          ]
+        }
+      },
+      {
+        "name": "folder-property-catalog",
+        "ok": true,
+        "details": {
+          "keys": [
+            "所属项目",
+            "项目负责人",
+            "tags"
+          ]
+        }
+      },
+      {
+        "name": "tag-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "labels": [
+            "图片1",
+            "运动1",
+            "没有标签·0"
+          ]
+        }
+      },
+      {
+        "name": "property-picker-scoped-to-folder",
+        "ok": true,
+        "details": {
+          "text": "所属项目2卫康2确定"
+        }
+      },
+      {
+        "name": "property-and-tag-intersection",
+        "ok": true,
+        "details": {
+          "results": [
+            "资料/鞋垫方案.md"
+          ]
+        }
+      },
+      {
+        "name": "sibling-candidates-remain-visible",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-clears-refinements",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "second-location-results",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tap-active-location-clears",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "pageErrors": []
+  }
+]

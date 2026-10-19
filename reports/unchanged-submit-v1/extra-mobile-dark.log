@@ -1,0 +1,42 @@
+mobile-dark B pure-title-query-no-condition-rail True
+mobile-dark B zero-query-default-create-no-phantom-condition True
+mobile-dark B mixed-title-body-switch-still-works True
+mobile-dark B draft-folder-eraser-restores-empty-search-state True
+mobile-dark B draft-tags-eraser-discards-draft-only-chip True
+mobile-dark B draft-property-eraser-discards-draft-only-chip True
+mobile-dark B draft-eraser-restores-original-real-filter True
+mobile-dark B draft-new-query-restores-chip-projection True
+mobile-dark B real-filter-clear-remains-functional True
+mobile-dark B toolbar-return-clears-query-and-refreshes-counts True
+mobile-dark B toolbar-return-keeps-real-filter-not-draft True
+mobile-dark B back-route-uses-the-same-query-reset True
+mobile-dark B collapse-route-uses-the-same-query-reset True
+mobile-dark B pending-debounce-cannot-revive-returned-query True
+mobile-dark B pending-new-word-then-facet-uses-live-input True
+mobile-dark B clear-uses-committed-query-even-if-dom-already-empty True
+mobile-dark B composition-facet-does-not-submit-partial-word True
+mobile-dark B explicit-create-back-is-single-level True
+mobile-dark B repeated-draft-enter-exit-no-ghost-chips True
+mobile-dark B unload-cancels-pending-search-and-projection True
+mobile-dark B picker-cycle-global-listener-release True
+mobile-dark B already-filter-page-return-clears-dormant-query True
+mobile-dark B native-click-caret-folder True
+mobile-dark B native-click-caret-tags True
+mobile-dark B native-click-caret-property-key True
+mobile-dark B native-click-caret-property-value True
+mobile-dark B native-click-caret-create-folder True
+mobile-dark B native-click-caret-create-tags True
+mobile-dark B native-click-caret-create-property True
+mobile-dark B focused-main-to-picker-folder True
+mobile-dark B focused-main-to-picker-tags True
+mobile-dark B focused-main-to-picker-property-key True
+mobile-dark B focused-main-to-picker-property-value True
+mobile-dark B focused-main-to-picker-create-folder True
+mobile-dark B focused-main-to-picker-create-tags True
+mobile-dark B focused-main-to-picker-create-property True
+{
+  "Bpassed": 36,
+  "Bfailed": 0,
+  "reproducedAndFixed": 0,
+  "errors": []
+}

@@ -1,0 +1,2123 @@
+{
+  "source": "/mnt/data/GLS-v5.2-Navigator整行命中-v1-20261018-候选/GLS-v5.2-后台摘要与属性计数整合-v1-正式基线-20261018-Source",
+  "results": [
+    {
+      "config": "mobile-light",
+      "checks": [
+        {
+          "case": "folder.name",
+          "ok": true,
+          "detail": {
+            "x": 88,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.badge",
+          "ok": true,
+          "detail": {
+            "x": 344.48,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.after_button",
+          "ok": true,
+          "detail": {
+            "x": 306.55,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.right",
+          "ok": true,
+          "detail": {
+            "x": 372,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.name",
+          "ok": true,
+          "detail": {
+            "x": 88,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.badge",
+          "ok": true,
+          "detail": {
+            "x": 362.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.after_button",
+          "ok": true,
+          "detail": {
+            "x": 350.98,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.right",
+          "ok": true,
+          "detail": {
+            "x": 372,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.name",
+          "ok": true,
+          "detail": {
+            "x": 88,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              false,
+              true
+            ]
+          }
+        },
+        {
+          "case": "properties.badge",
+          "ok": true,
+          "detail": {
+            "x": 362.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              true,
+              false
+            ]
+          }
+        },
+        {
+          "case": "properties.after_button",
+          "ok": true,
+          "detail": {
+            "x": 350.98,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              false,
+              true
+            ]
+          }
+        },
+        {
+          "case": "properties.right",
+          "ok": true,
+          "detail": {
+            "x": 372,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              true,
+              false
+            ]
+          }
+        },
+        {
+          "case": "heading.folder.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-section-heading local-search-nav-group-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-section-heading local-search-nav-group-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-section-heading local-search-nav-group-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "sort.count.no-select",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "maintenance.name.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.badge.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.right.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "disabled.count.inert",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "folder.count.real-filter-single-commit",
+          "ok": true,
+          "detail": {
+            "commits": 1,
+            "filter": [
+              "项目"
+            ],
+            "page": "results",
+            "results": [
+              "项目/排期.md",
+              "项目/周报.md"
+            ]
+          }
+        },
+        {
+          "case": "pageerrors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "passed": 31,
+      "total": 31,
+      "errors": []
+    },
+    {
+      "config": "mobile-dark",
+      "checks": [
+        {
+          "case": "folder.name",
+          "ok": true,
+          "detail": {
+            "x": 88,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.badge",
+          "ok": true,
+          "detail": {
+            "x": 344.48,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.after_button",
+          "ok": true,
+          "detail": {
+            "x": 306.55,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.right",
+          "ok": true,
+          "detail": {
+            "x": 372,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.name",
+          "ok": true,
+          "detail": {
+            "x": 88,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.badge",
+          "ok": true,
+          "detail": {
+            "x": 362.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.after_button",
+          "ok": true,
+          "detail": {
+            "x": 350.98,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.right",
+          "ok": true,
+          "detail": {
+            "x": 372,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.name",
+          "ok": true,
+          "detail": {
+            "x": 88,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              false,
+              true
+            ]
+          }
+        },
+        {
+          "case": "properties.badge",
+          "ok": true,
+          "detail": {
+            "x": 362.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              true,
+              false
+            ]
+          }
+        },
+        {
+          "case": "properties.after_button",
+          "ok": true,
+          "detail": {
+            "x": 350.98,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              false,
+              true
+            ]
+          }
+        },
+        {
+          "case": "properties.right",
+          "ok": true,
+          "detail": {
+            "x": 372,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [],
+            "mobilePropertyExpanded": [
+              true,
+              false
+            ]
+          }
+        },
+        {
+          "case": "heading.folder.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-section-heading local-search-nav-group-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-section-heading local-search-nav-group-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-section-heading local-search-nav-group-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "sort.count.no-select",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "maintenance.name.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.badge.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.right.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "disabled.count.inert",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "folder.count.real-filter-single-commit",
+          "ok": true,
+          "detail": {
+            "commits": 1,
+            "filter": [
+              "项目"
+            ],
+            "page": "results",
+            "results": [
+              "项目/排期.md",
+              "项目/周报.md"
+            ]
+          }
+        },
+        {
+          "case": "pageerrors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "passed": 31,
+      "total": 31,
+      "errors": []
+    },
+    {
+      "config": "desktop-light",
+      "checks": [
+        {
+          "case": "folder.name",
+          "ok": true,
+          "detail": {
+            "x": 262,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.badge",
+          "ok": true,
+          "detail": {
+            "x": 380.48,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.after_button",
+          "ok": true,
+          "detail": {
+            "x": 355.47,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.right",
+          "ok": true,
+          "detail": {
+            "x": 408,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.name",
+          "ok": true,
+          "detail": {
+            "x": 262,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.badge",
+          "ok": true,
+          "detail": {
+            "x": 398.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.after_button",
+          "ok": true,
+          "detail": {
+            "x": 391.98,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.right",
+          "ok": true,
+          "detail": {
+            "x": 408,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.name",
+          "ok": true,
+          "detail": {
+            "x": 262,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.badge",
+          "ok": true,
+          "detail": {
+            "x": 398.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.after_button",
+          "ok": true,
+          "detail": {
+            "x": 391.98,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.right",
+          "ok": true,
+          "detail": {
+            "x": 408,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "heading.folder.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-window-action local-search-nav-manage",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": true,
+            "after": true,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "folder"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.folder.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "tags"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.tags.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-window-action local-search-nav-manage",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "tags"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.tags.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "properties"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.properties.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-window-action local-search-nav-manage",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "properties"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.properties.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "folder.rightclick.no-select",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "sort.count.no-select",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "maintenance.name.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.badge.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.right.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "disabled.count.inert",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "folder.count.real-filter-single-commit",
+          "ok": true,
+          "detail": {
+            "commits": 1,
+            "filter": [
+              "项目"
+            ],
+            "page": "filters",
+            "results": [
+              "项目/排期.md",
+              "项目/周报.md"
+            ]
+          }
+        },
+        {
+          "case": "pageerrors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "passed": 32,
+      "total": 32,
+      "errors": []
+    },
+    {
+      "config": "desktop-dark",
+      "checks": [
+        {
+          "case": "folder.name",
+          "ok": true,
+          "detail": {
+            "x": 262,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.badge",
+          "ok": true,
+          "detail": {
+            "x": 380.48,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.after_button",
+          "ok": true,
+          "detail": {
+            "x": 355.47,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "folder.right",
+          "ok": true,
+          "detail": {
+            "x": 408,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "folder",
+                "value": "项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.name",
+          "ok": true,
+          "detail": {
+            "x": 262,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.badge",
+          "ok": true,
+          "detail": {
+            "x": 398.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.after_button",
+          "ok": true,
+          "detail": {
+            "x": 391.98,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "tags.right",
+          "ok": true,
+          "detail": {
+            "x": 408,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "tag",
+                "value": "计划"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.name",
+          "ok": true,
+          "detail": {
+            "x": 262,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-tree-name",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-row-hit-target"
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.badge",
+          "ok": true,
+          "detail": {
+            "x": 398.83,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.after_button",
+          "ok": true,
+          "detail": {
+            "x": 391.98,
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-move-current-badge",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "properties.right",
+          "ok": true,
+          "detail": {
+            "x": 408,
+            "target": {
+              "tag": "DIV",
+              "cls": "local-search-move-tree-row local-search-nav-row",
+              "role": "",
+              "closestControl": ""
+            },
+            "hits": [
+              {
+                "kind": "property-key",
+                "value": "所属项目"
+              }
+            ],
+            "mobilePropertyExpanded": [
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "case": "heading.folder.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "SPAN",
+              "cls": "local-search-nav-count",
+              "role": "",
+              "closestControl": ""
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.folder.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-window-action local-search-nav-manage",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": true,
+            "after": true,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "folder"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.folder.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.tags.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "tags"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.tags.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-window-action local-search-nav-manage",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "tags"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.tags.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.name",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target",
+              "role": "",
+              "closestControl": "local-search-move-tree-folder local-search-nav-section-toggle local-search-row-hit-target"
+            },
+            "before": true,
+            "after": false,
+            "hits": []
+          }
+        },
+        {
+          "case": "heading.properties.badge",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "properties"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.properties.right",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "BUTTON",
+              "cls": "local-search-window-action local-search-nav-manage",
+              "role": "",
+              "closestControl": "local-search-window-action local-search-nav-manage"
+            },
+            "before": false,
+            "after": false,
+            "hits": [
+              {
+                "kind": "manage",
+                "value": "properties"
+              }
+            ]
+          }
+        },
+        {
+          "case": "heading.properties.toggle",
+          "ok": true,
+          "detail": {
+            "target": {
+              "tag": "svg",
+              "cls": "",
+              "role": "",
+              "closestControl": "local-search-move-tree-toggle local-search-row-hit-target"
+            },
+            "before": false,
+            "after": true,
+            "hits": []
+          }
+        },
+        {
+          "case": "folder.rightclick.no-select",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "sort.count.no-select",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "maintenance.name.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.badge.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "maintenance.right.owner",
+          "ok": true,
+          "detail": [
+            {
+              "kind": "maintenance",
+              "value": "项目"
+            }
+          ]
+        },
+        {
+          "case": "disabled.count.inert",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "case": "folder.count.real-filter-single-commit",
+          "ok": true,
+          "detail": {
+            "commits": 1,
+            "filter": [
+              "项目"
+            ],
+            "page": "filters",
+            "results": [
+              "项目/排期.md",
+              "项目/周报.md"
+            ]
+          }
+        },
+        {
+          "case": "pageerrors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "passed": 32,
+      "total": 32,
+      "errors": []
+    }
+  ],
+  "passed": 126,
+  "total": 126
+}

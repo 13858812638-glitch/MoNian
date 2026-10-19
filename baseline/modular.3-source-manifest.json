@@ -1,0 +1,776 @@
+{
+  "revision": "modular.3",
+  "sourceZipSha256": "29a1bb545615a56d531b2e8415b66bbdd23119d5ccadde6570152fcbea6cfa31",
+  "files": [
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "sha256": "bee47b9dbee454de976459da331e1e7098ee737b91467da48446ac4f8227b051",
+      "bytes": 30268
+    },
+    {
+      "file": "src/core/SearchCore.js",
+      "sha256": "43ae35bce521aa1a5dffe80e8159b46e3a7409e1bfb7d9527eaa660b3edc5424",
+      "bytes": 12863
+    },
+    {
+      "file": "src/core/SharedSearchStateCoordinator.js",
+      "sha256": "e5dda84a5c870c85b596e8d9135385645f057714bb64c2f6726b35dbf38c80a8",
+      "bytes": 9313
+    },
+    {
+      "file": "src/core/compose-class-methods.js",
+      "sha256": "c850d8abded43f57e6484867c2308a5605daf4c2abb245a5ed83766525795a41",
+      "bytes": 1580
+    },
+    {
+      "file": "src/core/default-settings.js",
+      "sha256": "e1f28ce207e307edd275eca532c6edee2ce9ca83851df0a913f8deb94e531dfa",
+      "bytes": 5072
+    },
+    {
+      "file": "src/core/picker-cleanup.js",
+      "sha256": "d8c9cf43b89bd044ed8e0a3b8624e8b36a7f7e6443dacb5802787e24bcb0676e",
+      "bytes": 729
+    },
+    {
+      "file": "src/core/search/file-actions-methods.js",
+      "sha256": "a95233145b04beed5a35453b23708264e18bbbfaa5ceb0965f596f84559a5ad4",
+      "bytes": 12517
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "sha256": "3ca8c8ddedfa70f381e7a9dd240075df6ba8662c71183658f9b60045b9f9fa43",
+      "bytes": 20455
+    },
+    {
+      "file": "src/core/search/open-selection-methods.js",
+      "sha256": "807471377e984629729fdc10e740c36a2cc5c48af20792997cb8cffe4b7374a1",
+      "bytes": 1884
+    },
+    {
+      "file": "src/core/search/result-menu-events-methods.js",
+      "sha256": "f368905d6fc1c52d90f5e75e0714c96cb4904f7568e7a6913805f4fad2d15f10",
+      "bytes": 11710
+    },
+    {
+      "file": "src/core/search/search-and-ranking-methods.js",
+      "sha256": "dab97abbcf776f5adb6c7baddab2e3a66bd986ea87fd1da9686cdf313e5551b1",
+      "bytes": 18482
+    },
+    {
+      "file": "src/core/search/session-methods.js",
+      "sha256": "cead174449ced749446b564fd9510a5182fc8b367898f0693d7440cf6ab9d4a0",
+      "bytes": 5816
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "sha256": "e44ace692869d9688cd982f0225bb0a5e7ba1dc6aa55d2dd7253fca39fa986fa",
+      "bytes": 18487
+    },
+    {
+      "file": "src/core/session-values.js",
+      "sha256": "2b4bdb513c657de375226e4b98c9ff409a126645e213c827e6da9c38524f8e0e",
+      "bytes": 1064
+    },
+    {
+      "file": "src/core/ui-reference-keys.js",
+      "sha256": "ff883ed584cea4e79c417f6f58d1ffd691ff5f357c224c31669f4d15d003d995",
+      "bytes": 484
+    },
+    {
+      "file": "src/core/view-types.js",
+      "sha256": "8a566ec5cc47aeb3226a8ca654d3e98958cbad5fd5a5f028ee13d3099e756fbf",
+      "bytes": 345
+    },
+    {
+      "file": "src/data/folders/folder-tree.js",
+      "sha256": "95d45f7a555c5c9e6db46eab6091e5ff7ebc980592dbf2d8d3136d94da80fa09",
+      "bytes": 4290
+    },
+    {
+      "file": "src/data/formats/drawing-content.js",
+      "sha256": "07f876014877d737cce17441a3b5c6d89532cdd9cac7871518abb93f7bec77ad",
+      "bytes": 4623
+    },
+    {
+      "file": "src/data/formats/drawing-detection.js",
+      "sha256": "153bfc7c0dc089a31d291f85b39d1cf1eef5b5003eae5c7ef79e042f9ae3bbf8",
+      "bytes": 925
+    },
+    {
+      "file": "src/data/formats/file-types.js",
+      "sha256": "d06cb15c1d5ad746ae98fa2b47bac708c3ef7fe7f9b4b14aa160a471457b30a5",
+      "bytes": 4212
+    },
+    {
+      "file": "src/data/index/BodyIndex.js",
+      "sha256": "f9f804e8db76e3b5014ef65cd788384bd93e95afaa9a725358d722748e2c0c7d",
+      "bytes": 1347
+    },
+    {
+      "file": "src/data/index/index-version.js",
+      "sha256": "bd56a6dd4dcd974a52235cf80bcbb33be046c15d8e6ddc0c5afa273eb7d3843b",
+      "bytes": 173
+    },
+    {
+      "file": "src/data/properties/property-catalog.js",
+      "sha256": "8cc10a0257684cb480c12650cfafaf27e6af460d7f6b30f86c2fe1539ed7caec",
+      "bytes": 3833
+    },
+    {
+      "file": "src/data/properties/property-types.js",
+      "sha256": "69c5d074d8710ef94a52ae17fa137abedb7ae5a66c4e6ae7b4fd7e7c785c02fa",
+      "bytes": 6019
+    },
+    {
+      "file": "src/data/properties/property-values.js",
+      "sha256": "9fa45630875b0f61d82fe99f838fc0ade8e2548e30f2d9ea1511cf6a5e15d954",
+      "bytes": 14646
+    },
+    {
+      "file": "src/data/properties/raw-mutations.js",
+      "sha256": "98a3de29d5c26f2ecfd2dac4e551d541958cc3ffd274faa4ae8a493b77562aa7",
+      "bytes": 3731
+    },
+    {
+      "file": "src/data/tags/tag-tree.js",
+      "sha256": "97bc25daeb0070467e23cdf109ba4f7f2184f9d5f16834ca5921094f3cab2b3c",
+      "bytes": 3436
+    },
+    {
+      "file": "src/data/tags/tag-values.js",
+      "sha256": "967f1d26f98206c4ef965fe9582b9d1ff2f53f8cfa8c2495274906d7287938c2",
+      "bytes": 3526
+    },
+    {
+      "file": "src/data/time/time-values.js",
+      "sha256": "915fa65a098e0eba0cad6dab53513142271411d052a0d0125c4b98d9e3f81489",
+      "bytes": 6714
+    },
+    {
+      "file": "src/features/batch/BatchMetadataController.js",
+      "sha256": "5b57df2a5d7eee5873ab87c2aabf66e7409eb09e5341a23c3641171bd3adf827",
+      "bytes": 1420
+    },
+    {
+      "file": "src/features/batch/mutation-flow-methods.js",
+      "sha256": "3ab0f017d79566691321cd4327959c1a5e2b710936be6a81f17bf56bc87f18a4",
+      "bytes": 10333
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "sha256": "615cdbe4d4e9b0f97e34254391e2298986bf4a0c81bfb8238dc3b04b2a0e9240",
+      "bytes": 37957
+    },
+    {
+      "file": "src/features/batch/tag-editor-methods.js",
+      "sha256": "9d1d6b090da0c8da72a323d6e339ed0eafb078f5dfe4e93a5377a92310dffdbc",
+      "bytes": 11114
+    },
+    {
+      "file": "src/features/create/SearchCreateController.js",
+      "sha256": "f1449ab13337e6526fdf9c754a990e2524f57f94b6bbeedfe9f59a0534f66de0",
+      "bytes": 3114
+    },
+    {
+      "file": "src/features/create/create-file-methods.js",
+      "sha256": "8afc706e7514e1a925df6e51681b6a71faccd0c60479cd727d18ac13b3fe5488",
+      "bytes": 13031
+    },
+    {
+      "file": "src/features/create/create-model.js",
+      "sha256": "90ee35857ad8cff0492c123fa3ea9eb71174ba713eeceb824d36ecb499851b8e",
+      "bytes": 3542
+    },
+    {
+      "file": "src/features/create/draft-and-metadata-methods.js",
+      "sha256": "70315dec5d2409861c725df2cb69f81fe030663cb6cfdbdd73291ecc1bd3c4e4",
+      "bytes": 17659
+    },
+    {
+      "file": "src/features/create/input-mode-methods.js",
+      "sha256": "3ff013349efb26727b827a548aaba0cb9d703fbca1cd433fa7d84752fa152de2",
+      "bytes": 14481
+    },
+    {
+      "file": "src/features/create/payload-methods.js",
+      "sha256": "a6bd5d158f8db6d3f9f88e47b9389f4175443f30e6fddaad2b57279a7e0bdd28",
+      "bytes": 8692
+    },
+    {
+      "file": "src/features/create/preview-methods.js",
+      "sha256": "94edfcb0bcdedd73506a9cf86a1aa53d29236cbcec5f6e5d8db57a194efaf31c",
+      "bytes": 10863
+    },
+    {
+      "file": "src/features/facets/SearchFacetController.js",
+      "sha256": "53e3836ff649326e672986ffa36441e95e7afa9755b0080ba551c232d7017e30",
+      "bytes": 2101
+    },
+    {
+      "file": "src/features/facets/folder-colors-methods.js",
+      "sha256": "64861ef403d2189f0203255a0a4a3dd2b6dcbf5072544113f76e3e8c727693d1",
+      "bytes": 10558
+    },
+    {
+      "file": "src/features/facets/folder-picker-methods.js",
+      "sha256": "7d38779d3017ac0e1e63160b5a0c8665438ef33def7a1fb0651733c5a1eb4438",
+      "bytes": 22951
+    },
+    {
+      "file": "src/features/facets/picker-model-methods.js",
+      "sha256": "039dba97865be29442dcbf8f84734043af97b7121f91d1d167040a84cb779d5b",
+      "bytes": 2899
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "sha256": "49d1f1c6e9899cfb57660214efdff09b50731a252fe6638046a24a198fd73b98",
+      "bytes": 52615
+    },
+    {
+      "file": "src/features/facets/sidebar-maintenance-methods.js",
+      "sha256": "c02839bf006dfc96e2c54957f91567c1bc1f6d759ff94477676abf673fbb5d3d",
+      "bytes": 13382
+    },
+    {
+      "file": "src/features/facets/tag-picker-methods.js",
+      "sha256": "5e6d15d857b851caf4caf6318069ad4fd4682ae2e7d78923989c7ad9859ff216",
+      "bytes": 25969
+    },
+    {
+      "file": "src/features/facets/type-picker-methods.js",
+      "sha256": "cb03ad893d26dfb0bf6547e44377dbd3830688bab0d5bebcb744dfe032389d47",
+      "bytes": 14333
+    },
+    {
+      "file": "src/features/filters/FilterEngine.js",
+      "sha256": "aa1f84ad2c58a8aa7dd8697762b89747678b92b2500a341d1c45bf90f63ea3d7",
+      "bytes": 3948
+    },
+    {
+      "file": "src/features/filters/filter-state.js",
+      "sha256": "704cf5f2d99d0668b61c366bbb44d5c4d5ba6e175269f2e66b802492447c43ab",
+      "bytes": 12513
+    },
+    {
+      "file": "src/features/filters/pool-config.js",
+      "sha256": "aef9ed41e7647f2fd4d481dd944681e1796746eda8b98922858d67def4e1e75e",
+      "bytes": 4342
+    },
+    {
+      "file": "src/features/filters/pool-values.js",
+      "sha256": "c30f825a9670140bc11a12a9c28a37bc20125f53d051b83632d175a96535a634",
+      "bytes": 2735
+    },
+    {
+      "file": "src/features/folders/exclusions.js",
+      "sha256": "0ead733e30c3dd3c857547bff375ed4d6c38f676ca5a32791e370930d2e10239",
+      "bytes": 3718
+    },
+    {
+      "file": "src/features/folders/folder-colors.js",
+      "sha256": "b830f20f708a5bf8c8b6cd9cb6a8a98ada4c8a62a9b93e2fc9ab48e0972c6b75",
+      "bytes": 1821
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "sha256": "3e10a9d5bc687ef6e316b8253e257db8db0a7fd36d9849fe295c153118c46c81",
+      "bytes": 37357
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "sha256": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
+      "bytes": 60062
+    },
+    {
+      "file": "src/features/navigator/customization-model.js",
+      "sha256": "fb37df96bf8cfd7021ad345770160b7c42a3eecb50744b031d883e989384de95",
+      "bytes": 8232
+    },
+    {
+      "file": "src/features/navigator/toolbar-config.js",
+      "sha256": "895c2f9cd68c923b2483b783de2029888c767118a859621db665c23cb35f5df7",
+      "bytes": 7425
+    },
+    {
+      "file": "src/features/plugin/content-cache-methods.js",
+      "sha256": "8724751cc29743c64cd01e61757971c779cd78ad3da006e1ad9aa4ab51898b5d",
+      "bytes": 9062
+    },
+    {
+      "file": "src/features/plugin/external-properties-methods.js",
+      "sha256": "ba1d4f65240d366fdb2a6a5f19acbf4a237599bafc633fb9cd56ba3a176e0d89",
+      "bytes": 15602
+    },
+    {
+      "file": "src/features/plugin/external-search-methods.js",
+      "sha256": "abab9cb157aa328c1e73d73c4f44e824e7cc7f97a0a1a2e11dfbce8c3b796e05",
+      "bytes": 15649
+    },
+    {
+      "file": "src/features/plugin/file-command-actions-methods.js",
+      "sha256": "0bf802ce14820e147fcb8c3f945d1fd4696db593ba155257bbeaf3c1b9007a5e",
+      "bytes": 4457
+    },
+    {
+      "file": "src/features/plugin/file-index-methods.js",
+      "sha256": "f03270fa3a3e0868f71d47d6476fdd5f1d83caf83387dc71ecbafd1d4f99e690",
+      "bytes": 18864
+    },
+    {
+      "file": "src/features/plugin/index-queue-methods.js",
+      "sha256": "26a42c60b6ab43e0cbf878ece769eb70d3b21b7086dac56cd210d78ee2dbe882",
+      "bytes": 3738
+    },
+    {
+      "file": "src/features/plugin/index-storage-methods.js",
+      "sha256": "43b39a81d8d90bab604924f48bad4cb78015048b34781b5a6b89fbdb949094f2",
+      "bytes": 8693
+    },
+    {
+      "file": "src/features/plugin/markdown-write-tracking-methods.js",
+      "sha256": "0fbe5aa5aab5ceb6a57957a2b1b6e94220a98a7139b0b0b2928910887bdba194",
+      "bytes": 19657
+    },
+    {
+      "file": "src/features/plugin/metadata-directory-methods.js",
+      "sha256": "c6a24c728be70c23ed72f6cf3a527d9d363608ac5e27950bf0d7eefab1f6c52d",
+      "bytes": 5875
+    },
+    {
+      "file": "src/features/plugin/non-markdown-metadata-methods.js",
+      "sha256": "f6a7fafa9bbc4aa2c728777d4dc4cfac432dc688c9807eed96882f3f978566ad",
+      "bytes": 21296
+    },
+    {
+      "file": "src/features/plugin/notifications-methods.js",
+      "sha256": "9c5f3466ce2c8707a3295e9b8975d97fc96717d255840a71e42db7373ca53f67",
+      "bytes": 4315
+    },
+    {
+      "file": "src/features/plugin/path-lifecycle-methods.js",
+      "sha256": "0fca8a656e639d2d11903786d25c08b9efb13e24f3feb708ab8493332ee65006",
+      "bytes": 24117
+    },
+    {
+      "file": "src/features/plugin/project-catalog-methods.js",
+      "sha256": "7883491085a972b8de03b29fb584198eaf090078d4b9cee5c7e314f1de0805ad",
+      "bytes": 14602
+    },
+    {
+      "file": "src/features/plugin/property-maintenance-methods.js",
+      "sha256": "174f416612c250c8a7ae5b9fa52cf580fc2b3b9c316b866c69b738a8d3168bdf",
+      "bytes": 24675
+    },
+    {
+      "file": "src/features/plugin/recent-history-state-methods.js",
+      "sha256": "affb7dc2890a3fe7d202f632e641c5ce81dd51445a5971d86f1024fd094d2643",
+      "bytes": 3743
+    },
+    {
+      "file": "src/features/plugin/recent-history-storage-methods.js",
+      "sha256": "e043a441247e38ee17d0bab0797c2e78b0902d1d308b46b097a59e683b9f2ce4",
+      "bytes": 7097
+    },
+    {
+      "file": "src/features/plugin/search-history-methods.js",
+      "sha256": "e43dfa600264cc8fb3c447729e0d89230536e04195170dfbfe7b9bc813d97dab",
+      "bytes": 8896
+    },
+    {
+      "file": "src/features/plugin/settings-storage-methods.js",
+      "sha256": "59ca639d5259db7c4c9abe2f9fe01447f0cb900b2974db77b3e51d53b61a24c4",
+      "bytes": 17279
+    },
+    {
+      "file": "src/features/plugin/time-cache-methods.js",
+      "sha256": "8247422fb86742fa96b95ffda788ce5d6aea09fd512c90d7bba54a835719a258",
+      "bytes": 5171
+    },
+    {
+      "file": "src/features/plugin/tree-maintenance-methods.js",
+      "sha256": "9a984ef3881f0e721f50901704216870b02ab0409e9effc658c67eb18dc4556d",
+      "bytes": 16434
+    },
+    {
+      "file": "src/features/plugin/view-preferences-methods.js",
+      "sha256": "6ca385f348d3119d35d8b9c7df78efa0c59e4e44f481c55226241b850f3ce2c0",
+      "bytes": 10822
+    },
+    {
+      "file": "src/features/plugin/workspace-entry-methods.js",
+      "sha256": "f93f20fc42f26b237f7c3627c89c4195dcf88bc7574b231ca65992d534cb1482",
+      "bytes": 4193
+    },
+    {
+      "file": "src/features/result-controls/SearchResultControlsController.js",
+      "sha256": "0fbe3d15d770aa50829f878b0cc3fad9bb2a7afc7fd9fcab5602cd1070e0f7b8",
+      "bytes": 2612
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "sha256": "41d55c673e62e4fd2612f885097cacd6b6c3240879c7213634bc88f9ef5a0925",
+      "bytes": 36216
+    },
+    {
+      "file": "src/features/result-controls/search-history-methods.js",
+      "sha256": "390695c0c2bb3314a8f013244fc0d8e36ccb41d7e6d50feb15a38b953be97d69",
+      "bytes": 9577
+    },
+    {
+      "file": "src/features/result-controls/toolbar-methods.js",
+      "sha256": "0d0fa0316b76360b4b50cb9b5df0bfe09cfcb92c017add4b266bcfff9d62e498",
+      "bytes": 5813
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "sha256": "ba784c192abd2685d3206b41d631a5a5cf52842cb998afd1b9d2bb1ce4eab30f",
+      "bytes": 45180
+    },
+    {
+      "file": "src/features/results/SearchResultRendererController.js",
+      "sha256": "0b43ca6f4788812bb082fc955345c3f50008306de85d36ac92edf14980145c10",
+      "bytes": 6638
+    },
+    {
+      "file": "src/features/results/SparseHeightIndex.js",
+      "sha256": "d5a1603fbc0c45136633e69cbbd6fac3d9b4dcdd91661f143dd8471b6e21dc68",
+      "bytes": 3147
+    },
+    {
+      "file": "src/features/results/card-metadata-methods.js",
+      "sha256": "2e8f5a2070ac65acb9e8dd6d014dbec2e73526cc4d516cdadbd104cdaf4fc4b7",
+      "bytes": 15887
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "sha256": "e1f0b8689ae54574ee5a5638b6f6355082b62923de3993d09f4731c81dff7173",
+      "bytes": 14513
+    },
+    {
+      "file": "src/features/results/page-and-snippets-methods.js",
+      "sha256": "483a79ba8690243d6554a5cc19113f56fa9df33fc0d6fdb44257f317da22e994",
+      "bytes": 10383
+    },
+    {
+      "file": "src/features/results/result-card-methods.js",
+      "sha256": "f684bed7b88daf2f694c45d00eec8a8dd54dcb0afce10194c8d09256089d2ec5",
+      "bytes": 9729
+    },
+    {
+      "file": "src/features/results/view-config.js",
+      "sha256": "4b86e8faa8dcb2e9e0860f69c1021edd1a66e6535f65ea65601b1196733547b0",
+      "bytes": 5756
+    },
+    {
+      "file": "src/features/results/viewport-anchors-methods.js",
+      "sha256": "2db93f1a744d7f39c66ff585b4625ccade4cc91bc7c5ad5c07f1d8af48858830",
+      "bytes": 18130
+    },
+    {
+      "file": "src/features/results/viewport-geometry-methods.js",
+      "sha256": "758128bd7cd446455dcd90a3cbdf5d9db026ce427e80df565167566cc4131524",
+      "bytes": 18474
+    },
+    {
+      "file": "src/features/results/virtual-window-methods.js",
+      "sha256": "fcb1fafb28503461a0d772218259af784a566259e3b49600e698993924c5cf07",
+      "bytes": 18547
+    },
+    {
+      "file": "src/features/results/virtualization-config.js",
+      "sha256": "3828f9ffc5540fa87620532e79403681d8f3400942a337c7986fa601226f24ee",
+      "bytes": 2106
+    },
+    {
+      "file": "src/features/search/QueryState.js",
+      "sha256": "2eb6e904fbcbc583b5eadc892e69e8a5f401ca8a90f512819cbddcb3d466ab94",
+      "bytes": 679
+    },
+    {
+      "file": "src/features/search/ResultRanker.js",
+      "sha256": "69672b616b3b85c45f253aeae1bda98d4d32a25db1087b14a1a963659fa6cfee",
+      "bytes": 2292
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "sha256": "b4b5e89d816d8ef73b1c31d0414cdb897e1b0a808cb9cc57c319040f01646977",
+      "bytes": 22904
+    },
+    {
+      "file": "src/features/sort/SearchSortController.js",
+      "sha256": "94abaf42794fde9d964ba9471fe22cf7c693e4b1dbc1cbe9565889a5429b0636",
+      "bytes": 15948
+    },
+    {
+      "file": "src/features/sort/sort-model.js",
+      "sha256": "ef5c681b11037a1d905d14ab11da679c6141508bdb2c5883933dd431fda2b57b",
+      "bytes": 3642
+    },
+    {
+      "file": "src/integrations/SearchWorkspaceCapabilities.js",
+      "sha256": "0b255851542a65a4023029125b626e9e4dfae6f6e955572fd677b0113290dc21",
+      "bytes": 2016
+    },
+    {
+      "file": "src/integrations/public-contract.js",
+      "sha256": "a14cbb1f94ddefe69877565062ab5162fc8ca22046573c10674be0ad12150bf2",
+      "bytes": 915
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "sha256": "ab6bfc6e1d9c00d9c146e8edabf83926e5cc916158b8923554e2c92d2f651760",
+      "bytes": 12683
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "sha256": "4e37bd0e3aa33daa6b4516742077b89751cdf3df3d050b126e8dcd342c4f4b29",
+      "bytes": 29113
+    },
+    {
+      "file": "src/interactions/hover-hints.js",
+      "sha256": "44e2166d67b4c14472df4ddbd64da551220a11d858420046c7db19356ea63303",
+      "bytes": 5767
+    },
+    {
+      "file": "src/interactions/scroll-anchor.js",
+      "sha256": "f1e74df45cc5f119d2cdf5dbe472fb88edbc6757dfa988e46515c4ff386a79f7",
+      "bytes": 4141
+    },
+    {
+      "file": "src/interactions/sort-feedback.js",
+      "sha256": "1e6e63aac7e2ebd3e565bc574f73b3b52b8cff47b815a55544f2d9eddd1bc35a",
+      "bytes": 3650
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "sha256": "a7de82c6e035163649f70ce23b3c0ce97e8c02001952b72461748570003f1d15",
+      "bytes": 15347
+    },
+    {
+      "file": "src/main.js",
+      "sha256": "e07a0c92d44c431d72d157ce0e76a82a6098c99ff042af3b54f14448db395433",
+      "bytes": 145
+    },
+    {
+      "file": "src/services/BatchMetadataService.js",
+      "sha256": "cdf30775f8c4a7def0d0e95fe51a72d94c9568f2315f9dfa5f9d4e966fdd3d19",
+      "bytes": 17381
+    },
+    {
+      "file": "src/services/FileOperationService.js",
+      "sha256": "e2b8e982a563a11fb89565ca45cdaab92deaf6488b7d580d33ed3ec1ad7939f5",
+      "bytes": 14268
+    },
+    {
+      "file": "src/services/IoPool.js",
+      "sha256": "f5c1a75e28f192f737e8e85bcbf70a34d65329ed2c86ebe183f75814df950743",
+      "bytes": 1490
+    },
+    {
+      "file": "src/styles/styles.css",
+      "sha256": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad",
+      "bytes": 245873
+    },
+    {
+      "file": "src/ui/components/indicator-label.js",
+      "sha256": "17bcf22b99fcd4b13a802a79829f4d72dce87554ab66c64648bb0f22142606c2",
+      "bytes": 671
+    },
+    {
+      "file": "src/ui/components/input-controls.js",
+      "sha256": "4d068faa3dc64f8d0283f8693dfc33a2748e2832cb424adf03d9c2695057fb57",
+      "bytes": 3793
+    },
+    {
+      "file": "src/ui/components/property-state.js",
+      "sha256": "f933749917e8dbaf71572b4254bb9347d4c91ae5fe08c9fb639a4597a9d2a5ac",
+      "bytes": 2561
+    },
+    {
+      "file": "src/ui/components/view-composer.js",
+      "sha256": "154a9708a5f691a72fc340506a4d9a4b17c362f66ad648073263cbaeb9891d5f",
+      "bytes": 3644
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "sha256": "c1fc3d78c2f13a9102914b76fe66f2259ebb60ecffbf8636807c08bb36d35758",
+      "bytes": 8900
+    },
+    {
+      "file": "src/ui/dialogs/dialog-surface.js",
+      "sha256": "d6134d6933f6acbc4db113218c51aedf0cdfd53a717df369674c119ac3f95033",
+      "bytes": 3853
+    },
+    {
+      "file": "src/ui/dialogs/submission.js",
+      "sha256": "42a1cead8507a7aebee03a46215d6e26b53b9855fb434748249cf2941cb0770d",
+      "bytes": 3312
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "sha256": "1790828c755f810db9a0e605acd03e499a466cf41b1bcab3eb14a832d7575fbd",
+      "bytes": 29852
+    },
+    {
+      "file": "src/ui/hosts/floating-host.js",
+      "sha256": "231255f46683ff021e55b19582f169cbe1a041bf948eeba357ab660ef09ac4ca",
+      "bytes": 2321
+    },
+    {
+      "file": "src/ui/hosts/modal-chrome.js",
+      "sha256": "8d3c6820b363fbdd2517a40d58ae0d3fa23eba39e202b54f21956766a7f61d4c",
+      "bytes": 723
+    },
+    {
+      "file": "src/ui/hosts/modal-host.js",
+      "sha256": "b374aca701f8dc5000301aae3f6cd9cd6f8265d3e1b240217ecaf2e49eecd313",
+      "bytes": 970
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "sha256": "c9236a58325218edd1884db138cf5b39ad0f10ac10fb92029ffcb0937d123759",
+      "bytes": 11378
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "sha256": "20f3cb25f99a8948cf4dd1d98596c02d92ab1739efdd5fc8eb2fe9df9a2e6cc7",
+      "bytes": 5874
+    },
+    {
+      "file": "src/ui/overlays/OperationOverlayController.js",
+      "sha256": "3a1f820acba45f858a1f90be32eb727ccd77ac5c425e67c37c87e33394842ead",
+      "bytes": 6690
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "sha256": "d9520e2d9f9718bde77361f4995cea61172d6b100ce583d060f2afb396f81f22",
+      "bytes": 30344
+    },
+    {
+      "file": "src/ui/overlays/geometry.js",
+      "sha256": "64499dcc3faab9f1e69b8e4b27f8f9ccc44e530a18d4047a43e32a142931470f",
+      "bytes": 2194
+    },
+    {
+      "file": "src/ui/overlays/popup-order.js",
+      "sha256": "861d048a695d81ce4c861711ce920f993051e6c9d96efa13e0494d370253f836",
+      "bytes": 1156
+    },
+    {
+      "file": "src/ui/pickers/count-rail.js",
+      "sha256": "48664d1f8d5fd122db2517f227ea015d56e139e7082eeb59f88b5a306371f9db",
+      "bytes": 791
+    },
+    {
+      "file": "src/ui/pickers/folder-picker.js",
+      "sha256": "4c41813086661873943bc6449df6e18965cc2350e5e62a2dcad32621d1467e9b",
+      "bytes": 7978
+    },
+    {
+      "file": "src/ui/pickers/header-modes.js",
+      "sha256": "d115d0d8ba01e29d3d193ff89ec39d8d7b93e3c85f6e386506f97c7e8c20b2a3",
+      "bytes": 4890
+    },
+    {
+      "file": "src/ui/pickers/icon-catalog.js",
+      "sha256": "556a505276ab62d3e808895a8e150f7958a845bbb5408c28a68812f0267e5670",
+      "bytes": 2208
+    },
+    {
+      "file": "src/ui/pickers/icon-picker.js",
+      "sha256": "40336d682771c991d919f5283a44158bf3dff2e70fea69b093ee8e8494317f32",
+      "bytes": 4559
+    },
+    {
+      "file": "src/ui/pickers/picker-header.js",
+      "sha256": "00fc6c579ae6afff96158d23b7e60c7509f94f68eb4e547652719b9f2bba120e",
+      "bytes": 3886
+    },
+    {
+      "file": "src/ui/pickers/picker-shell.js",
+      "sha256": "9325885e12909c3cf9fb00ec7efa4721ebfc77ab2ec521684f14862ece1a58cf",
+      "bytes": 4277
+    },
+    {
+      "file": "src/ui/pickers/selection-mode.js",
+      "sha256": "5a332824953fd3cbdcb6dfad444317f6d8e4c62979eded8885d055cd0d165f31",
+      "bytes": 5051
+    },
+    {
+      "file": "src/ui/pickers/selection-strip.js",
+      "sha256": "2cd9c926d48770a044c9522bb8a2eb8a7f5dd251968e7b0c359ae209f511499d",
+      "bytes": 4203
+    },
+    {
+      "file": "src/ui/pickers/sort-mode.js",
+      "sha256": "9ba6cb28c4ab439e235dbcd8a6da6c7625c08fc2ce0b2b38107cf7d473a8db46",
+      "bytes": 1682
+    },
+    {
+      "file": "src/ui/pickers/template-picker.js",
+      "sha256": "edecb2244b8c4f3dc8d2c955d9ff517c9ef72bcf6492f55790fba9dc816b1de8",
+      "bytes": 6284
+    },
+    {
+      "file": "src/ui/pickers/tree-row.js",
+      "sha256": "0641d8d88046195dfad37f549d82a8349817c685a6cd941634e3232a6766d185",
+      "bytes": 8335
+    },
+    {
+      "file": "src/ui/settings/LocalSearchSettingTab.js",
+      "sha256": "9bd0ed894d174e0865b32e30b269bfdbe6168b6ce54ef0cbbcd5d45649e29461",
+      "bytes": 13454
+    },
+    {
+      "file": "src/ui/settings/setting-row.js",
+      "sha256": "6a394d1311db71d485fb06ba84dd82e2c890c2a07ee8f1f7a71c47ee7359cd0c",
+      "bytes": 2920
+    },
+    {
+      "file": "src/ui/views/SearchView.js",
+      "sha256": "413a4b595d37d199328fe5cbaa3c6034288598f276f434ffbdc116a21bd54863",
+      "bytes": 7369
+    },
+    {
+      "file": "src/utils/dom.js",
+      "sha256": "15f1d8424d35eb118a70f47c5b491338fc120d3a51ceebcffb9acbe950d0af99",
+      "bytes": 1448
+    },
+    {
+      "file": "src/utils/markdown-text.js",
+      "sha256": "3622c599d0e2abc7acf0a86ed62a7c9b3ded5fe4311d0fd0fe5deab9a250ff5a",
+      "bytes": 9826
+    },
+    {
+      "file": "src/utils/normalization.js",
+      "sha256": "29614f719edbbf6c40f0735c01ebde05d256704ecb51d4304e64d9af67a64660",
+      "bytes": 1224
+    },
+    {
+      "file": "src/utils/preferred-order.js",
+      "sha256": "4afaf198eae65cb880cfc0fdddeb44b1a19dd38e2b033af6478b2f02417b4c2a",
+      "bytes": 3016
+    },
+    {
+      "file": "src/utils/search-text.js",
+      "sha256": "2cc78e95b1a90eb7bc162774c8a6debd583b0d20e8a06324f49af7cd7196172f",
+      "bytes": 11466
+    },
+    {
+      "file": "src/utils/text-collator.js",
+      "sha256": "b779f31fb47672d1ddd46b954a4cb030a778c7f05d88335eb4bf798ef1e0ef55",
+      "bytes": 366
+    },
+    {
+      "file": "src/utils/tree-match.js",
+      "sha256": "792d46ce713a4268295ae12d126c29df40fb92f2c6a66eedfe4439889ddfb2d9",
+      "bytes": 470
+    },
+    {
+      "file": "src/utils/vault-paths.js",
+      "sha256": "d735058a385a4337bcdf98f2936d540ef291ae931b8bce9041801fe810623213",
+      "bytes": 862
+    }
+  ]
+}

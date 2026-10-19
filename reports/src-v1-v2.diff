@@ -1,0 +1,312 @@
+diff --git "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/core/LocalSearchPlugin.js" "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/core/LocalSearchPlugin.js"
+index f080d67..8c5f3fb 100644
+--- "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/core/LocalSearchPlugin.js"
++++ "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/core/LocalSearchPlugin.js"
+@@ -14,7 +14,7 @@ import { LocalSearchPlugin_metadata_directory_methods } from "../features/plugin
+ import { LocalSearchPlugin_non_markdown_metadata_methods } from "../features/plugin/non-markdown-metadata-methods.js";
+ import { LocalSearchPlugin_notifications_methods } from "../features/plugin/notifications-methods.js";
+ import { LocalSearchPlugin_path_lifecycle_methods } from "../features/plugin/path-lifecycle-methods.js";
+-import { LocalSearchPlugin_project_catalog_methods } from "../features/plugin/project-catalog-methods.js";
++import { LocalSearchPlugin_property_catalog_methods } from "../features/plugin/property-catalog-methods.js";
+ import { LocalSearchPlugin_property_maintenance_methods } from "../features/plugin/property-maintenance-methods.js";
+ import { LocalSearchPlugin_recent_history_state_methods, LocalSearchPlugin_recent_history_storage_methods } from "../features/plugin/recent-history-state-methods.js";
+ import { LocalSearchPlugin_search_history_methods } from "../features/plugin/search-history-methods.js";
+@@ -452,5 +452,5 @@ export class LocalSearchPlugin extends Plugin {
+     }
+ }
+ 
+-composeClassMethods(LocalSearchPlugin, [LocalSearchPlugin_tree_maintenance_methods, LocalSearchPlugin_property_maintenance_methods, LocalSearchPlugin_file_command_actions_methods, LocalSearchPlugin_workspace_entry_methods, LocalSearchPlugin_search_history_methods, LocalSearchPlugin_recent_history_state_methods, LocalSearchPlugin_path_lifecycle_methods, LocalSearchPlugin_notifications_methods, LocalSearchPlugin_project_catalog_methods, LocalSearchPlugin_index_queue_methods, LocalSearchPlugin_time_cache_methods, LocalSearchPlugin_metadata_directory_methods, LocalSearchPlugin_markdown_write_tracking_methods, LocalSearchPlugin_non_markdown_metadata_methods, LocalSearchPlugin_external_properties_methods, LocalSearchPlugin_recent_history_storage_methods, LocalSearchPlugin_content_cache_methods, LocalSearchPlugin_file_index_methods, LocalSearchPlugin_view_preferences_methods, LocalSearchPlugin_external_search_methods, LocalSearchPlugin_settings_storage_methods, LocalSearchPlugin_index_storage_methods], ["setPickerSiblingOrder","moveFolderTreeNode","_tagPathMatchesPrefix","_remapTagPath","_rewriteInlineTagPositions","_materializeTagPickerOrder","_materializePropertyPickerOrders","_mutatePropertyFilterPoolEntries","migrateVaultTagTreePrefix","deleteVaultTagTreePrefix","_withPropertyCatalogMutation","_propertyMaintenanceSettingsSnapshot","_invalidatePropertyCatalogViews","_savePropertyMaintenanceSettings","renameVaultPropertyKey","_renameVaultPropertyKey","deleteVaultPropertyKey","_deleteVaultPropertyKey","deleteVaultPropertyValue","_deleteVaultPropertyValue","renameVaultPropertyValue","_renameVaultPropertyValue","_commandSearchSelectionCore","_deleteFromCommand","_openCurrentFileOperation","onload","_enforceWorkspaceSingleton","_latestCreateRecovery","activateView","_activateWorkspaceView","recoverSearchSession","rememberCreateSession","settleCreateSession","_normalizeSearchQueries","_normalizeSearchHistory","_normalizeFavoriteSearches","_sameSearchQuery","_setSearchHistory","_setFavoriteSearches","rememberModalSearchSession","recordSearchHistory","favoriteSearchQuery","unfavoriteSearchQuery","deleteSearchQuery","_normalizeRecentOpened","_setRecentOpened","_touchRecentOpened","_removeRecentOpenedPath","_remapRecentOpenedHistory","_replacePathPrefix","_migrateCorePathState","_transformSearchFilters","_remapStoredSearchPaths","_migrateRenameSettings","_settleRename","_clearIndexPathPrefix","_handleFolderDelete","_handleFolderRename","_handleFileRename","_throttleSaveActivity","_activeCoreFilterStates","_settleCoreFilterMutation","_forEachActiveSearchCore","_refreshSearchCoreResultCards","_refreshActiveResultCards","_refreshPickerOrderConsumers","_publishIndexChanges","_publishPropertyCatalogChanges","subscribeIndexChanges","_propertyValueCatalog","propertyCatalogType","propertyCatalogValues","hasPropertyCatalogValue","propertyCatalogKeys","addPropertyCatalogValues","_addPropertyCatalogValues","_remapPropertyValueCatalog","getIndexedFiles","getIndexedFileProperties","getIndexedPropertyCatalog","patchExternalProperties","_queueFileIndex","_flushIndexQueueNow","_flushIndexQueue","_readFileProperties","_setContentTimeEntry","_removeContentTimePath","_removeContentTimePathPrefix","_migrateContentTimePath","_markContentTimeCacheDirty","_flushContentTimeCacheSave","_pluginDirectory","_metadataDirectory","_metadataHistoryFilename","_metadataContentFilename","_metadataNonMarkdownFilename","_assertMetadataDirectoryDedicated","_ensureMetadataDirectory","_metadataSidecarFiles","changeMetadataDirectory","_markdownTimeFromFile","_markdownEditorViews","_editMarkdownFrontmatter","_scheduleMarkdownStamp","_timePayload","_recordFileWrite","_installTimeWriteCapture","_noteOwnedCreation","_timeRecordValid","_nonMarkdownPropertyRecord","_nonMarkdownProperties","_editNonMarkdownProperties","_reloadTimeSidecars","_isRemoteTimeSidecar","loadNonMarkdownTimes","_resolveNonMarkdownTimes","_scheduleNonMarkdownSave","saveNonMarkdownTimes","_remapNonMarkdownTimes","_deleteNonMarkdownTimes","registerVirtualProperties","isVirtualPropertyKey","_searchMeta","_invalidateVirtualProperties","openExternalFolderPicker","openExternalPropertyEditor","moveExternalFiles","markOpenedFromExternal","getAuthoritativeFileTime","subscribeRecentOpened","_notifyRecentOpened","getRecentOpenedHistory","_mergeRecentOpenedHistory","loadRecentOpenedHistory","_throttleSaveRecentOpenedHistory","saveRecentOpenedHistory","_writablePluginDirectory","saveContentTimeCache","loadContentTimeCache","getFileFullContent","_evictIndexedPath","throttleSaveCache","_updateSingleFile","isPathExcluded","isResultPathExcluded","isResultAttachmentTypeExcluded","buildMetaCache","_indexValidationStamp","_needsIndexRefresh","fullRebuildMetaCache","_captureActiveResultViewAnchors","_refreshActiveResultViewCores","_refreshFolderStateCores","setExcludedFolders","setResultExcludedFolders","setResultExcludedAttachmentTypes","_refreshFilterPoolCores","setFilterPoolSelectionMode","setFilterPools","_refreshResultSortCores","setResultSortPreferences","setActiveResultView","updateActiveResultViewConfig","resetActiveResultView","cycleActiveResultView","_normalizeExternalSearchRequest","_openSearchSession","_externalSearchOptions","openExternalSearch","mountExternalSearch","openSearchModal","toggleSearchModal","_normalizeSettingsInPlace","loadSettings","_queueSettingsSnapshot","saveSettings","_clearResidentSearchResults","_getResidentSearchSnapshot","_getResidentSearchResults","_rememberSearchResults","_rememberSearchSnapshot","saveIndexCache","loadIndexCache","onunload"]);
++composeClassMethods(LocalSearchPlugin, [LocalSearchPlugin_tree_maintenance_methods, LocalSearchPlugin_property_maintenance_methods, LocalSearchPlugin_file_command_actions_methods, LocalSearchPlugin_workspace_entry_methods, LocalSearchPlugin_search_history_methods, LocalSearchPlugin_recent_history_state_methods, LocalSearchPlugin_path_lifecycle_methods, LocalSearchPlugin_notifications_methods, LocalSearchPlugin_property_catalog_methods, LocalSearchPlugin_index_queue_methods, LocalSearchPlugin_time_cache_methods, LocalSearchPlugin_metadata_directory_methods, LocalSearchPlugin_markdown_write_tracking_methods, LocalSearchPlugin_non_markdown_metadata_methods, LocalSearchPlugin_external_properties_methods, LocalSearchPlugin_recent_history_storage_methods, LocalSearchPlugin_content_cache_methods, LocalSearchPlugin_file_index_methods, LocalSearchPlugin_view_preferences_methods, LocalSearchPlugin_external_search_methods, LocalSearchPlugin_settings_storage_methods, LocalSearchPlugin_index_storage_methods], ["setPickerSiblingOrder","moveFolderTreeNode","_tagPathMatchesPrefix","_remapTagPath","_rewriteInlineTagPositions","_materializeTagPickerOrder","_materializePropertyPickerOrders","_mutatePropertyFilterPoolEntries","migrateVaultTagTreePrefix","deleteVaultTagTreePrefix","_withPropertyCatalogMutation","_propertyMaintenanceSettingsSnapshot","_invalidatePropertyCatalogViews","_savePropertyMaintenanceSettings","renameVaultPropertyKey","_renameVaultPropertyKey","deleteVaultPropertyKey","_deleteVaultPropertyKey","deleteVaultPropertyValue","_deleteVaultPropertyValue","renameVaultPropertyValue","_renameVaultPropertyValue","_commandSearchSelectionCore","_deleteFromCommand","_openCurrentFileOperation","onload","_enforceWorkspaceSingleton","_latestCreateRecovery","activateView","_activateWorkspaceView","recoverSearchSession","rememberCreateSession","settleCreateSession","_normalizeSearchQueries","_normalizeSearchHistory","_normalizeFavoriteSearches","_sameSearchQuery","_setSearchHistory","_setFavoriteSearches","rememberModalSearchSession","recordSearchHistory","favoriteSearchQuery","unfavoriteSearchQuery","deleteSearchQuery","_normalizeRecentOpened","_setRecentOpened","_touchRecentOpened","_removeRecentOpenedPath","_remapRecentOpenedHistory","_replacePathPrefix","_migrateCorePathState","_transformSearchFilters","_remapStoredSearchPaths","_migrateRenameSettings","_settleRename","_clearIndexPathPrefix","_handleFolderDelete","_handleFolderRename","_handleFileRename","_throttleSaveActivity","_activeCoreFilterStates","_settleCoreFilterMutation","_forEachActiveSearchCore","_refreshSearchCoreResultCards","_refreshActiveResultCards","_refreshPickerOrderConsumers","_publishIndexChanges","_publishPropertyCatalogChanges","subscribeIndexChanges","_propertyValueCatalog","propertyCatalogType","propertyCatalogValues","hasPropertyCatalogValue","propertyCatalogKeys","addPropertyCatalogValues","_addPropertyCatalogValues","_remapPropertyValueCatalog","getIndexedFiles","getIndexedFileProperties","getIndexedPropertyCatalog","patchExternalProperties","_queueFileIndex","_flushIndexQueueNow","_flushIndexQueue","_readFileProperties","_setContentTimeEntry","_removeContentTimePath","_removeContentTimePathPrefix","_migrateContentTimePath","_markContentTimeCacheDirty","_flushContentTimeCacheSave","_pluginDirectory","_metadataDirectory","_metadataHistoryFilename","_metadataContentFilename","_metadataNonMarkdownFilename","_assertMetadataDirectoryDedicated","_ensureMetadataDirectory","_metadataSidecarFiles","changeMetadataDirectory","_markdownTimeFromFile","_markdownEditorViews","_editMarkdownFrontmatter","_scheduleMarkdownStamp","_timePayload","_recordFileWrite","_installTimeWriteCapture","_noteOwnedCreation","_timeRecordValid","_nonMarkdownPropertyRecord","_nonMarkdownProperties","_editNonMarkdownProperties","_reloadTimeSidecars","_isRemoteTimeSidecar","loadNonMarkdownTimes","_resolveNonMarkdownTimes","_scheduleNonMarkdownSave","saveNonMarkdownTimes","_remapNonMarkdownTimes","_deleteNonMarkdownTimes","registerVirtualProperties","isVirtualPropertyKey","_searchMeta","_invalidateVirtualProperties","openExternalFolderPicker","openExternalPropertyEditor","moveExternalFiles","markOpenedFromExternal","getAuthoritativeFileTime","subscribeRecentOpened","_notifyRecentOpened","getRecentOpenedHistory","_mergeRecentOpenedHistory","loadRecentOpenedHistory","_throttleSaveRecentOpenedHistory","saveRecentOpenedHistory","_writablePluginDirectory","saveContentTimeCache","loadContentTimeCache","getFileFullContent","_evictIndexedPath","throttleSaveCache","_updateSingleFile","isPathExcluded","isResultPathExcluded","isResultAttachmentTypeExcluded","buildMetaCache","_indexValidationStamp","_needsIndexRefresh","fullRebuildMetaCache","_captureActiveResultViewAnchors","_refreshActiveResultViewCores","_refreshFolderStateCores","setExcludedFolders","setResultExcludedFolders","setResultExcludedAttachmentTypes","_refreshFilterPoolCores","setFilterPoolSelectionMode","setFilterPools","_refreshResultSortCores","setResultSortPreferences","setActiveResultView","updateActiveResultViewConfig","resetActiveResultView","cycleActiveResultView","_normalizeExternalSearchRequest","_openSearchSession","_externalSearchOptions","openExternalSearch","mountExternalSearch","openSearchModal","toggleSearchModal","_normalizeSettingsInPlace","loadSettings","_queueSettingsSnapshot","saveSettings","_clearResidentSearchResults","_getResidentSearchSnapshot","_getResidentSearchResults","_rememberSearchResults","_rememberSearchSnapshot","saveIndexCache","loadIndexCache","onunload"]);
+ 
+diff --git "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/facets/folder-picker-methods.js" "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/facets/folder-picker-methods.js"
+index f9fe505..3a89bc0 100644
+--- "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/facets/folder-picker-methods.js"
++++ "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/facets/folder-picker-methods.js"
+@@ -7,9 +7,9 @@ import { setIndicatorLabel } from "../../ui/components/indicator-label.js";
+ import { renderSharedFolderTreePicker } from "../../ui/pickers/folder-picker.js";
+ import { attachFacetPickerOverflow, attachPickerHeaderModes } from "../../ui/pickers/header-modes.js";
+ import { configureSharedPickerHeader, createPickerHeaderIconAction } from "../../ui/pickers/picker-header.js";
+-import { createFacetPickerSelectionMode } from "../../ui/pickers/selection-mode.js";
++import { createFacetPickerSelectionMode, deactivateConflictingFacetPickerModes } from "../../ui/pickers/selection-mode.js";
+ import { createSharedPickerSelectionStrip } from "../../ui/pickers/selection-strip.js";
+-import { attachPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
++import { attachFacetPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
+ import { createPickerRowAction, syncSharedPickerTreeRowAvailability } from "../../ui/pickers/tree-row.js";
+ import { remapPreferredPathOrder } from "../../utils/preferred-order.js";
+ import { createFolderExclusionController, normalizeExcludedFolders } from "../folders/exclusions.js";
+@@ -383,10 +383,9 @@ export const SearchFacetController_folder_picker_methods = {
+             : attachPickerHeaderModes(header, {
+                 modes: this.sidebarMaintenanceModes("folder"),
+                 onChange: mode => {
+-                    if (mode) {
+-                        selectionMode?.setActive(false);
+-                        sortToggle?.setActive(false);
+-                    }
++                    if (mode) deactivateConflictingFacetPickerModes({
++                        selectionMode, sortToggle
++                    });
+                     const deleteActive = mode === "delete";
+                     const renameActive = mode === "rename";
+                     const colorActive = mode === "color";
+@@ -430,10 +429,9 @@ export const SearchFacetController_folder_picker_methods = {
+                 kind: "folder",
+                 onCommit: options.onCommit,
+                 title: "文件夹多选",
+-                onBeforeEnter: () => {
+-                    folderModes?.setActive("");
+-                    sortToggle?.setActive(false);
+-                },
++                onBeforeEnter: () => deactivateConflictingFacetPickerModes({
++                    maintenanceMode: folderModes, sortToggle
++                }),
+                 onStateChange: () => {
+                     renderCurrentSelection();
+                     picker?.syncSelection?.();
+@@ -477,17 +475,14 @@ export const SearchFacetController_folder_picker_methods = {
+             }
+         });
+ 
+-        sortToggle = (createMode || poolMode) ? null : attachPickerSortModeToggle(header, {
++        sortToggle = (createMode || poolMode) ? null : attachFacetPickerSortModeToggle(header, {
+             label: "文件夹",
+-            onChange: active => {
+-                if (active) {
+-                    folderModes?.setActive("");
+-                    selectionMode?.setActive(false);
+-                    picker.render();
+-                }
+-                coordinator?.setEnabled(active);
+-                renderCurrentSelection();
+-            }
++            selectionMode,
++            maintenanceMode: folderModes,
++            maintenanceFirst: true,
++            coordinator,
++            onEnter: () => picker.render(),
++            onRefreshSelection: renderCurrentSelection
+         });
+         registerPickerCleanup(panel, () => {
+             folderModes?.setActive("");
+diff --git "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/facets/property-picker-methods.js" "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/facets/property-picker-methods.js"
+index 139d9a4..2a97029 100644
+--- "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/facets/property-picker-methods.js"
++++ "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/facets/property-picker-methods.js"
+@@ -18,9 +18,9 @@ import { PROPERTY_SHORTCUT_DEFAULT_ICON } from "../../ui/pickers/icon-catalog.js
+ import { openFilterToolbarIconPicker } from "../../ui/pickers/icon-picker.js";
+ import { configureSharedPickerHeader } from "../../ui/pickers/picker-header.js";
+ import { activatePickerSearch, createSharedPickerTreeShell } from "../../ui/pickers/picker-shell.js";
+-import { createFacetPickerSelectionMode } from "../../ui/pickers/selection-mode.js";
++import { createFacetPickerSelectionMode, deactivateConflictingFacetPickerModes } from "../../ui/pickers/selection-mode.js";
+ import { createSharedPickerSelectionStrip } from "../../ui/pickers/selection-strip.js";
+-import { attachPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
++import { attachFacetPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
+ import { createPickerRowAction, createSharedPickerTreeRow, syncSharedPickerTreeRowAvailability } from "../../ui/pickers/tree-row.js";
+ import { hostWindow } from "../../utils/dom.js";
+ import { sortByPreferredOrder } from "../../utils/preferred-order.js";
+@@ -265,10 +265,9 @@ export const SearchFacetController_property_picker_methods = {
+                 modes: this.sidebarMaintenanceModes("property-key"),
+                 onChange: mode => {
+                     maintenanceMode = mode;
+-                    if (mode) {
+-                        selectionMode?.setActive(false);
+-                        sortToggle?.setActive(false);
+-                    }
++                    if (mode) deactivateConflictingFacetPickerModes({
++                        selectionMode, sortToggle
++                    });
+                     // Sort is available only in the native property catalog, not maintenance modes.
+                     if (sortToggle?.button) sortToggle.button.hidden = Boolean(mode);
+                     if (header?.heading) {
+@@ -300,10 +299,9 @@ export const SearchFacetController_property_picker_methods = {
+                 kind: "property",
+                 onCommit: options.onCommit,
+                 title: quickValueMode ? `${quickKey || "属性"}多选` : "属性多选",
+-                onBeforeEnter: () => {
+-                    maintenanceActions?.setActive("");
+-                    sortToggle?.setActive(false);
+-                },
++                onBeforeEnter: () => deactivateConflictingFacetPickerModes({
++                    maintenanceMode: maintenanceActions, sortToggle
++                }),
+                 onStateChange: () => {
+                     // Draft 是多选期间唯一计数投影源。
+                     // 一次 Draft 变化只失效一次属性统计缓存，再统一刷新
+@@ -893,17 +891,13 @@ export const SearchFacetController_property_picker_methods = {
+             }
+         });
+ 
+-        sortToggle = (createMode || poolMode || quickValueMode) ? null : attachPickerSortModeToggle(header, {
++        sortToggle = (createMode || poolMode || quickValueMode) ? null : attachFacetPickerSortModeToggle(header, {
+             label: "属性",
+-            onChange: active => {
+-                if (active) {
+-                    selectionMode?.setActive(false);
+-                    maintenanceActions?.setActive("");
+-                    render(false);
+-                }
+-                coordinator?.setEnabled(active);
+-                renderCurrentSelection();
+-            }
++            selectionMode,
++            maintenanceMode: maintenanceActions,
++            coordinator,
++            onEnter: () => render(false),
++            onRefreshSelection: renderCurrentSelection
+         });
+         registerPickerCleanup(panel, () => {
+             sortToggle?.destroy?.();
+diff --git "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/facets/tag-picker-methods.js" "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/facets/tag-picker-methods.js"
+index 9804c95..e5bed6d 100644
+--- "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/facets/tag-picker-methods.js"
++++ "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/facets/tag-picker-methods.js"
+@@ -8,9 +8,9 @@ import { rerenderPickerListPreservingScroll, revealScrollableKey } from "../../i
+ import { attachFacetPickerOverflow, attachPickerHeaderModes } from "../../ui/pickers/header-modes.js";
+ import { configureSharedPickerHeader } from "../../ui/pickers/picker-header.js";
+ import { activatePickerSearch, createSharedPickerTreeShell } from "../../ui/pickers/picker-shell.js";
+-import { createFacetPickerSelectionMode } from "../../ui/pickers/selection-mode.js";
++import { createFacetPickerSelectionMode, deactivateConflictingFacetPickerModes } from "../../ui/pickers/selection-mode.js";
+ import { createSharedPickerSelectionStrip } from "../../ui/pickers/selection-strip.js";
+-import { attachPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
++import { attachFacetPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
+ import { createPickerRowAction, createSharedPickerTreeRow, syncSharedPickerTreeRowAvailability } from "../../ui/pickers/tree-row.js";
+ import { hostWindow } from "../../utils/dom.js";
+ import { treeNodeMatches } from "../../utils/tree-match.js";
+@@ -133,10 +133,9 @@ export const SearchFacetController_tag_picker_methods = {
+                 modes: this.sidebarMaintenanceModes("tag"),
+                 onChange: mode => {
+                     maintenanceMode = mode;
+-                    if (mode) {
+-                        selectionMode?.setActive(false);
+-                        sortToggle?.setActive(false);
+-                    }
++                    if (mode) deactivateConflictingFacetPickerModes({
++                        selectionMode, sortToggle
++                    });
+                     refreshSource();
+                     rerenderPickerListPreservingScroll(list, () => render(false));
+                 }
+@@ -149,10 +148,9 @@ export const SearchFacetController_tag_picker_methods = {
+                 kind: "tag",
+                 onCommit: options.onCommit,
+                 title: "标签多选",
+-                onBeforeEnter: () => {
+-                    maintenanceActions?.setActive("");
+-                    sortToggle?.setActive(false);
+-                },
++                onBeforeEnter: () => deactivateConflictingFacetPickerModes({
++                    maintenanceMode: maintenanceActions, sortToggle
++                }),
+                 onStateChange: () => {
+                     refreshTagUsage();
+                     syncHeading();
+@@ -520,17 +518,13 @@ export const SearchFacetController_tag_picker_methods = {
+             }
+         });
+ 
+-        sortToggle = (createMode || poolMode) ? null : attachPickerSortModeToggle(header, {
++        sortToggle = (createMode || poolMode) ? null : attachFacetPickerSortModeToggle(header, {
+             label: "标签",
+-            onChange: active => {
+-                if (active) {
+-                    selectionMode?.setActive(false);
+-                    maintenanceActions?.setActive("");
+-                    render(false);
+-                }
+-                coordinator?.setEnabled(active);
+-                renderCurrentSelection();
+-            }
++            selectionMode,
++            maintenanceMode: maintenanceActions,
++            coordinator,
++            onEnter: () => render(false),
++            onRefreshSelection: renderCurrentSelection
+         });
+         registerPickerCleanup(panel, () => {
+             sortToggle?.destroy?.();
+diff --git "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/plugin/project-catalog-methods.js" "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/plugin/property-catalog-methods.js"
+similarity index 99%
+rename from "/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/plugin/project-catalog-methods.js"
+rename to "/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/plugin/property-catalog-methods.js"
+index 73d26e1..4b11ff8 100644
+--- "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/features/plugin/project-catalog-methods.js"
++++ "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/features/plugin/property-catalog-methods.js"
+@@ -6,7 +6,7 @@ import { GLS_MANAGED_TIME_KEYS, indexedFileProperties } from "../../data/time/ti
+ import { normalizeUniqueStringList } from "../../utils/normalization.js";
+ import { TFile } from "obsidian";
+ // Instance method owner. `this` is the unchanged LocalSearchPlugin instance. No additional state store.
+-export const LocalSearchPlugin_project_catalog_methods = {
++export const LocalSearchPlugin_property_catalog_methods = {
+ 
+ 
+     // A generic index event: consumers choose their own grouping property.
+diff --git "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/ui/pickers/selection-mode.js" "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/ui/pickers/selection-mode.js"
+index aa0473f..44fc172 100644
+--- "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/ui/pickers/selection-mode.js"
++++ "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/ui/pickers/selection-mode.js"
+@@ -56,6 +56,23 @@ export function commitFacetSelectionState(target, draft, kind) {
+ }
+ 
+ 
++// A single, stateless exit path for mutually exclusive facet Picker modes.
++// The caller determines the activation order: the folder sort Picker has
++// always exited maintenance before selection, unlike tag/property sorting.
++// Keep the original setActive calls (and their existing refresh semantics).
++export function deactivateConflictingFacetPickerModes({
++    selectionMode = null,
++    maintenanceMode = null,
++    sortToggle = null,
++    maintenanceFirst = true
++} = {}) {
++    if (maintenanceFirst) maintenanceMode?.setActive("");
++    selectionMode?.setActive(false);
++    if (!maintenanceFirst) maintenanceMode?.setActive("");
++    sortToggle?.setActive(false);
++}
++
++
+ export function createFacetPickerSelectionMode(panel, header, {
+     core,
+     kind,
+diff --git "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/ui/pickers/sort-mode.js" "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/ui/pickers/sort-mode.js"
+index a8cdd18..3dcaca3 100644
+--- "a/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-\347\254\254\344\270\200\351\230\266\346\256\265-20261018/src/ui/pickers/sort-mode.js"
++++ "b/mnt/data/GLS-v5.2-\346\250\241\345\235\227\345\275\222\344\270\200-v2-20261018-\345\200\231\351\200\211Source/src/ui/pickers/sort-mode.js"
+@@ -2,6 +2,7 @@
+ // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
+ import { createPickerHeaderIconAction } from "./picker-header.js";
+ import { setPickerSearchMode } from "./picker-shell.js";
++import { deactivateConflictingFacetPickerModes } from "./selection-mode.js";
+ 
+ 
+ export function attachPickerSortModeToggle(header, {
+@@ -54,3 +55,30 @@ export function attachPickerSortModeToggle(header, {
+         }
+     };
+ }
++
++
++// Shared facet sort-mode transition. Specialized commit/reorder logic stays
++// in the folder/tag/property controllers and their PointerSortCoordinator.
++export function attachFacetPickerSortModeToggle(header, {
++    label,
++    selectionMode = null,
++    maintenanceMode = null,
++    maintenanceFirst = false,
++    coordinator = null,
++    onEnter = null,
++    onRefreshSelection = null
++} = {}) {
++    return attachPickerSortModeToggle(header, {
++        label,
++        onChange: active => {
++            if (active) {
++                deactivateConflictingFacetPickerModes({
++                    selectionMode, maintenanceMode, maintenanceFirst
++                });
++                onEnter?.();
++            }
++            coordinator?.setEnabled(active);
++            onRefreshSelection?.();
++        }
++    });
++}

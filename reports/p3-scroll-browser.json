@@ -1,0 +1,42 @@
+{
+  "browser": "Chromium",
+  "nativeIOS": false,
+  "results": [
+    {
+      "mobileEmulation": false,
+      "ok": true,
+      "data": {
+        "immediate": 1,
+        "live": 120,
+        "settled": 2,
+        "pending": null,
+        "final": 124,
+        "beforeClose": true,
+        "afterClose": null,
+        "stored": 124,
+        "requests": 3,
+        "later": 3
+      },
+      "errors": []
+    },
+    {
+      "mobileEmulation": true,
+      "ok": true,
+      "data": {
+        "immediate": 1,
+        "live": 120,
+        "settled": 2,
+        "pending": null,
+        "final": 124,
+        "beforeClose": true,
+        "afterClose": null,
+        "stored": 124,
+        "requests": 3,
+        "later": 3
+      },
+      "errors": []
+    }
+  ],
+  "passed": 2,
+  "failed": 0
+}

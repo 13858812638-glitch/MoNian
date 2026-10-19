@@ -1,0 +1,1611 @@
+{
+  "dom": {
+    "attrs": {
+      "class": "is-mobile theme-dark"
+    },
+    "children": [
+      {
+        "attrs": {
+          "class": "local-search-content local-search-workspace-host is-create-input-mode",
+          "id": "host",
+          "tabindex": "-1"
+        },
+        "children": [
+          {
+            "attrs": {
+              "class": "local-search-header"
+            },
+            "children": [
+              {
+                "attrs": {
+                  "class": "local-search-heading"
+                },
+                "children": [
+                  {
+                    "attrs": {
+                      "class": "local-search-heading-title"
+                    },
+                    "children": [
+                      "本地搜索"
+                    ],
+                    "tag": "H2"
+                  },
+                  {
+                    "attrs": {
+                      "class": "local-search-heading-caption"
+                    },
+                    "children": [
+                      "你的知识，触手可及"
+                    ],
+                    "tag": "SPAN"
+                  }
+                ],
+                "tag": "DIV"
+              },
+              {
+                "attrs": {
+                  "class": "local-search-input-wrap"
+                },
+                "children": [
+                  {
+                    "attrs": {
+                      "class": "local-search-search-field local-search-main-search-field"
+                    },
+                    "children": [
+                      {
+                        "attrs": {
+                          "aria-label": "搜索文件、标签或正文",
+                          "autocapitalize": "off",
+                          "autocomplete": "off",
+                          "class": "local-search-search-text-input local-search-input",
+                          "data-ls-interaction": "input",
+                          "placeholder": "搜索文件、标签或正文…",
+                          "spellcheck": "false",
+                          "style": "",
+                          "type": "text"
+                        },
+                        "checked": false,
+                        "children": [],
+                        "disabled": false,
+                        "tag": "INPUT",
+                        "value": "全新验收笔记"
+                      }
+                    ],
+                    "tag": "DIV"
+                  },
+                  {
+                    "attrs": {
+                      "aria-label": "搜索与结果工具",
+                      "class": "local-search-search-result-controls-host"
+                    },
+                    "children": [
+                      {
+                        "attrs": {
+                          "class": "local-search-search-result-controls"
+                        },
+                        "children": [
+                          {
+                            "attrs": {
+                              "aria-hidden": "false",
+                              "aria-label": "创建笔记",
+                              "aria-pressed": "false",
+                              "class": "local-search-input-action local-search-create-mode-btn",
+                              "data-ls-interaction": "choice",
+                              "data-test-icon": "file-plus",
+                              "type": "button"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "class": "svg-icon",
+                                  "height": "16",
+                                  "width": "16"
+                                },
+                                "children": [],
+                                "tag": "svg"
+                              }
+                            ],
+                            "disabled": false,
+                            "tag": "BUTTON",
+                            "value": ""
+                          },
+                          {
+                            "attrs": {
+                              "aria-expanded": "false",
+                              "aria-haspopup": "dialog",
+                              "aria-label": "搜索记录",
+                              "class": "local-search-input-action",
+                              "data-ls-interaction": "chrome",
+                              "data-test-icon": "history",
+                              "type": "button"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "class": "svg-icon",
+                                  "height": "16",
+                                  "width": "16"
+                                },
+                                "children": [],
+                                "tag": "svg"
+                              }
+                            ],
+                            "disabled": false,
+                            "tag": "BUTTON",
+                            "value": ""
+                          },
+                          {
+                            "attrs": {
+                              "aria-expanded": "false",
+                              "aria-label": "清空搜索",
+                              "class": "local-search-input-action local-search-view-btn is-clear-input",
+                              "data-ls-input-action": "clear-input",
+                              "data-ls-input-icon": "eraser",
+                              "data-ls-interaction": "chrome",
+                              "data-test-icon": "eraser",
+                              "type": "button"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "class": "svg-icon",
+                                  "height": "16",
+                                  "width": "16"
+                                },
+                                "children": [],
+                                "tag": "svg"
+                              }
+                            ],
+                            "disabled": false,
+                            "tag": "BUTTON",
+                            "value": ""
+                          }
+                        ],
+                        "tag": "DIV"
+                      }
+                    ],
+                    "tag": "DIV"
+                  }
+                ],
+                "tag": "DIV"
+              }
+            ],
+            "tag": "DIV"
+          },
+          {
+            "attrs": {
+              "class": "local-search-workspace"
+            },
+            "children": [
+              {
+                "attrs": {
+                  "aria-label": "搜索筛选",
+                  "class": "local-search-facets"
+                },
+                "children": [
+                  {
+                    "attrs": {
+                      "class": "local-search-filter-row"
+                    },
+                    "children": [
+                      {
+                        "attrs": {
+                          "class": "local-search-filter-top"
+                        },
+                        "children": [
+                          {
+                            "attrs": {
+                              "class": "local-search-filter-left"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "aria-expanded": "false",
+                                  "aria-haspopup": "dialog",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-type-btn",
+                                  "data-ls-interaction": "chrome",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "ui-indicator-label"
+                                    },
+                                    "children": [
+                                      "文件夹"
+                                    ],
+                                    "tag": "SPAN"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-expanded": "false",
+                                  "aria-haspopup": "dialog",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-type-btn",
+                                  "data-ls-interaction": "chrome",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "ui-indicator-label"
+                                    },
+                                    "children": [
+                                      "标签"
+                                    ],
+                                    "tag": "SPAN"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-expanded": "false",
+                                  "aria-haspopup": "dialog",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-type-btn",
+                                  "data-ls-interaction": "chrome",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "ui-indicator-label"
+                                    },
+                                    "children": [
+                                      "属性"
+                                    ],
+                                    "tag": "SPAN"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              }
+                            ],
+                            "tag": "DIV"
+                          },
+                          {
+                            "attrs": {
+                              "class": "local-search-filter-sort-slot"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "aria-label": "搜索排序（创建期间保留，返回搜索后可调整）",
+                                  "class": "local-search-sort-control",
+                                  "data-sort-context": "results",
+                                  "role": "group"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "aria-label": "排序：最佳匹配；点击切换为最近打开",
+                                      "class": "local-search-sort-field-btn",
+                                      "data-ls-interaction": "choice",
+                                      "disabled": "",
+                                      "type": "button"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-sort-trigger-label"
+                                        },
+                                        "children": [
+                                          "最佳匹配"
+                                        ],
+                                        "tag": "SPAN"
+                                      }
+                                    ],
+                                    "disabled": true,
+                                    "tag": "BUTTON",
+                                    "value": ""
+                                  },
+                                  {
+                                    "attrs": {
+                                      "aria-expanded": "false",
+                                      "aria-haspopup": "dialog",
+                                      "aria-label": "排序与时间；当前：最佳匹配",
+                                      "class": "local-search-sort-picker-btn",
+                                      "data-ls-icon": "sparkles",
+                                      "data-ls-interaction": "action",
+                                      "data-test-icon": "sparkles",
+                                      "disabled": "",
+                                      "type": "button"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "class": "svg-icon",
+                                          "height": "16",
+                                          "width": "16"
+                                        },
+                                        "children": [],
+                                        "tag": "svg"
+                                      }
+                                    ],
+                                    "disabled": true,
+                                    "tag": "BUTTON",
+                                    "value": ""
+                                  },
+                                  {
+                                    "attrs": {
+                                      "aria-label": "最佳匹配：最佳匹配优先；点击切换为升序",
+                                      "aria-pressed": "false",
+                                      "class": "local-search-sort-direction-btn",
+                                      "data-ls-interaction": "choice",
+                                      "disabled": "",
+                                      "type": "button"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "aria-hidden": "true",
+                                          "class": "local-search-sort-direction-icon",
+                                          "data-ls-icon": "arrow-down",
+                                          "data-test-icon": "arrow-down"
+                                        },
+                                        "children": [
+                                          {
+                                            "attrs": {
+                                              "class": "svg-icon",
+                                              "height": "16",
+                                              "width": "16"
+                                            },
+                                            "children": [],
+                                            "tag": "svg"
+                                          }
+                                        ],
+                                        "tag": "SPAN"
+                                      }
+                                    ],
+                                    "disabled": true,
+                                    "tag": "BUTTON",
+                                    "value": ""
+                                  }
+                                ],
+                                "tag": "DIV"
+                              }
+                            ],
+                            "tag": "DIV"
+                          }
+                        ],
+                        "tag": "DIV"
+                      }
+                    ],
+                    "tag": "DIV"
+                  }
+                ],
+                "tag": "DIV"
+              },
+              {
+                "attrs": {
+                  "class": "local-search-main-pane"
+                },
+                "children": [
+                  {
+                    "attrs": {
+                      "class": "local-search-results-header"
+                    },
+                    "children": [
+                      {
+                        "attrs": {
+                          "class": "local-search-status-summary"
+                        },
+                        "children": [
+                          {
+                            "attrs": {
+                              "aria-atomic": "true",
+                              "aria-label": "当前结果 0，全部文件 5",
+                              "aria-live": "polite",
+                              "class": "local-search-status-items",
+                              "role": "status"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "class": "local-search-stats-item"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "local-search-stats-indicator"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-label"
+                                        },
+                                        "children": [
+                                          "结果"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "aria-hidden": "true",
+                                          "class": "local-search-stats-dot"
+                                        },
+                                        "children": [
+                                          "·"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-value"
+                                        },
+                                        "children": [
+                                          "0"
+                                        ],
+                                        "tag": "SPAN"
+                                      }
+                                    ],
+                                    "tag": "SPAN"
+                                  }
+                                ],
+                                "tag": "SPAN"
+                              },
+                              {
+                                "attrs": {
+                                  "aria-hidden": "true",
+                                  "class": "local-search-stats-separator"
+                                },
+                                "children": [],
+                                "tag": "SPAN"
+                              },
+                              {
+                                "attrs": {
+                                  "class": "local-search-stats-item"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "local-search-stats-indicator"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-label"
+                                        },
+                                        "children": [
+                                          "全部"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "aria-hidden": "true",
+                                          "class": "local-search-stats-dot"
+                                        },
+                                        "children": [
+                                          "·"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-value"
+                                        },
+                                        "children": [
+                                          "5"
+                                        ],
+                                        "tag": "SPAN"
+                                      }
+                                    ],
+                                    "tag": "SPAN"
+                                  }
+                                ],
+                                "tag": "SPAN"
+                              }
+                            ],
+                            "tag": "DIV"
+                          },
+                          {
+                            "attrs": {
+                              "aria-label": "结果筛选与批量入口",
+                              "class": "local-search-status-action-rail"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "aria-hidden": "false",
+                                  "aria-label": "筛选文件类型：笔记",
+                                  "aria-pressed": "true",
+                                  "class": "local-search-status-filter-action is-applied",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "file-text",
+                                  "data-type": "note",
+                                  "title": "笔记",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-hidden": "false",
+                                  "aria-label": "筛选文件类型：Canvas",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-status-filter-action",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "layout-dashboard",
+                                  "data-type": "canvas",
+                                  "title": "Canvas",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-hidden": "false",
+                                  "aria-label": "筛选文件类型：Excalidraw",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-status-filter-action",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "pencil-ruler",
+                                  "data-type": "excalidraw",
+                                  "title": "Excalidraw",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-hidden": "true",
+                                  "aria-label": "筛选文件类型：其他文件",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-status-filter-action",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "paperclip",
+                                  "data-type": "attachment",
+                                  "hidden": "",
+                                  "title": "其他文件",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-label": "进入批量操作",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-batch-mode-toggle",
+                                  "data-ls-icon": "list-checks",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "list-checks",
+                                  "disabled": "",
+                                  "title": "进入批量操作",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": true,
+                                "tag": "BUTTON",
+                                "value": ""
+                              }
+                            ],
+                            "tag": "DIV"
+                          }
+                        ],
+                        "tag": "DIV"
+                      },
+                      {
+                        "attrs": {
+                          "class": "local-search-status-summary local-search-batch-summary",
+                          "hidden": ""
+                        },
+                        "children": [
+                          {
+                            "attrs": {
+                              "aria-atomic": "true",
+                              "aria-label": "已选 0 个文件，当前结果 0",
+                              "aria-live": "polite",
+                              "class": "local-search-batch-selected",
+                              "role": "status"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "class": "local-search-stats-item"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "local-search-stats-indicator"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-label"
+                                        },
+                                        "children": [
+                                          "已选"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "aria-hidden": "true",
+                                          "class": "local-search-stats-dot"
+                                        },
+                                        "children": [
+                                          "·"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-value"
+                                        },
+                                        "children": [
+                                          "0"
+                                        ],
+                                        "tag": "SPAN"
+                                      }
+                                    ],
+                                    "tag": "SPAN"
+                                  }
+                                ],
+                                "tag": "SPAN"
+                              },
+                              {
+                                "attrs": {
+                                  "aria-hidden": "true",
+                                  "class": "local-search-stats-separator"
+                                },
+                                "children": [],
+                                "tag": "SPAN"
+                              },
+                              {
+                                "attrs": {
+                                  "class": "local-search-stats-item"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "local-search-stats-indicator"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-label"
+                                        },
+                                        "children": [
+                                          "结果"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "aria-hidden": "true",
+                                          "class": "local-search-stats-dot"
+                                        },
+                                        "children": [
+                                          "·"
+                                        ],
+                                        "tag": "SPAN"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-stats-value"
+                                        },
+                                        "children": [
+                                          "0"
+                                        ],
+                                        "tag": "SPAN"
+                                      }
+                                    ],
+                                    "tag": "SPAN"
+                                  }
+                                ],
+                                "tag": "SPAN"
+                              }
+                            ],
+                            "tag": "DIV"
+                          },
+                          {
+                            "attrs": {
+                              "aria-label": "批量操作",
+                              "class": "local-search-batch-actions"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "aria-label": "标签",
+                                  "class": "local-search-selection-icon-action",
+                                  "data-ls-icon": "tags",
+                                  "data-ls-interaction": "chrome",
+                                  "data-test-icon": "tags",
+                                  "disabled": "",
+                                  "title": "标签",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": true,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-label": "属性",
+                                  "class": "local-search-selection-icon-action",
+                                  "data-ls-icon": "list-filter",
+                                  "data-ls-interaction": "chrome",
+                                  "data-test-icon": "list-filter",
+                                  "disabled": "",
+                                  "title": "属性",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": true,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-label": "移动到",
+                                  "class": "local-search-selection-icon-action",
+                                  "data-ls-icon": "folder-input",
+                                  "data-ls-interaction": "chrome",
+                                  "data-test-icon": "folder-input",
+                                  "disabled": "",
+                                  "title": "移动到",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": true,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-label": "删除文件",
+                                  "class": "local-search-selection-icon-action is-danger-action",
+                                  "data-ls-icon": "trash-2",
+                                  "data-ls-interaction": "chrome",
+                                  "data-test-icon": "trash-2",
+                                  "disabled": "",
+                                  "title": "删除文件",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": true,
+                                "tag": "BUTTON",
+                                "value": ""
+                              }
+                            ],
+                            "tag": "DIV"
+                          },
+                          {
+                            "attrs": {
+                              "aria-label": "批量选择",
+                              "class": "local-search-status-action-rail"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "aria-label": "全选当前结果，共 0 个文件",
+                                  "class": "local-search-selection-icon-action",
+                                  "data-ls-icon": "list-checks",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "list-checks",
+                                  "disabled": "",
+                                  "title": "全选当前结果，共 0 个文件",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": true,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-label": "展开全部左滑按钮",
+                                  "aria-pressed": "false",
+                                  "class": "local-search-selection-icon-action",
+                                  "data-ls-icon": "panel-bottom-open",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "panel-bottom-open",
+                                  "disabled": "",
+                                  "title": "展开全部左滑按钮",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": true,
+                                "tag": "BUTTON",
+                                "value": ""
+                              },
+                              {
+                                "attrs": {
+                                  "aria-label": "退出批量操作",
+                                  "class": "local-search-selection-icon-action is-exit",
+                                  "data-ls-icon": "x",
+                                  "data-ls-interaction": "choice",
+                                  "data-test-icon": "x",
+                                  "title": "退出批量操作",
+                                  "type": "button"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "svg-icon",
+                                      "height": "16",
+                                      "width": "16"
+                                    },
+                                    "children": [],
+                                    "tag": "svg"
+                                  }
+                                ],
+                                "disabled": false,
+                                "tag": "BUTTON",
+                                "value": ""
+                              }
+                            ],
+                            "tag": "DIV"
+                          }
+                        ],
+                        "tag": "DIV"
+                      }
+                    ],
+                    "tag": "DIV"
+                  },
+                  {
+                    "attrs": {
+                      "aria-hidden": "true",
+                      "aria-label": "快捷筛选池",
+                      "class": "local-search-filter-pool-rail",
+                      "hidden": "",
+                      "role": "group"
+                    },
+                    "children": [
+                      {
+                        "attrs": {
+                          "class": "local-search-filter-pool-values",
+                          "hidden": ""
+                        },
+                        "children": [],
+                        "tag": "DIV"
+                      },
+                      {
+                        "attrs": {
+                          "aria-label": "固定筛选入口",
+                          "class": "local-search-filter-pool-shortcuts",
+                          "hidden": "",
+                          "role": "group"
+                        },
+                        "children": [],
+                        "tag": "DIV"
+                      }
+                    ],
+                    "tag": "DIV"
+                  },
+                  {
+                    "attrs": {
+                      "aria-hidden": "true",
+                      "class": "local-search-condition-bar",
+                      "hidden": ""
+                    },
+                    "children": [
+                      {
+                        "attrs": {
+                          "class": "local-search-condition-wrap"
+                        },
+                        "children": [
+                          {
+                            "attrs": {
+                              "aria-hidden": "true",
+                              "class": "local-search-result-channel-host",
+                              "hidden": ""
+                            },
+                            "children": [],
+                            "tag": "SPAN"
+                          },
+                          {
+                            "attrs": {
+                              "aria-hidden": "true",
+                              "class": "local-search-result-state-separator",
+                              "hidden": ""
+                            },
+                            "children": [],
+                            "tag": "SPAN"
+                          },
+                          {
+                            "attrs": {
+                              "class": "local-search-active-filter-wrap"
+                            },
+                            "children": [],
+                            "tag": "DIV"
+                          }
+                        ],
+                        "tag": "DIV"
+                      },
+                      {
+                        "attrs": {
+                          "aria-hidden": "true",
+                          "aria-label": "清空搜索词和筛选条件",
+                          "class": "local-search-condition-chip local-search-condition-clear",
+                          "data-ls-interaction": "action",
+                          "hidden": "",
+                          "type": "button"
+                        },
+                        "children": [
+                          "清空"
+                        ],
+                        "disabled": false,
+                        "tag": "BUTTON",
+                        "value": ""
+                      }
+                    ],
+                    "tag": "DIV"
+                  },
+                  {
+                    "attrs": {
+                      "class": "local-search-results-shell"
+                    },
+                    "children": [
+                      {
+                        "attrs": {
+                          "class": "local-search-results"
+                        },
+                        "children": [
+                          {
+                            "attrs": {
+                              "class": "local-search-results-inner"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "aria-live": "polite",
+                                  "class": "local-search-quick-create-preview"
+                                },
+                                "children": [
+                                  {
+                                    "attrs": {
+                                      "class": "local-search-quick-create-summary"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "aria-busy": "false",
+                                          "aria-label": "创建笔记 全新验收笔记",
+                                          "class": "local-search-quick-create-primary",
+                                          "data-ls-interaction": "action",
+                                          "type": "button"
+                                        },
+                                        "children": [
+                                          "＋ 创建“全新验收笔记”"
+                                        ],
+                                        "disabled": false,
+                                        "tag": "BUTTON",
+                                        "value": ""
+                                      },
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-empty-hint",
+                                          "hidden": "",
+                                          "role": "status"
+                                        },
+                                        "children": [],
+                                        "tag": "DIV"
+                                      },
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-action-btn",
+                                          "data-ls-interaction": "action",
+                                          "hidden": "",
+                                          "type": "button"
+                                        },
+                                        "children": [
+                                          "打开已创建文件"
+                                        ],
+                                        "disabled": false,
+                                        "tag": "BUTTON",
+                                        "value": ""
+                                      },
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-action-btn",
+                                          "data-ls-interaction": "action",
+                                          "hidden": "",
+                                          "type": "button"
+                                        },
+                                        "children": [
+                                          "保留文件并返回"
+                                        ],
+                                        "disabled": false,
+                                        "tag": "BUTTON",
+                                        "value": ""
+                                      }
+                                    ],
+                                    "tag": "DIV"
+                                  },
+                                  {
+                                    "attrs": {
+                                      "class": "local-search-quick-create-sections"
+                                    },
+                                    "children": [
+                                      {
+                                        "attrs": {
+                                          "class": "local-search-quick-create-section"
+                                        },
+                                        "children": [
+                                          {
+                                            "attrs": {
+                                              "class": "local-search-quick-create-metadata"
+                                            },
+                                            "children": [
+                                              {
+                                                "attrs": {
+                                                  "aria-label": "标签：无",
+                                                  "class": "local-search-quick-create-meta local-search-quick-create-meta-tags is-wide is-interactive",
+                                                  "data-ls-interaction": "field",
+                                                  "type": "button"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attrs": {
+                                                      "aria-hidden": "true",
+                                                      "class": "local-search-quick-create-meta-icon",
+                                                      "data-test-icon": "tag"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "svg-icon",
+                                                          "height": "16",
+                                                          "width": "16"
+                                                        },
+                                                        "children": [],
+                                                        "tag": "svg"
+                                                      }
+                                                    ],
+                                                    "tag": "SPAN"
+                                                  },
+                                                  {
+                                                    "attrs": {
+                                                      "class": "local-search-quick-create-meta-copy"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-label"
+                                                        },
+                                                        "children": [
+                                                          "标签"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      },
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-value"
+                                                        },
+                                                        "children": [
+                                                          "无"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      }
+                                                    ],
+                                                    "tag": "DIV"
+                                                  }
+                                                ],
+                                                "disabled": false,
+                                                "tag": "BUTTON",
+                                                "value": ""
+                                              },
+                                              {
+                                                "attrs": {
+                                                  "aria-label": "属性：无",
+                                                  "class": "local-search-quick-create-meta local-search-quick-create-meta-properties is-wide is-interactive",
+                                                  "data-ls-interaction": "field",
+                                                  "type": "button"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attrs": {
+                                                      "aria-hidden": "true",
+                                                      "class": "local-search-quick-create-meta-icon",
+                                                      "data-test-icon": "list"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "svg-icon",
+                                                          "height": "16",
+                                                          "width": "16"
+                                                        },
+                                                        "children": [],
+                                                        "tag": "svg"
+                                                      }
+                                                    ],
+                                                    "tag": "SPAN"
+                                                  },
+                                                  {
+                                                    "attrs": {
+                                                      "class": "local-search-quick-create-meta-copy"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-label"
+                                                        },
+                                                        "children": [
+                                                          "属性"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      },
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-value"
+                                                        },
+                                                        "children": [
+                                                          "无"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      }
+                                                    ],
+                                                    "tag": "DIV"
+                                                  }
+                                                ],
+                                                "disabled": false,
+                                                "tag": "BUTTON",
+                                                "value": ""
+                                              },
+                                              {
+                                                "attrs": {
+                                                  "aria-label": "文件夹：仓库根目录",
+                                                  "class": "local-search-quick-create-meta local-search-quick-create-meta-folder is-interactive",
+                                                  "data-ls-interaction": "field",
+                                                  "type": "button"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attrs": {
+                                                      "aria-hidden": "true",
+                                                      "class": "local-search-quick-create-meta-icon",
+                                                      "data-test-icon": "folder"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "svg-icon",
+                                                          "height": "16",
+                                                          "width": "16"
+                                                        },
+                                                        "children": [],
+                                                        "tag": "svg"
+                                                      }
+                                                    ],
+                                                    "tag": "SPAN"
+                                                  },
+                                                  {
+                                                    "attrs": {
+                                                      "class": "local-search-quick-create-meta-copy"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-label"
+                                                        },
+                                                        "children": [
+                                                          "文件夹"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      },
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-value",
+                                                          "title": "仓库根目录"
+                                                        },
+                                                        "children": [
+                                                          "仓库根目录"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      }
+                                                    ],
+                                                    "tag": "DIV"
+                                                  }
+                                                ],
+                                                "disabled": false,
+                                                "tag": "BUTTON",
+                                                "value": ""
+                                              },
+                                              {
+                                                "attrs": {
+                                                  "aria-label": "类型：笔记",
+                                                  "class": "local-search-quick-create-meta local-search-quick-create-meta-type is-interactive",
+                                                  "data-ls-interaction": "field",
+                                                  "type": "button"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attrs": {
+                                                      "aria-hidden": "true",
+                                                      "class": "local-search-quick-create-meta-icon",
+                                                      "data-test-icon": "file-text"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "svg-icon",
+                                                          "height": "16",
+                                                          "width": "16"
+                                                        },
+                                                        "children": [],
+                                                        "tag": "svg"
+                                                      }
+                                                    ],
+                                                    "tag": "SPAN"
+                                                  },
+                                                  {
+                                                    "attrs": {
+                                                      "class": "local-search-quick-create-meta-copy"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-label"
+                                                        },
+                                                        "children": [
+                                                          "类型"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      },
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-value",
+                                                          "title": "点击循环切换：笔记 → 画布 → Excalidraw"
+                                                        },
+                                                        "children": [
+                                                          "笔记"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      }
+                                                    ],
+                                                    "tag": "DIV"
+                                                  }
+                                                ],
+                                                "disabled": false,
+                                                "tag": "BUTTON",
+                                                "value": ""
+                                              },
+                                              {
+                                                "attrs": {
+                                                  "aria-label": "模板：未使用",
+                                                  "class": "local-search-quick-create-meta local-search-quick-create-meta-template is-wide is-interactive",
+                                                  "data-ls-interaction": "field",
+                                                  "type": "button"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attrs": {
+                                                      "aria-hidden": "true",
+                                                      "class": "local-search-quick-create-meta-icon",
+                                                      "data-test-icon": "files"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "svg-icon",
+                                                          "height": "16",
+                                                          "width": "16"
+                                                        },
+                                                        "children": [],
+                                                        "tag": "svg"
+                                                      }
+                                                    ],
+                                                    "tag": "SPAN"
+                                                  },
+                                                  {
+                                                    "attrs": {
+                                                      "class": "local-search-quick-create-meta-copy"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-label"
+                                                        },
+                                                        "children": [
+                                                          "模板"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      },
+                                                      {
+                                                        "attrs": {
+                                                          "class": "local-search-quick-create-meta-value",
+                                                          "title": "未使用模板"
+                                                        },
+                                                        "children": [
+                                                          "未使用"
+                                                        ],
+                                                        "tag": "DIV"
+                                                      }
+                                                    ],
+                                                    "tag": "DIV"
+                                                  }
+                                                ],
+                                                "disabled": false,
+                                                "tag": "BUTTON",
+                                                "value": ""
+                                              }
+                                            ],
+                                            "tag": "DIV"
+                                          }
+                                        ],
+                                        "tag": "DIV"
+                                      }
+                                    ],
+                                    "tag": "DIV"
+                                  }
+                                ],
+                                "tag": "DIV"
+                              }
+                            ],
+                            "tag": "DIV"
+                          }
+                        ],
+                        "tag": "DIV"
+                      }
+                    ],
+                    "tag": "DIV"
+                  }
+                ],
+                "tag": "DIV"
+              }
+            ],
+            "tag": "DIV"
+          }
+        ],
+        "tag": "DIV"
+      },
+      {
+        "attrs": {
+          "class": "local-search-content ui-popup-portal"
+        },
+        "children": [],
+        "tag": "DIV"
+      }
+    ],
+    "tag": "BODY"
+  },
+  "files": [
+    {
+      "content": "---\n{\n  \"所属项目\": \"卫康\",\n  \"项目负责人\": [\n    \"张\"\n  ],\n  \"tags\": [\n    \"运动\"\n  ],\n  \"gls_created_at\": \"1970-01-01T00:00:01.000Z\",\n  \"gls_created_source\": \"initial-value\",\n  \"gls_body_modified_at\": \"1970-01-01T00:00:02.000Z\",\n  \"gls_body_fingerprint\": \"11:19qghtt:1rdfqxq\",\n  \"gls_file_modified_at\": \"1970-01-01T00:00:02.000Z\",\n  \"gls_file_fingerprint\": \"60:75l9si:15cm3ym\"\n}\n---\n# 鞋垫方案\n运动缓震",
+      "path": "资料/鞋垫方案.md"
+    },
+    {
+      "content": "---\n{\n  \"所属项目\": \"卫康\",\n  \"tags\": [\n    \"图片\"\n  ],\n  \"gls_created_at\": \"1970-01-01T00:00:01.000Z\",\n  \"gls_created_source\": \"initial-value\",\n  \"gls_body_modified_at\": \"1970-01-01T00:00:02.000Z\",\n  \"gls_body_fingerprint\": \"13:10i4bda:1u1el3\",\n  \"gls_file_modified_at\": \"1970-01-01T00:00:02.000Z\",\n  \"gls_file_fingerprint\": \"45:8leeiz:1tlgj1h\"\n}\n---\n# 图片规范\n鞋垫主图规范",
+      "path": "资料/图片规范.md"
+    },
+    {
+      "content": "---\n{\n  \"所属项目\": \"研发\",\n  \"tags\": [\n    \"计划\"\n  ],\n  \"gls_created_at\": \"1970-01-01T00:00:01.000Z\",\n  \"gls_created_source\": \"initial-value\",\n  \"gls_body_modified_at\": \"1970-01-01T00:00:02.000Z\",\n  \"gls_body_fingerprint\": \"11:bskvw3:1wsqz0r\",\n  \"gls_file_modified_at\": \"1970-01-01T00:00:02.000Z\",\n  \"gls_file_fingerprint\": \"45:gyji9l:115b9ka\"\n}\n---\n# 排期\n本周开发计划",
+      "path": "项目/排期.md"
+    },
+    {
+      "content": "{\"nodes\":[],\"edges\":[]}",
+      "path": "画板.canvas"
+    },
+    {
+      "content": "image-fixture",
+      "path": "图片.png"
+    }
+  ],
+  "fixtureMetrics": {},
+  "focus": {
+    "cls": "local-search-search-text-input local-search-input",
+    "end": 6,
+    "start": 6,
+    "tag": "INPUT",
+    "value": "全新验收笔记"
+  },
+  "geometry": {
+    "#host": [
+      {
+        "background": "rgb(28, 35, 37)",
+        "color": "rgb(238, 238, 238)",
+        "display": "flex",
+        "fontSize": "14px",
+        "height": 828,
+        "width": 390,
+        "x": 0,
+        "y": 8
+      }
+    ],
+    ".local-search-confirm-dialog": [],
+    ".local-search-dialog-input": [],
+    ".local-search-header": [
+      {
+        "background": "rgb(28, 35, 37)",
+        "color": "rgb(238, 238, 238)",
+        "display": "block",
+        "fontSize": "14px",
+        "height": 90,
+        "width": 390,
+        "x": 0,
+        "y": 8
+      }
+    ],
+    ".local-search-input": [
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(238, 238, 238)",
+        "display": "block",
+        "fontSize": "16px",
+        "height": 38,
+        "width": 253,
+        "x": 24,
+        "y": 54
+      }
+    ],
+    ".local-search-item": [],
+    ".local-search-picker-actions": [],
+    ".local-search-picker-dropdown": [],
+    ".local-search-results-header": [
+      {
+        "background": "rgb(28, 35, 37)",
+        "color": "rgb(238, 238, 238)",
+        "display": "block",
+        "fontSize": "14px",
+        "height": 36,
+        "width": 390,
+        "x": 0,
+        "y": 132
+      }
+    ]
+  },
+  "notices": [],
+  "reviewedConditionFlowHeight": 0,
+  "state": {
+    "batch": false,
+    "create": null,
+    "createMode": false,
+    "createView": true,
+    "destroyed": false,
+    "dialog": null,
+    "direction": "desc",
+    "dropdown": false,
+    "filter": {
+      "dateRange": null,
+      "fileType": "note",
+      "fileTypes": [
+        "note"
+      ],
+      "folders": [],
+      "properties": [],
+      "propertyMatchMode": "all",
+      "tagMatchMode": "all",
+      "tags": []
+    },
+    "query": "全新验收笔记",
+    "results": [],
+    "selected": [],
+    "sort": "relevance"
+  }
+}

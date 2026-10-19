@@ -1,0 +1,14 @@
+{
+  "version": "7.6.5",
+  "minAppVersion": "1.11.4",
+  "scope": "pending OAuth completion, stage-specific diagnostics, current-token read-only field capability probe, failed-load no-write barrier",
+  "release_status": "focused fix; offline/mock-host tested; real Feishu tenant and Obsidian device acceptance pending",
+  "baseline": "7.6.4 / main.js SHA256 2b93961ecd55b966d87a89bf1aacd296a740639a9af58c419b73fbf38d66ef71",
+  "payload_sha256": {
+    "main.js": "527e6f2b1916f5d215c42b4a14d5e74b38be94d80fbf79215581abaabd280997",
+    "styles.css": "e65738f0d07a42eb694bdd775b624755eea34edbe647f7751a5e9b2fdd920437"
+  },
+  "name": "Feishu Tasks 7.6.5 Login and State Safety Fix",
+  "release_date": "2026-10-14",
+  "manifest_strategy": "preserve existing identity; version/minAppVersion update only"
+}

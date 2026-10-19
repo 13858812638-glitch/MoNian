@@ -1,0 +1,1776 @@
+[
+  {
+    "configuration": "mobile-dark",
+    "checks": [
+      {
+        "name": "nav rows present",
+        "ok": true,
+        "detail": {
+          "n": 15
+        }
+      },
+      {
+        "name": "available kinds",
+        "ok": true,
+        "detail": {
+          "types": [
+            "group",
+            "group",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "group",
+            "property-key",
+            "property-key",
+            "folder",
+            "folder",
+            "folder",
+            "property-value",
+            "property-value"
+          ]
+        }
+      },
+      {
+        "name": "menu open folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "folder has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has create-child-folder",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-result-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height folder",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "menu open tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "tag has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height tag",
+        "ok": true,
+        "detail": {
+          "h": 566
+        }
+      },
+      {
+        "name": "menu open property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "property-key has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-pin",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-result",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height property-key",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "safe mobile viewport height",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "menu open property-value",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "property-value has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-value has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-value has background",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-value has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections property-value",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height property-value",
+        "ok": true,
+        "detail": {
+          "h": 566
+        }
+      },
+      {
+        "name": "mobile navigation active",
+        "ok": true,
+        "detail": {
+          "layout": "mobile"
+        }
+      },
+      {
+        "name": "drag cancels pending longpress",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "native contextmenu cannot preempt configured timer",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "configurable hold opens panel",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "native followup contextmenu deduped",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "post-longpress click suppressed",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "longpress session cleaned",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "tag rename available",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "rename uses native session",
+        "ok": true,
+        "detail": {}
+      }
+    ],
+    "passed": 43,
+    "errors": []
+  },
+  {
+    "configuration": "mobile-light",
+    "checks": [
+      {
+        "name": "nav rows present",
+        "ok": true,
+        "detail": {
+          "n": 15
+        }
+      },
+      {
+        "name": "available kinds",
+        "ok": true,
+        "detail": {
+          "types": [
+            "group",
+            "group",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "group",
+            "property-key",
+            "property-key",
+            "folder",
+            "folder",
+            "folder",
+            "property-value",
+            "property-value"
+          ]
+        }
+      },
+      {
+        "name": "menu open folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "folder has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has create-child-folder",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-result-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height folder",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "menu open tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "tag has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height tag",
+        "ok": true,
+        "detail": {
+          "h": 566
+        }
+      },
+      {
+        "name": "menu open property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "property-key has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-pin",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-result",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height property-key",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "safe mobile viewport height",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "menu open property-value",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "property-value has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-value has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-value has background",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-value has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections property-value",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height property-value",
+        "ok": true,
+        "detail": {
+          "h": 566
+        }
+      },
+      {
+        "name": "mobile navigation active",
+        "ok": true,
+        "detail": {
+          "layout": "mobile"
+        }
+      },
+      {
+        "name": "drag cancels pending longpress",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "native contextmenu cannot preempt configured timer",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "configurable hold opens panel",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "native followup contextmenu deduped",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "post-longpress click suppressed",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "longpress session cleaned",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "tag rename available",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "rename uses native session",
+        "ok": true,
+        "detail": {}
+      }
+    ],
+    "passed": 43,
+    "errors": []
+  },
+  {
+    "configuration": "desktop-dark",
+    "checks": [
+      {
+        "name": "nav rows present",
+        "ok": true,
+        "detail": {
+          "n": 13
+        }
+      },
+      {
+        "name": "available kinds",
+        "ok": true,
+        "detail": {
+          "types": [
+            "group",
+            "folder",
+            "folder",
+            "folder",
+            "group",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "group",
+            "property-key",
+            "property-key"
+          ]
+        }
+      },
+      {
+        "name": "menu open folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "folder has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has create-child-folder",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-result-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height folder",
+        "ok": true,
+        "detail": {
+          "h": 546
+        }
+      },
+      {
+        "name": "menu open tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "tag has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height tag",
+        "ok": true,
+        "detail": {
+          "h": 476
+        }
+      },
+      {
+        "name": "menu open property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "property-key has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-pin",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-result",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height property-key",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "tag rename available",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "rename uses native session",
+        "ok": true,
+        "detail": {}
+      }
+    ],
+    "passed": 28,
+    "errors": []
+  },
+  {
+    "configuration": "desktop-light",
+    "checks": [
+      {
+        "name": "nav rows present",
+        "ok": true,
+        "detail": {
+          "n": 13
+        }
+      },
+      {
+        "name": "available kinds",
+        "ok": true,
+        "detail": {
+          "types": [
+            "group",
+            "folder",
+            "folder",
+            "folder",
+            "group",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "tag",
+            "group",
+            "property-key",
+            "property-key"
+          ]
+        }
+      },
+      {
+        "name": "menu open folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "folder has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has create-child-folder",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-result-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "folder has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "create-child-folder",
+            "item-result-exclude",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections folder",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height folder",
+        "ok": true,
+        "detail": {
+          "h": 546
+        }
+      },
+      {
+        "name": "menu open tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "tag has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has icon",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "tag has sort-navigation",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections tag",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height tag",
+        "ok": true,
+        "detail": {
+          "h": 476
+        }
+      },
+      {
+        "name": "menu open property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "property-key has item-rename",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-pin",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-exclude",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-result",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "property-key has item-delete",
+        "ok": true,
+        "detail": {
+          "ids": [
+            "item-rename",
+            "item-pin",
+            "item-exclude",
+            "item-result",
+            "item-delete",
+            "icon",
+            "color",
+            "background",
+            "appearance-reset",
+            "separator-before",
+            "separator-after",
+            "sort-navigation"
+          ]
+        }
+      },
+      {
+        "name": "sections property-key",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "compact height property-key",
+        "ok": true,
+        "detail": {
+          "h": 570
+        }
+      },
+      {
+        "name": "tag rename available",
+        "ok": true,
+        "detail": {}
+      },
+      {
+        "name": "rename uses native session",
+        "ok": true,
+        "detail": {}
+      }
+    ],
+    "passed": 28,
+    "errors": []
+  }
+]

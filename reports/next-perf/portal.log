@@ -1,0 +1,44 @@
+chromium-ios-sidebar-normal-startup-and-scope PASS
+chromium-ios-sidebar-folder-portal-and-geometry PASS
+chromium-ios-sidebar-folder-native-input PASS
+chromium-ios-sidebar-tags-portal-and-geometry PASS
+chromium-ios-sidebar-tags-native-input PASS
+chromium-ios-sidebar-property-portal-and-geometry PASS
+chromium-ios-sidebar-property-native-input PASS
+chromium-ios-sidebar-property-value-portal-and-geometry PASS
+chromium-ios-sidebar-property-value-native-input PASS
+Traceback (most recent call last):
+  File "/mnt/data/GLS-v5.2-关键词匹配按需计算-v1-20261018-候选/Source/scripts/picker_portal_chromium_retest.py", line 90, in <module>
+    state = p.evaluate('''async()=>{const panel=C.dropdown.panel;
+        S.openSearchRenameDialog(C,{initialValue:'保留',onSubmit:()=>{throw Error('must not submit');}});
+    ...<3 lines>...
+        const nested=C._confirmSession.host===panel;C._confirmSession.finish(false);
+        return {hit,nested,same:C.dropdown.panel===panel,display:getComputedStyle(C._popupHost).display};}''')
+  File "/opt/pyvenv/lib/python3.13/site-packages/playwright/sync_api/_generated.py", line 8562, in evaluate
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.evaluate(expression=expression, arg=mapping.to_impl(arg))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/pyvenv/lib/python3.13/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/playwright/_impl/_page.py", line 464, in evaluate
+    return await self._main_frame.evaluate(expression, arg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/playwright/_impl/_frame.py", line 320, in evaluate
+    await self._channel.send(
+    ...<6 lines>...
+    )
+  File "/opt/pyvenv/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/opt/pyvenv/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.evaluate: TypeError: Cannot read properties of null (reading 'querySelector')
+    at eval (eval at evaluate (:290:30), <anonymous>:4:36)
+    at async <anonymous>:316:30

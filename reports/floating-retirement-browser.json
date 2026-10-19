@@ -1,0 +1,262 @@
+[
+  {
+    "configuration": "desktop-light",
+    "checks": [
+      {
+        "name": "retired-command",
+        "passed": true
+      },
+      {
+        "name": "modal-startup",
+        "passed": true
+      },
+      {
+        "name": "no-modeless-shell",
+        "passed": true
+      },
+      {
+        "name": "modal-close-semantics",
+        "passed": true
+      },
+      {
+        "name": "toggle-close-reopen",
+        "passed": true
+      },
+      {
+        "name": "picker-stays-with-parent",
+        "passed": true
+      },
+      {
+        "name": "file-open-closes-modal",
+        "passed": true
+      },
+      {
+        "name": "clean-unload",
+        "passed": true
+      }
+    ],
+    "state": {
+      "commands": [
+        "open-local-search-tab",
+        "open-local-search",
+        "move-current-file",
+        "delete-current-file",
+        "batch-edit-properties",
+        "open-local-search-sidebar",
+        "toggle-local-search-density"
+      ],
+      "opened": true,
+      "modal": true,
+      "coreReady": true,
+      "modalContainer": true,
+      "modelessCount": 0,
+      "defaultCloseAfterOpen": true,
+      "toggleCloses": true,
+      "afterToggleClosed": true,
+      "reopen": true,
+      "afterReopenReady": true,
+      "pickerOpen": true,
+      "parentKeptOpen": true,
+      "fileOpened": true,
+      "closedAfterFileOpen": true,
+      "closeTrace": true,
+      "unloadedListeners": 0
+    },
+    "errors": []
+  },
+  {
+    "configuration": "desktop-dark",
+    "checks": [
+      {
+        "name": "retired-command",
+        "passed": true
+      },
+      {
+        "name": "modal-startup",
+        "passed": true
+      },
+      {
+        "name": "no-modeless-shell",
+        "passed": true
+      },
+      {
+        "name": "modal-close-semantics",
+        "passed": true
+      },
+      {
+        "name": "toggle-close-reopen",
+        "passed": true
+      },
+      {
+        "name": "picker-stays-with-parent",
+        "passed": true
+      },
+      {
+        "name": "file-open-closes-modal",
+        "passed": true
+      },
+      {
+        "name": "clean-unload",
+        "passed": true
+      }
+    ],
+    "state": {
+      "commands": [
+        "open-local-search-tab",
+        "open-local-search",
+        "move-current-file",
+        "delete-current-file",
+        "batch-edit-properties",
+        "open-local-search-sidebar",
+        "toggle-local-search-density"
+      ],
+      "opened": true,
+      "modal": true,
+      "coreReady": true,
+      "modalContainer": true,
+      "modelessCount": 0,
+      "defaultCloseAfterOpen": true,
+      "toggleCloses": true,
+      "afterToggleClosed": true,
+      "reopen": true,
+      "afterReopenReady": true,
+      "pickerOpen": true,
+      "parentKeptOpen": true,
+      "fileOpened": true,
+      "closedAfterFileOpen": true,
+      "closeTrace": true,
+      "unloadedListeners": 0
+    },
+    "errors": []
+  },
+  {
+    "configuration": "mobile-light",
+    "checks": [
+      {
+        "name": "retired-command",
+        "passed": true
+      },
+      {
+        "name": "modal-startup",
+        "passed": true
+      },
+      {
+        "name": "no-modeless-shell",
+        "passed": true
+      },
+      {
+        "name": "modal-close-semantics",
+        "passed": true
+      },
+      {
+        "name": "toggle-close-reopen",
+        "passed": true
+      },
+      {
+        "name": "picker-stays-with-parent",
+        "passed": true
+      },
+      {
+        "name": "file-open-closes-modal",
+        "passed": true
+      },
+      {
+        "name": "clean-unload",
+        "passed": true
+      }
+    ],
+    "state": {
+      "commands": [
+        "open-local-search-tab",
+        "open-local-search",
+        "move-current-file",
+        "delete-current-file",
+        "batch-edit-properties",
+        "open-local-search-sidebar",
+        "toggle-local-search-density"
+      ],
+      "opened": true,
+      "modal": true,
+      "coreReady": true,
+      "modalContainer": true,
+      "modelessCount": 0,
+      "defaultCloseAfterOpen": true,
+      "toggleCloses": true,
+      "afterToggleClosed": true,
+      "reopen": true,
+      "afterReopenReady": true,
+      "pickerOpen": true,
+      "parentKeptOpen": true,
+      "fileOpened": true,
+      "closedAfterFileOpen": true,
+      "closeTrace": true,
+      "unloadedListeners": 0
+    },
+    "errors": []
+  },
+  {
+    "configuration": "mobile-dark",
+    "checks": [
+      {
+        "name": "retired-command",
+        "passed": true
+      },
+      {
+        "name": "modal-startup",
+        "passed": true
+      },
+      {
+        "name": "no-modeless-shell",
+        "passed": true
+      },
+      {
+        "name": "modal-close-semantics",
+        "passed": true
+      },
+      {
+        "name": "toggle-close-reopen",
+        "passed": true
+      },
+      {
+        "name": "picker-stays-with-parent",
+        "passed": true
+      },
+      {
+        "name": "file-open-closes-modal",
+        "passed": true
+      },
+      {
+        "name": "clean-unload",
+        "passed": true
+      }
+    ],
+    "state": {
+      "commands": [
+        "open-local-search-tab",
+        "open-local-search",
+        "move-current-file",
+        "delete-current-file",
+        "batch-edit-properties",
+        "open-local-search-sidebar",
+        "toggle-local-search-density"
+      ],
+      "opened": true,
+      "modal": true,
+      "coreReady": true,
+      "modalContainer": true,
+      "modelessCount": 0,
+      "defaultCloseAfterOpen": true,
+      "toggleCloses": true,
+      "afterToggleClosed": true,
+      "reopen": true,
+      "afterReopenReady": true,
+      "pickerOpen": true,
+      "parentKeptOpen": true,
+      "fileOpened": true,
+      "closedAfterFileOpen": true,
+      "closeTrace": true,
+      "unloadedListeners": 0
+    },
+    "errors": []
+  }
+]

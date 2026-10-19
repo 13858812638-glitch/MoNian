@@ -1,0 +1,842 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: independent modeless host, command and CSS are physically retired
+ok 1 - independent modeless host, command and CSS are physically retired
+  ---
+  duration_ms: 2.783661
+  type: 'test'
+  ...
+# Subtest: production host registers 7 commands, two workspace views and retains external search API
+ok 2 - production host registers 7 commands, two workspace views and retains external search API
+  ---
+  duration_ms: 2970.986629
+  type: 'test'
+  ...
+# Subtest: even a legacy floating option cannot create a modeless host
+ok 3 - even a legacy floating option cannot create a modeless host
+  ---
+  duration_ms: 1871.783523
+  type: 'test'
+  ...
+# Subtest: mobile sidebar heading/content gap is a standalone Style Settings token defaulted to 6px
+ok 4 - mobile sidebar heading/content gap is a standalone Style Settings token defaulted to 6px
+  ---
+  duration_ms: 0.854405
+  type: 'test'
+  ...
+# Subtest: gap belongs only to the expanded mobile section content, never list rows or Picker
+ok 5 - gap belongs only to the expanded mobile section content, never list rows or Picker
+  ---
+  duration_ms: 0.442831
+  type: 'test'
+  ...
+# Subtest: mobile navigator headings use sidebar row height rather than 44px mobile Picker height
+ok 6 - mobile navigator headings use sidebar row height rather than 44px mobile Picker height
+  ---
+  duration_ms: 1.18451
+  type: 'test'
+  ...
+# Subtest: v5 heading/content gap still defaults to independently controlled 6px
+ok 7 - v5 heading/content gap still defaults to independently controlled 6px
+  ---
+  duration_ms: 0.396663
+  type: 'test'
+  ...
+# Subtest: navigation catalog ignores search and precision refinements, folder is its only scope
+ok 8 - navigation catalog ignores search and precision refinements, folder is its only scope
+  ---
+  duration_ms: 2.339147
+  type: 'test'
+  ...
+# Subtest: switching folder replaces browse scope, drops temporary refinements and query
+ok 9 - switching folder replaces browse scope, drops temporary refinements and query
+  ---
+  duration_ms: 0.697364
+  type: 'test'
+  ...
+# Subtest: single selection replaces or clears its own facet while other property keys remain
+ok 10 - single selection replaces or clears its own facet while other property keys remain
+  ---
+  duration_ms: 0.499333
+  type: 'test'
+  ...
+# Subtest: explicit tag multi-select is OR, while property keys remain AND
+ok 11 - explicit tag multi-select is OR, while property keys remain AND
+  ---
+  duration_ms: 0.722682
+  type: 'test'
+  ...
+# Subtest: folder multi-selection also resets temporary tags/properties/time without changing folder OR
+ok 12 - folder multi-selection also resets temporary tags/properties/time without changing folder OR
+  ---
+  duration_ms: 0.327351
+  type: 'test'
+  ...
+# Subtest: metadata folder is visible in navigator, protected from ordinary picker, and globally blocked folder stays hidden
+ok 13 - metadata folder is visible in navigator, protected from ordinary picker, and globally blocked folder stays hidden
+  ---
+  duration_ms: 1.991456
+  type: 'test'
+  ...
+# Subtest: folder direct and recursive physical counts ignore user global exclusion, never result-only hiding
+ok 14 - folder direct and recursive physical counts ignore user global exclusion, never result-only hiding
+  ---
+  duration_ms: 0.481908
+  type: 'test'
+  ...
+# Subtest: folder icon reflects the real expansion state, not every row as open
+ok 15 - folder icon reflects the real expansion state, not every row as open
+  ---
+  duration_ms: 0.166975
+  type: 'test'
+  ...
+# Subtest: navigation folder scope ignores result-only exclusions while search results still respect them
+ok 16 - navigation folder scope ignores result-only exclusions while search results still respect them
+  ---
+  duration_ms: 0.779014
+  type: 'test'
+  ...
+# Subtest: GLS navigator does not reserve project or owner groups
+ok 17 - GLS navigator does not reserve project or owner groups
+  ---
+  duration_ms: 57.635523
+  type: 'test'
+  ...
+# Subtest: generic GLS index lists ordinary properties and updates any attribute
+ok 18 - generic GLS index lists ordinary properties and updates any attribute
+  ---
+  duration_ms: 62.784732
+  type: 'test'
+  ...
+# Subtest: empty group is stored solely as an ordinary property catalog value, and value maintenance notifies subscribers
+ok 19 - empty group is stored solely as an ordinary property catalog value, and value maintenance notifies subscribers
+  ---
+  duration_ms: 27.896944
+  type: 'test'
+  ...
+# Subtest: facet modes: entering multiselect clears maintenance then sort, only once
+ok 20 - facet modes: entering multiselect clears maintenance then sort, only once
+  ---
+  duration_ms: 1.046237
+  type: 'test'
+  ...
+# Subtest: facet modes: entering maintenance clears selection then sort
+ok 21 - facet modes: entering maintenance clears selection then sort
+  ---
+  duration_ms: 0.136391
+  type: 'test'
+  ...
+# Subtest: facet modes: tag/property sort preserves selection before maintenance
+ok 22 - facet modes: tag/property sort preserves selection before maintenance
+  ---
+  duration_ms: 0.153135
+  type: 'test'
+  ...
+# Subtest: facet modes: folder sort preserves maintenance before selection
+ok 23 - facet modes: folder sort preserves maintenance before selection
+  ---
+  duration_ms: 0.194796
+  type: 'test'
+  ...
+# Subtest: all three facet pickers use one mode coordination contract, keeping specialized sort commits
+ok 24 - all three facet pickers use one mode coordination contract, keeping specialized sort commits
+  ---
+  duration_ms: 0.827366
+  type: 'test'
+  ...
+# Subtest: property catalog source name describes ordinary properties; old path is gone
+ok 25 - property catalog source name describes ordinary properties; old path is gone
+  ---
+  duration_ms: 0.291969
+  type: 'test'
+  ...
+# Subtest: GLS navigation has no privileged project-owner grouping and filters old group preferences
+ok 26 - GLS navigation has no privileged project-owner grouping and filters old group preferences
+  ---
+  duration_ms: 42.155948
+  type: 'test'
+  ...
+# Subtest: raw 项目负责人 YAML is a normal editable property; unrelated virtual properties remain supported
+ok 27 - raw 项目负责人 YAML is a normal editable property; unrelated virtual properties remain supported
+  ---
+  duration_ms: 51.282189
+  type: 'test'
+  ...
+# Subtest: previously grey 项目负责人 key now has the ordinary rename/delete maintenance actions
+ok 28 - previously grey 项目负责人 key now has the ordinary rename/delete maintenance actions
+  ---
+  duration_ms: 19.589607
+  type: 'test'
+  ...
+# Subtest: property real counts do not absorb the previously selected project
+ok 29 - property real counts do not absorb the previously selected project
+  ---
+  duration_ms: 51.832198
+  type: 'test'
+  ...
+# Subtest: one YAML file with two values counts once per value, once under OR
+ok 30 - one YAML file with two values counts once per value, once under OR
+  ---
+  duration_ms: 10.47976
+  type: 'test'
+  ...
+# Subtest: missing vs empty YAML property are separate counted states
+ok 31 - missing vs empty YAML property are separate counted states
+  ---
+  duration_ms: 9.465759
+  type: 'test'
+  ...
+# Subtest: catalog-only value count remains zero under a different selected project
+ok 32 - catalog-only value count remains zero under a different selected project
+  ---
+  duration_ms: 20.762561
+  type: 'test'
+  ...
+# Subtest: prototype contract: SparseHeightIndex
+ok 33 - prototype contract: SparseHeightIndex
+  ---
+  duration_ms: 2.469509
+  type: 'test'
+  ...
+# Subtest: prototype contract: IoPool
+ok 34 - prototype contract: IoPool
+  ---
+  duration_ms: 0.166895
+  type: 'test'
+  ...
+# Subtest: prototype contract: BodyIndex
+ok 35 - prototype contract: BodyIndex
+  ---
+  duration_ms: 0.195868
+  type: 'test'
+  ...
+# Subtest: prototype contract: QueryState
+ok 36 - prototype contract: QueryState
+  ---
+  duration_ms: 0.111074
+  type: 'test'
+  ...
+# Subtest: prototype contract: FilterState
+ok 37 - prototype contract: FilterState
+  ---
+  duration_ms: 0.259211
+  type: 'test'
+  ...
+# Subtest: prototype contract: PointerSortCoordinator
+ok 38 - prototype contract: PointerSortCoordinator
+  ---
+  duration_ms: 0.118895
+  type: 'test'
+  ...
+# Subtest: prototype contract: FilterEngine
+ok 39 - prototype contract: FilterEngine
+  ---
+  duration_ms: 0.155659
+  type: 'test'
+  ...
+# Subtest: prototype contract: ResultRanker
+ok 40 - prototype contract: ResultRanker
+  ---
+  duration_ms: 0.249447
+  type: 'test'
+  ...
+# Subtest: prototype contract: BatchMetadataService
+ok 41 - prototype contract: BatchMetadataService
+  ---
+  duration_ms: 1.093487
+  type: 'test'
+  ...
+# Subtest: prototype contract: SharedSwipeBackPrimitive
+ok 42 - prototype contract: SharedSwipeBackPrimitive
+  ---
+  duration_ms: 0.214445
+  type: 'test'
+  ...
+# Subtest: prototype contract: LocalSearchSwipeBackPrimitive
+ok 43 - prototype contract: LocalSearchSwipeBackPrimitive
+  ---
+  duration_ms: 0.079347
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchDropdownController
+ok 44 - prototype contract: SearchDropdownController
+  ---
+  duration_ms: 0.118815
+  type: 'test'
+  ...
+# Subtest: prototype contract: BatchMetadataController
+ok 45 - prototype contract: BatchMetadataController
+  ---
+  duration_ms: 0.089902
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchFacetController
+ok 46 - prototype contract: SearchFacetController
+  ---
+  duration_ms: 0.29225
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchSortController
+ok 47 - prototype contract: SearchSortController
+  ---
+  duration_ms: 0.137442
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchResultControlsController
+ok 48 - prototype contract: SearchResultControlsController
+  ---
+  duration_ms: 0.132705
+  type: 'test'
+  ...
+# Subtest: prototype contract: SwipeActionCoordinator
+ok 49 - prototype contract: SwipeActionCoordinator
+  ---
+  duration_ms: 0.068741
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchResultRendererController
+ok 50 - prototype contract: SearchResultRendererController
+  ---
+  duration_ms: 0.192984
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchCreateController
+ok 51 - prototype contract: SearchCreateController
+  ---
+  duration_ms: 0.153736
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchSelectionController
+ok 52 - prototype contract: SearchSelectionController
+  ---
+  duration_ms: 0.188647
+  type: 'test'
+  ...
+# Subtest: prototype contract: SharedSearchStateCoordinator
+ok 53 - prototype contract: SharedSearchStateCoordinator
+  ---
+  duration_ms: 0.120246
+  type: 'test'
+  ...
+# Subtest: prototype contract: NavigatorCustomization
+ok 54 - prototype contract: NavigatorCustomization
+  ---
+  duration_ms: 0.113597
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchNavigatorController
+ok 55 - prototype contract: SearchNavigatorController
+  ---
+  duration_ms: 0.144282
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchCore
+ok 56 - prototype contract: SearchCore
+  ---
+  duration_ms: 0.211081
+  type: 'test'
+  ...
+# Subtest: prototype contract: MobileFrameController
+ok 57 - prototype contract: MobileFrameController
+  ---
+  duration_ms: 0.067849
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchWorkspaceCapabilities
+ok 58 - prototype contract: SearchWorkspaceCapabilities
+  ---
+  duration_ms: 0.121648
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchView
+ok 59 - prototype contract: SearchView
+  ---
+  duration_ms: 0.083563
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchWindowSession
+ok 60 - prototype contract: SearchWindowSession
+  ---
+  duration_ms: 0.087559
+  type: 'test'
+  ...
+# Subtest: prototype contract: SearchModalHost
+ok 61 - prototype contract: SearchModalHost
+  ---
+  duration_ms: 0.085115
+  type: 'test'
+  ...
+# Subtest: prototype contract: LocalSearchOverlayHost
+ok 62 - prototype contract: LocalSearchOverlayHost
+  ---
+  duration_ms: 0.10875
+  type: 'test'
+  ...
+# Subtest: prototype contract: LocalSearchSettingTab
+ok 63 - prototype contract: LocalSearchSettingTab
+  ---
+  duration_ms: 0.088871
+  type: 'test'
+  ...
+# Subtest: prototype contract: FileOperationService
+ok 64 - prototype contract: FileOperationService
+  ---
+  duration_ms: 0.070133
+  type: 'test'
+  ...
+# Subtest: prototype contract: OperationOverlayController
+ok 65 - prototype contract: OperationOverlayController
+  ---
+  duration_ms: 0.0539
+  type: 'test'
+  ...
+# Subtest: prototype contract: LocalSearchPlugin
+ok 66 - prototype contract: LocalSearchPlugin
+  ---
+  duration_ms: 0.666199
+  type: 'test'
+  ...
+# Subtest: prototype contract: SortFeedback
+ok 67 - prototype contract: SortFeedback
+  ---
+  duration_ms: 0.104524
+  type: 'test'
+  ...
+# Subtest: all original top-level symbol types and constants are retained
+ok 68 - all original top-level symbol types and constants are retained
+  ---
+  duration_ms: 16.703986
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeSortFieldOrder
+ok 69 - A/B normalization: normalizeSortFieldOrder
+  ---
+  duration_ms: 0.627852
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeHiddenSortFields
+ok 70 - A/B normalization: normalizeHiddenSortFields
+  ---
+  duration_ms: 0.935796
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeSortDirection
+ok 71 - A/B normalization: normalizeSortDirection
+  ---
+  duration_ms: 0.164061
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeModalSearchQuery
+ok 72 - A/B normalization: normalizeModalSearchQuery
+  ---
+  duration_ms: 0.138053
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeModalViewportAnchor
+ok 73 - A/B normalization: normalizeModalViewportAnchor
+  ---
+  duration_ms: 0.384424
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeGLSMetadataDirectory
+ok 74 - A/B normalization: normalizeGLSMetadataDirectory
+  ---
+  duration_ms: 0.402913
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeMetadataPropertyType
+ok 75 - A/B normalization: normalizeMetadataPropertyType
+  ---
+  duration_ms: 0.176409
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizePropertyValueCatalog
+ok 76 - A/B normalization: normalizePropertyValueCatalog
+  ---
+  duration_ms: 0.549658
+  type: 'test'
+  ...
+# Subtest: A/B normalization: validateEditablePropertyKey
+ok 77 - A/B normalization: validateEditablePropertyKey
+  ---
+  duration_ms: 0.277387
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeEditableTagValue
+ok 78 - A/B normalization: normalizeEditableTagValue
+  ---
+  duration_ms: 0.332008
+  type: 'test'
+  ...
+# Subtest: A/B normalization: editableTagError
+ok 79 - A/B normalization: editableTagError
+  ---
+  duration_ms: 0.21779
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeUniqueStringList
+ok 80 - A/B normalization: normalizeUniqueStringList
+  ---
+  duration_ms: 0.118184
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeStringListMap
+ok 81 - A/B normalization: normalizeStringListMap
+  ---
+  duration_ms: 0.359939
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeTagValue
+ok 82 - A/B normalization: normalizeTagValue
+  ---
+  duration_ms: 0.140437
+  type: 'test'
+  ...
+# Subtest: A/B normalization: tagIdentityKey
+ok 83 - A/B normalization: tagIdentityKey
+  ---
+  duration_ms: 0.151432
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeUniqueTagList
+ok 84 - A/B normalization: normalizeUniqueTagList
+  ---
+  duration_ms: 0.231109
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFilterTagSelection
+ok 85 - A/B normalization: normalizeFilterTagSelection
+  ---
+  duration_ms: 0.425706
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeVaultFolderPath
+ok 86 - A/B normalization: normalizeVaultFolderPath
+  ---
+  duration_ms: 0.321453
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeHexColor
+ok 87 - A/B normalization: normalizeHexColor
+  ---
+  duration_ms: 0.257479
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeResultFolderColors
+ok 88 - A/B normalization: normalizeResultFolderColors
+  ---
+  duration_ms: 0.426296
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeExcludedFolders
+ok 89 - A/B normalization: normalizeExcludedFolders
+  ---
+  duration_ms: 0.532292
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeResultContentOrder
+ok 90 - A/B normalization: normalizeResultContentOrder
+  ---
+  duration_ms: 0.180395
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeRecentIconIds
+ok 91 - A/B normalization: normalizeRecentIconIds
+  ---
+  duration_ms: 0.26521
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFilterPoolSelectionMode
+ok 92 - A/B normalization: normalizeFilterPoolSelectionMode
+  ---
+  duration_ms: 0.106867
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizePropertyPoolEntry
+ok 93 - A/B normalization: normalizePropertyPoolEntry
+  ---
+  duration_ms: 0.19737
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizePropertyPoolEntries
+ok 94 - A/B normalization: normalizePropertyPoolEntries
+  ---
+  duration_ms: 0.31351
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFilterPoolConfig
+ok 95 - A/B normalization: normalizeFilterPoolConfig
+  ---
+  duration_ms: 0.290217
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFilterPools
+ok 96 - A/B normalization: normalizeFilterPools
+  ---
+  duration_ms: 0.988844
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeResultViewId
+ok 97 - A/B normalization: normalizeResultViewId
+  ---
+  duration_ms: 0.274133
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeResultViews
+ok 98 - A/B normalization: normalizeResultViews
+  ---
+  duration_ms: 1.325498
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeNavigatorToolbars
+ok 99 - A/B normalization: normalizeNavigatorToolbars
+  ---
+  duration_ms: 2.785163
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeNavigatorVisibleSections
+ok 100 - A/B normalization: normalizeNavigatorVisibleSections
+  ---
+  duration_ms: 1.973089
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeNavigatorTimeField
+ok 101 - A/B normalization: normalizeNavigatorTimeField
+  ---
+  duration_ms: 0.214836
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFileTypeFilterValue
+ok 102 - A/B normalization: normalizeFileTypeFilterValue
+  ---
+  duration_ms: 0.375492
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFileTypeFilterSelection
+ok 103 - A/B normalization: normalizeFileTypeFilterSelection
+  ---
+  duration_ms: 0.421008
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFilterMatchMode
+ok 104 - A/B normalization: normalizeFilterMatchMode
+  ---
+  duration_ms: 0.162399
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFilterDate
+ok 105 - A/B normalization: normalizeFilterDate
+  ---
+  duration_ms: 0.346549
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeFilterDateRange
+ok 106 - A/B normalization: normalizeFilterDateRange
+  ---
+  duration_ms: 0.208627
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeExcludedAttachmentTypes
+ok 107 - A/B normalization: normalizeExcludedAttachmentTypes
+  ---
+  duration_ms: 0.34054
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizePropertySelection
+ok 108 - A/B normalization: normalizePropertySelection
+  ---
+  duration_ms: 0.690905
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeCreateType
+ok 109 - A/B normalization: normalizeCreateType
+  ---
+  duration_ms: 0.302525
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeCreatePropertyTypes
+ok 110 - A/B normalization: normalizeCreatePropertyTypes
+  ---
+  duration_ms: 0.351557
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeCreateMetadataMemory
+ok 111 - A/B normalization: normalizeCreateMetadataMemory
+  ---
+  duration_ms: 4.340378
+  type: 'test'
+  ...
+# Subtest: A/B normalization: normalizeNavigatorCustomization
+ok 112 - A/B normalization: normalizeNavigatorCustomization
+  ---
+  duration_ms: 0.874685
+  type: 'test'
+  ...
+# Subtest: normalization has meaningful expected results, not only equality
+ok 113 - normalization has meaningful expected results, not only equality
+  ---
+  duration_ms: 0.432265
+  type: 'test'
+  ...
+# Subtest: Markdown cleaning, snippets, ranges, drawing parsers A/B
+ok 114 - Markdown cleaning, snippets, ranges, drawing parsers A/B
+  ---
+  duration_ms: 22.050604
+  type: 'test'
+  ...
+# Subtest: SparseHeightIndex matches an independent prefix-sum reference
+ok 115 - SparseHeightIndex matches an independent prefix-sum reference
+  ---
+  duration_ms: 43.578118
+  type: 'test'
+  ...
+# Subtest: query and filter clone/serialization contracts
+ok 116 - query and filter clone/serialization contracts
+  ---
+  duration_ms: 8.502825
+  type: 'test'
+  ...
+# Subtest: BodyIndex storage, rename and non-Markdown exclusion
+ok 117 - BodyIndex storage, rename and non-Markdown exclusion
+  ---
+  duration_ms: 0.68772
+  type: 'test'
+  ...
+# Subtest: IoPool concurrency, rejection and queued-task recovery
+ok 118 - IoPool concurrency, rejection and queued-task recovery
+  ---
+  duration_ms: 71.342508
+  type: 'test'
+  ...
+# Subtest: production initialization retires one modeless command; preserves 2 views, generic API and clean unload
+ok 119 - production initialization retires one modeless command; preserves 2 views, generic API and clean unload
+  ---
+  duration_ms: 124.274058
+  type: 'test'
+  ...
+# Subtest: settings legacy input and queued writes preserve exact persisted snapshots
+ok 120 - settings legacy input and queued writes preserve exact persisted snapshots
+  ---
+  duration_ms: 73.278147
+  type: 'test'
+  ...
+# Subtest: settings write failure is reported and the next queued write recovers
+ok 121 - settings write failure is reported and the next queued write recovers
+  ---
+  duration_ms: 48.257179
+  type: 'test'
+  ...
+# Subtest: ordinary indexed file public API, recent-opened subscription and property writes
+ok 122 - ordinary indexed file public API, recent-opened subscription and property writes
+  ---
+  duration_ms: 44.705721
+  type: 'test'
+  ...
+# Subtest: full-content LRU cache hit, non-retained read and missing-file identity
+ok 123 - full-content LRU cache hit, non-retained read and missing-file identity
+  ---
+  duration_ms: 39.632045
+  type: 'test'
+  ...
+# Subtest: file-operation leases reject overlap and release after a failure
+ok 124 - file-operation leases reject overlap and release after a failure
+  ---
+  duration_ms: 36.505592
+  type: 'test'
+  ...
+# Subtest: build reproducibility and explicitly reviewed CSS source
+ok 125 - build reproducibility and explicitly reviewed CSS source
+  ---
+  duration_ms: 1756.122707
+  type: 'test'
+  ...
+# Subtest: virtual provider replacement, stale handles and raw metadata ownership
+ok 126 - virtual provider replacement, stale handles and raw metadata ownership
+  ---
+  duration_ms: 27.475914
+  type: 'test'
+  ...
+# Subtest: external API rejects malformed request shapes without creating a session
+ok 127 - external API rejects malformed request shapes without creating a session
+  ---
+  duration_ms: 53.133164
+  type: 'test'
+  ...
+# Subtest: Canvas property writes use existing metadata sidecar instead of rewriting Canvas content
+ok 128 - Canvas property writes use existing metadata sidecar instead of rewriting Canvas content
+  ---
+  duration_ms: 35.317185
+  type: 'test'
+  ...
+# Subtest: GLS has no Dida project-catalog coupling and ignores task-only projects
+ok 129 - GLS has no Dida project-catalog coupling and ignores task-only projects
+  ---
+  duration_ms: 18.892641
+  type: 'test'
+  ...
+# Subtest: generic file/property catalog API exposes operations without project-specific special contracts
+ok 130 - generic file/property catalog API exposes operations without project-specific special contracts
+  ---
+  duration_ms: 17.179804
+  type: 'test'
+  ...
+# Subtest: frozen sidebar CSS snapshot defaults are 6px and 2px
+ok 131 - frozen sidebar CSS snapshot defaults are 6px and 2px
+  ---
+  duration_ms: 1.006549
+  type: 'test'
+  ...
+# Subtest: v5.2 formal baseline method order, descriptor, name and arity remain unchanged
+ok 132 - v5.2 formal baseline method order, descriptor, name and arity remain unchanged
+  ---
+  duration_ms: 16.525734
+  type: 'test'
+  ...
+# Subtest: v5.2 shared UI refs, Collator, tag semantics and modal helper exports unchanged
+ok 133 - v5.2 shared UI refs, Collator, tag semantics and modal helper exports unchanged
+  ---
+  duration_ms: 0.729622
+  type: 'test'
+  ...
+# Subtest: all six retired module paths absent; controller ownership remains single
+ok 134 - all six retired module paths absent; controller ownership remains single
+  ---
+  duration_ms: 0.335943
+  type: 'test'
+  ...
+# Subtest: top folder section uses the actual vault name, not the static category name
+ok 135 - top folder section uses the actual vault name, not the static category name
+  ---
+  duration_ms: 1.208797
+  type: 'test'
+  ...
+# Subtest: root icon follows the same vault/open-vault convention as Notebook Navigator
+ok 136 - root icon follows the same vault/open-vault convention as Notebook Navigator
+  ---
+  duration_ms: 0.25222
+  type: 'test'
+  ...
+# Subtest: non-root groups and stable internal IDs stay unchanged
+ok 137 - non-root groups and stable internal IDs stay unchanged
+  ---
+  duration_ms: 0.239802
+  type: 'test'
+  ...
+# Subtest: blank vault names fall back to the original folder caption
+ok 138 - blank vault names fall back to the original folder caption
+  ---
+  duration_ms: 0.286711
+  type: 'test'
+  ...
+1..138
+# tests 138
+# suites 0
+# pass 138
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13872.700342

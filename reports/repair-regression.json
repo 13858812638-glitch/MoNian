@@ -1,0 +1,108 @@
+[
+  {
+    "failure": {
+      "error": "injected-card-build-failure",
+      "count": 6,
+      "sameMarkup": true,
+      "sameRange": true,
+      "sameScroll": true,
+      "sameHeightIndex": true,
+      "isRendering": false
+    },
+    "recover": {
+      "count": 6
+    },
+    "postCommit": {
+      "error": "injected-mounted-state-failure",
+      "count": 6,
+      "sameMarkup": true,
+      "sameScroll": true
+    },
+    "scrollFailure": {
+      "shiftResult": false,
+      "additions": 2,
+      "sameMarkup": true,
+      "sameRange": true
+    },
+    "preview": {
+      "mounted": true,
+      "metadata": 5,
+      "rows": 0
+    },
+    "locked": {
+      "beforeFocus": true,
+      "disabled": true,
+      "afterFocus": true,
+      "value": "待创建"
+    },
+    "clear": {
+      "value": "",
+      "focus": false,
+      "syncs": 1
+    },
+    "catalog": {
+      "recomputes": 0,
+      "events": 3,
+      "afterAddEvents": 1,
+      "renamed": true,
+      "renamedPresent": true,
+      "deleted": true,
+      "removed": true,
+      "filesUnchanged": true
+    },
+    "mode": "desktop"
+  },
+  {
+    "failure": {
+      "error": "injected-card-build-failure",
+      "count": 6,
+      "sameMarkup": true,
+      "sameRange": true,
+      "sameScroll": true,
+      "sameHeightIndex": true,
+      "isRendering": false
+    },
+    "recover": {
+      "count": 6
+    },
+    "postCommit": {
+      "error": "injected-mounted-state-failure",
+      "count": 6,
+      "sameMarkup": true,
+      "sameScroll": true
+    },
+    "scrollFailure": {
+      "shiftResult": false,
+      "additions": 2,
+      "sameMarkup": true,
+      "sameRange": true
+    },
+    "preview": {
+      "mounted": true,
+      "metadata": 5,
+      "rows": 0
+    },
+    "locked": {
+      "beforeFocus": true,
+      "disabled": true,
+      "afterFocus": true,
+      "value": "待创建"
+    },
+    "clear": {
+      "value": "",
+      "focus": false,
+      "syncs": 1
+    },
+    "catalog": {
+      "recomputes": 0,
+      "events": 3,
+      "afterAddEvents": 1,
+      "renamed": true,
+      "renamedPresent": true,
+      "deleted": true,
+      "removed": true,
+      "filesUnchanged": true
+    },
+    "mode": "mobile"
+  }
+]

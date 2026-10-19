@@ -1,0 +1,201 @@
+[
+  {
+    "scenario": "folder",
+    "checks": [
+      {
+        "name": "folder rename opens original confirmation",
+        "ok": true,
+        "value": true
+      },
+      {
+        "name": "rename input exists",
+        "ok": true,
+        "value": null
+      },
+      {
+        "name": "source folder removed only after children moved",
+        "ok": true,
+        "value": null
+      },
+      {
+        "name": "existing target content preserved",
+        "ok": true,
+        "value": {
+          "existing": "---\n{\n  \"gls_created_at\": \"2026-10-18T21:44:25.408Z\",\n  \"gls_created_source\": \"local-create\",\n  \"gls_body_modified_at\": \"2026-10-18T21:44:25.408Z\",\n  \"gls_body_fingerprint\": \"10:1iodgpu:1s3appe\",\n  \"gls_file_modified_at\": \"2026-10-18T21:44:25.408Z\",\n  \"gls_file_fingerprint\": \"21:bkd96u:1bvnuhr\"\n}\n---\n# 目标中的同名文件",
+          "paths": [
+            "",
+            "资料",
+            "资料/鞋垫方案.md",
+            "资料/图片规范.md",
+            "画板.canvas",
+            "图片.png",
+            "资料/周报.md",
+            "资料/周报-文件重名.md",
+            "资料/排期.md"
+          ],
+          "events": [
+            {
+              "type": "rename",
+              "data": {
+                "from": "项目/周报.md",
+                "to": "资料/周报-文件重名.md"
+              }
+            },
+            {
+              "type": "rename",
+              "data": {
+                "from": "项目/排期.md",
+                "to": "资料/排期.md"
+              }
+            },
+            {
+              "type": "delete",
+              "data": "项目"
+            }
+          ]
+        }
+      },
+      {
+        "name": "name collision kept via unique file name",
+        "ok": true,
+        "value": null
+      },
+      {
+        "name": "nonconflicting child moved",
+        "ok": true,
+        "value": null
+      },
+      {
+        "name": "no source file lost or left behind",
+        "ok": true,
+        "value": null
+      },
+      {
+        "name": "no collision failure",
+        "ok": true,
+        "value": null
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "scenario": "property",
+    "checks": [
+      {
+        "name": "two original properties present",
+        "ok": true,
+        "value": {
+          "所属项目": "卫康",
+          "项目负责人": [
+            "张"
+          ],
+          "tags": [
+            "运动"
+          ],
+          "gls_created_at": "1970-01-01T00:00:01.000Z",
+          "gls_created_source": "initial-value",
+          "gls_body_modified_at": "1970-01-01T00:00:02.000Z",
+          "gls_body_fingerprint": "11:19qghtt:1rdfqxq",
+          "gls_file_modified_at": "1970-01-01T00:00:02.000Z",
+          "gls_file_fingerprint": "60:75l9si:15cm3ym"
+        }
+      },
+      {
+        "name": "old key removed after merge",
+        "ok": true,
+        "value": {
+          "所属项目": [
+            "卫康",
+            "张"
+          ],
+          "tags": [
+            "运动"
+          ],
+          "gls_created_at": "1970-01-01T00:00:01.000Z",
+          "gls_created_source": "initial-value",
+          "gls_body_modified_at": "1970-01-01T00:00:02.000Z",
+          "gls_body_fingerprint": "11:19qghtt:1rdfqxq",
+          "gls_file_modified_at": "2026-10-18T21:44:26.664Z",
+          "gls_file_fingerprint": "52:4hkqei:13yr6pe"
+        }
+      },
+      {
+        "name": "both existing and incoming values preserved",
+        "ok": true,
+        "value": {
+          "所属项目": [
+            "卫康",
+            "张"
+          ],
+          "tags": [
+            "运动"
+          ],
+          "gls_created_at": "1970-01-01T00:00:01.000Z",
+          "gls_created_source": "initial-value",
+          "gls_body_modified_at": "1970-01-01T00:00:02.000Z",
+          "gls_body_fingerprint": "11:19qghtt:1rdfqxq",
+          "gls_file_modified_at": "2026-10-18T21:44:26.664Z",
+          "gls_file_fingerprint": "52:4hkqei:13yr6pe"
+        }
+      },
+      {
+        "name": "no collision failure",
+        "ok": true,
+        "value": null
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "scenario": "value",
+    "checks": [
+      {
+        "name": "same-name property values deduplicate without loss",
+        "ok": true,
+        "value": [
+          "李"
+        ]
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "scenario": "tag",
+    "checks": [
+      {
+        "name": "source and destination tags present",
+        "ok": true,
+        "value": [
+          "运动",
+          "图片",
+          "运动/子标签"
+        ]
+      },
+      {
+        "name": "target hierarchy absorbs source and child",
+        "ok": true,
+        "value": [
+          "图片",
+          "图片/子标签"
+        ]
+      },
+      {
+        "name": "source labels removed",
+        "ok": true,
+        "value": [
+          "图片",
+          "图片/子标签"
+        ]
+      },
+      {
+        "name": "shared target label deduplicated",
+        "ok": true,
+        "value": [
+          "图片",
+          "图片/子标签"
+        ]
+      }
+    ],
+    "pageErrors": []
+  }
+]

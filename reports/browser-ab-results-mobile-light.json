@@ -1,0 +1,63 @@
+{
+  "environment": {
+    "engine": "Chromium 144.0.7559.96",
+    "host": "tests/host.js mock Obsidian",
+    "nativeObsidian": false,
+    "viewportModes": [
+      "desktop 1280x900",
+      "mobile emulation 390x844"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  "results": [
+    {
+      "configuration": "mobile-light",
+      "scenario": "01-initial",
+      "status": "PASS",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    },
+    {
+      "configuration": "mobile-light",
+      "scenario": "01-initial-pixels",
+      "status": "PASS",
+      "comparison": "fixture-host screenshot bytes"
+    },
+    {
+      "configuration": "mobile-light",
+      "scenario": "02-composition-deferred",
+      "status": "PASS",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    },
+    {
+      "configuration": "mobile-light",
+      "scenario": "03-search-results",
+      "status": "PASS",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    },
+    {
+      "configuration": "mobile-light",
+      "scenario": "04-folder-picker",
+      "status": "FAIL",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    }
+  ],
+  "passed": 4,
+  "failed": 1,
+  "errors": [
+    {
+      "configuration": "mobile-light",
+      "side": "B",
+      "error": "A/B mismatch: mobile-light 04-folder-picker; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    }
+  ],
+  "unverified": [
+    "native Obsidian desktop",
+    "iOS/Android native WebView, IME and touch physics",
+    "real Dida/workbench/NAS integration"
+  ]
+}

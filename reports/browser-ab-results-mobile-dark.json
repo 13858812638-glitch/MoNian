@@ -1,0 +1,146 @@
+{
+  "environment": {
+    "engine": "Chromium 144.0.7559.96",
+    "host": "tests/host.js mock Obsidian",
+    "nativeObsidian": false,
+    "viewportModes": [
+      "desktop 1280x900",
+      "mobile emulation 390x844"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  "results": [
+    {
+      "configuration": "mobile-dark",
+      "scenario": "01-initial",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "02-composition-deferred",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "03-search-results",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "04-folder-picker",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "05-picker-search-focus",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "06-folder-and-erase",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "07-clear-conditions",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "08-batch-range",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "09-batch-all-and-exit",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "10-rename-dialog",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "11-rename-submit",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "12-dialog-cancel",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "13-delete-dialog",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "14-delete-submit",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "15-derived-create",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "16-create-commit",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "17-close-cleanup",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "18-pointer-sort-and-cancel",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "19-swipe-owner-and-native-scroll",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "20-workbench-embedded-api",
+      "status": "PASS",
+      "comparison": "Current-build functional browser assertion; Dialog coordinate deltas independently verified"
+    }
+  ],
+  "passed": 20,
+  "failed": 0,
+  "errors": [],
+  "unverified": [
+    "frozen pixel A/B intentionally excluded for authorized Dialog position and width changes",
+    "native Obsidian desktop",
+    "iOS/Android native WebView, IME and touch physics",
+    "real Dida/workbench/NAS integration"
+  ]
+}

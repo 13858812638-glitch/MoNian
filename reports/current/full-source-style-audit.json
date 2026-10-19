@@ -1,0 +1,1371 @@
+{
+  "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
+  "modules": 146,
+  "sourceFiles": 147,
+  "jsLines": 33207,
+  "jsBytes": 1518939,
+  "cssBytes": 256695,
+  "cssLines": 7472,
+  "cssParseErrors": [],
+  "cssRuleCount": 690,
+  "duplicateSelectorsSameContext": [
+    {
+      "context": [],
+      "selector": ":root",
+      "lines": [
+        1444,
+        7196
+      ]
+    },
+    {
+      "context": [],
+      "selector": ".local-search-navigator .local-search-nav-scroll",
+      "lines": [
+        1905,
+        1926
+      ]
+    },
+    {
+      "context": [],
+      "selector": "body.is-mobile",
+      "lines": [
+        7024,
+        7203
+      ]
+    }
+  ],
+  "duplicatePropertiesSameRule": [
+    {
+      "line": 3500,
+      "selector": ".local-search-results-shell",
+      "property": "overflow",
+      "earlier": 3499
+    }
+  ],
+  "styleSettings": {
+    "sectionName": "本地搜索",
+    "sectionId": "gls-local-search-ui",
+    "headings": 28,
+    "parameters": 143,
+    "duplicateIds": [],
+    "duplicateSectionNamedHeading": [],
+    "missingConsumerCandidates": []
+  },
+  "tokenDefinitionCount": 288,
+  "unconsumedTokenCandidates": [],
+  "resourceReferences": [
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "line": 185,
+      "code": "this.registerEvent(this.app.workspace.on(\"css-change\", () => {"
+    },
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "line": 272,
+      "code": "this.registerEvent(this.app.metadataCache.on(\"changed\", (file) => {"
+    },
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "line": 278,
+      "code": "this.registerEvent(this.app.vault.on(\"create\", (file) => {"
+    },
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "line": 289,
+      "code": "this.registerEvent(this.app.vault.on(\"modify\", (file) => {"
+    },
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "line": 297,
+      "code": "this.registerEvent(this.app.vault.on(\"delete\", (file) => {"
+    },
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "line": 343,
+      "code": "this.registerEvent(this.app.vault.on(\"rename\", (file, oldPath) => {"
+    },
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "line": 354,
+      "code": "this.registerEvent(this.app.workspace.on(\"file-open\", (file) => {"
+    },
+    {
+      "file": "src/core/search/file-actions-methods.js",
+      "line": 224,
+      "code": "surface.dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/core/search/file-actions-methods.js",
+      "line": 225,
+      "code": "surface.dialog.addEventListener(\"click\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "line": 68,
+      "code": "this.searchTimer = setTimeout(() => {"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "line": 78,
+      "code": "this.searchInput.addEventListener(\"compositionstart\", () => {"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "line": 83,
+      "code": "this.searchInput.addEventListener(\"compositionend\", () => {"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "line": 88,
+      "code": "this.searchInput.addEventListener(\"blur\", () => this.plugin.sharedSearchState?.schedule(this));"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "line": 89,
+      "code": "this.searchInput.addEventListener(\"input\", () => this._commitSearchInputValue());"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "line": 91,
+      "code": "this.searchInput.addEventListener(\"keydown\", async (e) => {"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "line": 149,
+      "code": "this.containerEl.addEventListener(\"keydown\", e => {"
+    },
+    {
+      "file": "src/core/search/result-menu-events-methods.js",
+      "line": 109,
+      "code": "this.resultsContainer.addEventListener(\"pointerdown\", evt => {"
+    },
+    {
+      "file": "src/core/search/result-menu-events-methods.js",
+      "line": 126,
+      "code": "this.resultsContainer.addEventListener(\"click\", async evt => {"
+    },
+    {
+      "file": "src/core/search/result-menu-events-methods.js",
+      "line": 245,
+      "code": "this.resultsContainer.addEventListener(\"contextmenu\", evt => {"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "line": 127,
+      "code": "closeBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "line": 208,
+      "code": "this.tagFilterBtn.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "line": 213,
+      "code": "this.propertyFilterBtn.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "line": 239,
+      "code": "this.folderBtn.addEventListener(\"click\", (e) => {"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "line": 291,
+      "code": "this.clearFiltersBtn.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "line": 309,
+      "code": "this.resultsContainer.addEventListener(\"scroll\", e => {"
+    },
+    {
+      "file": "src/features/batch/mutation-flow-methods.js",
+      "line": 231,
+      "code": "cancel.addEventListener(\"click\", () => this.owner.dropdown.close(false));"
+    },
+    {
+      "file": "src/features/batch/mutation-flow-methods.js",
+      "line": 232,
+      "code": "confirm.addEventListener(\"click\", () => onConfirm?.(confirm, cancel));"
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "line": 430,
+      "code": "typeButton.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "line": 543,
+      "code": "add.addEventListener(\"click\", commit);"
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "line": 544,
+      "code": "cancel.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "line": 548,
+      "code": "input.addEventListener(\"keydown\", event => {"
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "line": 672,
+      "code": "add.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/create/preview-methods.js",
+      "line": 32,
+      "code": "create.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/create/preview-methods.js",
+      "line": 43,
+      "code": "openCreated.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/features/create/preview-methods.js",
+      "line": 49,
+      "code": "retainCreated.addEventListener(\"click\", () => this.retainPartialFileAndReturn());"
+    },
+    {
+      "file": "src/features/create/preview-methods.js",
+      "line": 67,
+      "code": "field.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/facets/folder-colors-methods.js",
+      "line": 135,
+      "code": "panel.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/features/facets/folder-colors-methods.js",
+      "line": 136,
+      "code": "panel.addEventListener(\"click\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/features/facets/folder-colors-methods.js",
+      "line": 231,
+      "code": "input.addEventListener(\"input\", () => {"
+    },
+    {
+      "file": "src/features/facets/folder-colors-methods.js",
+      "line": 237,
+      "code": "input.addEventListener(\"change\", () => {"
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "line": 848,
+      "code": "hostWindow(list).requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "line": 952,
+      "code": "chip.addEventListener(\"click\", e => {"
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "line": 988,
+      "code": "keyButton.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "line": 1003,
+      "code": "valueButton.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/facets/tag-picker-methods.js",
+      "line": 476,
+      "code": "hostWindow(list).requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/features/facets/type-picker-methods.js",
+      "line": 226,
+      "code": "search.addEventListener(\"input\", render);"
+    },
+    {
+      "file": "src/features/facets/type-picker-methods.js",
+      "line": 249,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 37,
+      "code": "this.scroll.addEventListener(\"contextmenu\", this._contextMenu);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 48,
+      "code": "this.scroll.addEventListener(\"click\", this._actionAnchorClick, true);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 63,
+      "code": "this.scroll.addEventListener(\"click\", this._maintenanceClick, true);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 212,
+      "code": "grip.addEventListener(\"click\", event => { event.preventDefault(); event.stopPropagation(); });"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 213,
+      "code": "grip.addEventListener(\"keydown\", event => {"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 547,
+      "code": "panel.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 548,
+      "code": "panel.addEventListener(\"click\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 583,
+      "code": "input.addEventListener(\"input\", preview);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 585,
+      "code": "input.addEventListener(\"change\", () => {"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 598,
+      "code": "this.scroll.removeEventListener(\"contextmenu\", this._contextMenu);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 599,
+      "code": "this.scroll.removeEventListener(\"click\", this._actionAnchorClick, true);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 600,
+      "code": "this.scroll.removeEventListener(\"click\", this._maintenanceClick, true);"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 51,
+      "code": "this.backButton.addEventListener(\"click\", () => this.back());"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 62,
+      "code": "this.resultsButton.addEventListener(\"click\", () => { if (this.prepareSearch()) this.showResults(); });"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 150,
+      "code": "node.addEventListener(type, fn, options);"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 151,
+      "code": "this.cleanups.push(() => node.removeEventListener(type, fn, options));"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 169,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 720,
+      "code": "manage.addEventListener(\"click\", () => this.openSection(id, manage));"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 905,
+      "code": "this._projectionTimer = this.root.ownerDocument.defaultView.setTimeout(() => {"
+    },
+    {
+      "file": "src/features/plugin/content-cache-methods.js",
+      "line": 175,
+      "code": "this._persistTimer = setTimeout(async () => {"
+    },
+    {
+      "file": "src/features/plugin/external-search-methods.js",
+      "line": 216,
+      "code": "host.addEventListener(\"keydown\", containEscape);"
+    },
+    {
+      "file": "src/features/plugin/external-search-methods.js",
+      "line": 221,
+      "code": "host.removeEventListener(\"keydown\", containEscape);"
+    },
+    {
+      "file": "src/features/plugin/index-queue-methods.js",
+      "line": 18,
+      "code": "this._indexRefreshTimer = setTimeout(() => {"
+    },
+    {
+      "file": "src/features/plugin/index-queue-methods.js",
+      "line": 116,
+      "code": "this._indexRetryTimer = setTimeout(() => {"
+    },
+    {
+      "file": "src/features/plugin/index-storage-methods.js",
+      "line": 65,
+      "code": "await new Promise(resolve => setTimeout(resolve, 0));"
+    },
+    {
+      "file": "src/features/plugin/non-markdown-metadata-methods.js",
+      "line": 214,
+      "code": "this._nonMarkdownSaveTimer = setTimeout(() => {"
+    },
+    {
+      "file": "src/features/plugin/notifications-methods.js",
+      "line": 13,
+      "code": "this._activitySaveTimer = setTimeout(() => {"
+    },
+    {
+      "file": "src/features/plugin/recent-history-state-methods.js",
+      "line": 197,
+      "code": "this._metadataHistorySaveTimer = setTimeout(() => {"
+    },
+    {
+      "file": "src/features/plugin/time-cache-methods.js",
+      "line": 107,
+      "code": "this._contentTimePersistTimer = setTimeout(async () => {"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "line": 553,
+      "code": "search.addEventListener(\"input\", render);"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "line": 636,
+      "code": "automatic.addEventListener(\"click\", apply(\"automatic\"));"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "line": 637,
+      "code": "bulkAction.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "line": 690,
+      "code": "single.addEventListener(\"click\", choose(\"single\"));"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "line": 691,
+      "code": "multi.addEventListener(\"click\", choose(\"multi\"));"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "line": 692,
+      "code": "automatic.addEventListener(\"click\", applyVisibility(\"automatic\"));"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "line": 693,
+      "code": "bulkAction.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/search-history-methods.js",
+      "line": 52,
+      "code": "search.addEventListener(\"input\", () => render());"
+    },
+    {
+      "file": "src/features/result-controls/search-history-methods.js",
+      "line": 53,
+      "code": "clearRecent.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/search-history-methods.js",
+      "line": 114,
+      "code": "hit.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/toolbar-methods.js",
+      "line": 58,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/toolbar-methods.js",
+      "line": 76,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/toolbar-methods.js",
+      "line": 88,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/toolbar-methods.js",
+      "line": 108,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "line": 220,
+      "code": "section.toggle.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "line": 399,
+      "code": "view.toggle.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "line": 483,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "line": 511,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "line": 868,
+      "code": "reset.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "line": 896,
+      "code": "const frame = hostWindow(panel).requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "line": 900,
+      "code": "registerPickerCleanup(panel, () => hostWindow(panel).cancelAnimationFrame(frame));"
+    },
+    {
+      "file": "src/features/results/SearchResultRendererController.js",
+      "line": 66,
+      "code": "if (this._scrollFrame) hostWindow(this.owner?.resultsContainer).cancelAnimationFrame(this._scrollFrame);"
+    },
+    {
+      "file": "src/features/results/card-metadata-methods.js",
+      "line": 173,
+      "code": "button.addEventListener(\"click\", e => {"
+    },
+    {
+      "file": "src/features/results/card-metadata-methods.js",
+      "line": 227,
+      "code": "expand.addEventListener(\"click\", e => {"
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "line": 93,
+      "code": "bestToggle.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "line": 120,
+      "code": "bodyToggle.addEventListener(\"click\", () => {"
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "line": 160,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "line": 281,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/results/result-card-methods.js",
+      "line": 41,
+      "code": "item.addEventListener(\"keydown\", event => {"
+    },
+    {
+      "file": "src/features/results/viewport-geometry-methods.js",
+      "line": 81,
+      "code": "for (const [type, fn] of handlers) container.addEventListener(type, fn, { capture: true, passive: true });"
+    },
+    {
+      "file": "src/features/results/viewport-geometry-methods.js",
+      "line": 83,
+      "code": "for (const [type, fn] of handlers) container.removeEventListener(type, fn, true);"
+    },
+    {
+      "file": "src/features/results/viewport-geometry-methods.js",
+      "line": 115,
+      "code": "this._scrollSettleTimer = win.setTimeout(() => {"
+    },
+    {
+      "file": "src/features/results/viewport-geometry-methods.js",
+      "line": 343,
+      "code": "this._geometrySettleTimer = hostWindow(list).setTimeout(() => {"
+    },
+    {
+      "file": "src/features/results/virtual-window-methods.js",
+      "line": 401,
+      "code": "this._scrollFrame = hostWindow(container).requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 86,
+      "code": "this.batchEntryBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 118,
+      "code": "this.externalSubmitBtn.addEventListener(\"click\", () => void this.submitExternalSelection());"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 126,
+      "code": "this.batchSelectToggleBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 132,
+      "code": "this.expandActionsBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 140,
+      "code": "this.tagMetadataBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 146,
+      "code": "this.propertyMetadataBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 152,
+      "code": "this.moveFilesBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 159,
+      "code": "this.deleteFilesBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "line": 171,
+      "code": "this.exitBatchBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/sort/SearchSortController.js",
+      "line": 283,
+      "code": "view.fieldBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/sort/SearchSortController.js",
+      "line": 297,
+      "code": "view.pickerBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/features/sort/SearchSortController.js",
+      "line": 310,
+      "code": "view.directionBtn.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/integrations/SearchWorkspaceCapabilities.js",
+      "line": 16,
+      "code": "node.addEventListener(type, handler, options);"
+    },
+    {
+      "file": "src/integrations/SearchWorkspaceCapabilities.js",
+      "line": 17,
+      "code": "this.cleanups.push(() => node.removeEventListener(type, handler, options));"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 54,
+      "code": "this.list?.addEventListener(\"pointerdown\", this._pointerDown);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 55,
+      "code": "this.list?.addEventListener(\"click\", this._clickCapture, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 112,
+      "code": "win.addEventListener(\"pointermove\", this._move, { passive: false, capture: true });"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 113,
+      "code": "win.addEventListener(\"pointerup\", this._finish, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 114,
+      "code": "win.addEventListener(\"pointercancel\", this._cancel, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 115,
+      "code": "win.addEventListener(\"blur\", this._blur, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 242,
+      "code": "this._raf = win.requestAnimationFrame(tick);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 246,
+      "code": "this._raf = win.requestAnimationFrame(tick);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 258,
+      "code": "session.win.removeEventListener(\"pointermove\", this._move, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 259,
+      "code": "session.win.removeEventListener(\"pointerup\", this._finish, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 260,
+      "code": "session.win.removeEventListener(\"pointercancel\", this._cancel, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 261,
+      "code": "session.win.removeEventListener(\"blur\", this._blur, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 265,
+      "code": "if (this._raf) session.win.cancelAnimationFrame(this._raf);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 302,
+      "code": "if (this._raf) this.list?.ownerDocument.defaultView.cancelAnimationFrame(this._raf);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 311,
+      "code": "this.list?.removeEventListener(\"pointerdown\", this._pointerDown);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 312,
+      "code": "this.list?.removeEventListener(\"click\", this._clickCapture, true);"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 83,
+      "code": "this.ownerDocument.addEventListener("
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 88,
+      "code": "this.ownerDocument.addEventListener("
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 167,
+      "code": "this.ownerDocument?.removeEventListener("
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 172,
+      "code": "this.ownerDocument?.removeEventListener("
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 233,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 400,
+      "code": "row.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 414,
+      "code": "desktopTrigger.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 513,
+      "code": "win.removeEventListener(\"pointermove\", pointerMove, true);"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 514,
+      "code": "win.removeEventListener(\"pointerup\", pointerEnd, true);"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 515,
+      "code": "win.removeEventListener(\"pointercancel\", pointerCancel, true);"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 591,
+      "code": "win.addEventListener(\"pointermove\", pointerMove, { capture: true, passive: false });"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 592,
+      "code": "win.addEventListener(\"pointerup\", pointerEnd, true);"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 593,
+      "code": "win.addEventListener(\"pointercancel\", pointerCancel, true);"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 599,
+      "code": "row.addEventListener(\"pointerdown\", event => {"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 617,
+      "code": "row.addEventListener(\"touchstart\", event => {"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 638,
+      "code": "row.addEventListener(\"touchmove\", event => {"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 650,
+      "code": "row.addEventListener(\"touchend\", event => {"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "line": 658,
+      "code": "row.addEventListener(\"touchcancel\", event => {"
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "line": 76,
+      "code": "if (remaining > 0) { releaseTimer = win.setTimeout(releaseIfIdle, remaining); return; }"
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "line": 86,
+      "code": "win.addEventListener(type, listener, options);"
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "line": 87,
+      "code": "cleanups.push(() => win.removeEventListener(type, listener, options));"
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "line": 176,
+      "code": "if (remaining > 0) { releaseTimer = win.setTimeout(releaseIfIdle, remaining); return; }"
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "line": 179,
+      "code": "win.removeEventListener(\"wheel\", onWheel, true);"
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "line": 253,
+      "code": "win.addEventListener(\"wheel\", onWheel, { capture: true, passive: false });"
+    },
+    {
+      "file": "src/services/IoPool.js",
+      "line": 44,
+      "code": "if (i + batchSize < items.length) await new Promise(resolve => setTimeout(resolve, 0));"
+    },
+    {
+      "file": "src/ui/components/input-controls.js",
+      "line": 97,
+      "code": "surface.addEventListener(\"pointerdown\", onPointerDown);"
+    },
+    {
+      "file": "src/ui/components/input-controls.js",
+      "line": 98,
+      "code": "return () => surface.removeEventListener(\"pointerdown\", onPointerDown);"
+    },
+    {
+      "file": "src/ui/components/property-state.js",
+      "line": 66,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/components/view-composer.js",
+      "line": 113,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 52,
+      "code": "host.removeEventListener(\"keydown\", trapKeyboard, true);"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 81,
+      "code": "host.addEventListener(\"keydown\", trapKeyboard, true);"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 83,
+      "code": "backdrop.addEventListener(\"pointerdown\", swallow);"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 84,
+      "code": "backdrop.addEventListener(\"pointerup\", swallow);"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 85,
+      "code": "backdrop.addEventListener(\"click\", event => { event.preventDefault(); swallow(event); finish(false); });"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 163,
+      "code": "dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 164,
+      "code": "dialog.addEventListener(\"click\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 165,
+      "code": "input.addEventListener(\"keydown\", event => {"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 205,
+      "code": "surface.dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "line": 206,
+      "code": "surface.dialog.addEventListener(\"click\", event => event.stopPropagation());"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-surface.js",
+      "line": 86,
+      "code": "closeButton.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-surface.js",
+      "line": 92,
+      "code": "cancelButton.addEventListener(\"click\", () => finish(false));"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-surface.js",
+      "line": 93,
+      "code": "confirmButton.addEventListener(\"click\", () => finish(true));"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-surface.js",
+      "line": 94,
+      "code": "dialog.addEventListener(\"keydown\", event => {"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 181,
+      "code": "else this._geometrySaveTimer = this._hostWindow().setTimeout(() => {"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 231,
+      "code": "win.removeEventListener(\"pointermove\", onMove, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 232,
+      "code": "win.removeEventListener(\"pointerup\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 233,
+      "code": "win.removeEventListener(\"pointercancel\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 251,
+      "code": "win.addEventListener(\"pointermove\", onMove, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 252,
+      "code": "win.addEventListener(\"pointerup\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 253,
+      "code": "win.addEventListener(\"pointercancel\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 256,
+      "code": "dragHandle.addEventListener(\"pointerdown\", onPointerDown);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 258,
+      "code": "dragHandle.removeEventListener(\"pointerdown\", onPointerDown);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 299,
+      "code": "win.removeEventListener(\"pointermove\", onMove, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 300,
+      "code": "win.removeEventListener(\"pointerup\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 301,
+      "code": "win.removeEventListener(\"pointercancel\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 319,
+      "code": "win.addEventListener(\"pointermove\", onMove, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 320,
+      "code": "win.addEventListener(\"pointerup\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 321,
+      "code": "win.addEventListener(\"pointercancel\", finish, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 324,
+      "code": "resizeHandle.addEventListener(\"pointerdown\", onResizeDown);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 326,
+      "code": "resizeHandle.removeEventListener(\"pointerdown\", onResizeDown);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 337,
+      "code": "win.addEventListener(\"resize\", onWindowResize);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 338,
+      "code": "this._windowResizeCleanup = () => win.removeEventListener(\"resize\", onWindowResize);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 384,
+      "code": "eventRoot.addEventListener(type, blockBackdropDismiss, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 385,
+      "code": "eventRoot.addEventListener(\"click\", closeAfterCommandDockClick, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 389,
+      "code": "eventRoot.removeEventListener(type, blockBackdropDismiss, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 390,
+      "code": "eventRoot.removeEventListener(\"click\", closeAfterCommandDockClick, true);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 408,
+      "code": "if (this._autofocusFrame) this._hostWindow().cancelAnimationFrame(this._autofocusFrame);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 426,
+      "code": "this._autofocusFrame = win.requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 427,
+      "code": "this._autofocusFrame = win.requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 456,
+      "code": "this.modalEl.addEventListener(\"contextmenu\", this._contextMenuCloseHandler);"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 522,
+      "code": "this._startupTimer = this._hostWindow().setTimeout(() => {"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 550,
+      "code": "this._startupTimer = this._hostWindow().setTimeout(() => {"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 635,
+      "code": "this.modalEl.removeEventListener("
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "line": 24,
+      "code": "target.addEventListener(type, handler);"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "line": 25,
+      "code": "this.cleanups.push(() => target.removeEventListener(type, handler));"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "line": 89,
+      "code": "root.addEventListener(type, handler, true);"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "line": 90,
+      "code": "this.cleanups.push(() => root.removeEventListener(type, handler, true));"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "line": 137,
+      "code": "this.frame = this.win.requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "line": 202,
+      "code": "if (this.frame) this.win.cancelAnimationFrame(this.frame);"
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "line": 50,
+      "code": "overlay.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "line": 54,
+      "code": "overlay.addEventListener(\"contextmenu\", event => {"
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "line": 80,
+      "code": "doc.addEventListener(\"keydown\", this._keydownHandler, true);"
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "line": 97,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "line": 118,
+      "code": "this.ownerDocument?.removeEventListener(\"keydown\", this._keydownHandler, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 301,
+      "code": "this._positionFrame = win.requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 477,
+      "code": "panel.addEventListener(\"contextmenu\", this._contextHandler);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 478,
+      "code": "panel.addEventListener(\"click\", this._clickGuardHandler, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 483,
+      "code": "doc.addEventListener(\"click\", this._outsideHandler, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 488,
+      "code": "input?.addEventListener(\"beforeinput\", guardInput);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 492,
+      "code": "doc.addEventListener(\"keydown\", this._keyHandler, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 497,
+      "code": "win.addEventListener(\"resize\", this._positionHandler);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 498,
+      "code": "win.visualViewport?.addEventListener(\"resize\", this._positionHandler);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 499,
+      "code": "win.visualViewport?.addEventListener(\"scroll\", this._positionHandler);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 503,
+      "code": "doc.removeEventListener(\"click\", this._outsideHandler, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 504,
+      "code": "input?.removeEventListener(\"beforeinput\", guardInput);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 505,
+      "code": "doc.removeEventListener(\"keydown\", this._keyHandler, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 507,
+      "code": "win.removeEventListener(\"resize\", this._positionHandler);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 508,
+      "code": "win.visualViewport?.removeEventListener(\"resize\", this._positionHandler);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 509,
+      "code": "win.visualViewport?.removeEventListener(\"scroll\", this._positionHandler);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 511,
+      "code": "if (this._positionFrame) win.cancelAnimationFrame(this._positionFrame);"
+    },
+    {
+      "file": "src/ui/pickers/count-rail.js",
+      "line": 14,
+      "code": "let frame = view.requestAnimationFrame(() => { frame = null; sync(); });"
+    },
+    {
+      "file": "src/ui/pickers/count-rail.js",
+      "line": 18,
+      "code": "if (frame !== null) view.cancelAnimationFrame(frame);"
+    },
+    {
+      "file": "src/ui/pickers/folder-picker.js",
+      "line": 175,
+      "code": "hostWindow(list).requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/ui/pickers/folder-picker.js",
+      "line": 183,
+      "code": "search.addEventListener(\"input\", () => render());"
+    },
+    {
+      "file": "src/ui/pickers/picker-header.js",
+      "line": 39,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/pickers/picker-shell.js",
+      "line": 78,
+      "code": "search.addEventListener(\"input\", onInput);"
+    },
+    {
+      "file": "src/ui/pickers/selection-mode.js",
+      "line": 170,
+      "code": "confirm?.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/pickers/selection-strip.js",
+      "line": 16,
+      "code": "clearButton.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/pickers/selection-strip.js",
+      "line": 31,
+      "code": "chip.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/pickers/template-picker.js",
+      "line": 164,
+      "code": "search.addEventListener(\"input\", render);"
+    },
+    {
+      "file": "src/ui/pickers/tree-row.js",
+      "line": 114,
+      "code": "iconEl.addEventListener(\"click\", e => {"
+    },
+    {
+      "file": "src/ui/pickers/tree-row.js",
+      "line": 130,
+      "code": "toggle.addEventListener(\"click\", e => {"
+    },
+    {
+      "file": "src/ui/pickers/tree-row.js",
+      "line": 137,
+      "code": "button.addEventListener(\"click\", e => {"
+    },
+    {
+      "file": "src/ui/pickers/tree-row.js",
+      "line": 216,
+      "code": "button.addEventListener(\"click\", event => {"
+    },
+    {
+      "file": "src/ui/settings/LocalSearchSettingTab.js",
+      "line": 137,
+      "code": "input.addEventListener(\"change\", () => void commit());"
+    },
+    {
+      "file": "src/ui/settings/LocalSearchSettingTab.js",
+      "line": 138,
+      "code": "input.addEventListener(\"keydown\", event => {"
+    },
+    {
+      "file": "src/ui/settings/LocalSearchSettingTab.js",
+      "line": 228,
+      "code": "button.addEventListener(\"click\", () => renderModule(module.id));"
+    },
+    {
+      "file": "src/ui/settings/LocalSearchSettingTab.js",
+      "line": 232,
+      "code": "tabs.addEventListener(\"keydown\", event => {"
+    }
+  ],
+  "literalStyleCandidates": [
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "line": 387,
+      "code": "row.style.setProperty(\"--ls-move-depth\", \"1\");"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "line": 611,
+      "code": "if (Platform.isMobile && container) container.style.display = \"none\";"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 452,
+      "code": "panel.style.visibility = \"hidden\";"
+    }
+  ],
+  "notes": [
+    "Selectors are grouped by at-rule context; repeated rules are candidates for ownership review, not proven conflicts.",
+    "Dynamic class/token names and external Style Settings consumers can produce scan false positives.",
+    "DOM-owned listeners may be collected with their element; global listeners require explicit scope cleanup.",
+    "No user theme/CSS snippets/data/manifest were supplied."
+  ]
+}

@@ -1,0 +1,2801 @@
+{
+  "engine": "Chromium 144.0.7559.96",
+  "files": 300,
+  "kinds": {
+    "tag": [
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 19.5,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名标签：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名标签",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别0",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别1",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别2",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别3",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别4",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别5",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别6",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题0",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题1",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题2",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题3",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题4",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题5",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题6",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题7",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题8",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题9",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题10",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题11",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题12",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题13",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题14",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题15",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题16",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题17",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题18",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 18.200000000186265,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 3.400000000372529,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 13.5,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名标签：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名标签",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别0",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别1",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别2",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别3",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别4",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别5",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别6",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题0",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题1",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题2",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题3",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题4",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题5",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题6",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题7",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题8",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题9",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题10",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题11",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题12",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题13",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题14",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题15",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题16",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题17",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题18",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 9.699999999720603,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 7.099999999627471,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 14.100000000093132,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名标签：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名标签",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别0",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别1",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别2",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别3",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别4",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别5",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 类别6",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题0",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题1",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题2",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题3",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题4",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题5",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题6",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题7",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题8",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题9",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题10",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题11",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题12",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题13",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题14",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题15",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题16",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题17",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 主题18",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 13.899999999906868,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 3.2000000001862645,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 类别0",
+              "text": "类别043",
+              "selected": false
+            },
+            {
+              "key": "标签 类别1",
+              "text": "类别143",
+              "selected": false
+            },
+            {
+              "key": "标签 类别2",
+              "text": "类别243",
+              "selected": false
+            },
+            {
+              "key": "标签 类别3",
+              "text": "类别343",
+              "selected": false
+            },
+            {
+              "key": "标签 类别4",
+              "text": "类别443",
+              "selected": false
+            },
+            {
+              "key": "标签 类别5",
+              "text": "类别543",
+              "selected": false
+            },
+            {
+              "key": "标签 类别6",
+              "text": "类别642",
+              "selected": false
+            },
+            {
+              "key": "标签 主题0",
+              "text": "主题016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题1",
+              "text": "主题116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题2",
+              "text": "主题216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题3",
+              "text": "主题316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题4",
+              "text": "主题416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题5",
+              "text": "主题516",
+              "selected": false
+            },
+            {
+              "key": "标签 主题6",
+              "text": "主题616",
+              "selected": false
+            },
+            {
+              "key": "标签 主题7",
+              "text": "主题716",
+              "selected": false
+            },
+            {
+              "key": "标签 主题8",
+              "text": "主题816",
+              "selected": false
+            },
+            {
+              "key": "标签 主题9",
+              "text": "主题916",
+              "selected": false
+            },
+            {
+              "key": "标签 主题10",
+              "text": "主题1016",
+              "selected": false
+            },
+            {
+              "key": "标签 主题11",
+              "text": "主题1116",
+              "selected": false
+            },
+            {
+              "key": "标签 主题12",
+              "text": "主题1216",
+              "selected": false
+            },
+            {
+              "key": "标签 主题13",
+              "text": "主题1316",
+              "selected": false
+            },
+            {
+              "key": "标签 主题14",
+              "text": "主题1416",
+              "selected": false
+            },
+            {
+              "key": "标签 主题15",
+              "text": "主题1515",
+              "selected": false
+            },
+            {
+              "key": "标签 主题16",
+              "text": "主题1615",
+              "selected": false
+            },
+            {
+              "key": "标签 主题17",
+              "text": "主题1715",
+              "selected": false
+            },
+            {
+              "key": "标签 主题18",
+              "text": "主题1815",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      }
+    ],
+    "property": [
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 7.5,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名属性键和值：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名属性键和值",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": true,
+              "selected": false
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 7.100000000093132,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 3.6000000000931323,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 6.300000000279397,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名属性键和值：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名属性键和值",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": true,
+              "selected": false
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 5,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 4.2000000001862645,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 5.600000000093132,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名属性键和值：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名属性键和值",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": true,
+              "selected": false
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 6.5,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 2.6000000000931323,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目300",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人300",
+              "selected": false
+            },
+            {
+              "key": "状态",
+              "text": "状态300",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      }
+    ]
+  },
+  "errors": []
+}

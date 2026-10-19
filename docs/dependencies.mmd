@@ -1,0 +1,792 @@
+flowchart LR
+  m0["src/core/LocalSearchPlugin.js"]
+  m1["src/core/SearchCore.js"]
+  m2["src/core/SharedSearchStateCoordinator.js"]
+  m3["src/core/compose-class-methods.js"]
+  m4["src/core/default-settings.js"]
+  m5["src/core/picker-cleanup.js"]
+  m6["src/core/search/file-actions-methods.js"]
+  m7["src/core/search/input-and-filters-methods.js"]
+  m8["src/core/search/open-selection-methods.js"]
+  m9["src/core/search/result-menu-events-methods.js"]
+  m10["src/core/search/search-and-ranking-methods.js"]
+  m11["src/core/search/session-methods.js"]
+  m12["src/core/search/shell-methods.js"]
+  m13["src/core/session-values.js"]
+  m14["src/core/ui-reference-keys.js"]
+  m15["src/core/view-types.js"]
+  m16["src/data/folders/folder-tree.js"]
+  m17["src/data/formats/drawing-content.js"]
+  m18["src/data/formats/drawing-detection.js"]
+  m19["src/data/formats/file-types.js"]
+  m20["src/data/index/BodyIndex.js"]
+  m21["src/data/index/index-version.js"]
+  m22["src/data/properties/property-catalog.js"]
+  m23["src/data/properties/property-types.js"]
+  m24["src/data/properties/property-values.js"]
+  m25["src/data/properties/raw-mutations.js"]
+  m26["src/data/tags/tag-tree.js"]
+  m27["src/data/tags/tag-values.js"]
+  m28["src/data/time/time-values.js"]
+  m29["src/features/batch/BatchMetadataController.js"]
+  m30["src/features/batch/mutation-flow-methods.js"]
+  m31["src/features/batch/property-editor-methods.js"]
+  m32["src/features/batch/tag-editor-methods.js"]
+  m33["src/features/create/SearchCreateController.js"]
+  m34["src/features/create/create-file-methods.js"]
+  m35["src/features/create/create-model.js"]
+  m36["src/features/create/draft-and-metadata-methods.js"]
+  m37["src/features/create/input-mode-methods.js"]
+  m38["src/features/create/payload-methods.js"]
+  m39["src/features/create/preview-methods.js"]
+  m40["src/features/facets/SearchFacetController.js"]
+  m41["src/features/facets/folder-colors-methods.js"]
+  m42["src/features/facets/folder-picker-methods.js"]
+  m43["src/features/facets/picker-model-methods.js"]
+  m44["src/features/facets/property-picker-methods.js"]
+  m45["src/features/facets/sidebar-maintenance-methods.js"]
+  m46["src/features/facets/tag-picker-methods.js"]
+  m47["src/features/facets/type-picker-methods.js"]
+  m48["src/features/filters/FilterEngine.js"]
+  m49["src/features/filters/filter-state.js"]
+  m50["src/features/filters/pool-config.js"]
+  m51["src/features/filters/pool-values.js"]
+  m52["src/features/folders/exclusions.js"]
+  m53["src/features/folders/folder-colors.js"]
+  m54["src/features/navigator/NavigatorCustomization.js"]
+  m55["src/features/navigator/SearchNavigatorController.js"]
+  m56["src/features/navigator/customization-model.js"]
+  m57["src/features/navigator/toolbar-config.js"]
+  m58["src/features/plugin/content-cache-methods.js"]
+  m59["src/features/plugin/external-properties-methods.js"]
+  m60["src/features/plugin/external-search-methods.js"]
+  m61["src/features/plugin/file-command-actions-methods.js"]
+  m62["src/features/plugin/file-index-methods.js"]
+  m63["src/features/plugin/index-queue-methods.js"]
+  m64["src/features/plugin/index-storage-methods.js"]
+  m65["src/features/plugin/markdown-write-tracking-methods.js"]
+  m66["src/features/plugin/metadata-directory-methods.js"]
+  m67["src/features/plugin/non-markdown-metadata-methods.js"]
+  m68["src/features/plugin/notifications-methods.js"]
+  m69["src/features/plugin/path-lifecycle-methods.js"]
+  m70["src/features/plugin/project-catalog-methods.js"]
+  m71["src/features/plugin/property-maintenance-methods.js"]
+  m72["src/features/plugin/recent-history-state-methods.js"]
+  m73["src/features/plugin/recent-history-storage-methods.js"]
+  m74["src/features/plugin/search-history-methods.js"]
+  m75["src/features/plugin/settings-storage-methods.js"]
+  m76["src/features/plugin/time-cache-methods.js"]
+  m77["src/features/plugin/tree-maintenance-methods.js"]
+  m78["src/features/plugin/view-preferences-methods.js"]
+  m79["src/features/plugin/workspace-entry-methods.js"]
+  m80["src/features/result-controls/SearchResultControlsController.js"]
+  m81["src/features/result-controls/filter-pool-editor-methods.js"]
+  m82["src/features/result-controls/search-history-methods.js"]
+  m83["src/features/result-controls/toolbar-methods.js"]
+  m84["src/features/result-controls/view-composer-methods.js"]
+  m85["src/features/results/SearchResultRendererController.js"]
+  m86["src/features/results/SparseHeightIndex.js"]
+  m87["src/features/results/card-metadata-methods.js"]
+  m88["src/features/results/filter-channels-methods.js"]
+  m89["src/features/results/page-and-snippets-methods.js"]
+  m90["src/features/results/result-card-methods.js"]
+  m91["src/features/results/view-config.js"]
+  m92["src/features/results/viewport-anchors-methods.js"]
+  m93["src/features/results/viewport-geometry-methods.js"]
+  m94["src/features/results/virtual-window-methods.js"]
+  m95["src/features/results/virtualization-config.js"]
+  m96["src/features/search/QueryState.js"]
+  m97["src/features/search/ResultRanker.js"]
+  m98["src/features/selection/SearchSelectionController.js"]
+  m99["src/features/sort/SearchSortController.js"]
+  m100["src/features/sort/sort-model.js"]
+  m101["src/integrations/SearchWorkspaceCapabilities.js"]
+  m102["src/integrations/public-contract.js"]
+  m103["src/interactions/PointerSortCoordinator.js"]
+  m104["src/interactions/SwipeActionCoordinator.js"]
+  m105["src/interactions/hover-hints.js"]
+  m106["src/interactions/scroll-anchor.js"]
+  m107["src/interactions/sort-feedback.js"]
+  m108["src/interactions/swipe-back.js"]
+  m109["src/main.js"]
+  m110["src/services/BatchMetadataService.js"]
+  m111["src/services/FileOperationService.js"]
+  m112["src/services/IoPool.js"]
+  m113["src/ui/components/indicator-label.js"]
+  m114["src/ui/components/input-controls.js"]
+  m115["src/ui/components/property-state.js"]
+  m116["src/ui/components/view-composer.js"]
+  m117["src/ui/dialogs/dialog-session.js"]
+  m118["src/ui/dialogs/dialog-surface.js"]
+  m119["src/ui/dialogs/submission.js"]
+  m120["src/ui/hosts/SearchWindowSession.js"]
+  m122["src/ui/hosts/modal-chrome.js"]
+  m123["src/ui/hosts/modal-host.js"]
+  m124["src/ui/mobile/mobile-frame.js"]
+  m125["src/ui/overlays/LocalSearchOverlayHost.js"]
+  m126["src/ui/overlays/OperationOverlayController.js"]
+  m127["src/ui/overlays/SearchDropdownController.js"]
+  m128["src/ui/overlays/geometry.js"]
+  m129["src/ui/overlays/popup-order.js"]
+  m130["src/ui/pickers/count-rail.js"]
+  m131["src/ui/pickers/folder-picker.js"]
+  m132["src/ui/pickers/header-modes.js"]
+  m133["src/ui/pickers/icon-catalog.js"]
+  m134["src/ui/pickers/icon-picker.js"]
+  m135["src/ui/pickers/picker-header.js"]
+  m136["src/ui/pickers/picker-shell.js"]
+  m137["src/ui/pickers/selection-mode.js"]
+  m138["src/ui/pickers/selection-strip.js"]
+  m139["src/ui/pickers/sort-mode.js"]
+  m140["src/ui/pickers/template-picker.js"]
+  m141["src/ui/pickers/tree-row.js"]
+  m142["src/ui/settings/LocalSearchSettingTab.js"]
+  m143["src/ui/settings/setting-row.js"]
+  m144["src/ui/views/SearchView.js"]
+  m145["src/utils/dom.js"]
+  m146["src/utils/markdown-text.js"]
+  m147["src/utils/normalization.js"]
+  m148["src/utils/preferred-order.js"]
+  m149["src/utils/search-text.js"]
+  m150["src/utils/text-collator.js"]
+  m151["src/utils/tree-match.js"]
+  m152["src/utils/vault-paths.js"]
+  m0 --> m20
+  m0 --> m35
+  m0 --> m58
+  m0 --> m59
+  m0 --> m60
+  m0 --> m61
+  m0 --> m62
+  m0 --> m63
+  m0 --> m64
+  m0 --> m65
+  m0 --> m66
+  m0 --> m67
+  m0 --> m68
+  m0 --> m69
+  m0 --> m70
+  m0 --> m71
+  m0 --> m72
+  m0 --> m73
+  m0 --> m74
+  m0 --> m75
+  m0 --> m76
+  m0 --> m77
+  m0 --> m78
+  m0 --> m79
+  m0 --> m102
+  m0 --> m105
+  m0 --> m108
+  m0 --> m110
+  m0 --> m111
+  m0 --> m124
+  m0 --> m142
+  m0 --> m144
+  m0 --> m147
+  m0 --> m2
+  m0 --> m3
+  m0 --> m15
+  m1 --> m29
+  m1 --> m33
+  m1 --> m35
+  m1 --> m40
+  m1 --> m49
+  m1 --> m80
+  m1 --> m85
+  m1 --> m96
+  m1 --> m98
+  m1 --> m99
+  m1 --> m100
+  m1 --> m104
+  m1 --> m112
+  m1 --> m127
+  m1 --> m147
+  m1 --> m152
+  m1 --> m3
+  m1 --> m6
+  m1 --> m7
+  m1 --> m8
+  m1 --> m9
+  m1 --> m10
+  m1 --> m11
+  m1 --> m12
+  m1 --> m13
+  m1 --> m14
+  m2 --> m49
+  m2 --> m100
+  m2 --> m13
+  m4 --> m28
+  m4 --> m57
+  m4 --> m91
+  m4 --> m100
+  m6 --> m16
+  m6 --> m19
+  m6 --> m117
+  m6 --> m118
+  m6 --> m131
+  m6 --> m5
+  m7 --> m19
+  m7 --> m24
+  m7 --> m27
+  m7 --> m28
+  m7 --> m48
+  m7 --> m49
+  m7 --> m145
+  m7 --> m152
+  m9 --> m145
+  m10 --> m19
+  m10 --> m28
+  m10 --> m48
+  m10 --> m49
+  m10 --> m97
+  m10 --> m100
+  m10 --> m149
+  m10 --> m150
+  m11 --> m49
+  m11 --> m100
+  m11 --> m147
+  m11 --> m13
+  m12 --> m55
+  m12 --> m113
+  m12 --> m114
+  m12 --> m145
+  m16 --> m147
+  m16 --> m148
+  m19 --> m49
+  m19 --> m18
+  m20 --> m146
+  m22 --> m148
+  m22 --> m26
+  m22 --> m24
+  m23 --> m28
+  m23 --> m24
+  m25 --> m23
+  m25 --> m24
+  m26 --> m147
+  m26 --> m148
+  m26 --> m27
+  m29 --> m3
+  m29 --> m30
+  m29 --> m31
+  m29 --> m32
+  m30 --> m22
+  m30 --> m23
+  m30 --> m24
+  m30 --> m27
+  m30 --> m114
+  m30 --> m136
+  m30 --> m148
+  m31 --> m22
+  m31 --> m23
+  m31 --> m24
+  m31 --> m106
+  m31 --> m114
+  m31 --> m135
+  m31 --> m136
+  m31 --> m138
+  m31 --> m141
+  m31 --> m147
+  m31 --> m148
+  m32 --> m23
+  m32 --> m26
+  m32 --> m27
+  m32 --> m106
+  m32 --> m135
+  m32 --> m136
+  m32 --> m138
+  m32 --> m141
+  m32 --> m151
+  m33 --> m3
+  m33 --> m49
+  m33 --> m34
+  m33 --> m36
+  m33 --> m37
+  m33 --> m38
+  m33 --> m39
+  m34 --> m18
+  m34 --> m145
+  m35 --> m23
+  m35 --> m24
+  m35 --> m27
+  m35 --> m152
+  m35 --> m49
+  m36 --> m19
+  m36 --> m23
+  m36 --> m24
+  m36 --> m27
+  m36 --> m140
+  m36 --> m49
+  m36 --> m35
+  m37 --> m145
+  m37 --> m49
+  m38 --> m23
+  m38 --> m24
+  m38 --> m27
+  m38 --> m152
+  m39 --> m22
+  m39 --> m24
+  m39 --> m26
+  m39 --> m27
+  m39 --> m114
+  m39 --> m145
+  m39 --> m49
+  m40 --> m3
+  m40 --> m41
+  m40 --> m42
+  m40 --> m43
+  m40 --> m44
+  m40 --> m45
+  m40 --> m46
+  m40 --> m47
+  m41 --> m114
+  m41 --> m117
+  m41 --> m135
+  m41 --> m145
+  m41 --> m53
+  m42 --> m5
+  m42 --> m16
+  m42 --> m103
+  m42 --> m113
+  m42 --> m117
+  m42 --> m131
+  m42 --> m132
+  m42 --> m135
+  m42 --> m137
+  m42 --> m138
+  m42 --> m139
+  m42 --> m141
+  m42 --> m148
+  m42 --> m52
+  m43 --> m22
+  m43 --> m24
+  m44 --> m5
+  m44 --> m16
+  m44 --> m19
+  m44 --> m22
+  m44 --> m23
+  m44 --> m24
+  m44 --> m26
+  m44 --> m27
+  m44 --> m103
+  m44 --> m106
+  m44 --> m114
+  m44 --> m115
+  m44 --> m119
+  m44 --> m132
+  m44 --> m133
+  m44 --> m134
+  m44 --> m135
+  m44 --> m136
+  m44 --> m137
+  m44 --> m138
+  m44 --> m139
+  m44 --> m141
+  m44 --> m145
+  m44 --> m148
+  m44 --> m49
+  m44 --> m50
+  m44 --> m51
+  m45 --> m23
+  m45 --> m24
+  m45 --> m27
+  m45 --> m117
+  m45 --> m147
+  m45 --> m152
+  m45 --> m51
+  m45 --> m52
+  m46 --> m5
+  m46 --> m26
+  m46 --> m27
+  m46 --> m103
+  m46 --> m106
+  m46 --> m132
+  m46 --> m135
+  m46 --> m136
+  m46 --> m137
+  m46 --> m138
+  m46 --> m139
+  m46 --> m141
+  m46 --> m145
+  m46 --> m151
+  m46 --> m48
+  m47 --> m19
+  m47 --> m106
+  m47 --> m113
+  m47 --> m114
+  m47 --> m132
+  m47 --> m135
+  m47 --> m136
+  m47 --> m138
+  m47 --> m141
+  m48 --> m19
+  m48 --> m24
+  m48 --> m27
+  m48 --> m49
+  m49 --> m24
+  m49 --> m27
+  m49 --> m28
+  m49 --> m147
+  m49 --> m152
+  m49 --> m50
+  m50 --> m133
+  m50 --> m147
+  m51 --> m19
+  m51 --> m24
+  m51 --> m27
+  m51 --> m152
+  m51 --> m50
+  m52 --> m141
+  m52 --> m147
+  m52 --> m152
+  m53 --> m152
+  m54 --> m5
+  m54 --> m24
+  m54 --> m27
+  m54 --> m103
+  m54 --> m114
+  m54 --> m117
+  m54 --> m130
+  m54 --> m134
+  m54 --> m135
+  m54 --> m141
+  m54 --> m148
+  m54 --> m53
+  m54 --> m56
+  m55 --> m5
+  m55 --> m13
+  m55 --> m16
+  m55 --> m19
+  m55 --> m22
+  m55 --> m24
+  m55 --> m26
+  m55 --> m27
+  m55 --> m106
+  m55 --> m114
+  m55 --> m130
+  m55 --> m135
+  m55 --> m141
+  m55 --> m147
+  m55 --> m100
+  m55 --> m54
+  m55 --> m56
+  m55 --> m57
+  m56 --> m24
+  m56 --> m27
+  m56 --> m152
+  m56 --> m53
+  m56 --> m57
+  m57 --> m133
+  m57 --> m148
+  m57 --> m50
+  m58 --> m28
+  m58 --> m95
+  m59 --> m5
+  m59 --> m16
+  m59 --> m23
+  m59 --> m125
+  m59 --> m127
+  m59 --> m131
+  m59 --> m135
+  m59 --> m138
+  m59 --> m145
+  m59 --> m147
+  m59 --> m29
+  m59 --> m52
+  m59 --> m98
+  m60 --> m1
+  m60 --> m13
+  m60 --> m27
+  m60 --> m101
+  m60 --> m120
+  m60 --> m147
+  m60 --> m35
+  m60 --> m49
+  m60 --> m100
+  m61 --> m15
+  m61 --> m126
+  m62 --> m17
+  m62 --> m18
+  m62 --> m19
+  m62 --> m27
+  m62 --> m28
+  m62 --> m112
+  m62 --> m146
+  m62 --> m152
+  m63 --> m112
+  m64 --> m21
+  m64 --> m28
+  m65 --> m28
+  m65 --> m110
+  m65 --> m112
+  m66 --> m28
+  m66 --> m152
+  m67 --> m28
+  m68 --> m49
+  m69 --> m147
+  m69 --> m148
+  m69 --> m152
+  m69 --> m35
+  m69 --> m49
+  m69 --> m52
+  m69 --> m53
+  m69 --> m56
+  m70 --> m23
+  m70 --> m24
+  m70 --> m28
+  m70 --> m147
+  m71 --> m23
+  m71 --> m24
+  m71 --> m110
+  m71 --> m147
+  m71 --> m35
+  m71 --> m49
+  m71 --> m50
+  m71 --> m56
+  m73 --> m28
+  m74 --> m13
+  m74 --> m49
+  m74 --> m100
+  m75 --> m4
+  m75 --> m13
+  m75 --> m19
+  m75 --> m23
+  m75 --> m28
+  m75 --> m133
+  m75 --> m147
+  m75 --> m152
+  m75 --> m35
+  m75 --> m49
+  m75 --> m50
+  m75 --> m52
+  m75 --> m53
+  m75 --> m56
+  m75 --> m57
+  m75 --> m91
+  m75 --> m100
+  m76 --> m28
+  m77 --> m22
+  m77 --> m24
+  m77 --> m27
+  m77 --> m147
+  m77 --> m148
+  m77 --> m152
+  m77 --> m35
+  m77 --> m50
+  m77 --> m56
+  m78 --> m19
+  m78 --> m152
+  m78 --> m50
+  m78 --> m52
+  m78 --> m91
+  m78 --> m100
+  m79 --> m15
+  m79 --> m144
+  m80 --> m3
+  m80 --> m91
+  m80 --> m81
+  m80 --> m82
+  m80 --> m83
+  m80 --> m84
+  m81 --> m5
+  m81 --> m16
+  m81 --> m19
+  m81 --> m22
+  m81 --> m24
+  m81 --> m26
+  m81 --> m27
+  m81 --> m106
+  m81 --> m114
+  m81 --> m116
+  m81 --> m135
+  m81 --> m136
+  m81 --> m137
+  m81 --> m141
+  m81 --> m147
+  m81 --> m49
+  m81 --> m50
+  m81 --> m51
+  m82 --> m105
+  m82 --> m114
+  m82 --> m135
+  m82 --> m136
+  m82 --> m141
+  m82 --> m145
+  m83 --> m114
+  m83 --> m91
+  m84 --> m5
+  m84 --> m22
+  m84 --> m103
+  m84 --> m114
+  m84 --> m116
+  m84 --> m133
+  m84 --> m134
+  m84 --> m135
+  m84 --> m136
+  m84 --> m139
+  m84 --> m141
+  m84 --> m145
+  m84 --> m148
+  m84 --> m51
+  m84 --> m52
+  m84 --> m57
+  m84 --> m91
+  m84 --> m100
+  m85 --> m3
+  m85 --> m145
+  m85 --> m86
+  m85 --> m87
+  m85 --> m88
+  m85 --> m89
+  m85 --> m90
+  m85 --> m92
+  m85 --> m93
+  m85 --> m94
+  m85 --> m95
+  m86 --> m95
+  m87 --> m19
+  m87 --> m22
+  m87 --> m24
+  m87 --> m26
+  m87 --> m27
+  m87 --> m114
+  m87 --> m147
+  m87 --> m148
+  m87 --> m149
+  m87 --> m53
+  m88 --> m22
+  m88 --> m113
+  m88 --> m114
+  m88 --> m148
+  m88 --> m50
+  m88 --> m51
+  m89 --> m19
+  m89 --> m145
+  m89 --> m146
+  m89 --> m149
+  m89 --> m96
+  m90 --> m19
+  m90 --> m114
+  m90 --> m145
+  m90 --> m149
+  m90 --> m91
+  m91 --> m147
+  m92 --> m13
+  m92 --> m145
+  m92 --> m95
+  m93 --> m13
+  m93 --> m104
+  m93 --> m145
+  m93 --> m95
+  m94 --> m13
+  m94 --> m145
+  m94 --> m95
+  m96 --> m146
+  m97 --> m19
+  m97 --> m27
+  m97 --> m149
+  m98 --> m114
+  m99 --> m114
+  m99 --> m135
+  m99 --> m141
+  m99 --> m49
+  m99 --> m57
+  m99 --> m100
+  m100 --> m147
+  m101 --> m124
+  m103 --> m107
+  m104 --> m114
+  m104 --> m145
+  m106 --> m145
+  m109 --> m0
+  m110 --> m23
+  m110 --> m24
+  m110 --> m25
+  m110 --> m27
+  m111 --> m23
+  m111 --> m27
+  m111 --> m28
+  m111 --> m152
+  m113 --> m145
+  m114 --> m145
+  m115 --> m24
+  m115 --> m114
+  m116 --> m145
+  m116 --> m141
+  m116 --> m113
+  m116 --> m114
+  m117 --> m145
+  m117 --> m118
+  m117 --> m119
+  m118 --> m114
+  m120 --> m1
+  m120 --> m145
+  m120 --> m124
+  m120 --> m122
+  m120 --> m123
+  m125 --> m5
+  m125 --> m145
+  m125 --> m114
+  m125 --> m124
+  m125 --> m129
+  m126 --> m5
+  m126 --> m16
+  m126 --> m145
+  m126 --> m118
+  m126 --> m119
+  m126 --> m131
+  m126 --> m125
+  m127 --> m5
+  m127 --> m119
+  m127 --> m124
+  m127 --> m135
+  m127 --> m128
+  m127 --> m129
+  m128 --> m145
+  m131 --> m16
+  m131 --> m106
+  m131 --> m145
+  m131 --> m148
+  m131 --> m136
+  m131 --> m141
+  m132 --> m135
+  m132 --> m136
+  m132 --> m141
+  m133 --> m147
+  m134 --> m147
+  m134 --> m133
+  m134 --> m135
+  m134 --> m136
+  m134 --> m141
+  m135 --> m114
+  m136 --> m5
+  m136 --> m114
+  m136 --> m130
+  m136 --> m141
+  m137 --> m5
+  m137 --> m24
+  m137 --> m114
+  m137 --> m135
+  m137 --> m136
+  m138 --> m5
+  m138 --> m114
+  m139 --> m135
+  m139 --> m136
+  m140 --> m18
+  m140 --> m145
+  m140 --> m147
+  m140 --> m135
+  m140 --> m136
+  m140 --> m141
+  m141 --> m145
+  m141 --> m114
+  m142 --> m15
+  m142 --> m28
+  m142 --> m114
+  m142 --> m143
+  m144 --> m1
+  m144 --> m15
+  m144 --> m101
+  m148 --> m50
+  m148 --> m147
+  m149 --> m145

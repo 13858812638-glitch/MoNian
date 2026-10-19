@@ -1,0 +1,140 @@
+{
+  "initial": {
+    "count": 18,
+    "loaded": 18,
+    "gen": 2,
+    "first": [
+      "项目0/产品测试笔记00000.md",
+      "产品测试笔记0 产品详情规格 0 新款研发状态0"
+    ]
+  },
+  "offscreen": {
+    "steps": [
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      },
+      {
+        "updates": 0,
+        "builds": 0,
+        "mutations": 0,
+        "reads": 2,
+        "retained": true,
+        "loaded": 18
+      }
+    ],
+    "updateCount": 0,
+    "buildCount": 0,
+    "mutationCount": 0,
+    "readCount": 24,
+    "allDomRetained": true,
+    "sameVisibleOrder": true
+  },
+  "visibleChanged": {
+    "updates": 1,
+    "builds": 1,
+    "rendered": "产品测试笔记 VISIBLE_MARKER_20261018 new body",
+    "loaded": true
+  },
+  "scroll": {
+    "changed": true,
+    "visible": 18,
+    "summaryCount": 18,
+    "loaded": 36
+  },
+  "newQuery": {
+    "results": 0,
+    "loaded": 0,
+    "generation": 16
+  },
+  "cleanup": {
+    "destroyed": true,
+    "listeners": 7,
+    "pendingSnippetLoads": 0
+  },
+  "pageErrors": []
+}

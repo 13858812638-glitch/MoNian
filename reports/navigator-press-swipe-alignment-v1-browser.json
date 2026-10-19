@@ -1,0 +1,248 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "mobile": true,
+      "case": "folder.direct-touch-drag-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row",
+        "moved": "local-search-move-tree-row local-search-nav-row is-nav-touch-dragged",
+        "ended": "local-search-move-tree-row local-search-nav-row",
+        "activeBefore": false
+      }
+    },
+    {
+      "width": 390,
+      "mobile": true,
+      "case": "tags.direct-touch-drag-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row",
+        "moved": "local-search-move-tree-row local-search-nav-row is-nav-touch-dragged",
+        "ended": "local-search-move-tree-row local-search-nav-row",
+        "activeBefore": false
+      }
+    },
+    {
+      "width": 390,
+      "mobile": true,
+      "case": "properties.direct-touch-drag-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+        "moved": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key is-nav-touch-dragged",
+        "ended": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+        "activeBefore": false
+      }
+    },
+    {
+      "width": 390,
+      "mobile": true,
+      "case": "folder.count-scroll-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row is-no-sort is-nav-trailing-touch-pressed",
+        "scrolled": "local-search-move-tree-row local-search-nav-row is-no-sort is-nav-touch-dragged",
+        "end": "local-search-move-tree-row local-search-nav-row is-no-sort"
+      }
+    },
+    {
+      "width": 390,
+      "mobile": true,
+      "case": "shelf.right.inside-content-baseline",
+      "passed": true,
+      "detail": {
+        "shelfLeft": 26,
+        "shelfRight": 258,
+        "shelfWidth": 232,
+        "cardLeft": 12,
+        "cardRight": 378,
+        "cardWidth": 366,
+        "pad": 14,
+        "expectedLeft": 26,
+        "expectedRight": 364,
+        "buttons": 5,
+        "edge": "local-search-swipe-actions is-edge-left",
+        "viewport": 390,
+        "delta": 0
+      }
+    },
+    {
+      "width": 390,
+      "mobile": true,
+      "case": "shelf.left.inside-content-baseline",
+      "passed": true,
+      "detail": {
+        "shelfLeft": 132,
+        "shelfRight": 364,
+        "shelfWidth": 232,
+        "cardLeft": 12,
+        "cardRight": 378,
+        "cardWidth": 366,
+        "pad": 14,
+        "expectedLeft": 26,
+        "expectedRight": 364,
+        "buttons": 5,
+        "edge": "local-search-swipe-actions is-edge-right",
+        "viewport": 390,
+        "delta": 0
+      }
+    },
+    {
+      "width": 390,
+      "mobile": true,
+      "case": "pageerrors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "width": 250,
+      "mobile": true,
+      "case": "folder.direct-touch-drag-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row",
+        "moved": "local-search-move-tree-row local-search-nav-row is-nav-touch-dragged",
+        "ended": "local-search-move-tree-row local-search-nav-row",
+        "activeBefore": false
+      }
+    },
+    {
+      "width": 250,
+      "mobile": true,
+      "case": "tags.direct-touch-drag-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row",
+        "moved": "local-search-move-tree-row local-search-nav-row is-nav-touch-dragged",
+        "ended": "local-search-move-tree-row local-search-nav-row",
+        "activeBefore": false
+      }
+    },
+    {
+      "width": 250,
+      "mobile": true,
+      "case": "properties.direct-touch-drag-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+        "moved": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key is-nav-touch-dragged",
+        "ended": "local-search-move-tree-row local-search-nav-row local-search-nav-property-key",
+        "activeBefore": false
+      }
+    },
+    {
+      "width": 250,
+      "mobile": true,
+      "case": "folder.count-scroll-cancels",
+      "passed": true,
+      "detail": {
+        "start": "local-search-move-tree-row local-search-nav-row is-no-sort is-nav-trailing-touch-pressed",
+        "scrolled": "local-search-move-tree-row local-search-nav-row is-no-sort is-nav-touch-dragged",
+        "end": "local-search-move-tree-row local-search-nav-row is-no-sort"
+      }
+    },
+    {
+      "width": 250,
+      "mobile": true,
+      "case": "shelf.right.inside-content-baseline",
+      "passed": true,
+      "detail": {
+        "shelfLeft": 26,
+        "shelfRight": 224,
+        "shelfWidth": 198,
+        "cardLeft": 12,
+        "cardRight": 238,
+        "cardWidth": 226,
+        "pad": 14,
+        "expectedLeft": 26,
+        "expectedRight": 224,
+        "buttons": 5,
+        "edge": "local-search-swipe-actions is-edge-left",
+        "viewport": 250,
+        "delta": 0
+      }
+    },
+    {
+      "width": 250,
+      "mobile": true,
+      "case": "shelf.left.inside-content-baseline",
+      "passed": true,
+      "detail": {
+        "shelfLeft": 26,
+        "shelfRight": 224,
+        "shelfWidth": 198,
+        "cardLeft": 12,
+        "cardRight": 238,
+        "cardWidth": 226,
+        "pad": 14,
+        "expectedLeft": 26,
+        "expectedRight": 224,
+        "buttons": 5,
+        "edge": "local-search-swipe-actions is-edge-right",
+        "viewport": 250,
+        "delta": 0
+      }
+    },
+    {
+      "width": 250,
+      "mobile": true,
+      "case": "pageerrors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "width": 1100,
+      "mobile": false,
+      "case": "shelf.right.inside-content-baseline",
+      "passed": true,
+      "detail": {
+        "shelfLeft": 306,
+        "shelfRight": 538,
+        "shelfWidth": 232,
+        "cardLeft": 292,
+        "cardRight": 1073,
+        "cardWidth": 781,
+        "pad": 14,
+        "expectedLeft": 306,
+        "expectedRight": 1059,
+        "buttons": 5,
+        "edge": "local-search-swipe-actions is-edge-left",
+        "viewport": 1100,
+        "delta": 0
+      }
+    },
+    {
+      "width": 1100,
+      "mobile": false,
+      "case": "shelf.left.inside-content-baseline",
+      "passed": true,
+      "detail": {
+        "shelfLeft": 827,
+        "shelfRight": 1059,
+        "shelfWidth": 232,
+        "cardLeft": 292,
+        "cardRight": 1073,
+        "cardWidth": 781,
+        "pad": 14,
+        "expectedLeft": 306,
+        "expectedRight": 1059,
+        "buttons": 5,
+        "edge": "local-search-swipe-actions is-edge-right",
+        "viewport": 1100,
+        "delta": 0
+      }
+    },
+    {
+      "width": 1100,
+      "mobile": false,
+      "case": "pageerrors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 17,
+  "total": 17,
+  "source": "/mnt/data/gls_followup/GLS-v5.2-P1P2P3P4-工程与生命周期收口-v1-Source"
+}

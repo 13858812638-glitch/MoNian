@@ -1,0 +1,445 @@
+[
+  {
+    "name": "prototype:SparseHeightIndex",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:IoPool",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:BodyIndex",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:QueryState",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:FilterState",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:PointerSortCoordinator",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:FilterEngine",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:ResultRanker",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:BatchMetadataService",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SharedSwipeBackPrimitive",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:LocalSearchSwipeBackPrimitive",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchDropdownController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:BatchMetadataController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchFacetController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchSortController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchResultControlsController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SwipeActionCoordinator",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchResultRendererController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchCreateController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchSelectionController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SharedSearchStateCoordinator",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:NavigatorCustomization",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchNavigatorController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchCore",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:MobileFrameController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchWorkspaceCapabilities",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchView",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchWindowSession",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SearchModalHost",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:LocalSearchOverlayHost",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:LocalSearchSettingTab",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:FileOperationService",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:OperationOverlayController",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:LocalSearchPlugin",
+    "status": "PASS"
+  },
+  {
+    "name": "prototype:SortFeedback",
+    "status": "PASS"
+  },
+  {
+    "name": "symbol-surface",
+    "status": "PASS",
+    "symbols": 341
+  },
+  {
+    "name": "normalize:normalizeSortFieldOrder",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeHiddenSortFields",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeSortDirection",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeModalSearchQuery",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeModalViewportAnchor",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeGLSMetadataDirectory",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeMetadataPropertyType",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizePropertyValueCatalog",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:validateEditablePropertyKey",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeEditableTagValue",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:editableTagError",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeUniqueStringList",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeStringListMap",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeTagValue",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:tagIdentityKey",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeUniqueTagList",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFilterTagSelection",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeVaultFolderPath",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeHexColor",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeResultFolderColors",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeExcludedFolders",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeResultContentOrder",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeRecentIconIds",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFilterPoolSelectionMode",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizePropertyPoolEntry",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizePropertyPoolEntries",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFilterPoolConfig",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFilterPools",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeResultViewId",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeResultViews",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeNavigatorToolbars",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeNavigatorVisibleSections",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeNavigatorTimeField",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFileTypeFilterValue",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFileTypeFilterSelection",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFilterMatchMode",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFilterDate",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeFilterDateRange",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeExcludedAttachmentTypes",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizePropertySelection",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeCreateType",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeCreatePropertyTypes",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeCreateMetadataMemory",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalize:normalizeNavigatorCustomization",
+    "status": "PASS",
+    "inputs": 9
+  },
+  {
+    "name": "normalization-known-answers",
+    "status": "PASS"
+  },
+  {
+    "name": "text-formats-snippets",
+    "status": "PASS",
+    "oneArgumentCases": 90,
+    "matchingCases": 150
+  },
+  {
+    "name": "height-index-reference",
+    "status": "PASS"
+  },
+  {
+    "name": "query-filter-state",
+    "status": "PASS"
+  },
+  {
+    "name": "body-index",
+    "status": "PASS"
+  },
+  {
+    "name": "io-concurrency",
+    "status": "PASS"
+  },
+  {
+    "name": "production-lifecycle",
+    "status": "PASS",
+    "commands": 7,
+    "viewTypes": 2,
+    "apiVersion": 19
+  },
+  {
+    "name": "settings-migration-queue",
+    "status": "PASS"
+  },
+  {
+    "name": "settings-error-recovery",
+    "status": "PASS"
+  },
+  {
+    "name": "ordinary-index-and-writes",
+    "status": "PASS"
+  },
+  {
+    "name": "content-cache",
+    "status": "PASS"
+  },
+  {
+    "name": "file-operation-leases",
+    "status": "PASS"
+  },
+  {
+    "name": "reproducible-build-and-approved-css",
+    "status": "PASS"
+  },
+  {
+    "name": "virtual-provider-generation-and-no-persistence",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid-external-requests",
+    "status": "PASS",
+    "inputs": 8
+  },
+  {
+    "name": "non-markdown-sidecar-write",
+    "status": "PASS"
+  },
+  {
+    "name": "no-dida-project-coupling",
+    "status": "PASS"
+  },
+  {
+    "name": "generic-property-public-interface",
+    "status": "PASS"
+  }
+]

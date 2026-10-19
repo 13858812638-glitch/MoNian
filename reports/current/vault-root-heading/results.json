@@ -1,0 +1,326 @@
+[
+  {
+    "configuration": "desktop-light",
+    "passed": 12,
+    "checks": [
+      {
+        "name": "folder-heading-exists",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-caption",
+        "ok": true,
+        "details": {
+          "text": "Wisdom_手机端"
+        }
+      },
+      {
+        "name": "stateful-vault-icon",
+        "ok": true,
+        "details": {
+          "icon": "open-vault",
+          "expanded": true
+        }
+      },
+      {
+        "name": "stable-heading-dom",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "fold-state-flips",
+        "ok": true,
+        "details": {
+          "expanded": false
+        }
+      },
+      {
+        "name": "vault-icon-flips",
+        "ok": true,
+        "details": {
+          "icon": "vault"
+        }
+      },
+      {
+        "name": "fold-preserves-vault-name",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-rename-updates-cached-heading",
+        "ok": true,
+        "details": {
+          "text": "新仓库名"
+        }
+      },
+      {
+        "name": "vault-rename-updates-a11y",
+        "ok": true,
+        "details": {
+          "aria": "新仓库名",
+          "title": "新仓库名"
+        }
+      },
+      {
+        "name": "folder-group-id-unchanged",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-heading-unmodified",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "properties-heading-unmodified",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "errors": []
+  },
+  {
+    "configuration": "desktop-dark",
+    "passed": 12,
+    "checks": [
+      {
+        "name": "folder-heading-exists",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-caption",
+        "ok": true,
+        "details": {
+          "text": "Wisdom_手机端"
+        }
+      },
+      {
+        "name": "stateful-vault-icon",
+        "ok": true,
+        "details": {
+          "icon": "open-vault",
+          "expanded": true
+        }
+      },
+      {
+        "name": "stable-heading-dom",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "fold-state-flips",
+        "ok": true,
+        "details": {
+          "expanded": false
+        }
+      },
+      {
+        "name": "vault-icon-flips",
+        "ok": true,
+        "details": {
+          "icon": "vault"
+        }
+      },
+      {
+        "name": "fold-preserves-vault-name",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-rename-updates-cached-heading",
+        "ok": true,
+        "details": {
+          "text": "新仓库名"
+        }
+      },
+      {
+        "name": "vault-rename-updates-a11y",
+        "ok": true,
+        "details": {
+          "aria": "新仓库名",
+          "title": "新仓库名"
+        }
+      },
+      {
+        "name": "folder-group-id-unchanged",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-heading-unmodified",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "properties-heading-unmodified",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "errors": []
+  },
+  {
+    "configuration": "mobile-light",
+    "passed": 12,
+    "checks": [
+      {
+        "name": "folder-heading-exists",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-caption",
+        "ok": true,
+        "details": {
+          "text": "Wisdom_手机端"
+        }
+      },
+      {
+        "name": "stateful-vault-icon",
+        "ok": true,
+        "details": {
+          "icon": "vault",
+          "expanded": false
+        }
+      },
+      {
+        "name": "stable-heading-dom",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "fold-state-flips",
+        "ok": true,
+        "details": {
+          "expanded": true
+        }
+      },
+      {
+        "name": "vault-icon-flips",
+        "ok": true,
+        "details": {
+          "icon": "open-vault"
+        }
+      },
+      {
+        "name": "fold-preserves-vault-name",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-rename-updates-cached-heading",
+        "ok": true,
+        "details": {
+          "text": "新仓库名"
+        }
+      },
+      {
+        "name": "vault-rename-updates-a11y",
+        "ok": true,
+        "details": {
+          "aria": "新仓库名",
+          "title": "新仓库名"
+        }
+      },
+      {
+        "name": "folder-group-id-unchanged",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-heading-unmodified",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "properties-heading-unmodified",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "errors": []
+  },
+  {
+    "configuration": "mobile-dark",
+    "passed": 12,
+    "checks": [
+      {
+        "name": "folder-heading-exists",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-caption",
+        "ok": true,
+        "details": {
+          "text": "Wisdom_手机端"
+        }
+      },
+      {
+        "name": "stateful-vault-icon",
+        "ok": true,
+        "details": {
+          "icon": "vault",
+          "expanded": false
+        }
+      },
+      {
+        "name": "stable-heading-dom",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "fold-state-flips",
+        "ok": true,
+        "details": {
+          "expanded": true
+        }
+      },
+      {
+        "name": "vault-icon-flips",
+        "ok": true,
+        "details": {
+          "icon": "open-vault"
+        }
+      },
+      {
+        "name": "fold-preserves-vault-name",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "vault-rename-updates-cached-heading",
+        "ok": true,
+        "details": {
+          "text": "新仓库名"
+        }
+      },
+      {
+        "name": "vault-rename-updates-a11y",
+        "ok": true,
+        "details": {
+          "aria": "新仓库名",
+          "title": "新仓库名"
+        }
+      },
+      {
+        "name": "folder-group-id-unchanged",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "tags-heading-unmodified",
+        "ok": true,
+        "details": {}
+      },
+      {
+        "name": "properties-heading-unmodified",
+        "ok": true,
+        "details": {}
+      }
+    ],
+    "errors": []
+  }
+]

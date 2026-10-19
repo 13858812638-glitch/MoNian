@@ -1,0 +1,78 @@
+{
+  "environment": {
+    "engine": "Chromium 144.0.7559.96",
+    "host": "tests/host.js mock Obsidian",
+    "nativeObsidian": false,
+    "viewportModes": [
+      "desktop 1280x900",
+      "mobile emulation 390x844"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  "results": [
+    {
+      "configuration": "desktop-light",
+      "scenario": "01-initial",
+      "status": "FAIL",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    },
+    {
+      "configuration": "mobile-light",
+      "scenario": "01-initial",
+      "status": "FAIL",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    },
+    {
+      "configuration": "desktop-dark",
+      "scenario": "01-initial",
+      "status": "FAIL",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    },
+    {
+      "configuration": "mobile-dark",
+      "scenario": "01-initial",
+      "status": "FAIL",
+      "comparison": "Exact geometry/state/files and DOM with class tokens canonicalized; only mobile dialog tabindex and empty portal lifetime are normalized, with an independent tabindex assertion and a separate root Picker release test; mobile 04 retains main input; other focus remains exact"
+    }
+  ],
+  "passed": 0,
+  "failed": 4,
+  "errors": [
+    {
+      "configuration": "desktop-light",
+      "side": "B",
+      "error": "A/B mismatch: desktop-light 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    },
+    {
+      "configuration": "mobile-light",
+      "side": "B",
+      "error": "A/B mismatch: mobile-light 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "error": "A/B mismatch: desktop-dark 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    },
+    {
+      "configuration": "mobile-dark",
+      "side": "B",
+      "error": "A/B mismatch: mobile-dark 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    }
+  ],
+  "unverified": [
+    "native Obsidian desktop",
+    "iOS/Android native WebView, IME and touch physics",
+    "real Dida/workbench/NAS integration"
+  ]
+}

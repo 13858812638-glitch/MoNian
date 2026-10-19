@@ -1,0 +1,83 @@
+--- upload-source/src/ui/overlays/SearchDropdownController.js
++++ src/ui/overlays/SearchDropdownController.js
+@@ -82,12 +82,22 @@
+     }
+ 
+     _disposePanelFrame(panel, anchor, anchorWasCurrent) {
++        const portal = panel?.parentElement;
+         anchor?.setAttribute("aria-expanded", "false");
+         if (anchor && !anchorWasCurrent) {
+             anchor.classList.remove("is-current");
+         }
+         disposePickerCleanup(panel);
+         panel?.remove();
++        // Match the working mobile Picker lifecycle: a completed workflow
++        // releases its empty portal. A hidden parent or another surface keeps
++        // the portal alive; native editing nodes are never moved/recreated.
++        if (Platform.isMobile && portal === this.owner?._popupHost
++            && portal && !portal.childElementCount) {
++            this.owner.plugin._hoverHintObserver?.forgetRoot(portal);
++            portal.remove();
++            this.owner._popupHost = null;
++        }
+     }
+ 
+     close(restoreFocus = true, { returnToParent = true, force = false } = {}) {
+@@ -310,7 +320,7 @@
+         // Only keyboard navigation transfers focus to dialog chrome. Touch
+         // opening never performs a delayed focus handoff while iOS is closing
+         // its keyboard; the next native input tap starts its own edit session.
+-        if (panel._lsKeyboardOpened && this.isActivePanel(panel) && panel.isConnected
++        if (!Platform.isMobile && panel._lsKeyboardOpened && this.isActivePanel(panel) && panel.isConnected
+             && (active === expected || active === panel.ownerDocument.body)) {
+             panel.focus({ preventScroll: true });
+         }
+@@ -435,16 +445,18 @@
+ 
+         const panel = owner.popupSurfaceHost().createDiv({
+             cls: "local-search-dropdown",
+-            attr: { role: "dialog", "aria-label": title, tabindex: "-1" }
++            attr: { role: "dialog", "aria-label": title,
++                ...(!Platform.isMobile ? { tabindex: "-1" } : {}) }
+         });
+         // 默认 top/left 为 auto：不能在第一轮 rAF 定位前露出临时静态位置。
+         // visibility:hidden 仍参与尺寸测量；第一次成功定位才显示。
+         panel.style.visibility = "hidden";
+         panel.createDiv({ cls: "local-search-dropdown-title", text: title });
+         panel._lsInitialFocus = panel.ownerDocument.activeElement;
+-        panel._lsKeyboardOpened = keyboardOpened ?? (!Platform.isMobile || (
+-            panel.ownerDocument.activeElement === anchor && anchor.matches(":focus-visible")
+-        ));
++        // :focus-visible on an input does not distinguish a finger tap from
++        // keyboard navigation. Mobile chrome must not become a competing
++        // focus target before the next native input tap (including child return).
++        panel._lsKeyboardOpened = !Platform.isMobile && (keyboardOpened ?? true);
+         markSearchPopupActive(panel);
+         panel._lsNavigateBack = () => this._navigateBack(panel);
+         configureSharedPickerHeader(panel, { headingText: title });
+--- upload-source/src/styles/styles.css
++++ src/styles/styles.css
+@@ -4890,6 +4890,8 @@
+     color: var(--text-normal);
+     font-size: var(--ls-picker-row-font-size);
+     line-height: var(--ls-search-surface-h, 38px);
++    /* Same native touch contract as the working Feishu Picker input. */
++    touch-action: manipulation;
+ }
+ 
+ .local-search-picker-search::placeholder {
+@@ -7058,10 +7060,11 @@
+     min-height: var(--ui-mobile-frame-height) !important;
+     max-height: var(--ui-mobile-frame-height) !important;
+ }
+-/* One mobile text-entry contract across search, Picker and rename forms.
++/* Mobile text-entry sizing for main search and rename forms.
+    Keep the native editing scale stable; never disable viewport zoom or draw
+-   a synthetic caret. Larger user-configured type remains respected. */
+-body.is-mobile .local-search-content :is(input, textarea)[data-ls-interaction="input"],
++   a synthetic caret. Picker search keeps its own row-font token, matching
++   the working Feishu input instead of overriding the configured size. */
++body.is-mobile .local-search-content :is(input, textarea)[data-ls-interaction="input"]:not(.local-search-picker-search),
+ body.is-mobile .local-search-settings-page :is(input:not([type="checkbox"]):not([type="radio"]), textarea) {
+     font-size: max(16px, var(--ui-native-input-font-size, 16px)) !important;
+ }

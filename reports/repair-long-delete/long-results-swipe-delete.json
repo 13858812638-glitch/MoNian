@@ -1,0 +1,334 @@
+[
+  {
+    "case": "light-desktop",
+    "initial_count": 44,
+    "delete_0": {
+      "before": {
+        "candidate": "资料/虚拟审计006.md",
+        "scrollTop": 868,
+        "window": [
+          0,
+          21
+        ],
+        "count": 44
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计002.md",
+        "last": "资料/虚拟审计010.md",
+        "virtual": [
+          1,
+          22
+        ],
+        "rendered": 21,
+        "top": 902,
+        "clientHeight": 610,
+        "scrollHeight": 4256,
+        "range": 43
+      },
+      "passed": true
+    },
+    "delete_1": {
+      "before": {
+        "candidate": "资料/虚拟审计016.md",
+        "scrollTop": 1677,
+        "window": [
+          10,
+          31
+        ],
+        "count": 43
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计012.md",
+        "last": "资料/虚拟审计020.md",
+        "virtual": [
+          9,
+          33
+        ],
+        "rendered": 24,
+        "top": 1613,
+        "clientHeight": 610,
+        "scrollHeight": 3904,
+        "range": 42
+      },
+      "passed": true
+    },
+    "delete_2": {
+      "before": {
+        "candidate": "资料/虚拟审计024.md",
+        "scrollTop": 2273,
+        "window": [
+          16,
+          40
+        ],
+        "count": 42
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计020.md",
+        "last": "资料/虚拟审计028.md",
+        "virtual": [
+          16,
+          40
+        ],
+        "rendered": 24,
+        "top": 2285,
+        "clientHeight": 610,
+        "scrollHeight": 3744,
+        "range": 41
+      },
+      "passed": true
+    },
+    "pageerrors": []
+  },
+  {
+    "case": "light-mobile",
+    "initial_count": 44,
+    "delete_0": {
+      "before": {
+        "candidate": "资料/虚拟审计005.md",
+        "scrollTop": 865,
+        "window": [
+          0,
+          24
+        ],
+        "count": 44
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计002.md",
+        "last": "资料/虚拟审计010.md",
+        "virtual": [
+          0,
+          24
+        ],
+        "rendered": 24,
+        "top": 865,
+        "clientHeight": 610,
+        "scrollHeight": 4264,
+        "range": 43
+      },
+      "passed": true
+    },
+    "delete_1": {
+      "before": {
+        "candidate": "资料/虚拟审计015.md",
+        "scrollTop": 1681,
+        "window": [
+          9,
+          33
+        ],
+        "count": 43
+      },
+      "after": {
+        "visible": 7,
+        "first": "资料/虚拟审计012.md",
+        "last": "资料/虚拟审计019.md",
+        "virtual": [
+          9,
+          33
+        ],
+        "rendered": 24,
+        "top": 1677,
+        "clientHeight": 610,
+        "scrollHeight": 4138,
+        "range": 42
+      },
+      "passed": true
+    },
+    "delete_2": {
+      "before": {
+        "candidate": "资料/虚拟审计023.md",
+        "scrollTop": 2434,
+        "window": [
+          16,
+          40
+        ],
+        "count": 42
+      },
+      "after": {
+        "visible": 7,
+        "first": "资料/虚拟审计020.md",
+        "last": "资料/虚拟审计027.md",
+        "virtual": [
+          16,
+          40
+        ],
+        "rendered": 24,
+        "top": 2438,
+        "clientHeight": 610,
+        "scrollHeight": 4010,
+        "range": 41
+      },
+      "passed": true
+    },
+    "pageerrors": []
+  },
+  {
+    "case": "dark-desktop",
+    "initial_count": 44,
+    "delete_0": {
+      "before": {
+        "candidate": "资料/虚拟审计006.md",
+        "scrollTop": 868,
+        "window": [
+          0,
+          21
+        ],
+        "count": 44
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计002.md",
+        "last": "资料/虚拟审计010.md",
+        "virtual": [
+          1,
+          22
+        ],
+        "rendered": 21,
+        "top": 902,
+        "clientHeight": 610,
+        "scrollHeight": 4256,
+        "range": 43
+      },
+      "passed": true
+    },
+    "delete_1": {
+      "before": {
+        "candidate": "资料/虚拟审计016.md",
+        "scrollTop": 1677,
+        "window": [
+          10,
+          31
+        ],
+        "count": 43
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计012.md",
+        "last": "资料/虚拟审计020.md",
+        "virtual": [
+          9,
+          33
+        ],
+        "rendered": 24,
+        "top": 1613,
+        "clientHeight": 610,
+        "scrollHeight": 3904,
+        "range": 42
+      },
+      "passed": true
+    },
+    "delete_2": {
+      "before": {
+        "candidate": "资料/虚拟审计024.md",
+        "scrollTop": 2273,
+        "window": [
+          16,
+          40
+        ],
+        "count": 42
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计020.md",
+        "last": "资料/虚拟审计028.md",
+        "virtual": [
+          16,
+          40
+        ],
+        "rendered": 24,
+        "top": 2285,
+        "clientHeight": 610,
+        "scrollHeight": 3744,
+        "range": 41
+      },
+      "passed": true
+    },
+    "pageerrors": []
+  },
+  {
+    "case": "dark-mobile",
+    "initial_count": 44,
+    "delete_0": {
+      "before": {
+        "candidate": "资料/虚拟审计005.md",
+        "scrollTop": 865,
+        "window": [
+          0,
+          24
+        ],
+        "count": 44
+      },
+      "after": {
+        "visible": 8,
+        "first": "资料/虚拟审计002.md",
+        "last": "资料/虚拟审计010.md",
+        "virtual": [
+          0,
+          24
+        ],
+        "rendered": 24,
+        "top": 865,
+        "clientHeight": 610,
+        "scrollHeight": 4264,
+        "range": 43
+      },
+      "passed": true
+    },
+    "delete_1": {
+      "before": {
+        "candidate": "资料/虚拟审计015.md",
+        "scrollTop": 1681,
+        "window": [
+          9,
+          33
+        ],
+        "count": 43
+      },
+      "after": {
+        "visible": 7,
+        "first": "资料/虚拟审计012.md",
+        "last": "资料/虚拟审计019.md",
+        "virtual": [
+          9,
+          33
+        ],
+        "rendered": 24,
+        "top": 1677,
+        "clientHeight": 610,
+        "scrollHeight": 4138,
+        "range": 42
+      },
+      "passed": true
+    },
+    "delete_2": {
+      "before": {
+        "candidate": "资料/虚拟审计023.md",
+        "scrollTop": 2434,
+        "window": [
+          16,
+          40
+        ],
+        "count": 42
+      },
+      "after": {
+        "visible": 7,
+        "first": "资料/虚拟审计020.md",
+        "last": "资料/虚拟审计027.md",
+        "virtual": [
+          16,
+          40
+        ],
+        "rendered": 24,
+        "top": 2438,
+        "clientHeight": 610,
+        "scrollHeight": 4010,
+        "range": 41
+      },
+      "passed": true
+    },
+    "pageerrors": []
+  }
+]

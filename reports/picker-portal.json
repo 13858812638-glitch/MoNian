@@ -1,0 +1,847 @@
+{
+  "nativeIOSBuildValidated": false,
+  "deviceEvidence": "User confirmed phase E on iPhone; permanent build not yet device-tested",
+  "host": "mock Obsidian",
+  "passed": 48,
+  "failed": 0,
+  "results": [
+    {
+      "case": "chromium-ios-sidebar-normal-startup-and-scope",
+      "passed": true,
+      "evidence": {
+        "commands": [
+          "open-local-search-tab",
+          "open-local-search",
+          "move-current-file",
+          "delete-current-file",
+          "batch-edit-properties",
+          "open-local-search-sidebar",
+          "toggle-local-search-density"
+        ],
+        "emptyDisplay": "block",
+        "donor": "block"
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-folder-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": false
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-folder-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-tags-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": false
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-tags-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-property-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": false
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-property-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-property-value-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": false
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-property-value-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-picker-dialog-native-portal",
+      "passed": true,
+      "evidence": {
+        "hit": true,
+        "direct": true,
+        "preservedOwner": true,
+        "fixed": true,
+        "display": "contents",
+        "caret": "rgb(238, 238, 238)",
+        "focus": true,
+        "same": true
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-independent-dialog-shared-native-portal",
+      "passed": true,
+      "evidence": {
+        "direct": true,
+        "display": "contents",
+        "z": 11021,
+        "restored": "contents"
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-child-swipe-return",
+      "passed": true,
+      "evidence": {
+        "hit": true,
+        "returned": true,
+        "input": true,
+        "samePortal": true,
+        "display": "contents",
+        "calls": []
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-native-input-and-vertical-gesture",
+      "passed": true,
+      "evidence": {
+        "same": true
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-outside-close",
+      "passed": true,
+      "evidence": {
+        "closed": true,
+        "removed": true,
+        "hostCleared": true
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-standalone-dialog-visible",
+      "passed": true,
+      "evidence": {
+        "hit": true,
+        "display": "contents"
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-standalone-dialog-cancel",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "case": "chromium-ios-sidebar-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": true,
+        "display": "contents"
+      }
+    },
+    {
+      "case": "chromium-ios-sidebar-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "chromium-ios-modal-normal-startup-and-scope",
+      "passed": true,
+      "evidence": {
+        "commands": [
+          "open-local-search-tab",
+          "open-local-search",
+          "move-current-file",
+          "delete-current-file",
+          "batch-edit-properties",
+          "open-local-search-sidebar",
+          "toggle-local-search-density"
+        ],
+        "emptyDisplay": "block",
+        "donor": "block"
+      }
+    },
+    {
+      "case": "chromium-ios-modal-folder-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": true
+      }
+    },
+    {
+      "case": "chromium-ios-modal-folder-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-modal-tags-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": true
+      }
+    },
+    {
+      "case": "chromium-ios-modal-tags-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-modal-property-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": true
+      }
+    },
+    {
+      "case": "chromium-ios-modal-property-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-modal-property-value-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "contents",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": true
+      }
+    },
+    {
+      "case": "chromium-ios-modal-property-value-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-ios-modal-picker-dialog-native-portal",
+      "passed": true,
+      "evidence": {
+        "hit": true,
+        "direct": true,
+        "preservedOwner": true,
+        "fixed": true,
+        "display": "contents",
+        "caret": "rgb(238, 238, 238)",
+        "focus": true,
+        "same": true
+      }
+    },
+    {
+      "case": "chromium-ios-modal-independent-dialog-shared-native-portal",
+      "passed": true,
+      "evidence": {
+        "direct": true,
+        "display": "contents",
+        "z": 11021,
+        "restored": "contents"
+      }
+    },
+    {
+      "case": "chromium-ios-modal-child-swipe-return",
+      "passed": true,
+      "evidence": {
+        "hit": true,
+        "returned": true,
+        "input": true,
+        "samePortal": true,
+        "display": "contents",
+        "calls": []
+      }
+    },
+    {
+      "case": "chromium-ios-modal-native-input-and-vertical-gesture",
+      "passed": true,
+      "evidence": {
+        "same": true
+      }
+    },
+    {
+      "case": "chromium-ios-modal-outside-close",
+      "passed": true,
+      "evidence": {
+        "closed": true,
+        "removed": true,
+        "hostCleared": true
+      }
+    },
+    {
+      "case": "chromium-ios-modal-standalone-dialog-visible",
+      "passed": true,
+      "evidence": {
+        "hit": true,
+        "display": "contents"
+      }
+    },
+    {
+      "case": "chromium-ios-modal-standalone-dialog-cancel",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "case": "chromium-ios-modal-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": true,
+        "display": "contents"
+      }
+    },
+    {
+      "case": "chromium-ios-modal-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "chromium-android-sidebar-normal-startup-and-scope",
+      "passed": true,
+      "evidence": {
+        "commands": [
+          "open-local-search-tab",
+          "open-local-search",
+          "move-current-file",
+          "delete-current-file",
+          "batch-edit-properties",
+          "open-local-search-sidebar",
+          "toggle-local-search-density"
+        ],
+        "emptyDisplay": "block",
+        "donor": "block"
+      }
+    },
+    {
+      "case": "chromium-android-sidebar-tags-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "block",
+        "rect": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "before": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "after": [
+          12,
+          0,
+          406,
+          778.21875
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "16px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": false
+      }
+    },
+    {
+      "case": "chromium-android-sidebar-tags-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-android-sidebar-outside-close",
+      "passed": true,
+      "evidence": {
+        "closed": true,
+        "removed": true,
+        "hostCleared": true
+      }
+    },
+    {
+      "case": "chromium-android-sidebar-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": true,
+        "display": "block"
+      }
+    },
+    {
+      "case": "chromium-android-sidebar-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "chromium-desktop-sidebar-normal-startup-and-scope",
+      "passed": true,
+      "evidence": {
+        "commands": [
+          "open-local-search-tab",
+          "open-local-search",
+          "move-current-file",
+          "delete-current-file",
+          "batch-edit-properties",
+          "open-local-search-sidebar",
+          "toggle-local-search-density"
+        ],
+        "emptyDisplay": "block",
+        "donor": "block"
+      }
+    },
+    {
+      "case": "chromium-desktop-sidebar-tags-portal-and-geometry",
+      "passed": true,
+      "evidence": {
+        "display": "block",
+        "rect": [
+          198,
+          16,
+          400,
+          560
+        ],
+        "before": [
+          198,
+          16,
+          400,
+          560
+        ],
+        "after": [
+          198,
+          16,
+          400,
+          560
+        ],
+        "hit": true,
+        "pointer": "auto",
+        "position": "fixed",
+        "mainSame": true,
+        "mainBefore": [
+          "15px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "mainAfter": [
+          "15px",
+          "38px",
+          "rgb(238, 238, 238)",
+          "block"
+        ],
+        "modalParent": false
+      }
+    },
+    {
+      "case": "chromium-desktop-sidebar-tags-native-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "E测试",
+        "selection": [
+          3,
+          3
+        ],
+        "calls": [],
+        "phase": null
+      }
+    },
+    {
+      "case": "chromium-desktop-sidebar-outside-close",
+      "passed": true,
+      "evidence": {
+        "closed": true,
+        "removed": false,
+        "hostCleared": false
+      }
+    },
+    {
+      "case": "chromium-desktop-sidebar-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": false,
+        "display": "block"
+      }
+    },
+    {
+      "case": "chromium-desktop-sidebar-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    }
+  ]
+}

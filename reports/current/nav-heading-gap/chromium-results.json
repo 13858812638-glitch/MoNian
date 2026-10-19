@@ -1,0 +1,1040 @@
+[
+  {
+    "configuration": "mobile/light/375",
+    "passed": 18,
+    "checks": [
+      {
+        "test": "section_0_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_0_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_0_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_0_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_0_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_1_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_1_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_1_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_1_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_1_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_2_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_2_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_2_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_2_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_2_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "collapsed_content_hidden",
+        "pass": true
+      },
+      {
+        "test": "collapsed_no_margin",
+        "pass": true
+      },
+      {
+        "test": "picker_not_affected",
+        "pass": true
+      }
+    ],
+    "computed": {
+      "layout": "mobile",
+      "initial": [
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "zero": [
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "thirteen": [
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "collapsed": {
+        "display": "none",
+        "margin": "0px"
+      },
+      "pickerMargin": "0px"
+    }
+  },
+  {
+    "configuration": "mobile/light/430",
+    "passed": 18,
+    "checks": [
+      {
+        "test": "section_0_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_0_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_0_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_0_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_0_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_1_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_1_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_1_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_1_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_1_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_2_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_2_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_2_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_2_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_2_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "collapsed_content_hidden",
+        "pass": true
+      },
+      {
+        "test": "collapsed_no_margin",
+        "pass": true
+      },
+      {
+        "test": "picker_not_affected",
+        "pass": true
+      }
+    ],
+    "computed": {
+      "layout": "mobile",
+      "initial": [
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "zero": [
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "thirteen": [
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "collapsed": {
+        "display": "none",
+        "margin": "0px"
+      },
+      "pickerMargin": "0px"
+    }
+  },
+  {
+    "configuration": "mobile/dark/375",
+    "passed": 18,
+    "checks": [
+      {
+        "test": "section_0_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_0_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_0_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_0_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_0_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_1_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_1_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_1_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_1_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_1_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_2_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_2_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_2_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_2_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_2_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "collapsed_content_hidden",
+        "pass": true
+      },
+      {
+        "test": "collapsed_no_margin",
+        "pass": true
+      },
+      {
+        "test": "picker_not_affected",
+        "pass": true
+      }
+    ],
+    "computed": {
+      "layout": "mobile",
+      "initial": [
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "zero": [
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "thirteen": [
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "collapsed": {
+        "display": "none",
+        "margin": "0px"
+      },
+      "pickerMargin": "0px"
+    }
+  },
+  {
+    "configuration": "mobile/dark/430",
+    "passed": 18,
+    "checks": [
+      {
+        "test": "section_0_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_0_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_0_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_0_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_0_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_1_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_1_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_1_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_1_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_1_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_2_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_2_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_2_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_2_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_2_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "collapsed_content_hidden",
+        "pass": true
+      },
+      {
+        "test": "collapsed_no_margin",
+        "pass": true
+      },
+      {
+        "test": "picker_not_affected",
+        "pass": true
+      }
+    ],
+    "computed": {
+      "layout": "mobile",
+      "initial": [
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 6,
+          "margin": "6px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "zero": [
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 0,
+          "margin": "0px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "thirteen": [
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 13,
+          "margin": "13px",
+          "rowHeights": [
+            30,
+            30
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "collapsed": {
+        "display": "none",
+        "margin": "0px"
+      },
+      "pickerMargin": "0px"
+    }
+  },
+  {
+    "configuration": "desktop/light/1200",
+    "passed": 18,
+    "checks": [
+      {
+        "test": "section_0_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_0_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_0_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_0_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_0_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_1_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_1_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_1_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_1_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_1_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_2_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_2_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_2_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_2_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_2_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "collapsed_content_hidden",
+        "pass": true
+      },
+      {
+        "test": "collapsed_no_margin",
+        "pass": true
+      },
+      {
+        "test": "picker_not_affected",
+        "pass": true
+      }
+    ],
+    "computed": {
+      "layout": "desktop",
+      "initial": [
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "zero": [
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "thirteen": [
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "collapsed": {
+        "display": "none",
+        "margin": "0px"
+      },
+      "pickerMargin": "0px"
+    }
+  },
+  {
+    "configuration": "desktop/dark/1200",
+    "passed": 18,
+    "checks": [
+      {
+        "test": "section_0_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_0_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_0_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_0_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_0_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_1_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_1_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_1_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_1_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_1_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "section_2_6px_mobile_only",
+        "pass": true
+      },
+      {
+        "test": "section_2_zero_is_valid",
+        "pass": true
+      },
+      {
+        "test": "section_2_custom_margin",
+        "pass": true
+      },
+      {
+        "test": "section_2_visual_delta",
+        "pass": true
+      },
+      {
+        "test": "section_2_row_heights_unchanged",
+        "pass": true
+      },
+      {
+        "test": "collapsed_content_hidden",
+        "pass": true
+      },
+      {
+        "test": "collapsed_no_margin",
+        "pass": true
+      },
+      {
+        "test": "picker_not_affected",
+        "pass": true
+      }
+    ],
+    "computed": {
+      "layout": "desktop",
+      "initial": [
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "zero": [
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "thirteen": [
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "根目录"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "无标签"
+        },
+        {
+          "top": 4,
+          "margin": "0px",
+          "rowHeights": [
+            34,
+            34
+          ],
+          "firstRowName": "所属项目"
+        }
+      ],
+      "collapsed": {
+        "display": "none",
+        "margin": "0px"
+      },
+      "pickerMargin": "0px"
+    }
+  }
+]

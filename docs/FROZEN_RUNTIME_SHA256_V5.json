@@ -1,0 +1,16 @@
+{
+  "source": "GLS v4 full source; only src/styles/styles.css changed",
+  "files": {
+    "src/styles/styles.css": "04916c10fa7621d6c656f38d222a0ad7806cfa8c43ac8dbfdaa1a9ad0dde794f",
+    "dist/main.js": "0b8da952f5ea32cf5e51516cc7c7200c44d7626bc49f5d22aa0335c7c8051bfc",
+    "dist/styles.css": "04916c10fa7621d6c656f38d222a0ad7806cfa8c43ac8dbfdaa1a9ad0dde794f",
+    "docs/APPROVED_CHANGES.json": "5178c4a152a0708ccb239fe7837e2b0c9582492459cf8dcd8c18f072a67e267d",
+    "tests/nav-heading-content-gap.test.mjs": "c18da0d71a3cdd86a97cc1941a7accb98b46fddd66c36b5d68a6feb88fd06788",
+    "scripts/nav_heading_gap_audit.py": "8604f6c4f770b9e44e95c10614ec7abd2e2cc71f92c1f73a345f722b9eace556",
+    "docs/FORMAL_BASELINE_V5_HEADING_GAP_20261018.md": "5558ee3c1aaec93ffbabeceb7069d412f90175629506543d34d592731f8d94fb"
+  },
+  "moduleCount": 153,
+  "styleSettingsBefore": 142,
+  "styleSettingsAfter": 143,
+  "externalManifestNotIncluded": true
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-18",
+  "changes": "Retire only modeless SearchFloatingHost + command + session branch + dedicated CSS; preserve Modal/Sidebar/Tab/Embedded",
+  "tests": {
+    "check": "PASS 152 modules 639 edges",
+    "build": "PASS",
+    "node": "PASS 125/125",
+    "functionalBrowser": "PASS 80/80",
+    "actualModalBrowser": "PASS 32/32",
+    "navigation": "PASS 76/76",
+    "mobileSidebar": "PASS 96/96",
+    "searchAcceptance": "PASS 144/144",
+    "caretChromium": "PASS 36/36",
+    "portalChromium": "PASS current host paths",
+    "indexRetry": "PASS 7/7",
+    "styleAudit": "PASS (143 params)",
+    "historicalPixelAB": "NOT PASS (outdated baseline navigation counts, unrelated to floating deletion)",
+    "iOSWebKit": "NOT RUN"
+  },
+  "independentBuild": {
+    "source": "Zip fully extracted to fresh directory",
+    "check": "PASS",
+    "build": "PASS",
+    "node": "PASS 125/125",
+    "distMatchesDeliverables": true
+  }
+}

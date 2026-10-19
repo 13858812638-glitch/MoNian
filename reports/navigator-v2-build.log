@@ -1,0 +1,13 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 build
+> node scripts/build.mjs
+
+{
+  "outfile": "dist/main.js",
+  "modules": 149,
+  "bytes": 1726740,
+  "sha256": "56864c80bcf847cfdba9ebf4735aa1c38ae760a9731d68a7be5983cfabbc5de0",
+  "external": [
+    "@host/obsidian"
+  ]
+}

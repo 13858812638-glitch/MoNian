@@ -1,0 +1,84 @@
+{
+  "baseline": "GLS v5.2 formal modeless-retirement 20261018",
+  "candidate": "GLS-v5.2-模块归一-v1-20261018-候选",
+  "baselineSourceModules": 152,
+  "candidateSourceModules": 146,
+  "removedModules": [
+    "src/core/search/open-selection-methods.js",
+    "src/core/ui-reference-keys.js",
+    "src/features/facets/picker-model-methods.js",
+    "src/features/plugin/recent-history-storage-methods.js",
+    "src/ui/hosts/modal-chrome.js",
+    "src/utils/text-collator.js"
+  ],
+  "modifiedModules": [
+    "src/core/LocalSearchPlugin.js",
+    "src/core/SearchCore.js",
+    "src/core/search/file-actions-methods.js",
+    "src/core/search/search-and-ranking-methods.js",
+    "src/data/properties/property-types.js",
+    "src/features/facets/SearchFacetController.js",
+    "src/features/plugin/recent-history-state-methods.js",
+    "src/ui/hosts/SearchWindowSession.js",
+    "src/ui/hosts/modal-host.js"
+  ],
+  "newModules": [],
+  "baselineImportEdges": 639,
+  "candidateImportEdges": 634,
+  "baselineDistMainSHA256": "eb9aedb8c4edcf07c1ba66464d60622cbc128ce3753348e6f0638364da80dc9c",
+  "candidateDistMainSHA256": "3dfc4d9fc100569b921fdbec25b6dd037c4cfe36c331aa0a2d8c65a05d91da1b",
+  "baselineDistCSSSHA256": "d82b51abc8e65e93c760dc88e33c813ca26b8a192b34cf9a7e8b4d417bfaf99b",
+  "candidateDistCSSSHA256": "d82b51abc8e65e93c760dc88e33c813ca26b8a192b34cf9a7e8b4d417bfaf99b",
+  "sameCss": true,
+  "sourceChanges": [
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "before": "f99c211f904ec54a97aa18d43902ca3359fb6fa4d1cc57877ec20dff41f83150",
+      "after": "ec20db6df39506a2611f15a5a07d0809d69419d5077801bd0ed22b9526fecad2"
+    },
+    {
+      "file": "src/core/SearchCore.js",
+      "before": "70caeaf87b80478efb39e7369b7c1232125eb1f2d7c0154e57392e594c1523d6",
+      "after": "5a81dbc84b6441f73824a3edbfa456a5928e06bc7284d45a80b4f51a6573a65d"
+    },
+    {
+      "file": "src/core/search/file-actions-methods.js",
+      "before": "a95233145b04beed5a35453b23708264e18bbbfaa5ceb0965f596f84559a5ad4",
+      "after": "451fe867533c4f34e3da216855533f36c8c72f753cf2880537b1a51da840df8b"
+    },
+    {
+      "file": "src/core/search/search-and-ranking-methods.js",
+      "before": "f41ae9019af374344cef073a792aae5883a76b256bb896471755d306764c2d9e",
+      "after": "21c8271b5fb63733ed95df105d359185f855558b1e8617b4dd87a5e86328c3c0"
+    },
+    {
+      "file": "src/data/properties/property-types.js",
+      "before": "69c5d074d8710ef94a52ae17fa137abedb7ae5a66c4e6ae7b4fd7e7c785c02fa",
+      "after": "3782c276c986c4f0852366e2a3693065413296bcd4f63f7b628244237dcec43d"
+    },
+    {
+      "file": "src/features/facets/SearchFacetController.js",
+      "before": "88e40ca6c44ba7867290434d2383a3909d72c5366838af7b8a8d0bb7b694760e",
+      "after": "8fe1465fd961f60c897b0601d4ad4eb1a20b640f921794cef88a5fc442efd070"
+    },
+    {
+      "file": "src/features/plugin/recent-history-state-methods.js",
+      "before": "affb7dc2890a3fe7d202f632e641c5ce81dd51445a5971d86f1024fd094d2643",
+      "after": "e0b3589fce7d0f90db0f96da3a4be154768d684934a760eaf68303d7a47a1241"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "before": "75a525526f7f5eb527bdb4014590b8b5e2dd47873b53b0c8e60e63a54342e7e9",
+      "after": "60ed2265832e16ebf668ec8de0ee80e93c2a95a6c43f8a75f1556b45d15645cf"
+    },
+    {
+      "file": "src/ui/hosts/modal-host.js",
+      "before": "b374aca701f8dc5000301aae3f6cd9cd6f8265d3e1b240217ecaf2e49eecd313",
+      "after": "effd420306f5c50a1ea02e217ab63333c010e01fc999a99d19b5772ae82d2552"
+    }
+  ],
+  "formalSourceUnchanged": true,
+  "productionManifestIncluded": false,
+  "scope": "6 module merges, tag-normalizer pure delegation; no user-visible feature changes",
+  "userDeviceVerified": false
+}

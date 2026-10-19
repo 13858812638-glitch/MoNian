@@ -1,0 +1,4042 @@
+{
+  "origin": "GLS-v5.2-独立浮窗退役-正式基线-20261018",
+  "classes": {
+    "LocalSearchPlugin": [
+      {
+        "key": "constructor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "LocalSearchPlugin",
+        "length": 0
+      },
+      {
+        "key": "setPickerSiblingOrder",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setPickerSiblingOrder",
+        "length": 3
+      },
+      {
+        "key": "moveFolderTreeNode",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "moveFolderTreeNode",
+        "length": 1
+      },
+      {
+        "key": "_tagPathMatchesPrefix",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_tagPathMatchesPrefix",
+        "length": 2
+      },
+      {
+        "key": "_remapTagPath",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_remapTagPath",
+        "length": 3
+      },
+      {
+        "key": "_rewriteInlineTagPositions",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_rewriteInlineTagPositions",
+        "length": 4
+      },
+      {
+        "key": "_materializeTagPickerOrder",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_materializeTagPickerOrder",
+        "length": 0
+      },
+      {
+        "key": "_materializePropertyPickerOrders",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_materializePropertyPickerOrders",
+        "length": 0
+      },
+      {
+        "key": "_mutatePropertyFilterPoolEntries",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_mutatePropertyFilterPoolEntries",
+        "length": 1
+      },
+      {
+        "key": "migrateVaultTagTreePrefix",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "migrateVaultTagTreePrefix",
+        "length": 2
+      },
+      {
+        "key": "deleteVaultTagTreePrefix",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "deleteVaultTagTreePrefix",
+        "length": 1
+      },
+      {
+        "key": "_withPropertyCatalogMutation",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_withPropertyCatalogMutation",
+        "length": 1
+      },
+      {
+        "key": "_propertyMaintenanceSettingsSnapshot",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_propertyMaintenanceSettingsSnapshot",
+        "length": 0
+      },
+      {
+        "key": "_invalidatePropertyCatalogViews",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_invalidatePropertyCatalogViews",
+        "length": 0
+      },
+      {
+        "key": "_savePropertyMaintenanceSettings",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_savePropertyMaintenanceSettings",
+        "length": 3
+      },
+      {
+        "key": "renameVaultPropertyKey",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "renameVaultPropertyKey",
+        "length": 0
+      },
+      {
+        "key": "_renameVaultPropertyKey",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_renameVaultPropertyKey",
+        "length": 2
+      },
+      {
+        "key": "deleteVaultPropertyKey",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "deleteVaultPropertyKey",
+        "length": 0
+      },
+      {
+        "key": "_deleteVaultPropertyKey",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_deleteVaultPropertyKey",
+        "length": 1
+      },
+      {
+        "key": "deleteVaultPropertyValue",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "deleteVaultPropertyValue",
+        "length": 0
+      },
+      {
+        "key": "_deleteVaultPropertyValue",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_deleteVaultPropertyValue",
+        "length": 2
+      },
+      {
+        "key": "renameVaultPropertyValue",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "renameVaultPropertyValue",
+        "length": 0
+      },
+      {
+        "key": "_renameVaultPropertyValue",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_renameVaultPropertyValue",
+        "length": 3
+      },
+      {
+        "key": "_commandSearchSelectionCore",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_commandSearchSelectionCore",
+        "length": 0
+      },
+      {
+        "key": "_deleteFromCommand",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_deleteFromCommand",
+        "length": 0
+      },
+      {
+        "key": "_openCurrentFileOperation",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_openCurrentFileOperation",
+        "length": 2
+      },
+      {
+        "key": "onload",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "onload",
+        "length": 0
+      },
+      {
+        "key": "_enforceWorkspaceSingleton",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_enforceWorkspaceSingleton",
+        "length": 1
+      },
+      {
+        "key": "_latestCreateRecovery",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_latestCreateRecovery",
+        "length": 1
+      },
+      {
+        "key": "activateView",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "activateView",
+        "length": 0
+      },
+      {
+        "key": "_activateWorkspaceView",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_activateWorkspaceView",
+        "length": 1
+      },
+      {
+        "key": "recoverSearchSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "recoverSearchSession",
+        "length": 2
+      },
+      {
+        "key": "rememberCreateSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "rememberCreateSession",
+        "length": 3
+      },
+      {
+        "key": "settleCreateSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "settleCreateSession",
+        "length": 2
+      },
+      {
+        "key": "_normalizeSearchQueries",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_normalizeSearchQueries",
+        "length": 1
+      },
+      {
+        "key": "_normalizeSearchHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_normalizeSearchHistory",
+        "length": 1
+      },
+      {
+        "key": "_normalizeFavoriteSearches",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_normalizeFavoriteSearches",
+        "length": 1
+      },
+      {
+        "key": "_sameSearchQuery",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_sameSearchQuery",
+        "length": 2
+      },
+      {
+        "key": "_setSearchHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setSearchHistory",
+        "length": 1
+      },
+      {
+        "key": "_setFavoriteSearches",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setFavoriteSearches",
+        "length": 1
+      },
+      {
+        "key": "rememberModalSearchSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "rememberModalSearchSession",
+        "length": 0
+      },
+      {
+        "key": "recordSearchHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "recordSearchHistory",
+        "length": 1
+      },
+      {
+        "key": "favoriteSearchQuery",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "favoriteSearchQuery",
+        "length": 1
+      },
+      {
+        "key": "unfavoriteSearchQuery",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "unfavoriteSearchQuery",
+        "length": 1
+      },
+      {
+        "key": "deleteSearchQuery",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "deleteSearchQuery",
+        "length": 1
+      },
+      {
+        "key": "_normalizeRecentOpened",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_normalizeRecentOpened",
+        "length": 1
+      },
+      {
+        "key": "_setRecentOpened",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setRecentOpened",
+        "length": 2
+      },
+      {
+        "key": "_touchRecentOpened",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_touchRecentOpened",
+        "length": 1
+      },
+      {
+        "key": "_removeRecentOpenedPath",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_removeRecentOpenedPath",
+        "length": 1
+      },
+      {
+        "key": "_remapRecentOpenedHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_remapRecentOpenedHistory",
+        "length": 2
+      },
+      {
+        "key": "_replacePathPrefix",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_replacePathPrefix",
+        "length": 3
+      },
+      {
+        "key": "_migrateCorePathState",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_migrateCorePathState",
+        "length": 2
+      },
+      {
+        "key": "_transformSearchFilters",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_transformSearchFilters",
+        "length": 1
+      },
+      {
+        "key": "_remapStoredSearchPaths",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_remapStoredSearchPaths",
+        "length": 1
+      },
+      {
+        "key": "_migrateRenameSettings",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_migrateRenameSettings",
+        "length": 2
+      },
+      {
+        "key": "_settleRename",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_settleRename",
+        "length": 2
+      },
+      {
+        "key": "_clearIndexPathPrefix",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_clearIndexPathPrefix",
+        "length": 1
+      },
+      {
+        "key": "_handleFolderDelete",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_handleFolderDelete",
+        "length": 1
+      },
+      {
+        "key": "_handleFolderRename",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_handleFolderRename",
+        "length": 2
+      },
+      {
+        "key": "_handleFileRename",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_handleFileRename",
+        "length": 2
+      },
+      {
+        "key": "_throttleSaveActivity",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_throttleSaveActivity",
+        "length": 0
+      },
+      {
+        "key": "_activeCoreFilterStates",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_activeCoreFilterStates",
+        "length": 1
+      },
+      {
+        "key": "_settleCoreFilterMutation",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_settleCoreFilterMutation",
+        "length": 1
+      },
+      {
+        "key": "_forEachActiveSearchCore",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_forEachActiveSearchCore",
+        "length": 1
+      },
+      {
+        "key": "_refreshSearchCoreResultCards",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshSearchCoreResultCards",
+        "length": 1
+      },
+      {
+        "key": "_refreshActiveResultCards",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshActiveResultCards",
+        "length": 0
+      },
+      {
+        "key": "_refreshPickerOrderConsumers",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshPickerOrderConsumers",
+        "length": 1
+      },
+      {
+        "key": "_publishIndexChanges",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_publishIndexChanges",
+        "length": 0
+      },
+      {
+        "key": "_publishPropertyCatalogChanges",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_publishPropertyCatalogChanges",
+        "length": 0
+      },
+      {
+        "key": "subscribeIndexChanges",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "subscribeIndexChanges",
+        "length": 1
+      },
+      {
+        "key": "_propertyValueCatalog",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_propertyValueCatalog",
+        "length": 0
+      },
+      {
+        "key": "propertyCatalogType",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "propertyCatalogType",
+        "length": 2
+      },
+      {
+        "key": "propertyCatalogValues",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "propertyCatalogValues",
+        "length": 1
+      },
+      {
+        "key": "hasPropertyCatalogValue",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "hasPropertyCatalogValue",
+        "length": 2
+      },
+      {
+        "key": "propertyCatalogKeys",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "propertyCatalogKeys",
+        "length": 0
+      },
+      {
+        "key": "addPropertyCatalogValues",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "addPropertyCatalogValues",
+        "length": 0
+      },
+      {
+        "key": "_addPropertyCatalogValues",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_addPropertyCatalogValues",
+        "length": 0
+      },
+      {
+        "key": "_remapPropertyValueCatalog",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_remapPropertyValueCatalog",
+        "length": 1
+      },
+      {
+        "key": "getIndexedFiles",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getIndexedFiles",
+        "length": 0
+      },
+      {
+        "key": "getIndexedFileProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getIndexedFileProperties",
+        "length": 1
+      },
+      {
+        "key": "getIndexedPropertyCatalog",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getIndexedPropertyCatalog",
+        "length": 0
+      },
+      {
+        "key": "patchExternalProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "patchExternalProperties",
+        "length": 0
+      },
+      {
+        "key": "_queueFileIndex",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_queueFileIndex",
+        "length": 1
+      },
+      {
+        "key": "_flushIndexQueueNow",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_flushIndexQueueNow",
+        "length": 0
+      },
+      {
+        "key": "_flushIndexQueue",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_flushIndexQueue",
+        "length": 0
+      },
+      {
+        "key": "_readFileProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_readFileProperties",
+        "length": 1
+      },
+      {
+        "key": "_setContentTimeEntry",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setContentTimeEntry",
+        "length": 2
+      },
+      {
+        "key": "_removeContentTimePath",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_removeContentTimePath",
+        "length": 1
+      },
+      {
+        "key": "_removeContentTimePathPrefix",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_removeContentTimePathPrefix",
+        "length": 1
+      },
+      {
+        "key": "_migrateContentTimePath",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_migrateContentTimePath",
+        "length": 2
+      },
+      {
+        "key": "_markContentTimeCacheDirty",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_markContentTimeCacheDirty",
+        "length": 0
+      },
+      {
+        "key": "_flushContentTimeCacheSave",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_flushContentTimeCacheSave",
+        "length": 0
+      },
+      {
+        "key": "_pluginDirectory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_pluginDirectory",
+        "length": 0
+      },
+      {
+        "key": "_metadataDirectory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_metadataDirectory",
+        "length": 0
+      },
+      {
+        "key": "_metadataHistoryFilename",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_metadataHistoryFilename",
+        "length": 0
+      },
+      {
+        "key": "_metadataContentFilename",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_metadataContentFilename",
+        "length": 0
+      },
+      {
+        "key": "_metadataNonMarkdownFilename",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_metadataNonMarkdownFilename",
+        "length": 0
+      },
+      {
+        "key": "_assertMetadataDirectoryDedicated",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_assertMetadataDirectoryDedicated",
+        "length": 1
+      },
+      {
+        "key": "_ensureMetadataDirectory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_ensureMetadataDirectory",
+        "length": 0
+      },
+      {
+        "key": "_metadataSidecarFiles",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_metadataSidecarFiles",
+        "length": 0
+      },
+      {
+        "key": "changeMetadataDirectory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "changeMetadataDirectory",
+        "length": 1
+      },
+      {
+        "key": "_markdownTimeFromFile",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_markdownTimeFromFile",
+        "length": 1
+      },
+      {
+        "key": "_markdownEditorViews",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_markdownEditorViews",
+        "length": 1
+      },
+      {
+        "key": "_editMarkdownFrontmatter",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_editMarkdownFrontmatter",
+        "length": 2
+      },
+      {
+        "key": "_scheduleMarkdownStamp",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_scheduleMarkdownStamp",
+        "length": 1
+      },
+      {
+        "key": "_timePayload",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_timePayload",
+        "length": 2
+      },
+      {
+        "key": "_recordFileWrite",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_recordFileWrite",
+        "length": 4
+      },
+      {
+        "key": "_installTimeWriteCapture",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_installTimeWriteCapture",
+        "length": 0
+      },
+      {
+        "key": "_noteOwnedCreation",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_noteOwnedCreation",
+        "length": 1
+      },
+      {
+        "key": "_timeRecordValid",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_timeRecordValid",
+        "length": 1
+      },
+      {
+        "key": "_nonMarkdownPropertyRecord",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_nonMarkdownPropertyRecord",
+        "length": 1
+      },
+      {
+        "key": "_nonMarkdownProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_nonMarkdownProperties",
+        "length": 1
+      },
+      {
+        "key": "_editNonMarkdownProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_editNonMarkdownProperties",
+        "length": 2
+      },
+      {
+        "key": "_reloadTimeSidecars",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_reloadTimeSidecars",
+        "length": 0
+      },
+      {
+        "key": "_isRemoteTimeSidecar",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_isRemoteTimeSidecar",
+        "length": 1
+      },
+      {
+        "key": "loadNonMarkdownTimes",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "loadNonMarkdownTimes",
+        "length": 0
+      },
+      {
+        "key": "_resolveNonMarkdownTimes",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_resolveNonMarkdownTimes",
+        "length": 1
+      },
+      {
+        "key": "_scheduleNonMarkdownSave",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_scheduleNonMarkdownSave",
+        "length": 0
+      },
+      {
+        "key": "saveNonMarkdownTimes",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "saveNonMarkdownTimes",
+        "length": 0
+      },
+      {
+        "key": "_remapNonMarkdownTimes",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_remapNonMarkdownTimes",
+        "length": 2
+      },
+      {
+        "key": "_deleteNonMarkdownTimes",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_deleteNonMarkdownTimes",
+        "length": 1
+      },
+      {
+        "key": "registerVirtualProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "registerVirtualProperties",
+        "length": 0
+      },
+      {
+        "key": "isVirtualPropertyKey",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "isVirtualPropertyKey",
+        "length": 1
+      },
+      {
+        "key": "_searchMeta",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_searchMeta",
+        "length": 1
+      },
+      {
+        "key": "_invalidateVirtualProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_invalidateVirtualProperties",
+        "length": 0
+      },
+      {
+        "key": "openExternalFolderPicker",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openExternalFolderPicker",
+        "length": 0
+      },
+      {
+        "key": "openExternalPropertyEditor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openExternalPropertyEditor",
+        "length": 0
+      },
+      {
+        "key": "moveExternalFiles",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "moveExternalFiles",
+        "length": 0
+      },
+      {
+        "key": "markOpenedFromExternal",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "markOpenedFromExternal",
+        "length": 1
+      },
+      {
+        "key": "getAuthoritativeFileTime",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getAuthoritativeFileTime",
+        "length": 1
+      },
+      {
+        "key": "subscribeRecentOpened",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "subscribeRecentOpened",
+        "length": 1
+      },
+      {
+        "key": "_notifyRecentOpened",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_notifyRecentOpened",
+        "length": 0
+      },
+      {
+        "key": "getRecentOpenedHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getRecentOpenedHistory",
+        "length": 0
+      },
+      {
+        "key": "_mergeRecentOpenedHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_mergeRecentOpenedHistory",
+        "length": 0
+      },
+      {
+        "key": "loadRecentOpenedHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "loadRecentOpenedHistory",
+        "length": 0
+      },
+      {
+        "key": "_throttleSaveRecentOpenedHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_throttleSaveRecentOpenedHistory",
+        "length": 0
+      },
+      {
+        "key": "saveRecentOpenedHistory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "saveRecentOpenedHistory",
+        "length": 0
+      },
+      {
+        "key": "_writablePluginDirectory",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_writablePluginDirectory",
+        "length": 0
+      },
+      {
+        "key": "saveContentTimeCache",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "saveContentTimeCache",
+        "length": 0
+      },
+      {
+        "key": "loadContentTimeCache",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "loadContentTimeCache",
+        "length": 0
+      },
+      {
+        "key": "getFileFullContent",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getFileFullContent",
+        "length": 1
+      },
+      {
+        "key": "_evictIndexedPath",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_evictIndexedPath",
+        "length": 1
+      },
+      {
+        "key": "throttleSaveCache",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "throttleSaveCache",
+        "length": 0
+      },
+      {
+        "key": "_updateSingleFile",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_updateSingleFile",
+        "length": 1
+      },
+      {
+        "key": "isPathExcluded",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "isPathExcluded",
+        "length": 1
+      },
+      {
+        "key": "isResultPathExcluded",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "isResultPathExcluded",
+        "length": 1
+      },
+      {
+        "key": "isResultAttachmentTypeExcluded",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "isResultAttachmentTypeExcluded",
+        "length": 1
+      },
+      {
+        "key": "buildMetaCache",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "buildMetaCache",
+        "length": 0
+      },
+      {
+        "key": "_indexValidationStamp",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_indexValidationStamp",
+        "length": 1
+      },
+      {
+        "key": "_needsIndexRefresh",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_needsIndexRefresh",
+        "length": 1
+      },
+      {
+        "key": "fullRebuildMetaCache",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "fullRebuildMetaCache",
+        "length": 0
+      },
+      {
+        "key": "_captureActiveResultViewAnchors",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_captureActiveResultViewAnchors",
+        "length": 0
+      },
+      {
+        "key": "_refreshActiveResultViewCores",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshActiveResultViewCores",
+        "length": 0
+      },
+      {
+        "key": "_refreshFolderStateCores",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshFolderStateCores",
+        "length": 0
+      },
+      {
+        "key": "setExcludedFolders",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setExcludedFolders",
+        "length": 1
+      },
+      {
+        "key": "setResultExcludedFolders",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setResultExcludedFolders",
+        "length": 1
+      },
+      {
+        "key": "setResultExcludedAttachmentTypes",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setResultExcludedAttachmentTypes",
+        "length": 1
+      },
+      {
+        "key": "_refreshFilterPoolCores",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshFilterPoolCores",
+        "length": 0
+      },
+      {
+        "key": "setFilterPoolSelectionMode",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setFilterPoolSelectionMode",
+        "length": 2
+      },
+      {
+        "key": "setFilterPools",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setFilterPools",
+        "length": 1
+      },
+      {
+        "key": "_refreshResultSortCores",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshResultSortCores",
+        "length": 0
+      },
+      {
+        "key": "setResultSortPreferences",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setResultSortPreferences",
+        "length": 0
+      },
+      {
+        "key": "setActiveResultView",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setActiveResultView",
+        "length": 1
+      },
+      {
+        "key": "updateActiveResultViewConfig",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "updateActiveResultViewConfig",
+        "length": 0
+      },
+      {
+        "key": "resetActiveResultView",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "resetActiveResultView",
+        "length": 0
+      },
+      {
+        "key": "cycleActiveResultView",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "cycleActiveResultView",
+        "length": 0
+      },
+      {
+        "key": "_normalizeExternalSearchRequest",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_normalizeExternalSearchRequest",
+        "length": 0
+      },
+      {
+        "key": "_openSearchSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_openSearchSession",
+        "length": 0
+      },
+      {
+        "key": "_externalSearchOptions",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_externalSearchOptions",
+        "length": 1
+      },
+      {
+        "key": "openExternalSearch",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openExternalSearch",
+        "length": 0
+      },
+      {
+        "key": "mountExternalSearch",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "mountExternalSearch",
+        "length": 1
+      },
+      {
+        "key": "openSearchModal",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openSearchModal",
+        "length": 0
+      },
+      {
+        "key": "toggleSearchModal",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "toggleSearchModal",
+        "length": 0
+      },
+      {
+        "key": "_normalizeSettingsInPlace",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_normalizeSettingsInPlace",
+        "length": 0
+      },
+      {
+        "key": "loadSettings",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "loadSettings",
+        "length": 0
+      },
+      {
+        "key": "_queueSettingsSnapshot",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_queueSettingsSnapshot",
+        "length": 0
+      },
+      {
+        "key": "saveSettings",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "saveSettings",
+        "length": 0
+      },
+      {
+        "key": "_clearResidentSearchResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_clearResidentSearchResults",
+        "length": 0
+      },
+      {
+        "key": "_getResidentSearchSnapshot",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_getResidentSearchSnapshot",
+        "length": 1
+      },
+      {
+        "key": "_getResidentSearchResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_getResidentSearchResults",
+        "length": 1
+      },
+      {
+        "key": "_rememberSearchResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_rememberSearchResults",
+        "length": 3
+      },
+      {
+        "key": "_rememberSearchSnapshot",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_rememberSearchSnapshot",
+        "length": 2
+      },
+      {
+        "key": "saveIndexCache",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "saveIndexCache",
+        "length": 0
+      },
+      {
+        "key": "loadIndexCache",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "loadIndexCache",
+        "length": 0
+      },
+      {
+        "key": "onunload",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "onunload",
+        "length": 0
+      }
+    ],
+    "SearchCore": [
+      {
+        "key": "constructor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "SearchCore",
+        "length": 3
+      },
+      {
+        "key": "_clearUiRefs",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_clearUiRefs",
+        "length": 0
+      },
+      {
+        "key": "popupSurfaceHost",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "popupSurfaceHost",
+        "length": 0
+      },
+      {
+        "key": "mountShell",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "mountShell",
+        "length": 0
+      },
+      {
+        "key": "startResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "startResults",
+        "length": 0
+      },
+      {
+        "key": "init",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "init",
+        "length": 0
+      },
+      {
+        "key": "_releaseSearchFocusForControl",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_releaseSearchFocusForControl",
+        "length": 0
+      },
+      {
+        "key": "_buildSearchHeader",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildSearchHeader",
+        "length": 0
+      },
+      {
+        "key": "_syncSearchHeaderControls",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncSearchHeaderControls",
+        "length": 0
+      },
+      {
+        "key": "_syncWorkbenchPresentation",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncWorkbenchPresentation",
+        "length": 0
+      },
+      {
+        "key": "_buildFilterBar",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildFilterBar",
+        "length": 0
+      },
+      {
+        "key": "_buildResultShell",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildResultShell",
+        "length": 0
+      },
+      {
+        "key": "_clearSearchContext",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_clearSearchContext",
+        "length": 0
+      },
+      {
+        "key": "_syncResultStateRow",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncResultStateRow",
+        "length": 0
+      },
+      {
+        "key": "_buildWorkspaceLayout",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildWorkspaceLayout",
+        "length": 0
+      },
+      {
+        "key": "_getResultFileMenuContext",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_getResultFileMenuContext",
+        "length": 1
+      },
+      {
+        "key": "_openFilesInNewTabs",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_openFilesInNewTabs",
+        "length": 1
+      },
+      {
+        "key": "_buildResultFileMenu",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildResultFileMenu",
+        "length": 2
+      },
+      {
+        "key": "_extendResultFileMenu",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_extendResultFileMenu",
+        "length": 2
+      },
+      {
+        "key": "_showResultFileMenu",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_showResultFileMenu",
+        "length": 2
+      },
+      {
+        "key": "_bindResultEvents",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_bindResultEvents",
+        "length": 0
+      },
+      {
+        "key": "_initializeResultState",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_initializeResultState",
+        "length": 0
+      },
+      {
+        "key": "_commitSearchInputValue",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_commitSearchInputValue",
+        "length": 0
+      },
+      {
+        "key": "_bindSearchInput",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_bindSearchInput",
+        "length": 0
+      },
+      {
+        "key": "_applyResultQuickFilter",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_applyResultQuickFilter",
+        "length": 2
+      },
+      {
+        "key": "_applyFacetSelectionToState",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_applyFacetSelectionToState",
+        "length": 3
+      },
+      {
+        "key": "_applyFacetSelection",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_applyFacetSelection",
+        "length": 2
+      },
+      {
+        "key": "_normalizeTagSelection",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_normalizeTagSelection",
+        "length": 1
+      },
+      {
+        "key": "_prepareResultVisibility",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_prepareResultVisibility",
+        "length": 0
+      },
+      {
+        "key": "_isResultMetaVisible",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_isResultMetaVisible",
+        "length": 1
+      },
+      {
+        "key": "_visibleVaultFileCount",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_visibleVaultFileCount",
+        "length": 0
+      },
+      {
+        "key": "_navigationCandidates",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_navigationCandidates",
+        "length": 0
+      },
+      {
+        "key": "_selectBrowseFolder",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_selectBrowseFolder",
+        "length": 1
+      },
+      {
+        "key": "_facetUniverse",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_facetUniverse",
+        "length": 0
+      },
+      {
+        "key": "_facetCandidates",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_facetCandidates",
+        "length": 0
+      },
+      {
+        "key": "_onFilterChanged",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_onFilterChanged",
+        "length": 0
+      },
+      {
+        "key": "_findCurrentResult",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_findCurrentResult",
+        "length": 1
+      },
+      {
+        "key": "_beginTitleRenameByPath",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_beginTitleRenameByPath",
+        "length": 1
+      },
+      {
+        "key": "_startTitleRename",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_startTitleRename",
+        "length": 2
+      },
+      {
+        "key": "_filesFromPaths",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_filesFromPaths",
+        "length": 1
+      },
+      {
+        "key": "showMovePickerForFiles",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "showMovePickerForFiles",
+        "length": 2
+      },
+      {
+        "key": "moveFiles",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "moveFiles",
+        "length": 2
+      },
+      {
+        "key": "_confirmAction",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_confirmAction",
+        "length": 0
+      },
+      {
+        "key": "handleSwipeAction",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "handleSwipeAction",
+        "length": 2
+      },
+      {
+        "key": "deleteFiles",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "deleteFiles",
+        "length": 1
+      },
+      {
+        "key": "destroy",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "destroy",
+        "length": 0
+      },
+      {
+        "key": "close",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "close",
+        "length": 0
+      },
+      {
+        "key": "_captureCurrentModalSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_captureCurrentModalSession",
+        "length": 0
+      },
+      {
+        "key": "captureSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "captureSession",
+        "length": 0
+      },
+      {
+        "key": "restoreSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "restoreSession",
+        "length": 1
+      },
+      {
+        "key": "checkpointCreateSession",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "checkpointCreateSession",
+        "length": 0
+      },
+      {
+        "key": "_notifyStateChange",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_notifyStateChange",
+        "length": 0
+      },
+      {
+        "key": "suspendInteractions",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "suspendInteractions",
+        "length": 0
+      },
+      {
+        "key": "_persistModalSessionSnapshot",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_persistModalSessionSnapshot",
+        "length": 1
+      },
+      {
+        "key": "_persistCurrentModalView",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_persistCurrentModalView",
+        "length": 0
+      },
+      {
+        "key": "_shouldCloseAfterFileOpen",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_shouldCloseAfterFileOpen",
+        "length": 0
+      },
+      {
+        "key": "_openResultFromSearch",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_openResultFromSearch",
+        "length": 1
+      },
+      {
+        "key": "_openedRankMap",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_openedRankMap",
+        "length": 0
+      },
+      {
+        "key": "_compareResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_compareResults",
+        "length": 4
+      },
+      {
+        "key": "_matchCandidate",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_matchCandidate",
+        "length": 1
+      },
+      {
+        "key": "_rankCandidates",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_rankCandidates",
+        "length": 2
+      },
+      {
+        "key": "_recomputeCurrentResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_recomputeCurrentResults",
+        "length": 0
+      },
+      {
+        "key": "_residentResultKey",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_residentResultKey",
+        "length": 1
+      },
+      {
+        "key": "_residentResultScope",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_residentResultScope",
+        "length": 0
+      },
+      {
+        "key": "_refreshCurrentResultsAfterMutation",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshCurrentResultsAfterMutation",
+        "length": 0
+      },
+      {
+        "key": "_queueResultIndexChanges",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_queueResultIndexChanges",
+        "length": 0
+      },
+      {
+        "key": "_scheduleResultIndexUpdate",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_scheduleResultIndexUpdate",
+        "length": 0
+      },
+      {
+        "key": "_commitResultIndexChanges",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_commitResultIndexChanges",
+        "length": 1
+      },
+      {
+        "key": "performSearch",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "performSearch",
+        "length": 1
+      },
+      {
+        "key": "_resolveResultElement",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_resolveResultElement",
+        "length": 1
+      },
+      {
+        "key": "_chooseExternalFile",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_chooseExternalFile",
+        "length": 1
+      },
+      {
+        "key": "openSelectedNote",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openSelectedNote",
+        "length": 0
+      },
+      {
+        "key": "clearSelected",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "clearSelected",
+        "length": 0
+      }
+    ],
+    "SearchFacetController": [
+      {
+        "key": "constructor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "SearchFacetController",
+        "length": 1
+      },
+      {
+        "key": "destroy",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "destroy",
+        "length": 0
+      },
+      {
+        "key": "openFolderCreateDialog",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openFolderCreateDialog",
+        "length": 0
+      },
+      {
+        "key": "sidebarMaintenanceModes",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "sidebarMaintenanceModes",
+        "length": 1
+      },
+      {
+        "key": "canSidebarMaintenance",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "canSidebarMaintenance",
+        "length": 2
+      },
+      {
+        "key": "sidebarMaintenancePresentation",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "sidebarMaintenancePresentation",
+        "length": 2
+      },
+      {
+        "key": "runSidebarMaintenance",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "runSidebarMaintenance",
+        "length": 2
+      },
+      {
+        "key": "_syncHeaderCount",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncHeaderCount",
+        "length": 2
+      },
+      {
+        "key": "_expandTreeAncestors",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_expandTreeAncestors",
+        "length": 2
+      },
+      {
+        "key": "_propertyValues",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_propertyValues",
+        "length": 1
+      },
+      {
+        "key": "_buildPropertyTreeModel",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildPropertyTreeModel",
+        "length": 0
+      },
+      {
+        "key": "openTimePicker",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openTimePicker",
+        "length": 0
+      },
+      {
+        "key": "openTagPicker",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openTagPicker",
+        "length": 0
+      },
+      {
+        "key": "openPropertyPicker",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openPropertyPicker",
+        "length": 0
+      },
+      {
+        "key": "renderPinnedPropertyFilters",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "renderPinnedPropertyFilters",
+        "length": 0
+      },
+      {
+        "key": "openAttachmentTypePicker",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openAttachmentTypePicker",
+        "length": 0
+      },
+      {
+        "key": "buildTypeActions",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "buildTypeActions",
+        "length": 1
+      },
+      {
+        "key": "syncTypeButtons",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "syncTypeButtons",
+        "length": 0
+      },
+      {
+        "key": "syncFilterButtons",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "syncFilterButtons",
+        "length": 0
+      },
+      {
+        "key": "_resultFolderDefaultColor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_resultFolderDefaultColor",
+        "length": 1
+      },
+      {
+        "key": "_resultFolderColorMap",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_resultFolderColorMap",
+        "length": 0
+      },
+      {
+        "key": "_refreshResultFolderColorViews",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshResultFolderColorViews",
+        "length": 0
+      },
+      {
+        "key": "_applyResultFolderPickerColor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_applyResultFolderPickerColor",
+        "length": 2
+      },
+      {
+        "key": "_setResultFolderThemeColor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setResultFolderThemeColor",
+        "length": 3
+      },
+      {
+        "key": "_resetResultFolderColors",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_resetResultFolderColors",
+        "length": 1
+      },
+      {
+        "key": "_openFolderColorEditor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_openFolderColorEditor",
+        "length": 1
+      },
+      {
+        "key": "_showManagedFolderDropdown",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_showManagedFolderDropdown",
+        "length": 0
+      },
+      {
+        "key": "showFolderDropdown",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "showFolderDropdown",
+        "length": 0
+      },
+      {
+        "key": "updateFolderButton",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "updateFolderButton",
+        "length": 0
+      }
+    ],
+    "SearchModalHost": [
+      {
+        "key": "constructor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "SearchModalHost",
+        "length": 2
+      },
+      {
+        "key": "isOpen",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "isOpen",
+        "length": 0
+      },
+      {
+        "key": "onOpen",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "onOpen",
+        "length": 0
+      },
+      {
+        "key": "close",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "close",
+        "length": 0
+      },
+      {
+        "key": "_closeDirect",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_closeDirect",
+        "length": 0
+      },
+      {
+        "key": "onClose",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "onClose",
+        "length": 0
+      }
+    ],
+    "SearchWindowSession": [
+      {
+        "key": "constructor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "SearchWindowSession",
+        "length": 2
+      },
+      {
+        "key": "_attachHost",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_attachHost",
+        "length": 3
+      },
+      {
+        "key": "_hostDocument",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_hostDocument",
+        "length": 0
+      },
+      {
+        "key": "_hostWindow",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_hostWindow",
+        "length": 0
+      },
+      {
+        "key": "_handleEscapeEvent",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_handleEscapeEvent",
+        "length": 1
+      },
+      {
+        "key": "open",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "open",
+        "length": 0
+      },
+      {
+        "key": "_focusSearchInput",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_focusSearchInput",
+        "length": 2
+      },
+      {
+        "key": "_desktopViewport",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_desktopViewport",
+        "length": 0
+      },
+      {
+        "key": "_desktopMetrics",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_desktopMetrics",
+        "length": 0
+      },
+      {
+        "key": "_clampDesktopBounds",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_clampDesktopBounds",
+        "length": 1
+      },
+      {
+        "key": "_applyDesktopBounds",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_applyDesktopBounds",
+        "length": 1
+      },
+      {
+        "key": "_queueGeometrySave",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_queueGeometrySave",
+        "length": 1
+      },
+      {
+        "key": "_prepareDesktopWindowGeometry",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_prepareDesktopWindowGeometry",
+        "length": 0
+      },
+      {
+        "key": "_setupDesktopWindowGeometry",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setupDesktopWindowGeometry",
+        "length": 0
+      },
+      {
+        "key": "_setupMobileBackdropGuard",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setupMobileBackdropGuard",
+        "length": 0
+      },
+      {
+        "key": "_teardownMobileBackdropGuard",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_teardownMobileBackdropGuard",
+        "length": 0
+      },
+      {
+        "key": "_setupMobileViewportGeometry",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setupMobileViewportGeometry",
+        "length": 0
+      },
+      {
+        "key": "_teardownMobileViewportGeometry",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_teardownMobileViewportGeometry",
+        "length": 0
+      },
+      {
+        "key": "_installWindowInteractions",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_installWindowInteractions",
+        "length": 1
+      },
+      {
+        "key": "_mountSearchCore",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_mountSearchCore",
+        "length": 1
+      },
+      {
+        "key": "onOpen",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "onOpen",
+        "length": 0
+      },
+      {
+        "key": "_finalizeSearchSessionClose",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_finalizeSearchSessionClose",
+        "length": 0
+      },
+      {
+        "key": "close",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "close",
+        "length": 0
+      },
+      {
+        "key": "onClose",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "onClose",
+        "length": 0
+      }
+    ],
+    "SearchNavigatorController": [
+      {
+        "key": "constructor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "SearchNavigatorController",
+        "length": 4
+      },
+      {
+        "key": "_listen",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_listen",
+        "length": 4
+      },
+      {
+        "key": "_buildMobileToolbar",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildMobileToolbar",
+        "length": 0
+      },
+      {
+        "key": "_placeMobileTools",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_placeMobileTools",
+        "length": 1
+      },
+      {
+        "key": "_syncMobileTools",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncMobileTools",
+        "length": 0
+      },
+      {
+        "key": "_releaseToolbarAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_releaseToolbarAnchor",
+        "length": 1
+      },
+      {
+        "key": "_runAdditionalToolbarAction",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_runAdditionalToolbarAction",
+        "length": 2
+      },
+      {
+        "key": "_scopeTitle",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_scopeTitle",
+        "length": 0
+      },
+      {
+        "key": "openSidebarTools",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openSidebarTools",
+        "length": 1
+      },
+      {
+        "key": "clearSidebarMode",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "clearSidebarMode",
+        "length": 0
+      },
+      {
+        "key": "_definitions",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_definitions",
+        "length": 0
+      },
+      {
+        "key": "capture",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "capture",
+        "length": 0
+      },
+      {
+        "key": "hiddenResultAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "hiddenResultAnchor",
+        "length": 0
+      },
+      {
+        "key": "restore",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "restore",
+        "length": 1
+      },
+      {
+        "key": "resize",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "resize",
+        "length": 0
+      },
+      {
+        "key": "refreshPreferences",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "refreshPreferences",
+        "length": 0
+      },
+      {
+        "key": "_refreshAfterMaintenance",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_refreshAfterMaintenance",
+        "length": 1
+      },
+      {
+        "key": "setSortMode",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setSortMode",
+        "length": 1
+      },
+      {
+        "key": "syncPage",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "syncPage",
+        "length": 0
+      },
+      {
+        "key": "setPage",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "setPage",
+        "length": 1
+      },
+      {
+        "key": "showResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "showResults",
+        "length": 0
+      },
+      {
+        "key": "back",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "back",
+        "length": 0
+      },
+      {
+        "key": "prepareSearch",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "prepareSearch",
+        "length": 0
+      },
+      {
+        "key": "select",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "select",
+        "length": 2
+      },
+      {
+        "key": "openSection",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "openSection",
+        "length": 2
+      },
+      {
+        "key": "_openProperty",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_openProperty",
+        "length": 2
+      },
+      {
+        "key": "_trackPicker",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_trackPicker",
+        "length": 1
+      },
+      {
+        "key": "didClosePicker",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "didClosePicker",
+        "length": 0
+      },
+      {
+        "key": "_section",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_section",
+        "length": 3
+      },
+      {
+        "key": "_row",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_row",
+        "length": 2
+      },
+      {
+        "key": "_placeProjectionRow",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_placeProjectionRow",
+        "length": 3
+      },
+      {
+        "key": "_separator",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_separator",
+        "length": 2
+      },
+      {
+        "key": "_finishProjectionRows",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_finishProjectionRows",
+        "length": 1
+      },
+      {
+        "key": "_more",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_more",
+        "length": 2
+      },
+      {
+        "key": "_cached",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_cached",
+        "length": 2
+      },
+      {
+        "key": "_propertyKeys",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_propertyKeys",
+        "length": 1
+      },
+      {
+        "key": "_propertyStats",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_propertyStats",
+        "length": 3
+      },
+      {
+        "key": "_tree",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_tree",
+        "length": 5
+      },
+      {
+        "key": "sync",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "sync",
+        "length": 0
+      },
+      {
+        "key": "_renderProjection",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_renderProjection",
+        "length": 0
+      },
+      {
+        "key": "destroy",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "destroy",
+        "length": 0
+      }
+    ],
+    "SearchResultRendererController": [
+      {
+        "key": "constructor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "SearchResultRendererController",
+        "length": 1
+      },
+      {
+        "key": "destroy",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "destroy",
+        "length": 0
+      },
+      {
+        "key": "getScrollTop",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getScrollTop",
+        "length": 0
+      },
+      {
+        "key": "_setScrollTop",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_setScrollTop",
+        "length": 1
+      },
+      {
+        "key": "attachViewport",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "attachViewport",
+        "length": 0
+      },
+      {
+        "key": "_isOverscrolling",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_isOverscrolling",
+        "length": 0
+      },
+      {
+        "key": "isNativeScrolling",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "isNativeScrolling",
+        "length": 0
+      },
+      {
+        "key": "_markNativeScroll",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_markNativeScroll",
+        "length": 0
+      },
+      {
+        "key": "_settleNativeScroll",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_settleNativeScroll",
+        "length": 0
+      },
+      {
+        "key": "_geometryAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_geometryAnchor",
+        "length": 0
+      },
+      {
+        "key": "_restoreGeometryAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_restoreGeometryAnchor",
+        "length": 1
+      },
+      {
+        "key": "_readGeometryStyleSignature",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_readGeometryStyleSignature",
+        "length": 0
+      },
+      {
+        "key": "_syncViewportInsets",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncViewportInsets",
+        "length": 0
+      },
+      {
+        "key": "_measureRailContentWidth",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_measureRailContentWidth",
+        "length": 0
+      },
+      {
+        "key": "captureMountedViewportAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "captureMountedViewportAnchor",
+        "length": 0
+      },
+      {
+        "key": "invalidateGeometry",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "invalidateGeometry",
+        "length": 0
+      },
+      {
+        "key": "rerenderForGeometryChange",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "rerenderForGeometryChange",
+        "length": 0
+      },
+      {
+        "key": "_scheduleGeometryRefresh",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_scheduleGeometryRefresh",
+        "length": 0
+      },
+      {
+        "key": "handleStyleEnvironmentChange",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "handleStyleEnvironmentChange",
+        "length": 0
+      },
+      {
+        "key": "rerenderPreservingScrollTop",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "rerenderPreservingScrollTop",
+        "length": 0
+      },
+      {
+        "key": "_handleViewportResize",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_handleViewportResize",
+        "length": 0
+      },
+      {
+        "key": "captureViewportAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "captureViewportAnchor",
+        "length": 0
+      },
+      {
+        "key": "_displayPositionForActualIndex",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_displayPositionForActualIndex",
+        "length": 1
+      },
+      {
+        "key": "_actualIndexAtDisplayPosition",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_actualIndexAtDisplayPosition",
+        "length": 1
+      },
+      {
+        "key": "_displayPositionForPath",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_displayPositionForPath",
+        "length": 1
+      },
+      {
+        "key": "_rowEstimateCacheKey",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_rowEstimateCacheKey",
+        "length": 0
+      },
+      {
+        "key": "_syncRowEstimate",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncRowEstimate",
+        "length": 0
+      },
+      {
+        "key": "_ensureHeightIndex",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_ensureHeightIndex",
+        "length": 0
+      },
+      {
+        "key": "beginSwipeReveal",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "beginSwipeReveal",
+        "length": 1
+      },
+      {
+        "key": "yieldSwipeReveal",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "yieldSwipeReveal",
+        "length": 0
+      },
+      {
+        "key": "cancelSwipeReveal",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "cancelSwipeReveal",
+        "length": 0
+      },
+      {
+        "key": "_sampleSwipeReveal",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_sampleSwipeReveal",
+        "length": 5
+      },
+      {
+        "key": "_handleRowResize",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_handleRowResize",
+        "length": 0
+      },
+      {
+        "key": "_observeShell",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_observeShell",
+        "length": 2
+      },
+      {
+        "key": "_unobserveShell",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_unobserveShell",
+        "length": 1
+      },
+      {
+        "key": "prepareViewportAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "prepareViewportAnchor",
+        "length": 1
+      },
+      {
+        "key": "restoreViewportAnchor",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "restoreViewportAnchor",
+        "length": 1
+      },
+      {
+        "key": "renderInitialPage",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "renderInitialPage",
+        "length": 1
+      },
+      {
+        "key": "_usesChannels",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_usesChannels",
+        "length": 0
+      },
+      {
+        "key": "visibleResultCount",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "visibleResultCount",
+        "length": 0
+      },
+      {
+        "key": "getVisibleResultIndices",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "getVisibleResultIndices",
+        "length": 0
+      },
+      {
+        "key": "resetViewport",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "resetViewport",
+        "length": 0
+      },
+      {
+        "key": "_windowSize",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_windowSize",
+        "length": 0
+      },
+      {
+        "key": "_windowStartForPosition",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_windowStartForPosition",
+        "length": 2
+      },
+      {
+        "key": "_windowRangeForViewport",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_windowRangeForViewport",
+        "length": 3
+      },
+      {
+        "key": "_spacer",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_spacer",
+        "length": 1
+      },
+      {
+        "key": "_mountedShells",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_mountedShells",
+        "length": 0
+      },
+      {
+        "key": "refreshActionShelfLayout",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "refreshActionShelfLayout",
+        "length": 1
+      },
+      {
+        "key": "_syncMountedState",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncMountedState",
+        "length": 0
+      },
+      {
+        "key": "_syncSpacerHeights",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncSpacerHeights",
+        "length": 0
+      },
+      {
+        "key": "_shiftWindowRange",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_shiftWindowRange",
+        "length": 2
+      },
+      {
+        "key": "_syncWindowToViewport",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncWindowToViewport",
+        "length": 0
+      },
+      {
+        "key": "handleScrollLoad",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "handleScrollLoad",
+        "length": 0
+      },
+      {
+        "key": "_appendPositionRange",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_appendPositionRange",
+        "length": 3
+      },
+      {
+        "key": "refreshChangedRows",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "refreshChangedRows",
+        "length": 1
+      },
+      {
+        "key": "renderCurrentView",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "renderCurrentView",
+        "length": 0
+      },
+      {
+        "key": "queueLazySnippetFill",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "queueLazySnippetFill",
+        "length": 0
+      },
+      {
+        "key": "_lazyFillSnippet",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_lazyFillSnippet",
+        "length": 0
+      },
+      {
+        "key": "renderPage",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "renderPage",
+        "length": 0
+      },
+      {
+        "key": "_renderFilterPoolHeader",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_renderFilterPoolHeader",
+        "length": 0
+      },
+      {
+        "key": "refreshResultChannels",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "refreshResultChannels",
+        "length": 0
+      },
+      {
+        "key": "_renderStateChannels",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_renderStateChannels",
+        "length": 0
+      },
+      {
+        "key": "_appendChannelGroup",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_appendChannelGroup",
+        "length": 1
+      },
+      {
+        "key": "_ensureFilterPoolGroup",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_ensureFilterPoolGroup",
+        "length": 2
+      },
+      {
+        "key": "_syncFilterPoolButton",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncFilterPoolButton",
+        "length": 4
+      },
+      {
+        "key": "_syncFilterPoolGroups",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncFilterPoolGroups",
+        "length": 3
+      },
+      {
+        "key": "_syncFilterToolbarEntries",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_syncFilterToolbarEntries",
+        "length": 4
+      },
+      {
+        "key": "_appendHighlightedTitle",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_appendHighlightedTitle",
+        "length": 2
+      },
+      {
+        "key": "_buildTitleRow",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildTitleRow",
+        "length": 2
+      },
+      {
+        "key": "_createFilterChip",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_createFilterChip",
+        "length": 2
+      },
+      {
+        "key": "_createResultMetadataRow",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_createResultMetadataRow",
+        "length": 1
+      },
+      {
+        "key": "_appendTags",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_appendTags",
+        "length": 2
+      },
+      {
+        "key": "_visibleProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_visibleProperties",
+        "length": 1
+      },
+      {
+        "key": "_createPropertyKeyButton",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_createPropertyKeyButton",
+        "length": 2
+      },
+      {
+        "key": "_appendProperties",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_appendProperties",
+        "length": 2
+      },
+      {
+        "key": "_timeFormatters",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_timeFormatters",
+        "length": 0
+      },
+      {
+        "key": "_formatTime",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_formatTime",
+        "length": 1
+      },
+      {
+        "key": "_formatCardMetaTime",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_formatCardMetaTime",
+        "length": 1
+      },
+      {
+        "key": "_appendMetaFields",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_appendMetaFields",
+        "length": 2
+      },
+      {
+        "key": "_buildResultItem",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_buildResultItem",
+        "length": 2
+      },
+      {
+        "key": "_fillSnippet",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_fillSnippet",
+        "length": 2
+      },
+      {
+        "key": "_updateSnippetInPlace",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "_updateSnippetInPlace",
+        "length": 1
+      },
+      {
+        "key": "navigateResults",
+        "enumerable": false,
+        "configurable": true,
+        "writable": true,
+        "type": "function",
+        "name": "navigateResults",
+        "length": 1
+      }
+    ]
+  },
+  "symbols": {
+    "SEARCH_CORE_UI_REF_KEYS": {
+      "type": "object",
+      "fnLength": null
+    },
+    "RESULT_TEXT_COLLATOR": {
+      "type": "object",
+      "fnLength": null
+    },
+    "normalizeEditableTagValue": {
+      "type": "function",
+      "fnLength": 1
+    },
+    "normalizeTagValue": {
+      "type": "function",
+      "fnLength": 1
+    },
+    "stripObsidianModalChrome": {
+      "type": "function",
+      "fnLength": 2
+    }
+  },
+  "values": {
+    "uiRefKeys": [
+      "searchInput",
+      "resultsShell",
+      "resultsContainer",
+      "resultsRail",
+      "typeButtonEls",
+      "folderBtn",
+      "clearFiltersBtn",
+      "filterPoolHost",
+      "filterPoolValues",
+      "filterPoolShortcuts",
+      "propertyFilterRow",
+      "resultChannelHost",
+      "activeFilterWrap"
+    ],
+    "collatorSpec": [
+      "阿",
+      "文件2.md",
+      "文件10.md",
+      "A",
+      "a"
+    ],
+    "normalizeTagCases": [
+      "",
+      "",
+      "案例",
+      "项目/分组",
+      "",
+      "55"
+    ]
+  }
+}

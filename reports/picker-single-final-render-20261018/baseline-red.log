@@ -1,0 +1,15 @@
+tag [('maintenance', 1), ('selection', 2), ('sort', 2), ('maintenance', 1), ('sort', 2), ('selection', 1), ('maintenance', 2), ('selection', 2), ('sort', 2)]
+property [('maintenance', 1), ('selection', 2), ('sort', 2), ('maintenance', 1), ('sort', 2), ('selection', 1), ('maintenance', 2), ('selection', 2), ('sort', 2)]
+CHECK FAIL files= 6 issues= 12
+  tag 1 selection: fullRender=2 > 1
+  tag 2 sort: fullRender=2 > 1
+  tag 4 sort: fullRender=2 > 1
+  tag 6 maintenance: fullRender=2 > 1
+  tag 7 selection: fullRender=2 > 1
+  tag 8 sort: fullRender=2 > 1
+  property 1 selection: fullRender=2 > 1
+  property 2 sort: fullRender=2 > 1
+  property 4 sort: fullRender=2 > 1
+  property 6 maintenance: fullRender=2 > 1
+  property 7 selection: fullRender=2 > 1
+  property 8 sort: fullRender=2 > 1

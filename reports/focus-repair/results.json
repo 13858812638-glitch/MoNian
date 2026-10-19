@@ -1,0 +1,5518 @@
+{
+  "baseline": "modular.3",
+  "candidate": "0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1",
+  "engine": "Chromium 144.0.7559.96",
+  "nativeIOS": false,
+  "nativeObsidian": false,
+  "rows": [
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-2",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "0px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 2,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-20",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "12px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-120",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "112px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 4,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-334",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "326px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "no-self-latched-keyboard-after-blur",
+      "passed": false,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "326px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-folder",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-input-handoff-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-input-native-text-selection-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-folder",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-tags",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-input-handoff-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-input-native-text-selection-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-tags",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-property-key",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-input-handoff-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-input-native-text-selection-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-key",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-property-value",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-input-handoff-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-input-native-text-selection-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-value",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-create-folder",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-input-handoff-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-input-native-text-selection-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-folder",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-create-tags",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-input-handoff-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-input-native-text-selection-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-tags",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-create-property",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-input-handoff-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "same-input-native-text-selection-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-property",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-shared-guard-mouse",
+      "passed": false,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": false,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-shared-guard-touch",
+      "passed": false,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": false,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "picker-shared-guard-pen",
+      "passed": false,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": false,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-touch-mode-keeps-edit-session",
+      "passed": false,
+      "evidence": {
+        "active": false,
+        "multi": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-touch-multiselect-click-keeps-edit-session",
+      "passed": false,
+      "evidence": {
+        "sameInput": true,
+        "active": false,
+        "selected": true,
+        "draftOnly": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "right-button-not-intercepted",
+      "passed": true,
+      "evidence": {
+        "rightPrevented": false
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "child-back-keeps-parent-no-hidden-input-refocus",
+      "passed": true,
+      "evidence": {
+        "parent": true,
+        "visible": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "native-keyboard-frame-preserved",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "host-height-still-protects-late-hide",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "keyboard-hide-releases-focused-frame",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 7,
+          "childChanges": 0,
+          "position": 2
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "already-visible-reveal-no-second-frame-refresh",
+      "passed": false,
+      "evidence": {
+        "refreshes": 3
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "explicit-eraser-still-finishes-editing",
+      "passed": true,
+      "evidence": {
+        "raw": "",
+        "value": "",
+        "active": false,
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ]
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "real-view-onOpen-to-onResize-zero-reflows",
+      "passed": false,
+      "evidence": {
+        "nativeView": true,
+        "capability": true,
+        "legacyPreserveFrame": false,
+        "sidebarHasNoKeyboardFrame": false,
+        "hasKeyboardClass": true,
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "inputFocused": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "real-width-change-still-repositions-once",
+      "passed": true,
+      "evidence": {
+        "positions": 1,
+        "width": 360,
+        "measured": 360
+      }
+    },
+    {
+      "side": "A",
+      "theme": "light",
+      "case": "teardown-releases-all-keyboard-listeners",
+      "passed": true,
+      "evidence": {
+        "remaining": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-2",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-20",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-120",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "viewport-only-not-a-keyboard-signal-334",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "no-self-latched-keyboard-after-blur",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-folder",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-input-handoff-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-input-native-text-selection-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-tags",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-input-handoff-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-input-native-text-selection-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-property-key",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-input-handoff-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-input-native-text-selection-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-property-value",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-input-handoff-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-input-native-text-selection-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-create-folder",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-input-handoff-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-input-native-text-selection-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-create-tags",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-input-handoff-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-input-native-text-selection-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "open-does-not-programmatically-end-input-create-property",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-input-handoff-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "same-input-native-text-selection-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-shared-guard-mouse",
+      "passed": true,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": true,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-shared-guard-touch",
+      "passed": true,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": true,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "picker-shared-guard-pen",
+      "passed": true,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": true,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-touch-mode-keeps-edit-session",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "multi": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-touch-multiselect-click-keeps-edit-session",
+      "passed": true,
+      "evidence": {
+        "sameInput": true,
+        "active": true,
+        "selected": true,
+        "draftOnly": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "right-button-not-intercepted",
+      "passed": true,
+      "evidence": {
+        "rightPrevented": false
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "child-back-keeps-parent-no-hidden-input-refocus",
+      "passed": true,
+      "evidence": {
+        "parent": true,
+        "visible": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "native-keyboard-frame-preserved",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "host-height-still-protects-late-hide",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "keyboard-hide-releases-focused-frame",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(37, 37, 37)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "already-visible-reveal-no-second-frame-refresh",
+      "passed": true,
+      "evidence": {
+        "refreshes": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "explicit-eraser-still-finishes-editing",
+      "passed": true,
+      "evidence": {
+        "raw": "",
+        "value": "",
+        "active": false,
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ]
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "real-view-onOpen-to-onResize-zero-reflows",
+      "passed": true,
+      "evidence": {
+        "nativeView": true,
+        "capability": true,
+        "legacyPreserveFrame": null,
+        "sidebarHasNoKeyboardFrame": true,
+        "hasKeyboardClass": false,
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "inputFocused": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "real-width-change-still-repositions-once",
+      "passed": true,
+      "evidence": {
+        "positions": 1,
+        "width": 360,
+        "measured": 360
+      }
+    },
+    {
+      "side": "B",
+      "theme": "light",
+      "case": "teardown-releases-all-keyboard-listeners",
+      "passed": true,
+      "evidence": {
+        "remaining": 0
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-2",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "0px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 2,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-20",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "12px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-120",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "112px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 4,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-334",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "326px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "no-self-latched-keyboard-after-blur",
+      "passed": false,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "326px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-folder",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-input-handoff-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-folder",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-tags",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-input-handoff-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-tags",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-property-key",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-input-handoff-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-key",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-property-value",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-input-handoff-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-value",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-create-folder",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-input-handoff-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-folder",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-create-tags",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-input-handoff-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-tags",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-create-property",
+      "passed": false,
+      "evidence": {
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "mainFocused": false,
+        "picker": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-input-handoff-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-property",
+      "passed": false,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-shared-guard-mouse",
+      "passed": false,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": false,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-shared-guard-touch",
+      "passed": false,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": false,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "picker-shared-guard-pen",
+      "passed": false,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": false,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-touch-mode-keeps-edit-session",
+      "passed": false,
+      "evidence": {
+        "active": false,
+        "multi": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-touch-multiselect-click-keeps-edit-session",
+      "passed": false,
+      "evidence": {
+        "sameInput": true,
+        "active": false,
+        "selected": true,
+        "draftOnly": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "right-button-not-intercepted",
+      "passed": true,
+      "evidence": {
+        "rightPrevented": false
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "child-back-keeps-parent-no-hidden-input-refocus",
+      "passed": true,
+      "evidence": {
+        "parent": true,
+        "visible": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "native-keyboard-frame-preserved",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "host-height-still-protects-late-hide",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 5,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "keyboard-hide-releases-focused-frame",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 7,
+          "childChanges": 0,
+          "position": 2
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "already-visible-reveal-no-second-frame-refresh",
+      "passed": false,
+      "evidence": {
+        "refreshes": 3
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "explicit-eraser-still-finishes-editing",
+      "passed": true,
+      "evidence": {
+        "raw": "",
+        "value": "",
+        "active": false,
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ]
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "real-view-onOpen-to-onResize-zero-reflows",
+      "passed": false,
+      "evidence": {
+        "nativeView": true,
+        "capability": true,
+        "legacyPreserveFrame": false,
+        "sidebarHasNoKeyboardFrame": false,
+        "hasKeyboardClass": true,
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 3
+        },
+        "inputFocused": true
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "real-width-change-still-repositions-once",
+      "passed": true,
+      "evidence": {
+        "positions": 1,
+        "width": 360,
+        "measured": 360
+      }
+    },
+    {
+      "side": "A",
+      "theme": "dark",
+      "case": "teardown-releases-all-keyboard-listeners",
+      "passed": true,
+      "evidence": {
+        "remaining": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-2",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-20",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-120",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "viewport-only-not-a-keyboard-signal-334",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "no-self-latched-keyboard-after-blur",
+      "passed": true,
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-folder",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-input-handoff-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-tags",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-input-handoff-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-property-key",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-input-handoff-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-key",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-property-value",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-input-handoff-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-property-value",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-create-folder",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-input-handoff-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-folder",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-create-tags",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-input-handoff-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-tags",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "open-does-not-programmatically-end-input-create-property",
+      "passed": true,
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "picker": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-input-handoff-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "same-input-native-text-selection-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "actual-sidebar-resize-no-popup-reflow-create-property",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "资料",
+        "selection": [
+          2,
+          2
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-shared-guard-mouse",
+      "passed": true,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": true,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-shared-guard-touch",
+      "passed": true,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": true,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "picker-shared-guard-pen",
+      "passed": true,
+      "evidence": {
+        "buttonFound": true,
+        "prevented": true,
+        "inputPrevented": false,
+        "active": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-touch-mode-keeps-edit-session",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "multi": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-touch-multiselect-click-keeps-edit-session",
+      "passed": true,
+      "evidence": {
+        "sameInput": true,
+        "active": true,
+        "selected": true,
+        "draftOnly": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "right-button-not-intercepted",
+      "passed": true,
+      "evidence": {
+        "rightPrevented": false
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "child-back-keeps-parent-no-hidden-input-refocus",
+      "passed": true,
+      "evidence": {
+        "parent": true,
+        "visible": true,
+        "programmatic": []
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "native-keyboard-frame-preserved",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "host-height-still-protects-late-hide",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": true,
+        "keyboard": true,
+        "inset": "194.734375px",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "keyboard-hide-releases-focused-frame",
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          66,
+          51,
+          291,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 3,
+          "childChanges": 0,
+          "position": 1
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 7
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "already-visible-reveal-no-second-frame-refresh",
+      "passed": true,
+      "evidence": {
+        "refreshes": 0
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "explicit-eraser-still-finishes-editing",
+      "passed": true,
+      "evidence": {
+        "raw": "",
+        "value": "",
+        "active": false,
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ]
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "real-view-onOpen-to-onResize-zero-reflows",
+      "passed": true,
+      "evidence": {
+        "nativeView": true,
+        "capability": true,
+        "legacyPreserveFrame": null,
+        "sidebarHasNoKeyboardFrame": true,
+        "hasKeyboardClass": false,
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "inputFocused": true
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "real-width-change-still-repositions-once",
+      "passed": true,
+      "evidence": {
+        "positions": 1,
+        "width": 360,
+        "measured": 360
+      }
+    },
+    {
+      "side": "B",
+      "theme": "dark",
+      "case": "teardown-releases-all-keyboard-listeners",
+      "passed": true,
+      "evidence": {
+        "remaining": 0
+      }
+    }
+  ],
+  "errors": [],
+  "passed": 96,
+  "failed": 0
+}

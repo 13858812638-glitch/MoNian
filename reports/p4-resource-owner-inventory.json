@@ -1,0 +1,27 @@
+{
+  "moduleCount": 146,
+  "counts": {
+    "domListenerAdds": 170,
+    "domListenerRemoves": 43,
+    "timeoutScheduled": 20,
+    "timeoutCanceled": 43,
+    "frameScheduled": 10,
+    "frameCanceled": 10,
+    "pickerCleanupRegistration": 25,
+    "pickerCleanupDisposal": 4,
+    "observerDisconnects": 11
+  },
+  "contractHints": {
+    "pickerPanelCleanup": true,
+    "pluginUnload": true,
+    "resultRendererRelease": true,
+    "navigatorRelease": true,
+    "windowSessionRelease": true,
+    "pickerAutoLocateFrameRelease": true,
+    "pickerAutoLocateFolder": true,
+    "pickerAutoLocateTag": true,
+    "pickerAutoLocateProperty": true
+  },
+  "allStaticContractHintsPresent": true,
+  "note": "Counts include listeners on ephemeral DOM; add/remove counts alone do not establish leaks. These contract hints are static evidence, not an exhaustive proof of runtime teardown."
+}

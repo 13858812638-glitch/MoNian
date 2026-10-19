@@ -1,0 +1,15 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 test:index-retry
+> node scripts/index_queue_stability_audit.mjs
+
+PASS one failure does not abort another indexed file
+PASS transient file enters bounded retry queue
+PASS subsequent retry picks up changed content
+PASS deletion during retry evicts old record
+PASS permanent failure stops after finite attempts
+PASS scheduled retries present before unload
+PASS unload cancels retry and clears state
+{
+  "passed": 7,
+  "failed": 0
+}

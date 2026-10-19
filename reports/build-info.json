@@ -1,0 +1,13 @@
+{
+  "outfile": "dist/main.js",
+  "modules": 149,
+  "bytes": 1726740,
+  "sha256": "56864c80bcf847cfdba9ebf4735aa1c38ae760a9731d68a7be5983cfabbc5de0",
+  "external": [
+    "@host/obsidian"
+  ],
+  "engine": "TypeScript 5.8.3 + deterministic CommonJS linker",
+  "baselineBuild": "2026-10-15.7",
+  "engineeringRevision": "picker-ios-portal.1",
+  "manifestStatus": "missing-in-upload"
+}

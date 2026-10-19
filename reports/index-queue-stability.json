@@ -1,0 +1,62 @@
+{
+  "scope": "Production-dist fixture, not real NAS or native Obsidian",
+  "passed": 7,
+  "failed": 0,
+  "rows": [
+    {
+      "case": "one failure does not abort another indexed file",
+      "pass": true,
+      "evidence": {
+        "readyB": 3000,
+        "waitingA": 2001
+      }
+    },
+    {
+      "case": "transient file enters bounded retry queue",
+      "pass": true,
+      "evidence": {
+        "timer": true,
+        "attempts": 1
+      }
+    },
+    {
+      "case": "subsequent retry picks up changed content",
+      "pass": true,
+      "evidence": {
+        "live": 3000,
+        "indexed": 3000
+      }
+    },
+    {
+      "case": "deletion during retry evicts old record",
+      "pass": true,
+      "evidence": {
+        "indexed": false
+      }
+    },
+    {
+      "case": "permanent failure stops after finite attempts",
+      "pass": true,
+      "evidence": {
+        "attempts": 5,
+        "reads": 5,
+        "timer": false
+      }
+    },
+    {
+      "case": "scheduled retries present before unload",
+      "pass": true,
+      "evidence": {
+        "timer": true
+      }
+    },
+    {
+      "case": "unload cancels retry and clears state",
+      "pass": true,
+      "evidence": {
+        "timer": null,
+        "pending": 0
+      }
+    }
+  ]
+}

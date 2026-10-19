@@ -1,0 +1,30 @@
+{
+  "beforeRelease": {
+    "gen": 4,
+    "oldGeneration": 3,
+    "inFlight": 0,
+    "loaded": true,
+    "events": [
+      "old-start",
+      "new-start",
+      "new-start",
+      "new-start"
+    ],
+    "snippet": "产品测试笔记 NEW_CONTENT_MARKER"
+  },
+  "afterSnippet": "产品测试笔记 NEW_CONTENT_MARKER",
+  "domSnippet": "产品测试笔记 NEW_CONTENT_MARKER",
+  "events": [
+    "old-start",
+    "new-start",
+    "new-start",
+    "new-start",
+    "old-release"
+  ],
+  "pending": 0,
+  "listenerCount": 7,
+  "retainedPaths": 400,
+  "destroyed": true,
+  "pendingAfterDestroy": 0,
+  "pageErrors": []
+}

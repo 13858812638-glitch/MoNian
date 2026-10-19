@@ -1,0 +1,17 @@
+{
+  "status": "PASS-ENGINEERING",
+  "modules": 149,
+  "importEdges": 643,
+  "cycles": [],
+  "external": [
+    "obsidian"
+  ],
+  "unresolvedSymbols": 0,
+  "sourceFragments": 826,
+  "byteExactFragments": 722,
+  "approvedMaintenanceFragments": 100,
+  "cssByteExact": false,
+  "fullTypescriptTypeCheck": "not-applicable: JavaScript sources; unresolved-symbol check only",
+  "manifestStatus": "BLOCKED: absent from uploaded baseline; plugin ID/release version cannot be verified",
+  "failures": []
+}

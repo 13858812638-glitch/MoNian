@@ -1,0 +1,2750 @@
+{
+  "results": [
+    {
+      "configuration": "desktop-light",
+      "pass": true,
+      "original": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      },
+      "candidate": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      }
+    },
+    {
+      "configuration": "desktop-dark",
+      "pass": true,
+      "original": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      },
+      "candidate": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      }
+    },
+    {
+      "configuration": "mobile-light",
+      "pass": true,
+      "original": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      },
+      "candidate": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      }
+    },
+    {
+      "configuration": "mobile-dark",
+      "pass": true,
+      "original": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      },
+      "candidate": {
+        "folder": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 3,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "tag": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 5,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        },
+        "property": {
+          "trace": [
+            {
+              "phase": "initial",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "maintenance-again",
+              "maintenance": "true",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-maintenance",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "multi-again",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "true",
+              "sortRows": false,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "sort-again",
+              "maintenance": "false",
+              "sort": "true",
+              "multi": "false",
+              "sortRows": true,
+              "persistent": true,
+              "selectionCount": 1,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            },
+            {
+              "phase": "exit-sort",
+              "maintenance": "false",
+              "sort": "false",
+              "multi": "false",
+              "sortRows": false,
+              "persistent": false,
+              "selectionCount": 0,
+              "treeRows": 2,
+              "search": "",
+              "attached": true
+            }
+          ],
+          "closed": true
+        }
+      }
+    }
+  ],
+  "pass": 4,
+  "total": 4
+}

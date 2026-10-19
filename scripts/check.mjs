@@ -1,0 +1,25 @@
+/** Static integrity gate for this extraction. It intentionally reports missing manifest separately. */
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import ts from 'typescript';
+import {parse} from 'acorn';
+import {validateMaintenanceScope} from './check-change-scope.mjs';
+const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+'/'+e.name):[d+'/'+e.name]);
+const files=walk('src').filter(x=>x.endsWith('.js'));const graph={};const trees=new Map();const exportsByFile=new Map();const failures=[];
+for(const f of files){try{const ast=parse(fs.readFileSync(f,'utf8'),{ecmaVersion:'latest',sourceType:'module'});trees.set(f,ast);graph[f]=[];const exports=new Set();for(const n of ast.body){if(n.type==='ExportDefaultDeclaration')exports.add('default');if(n.type==='ExportNamedDeclaration'){for(const s of n.specifiers||[])exports.add(s.exported.name);const d=n.declaration;if(d?.id)exports.add(d.id.name);for(const x of d?.declarations||[])exports.add(x.id.name);}}exportsByFile.set(f,exports);}catch(e){failures.push({check:'syntax',file:f,message:e.message});}}
+const externals=new Set();for(const [f,ast]of trees){for(const n of ast.body){if(n.type!=='ImportDeclaration'&&!(n.type.startsWith('Export')&&n.source))continue;const spec=n.source.value;if(!spec.startsWith('.')){externals.add(spec);if(!['obsidian','electron'].includes(spec))failures.push({check:'host-external',file:f,spec});continue;}const target=path.posix.normalize(path.posix.join(path.posix.dirname(f),spec));graph[f].push(target);if(!trees.has(target)){failures.push({check:'unresolved-module',file:f,target});continue;}if(n.type==='ImportDeclaration')for(const s of n.specifiers){if(s.type==='ImportNamespaceSpecifier')continue;const name=s.type==='ImportDefaultSpecifier'?'default':s.imported.name;if(!exportsByFile.get(target).has(name))failures.push({check:'unresolved-export',file:f,target,name});}}}
+const done=new Set(),stack=[];function visit(f){if(stack.includes(f)){failures.push({check:'cycle',path:[...stack,f]});return;}if(done.has(f))return;stack.push(f);for(const t of graph[f]||[])visit(t);stack.pop();done.add(f);}for(const f of files)visit(f);
+const program=ts.createProgram(files,{allowJs:true,checkJs:true,noEmit:true,target:ts.ScriptTarget.ES2021,module:ts.ModuleKind.ESNext,moduleResolution:ts.ModuleResolutionKind.Bundler});
+const unresolved=program.getSemanticDiagnostics().filter(d=>[2304,2552,18004].includes(d.code)||d.code===2307&&!ts.flattenDiagnosticMessageText(d.messageText,' ').includes("'obsidian'"));
+for(const d of unresolved)failures.push({check:'unresolved-symbol',file:d.file?.fileName,line:d.file&&d.file.getLineAndCharacterOfPosition(d.start).line+1,code:d.code,message:ts.flattenDiagnosticMessageText(d.messageText,' ')});
+const maintenance=validateMaintenanceScope(); failures.push(...maintenance.failures);
+const approved=new Set(maintenance.manifest.changedOriginIds);
+const retiredOrigins=new Set(maintenance.manifest.retiredOriginIds||[]);
+const source=fs.readFileSync('baseline/main.js','utf8');const origins=JSON.parse(fs.readFileSync('reports/source-origins.json','utf8'));let exact=0;
+const renamedSourcePaths=new Map((maintenance.manifest.renamedFiles||[]).map(row=>[row.from,row.to]));
+for(const r of origins){if(retiredOrigins.has(r.id))continue;const original=source.slice(...r.range);if(hash(original)!==r.sha256)failures.push({check:'baseline-fragment-hash',id:r.id});else if(!fs.readFileSync(renamedSourcePaths.get(r.file)||r.file,'utf8').includes(original)){if(!approved.has(r.id))failures.push({check:'unapproved-source-body-change',id:r.id,file:r.file});}else exact++;}
+const baselineHashes={main:'6178ecce711ab48c1164922e8251ae86bd15a6ef3143abe75e3638c48074319f',css:'402c2dc853b405f694c868a8945562c0d02b3c11045e89f6932a434725090e97',zip:'1f02c96a278fc5d470db94b60e2a8456357ade7c65394276b935ffa15f953bce'};
+for(const [file,want]of [['baseline/main.js',baselineHashes.main],['baseline/styles.css',baselineHashes.css],['baseline/original-upload.zip',baselineHashes.zip]])if(hash(fs.readFileSync(file))!==want)failures.push({check:'frozen-file-hash',file});
+const report={status:failures.length?'FAIL':'PASS-ENGINEERING',modules:files.length,importEdges:Object.values(graph).reduce((s,x)=>s+x.length,0),cycles:failures.filter(x=>x.check==='cycle'),external:[...externals],unresolvedSymbols:unresolved.length,sourceFragments:origins.length,byteExactFragments:exact,approvedMaintenanceFragments:approved.size, cssByteExact:hash(fs.readFileSync('src/styles/styles.css'))===baselineHashes.css,fullTypescriptTypeCheck:'not-applicable: JavaScript sources; unresolved-symbol check only',manifestStatus:'BLOCKED: absent from uploaded baseline; plugin ID/release version cannot be verified',failures};fs.writeFileSync('reports/static-checks.json',JSON.stringify(report,null,2));fs.writeFileSync('reports/module-graph.json',JSON.stringify(graph,null,2));console.log(JSON.stringify(report,null,2));if(failures.length)process.exitCode=1;

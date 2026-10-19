@@ -1,0 +1,915 @@
+{
+  "src/core/LocalSearchPlugin.js": [
+    "src/data/index/BodyIndex.js",
+    "src/features/create/create-model.js",
+    "src/features/plugin/content-cache-methods.js",
+    "src/features/plugin/external-properties-methods.js",
+    "src/features/plugin/external-search-methods.js",
+    "src/features/plugin/file-command-actions-methods.js",
+    "src/features/plugin/file-index-methods.js",
+    "src/features/plugin/index-queue-methods.js",
+    "src/features/plugin/index-storage-methods.js",
+    "src/features/plugin/markdown-write-tracking-methods.js",
+    "src/features/plugin/metadata-directory-methods.js",
+    "src/features/plugin/non-markdown-metadata-methods.js",
+    "src/features/plugin/notifications-methods.js",
+    "src/features/plugin/path-lifecycle-methods.js",
+    "src/features/plugin/property-catalog-methods.js",
+    "src/features/plugin/property-maintenance-methods.js",
+    "src/features/plugin/recent-history-state-methods.js",
+    "src/features/plugin/search-history-methods.js",
+    "src/features/plugin/settings-storage-methods.js",
+    "src/features/plugin/time-cache-methods.js",
+    "src/features/plugin/tree-maintenance-methods.js",
+    "src/features/plugin/view-preferences-methods.js",
+    "src/features/plugin/workspace-entry-methods.js",
+    "src/integrations/public-contract.js",
+    "src/interactions/hover-hints.js",
+    "src/interactions/swipe-back.js",
+    "src/services/BatchMetadataService.js",
+    "src/services/FileOperationService.js",
+    "src/ui/mobile/mobile-frame.js",
+    "src/ui/settings/LocalSearchSettingTab.js",
+    "src/ui/views/SearchView.js",
+    "src/utils/normalization.js",
+    "src/core/SharedSearchStateCoordinator.js",
+    "src/core/compose-class-methods.js",
+    "src/core/view-types.js"
+  ],
+  "src/core/SearchCore.js": [
+    "src/features/batch/BatchMetadataController.js",
+    "src/features/create/SearchCreateController.js",
+    "src/features/create/create-model.js",
+    "src/features/facets/SearchFacetController.js",
+    "src/features/filters/filter-state.js",
+    "src/features/result-controls/SearchResultControlsController.js",
+    "src/features/results/SearchResultRendererController.js",
+    "src/features/search/QueryState.js",
+    "src/features/selection/SearchSelectionController.js",
+    "src/features/sort/SearchSortController.js",
+    "src/features/sort/sort-model.js",
+    "src/interactions/SwipeActionCoordinator.js",
+    "src/services/IoPool.js",
+    "src/ui/overlays/SearchDropdownController.js",
+    "src/utils/normalization.js",
+    "src/utils/vault-paths.js",
+    "src/core/compose-class-methods.js",
+    "src/core/search/file-actions-methods.js",
+    "src/core/search/input-and-filters-methods.js",
+    "src/core/search/result-menu-events-methods.js",
+    "src/core/search/search-and-ranking-methods.js",
+    "src/core/search/session-methods.js",
+    "src/core/search/shell-methods.js",
+    "src/core/session-values.js"
+  ],
+  "src/core/SharedSearchStateCoordinator.js": [
+    "src/features/filters/filter-state.js",
+    "src/features/sort/sort-model.js",
+    "src/core/session-values.js"
+  ],
+  "src/core/compose-class-methods.js": [],
+  "src/core/default-settings.js": [
+    "src/data/time/time-values.js",
+    "src/features/navigator/toolbar-config.js",
+    "src/features/results/view-config.js",
+    "src/features/sort/sort-model.js"
+  ],
+  "src/core/picker-cleanup.js": [],
+  "src/core/search/file-actions-methods.js": [
+    "src/data/folders/folder-tree.js",
+    "src/data/formats/file-types.js",
+    "src/ui/dialogs/dialog-session.js",
+    "src/ui/dialogs/dialog-surface.js",
+    "src/ui/pickers/folder-picker.js",
+    "src/core/picker-cleanup.js"
+  ],
+  "src/core/search/input-and-filters-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/data/time/time-values.js",
+    "src/features/filters/FilterEngine.js",
+    "src/features/filters/filter-state.js",
+    "src/utils/dom.js",
+    "src/utils/vault-paths.js"
+  ],
+  "src/core/search/result-menu-events-methods.js": [
+    "src/utils/dom.js"
+  ],
+  "src/core/search/search-and-ranking-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/data/time/time-values.js",
+    "src/features/filters/FilterEngine.js",
+    "src/features/filters/filter-state.js",
+    "src/features/search/ResultRanker.js",
+    "src/features/sort/sort-model.js",
+    "src/utils/search-text.js"
+  ],
+  "src/core/search/session-methods.js": [
+    "src/features/filters/filter-state.js",
+    "src/features/sort/sort-model.js",
+    "src/utils/normalization.js",
+    "src/core/session-values.js"
+  ],
+  "src/core/search/shell-methods.js": [
+    "src/features/navigator/SearchNavigatorController.js",
+    "src/ui/components/indicator-label.js",
+    "src/ui/components/input-controls.js",
+    "src/utils/dom.js"
+  ],
+  "src/core/session-values.js": [],
+  "src/core/view-types.js": [],
+  "src/data/folders/folder-tree.js": [
+    "src/utils/normalization.js",
+    "src/utils/vault-paths.js",
+    "src/utils/preferred-order.js"
+  ],
+  "src/data/formats/drawing-content.js": [],
+  "src/data/formats/drawing-detection.js": [],
+  "src/data/formats/file-types.js": [
+    "src/features/filters/filter-state.js",
+    "src/data/formats/drawing-detection.js"
+  ],
+  "src/data/index/BodyIndex.js": [
+    "src/utils/markdown-text.js"
+  ],
+  "src/data/index/index-version.js": [],
+  "src/data/properties/cross-key-transfer.js": [
+    "src/data/properties/property-values.js"
+  ],
+  "src/data/properties/key-merge.js": [],
+  "src/data/properties/property-catalog.js": [
+    "src/utils/preferred-order.js",
+    "src/data/tags/tag-tree.js",
+    "src/data/properties/property-values.js"
+  ],
+  "src/data/properties/property-types.js": [
+    "src/data/time/time-values.js",
+    "src/data/tags/tag-values.js",
+    "src/data/properties/property-values.js"
+  ],
+  "src/data/properties/property-values.js": [],
+  "src/data/properties/raw-mutations.js": [
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js"
+  ],
+  "src/data/tags/tag-tree.js": [
+    "src/utils/normalization.js",
+    "src/utils/preferred-order.js",
+    "src/data/tags/tag-values.js"
+  ],
+  "src/data/tags/tag-values.js": [],
+  "src/data/time/time-values.js": [],
+  "src/features/batch/BatchMetadataController.js": [
+    "src/core/compose-class-methods.js",
+    "src/features/batch/mutation-flow-methods.js",
+    "src/features/batch/property-editor-methods.js",
+    "src/features/batch/tag-editor-methods.js"
+  ],
+  "src/features/batch/mutation-flow-methods.js": [
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/utils/preferred-order.js"
+  ],
+  "src/features/batch/property-editor-methods.js": [
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/interactions/scroll-anchor.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/selection-strip.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/normalization.js",
+    "src/utils/preferred-order.js"
+  ],
+  "src/features/batch/tag-editor-methods.js": [
+    "src/data/properties/property-types.js",
+    "src/data/tags/tag-tree.js",
+    "src/features/batch/tag-hierarchy-compose.js",
+    "src/data/tags/tag-values.js",
+    "src/interactions/scroll-anchor.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/selection-strip.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/tree-match.js"
+  ],
+  "src/features/batch/tag-hierarchy-compose.js": [
+    "src/data/properties/property-types.js",
+    "src/data/tags/tag-values.js"
+  ],
+  "src/features/create/SearchCreateController.js": [
+    "src/core/compose-class-methods.js",
+    "src/features/filters/filter-state.js",
+    "src/features/create/create-file-methods.js",
+    "src/features/create/draft-and-metadata-methods.js",
+    "src/features/create/input-mode-methods.js",
+    "src/features/create/payload-methods.js",
+    "src/features/create/preview-methods.js"
+  ],
+  "src/features/create/create-file-methods.js": [
+    "src/data/formats/drawing-detection.js",
+    "src/utils/dom.js"
+  ],
+  "src/features/create/create-model.js": [
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/utils/vault-paths.js",
+    "src/features/filters/filter-state.js"
+  ],
+  "src/features/create/draft-and-metadata-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/ui/pickers/template-picker.js",
+    "src/features/filters/filter-state.js",
+    "src/features/create/create-model.js"
+  ],
+  "src/features/create/input-mode-methods.js": [
+    "src/utils/dom.js",
+    "src/features/filters/filter-state.js"
+  ],
+  "src/features/create/payload-methods.js": [
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/utils/vault-paths.js"
+  ],
+  "src/features/create/preview-methods.js": [
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-tree.js",
+    "src/data/tags/tag-values.js",
+    "src/ui/components/input-controls.js",
+    "src/utils/dom.js",
+    "src/features/filters/filter-state.js"
+  ],
+  "src/features/facets/SearchFacetController.js": [
+    "src/core/compose-class-methods.js",
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-values.js",
+    "src/features/facets/folder-colors-methods.js",
+    "src/features/facets/folder-picker-methods.js",
+    "src/features/facets/property-picker-methods.js",
+    "src/features/facets/sidebar-maintenance-methods.js",
+    "src/features/facets/tag-picker-methods.js",
+    "src/features/facets/type-picker-methods.js"
+  ],
+  "src/features/facets/folder-colors-methods.js": [
+    "src/ui/components/input-controls.js",
+    "src/ui/dialogs/dialog-session.js",
+    "src/ui/pickers/picker-header.js",
+    "src/utils/dom.js",
+    "src/features/folders/folder-colors.js"
+  ],
+  "src/features/facets/folder-picker-methods.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/folders/folder-tree.js",
+    "src/interactions/PointerSortCoordinator.js",
+    "src/ui/components/indicator-label.js",
+    "src/ui/pickers/folder-picker.js",
+    "src/ui/pickers/header-modes.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/selection-mode.js",
+    "src/ui/pickers/selection-strip.js",
+    "src/ui/pickers/sort-mode.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/preferred-order.js",
+    "src/features/folders/exclusions.js"
+  ],
+  "src/features/facets/property-picker-methods.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/folders/folder-tree.js",
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-tree.js",
+    "src/data/tags/tag-values.js",
+    "src/interactions/PointerSortCoordinator.js",
+    "src/interactions/scroll-anchor.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/components/property-state.js",
+    "src/ui/dialogs/submission.js",
+    "src/ui/pickers/header-modes.js",
+    "src/ui/pickers/icon-catalog.js",
+    "src/ui/pickers/icon-picker.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/selection-mode.js",
+    "src/ui/pickers/selection-strip.js",
+    "src/ui/pickers/sort-mode.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/preferred-order.js",
+    "src/features/filters/filter-state.js",
+    "src/features/filters/pool-config.js",
+    "src/features/filters/pool-values.js"
+  ],
+  "src/features/facets/sidebar-maintenance-methods.js": [
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/ui/dialogs/dialog-session.js",
+    "src/utils/normalization.js",
+    "src/utils/vault-paths.js",
+    "src/features/filters/pool-values.js",
+    "src/features/folders/exclusions.js"
+  ],
+  "src/features/facets/tag-picker-methods.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/tags/tag-tree.js",
+    "src/data/tags/tag-values.js",
+    "src/interactions/PointerSortCoordinator.js",
+    "src/interactions/scroll-anchor.js",
+    "src/ui/pickers/header-modes.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/selection-mode.js",
+    "src/ui/pickers/selection-strip.js",
+    "src/ui/pickers/sort-mode.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/tree-match.js"
+  ],
+  "src/features/facets/type-picker-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/interactions/scroll-anchor.js",
+    "src/ui/components/indicator-label.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/header-modes.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/selection-strip.js",
+    "src/ui/pickers/tree-row.js"
+  ],
+  "src/features/filters/FilterEngine.js": [
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/features/filters/filter-state.js"
+  ],
+  "src/features/filters/filter-state.js": [
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/data/time/time-values.js",
+    "src/utils/normalization.js",
+    "src/utils/vault-paths.js",
+    "src/features/filters/pool-config.js"
+  ],
+  "src/features/filters/pool-config.js": [
+    "src/ui/pickers/icon-catalog.js",
+    "src/utils/normalization.js"
+  ],
+  "src/features/filters/pool-values.js": [
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/utils/vault-paths.js",
+    "src/features/filters/pool-config.js"
+  ],
+  "src/features/folders/exclusions.js": [
+    "src/ui/pickers/tree-row.js",
+    "src/utils/normalization.js",
+    "src/utils/vault-paths.js"
+  ],
+  "src/features/folders/folder-colors.js": [
+    "src/utils/vault-paths.js"
+  ],
+  "src/features/navigator/NavigatorCustomization.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/properties/property-values.js",
+    "src/data/properties/property-types.js",
+    "src/data/tags/tag-values.js",
+    "src/ui/dialogs/dialog-session.js",
+    "src/data/tags/tag-values.js",
+    "src/interactions/PointerSortCoordinator.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/dialogs/dialog-session.js",
+    "src/ui/pickers/count-rail.js",
+    "src/ui/pickers/icon-picker.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/preferred-order.js",
+    "src/features/folders/folder-colors.js",
+    "src/features/navigator/customization-model.js"
+  ],
+  "src/features/navigator/SearchNavigatorController.js": [
+    "src/core/picker-cleanup.js",
+    "src/core/session-values.js",
+    "src/data/folders/folder-tree.js",
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-tree.js",
+    "src/data/tags/tag-values.js",
+    "src/interactions/scroll-anchor.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/count-rail.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/normalization.js",
+    "src/features/sort/sort-model.js",
+    "src/features/navigator/NavigatorCustomization.js",
+    "src/features/navigator/customization-model.js",
+    "src/features/navigator/toolbar-config.js"
+  ],
+  "src/features/navigator/customization-model.js": [
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/utils/vault-paths.js",
+    "src/features/folders/folder-colors.js",
+    "src/features/navigator/toolbar-config.js"
+  ],
+  "src/features/navigator/toolbar-config.js": [
+    "src/ui/pickers/icon-catalog.js",
+    "src/utils/preferred-order.js",
+    "src/features/filters/pool-config.js"
+  ],
+  "src/features/plugin/content-cache-methods.js": [
+    "src/data/time/time-values.js",
+    "src/features/results/virtualization-config.js"
+  ],
+  "src/features/plugin/external-properties-methods.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/folders/folder-tree.js",
+    "src/data/properties/property-types.js",
+    "src/ui/overlays/LocalSearchOverlayHost.js",
+    "src/ui/overlays/SearchDropdownController.js",
+    "src/ui/pickers/folder-picker.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/selection-strip.js",
+    "src/utils/dom.js",
+    "src/utils/normalization.js",
+    "src/features/batch/BatchMetadataController.js",
+    "src/features/folders/exclusions.js",
+    "src/features/selection/SearchSelectionController.js"
+  ],
+  "src/features/plugin/external-search-methods.js": [
+    "src/core/SearchCore.js",
+    "src/core/session-values.js",
+    "src/data/tags/tag-values.js",
+    "src/integrations/SearchWorkspaceCapabilities.js",
+    "src/ui/hosts/SearchWindowSession.js",
+    "src/utils/normalization.js",
+    "src/features/create/create-model.js",
+    "src/features/filters/filter-state.js",
+    "src/features/sort/sort-model.js"
+  ],
+  "src/features/plugin/file-command-actions-methods.js": [
+    "src/core/view-types.js",
+    "src/ui/overlays/OperationOverlayController.js"
+  ],
+  "src/features/plugin/file-index-methods.js": [
+    "src/data/formats/drawing-content.js",
+    "src/data/formats/drawing-detection.js",
+    "src/data/formats/file-types.js",
+    "src/data/tags/tag-values.js",
+    "src/data/time/time-values.js",
+    "src/services/IoPool.js",
+    "src/utils/markdown-text.js",
+    "src/utils/vault-paths.js"
+  ],
+  "src/features/plugin/index-queue-methods.js": [
+    "src/services/IoPool.js"
+  ],
+  "src/features/plugin/index-storage-methods.js": [
+    "src/data/index/index-version.js",
+    "src/data/time/time-values.js"
+  ],
+  "src/features/plugin/markdown-write-tracking-methods.js": [
+    "src/data/time/time-values.js",
+    "src/services/BatchMetadataService.js",
+    "src/services/IoPool.js"
+  ],
+  "src/features/plugin/metadata-directory-methods.js": [
+    "src/data/time/time-values.js",
+    "src/utils/vault-paths.js"
+  ],
+  "src/features/plugin/non-markdown-metadata-methods.js": [
+    "src/data/time/time-values.js"
+  ],
+  "src/features/plugin/notifications-methods.js": [
+    "src/features/filters/filter-state.js"
+  ],
+  "src/features/plugin/path-lifecycle-methods.js": [
+    "src/utils/normalization.js",
+    "src/utils/preferred-order.js",
+    "src/utils/vault-paths.js",
+    "src/features/create/create-model.js",
+    "src/features/filters/filter-state.js",
+    "src/features/folders/exclusions.js",
+    "src/features/folders/folder-colors.js",
+    "src/features/navigator/customization-model.js"
+  ],
+  "src/features/plugin/property-catalog-methods.js": [
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/time/time-values.js",
+    "src/utils/normalization.js"
+  ],
+  "src/features/plugin/property-maintenance-methods.js": [
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/services/BatchMetadataService.js",
+    "src/data/properties/key-merge.js",
+    "src/utils/normalization.js",
+    "src/features/create/create-model.js",
+    "src/features/filters/filter-state.js",
+    "src/features/filters/pool-config.js",
+    "src/features/navigator/customization-model.js"
+  ],
+  "src/features/plugin/recent-history-state-methods.js": [
+    "src/data/time/time-values.js"
+  ],
+  "src/features/plugin/search-history-methods.js": [
+    "src/core/session-values.js",
+    "src/features/filters/filter-state.js",
+    "src/features/sort/sort-model.js"
+  ],
+  "src/features/plugin/settings-storage-methods.js": [
+    "src/core/default-settings.js",
+    "src/core/session-values.js",
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-types.js",
+    "src/data/time/time-values.js",
+    "src/ui/pickers/icon-catalog.js",
+    "src/utils/normalization.js",
+    "src/utils/vault-paths.js",
+    "src/features/create/create-model.js",
+    "src/features/filters/filter-state.js",
+    "src/features/filters/pool-config.js",
+    "src/features/folders/exclusions.js",
+    "src/features/folders/folder-colors.js",
+    "src/features/navigator/customization-model.js",
+    "src/features/navigator/toolbar-config.js",
+    "src/features/results/view-config.js",
+    "src/features/sort/sort-model.js"
+  ],
+  "src/features/plugin/time-cache-methods.js": [
+    "src/data/time/time-values.js"
+  ],
+  "src/features/plugin/tree-maintenance-methods.js": [
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-values.js",
+    "src/utils/normalization.js",
+    "src/utils/preferred-order.js",
+    "src/utils/vault-paths.js",
+    "src/features/create/create-model.js",
+    "src/features/filters/pool-config.js",
+    "src/features/navigator/customization-model.js"
+  ],
+  "src/features/plugin/view-preferences-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/utils/vault-paths.js",
+    "src/features/filters/pool-config.js",
+    "src/features/folders/exclusions.js",
+    "src/features/results/view-config.js",
+    "src/features/sort/sort-model.js"
+  ],
+  "src/features/plugin/workspace-entry-methods.js": [
+    "src/core/view-types.js",
+    "src/ui/views/SearchView.js"
+  ],
+  "src/features/result-controls/SearchResultControlsController.js": [
+    "src/core/compose-class-methods.js",
+    "src/features/results/view-config.js",
+    "src/features/result-controls/filter-pool-editor-methods.js",
+    "src/features/result-controls/search-history-methods.js",
+    "src/features/result-controls/toolbar-methods.js",
+    "src/features/result-controls/view-composer-methods.js"
+  ],
+  "src/features/result-controls/filter-pool-editor-methods.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/folders/folder-tree.js",
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-tree.js",
+    "src/data/tags/tag-values.js",
+    "src/interactions/scroll-anchor.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/components/view-composer.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/selection-mode.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/normalization.js",
+    "src/features/filters/filter-state.js",
+    "src/features/filters/pool-config.js",
+    "src/features/filters/pool-values.js"
+  ],
+  "src/features/result-controls/search-history-methods.js": [
+    "src/interactions/hover-hints.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/dom.js"
+  ],
+  "src/features/result-controls/toolbar-methods.js": [
+    "src/ui/components/input-controls.js",
+    "src/features/results/view-config.js"
+  ],
+  "src/features/result-controls/view-composer-methods.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/properties/property-catalog.js",
+    "src/interactions/PointerSortCoordinator.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/components/view-composer.js",
+    "src/ui/pickers/icon-catalog.js",
+    "src/ui/pickers/icon-picker.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/sort-mode.js",
+    "src/ui/pickers/tree-row.js",
+    "src/utils/dom.js",
+    "src/utils/preferred-order.js",
+    "src/features/filters/pool-values.js",
+    "src/features/folders/exclusions.js",
+    "src/features/navigator/toolbar-config.js",
+    "src/features/results/view-config.js",
+    "src/features/sort/sort-model.js"
+  ],
+  "src/features/results/SearchResultRendererController.js": [
+    "src/core/compose-class-methods.js",
+    "src/utils/dom.js",
+    "src/features/results/SparseHeightIndex.js",
+    "src/features/results/card-metadata-methods.js",
+    "src/features/results/filter-channels-methods.js",
+    "src/features/results/page-and-snippets-methods.js",
+    "src/features/results/result-card-methods.js",
+    "src/features/results/viewport-anchors-methods.js",
+    "src/features/results/viewport-geometry-methods.js",
+    "src/features/results/virtual-window-methods.js",
+    "src/features/results/virtualization-config.js"
+  ],
+  "src/features/results/SparseHeightIndex.js": [
+    "src/features/results/virtualization-config.js"
+  ],
+  "src/features/results/card-metadata-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/data/properties/property-catalog.js",
+    "src/data/properties/property-values.js",
+    "src/data/tags/tag-tree.js",
+    "src/data/tags/tag-values.js",
+    "src/ui/components/input-controls.js",
+    "src/utils/normalization.js",
+    "src/utils/preferred-order.js",
+    "src/utils/search-text.js",
+    "src/features/folders/folder-colors.js"
+  ],
+  "src/features/results/filter-channels-methods.js": [
+    "src/data/properties/property-catalog.js",
+    "src/ui/components/indicator-label.js",
+    "src/ui/components/input-controls.js",
+    "src/utils/preferred-order.js",
+    "src/features/filters/pool-config.js",
+    "src/features/filters/pool-values.js"
+  ],
+  "src/features/results/page-and-snippets-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/utils/dom.js",
+    "src/utils/markdown-text.js",
+    "src/utils/search-text.js",
+    "src/features/search/QueryState.js"
+  ],
+  "src/features/results/result-card-methods.js": [
+    "src/data/formats/file-types.js",
+    "src/ui/components/input-controls.js",
+    "src/utils/dom.js",
+    "src/utils/search-text.js",
+    "src/features/results/view-config.js"
+  ],
+  "src/features/results/view-config.js": [
+    "src/utils/normalization.js"
+  ],
+  "src/features/results/viewport-anchors-methods.js": [
+    "src/core/session-values.js",
+    "src/utils/dom.js",
+    "src/features/results/virtualization-config.js"
+  ],
+  "src/features/results/viewport-geometry-methods.js": [
+    "src/core/session-values.js",
+    "src/interactions/SwipeActionCoordinator.js",
+    "src/utils/dom.js",
+    "src/features/results/virtualization-config.js"
+  ],
+  "src/features/results/virtual-window-methods.js": [
+    "src/core/session-values.js",
+    "src/utils/dom.js",
+    "src/features/results/virtualization-config.js"
+  ],
+  "src/features/results/virtualization-config.js": [],
+  "src/features/search/QueryState.js": [
+    "src/utils/markdown-text.js"
+  ],
+  "src/features/search/ResultRanker.js": [
+    "src/data/formats/file-types.js",
+    "src/data/tags/tag-values.js",
+    "src/utils/search-text.js"
+  ],
+  "src/features/selection/SearchSelectionController.js": [
+    "src/ui/components/input-controls.js"
+  ],
+  "src/features/sort/SearchSortController.js": [
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/tree-row.js",
+    "src/features/filters/filter-state.js",
+    "src/features/navigator/toolbar-config.js",
+    "src/features/sort/sort-model.js"
+  ],
+  "src/features/sort/sort-model.js": [
+    "src/utils/normalization.js"
+  ],
+  "src/integrations/SearchWorkspaceCapabilities.js": [
+    "src/ui/mobile/mobile-frame.js"
+  ],
+  "src/integrations/public-contract.js": [],
+  "src/interactions/PointerSortCoordinator.js": [
+    "src/interactions/sort-feedback.js"
+  ],
+  "src/interactions/SwipeActionCoordinator.js": [
+    "src/ui/components/input-controls.js",
+    "src/utils/dom.js"
+  ],
+  "src/interactions/hover-hints.js": [],
+  "src/interactions/scroll-anchor.js": [
+    "src/utils/dom.js"
+  ],
+  "src/interactions/sort-feedback.js": [],
+  "src/interactions/swipe-back.js": [],
+  "src/main.js": [
+    "src/core/LocalSearchPlugin.js"
+  ],
+  "src/services/BatchMetadataService.js": [
+    "src/data/properties/property-types.js",
+    "src/data/properties/property-values.js",
+    "src/data/properties/raw-mutations.js",
+    "src/data/properties/key-merge.js",
+    "src/data/properties/cross-key-transfer.js",
+    "src/data/tags/tag-values.js"
+  ],
+  "src/services/FileOperationService.js": [
+    "src/data/properties/property-types.js",
+    "src/data/tags/tag-values.js",
+    "src/data/time/time-values.js",
+    "src/utils/vault-paths.js"
+  ],
+  "src/services/IoPool.js": [],
+  "src/ui/components/indicator-label.js": [
+    "src/utils/dom.js"
+  ],
+  "src/ui/components/input-controls.js": [
+    "src/utils/dom.js"
+  ],
+  "src/ui/components/property-state.js": [
+    "src/data/properties/property-values.js",
+    "src/ui/components/input-controls.js"
+  ],
+  "src/ui/components/view-composer.js": [
+    "src/utils/dom.js",
+    "src/ui/pickers/tree-row.js",
+    "src/ui/components/indicator-label.js",
+    "src/ui/components/input-controls.js"
+  ],
+  "src/ui/dialogs/dialog-session.js": [
+    "src/utils/dom.js",
+    "src/ui/dialogs/dialog-surface.js",
+    "src/ui/dialogs/submission.js"
+  ],
+  "src/ui/dialogs/dialog-surface.js": [
+    "src/ui/components/input-controls.js"
+  ],
+  "src/ui/dialogs/submission.js": [],
+  "src/ui/hosts/SearchWindowSession.js": [
+    "src/core/SearchCore.js",
+    "src/utils/dom.js",
+    "src/ui/mobile/mobile-frame.js",
+    "src/ui/hosts/modal-host.js"
+  ],
+  "src/ui/hosts/modal-host.js": [],
+  "src/ui/mobile/mobile-frame.js": [],
+  "src/ui/overlays/LocalSearchOverlayHost.js": [
+    "src/core/picker-cleanup.js",
+    "src/utils/dom.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/mobile/mobile-frame.js",
+    "src/ui/overlays/popup-order.js"
+  ],
+  "src/ui/overlays/OperationOverlayController.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/folders/folder-tree.js",
+    "src/utils/dom.js",
+    "src/ui/dialogs/dialog-surface.js",
+    "src/ui/dialogs/submission.js",
+    "src/ui/pickers/folder-picker.js",
+    "src/ui/overlays/LocalSearchOverlayHost.js"
+  ],
+  "src/ui/overlays/SearchDropdownController.js": [
+    "src/core/picker-cleanup.js",
+    "src/ui/dialogs/submission.js",
+    "src/ui/mobile/mobile-frame.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/overlays/geometry.js",
+    "src/ui/overlays/popup-order.js"
+  ],
+  "src/ui/overlays/geometry.js": [
+    "src/utils/dom.js"
+  ],
+  "src/ui/overlays/popup-order.js": [],
+  "src/ui/pickers/count-rail.js": [],
+  "src/ui/pickers/folder-picker.js": [
+    "src/data/folders/folder-tree.js",
+    "src/interactions/scroll-anchor.js",
+    "src/utils/preferred-order.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/tree-row.js"
+  ],
+  "src/ui/pickers/header-modes.js": [
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/tree-row.js"
+  ],
+  "src/ui/pickers/icon-catalog.js": [
+    "src/utils/normalization.js"
+  ],
+  "src/ui/pickers/icon-picker.js": [
+    "src/utils/normalization.js",
+    "src/ui/pickers/icon-catalog.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/tree-row.js"
+  ],
+  "src/ui/pickers/picker-header.js": [
+    "src/ui/components/input-controls.js"
+  ],
+  "src/ui/pickers/picker-shell.js": [
+    "src/core/picker-cleanup.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/count-rail.js",
+    "src/ui/pickers/tree-row.js"
+  ],
+  "src/ui/pickers/selection-mode.js": [
+    "src/core/picker-cleanup.js",
+    "src/data/properties/property-values.js",
+    "src/features/filters/filter-state.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js"
+  ],
+  "src/ui/pickers/selection-strip.js": [
+    "src/core/picker-cleanup.js",
+    "src/ui/components/input-controls.js"
+  ],
+  "src/ui/pickers/sort-mode.js": [
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/selection-mode.js"
+  ],
+  "src/ui/pickers/template-picker.js": [
+    "src/data/formats/drawing-detection.js",
+    "src/utils/dom.js",
+    "src/utils/normalization.js",
+    "src/ui/pickers/picker-header.js",
+    "src/ui/pickers/picker-shell.js",
+    "src/ui/pickers/tree-row.js"
+  ],
+  "src/ui/pickers/tree-row.js": [
+    "src/utils/dom.js",
+    "src/ui/components/input-controls.js"
+  ],
+  "src/ui/settings/LocalSearchSettingTab.js": [
+    "src/core/view-types.js",
+    "src/data/time/time-values.js",
+    "src/ui/components/input-controls.js",
+    "src/ui/settings/setting-row.js"
+  ],
+  "src/ui/settings/setting-row.js": [],
+  "src/ui/views/SearchView.js": [
+    "src/core/SearchCore.js",
+    "src/core/view-types.js",
+    "src/integrations/SearchWorkspaceCapabilities.js"
+  ],
+  "src/utils/dom.js": [],
+  "src/utils/markdown-text.js": [],
+  "src/utils/normalization.js": [],
+  "src/utils/preferred-order.js": [
+    "src/features/filters/pool-config.js",
+    "src/utils/normalization.js"
+  ],
+  "src/utils/search-text.js": [
+    "src/utils/dom.js"
+  ],
+  "src/utils/tree-match.js": [],
+  "src/utils/vault-paths.js": []
+}

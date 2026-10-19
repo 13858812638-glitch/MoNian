@@ -1,0 +1,49 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 test:navigation-browse
+> node --test tests/navigation-browse-scope.test.mjs && python3 scripts/navigation_browse_audit.py
+
+TAP version 13
+# Subtest: navigation catalog ignores search and precision refinements, folder is its only scope
+ok 1 - navigation catalog ignores search and precision refinements, folder is its only scope
+  ---
+  duration_ms: 1.792103
+  type: 'test'
+  ...
+# Subtest: switching folder replaces browse scope, drops temporary refinements and query
+ok 2 - switching folder replaces browse scope, drops temporary refinements and query
+  ---
+  duration_ms: 0.480395
+  type: 'test'
+  ...
+# Subtest: single selection replaces or clears its own facet while other property keys remain
+ok 3 - single selection replaces or clears its own facet while other property keys remain
+  ---
+  duration_ms: 0.508907
+  type: 'test'
+  ...
+# Subtest: explicit tag multi-select is OR, while property keys remain AND
+ok 4 - explicit tag multi-select is OR, while property keys remain AND
+  ---
+  duration_ms: 0.672047
+  type: 'test'
+  ...
+# Subtest: folder multi-selection also resets temporary tags/properties/time without changing folder OR
+ok 5 - folder multi-selection also resets temporary tags/properties/time without changing folder OR
+  ---
+  duration_ms: 0.245521
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2209.395182
+desktop-light 19 PASS
+desktop-dark 19 PASS
+mobile-light 19 PASS
+mobile-dark 19 PASS
+TOTAL 76 failures 0

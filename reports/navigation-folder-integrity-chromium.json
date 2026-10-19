@@ -1,0 +1,70 @@
+[
+  {
+    "config": "mobile-light",
+    "status": "pass",
+    "result": {
+      "folderCount": "2 · 5",
+      "metadataVisible": true,
+      "protected": true,
+      "iconInitially": "folder-closed",
+      "iconExpanded": "folder-open",
+      "divider": {
+        "section": "\"\"",
+        "left": "-16px",
+        "manual": "\"\"",
+        "manualLine": "solid"
+      }
+    }
+  },
+  {
+    "config": "mobile-dark",
+    "status": "pass",
+    "result": {
+      "folderCount": "2 · 5",
+      "metadataVisible": true,
+      "protected": true,
+      "iconInitially": "folder-closed",
+      "iconExpanded": "folder-open",
+      "divider": {
+        "section": "\"\"",
+        "left": "-16px",
+        "manual": "\"\"",
+        "manualLine": "solid"
+      }
+    }
+  },
+  {
+    "config": "desktop-light",
+    "status": "pass",
+    "result": {
+      "folderCount": "2 · 5",
+      "metadataVisible": true,
+      "protected": true,
+      "iconInitially": "folder-closed",
+      "iconExpanded": "folder-open",
+      "divider": {
+        "section": "\"\"",
+        "left": "-16px",
+        "manual": "\"\"",
+        "manualLine": "solid"
+      }
+    }
+  },
+  {
+    "config": "desktop-dark",
+    "status": "pass",
+    "result": {
+      "folderCount": "2 · 5",
+      "metadataVisible": true,
+      "protected": true,
+      "iconInitially": "folder-closed",
+      "iconExpanded": "folder-open",
+      "divider": {
+        "section": "\"\"",
+        "left": "-16px",
+        "manual": "\"\"",
+        "manualLine": "solid"
+      }
+    }
+  }
+]

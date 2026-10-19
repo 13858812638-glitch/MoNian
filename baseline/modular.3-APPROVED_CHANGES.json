@@ -1,0 +1,42 @@
+{
+  "revision": "modular.3",
+  "baseline": "modular.2 Source.zip from this conversation",
+  "reason": "Native focus is not navigation state; shared current keyboard/viewport environment, actual-keyboard-only frame lock, idempotent CSS sheet positioning and a shared native search touch contract. No data/API changes.",
+  "changedOriginIds": [
+    "SearchResultRendererController._appendChannelGroup",
+    "SearchCreateController._leaveDerivedCreateView",
+    "SearchCreateController.syncDerivedCreateViewState",
+    "SearchNavigatorController",
+    "SearchCore._clearSearchContext",
+    "SearchCore._syncResultStateRow",
+    "SearchCore._onFilterChanged",
+    "MobileFrameController",
+    "SearchDropdownController"
+  ],
+  "files": [
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "baseline": "baseline/modular.2-source/features/navigator/SearchNavigatorController.js",
+      "before": "5f0fc51c99b58da7d7e3ec119e8e7ef3db9648b91d616cc98667fc65af3adb41",
+      "after": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870"
+    },
+    {
+      "file": "src/styles/styles.css",
+      "baseline": "baseline/modular.2-source/styles/styles.css",
+      "before": "cc3377de04d2dd5583ac5c264a389e04ab2313e1ddbb8ba91f54bd36bf65755f",
+      "after": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "baseline": "baseline/modular.2-source/ui/mobile/mobile-frame.js",
+      "before": "840ab2b51d36d91918a71c0a2512e8f1fc0d1664a53b8f08969c00e7974c7a92",
+      "after": "c9236a58325218edd1884db138cf5b39ad0f10ac10fb92029ffcb0937d123759"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "baseline": "baseline/modular.2-source/ui/overlays/SearchDropdownController.js",
+      "before": "03e36a6c2a34cf64fbebe7ee3a79241eb3e44fcff1265c7117a36de00a009fcc",
+      "after": "d9520e2d9f9718bde77361f4995cea61172d6b100ce583d060f2afb396f81f22"
+    }
+  ]
+}

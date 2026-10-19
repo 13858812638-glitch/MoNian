@@ -1,0 +1,42 @@
+desktop-dark B pure-title-query-no-condition-rail True
+desktop-dark B zero-query-default-create-no-phantom-condition True
+desktop-dark B mixed-title-body-switch-still-works True
+desktop-dark B draft-folder-eraser-restores-empty-search-state True
+desktop-dark B draft-tags-eraser-discards-draft-only-chip True
+desktop-dark B draft-property-eraser-discards-draft-only-chip True
+desktop-dark B draft-eraser-restores-original-real-filter True
+desktop-dark B draft-new-query-restores-chip-projection True
+desktop-dark B real-filter-clear-remains-functional True
+desktop-dark B toolbar-return-clears-query-and-refreshes-counts True
+desktop-dark B toolbar-return-keeps-real-filter-not-draft True
+desktop-dark B back-route-uses-the-same-query-reset True
+desktop-dark B collapse-route-uses-the-same-query-reset True
+desktop-dark B pending-debounce-cannot-revive-returned-query True
+desktop-dark B pending-new-word-then-facet-uses-live-input True
+desktop-dark B clear-uses-committed-query-even-if-dom-already-empty True
+desktop-dark B composition-facet-does-not-submit-partial-word True
+desktop-dark B explicit-create-back-is-single-level True
+desktop-dark B repeated-draft-enter-exit-no-ghost-chips True
+desktop-dark B unload-cancels-pending-search-and-projection True
+desktop-dark B picker-cycle-global-listener-release True
+desktop-dark B already-filter-page-return-clears-dormant-query True
+desktop-dark B native-click-caret-folder True
+desktop-dark B native-click-caret-tags True
+desktop-dark B native-click-caret-property-key True
+desktop-dark B native-click-caret-property-value True
+desktop-dark B native-click-caret-create-folder True
+desktop-dark B native-click-caret-create-tags True
+desktop-dark B native-click-caret-create-property True
+desktop-dark B focused-main-to-picker-folder True
+desktop-dark B focused-main-to-picker-tags True
+desktop-dark B focused-main-to-picker-property-key True
+desktop-dark B focused-main-to-picker-property-value True
+desktop-dark B focused-main-to-picker-create-folder True
+desktop-dark B focused-main-to-picker-create-tags True
+desktop-dark B focused-main-to-picker-create-property True
+{
+  "Bpassed": 36,
+  "Bfailed": 0,
+  "reproducedAndFixed": 0,
+  "errors": []
+}

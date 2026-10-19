@@ -1,0 +1,52 @@
+{
+  "revision": "modular.2",
+  "baseline": "modular.1 source from this conversation only",
+  "reason": "Search-only rail, derived Draft exit projections, query reset on navigation and pending input/facet race; an explicit return command also clears a dormant query already on the filters page",
+  "changedOriginIds": [
+    "SearchResultRendererController._appendChannelGroup",
+    "SearchCreateController._leaveDerivedCreateView",
+    "SearchCreateController.syncDerivedCreateViewState",
+    "SearchNavigatorController",
+    "SearchCore._clearSearchContext",
+    "SearchCore._syncResultStateRow",
+    "SearchCore._onFilterChanged"
+  ],
+  "files": [
+    {
+      "file": "src/styles/styles.css",
+      "baseline": "baseline/modular.1-source/styles/styles.css",
+      "before": "402c2dc853b405f694c868a8945562c0d02b3c11045e89f6932a434725090e97",
+      "after": "cc3377de04d2dd5583ac5c264a389e04ab2313e1ddbb8ba91f54bd36bf65755f"
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "baseline": "baseline/modular.1-source/features/results/filter-channels-methods.js",
+      "before": "dd0ce4a5da786d3ec579a89d81b7fefa28804492e7752e5f615f50caf08606cd",
+      "after": "e1f0b8689ae54574ee5a5638b6f6355082b62923de3993d09f4731c81dff7173"
+    },
+    {
+      "file": "src/features/create/input-mode-methods.js",
+      "baseline": "baseline/modular.1-source/features/create/input-mode-methods.js",
+      "before": "e6a7e39ee4706bd030e8c64ee39ec864e6fe66fab71d76b571807ca8ea980b0b",
+      "after": "3ff013349efb26727b827a548aaba0cb9d703fbca1cd433fa7d84752fa152de2"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "baseline": "baseline/modular.1-source/features/navigator/SearchNavigatorController.js",
+      "before": "409f174e015310f23c7f3fd50d3039b309e9e10ce12a728cd2ba80cfd7d3eca6",
+      "after": "5f0fc51c99b58da7d7e3ec119e8e7ef3db9648b91d616cc98667fc65af3adb41"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "baseline": "baseline/modular.1-source/core/search/shell-methods.js",
+      "before": "acc368d5837053e9695ca926291fff19e15a457f84b3f5f3687a52c55257a035",
+      "after": "e44ace692869d9688cd982f0225bb0a5e7ba1dc6aa55d2dd7253fca39fa986fa"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "baseline": "baseline/modular.1-source/core/search/input-and-filters-methods.js",
+      "before": "750868c322105f0b78739b8a217a9ed1962913e3a36e7b4e021759fbf9a7c2c5",
+      "after": "3ca8c8ddedfa70f381e7a9dd240075df6ba8662c71183658f9b60045b9f9fa43"
+    }
+  ]
+}

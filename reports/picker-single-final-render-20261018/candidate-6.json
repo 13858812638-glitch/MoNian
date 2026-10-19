@@ -1,0 +1,1370 @@
+{
+  "engine": "Chromium 144.0.7559.96",
+  "files": 6,
+  "kinds": {
+    "tag": [
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 4.899999999906868,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名标签：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名标签",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 计划",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 图片",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 运动",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 周报",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 4.2000000001862645,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 0.900000000372529,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 2.6999999997206032,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名标签：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名标签",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 计划",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 图片",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 运动",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 周报",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 1,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 1.8999999999068677,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 2.2000000001862645,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名标签：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名标签",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 计划",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 图片",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 运动",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "重命名标签 周报",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 2.7999999998137355,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入标签拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 0.6000000000931323,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名标签",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出标签拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入标签多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "标签 计划",
+              "text": "计划1",
+              "selected": false
+            },
+            {
+              "key": "标签 图片",
+              "text": "图片1",
+              "selected": false
+            },
+            {
+              "key": "标签 运动",
+              "text": "运动1",
+              "selected": false
+            },
+            {
+              "key": "标签 周报",
+              "text": "周报1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      }
+    ],
+    "property": [
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 1.6000000000931323,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名属性键和值：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名属性键和值",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": true,
+              "selected": false
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 2,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 0.599999999627471,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 2,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名属性键和值：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名属性键和值",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": true,
+              "selected": false
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 0.6000000000931323,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 2.3000000002793968,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "maintenance",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 1.5,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "重命名属性键和值：点击条目进行设置"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "退出重命名属性键和值",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": true,
+              "selected": false
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "selection",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 1.6000000000931323,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "点击条目多选，确认后应用"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "进入属性拖拽模式",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性多选",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": false,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      },
+      {
+        "step": "sort",
+        "fullRender": 1,
+        "filterChanges": 0,
+        "resultRenders": 0,
+        "elapsedMs": 0.6000000000931323,
+        "state": {
+          "panelClasses": [
+            "is-persistent-toggle",
+            "local-search-dropdown",
+            "local-search-facet-picker",
+            "local-search-folder-dropdown",
+            "local-search-picker-dropdown",
+            "local-search-property-dropdown",
+            "ui-mobile-frame",
+            "ui-mobile-picker-sheet"
+          ],
+          "heading": "",
+          "inputs": [
+            {
+              "value": "",
+              "placeholder": "拖动条目调整顺序"
+            }
+          ],
+          "relevantButtons": [
+            {
+              "label": "重命名属性键和值",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "退出属性拖拽模式",
+              "pressed": "true",
+              "hidden": false,
+              "selected": true
+            },
+            {
+              "label": "进入属性多选",
+              "pressed": "false",
+              "hidden": false,
+              "selected": false
+            },
+            {
+              "label": "确认多选筛选，已选 0 项",
+              "pressed": null,
+              "hidden": true,
+              "selected": false
+            }
+          ],
+          "searchMode": "",
+          "rows": [
+            {
+              "key": "所属项目",
+              "text": "所属项目4",
+              "selected": false
+            },
+            {
+              "key": "项目负责人",
+              "text": "项目负责人1",
+              "selected": false
+            }
+          ],
+          "currentSelection": "",
+          "scrollTop": 0
+        }
+      }
+    ]
+  },
+  "errors": []
+}

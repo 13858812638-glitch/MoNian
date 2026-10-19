@@ -1,0 +1,199 @@
+--- formal-v5.2-v2/src/ui/pickers/selection-mode.js
++++ candidate-picker-single-render-v1/src/ui/pickers/selection-mode.js
+@@ -59,16 +59,20 @@
+ // A single, stateless exit path for mutually exclusive facet Picker modes.
+ // The caller determines the activation order: the folder sort Picker has
+ // always exited maintenance before selection, unlike tag/property sorting.
+-// Keep the original setActive calls (and their existing refresh semantics).
++// The existing controllers still update their state/headers/selection strip.
++// When the caller will perform the final list render in the same stack, avoid
++// rebuilding the *intermediate* list. The folder Picker keeps its old default.
+ export function deactivateConflictingFacetPickerModes({
+     selectionMode = null,
+     maintenanceMode = null,
+     sortToggle = null,
+-    maintenanceFirst = true
++    maintenanceFirst = true,
++    suppressIntermediateRender = false
+ } = {}) {
+-    if (maintenanceFirst) maintenanceMode?.setActive("");
+-    selectionMode?.setActive(false);
+-    if (!maintenanceFirst) maintenanceMode?.setActive("");
++    const options = suppressIntermediateRender ? { suppressIntermediateRender: true } : undefined;
++    if (maintenanceFirst) maintenanceMode?.setActive("", options);
++    selectionMode?.setActive(false, options);
++    if (!maintenanceFirst) maintenanceMode?.setActive("", options);
+     sortToggle?.setActive(false);
+ }
+ 
+@@ -136,9 +140,10 @@
+         }
+     };
+ 
+-    const notify = () => onStateChange?.({ active, draft });
++    const notify = (suppressIntermediateRender = false) =>
++        onStateChange?.({ active, draft, suppressIntermediateRender });
+ 
+-    function setActive(value) {
++    function setActive(value, { suppressIntermediateRender = false } = {}) {
+         const next = Boolean(value);
+         if (next === active) return active;
+ 
+@@ -152,7 +157,7 @@
+         }
+ 
+         sync();
+-        notify();
++        notify(suppressIntermediateRender);
+         return active;
+     }
+ 
+--- formal-v5.2-v2/src/ui/pickers/header-modes.js
++++ candidate-picker-single-render-v1/src/ui/pickers/header-modes.js
+@@ -80,12 +80,12 @@
+         }
+     };
+ 
+-    const setActive = id => {
++    const setActive = (id, { suppressIntermediateRender = false } = {}) => {
+         const wanted = definitions.some(mode => mode.id === id) ? id : "";
+         if (wanted === activeId) return activeId;
+         activeId = wanted;
+         sync();
+-        onChange?.(activeId);
++        onChange?.(activeId, { suppressIntermediateRender });
+         const panel = actions.closest(".local-search-picker-dropdown");
+         panel?.classList.toggle("is-persistent-toggle", Boolean(activeId));
+         setPickerSearchMode(panel, definitions.find(mode => mode.id === activeId)?.description || "");
+--- formal-v5.2-v2/src/ui/pickers/sort-mode.js
++++ candidate-picker-single-render-v1/src/ui/pickers/sort-mode.js
+@@ -65,6 +65,7 @@
+     maintenanceMode = null,
+     maintenanceFirst = false,
+     coordinator = null,
++    suppressIntermediateRender = false,
+     onEnter = null,
+     onRefreshSelection = null
+ } = {}) {
+@@ -73,7 +74,8 @@
+         onChange: active => {
+             if (active) {
+                 deactivateConflictingFacetPickerModes({
+-                    selectionMode, maintenanceMode, maintenanceFirst
++                    selectionMode, maintenanceMode, maintenanceFirst,
++                    suppressIntermediateRender
+                 });
+                 onEnter?.();
+             }
+--- formal-v5.2-v2/src/features/facets/tag-picker-methods.js
++++ candidate-picker-single-render-v1/src/features/facets/tag-picker-methods.js
+@@ -131,13 +131,15 @@
+             ? null
+             : attachPickerHeaderModes(header, {
+                 modes: this.sidebarMaintenanceModes("tag"),
+-                onChange: mode => {
++                onChange: (mode, { suppressIntermediateRender = false } = {}) => {
+                     maintenanceMode = mode;
+                     if (mode) deactivateConflictingFacetPickerModes({
+-                        selectionMode, sortToggle
++                        selectionMode, sortToggle, suppressIntermediateRender: true
+                     });
+                     refreshSource();
+-                    rerenderPickerListPreservingScroll(list, () => render(false));
++                    if (!suppressIntermediateRender) {
++                        rerenderPickerListPreservingScroll(list, () => render(false));
++                    }
+                 }
+             });
+ 
+@@ -149,16 +151,16 @@
+                 onCommit: options.onCommit,
+                 title: "标签多选",
+                 onBeforeEnter: () => deactivateConflictingFacetPickerModes({
+-                    maintenanceMode: maintenanceActions, sortToggle
++                    maintenanceMode: maintenanceActions, sortToggle,
++                    suppressIntermediateRender: true
+                 }),
+-                onStateChange: () => {
++                onStateChange: ({ suppressIntermediateRender = false } = {}) => {
+                     refreshTagUsage();
+                     syncHeading();
+                     renderCurrentSelection();
+-                    rerenderPickerListPreservingScroll(
+-                        list,
+-                        () => render(false)
+-                    );
++                    if (!suppressIntermediateRender) {
++                        rerenderPickerListPreservingScroll(list, () => render(false));
++                    }
+                 }
+             });
+ 
+@@ -523,6 +525,7 @@
+             selectionMode,
+             maintenanceMode: maintenanceActions,
+             coordinator,
++            suppressIntermediateRender: true,
+             onEnter: () => render(false),
+             onRefreshSelection: renderCurrentSelection
+         });
+--- formal-v5.2-v2/src/features/facets/property-picker-methods.js
++++ candidate-picker-single-render-v1/src/features/facets/property-picker-methods.js
+@@ -263,10 +263,10 @@
+             ? null
+             : attachPickerHeaderModes(header, {
+                 modes: this.sidebarMaintenanceModes("property-key"),
+-                onChange: mode => {
++                onChange: (mode, { suppressIntermediateRender = false } = {}) => {
+                     maintenanceMode = mode;
+                     if (mode) deactivateConflictingFacetPickerModes({
+-                        selectionMode, sortToggle
++                        selectionMode, sortToggle, suppressIntermediateRender: true
+                     });
+                     // Sort is available only in the native property catalog, not maintenance modes.
+                     if (sortToggle?.button) sortToggle.button.hidden = Boolean(mode);
+@@ -288,7 +288,9 @@
+                             : "搜索属性或属性值…";
+                     refreshSource();
+                     propertyFacetStatsCache.clear();
+-                    rerenderPickerListPreservingScroll(list, () => render(false));
++                    if (!suppressIntermediateRender) {
++                        rerenderPickerListPreservingScroll(list, () => render(false));
++                    }
+                 }
+             });
+ 
+@@ -300,19 +302,19 @@
+                 onCommit: options.onCommit,
+                 title: quickValueMode ? `${quickKey || "属性"}多选` : "属性多选",
+                 onBeforeEnter: () => deactivateConflictingFacetPickerModes({
+-                    maintenanceMode: maintenanceActions, sortToggle
++                    maintenanceMode: maintenanceActions, sortToggle,
++                    suppressIntermediateRender: true
+                 }),
+-                onStateChange: () => {
++                onStateChange: ({ suppressIntermediateRender = false } = {}) => {
+                     // Draft 是多选期间唯一计数投影源。
+                     // 一次 Draft 变化只失效一次属性统计缓存，再统一刷新
+                     // Header / Key / Value，确认前不触碰正式 FilterState。
+                     propertyFacetStatsCache.clear();
+                     syncHeading();
+                     renderCurrentSelection();
+-                    rerenderPickerListPreservingScroll(
+-                        list,
+-                        () => render(false)
+-                    );
++                    if (!suppressIntermediateRender) {
++                        rerenderPickerListPreservingScroll(list, () => render(false));
++                    }
+                 }
+             });
+ 
+@@ -896,6 +898,7 @@
+             selectionMode,
+             maintenanceMode: maintenanceActions,
+             coordinator,
++            suppressIntermediateRender: true,
+             onEnter: () => render(false),
+             onRefreshSelection: renderCurrentSelection
+         });
