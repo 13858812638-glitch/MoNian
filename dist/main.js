@@ -22860,6 +22860,10 @@ class SearchNavigatorController {
         main.prepend(this.resultHeading);
         this.resultTitle = this.resultHeading.createDiv({ cls: "local-search-nav-result-title", text: "全部文件" });
         this.resultHeading.append(this.root.querySelector(".local-search-filter-sort-slot"));
+        // Desktop search belongs with its results. Move the existing input and
+        // actions once, before editing starts; resizing keeps this node in place.
+        if (!obsidian_1.Platform.isMobile)
+            main.prepend(core.searchInput.closest(".local-search-input-wrap"));
         this._buildMobileToolbar();
         this._listen(core.searchInput, "keydown", event => {
             if (event.key !== "Enter" || event.isComposing || event.keyCode === 229 || core.createFlow?.isCreateMode())

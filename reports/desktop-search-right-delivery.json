@@ -1,0 +1,17 @@
+{
+  "candidate": "desktop-search-right",
+  "packages": [
+    {
+      "path": "/workspace/artifacts/GLS-v5.2-Desktop-Search-Right-20261019-Overlay.zip",
+      "sha256": "cd2a80a5475093a3e21dd0726bbde70b91f7e1c4abff4a4acbe60a8d5ce5e413",
+      "crc": "PASS",
+      "matchesBuild": true
+    },
+    {
+      "path": "/workspace/artifacts/GLS-v5.2-Desktop-Search-Right-20261019-Source.zip",
+      "sha256": "80cdf17a7514e4b665426a3668c1f240069efa8144d4c7cd836cba76d305c995",
+      "crc": "PASS",
+      "matchesBuild": true
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "revision": "2026-10-19-desktop-navigator-performance-resize-candidate",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -237,7 +237,7 @@
       "file": "src/features/navigator/SearchNavigatorController.js",
       "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
       "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
-      "after": "b70a63ef83f23576f562371e7b8dd5ce4b4ee8f3eba91d2382551015eca5c173"
+      "after": "80b78acc23a277bce1735b9ca4f3130684df07b8719c89d1fa2db79d54109409"
     },
     {
       "file": "src/features/navigator/toolbar-config.js",

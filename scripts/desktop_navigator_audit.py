@@ -59,6 +59,30 @@ with sync_playwright() as pw:
     for dark in [False, True]:
         ctx, page = boot(browser, dark=dark)
         prefix = 'desktop-dark' if dark else 'desktop-light'
+        placement=page.evaluate('''() => {
+          const n=C.navigator,input=C.searchInput,wrap=input.closest('.local-search-input-wrap');
+          const s=wrap.getBoundingClientRect(),m=n.main.getBoundingClientRect(),h=n.resultHeading.getBoundingClientRect();
+          return {inResults:n.main.contains(input),aboveResults:s.bottom<=h.top,
+            fits:s.left>=m.left&&s.right<=m.right,titleInSidebar:n.facets.contains(n.headingTitle),
+            oneInput:n.root.querySelectorAll('.local-search-input').length===1};
+        }''')
+        check(prefix+' search sits above right-hand results',all(placement.values()),placement)
+        page.locator('.local-search-input').fill('note6')
+        page.locator('.local-search-input').press('Enter');page.wait_for_timeout(100)
+        searched=page.evaluate("({query:C.queryState.raw,count:C.fullResults.length})")
+        check(prefix+' relocated search filters results',searched['query']=='note6' and 0<searched['count']<36,searched)
+        editing=page.evaluate('''async()=>{
+          const input=C.searchInput;input.focus();input.setSelectionRange(1,3);
+          const states=[];
+          for(const width of [600,900]) {
+            document.querySelector('#host').style.width=width+'px';V.onResize();await waitFixture(50);
+            states.push(C.searchInput===input&&document.activeElement===input&&input.selectionStart===1&&input.selectionEnd===3&&input.value==='note6');
+          }
+          return states;
+        }''')
+        check(prefix+' resize retains live search and selection',all(editing),editing)
+        page.locator('.local-search-input').fill('')
+        page.locator('.local-search-input').press('Enter');page.wait_for_timeout(60)
         controls = page.evaluate('''() => [...C.navigator.sections.values()].map(r=>{
           const a=r.summary.getBoundingClientRect(),b=r.manage.getBoundingClientRect(),t=r.chevron.getBoundingClientRect();
           const svg=r.chevron.querySelector('svg'),s=svg.getBoundingClientRect();
@@ -177,6 +201,7 @@ with sync_playwright() as pw:
     for dark in [False,True]:
         ctx,page=boot(browser,mobile=True,dark=dark)
         prefix='mobile-dark' if dark else 'mobile-light'
+        check(prefix+' search retains original header location',page.evaluate('C.navigator.header.contains(C.searchInput) && C.navigator.header.parentElement===C.navigator.root'))
         check(prefix+' remains mobile without desktop handle',page.evaluate('C.navigator.layout==="mobile"') and page.locator('.local-search-nav-divider').count()==0)
         page.evaluate("C.navigator.sections.get('folder').toggle.click()")
         page.wait_for_timeout(60)

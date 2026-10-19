@@ -1,17 +1,17 @@
 {
   "mode": "source",
   "file": "artifacts/GLS-Stability-1-Sidebar-NoKeyboardFollow-1-Source.zip",
-  "bytes": 8937323,
-  "sha256": "55afeca4f9249b815cd96d7432fc7c6f19f9e038bc75ae4e1356fdea16d44312",
-  "entries": 849,
+  "bytes": 8940431,
+  "sha256": "80cdf17a7514e4b665426a3668c1f240069efa8144d4c7cd836cba76d305c995",
+  "entries": 851,
   "crc32": "PASS",
   "dataJsonIncluded": false,
   "manifestIncluded": false,
   "files": [
     {
       "name": "AGENTS.md",
-      "bytes": 21640,
-      "sha256": "623364bf5e3214e2f3f3ae4f21b445f5f729c03639a7e9acf7bd37811dc55ca6"
+      "bytes": 21657,
+      "sha256": "a7cbb31a158929405d70165672375a78febb548edb2c7bb8c6da151e8fc2d96f"
     },
     {
       "name": "ARCHITECTURE.md",
@@ -930,8 +930,8 @@
     },
     {
       "name": "dist/main.js",
-      "bytes": 1738469,
-      "sha256": "863a17cadf930beb0c6e9c6cd99aab4981ad735165e8a603ca5c8c081f52be6a"
+      "bytes": 1738755,
+      "sha256": "37e279cb527bcf6d6e792e2b22d8d8c7e8897aa94735273c10323e136577f719"
     },
     {
       "name": "dist/styles.css",
@@ -940,8 +940,8 @@
     },
     {
       "name": "docs/APPROVED_CHANGES.json",
-      "bytes": 27988,
-      "sha256": "56408fe96c0346ffd0d7067bf87883e21f8be10c373c3a92f9fa2daa834bedf3"
+      "bytes": 28090,
+      "sha256": "ee62f2143ad87d6a38cc3ceca58837512c2080a1627f69f455499e238dc14e5d"
     },
     {
       "name": "docs/APPROVED_CHANGES.modular2.json",
@@ -995,8 +995,8 @@
     },
     {
       "name": "docs/DESKTOP_NAVIGATOR_20261019.md",
-      "bytes": 4406,
-      "sha256": "21e7c1d498eebe166a242a67ad96bae99be07b01be10eb2aae2204f01791b795"
+      "bytes": 5100,
+      "sha256": "ffc67c43abf0be9b2f9d685af8ef620077d17b857945abb628844e63469ba7cf"
     },
     {
       "name": "docs/DIALOG44_AND_SNAPSHOT_PROMOTION.md",
@@ -1110,8 +1110,8 @@
     },
     {
       "name": "docs/METHOD_INDEX.md",
-      "bytes": 256692,
-      "sha256": "de470756a27d8c40fdfeb4f153be7c3c1afe7bba18434c5ca3e1c7d9ba4d5dc9"
+      "bytes": 256956,
+      "sha256": "8ab740348686caf0d88d47a23c07b995dcd915d29fec9be2121e36042c8a1526"
     },
     {
       "name": "docs/MOBILE_SIDEBAR_NO_KEYBOARD_FOLLOW.md",
@@ -1146,7 +1146,7 @@
     {
       "name": "docs/MODULE_INDEX.md",
       "bytes": 87754,
-      "sha256": "32aab024e8d4be9f0c8a69e20841d05e86e0c44f4749ed5b18d5720b92576288"
+      "sha256": "cdee4355fa08f4fdd3fb6944f175a0591f6881ff21ea3a44575e6f14240fb9dc"
     },
     {
       "name": "docs/NATIVE_CARET_PROBE.md",
@@ -1310,8 +1310,8 @@
     },
     {
       "name": "README.md",
-      "bytes": 18283,
-      "sha256": "a1ea990e34ae96128458a1bbc57fecd234eb2cc82d39f6b0500a4f804a73a039"
+      "bytes": 18300,
+      "sha256": "50f84f76ccb4d95a73c40c52b47f2cc3ebd38308f52816911779c59d1002a974"
     },
     {
       "name": "reports/baseline-audit.json",
@@ -2206,7 +2206,7 @@
     {
       "name": "reports/build-info.json",
       "bytes": 379,
-      "sha256": "17a0d98a32224add07a56e6e5fc1c77af56a6850ce4713581d31ca7e1beeca1a"
+      "sha256": "b81b32b7db63190470b3fba9bcc75c4c52062a2be7456a8c95158806f9b9ca3d"
     },
     {
       "name": "reports/candidate-build-console.txt",
@@ -2299,9 +2299,19 @@
       "sha256": "e92796e7d530a3c32afd12ebd0991733f03d758cdfd412e8582c202ac6a7c915"
     },
     {
+      "name": "reports/desktop-navigator-delivery.json",
+      "bytes": 614,
+      "sha256": "cb2ba18479a2510527dfca3447dbcb2eac96af8b50934a8e8bee95a181d54abb"
+    },
+    {
       "name": "reports/desktop-navigator-results.json",
       "bytes": 8235,
       "sha256": "010ce4f607f89d5395156ecdd572e1e80e4a2cf0a295c568ff518fb5b9d59b52"
+    },
+    {
+      "name": "reports/desktop-search-right-results.json",
+      "bytes": 9625,
+      "sha256": "4d53dfd71f9b44a4ee4b497e3bbcbb9a548598ccc9f09a778baf50aa21af9504"
     },
     {
       "name": "reports/floating-retirement-browser.json",
@@ -2361,7 +2371,7 @@
     {
       "name": "reports/module-index.json",
       "bytes": 265679,
-      "sha256": "d2320627f643d0e7e87eaf184ca2f1159000f7c8d732d1e10419a068ab835bb1"
+      "sha256": "a1e74a3b625208bc8c1f5670cb11c0df321599e2a2e787a7b4ee030dca0fa222"
     },
     {
       "name": "reports/nav-heading-height/chromium-results.json",
@@ -2551,7 +2561,7 @@
     {
       "name": "reports/package-overlay.json",
       "bytes": 613,
-      "sha256": "e8d897c8eb13c542cc96fbdf8907e95d23bc5a2dcf90a95d77e9ff760b5d131b"
+      "sha256": "f1284baff257a5caa3a8204f6c29ef9b2032eae845afca60244c747be3e8a27e"
     },
     {
       "name": "reports/picker-caret/report.json",
@@ -3030,8 +3040,8 @@
     },
     {
       "name": "scripts/desktop_navigator_audit.py",
-      "bytes": 14275,
-      "sha256": "2fe919eb9a7724c6e5a968a74a9b607edae71b166702d009c4a9e322d2d7c972"
+      "bytes": 16169,
+      "sha256": "12b72b028ab5b777f010109f1c067e8e46e7fc07b063d97dbfb1cad8c9a5d4f6"
     },
     {
       "name": "scripts/dialog_geometry_contract_audit.py",
@@ -3585,8 +3595,8 @@
     },
     {
       "name": "src/features/navigator/SearchNavigatorController.js",
-      "bytes": 75848,
-      "sha256": "b70a63ef83f23576f562371e7b8dd5ce4b4ee8f3eba91d2382551015eca5c173"
+      "bytes": 76111,
+      "sha256": "80b78acc23a277bce1735b9ca4f3130684df07b8719c89d1fa2db79d54109409"
     },
     {
       "name": "src/features/navigator/toolbar-config.js",

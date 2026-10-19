@@ -1,3 +1,5 @@
+> **桌面搜索条右置补充**：`SearchNavigatorController.constructor` 在初始化时将既有 `.local-search-input-wrap`（含搜索动作按钮）放到结果标题前方；原导航标题仍留在左侧。移动端及缩放过程不重建搜索控件。
+
 > **2026-10-19 桌面侧栏候选更新**：无新增类原型方法。`SearchNavigatorController` 构造器/`destroy` 管理目录缓存失效订阅与桌面分栏的生命周期；`capture`/`restore` 使用现有会话的可选 `navigator.paneWidth`；`resize` 同步分栏；`_section` 在桌面投影有效时直接切换分组显隐；`_cached`/`_renderProjection` 复用物理目录计数和行。`SearchResultRendererController._isOverscrolling` 保留原边界语义，在列表原点提前返回，避免读取布局高度。内部工厂 `src/features/navigator/desktop-pane.js#createDesktopNavigatorPane` 返回 `sync`/`restore`/`destroy`，事件回调、rAF 与指针捕获由此工厂创建和释放。
 
 > **注意**：本文件含原始冻结源码的方法来源行号，只作历史溯源。当前有效的 JS 路径、导出和类装配以 `docs/MODULE_INDEX.md`、`src/` 为准。

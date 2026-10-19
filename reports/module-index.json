@@ -3962,8 +3962,8 @@
       "../../core/picker-cleanup.js",
       "./desktop-pane.js"
     ],
-    "lines": 1272,
-    "bytes": 75848,
+    "lines": 1275,
+    "bytes": 76111,
     "origins": [
       {
         "id": "SearchNavigatorController",
