@@ -1,0 +1,1203 @@
+{
+  "scope": "Mocked Obsidian/Chromium, light and dark themes",
+  "before": {
+    "passed": 20,
+    "failed": 12,
+    "results": [
+      {
+        "name": "light empty toolbar remains hidden without repeated writes",
+        "passed": false,
+        "evidence": {
+          "writes": 20,
+          "hidden": true
+        }
+      },
+      {
+        "name": "light all-hidden toolbar remains hidden without repeated writes",
+        "passed": false,
+        "evidence": {
+          "writes": 20,
+          "hidden": true
+        }
+      },
+      {
+        "name": "light toolbar re-enable preserves order and original command",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light re-enabled command opens its picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light removing active command releases picker and restores original button",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light Escape restores actual, saved and accessible widths",
+        "passed": false,
+        "evidence": {
+          "width": 250,
+          "aria": 335,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "light blur restores actual, saved and accessible widths",
+        "passed": false,
+        "evidence": {
+          "width": 250,
+          "aria": 335,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "light pointercancel restores actual, saved and accessible widths",
+        "passed": false,
+        "evidence": {
+          "width": 250,
+          "aria": 335,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "light host resize cancels stale drag bounds",
+        "passed": false,
+        "evidence": {
+          "width": 380,
+          "saved": 530,
+          "aria": 530,
+          "max": 380
+        }
+      },
+      {
+        "name": "light keyboard Home retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 180,
+          "aria": 180,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "light keyboard End retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 880,
+          "aria": 880,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "light keyboard ArrowLeft retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 870,
+          "aria": 870,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "light failed save rolls back and next save succeeds",
+        "passed": true,
+        "evidence": {
+          "rejected": true,
+          "rolledBack": true,
+          "recovered": true
+        }
+      },
+      {
+        "name": "light rapid folder selection keeps final scope",
+        "passed": true,
+        "evidence": {
+          "folders": [
+            "Folder029"
+          ],
+          "count": 12,
+          "selected": []
+        }
+      },
+      {
+        "name": "light close and reopen preserves session and releases old navigator",
+        "passed": true,
+        "evidence": {
+          "restored": true,
+          "retired": true,
+          "roots": 1,
+          "pickers": 0
+        }
+      },
+      {
+        "name": "light no asynchronous browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "dark empty toolbar remains hidden without repeated writes",
+        "passed": false,
+        "evidence": {
+          "writes": 20,
+          "hidden": true
+        }
+      },
+      {
+        "name": "dark all-hidden toolbar remains hidden without repeated writes",
+        "passed": false,
+        "evidence": {
+          "writes": 20,
+          "hidden": true
+        }
+      },
+      {
+        "name": "dark toolbar re-enable preserves order and original command",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark re-enabled command opens its picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark removing active command releases picker and restores original button",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark Escape restores actual, saved and accessible widths",
+        "passed": false,
+        "evidence": {
+          "width": 250,
+          "aria": 335,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "dark blur restores actual, saved and accessible widths",
+        "passed": false,
+        "evidence": {
+          "width": 250,
+          "aria": 335,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "dark pointercancel restores actual, saved and accessible widths",
+        "passed": false,
+        "evidence": {
+          "width": 250,
+          "aria": 335,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "dark host resize cancels stale drag bounds",
+        "passed": false,
+        "evidence": {
+          "width": 380,
+          "saved": 530,
+          "aria": 530,
+          "max": 380
+        }
+      },
+      {
+        "name": "dark keyboard Home retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 180,
+          "aria": 180,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "dark keyboard End retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 880,
+          "aria": 880,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "dark keyboard ArrowLeft retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 870,
+          "aria": 870,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "dark failed save rolls back and next save succeeds",
+        "passed": true,
+        "evidence": {
+          "rejected": true,
+          "rolledBack": true,
+          "recovered": true
+        }
+      },
+      {
+        "name": "dark rapid folder selection keeps final scope",
+        "passed": true,
+        "evidence": {
+          "folders": [
+            "Folder029"
+          ],
+          "count": 12,
+          "selected": []
+        }
+      },
+      {
+        "name": "dark close and reopen preserves session and releases old navigator",
+        "passed": true,
+        "evidence": {
+          "restored": true,
+          "retired": true,
+          "roots": 1,
+          "pickers": 0
+        }
+      },
+      {
+        "name": "dark no asynchronous browser errors",
+        "passed": true,
+        "evidence": []
+      }
+    ]
+  },
+  "after": {
+    "passed": 32,
+    "failed": 0,
+    "results": [
+      {
+        "name": "light empty toolbar remains hidden without repeated writes",
+        "passed": true,
+        "evidence": {
+          "writes": 0,
+          "hidden": true
+        }
+      },
+      {
+        "name": "light all-hidden toolbar remains hidden without repeated writes",
+        "passed": true,
+        "evidence": {
+          "writes": 0,
+          "hidden": true
+        }
+      },
+      {
+        "name": "light toolbar re-enable preserves order and original command",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light re-enabled command opens its picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light removing active command releases picker and restores original button",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light Escape restores actual, saved and accessible widths",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "aria": 250,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "light blur restores actual, saved and accessible widths",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "aria": 250,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "light pointercancel restores actual, saved and accessible widths",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "aria": 250,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "light host resize cancels stale drag bounds",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "saved": 250,
+          "aria": 250,
+          "max": 380
+        }
+      },
+      {
+        "name": "light keyboard Home retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 180,
+          "aria": 180,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "light keyboard End retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 880,
+          "aria": 880,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "light keyboard ArrowLeft retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 870,
+          "aria": 870,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "light failed save rolls back and next save succeeds",
+        "passed": true,
+        "evidence": {
+          "rejected": true,
+          "rolledBack": true,
+          "recovered": true
+        }
+      },
+      {
+        "name": "light rapid folder selection keeps final scope",
+        "passed": true,
+        "evidence": {
+          "folders": [
+            "Folder029"
+          ],
+          "count": 12,
+          "selected": [
+            "Folder029"
+          ]
+        }
+      },
+      {
+        "name": "light close and reopen preserves session and releases old navigator",
+        "passed": true,
+        "evidence": {
+          "restored": true,
+          "retired": true,
+          "roots": 1,
+          "pickers": 0
+        }
+      },
+      {
+        "name": "light no asynchronous browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "dark empty toolbar remains hidden without repeated writes",
+        "passed": true,
+        "evidence": {
+          "writes": 0,
+          "hidden": true
+        }
+      },
+      {
+        "name": "dark all-hidden toolbar remains hidden without repeated writes",
+        "passed": true,
+        "evidence": {
+          "writes": 0,
+          "hidden": true
+        }
+      },
+      {
+        "name": "dark toolbar re-enable preserves order and original command",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark re-enabled command opens its picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark removing active command releases picker and restores original button",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark Escape restores actual, saved and accessible widths",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "aria": 250,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "dark blur restores actual, saved and accessible widths",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "aria": 250,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "dark pointercancel restores actual, saved and accessible widths",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "aria": 250,
+          "saved": 250,
+          "dragging": false
+        }
+      },
+      {
+        "name": "dark host resize cancels stale drag bounds",
+        "passed": true,
+        "evidence": {
+          "width": 250,
+          "saved": 250,
+          "aria": 250,
+          "max": 380
+        }
+      },
+      {
+        "name": "dark keyboard Home retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 180,
+          "aria": 180,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "dark keyboard End retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 880,
+          "aria": 880,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "dark keyboard ArrowLeft retains width bounds",
+        "passed": true,
+        "evidence": {
+          "width": 870,
+          "aria": 870,
+          "min": 180,
+          "max": 880
+        }
+      },
+      {
+        "name": "dark failed save rolls back and next save succeeds",
+        "passed": true,
+        "evidence": {
+          "rejected": true,
+          "rolledBack": true,
+          "recovered": true
+        }
+      },
+      {
+        "name": "dark rapid folder selection keeps final scope",
+        "passed": true,
+        "evidence": {
+          "folders": [
+            "Folder029"
+          ],
+          "count": 12,
+          "selected": [
+            "Folder029"
+          ]
+        }
+      },
+      {
+        "name": "dark close and reopen preserves session and releases old navigator",
+        "passed": true,
+        "evidence": {
+          "restored": true,
+          "retired": true,
+          "roots": 1,
+          "pickers": 0
+        }
+      },
+      {
+        "name": "dark no asynchronous browser errors",
+        "passed": true,
+        "evidence": []
+      }
+    ]
+  },
+  "prototypeDeltas": [
+    {
+      "baseline": "historical",
+      "name": "BatchMetadataService",
+      "added": [
+        {
+          "key": "moveValueToKey",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "moveValueToKey",
+          "length": 6
+        }
+      ],
+      "removed": [],
+      "changed": [],
+      "commonOrderUnchanged": true
+    },
+    {
+      "baseline": "historical",
+      "name": "NavigatorCustomization",
+      "added": [
+        {
+          "key": "_canSort",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_canSort",
+          "length": 1
+        },
+        {
+          "key": "_canNest",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_canNest",
+          "length": 2
+        },
+        {
+          "key": "rowsForKey",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "rowsForKey",
+          "length": 1
+        },
+        {
+          "key": "_syncSortControls",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_syncSortControls",
+          "length": 0
+        },
+        {
+          "key": "openTagCreator",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "openTagCreator",
+          "length": 2
+        },
+        {
+          "key": "openPropertyValueCreator",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "openPropertyValueCreator",
+          "length": 1
+        }
+      ],
+      "removed": [],
+      "changed": [],
+      "commonOrderUnchanged": true
+    },
+    {
+      "baseline": "historical",
+      "name": "LocalSearchPlugin",
+      "added": [
+        {
+          "key": "moveVaultPropertyValueToKey",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "moveVaultPropertyValueToKey",
+          "length": 3
+        },
+        {
+          "key": "_moveVaultPropertyValueToKey",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_moveVaultPropertyValueToKey",
+          "length": 3
+        },
+        {
+          "key": "_publishPropertyCatalogChanges",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_publishPropertyCatalogChanges",
+          "length": 0
+        },
+        {
+          "key": "subscribeIndexChanges",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "subscribeIndexChanges",
+          "length": 1
+        },
+        {
+          "key": "getIndexedFiles",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "getIndexedFiles",
+          "length": 0
+        }
+      ],
+      "removed": [
+        {
+          "key": "_publishProjectChanges",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_publishProjectChanges",
+          "length": 0
+        },
+        {
+          "key": "subscribeProjectPropertyChanges",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "subscribeProjectPropertyChanges",
+          "length": 1
+        },
+        {
+          "key": "_connectDidaProjectCatalog",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_connectDidaProjectCatalog",
+          "length": 0
+        },
+        {
+          "key": "_refreshDidaProjectCatalog",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_refreshDidaProjectCatalog",
+          "length": 0
+        },
+        {
+          "key": "getIndexedProjectGroups",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "getIndexedProjectGroups",
+          "length": 0
+        },
+        {
+          "key": "getProjectOwnerMigration",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "getProjectOwnerMigration",
+          "length": 0
+        },
+        {
+          "key": "openFloatingSearch",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "openFloatingSearch",
+          "length": 0
+        }
+      ],
+      "changed": [],
+      "commonOrderUnchanged": true
+    },
+    {
+      "baseline": "formal",
+      "name": "LocalSearchPlugin",
+      "added": [
+        {
+          "key": "moveVaultPropertyValueToKey",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "moveVaultPropertyValueToKey",
+          "length": 3
+        },
+        {
+          "key": "_moveVaultPropertyValueToKey",
+          "enumerable": false,
+          "configurable": true,
+          "writable": true,
+          "type": "function",
+          "name": "_moveVaultPropertyValueToKey",
+          "length": 3
+        }
+      ],
+      "removed": [],
+      "changed": [],
+      "commonOrderUnchanged": true
+    }
+  ],
+  "workflowBehavior": {
+    "passed": 80,
+    "failed": 0,
+    "scope": "Existing workflow assertions, mocked Obsidian/Chromium. Not frozen snapshot or pixel parity.",
+    "results": [
+      {
+        "configuration": "desktop-light",
+        "scenario": "01-initial",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "02-composition-deferred",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "03-search-results",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "04-folder-picker",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "05-picker-search-focus",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "06-folder-and-erase",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "07-clear-conditions",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "08-batch-range",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "09-batch-all-and-exit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "10-rename-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "11-rename-submit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "12-dialog-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "13-delete-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "14-delete-submit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "15-derived-create",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "16-create-commit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "17-close-cleanup",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "18-pointer-sort-and-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "19-swipe-owner-and-native-scroll",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-light",
+        "scenario": "20-workbench-embedded-api",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "01-initial",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "02-composition-deferred",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "03-search-results",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "04-folder-picker",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "05-picker-search-focus",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "06-folder-and-erase",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "07-clear-conditions",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "08-batch-range",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "09-batch-all-and-exit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "10-rename-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "11-rename-submit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "12-dialog-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "13-delete-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "14-delete-submit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "15-derived-create",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "16-create-commit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "17-close-cleanup",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "18-pointer-sort-and-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "19-swipe-owner-and-native-scroll",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-light",
+        "scenario": "20-workbench-embedded-api",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "01-initial",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "02-composition-deferred",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "03-search-results",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "04-folder-picker",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "05-picker-search-focus",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "06-folder-and-erase",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "07-clear-conditions",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "08-batch-range",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "09-batch-all-and-exit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "10-rename-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "11-rename-submit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "12-dialog-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "13-delete-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "14-delete-submit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "15-derived-create",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "16-create-commit",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "17-close-cleanup",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "18-pointer-sort-and-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "19-swipe-owner-and-native-scroll",
+        "passed": true
+      },
+      {
+        "configuration": "desktop-dark",
+        "scenario": "20-workbench-embedded-api",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "01-initial",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "02-composition-deferred",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "03-search-results",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "04-folder-picker",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "05-picker-search-focus",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "06-folder-and-erase",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "07-clear-conditions",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "08-batch-range",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "09-batch-all-and-exit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "10-rename-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "11-rename-submit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "12-dialog-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "13-delete-dialog",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "14-delete-submit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "15-derived-create",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "16-create-commit",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "17-close-cleanup",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "18-pointer-sort-and-cancel",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "19-swipe-owner-and-native-scroll",
+        "passed": true
+      },
+      {
+        "configuration": "mobile-dark",
+        "scenario": "20-workbench-embedded-api",
+        "passed": true
+      }
+    ]
+  },
+  "notes": [
+    "Frozen parity tests are retained unchanged. Candidate API contract explicitly checks only the two existing cross-key additions against the formal snapshot.",
+    "Rapid selection assertion also verifies the final highlighted folder using the actual data-nav-id identity.",
+    "No native Obsidian or real-device performance claim."
+  ]
+}

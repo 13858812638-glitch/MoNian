@@ -22709,9 +22709,13 @@ function createDesktopNavigatorPane(nav) {
         return { min: 180, max: Math.max(180, nav.width - resultMin) };
     };
     const sync = () => {
-        divider.hidden = nav.layout !== "split";
-        if (divider.hidden && drag)
+        // Host geometry changed during a gesture: discard its old bounds and
+        // starting coordinates, then let finish resync the restored width.
+        if (drag) {
             finish(false);
+            return;
+        }
+        divider.hidden = nav.layout !== "split";
         if (divider.hidden)
             return;
         const { min, max } = limits();
@@ -22763,6 +22767,9 @@ function createDesktopNavigatorPane(nav) {
         nav.root.classList.remove("is-nav-resizing");
         if (divider.hasPointerCapture?.(previous.pointerId))
             divider.releasePointerCapture(previous.pointerId);
+        // Cancellation restores the stored width as well as its accessible
+        // value; commits also reflect the width actually constrained by CSS.
+        sync();
         if (commit) {
             nav.core?.onStateChange?.();
             nav.core?.dropdown?._queueReposition();
@@ -23248,7 +23255,10 @@ class SearchNavigatorController {
             else if (!docked && button.parentNode !== marker.parentNode)
                 marker.after(button);
         }
-        setNavigatorProperty(this, this.mobileToolbar, "hidden", !mobile && !this.desktopSidebar);
+        // Desktop visibility belongs to the configured command set in sync.
+        // Docking must not briefly reveal an intentionally empty toolbar.
+        if (!this.desktopSidebar)
+            setNavigatorProperty(this, this.mobileToolbar, "hidden", !mobile);
     }
     _syncMobileTools() {
         if (!this.tools)

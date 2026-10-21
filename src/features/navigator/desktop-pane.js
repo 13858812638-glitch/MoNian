@@ -16,8 +16,10 @@ export function createDesktopNavigatorPane(nav) {
         return { min: 180, max: Math.max(180, nav.width - resultMin) };
     };
     const sync = () => {
+        // Host geometry changed during a gesture: discard its old bounds and
+        // starting coordinates, then let finish resync the restored width.
+        if (drag) { finish(false); return; }
         divider.hidden = nav.layout !== "split";
-        if (divider.hidden && drag) finish(false);
         if (divider.hidden) return;
         const { min, max } = limits();
         divider.setAttribute("aria-valuemin", String(min));
@@ -57,6 +59,9 @@ export function createDesktopNavigatorPane(nav) {
         win.removeEventListener("blur", cancel);
         nav.root.classList.remove("is-nav-resizing");
         if (divider.hasPointerCapture?.(previous.pointerId)) divider.releasePointerCapture(previous.pointerId);
+        // Cancellation restores the stored width as well as its accessible
+        // value; commits also reflect the width actually constrained by CSS.
+        sync();
         if (commit) { nav.core?.onStateChange?.(); nav.core?.dropdown?._queueReposition(); }
     };
     const up = event => {

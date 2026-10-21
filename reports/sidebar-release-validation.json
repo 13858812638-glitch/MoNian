@@ -1,0 +1,123 @@
+{
+  "candidate": "Sidebar release audit 2026-10-21",
+  "parentCommit": "c14c3f0",
+  "environment": "Chromium with mocked Obsidian API; SearchView lifecycle for sidebar audits",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 151,
+    "imports": 647,
+    "unresolvedSymbols": 0,
+    "cycles": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "dc33384df2e011c59481c96ed926ac953038777b5a8ea12bba48b3261e9977b3"
+  },
+  "node": {
+    "passed": 256,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "candidateAPIContract": {
+    "passed": 1,
+    "failed": 0,
+    "scope": "All formal snapshot class contracts retained except the two explicitly checked existing LocalSearchPlugin cross-key methods."
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Four preexisting frozen 01-initial snapshot divergences. Assertions and reference files retained."
+  },
+  "newReleaseEdges": {
+    "passed": 32,
+    "failed": 0
+  },
+  "existingWorkflowAssertions": {
+    "passed": 80,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selectionScroll": {
+    "passed": 6,
+    "failed": 0
+  },
+  "mouseInteraction": {
+    "passed": 12,
+    "failed": 0
+  },
+  "cacheAndHostContracts": {
+    "passed": 14,
+    "failed": 0
+  },
+  "desktopNavigator": {
+    "passed": 55,
+    "failed": 0
+  },
+  "sidebarPopups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "pickerPortal": {
+    "passed": 48,
+    "failed": 0,
+    "engines": [
+      "Chromium"
+    ],
+    "WebKit": "not tested"
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "gateExitCodes": {
+    "build": 0,
+    "release": 0,
+    "interaction": 0,
+    "node": 1,
+    "mobile": 0,
+    "index": 0,
+    "portal": 0,
+    "caret": 0,
+    "desktop": 0,
+    "browser": 1,
+    "popups": 0,
+    "contracts": 0,
+    "selection": 0,
+    "tree": 0,
+    "refresh": 0,
+    "workflows": 0,
+    "acceptance": 0
+  },
+  "unverified": [
+    "Native Obsidian on user computer",
+    "Native iOS and Android",
+    "WebKit",
+    "Production vault and third-party integration performance"
+  ],
+  "finalValidation": "Final gates run after source freeze. Mouse interaction measured separately from other suites. No baseline reset or assertion weakening."
+}

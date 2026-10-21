@@ -1,8 +1,8 @@
 {
-  "revision": "2026-10-21-sidebar-refresh-candidate",
+  "revision": "2026-10-21-sidebar-release-audit-candidate",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors. User requested continued product audit: keep an empty desktop toolbar hidden without redundant toggles; cancel stale divider drags on host resize and resynchronize actual/accessible width after commit or cancellation. No public prototype changes in this round.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -240,7 +240,7 @@
       "file": "src/features/navigator/SearchNavigatorController.js",
       "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
       "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
-      "after": "d6a70789334e21529e76667f4ffb5e268b4a90767f9a474f48978e76392ac419"
+      "after": "cc2e819a0f396515b68d7bf7387cd1e03073c06c511e72cac44fca014f3ebca4"
     },
     {
       "file": "src/features/navigator/toolbar-config.js",
@@ -565,7 +565,7 @@
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "sha256": "3672c9e97e19e4bdab04a172a096c19cf7dd4c0ec74cc9eb2a648c0aa09963f7"
+      "sha256": "6aabd966698dd0bc499a033f20ebf79dd4410366466b39fbadf2ce5f83d5ec31"
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",

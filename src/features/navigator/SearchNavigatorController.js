@@ -342,7 +342,9 @@ export class SearchNavigatorController {
             if (docked && button.parentElement !== host) host.append(button);
             else if (!docked && button.parentNode !== marker.parentNode) marker.after(button);
         }
-        setNavigatorProperty(this, this.mobileToolbar, "hidden", !mobile && !this.desktopSidebar);
+        // Desktop visibility belongs to the configured command set in sync.
+        // Docking must not briefly reveal an intentionally empty toolbar.
+        if (!this.desktopSidebar) setNavigatorProperty(this, this.mobileToolbar, "hidden", !mobile);
     }
 
     _syncMobileTools() {
