@@ -21,6 +21,7 @@
   ],
   "sourceParentCommit": "f37ab7f",
   "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Tree-Fast-20261021.zip",
-  "remoteDownloadVerified": false,
-  "remotePayloadMatchesBuild": false
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "sourceCommit": "de436ed2fb8b7254b20628d3985b5bebef87d930"
 }
