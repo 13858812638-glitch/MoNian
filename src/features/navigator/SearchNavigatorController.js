@@ -21,6 +21,32 @@ import { navigatorItemId } from "./customization-model.js";
 import { navigatorToolbarActionAvailable, navigatorToolbarCatalog, navigatorToolbarIcon, normalizeNavigatorToolbars } from "./toolbar-config.js";
 import { Notice, Platform, setIcon } from "obsidian";
 
+// Navigation owns these labels. The shared desktop hover-hint owner moves
+// aria-label into aria-labelledby and removes title, so DOM equality alone
+// would keep reintroducing them on every refresh. Remember only label intent;
+// pressed/expanded and other state attributes still check the live DOM.
+function setNavigatorAttribute(nav, node, name, value) {
+    if (!node) return;
+    const text = String(value);
+    if (nav.desktopSidebar) {
+        const current = node.getAttribute(name);
+        if (name === "aria-label" || name === "title") {
+            nav._presentationLabels ||= new WeakMap();
+            let labels = nav._presentationLabels.get(node);
+            if (!labels) { labels = {}; nav._presentationLabels.set(node, labels); }
+            const sameIntent = labels[name] === text;
+            labels[name] = text;
+            if (sameIntent && current === null) return;
+        }
+        if (current === text) return;
+    }
+    node.setAttribute(name, text);
+}
+
+function setNavigatorProperty(nav, node, name, value) {
+    if (node && (!nav.desktopSidebar || node[name] !== value)) node[name] = value;
+}
+
 
 
 // Internal scroll-to-layout notification boundary; native scrolling itself is
@@ -316,7 +342,7 @@ export class SearchNavigatorController {
             if (docked && button.parentElement !== host) host.append(button);
             else if (!docked && button.parentNode !== marker.parentNode) marker.after(button);
         }
-        this.mobileToolbar.hidden = !mobile && !this.desktopSidebar;
+        setNavigatorProperty(this, this.mobileToolbar, "hidden", !mobile && !this.desktopSidebar);
     }
 
     _syncMobileTools() {
@@ -326,7 +352,8 @@ export class SearchNavigatorController {
         const filters = this.desktopSidebar || this.page === "filters";
         const state = filters ? core.createFlow?.searchResultFilterState?.() || core.filterState : core.filterState;
         const context = create ? "create" : filters ? "filters" : "results";
-        const preferences = normalizeNavigatorToolbars(core.plugin.settings.navigatorToolbars)[context];
+        const toolbarPreferences = normalizeNavigatorToolbars(core.plugin.settings.navigatorToolbars);
+        const preferences = toolbarPreferences[context];
         // Each page/context begins at its leading command. Reusing scrollLeft
         // can hide Search/Back after switching from a long customized tool rail.
         if (this._mobileToolbarContext !== context) {
@@ -334,7 +361,7 @@ export class SearchNavigatorController {
             this.mobileToolbar.scrollLeft = 0;
         }
         const catalog = navigatorToolbarCatalog(core.plugin);
-        const configured = new Set(Object.values(normalizeNavigatorToolbars(core.plugin.settings.navigatorToolbars)).flatMap(value => value.order));
+        const configured = new Set(Object.values(toolbarPreferences).flatMap(value => value.order));
         for (const [id, tool] of this.tools) if ((id.startsWith("pool:") || id.startsWith("property:") || id === "filter-pools") && !configured.has(id)) {
             if (!this._releaseToolbarAnchor(tool)) continue;
             tool.host.remove(); this.tools.delete(id);
@@ -361,7 +388,7 @@ export class SearchNavigatorController {
         }
         for (const [id, tool] of this.tools) {
             if (!visible.has(id) && !this._releaseToolbarAnchor(tool)) visible.add(id);
-            tool.host.hidden = !visible.has(id);
+            setNavigatorProperty(this, tool.host, "hidden", !visible.has(id));
         }
         for (const id of visible) {
             const definition = catalog.get(id), tool = this.tools.get(id);
@@ -370,38 +397,38 @@ export class SearchNavigatorController {
                 if (tool.button.dataset.lsIcon !== icon) {
                     setIcon(tool.button, icon); tool.button.dataset.lsIcon = icon;
                 }
-                tool.button.setAttribute("aria-label", definition.label);
+                setNavigatorAttribute(this, tool.button, "aria-label", definition.label);
                 const applied = definition.kind === "property" ? Boolean(state.properties.get(definition.propertyKey)?.size)
                     : definition.poolKind === "folder" ? state.folders.size > 0
                     : definition.poolKind === "tag" ? state.tags.size > 0
                     : definition.poolKind === "property" ? state.properties.size > 0
                     : state.fileTypes.size > 0;
-                tool.button.setAttribute("aria-pressed", String(applied));
-                tool.button.setAttribute("aria-expanded", String(core.dropdown.isOpenFor(tool.button)));
+                setNavigatorAttribute(this, tool.button, "aria-pressed", String(applied));
+                setNavigatorAttribute(this, tool.button, "aria-expanded", String(core.dropdown.isOpenFor(tool.button)));
             }
         }
         if (this.desktopSidebar) this._placeMobileTools(false);
-        this.mobileToolbar.hidden = (this.layout !== "mobile" && !this.desktopSidebar) || visible.size === 0;
+        setNavigatorProperty(this, this.mobileToolbar, "hidden", (this.layout !== "mobile" && !this.desktopSidebar) || visible.size === 0);
         const timeTool = this.tools.get("time")?.button;
-        if (timeTool) timeTool.disabled = !navigatorToolbarActionAvailable("time", context);
+        if (timeTool) setNavigatorProperty(this, timeTool, "disabled", !navigatorToolbarActionAvailable("time", context));
         const sidebarTool = this.tools.get("sort-navigation")?.button;
         const maintenance = this.customization?.maintenanceMode;
         const maintenanceDefinition = maintenance && core.facets.sidebarMaintenanceModes?.(maintenance.kind)?.find(item => item.id === maintenance.id);
         const modeLabel = this.customization?.sortMode ? "拖拽排序" : maintenanceDefinition?.title || "";
-        sidebarTool?.setAttribute("aria-pressed", String(Boolean(modeLabel)));
-        sidebarTool?.setAttribute("aria-label", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
-        sidebarTool?.setAttribute("title", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
+        setNavigatorAttribute(this, sidebarTool, "aria-pressed", String(Boolean(modeLabel)));
+        setNavigatorAttribute(this, sidebarTool, "aria-label", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
+        setNavigatorAttribute(this, sidebarTool, "title", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
         const ids = this._definitions().map(([id]) => id);
         const allCollapsed = ids.every(id => this.collapsed.has(id));
-        this.tools.get("collapse").button.setAttribute("aria-label", allCollapsed ? "展开全部导航" : "折叠全部导航");
-        this.tools.get("search").button.setAttribute("aria-pressed", String(!filters && (this.searchVisible || create)));
+        setNavigatorAttribute(this, this.tools.get("collapse").button, "aria-label", allCollapsed ? "展开全部导航" : "折叠全部导航");
+        setNavigatorAttribute(this, this.tools.get("search").button, "aria-pressed", String(!filters && (this.searchVisible || create)));
         // Search belongs to results/create. A retained query must never re-open
         // the filter page's header or summon the keyboard during navigation.
         this.root.classList.toggle("is-nav-search-visible", !filters && (this.searchVisible || create));
         this.root.classList.toggle("has-nav-query", Boolean(core.searchInput?.value));
         const title = create ? "创建文件" : this._scopeTitle();
-        this.headingTitle.textContent = this.layout === "mobile" ? `${title}${create ? "" : ` · ${core.fullResults.length}`}` : "GLS Navigator";
-        this.headingTitle.title = title;
+        setNavigatorProperty(this, this.headingTitle, "textContent", this.layout === "mobile" ? `${title}${create ? "" : ` · ${core.fullResults.length}`}` : "GLS Navigator");
+        setNavigatorAttribute(this, this.headingTitle, "title", title);
         // Only the presentation icon is overridden. Labels, disabled/pressed
         // state and behavior still belong to each original command controller.
         for (const [id, tool] of this.tools) {
@@ -414,7 +441,7 @@ export class SearchNavigatorController {
                 tool.button.replaceChildren(); setIcon(tool.button, icon); tool.button.dataset.lsIcon = icon;
             }
         }
-        this.mobileToolbar.setAttribute("aria-label", filters ? "导航操作" : create ? "创建操作" : "结果操作");
+        setNavigatorAttribute(this, this.mobileToolbar, "aria-label", filters ? "导航操作" : create ? "创建操作" : "结果操作");
     }
 
     _releaseToolbarAnchor(tool) {
@@ -862,24 +889,24 @@ export class SearchNavigatorController {
         // caption without replacing the focused DOM or changing group selection.
         if (id === "folder") {
             const name = ref.toggle.querySelector(".local-search-move-tree-name");
-            if (name && name.textContent !== title) name.textContent = title;
-            ref.heading.dataset.pickerKey = title;
-            ref.toggle.setAttribute("aria-label", title);
-            ref.manage.setAttribute("aria-label", `选择和管理${title}`);
-            ref.manage.setAttribute("title", `选择和管理${title}`);
+            if (name && name.textContent !== title) setNavigatorProperty(this, name, "textContent", title);
+            setNavigatorAttribute(this, ref.heading, "data-picker-key", title);
+            setNavigatorAttribute(this, ref.toggle, "aria-label", title);
+            setNavigatorAttribute(this, ref.manage, "aria-label", `选择和管理${title}`);
+            setNavigatorAttribute(this, ref.manage, "title", `选择和管理${title}`);
         }
-        ref.content.hidden = this.collapsed.has(id);
-        ref.manage.hidden = this.desktopSidebar || this.layout === "mobile";
-        ref.toggle.setAttribute("aria-expanded", String(!ref.content.hidden));
+        setNavigatorProperty(this, ref.content, "hidden", this.collapsed.has(id));
+        setNavigatorProperty(this, ref.manage, "hidden", this.desktopSidebar || this.layout === "mobile");
+        setNavigatorAttribute(this, ref.toggle, "aria-expanded", String(!ref.content.hidden));
         const chevronIcon = ref.content.hidden ? "chevron-right" : "chevron-down";
         if (ref.chevron.dataset.navIcon !== chevronIcon) {
             setIcon(ref.chevron, chevronIcon); ref.chevron.dataset.navIcon = chevronIcon;
         }
-        ref.chevron.setAttribute("aria-expanded", String(!ref.content.hidden));
+        setNavigatorAttribute(this, ref.chevron, "aria-expanded", String(!ref.content.hidden));
         const disclosureLabel = `${ref.content.hidden ? "展开" : "折叠"} ${title}`;
         if (ref.disclosureLabel !== disclosureLabel) {
             ref.disclosureLabel = disclosureLabel;
-            ref.chevron.setAttribute("aria-label", disclosureLabel);
+            setNavigatorAttribute(this, ref.chevron, "aria-label", disclosureLabel);
         }
         return ref;
     }
@@ -1078,11 +1105,11 @@ export class SearchNavigatorController {
         if (!core || core._destroyed) return;
         if (core.createFlow?.isCreateMode?.() && this.page !== "results") this.setPage("results", false);
         const n = core.fullResults.length;
-        this.resultsButton.setAttribute("aria-label", `查看结果 · ${n}`);
-        this.resultsButton.setAttribute("title", `查看结果 · ${n}`);
+        setNavigatorAttribute(this, this.resultsButton, "aria-label", `查看结果 · ${n}`);
+        setNavigatorAttribute(this, this.resultsButton, "title", `查看结果 · ${n}`);
         const title = this._scopeTitle();
-        if (this.resultTitle.textContent !== title) this.resultTitle.textContent = title;
-        this.resultTitle.title = this.resultTitle.textContent;
+        if (this.resultTitle.textContent !== title) setNavigatorProperty(this, this.resultTitle, "textContent", title);
+        setNavigatorAttribute(this, this.resultTitle, "title", this.resultTitle.textContent);
         this._syncMobileTools();
         // A hidden tree has no work to paint. Rebuild only on returning to it.
         if (this.layout === "mobile" && this.page !== "filters") return;
@@ -1143,7 +1170,8 @@ export class SearchNavigatorController {
         const navigation = this._cached("navigation", () => core._navigationCandidates());
         const universe = navigation.scope;
         const definitions = this._definitions();
-        for (const [id, ref] of this.sections) ref.section.hidden = !definitions.some(def => def[0] === id);
+        for (const [id, ref] of this.sections)
+            setNavigatorProperty(this, ref.section, "hidden", !definitions.some(def => def[0] === id));
         this._groupSeparators ||= new Map();
         const activeGroupSeparators = new Set();
         const groups = this.customization.order("groups", definitions.map(([key, label, icon]) => ({ kind: "group", key, label, icon, depth: 0 })));
@@ -1168,7 +1196,15 @@ export class SearchNavigatorController {
             const { key: id, label: title, icon } = group;
             const ref = this._section(id, title, icon);
             placeGroup(ref.section);
-            this.customization.decorate(ref.heading, group);
+            const decoration = JSON.stringify([group, this.customization.sortMode,
+                this.customization.sortScope, this.customization.maintenanceMode]);
+            const appearance = core.plugin.settings.navigatorCustomization;
+            const colors = core.plugin.settings.resultFolderColors;
+            if (!this.desktopSidebar || ref.decoration !== decoration
+                || ref.appearance !== appearance || ref.colors !== colors) {
+                this.customization.decorate(ref.heading, group);
+                ref.decoration = decoration; ref.appearance = appearance; ref.colors = colors;
+            }
             // Expanding one branch does not rebuild unrelated sections or scan the vault.
             const prefix = id === "tags" ? "tag:" : `${id}:`;
             const desktopFolder = !Platform.isMobile && id === "folder";
@@ -1188,14 +1224,19 @@ export class SearchNavigatorController {
                 count = this._cached("property-present-count", () => candidates.filter(meta => keys.some(key => metaHasProperty(meta, key))).length);
                 selected = state.properties.size > 0;
             }
-            ref.summary.textContent = String(count);
-            ref.summary.hidden = false;
-            ref.summary.setAttribute("aria-label", `${count} 个文件`);
+            // The hover-hint owner may append a hidden accessible-name span.
+            // Update the visible text node without removing that owned label.
+            const countText = ref.summary.firstChild;
+            if (this.desktopSidebar && countText?.nodeType === 3) {
+                if (countText.nodeValue !== String(count)) countText.nodeValue = String(count);
+            } else setNavigatorProperty(this, ref.summary, "textContent", String(count));
+            setNavigatorProperty(this, ref.summary, "hidden", false);
+            setNavigatorAttribute(this, ref.summary, "aria-label", `${count} 个文件`);
             // Section headings are navigation/disclosure, not filter values.
             // Keep an informational flag but do not paint a Selected surface
             // when a descendant folder/tag/property is the actual selection.
-            ref.heading.classList.remove("is-selected");
-            ref.heading.dataset.hasAppliedChildren = String(selected);
+            if (!this.desktopSidebar || ref.heading.classList.contains("is-selected")) ref.heading.classList.remove("is-selected");
+            setNavigatorAttribute(this, ref.heading, "data-has-applied-children", String(selected));
             if (ref.signature === signature && desktopFolder) {
                 // Scope selection never changes the folder inventory or tree.
                 // Update only the previous/new selected surfaces, without
@@ -1340,6 +1381,7 @@ export class SearchNavigatorController {
         if (this._projectionTimer != null) this.root.ownerDocument.defaultView.clearTimeout(this._projectionTimer);
         this._projectionTimer = null;
         this._selectionScrollSnapshot = null;
+        this._presentationLabels = null;
         this.observer?.disconnect();
         this._desktopPane?.destroy();
         this._desktopPane = null;

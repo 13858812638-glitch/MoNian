@@ -61,7 +61,7 @@
 | `src/features/folders/exclusions.js` | 89 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeExcludedFolders`、`isFolderExclusionInherited`、`toggleFolderExclusionSelection` 等 4 项 |
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
 | `src/features/navigator/NavigatorCustomization.js` | 896 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
-| `src/features/navigator/SearchNavigatorController.js` | 1354 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
+| `src/features/navigator/SearchNavigatorController.js` | 1396 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId` 等 5 项 |
 | `src/features/navigator/desktop-pane.js` | 123 | 桌面分栏拖动、键盘调整、宽度恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid` 等 10 项 |
@@ -131,10 +131,10 @@
 | `src/ui/mobile/mobile-frame.js` | 214 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `MOBILE_FRAME_OWNER`、`MobileFrameController`、`mountMobileFrame` |
 | `src/ui/overlays/LocalSearchOverlayHost.js` | 131 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `LocalSearchOverlayHost` |
 | `src/ui/overlays/OperationOverlayController.js` | 153 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `OperationOverlayController` |
-| `src/ui/overlays/SearchDropdownController.js` | 712 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchDropdownController` |
+| `src/ui/overlays/SearchDropdownController.js` | 718 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchDropdownController` |
 | `src/ui/overlays/geometry.js` | 33 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `resolveOverlayBounds`、`resolveDropdownViewportBounds` |
 | `src/ui/overlays/popup-order.js` | 25 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `markSearchPopupActive`、`topSearchPopupSurface` |
-| `src/ui/overlays/sidebar-popup.js` | 55 | 桌面侧栏弹窗边界与定位生命周期 | `resolveSidebarPopupBounds`、`bindSidebarDialogPosition` |
+| `src/ui/overlays/sidebar-popup.js` | 56 | 桌面侧栏弹窗边界与定位生命周期 | `resolveSidebarPopupBounds`、`bindSidebarDialogPosition` |
 | `src/ui/pickers/count-rail.js` | 21 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `observePickerCountRail` |
 | `src/ui/pickers/folder-picker.js` | 216 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `renderSharedFolderTreePicker` |
 | `src/ui/pickers/header-modes.js` | 117 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `attachFacetPickerOverflow`、`attachPickerHeaderModes` |
@@ -421,7 +421,7 @@
 - **导出**：`NavigatorCustomization`
 
 ### `src/features/navigator/SearchNavigatorController.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1,354 行，80,927 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1,396 行，83,909 字节。
 - **直接依赖**：`../../core/picker-cleanup.js`、`../../core/session-values.js`、`../../data/folders/folder-tree.js`、`../../data/formats/file-types.js`、`../../data/properties/property-catalog.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-tree.js`、`../../data/tags/tag-values.js`、`../../interactions/scroll-anchor.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/normalization.js`、`../sort/sort-model.js`、`./NavigatorCustomization.js`、`./desktop-pane.js`、`./customization-model.js`、`./toolbar-config.js`、`obsidian`
 - **导出**：`SearchNavigatorController`
 
@@ -766,7 +766,7 @@
 - **导出**：`OperationOverlayController`
 
 ### `src/ui/overlays/SearchDropdownController.js`
-- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；712 行，32,730 字节。
+- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；718 行，33,157 字节。
 - **直接依赖**：`./sidebar-popup.js`、`../../core/picker-cleanup.js`、`../dialogs/submission.js`、`../mobile/mobile-frame.js`、`../pickers/picker-header.js`、`./geometry.js`、`./popup-order.js`、`obsidian`
 - **导出**：`SearchDropdownController`
 

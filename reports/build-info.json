@@ -1,8 +1,8 @@
 {
   "outfile": "dist/main.js",
   "modules": 151,
-  "bytes": 1750144,
-  "sha256": "f0d15e8315d5191d699123bfdbd2d7cb53be480dab690d2afe6cd271878dbfb4",
+  "bytes": 1753773,
+  "sha256": "f49cd7b45de1c0cb6100fc04c6ae9ba5b663a2acf57c37f74d1e7760cbc4540d",
   "external": [
     "@host/obsidian"
   ],

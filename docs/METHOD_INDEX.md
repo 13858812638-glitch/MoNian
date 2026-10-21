@@ -1,3 +1,5 @@
+> **2026-10-21 整体侧栏刷新优化**：未新增类原型方法。Navigator 模块内部 `setNavigatorAttribute` / `setNavigatorProperty` 只对桌面 sidebar 抑制重复显示写入，动态状态检查实时 DOM；文本标签沿用现有 Hover Hint 的无障碍名称 Owner。`_renderProjection` 复用未变化的分组装饰并更新独立计数文本节点。Dropdown `_mountPanel` 的侧栏滚动订阅只响应当前/父级锚点及宿主祖先；`bindSidebarDialogPosition` 只跟随宿主移动。
+
 > **2026-10-21 侧栏弹窗与命令栏**：未新增类原型方法。Navigator 原命令栏方法识别 `desktopSidebar` 并复用筛选导航配置；`navigatorToolbarIcon` 沿用该配置。`createDialogSession` 管理 `bindSidebarDialogPosition` 的定位与清理。Dropdown 的 `_applyFrameLock` 对侧栏子窗约束尺寸，`_mountPanel` 增加侧栏滚动/尺寸订阅，`reposition` 在侧栏收起时隐藏其浮层。宿主边界由新增内部函数 `resolveSidebarPopupBounds` 统一判断。
 
 > **桌面搜索条右置补充**：`SearchNavigatorController.constructor` 在初始化时将既有 `.local-search-input-wrap`（含搜索动作按钮）放到结果标题前方；原导航标题仍留在左侧。移动端及缩放过程不重建搜索控件。

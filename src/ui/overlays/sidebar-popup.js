@@ -39,7 +39,8 @@ export function bindSidebarDialogPosition(core, dialog, backdrop) {
     const queue = () => {
         if (!disposed && frame === null) frame = win.requestAnimationFrame(sync);
     };
-    const scroll = event => { if (event.target === doc || root.contains(event.target)) queue(); };
+    // Dialogs are centered on the leaf, not its scrolling descendants.
+    const scroll = event => { if (event.target === doc || event.target?.contains?.(root)) queue(); };
     const observer = new win.ResizeObserver(queue);
     observer.observe(root);
     win.addEventListener("resize", queue);

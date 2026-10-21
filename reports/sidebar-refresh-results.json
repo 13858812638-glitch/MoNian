@@ -1,0 +1,1920 @@
+{
+  "environment": "Chromium mock Obsidian; real SearchView lifecycle. Timings are diagnostic only, measured separately at 4x CPU throttling.",
+  "parentCommit": "6676d32",
+  "before": {
+    "passed": 12,
+    "failed": 8,
+    "results": [
+      {
+        "name": "light unchanged toolbar causes no DOM writes",
+        "passed": false,
+        "evidence": {
+          "toolbar": 130,
+          "headings": 46
+        }
+      },
+      {
+        "name": "light unchanged group headings cause no DOM writes",
+        "passed": false,
+        "evidence": {
+          "toolbar": 130,
+          "headings": 46
+        }
+      },
+      {
+        "name": "light collapse action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light expand action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light toolbar exposes active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light toolbar clears active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light results scrolling does not reposition left picker",
+        "passed": false,
+        "evidence": {
+          "unrelated": 10,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "light anchor scrolling still repositions picker",
+        "passed": true,
+        "evidence": {
+          "unrelated": 10,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "light nested picker follows original anchor scroll",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light results scrolling does not measure centered dialog",
+        "passed": false,
+        "evidence": 12
+      },
+      {
+        "name": "dark unchanged toolbar causes no DOM writes",
+        "passed": false,
+        "evidence": {
+          "toolbar": 130,
+          "headings": 46
+        }
+      },
+      {
+        "name": "dark unchanged group headings cause no DOM writes",
+        "passed": false,
+        "evidence": {
+          "toolbar": 130,
+          "headings": 46
+        }
+      },
+      {
+        "name": "dark collapse action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark expand action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark toolbar exposes active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark toolbar clears active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark results scrolling does not reposition left picker",
+        "passed": false,
+        "evidence": {
+          "unrelated": 10,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "dark anchor scrolling still repositions picker",
+        "passed": true,
+        "evidence": {
+          "unrelated": 10,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "dark nested picker follows original anchor scroll",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark results scrolling does not measure centered dialog",
+        "passed": false,
+        "evidence": 12
+      }
+    ]
+  },
+  "after": {
+    "passed": 32,
+    "failed": 0,
+    "results": [
+      {
+        "name": "light unchanged toolbar causes no DOM writes",
+        "passed": true,
+        "evidence": {
+          "toolbar": 0,
+          "headings": 0
+        }
+      },
+      {
+        "name": "light unchanged group headings cause no DOM writes",
+        "passed": true,
+        "evidence": {
+          "toolbar": 0,
+          "headings": 0
+        }
+      },
+      {
+        "name": "light collapse action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light expand action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light toolbar exposes active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light toolbar clears active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light group appearance changes invalidate decoration",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light vault rename updates caption and accessible name",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light count and accessible count update together",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light results scrolling does not reposition left picker",
+        "passed": true,
+        "evidence": {
+          "unrelated": 0,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "light anchor scrolling still repositions picker",
+        "passed": true,
+        "evidence": {
+          "unrelated": 0,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "light nested picker follows original anchor scroll",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light ancestor scroll still repositions nested picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light result-anchored picker still follows results scroll",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "light results scrolling does not measure centered dialog",
+        "passed": true,
+        "evidence": 0
+      },
+      {
+        "name": "light dialog follows leaf movement in ancestor",
+        "passed": true,
+        "evidence": {
+          "before": 319.4609375,
+          "after": 340.9140625
+        }
+      },
+      {
+        "name": "dark unchanged toolbar causes no DOM writes",
+        "passed": true,
+        "evidence": {
+          "toolbar": 0,
+          "headings": 0
+        }
+      },
+      {
+        "name": "dark unchanged group headings cause no DOM writes",
+        "passed": true,
+        "evidence": {
+          "toolbar": 0,
+          "headings": 0
+        }
+      },
+      {
+        "name": "dark collapse action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark expand action updates its label",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark toolbar exposes active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark toolbar clears active sort mode",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark group appearance changes invalidate decoration",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark vault rename updates caption and accessible name",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark count and accessible count update together",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark results scrolling does not reposition left picker",
+        "passed": true,
+        "evidence": {
+          "unrelated": 0,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "dark anchor scrolling still repositions picker",
+        "passed": true,
+        "evidence": {
+          "unrelated": 0,
+          "anchor": 1
+        }
+      },
+      {
+        "name": "dark nested picker follows original anchor scroll",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark ancestor scroll still repositions nested picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark result-anchored picker still follows results scroll",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "dark results scrolling does not measure centered dialog",
+        "passed": true,
+        "evidence": 0
+      },
+      {
+        "name": "dark dialog follows leaf movement in ancestor",
+        "passed": true,
+        "evidence": {
+          "before": 319.4609375,
+          "after": 340.9140625
+        }
+      }
+    ]
+  },
+  "mouseInteraction": [
+    {
+      "files": 161,
+      "beforeMetrics": {
+        "LayoutCount": 60,
+        "LayoutDuration": 0.224384,
+        "RecalcStyleCount": 188,
+        "RecalcStyleDuration": 0.222996,
+        "TaskDuration": 2.793508
+      },
+      "afterMetrics": {
+        "LayoutCount": 36,
+        "LayoutDuration": 0.2065,
+        "RecalcStyleCount": 152,
+        "RecalcStyleDuration": 0.221814,
+        "TaskDuration": 2.73824
+      },
+      "checks": {
+        "held mouse has no second fill": true,
+        "unrelated sibling is untouched": true,
+        "folder scope matches selection": true,
+        "latest rapid click commits before paint": true,
+        "branch commits before paint": true,
+        "disclosure does not rerender results": true
+      }
+    },
+    {
+      "files": 2400,
+      "beforeMetrics": {
+        "LayoutCount": 60,
+        "LayoutDuration": 0.252858,
+        "RecalcStyleCount": 188,
+        "RecalcStyleDuration": 0.327976,
+        "TaskDuration": 3.7397590000000003
+      },
+      "afterMetrics": {
+        "LayoutCount": 36,
+        "LayoutDuration": 0.199383,
+        "RecalcStyleCount": 152,
+        "RecalcStyleDuration": 0.25674,
+        "TaskDuration": 3.272745
+      },
+      "checks": {
+        "held mouse has no second fill": true,
+        "unrelated sibling is untouched": true,
+        "folder scope matches selection": true,
+        "latest rapid click commits before paint": true,
+        "branch commits before paint": true,
+        "disclosure does not rerender results": true
+      }
+    }
+  ],
+  "otherHostGeometry": [
+    {
+      "name": "tab-light popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        }
+      }
+    },
+    {
+      "name": "window-light popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        }
+      }
+    },
+    {
+      "name": "embedded-light popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        }
+      }
+    },
+    {
+      "name": "mobile-light popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 280,
+            "y": 1006.1171875,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 344,
+            "y": 968.265625,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 280,
+            "y": 984.1171875,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-tags": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-property": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-sort": {
+            "x": 16,
+            "y": 16,
+            "w": 232,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-history": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-file-move": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-icon": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 280,
+            "y": 1006.1171875,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 344,
+            "y": 968.265625,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 280,
+            "y": 984.1171875,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-tags": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-property": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-sort": {
+            "x": 16,
+            "y": 16,
+            "w": 232,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-history": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-file-move": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-icon": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          }
+        }
+      }
+    },
+    {
+      "name": "tab-dark popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        }
+      }
+    },
+    {
+      "name": "window-dark popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        }
+      }
+    },
+    {
+      "name": "embedded-dark popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 690,
+            "y": 339.5546875,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 690,
+            "y": 373.8515625,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 754,
+            "y": 336,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 690,
+            "y": 351.8515625,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-tags": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-property": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-sort": {
+            "x": 488,
+            "y": 169,
+            "w": 244,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 64,
+            "y": 132,
+            "w": 300,
+            "h": 620,
+            "inside": true
+          },
+          "picker-history": {
+            "x": 332,
+            "y": 120,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          },
+          "picker-file-move": {
+            "x": 64,
+            "y": 132,
+            "w": 400,
+            "h": 242,
+            "inside": true
+          },
+          "picker-icon": {
+            "x": 64,
+            "y": 126,
+            "w": 400,
+            "h": 560,
+            "inside": true
+          }
+        }
+      }
+    },
+    {
+      "name": "mobile-dark popup geometry unchanged from previous build",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "rename-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 280,
+            "y": 1006.1171875,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 344,
+            "y": 968.265625,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 280,
+            "y": 984.1171875,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-tags": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-property": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-sort": {
+            "x": 16,
+            "y": 16,
+            "w": 232,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-history": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-file-move": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-icon": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          }
+        },
+        "after": {
+          "rename-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "create-folder": {
+            "x": 280,
+            "y": 971.8203125,
+            "w": 420,
+            "h": 156.890625,
+            "inside": false
+          },
+          "delete-tag": {
+            "x": 280,
+            "y": 1006.1171875,
+            "w": 420,
+            "h": 88.296875,
+            "inside": false
+          },
+          "appearance": {
+            "x": 344,
+            "y": 968.265625,
+            "w": 292,
+            "h": 164,
+            "inside": false
+          },
+          "rename-file": {
+            "x": 280,
+            "y": 984.1171875,
+            "w": 420,
+            "h": 132.296875,
+            "inside": false
+          },
+          "picker-folder": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-tags": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-property": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-sort": {
+            "x": 16,
+            "y": 16,
+            "w": 232,
+            "h": 444,
+            "inside": true
+          },
+          "picker-view": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-history": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-file-move": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          },
+          "picker-icon": {
+            "x": 12,
+            "y": 0,
+            "w": 956,
+            "h": 1993.140625,
+            "inside": false
+          }
+        }
+      }
+    }
+  ]
+}

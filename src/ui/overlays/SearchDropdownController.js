@@ -503,7 +503,13 @@ export class SearchDropdownController {
         if (bindGlobalListeners) {
             const sidebar = !Platform.isMobile && owner.hostKind === "sidebar";
             const sidebarScroll = event => {
-                if (event.target === doc || owner.containerEl?.contains(event.target)) this._queueReposition();
+                const target = event.target;
+                // Only scrolls that can move the leaf or an owning anchor
+                // change this popup's geometry. The other pane is independent.
+                if (target === doc || target?.contains?.(owner.containerEl)
+                    || (owner.containerEl?.contains(target)
+                        && [this.anchor, ...(this._panelStack || []).map(frame => frame.anchor)]
+                            .some(anchor => anchor && target.contains(anchor)))) this._queueReposition();
             };
             if (sidebar) doc.addEventListener("scroll", sidebarScroll, true);
             doc.addEventListener("click", this._outsideHandler, true);

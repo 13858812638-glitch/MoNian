@@ -1,0 +1,26 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Sidebar-Refresh-20261021.zip",
+  "bytes": 429201,
+  "sha256": "d4694e27a638a0153730b60b131f1249c58654664f0e105c2586871c56b1de03",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1753773,
+      "sha256": "f49cd7b45de1c0cb6100fc04c6ae9ba5b663a2acf57c37f74d1e7760cbc4540d"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264035,
+      "sha256": "4cb02ae0a17a7057094dea15c58ba0feed1bafdb52f9538503b39ece51bda5cb"
+    }
+  ],
+  "sourceParentCommit": "6676d32",
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Refresh-20261021.zip",
+  "remoteDownloadVerified": false,
+  "remotePayloadMatchesBuild": false
+}

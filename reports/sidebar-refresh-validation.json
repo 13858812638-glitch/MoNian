@@ -1,0 +1,109 @@
+{
+  "candidate": "Whole sidebar refresh 2026-10-21",
+  "parentCommit": "6676d32",
+  "environment": "Chromium 154 with mocked Obsidian API and real SearchView lifecycle",
+  "static": {
+    "status": "pass",
+    "modules": 151,
+    "imports": 647,
+    "unresolvedImports": 0,
+    "cycles": 0
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "f49cd7b45de1c0cb6100fc04c6ae9ba5b663a2acf57c37f74d1e7760cbc4540d"
+  },
+  "node": {
+    "passed": 255,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen 01-initial snapshot divergence across four configurations; no baseline or assertion relaxed."
+  },
+  "newSidebarRefresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selectionScroll": {
+    "passed": 6,
+    "failed": 0
+  },
+  "mouseInteraction": {
+    "passed": 12,
+    "failed": 0
+  },
+  "cacheAndHostContracts": {
+    "passed": 14,
+    "failed": 0
+  },
+  "desktopNavigator": {
+    "passed": 55,
+    "failed": 0
+  },
+  "sidebarPopups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "pickerPortal": {
+    "passed": 48,
+    "failed": 0,
+    "engines": [
+      "Chromium"
+    ],
+    "WebKit": "not tested"
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "gateExitCodes": {
+    "interaction": 0,
+    "node": 1,
+    "mobile": 0,
+    "index": 0,
+    "portal": 0,
+    "caret": 0,
+    "desktop": 0,
+    "browser": 1,
+    "popups": 0,
+    "contracts": 0,
+    "selection": 0,
+    "tree": 0,
+    "acceptance": 0
+  },
+  "unverified": [
+    "Native Obsidian on user computer",
+    "Native iOS and Android",
+    "WebKit",
+    "Production vault and third-party integration performance"
+  ],
+  "fixtureCorrections": [
+    "Read accessible names from aria-label or the aria-labelledby target; the existing Hover Hint owner intentionally migrates the label. Baseline still reproduced all four categories of redundant work."
+  ],
+  "finalValidation": "Final tests run after source freeze. Performance interaction measured separately from other regression jobs."
+}
