@@ -673,6 +673,11 @@ export class NavigatorCustomization {
             item.button.dataset.navAction = id;
             return item;
         };
+        if (core.navigator?.desktopSidebar && descriptor.kind === "group"
+            && ["folder", "tags", "properties"].includes(descriptor.key)) {
+            add("manage-group", `选择和管理${descriptor.label}`, "list-filter",
+                () => core.navigator.openSection(descriptor.key, anchor));
+        }
         if (descriptor.kind !== "separator") {
             const target = { ...this._maintenanceTarget(descriptor), mergeExisting: true };
             const facets = core.facets;

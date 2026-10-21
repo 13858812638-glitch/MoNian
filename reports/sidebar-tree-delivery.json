@@ -1,0 +1,26 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Sidebar-Tree-Fast-20261021.zip",
+  "bytes": 428329,
+  "sha256": "d610e93c73867712fd54d119cfdff6374f1c3bc7c9324697672298451d43149d",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1750144,
+      "sha256": "f0d15e8315d5191d699123bfdbd2d7cb53be480dab690d2afe6cd271878dbfb4"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264035,
+      "sha256": "4cb02ae0a17a7057094dea15c58ba0feed1bafdb52f9538503b39ece51bda5cb"
+    }
+  ],
+  "sourceParentCommit": "f37ab7f",
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Tree-Fast-20261021.zip",
+  "remoteDownloadVerified": false,
+  "remotePayloadMatchesBuild": false
+}

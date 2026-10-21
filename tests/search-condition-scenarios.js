@@ -40,7 +40,8 @@ window.auditOpenPicker=async function(kind){
  // Desktop navigation stays visible alongside results. Anchor to its actual
  // section control, not the mobile-only Return button hidden in the top rail.
  const section=kind.endsWith('folder')?'folder':kind.endsWith('tags')?'tags':'properties';
- const anchor=C.navigator.layout==='mobile'?C.navigator.tools.get('filters').button:C.navigator.sections.get(section).manage;
+ const group=C.navigator.sections.get(section);
+ const anchor=C.navigator.layout==='mobile'?C.navigator.tools.get('filters').button:C.navigator.desktopSidebar?group.toggle:group.manage;
  if(kind.startsWith('create-'))await auditQuery('不存在的词甲');
  if(kind.endsWith('folder'))C.facets.showFolderDropdown({anchor});
  else if(kind.endsWith('tags'))C.facets.openTagPicker({anchor});

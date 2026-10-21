@@ -92,9 +92,9 @@ with sync_playwright() as pw:
                     check(label+' '+name+' within sidebar',b['inside'] and b['w']>100,b)
                 p.evaluate('C._confirmSession.finish(false)');p.wait_for_timeout(20)
             pickers = {
-                'folder': "C.facets.showFolderDropdown({anchor:C.navigator?.sections.get('folder').manage||C.searchInput})",
-                'tags': "C.facets.openTagPicker({anchor:C.navigator?.sections.get('tags').manage||C.searchInput})",
-                'property': "C.facets.openPropertyPicker('status',C.navigator?.sections.get('properties').manage||C.searchInput)",
+                'folder': "C.facets.showFolderDropdown({anchor:(C.navigator?.desktopSidebar?C.navigator.sections.get('folder').toggle:C.navigator?.sections.get('folder').manage)||C.searchInput})",
+                'tags': "C.facets.openTagPicker({anchor:(C.navigator?.desktopSidebar?C.navigator.sections.get('tags').toggle:C.navigator?.sections.get('tags').manage)||C.searchInput})",
+                'property': "C.facets.openPropertyPicker('status',(C.navigator?.desktopSidebar?C.navigator.sections.get('properties').toggle:C.navigator?.sections.get('properties').manage)||C.searchInput)",
                 'sort': "C.sorting.openPicker({pickerBtn:C.sorting.pickerBtn})",
                 'view': "C.resultControls.openViewDropdown(C.searchInput)",
                 'history': "C.resultControls.openHistoryDropdown(C.resultControls.historyBtn)",
@@ -141,7 +141,7 @@ with sync_playwright() as pw:
                 p.locator('.local-search-dialog-input').focus()
                 p.keyboard.press('Escape');p.wait_for_timeout(40)
                 check(label+' Escape closes dialog',p.locator('.local-search-dialog-surface').count()==0)
-                p.evaluate("C.facets.showFolderDropdown({anchor:C.navigator.sections.get('folder').manage})");p.wait_for_timeout(80)
+                p.evaluate("C.facets.showFolderDropdown({anchor:C.navigator.sections.get('folder').toggle})");p.wait_for_timeout(80)
                 p.evaluate("S.openFilterToolbarIconPicker(C,{anchor:C.dropdown.panel.querySelector('button'),propertyKey:'status',preserveAnchor:true})");p.wait_for_timeout(80)
                 p.evaluate("document.querySelector('#host').style.width='240px';V.onResize()")
                 p.wait_for_timeout(100)

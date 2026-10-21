@@ -84,12 +84,13 @@ with sync_playwright() as pw:
         page.locator('.local-search-input').fill('')
         page.locator('.local-search-input').press('Enter');page.wait_for_timeout(60)
         controls = page.evaluate('''() => [...C.navigator.sections.values()].map(r=>{
-          const a=r.summary.getBoundingClientRect(),b=r.manage.getBoundingClientRect(),t=r.chevron.getBoundingClientRect();
+          const a=r.summary.getBoundingClientRect(),b=r.heading.getBoundingClientRect(),t=r.chevron.getBoundingClientRect();
           const svg=r.chevron.querySelector('svg'),s=svg.getBoundingClientRect();
-          return {noOverlap:a.right<=b.left,arrowFits:s.width>=12&&s.x>=t.x&&s.right<=t.right,
+          return {countFits:a.width>0&&a.left>=b.left&&a.right<=b.right,manageHidden:r.manage.getClientRects().length===0,
+            arrowFits:s.width>=12&&s.x>=t.x&&s.right<=t.right,
             expanded:r.chevron.getAttribute('aria-expanded'),icon:r.chevron.dataset.testIcon};
         })''')
-        check(prefix+' count and management do not overlap', all(r['noOverlap'] for r in controls), controls)
+        check(prefix+' counts fit without management ellipses', all(r['countFits'] and r['manageHidden'] for r in controls), controls)
         check(prefix+' arrows fit their hit targets', all(r['arrowFits'] for r in controls))
         toggle=page.locator('[data-nav-section="folder"] > .local-search-nav-section-heading > .local-search-move-tree-toggle')
         toggle.click();page.wait_for_timeout(40)

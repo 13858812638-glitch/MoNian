@@ -1,0 +1,113 @@
+{
+  "candidate": "Desktop sidebar tree efficiency 2026-10-21",
+  "parentCommit": "f37ab7f",
+  "environment": "Chromium 154 with mocked Obsidian API and real SearchView lifecycle",
+  "static": {
+    "status": "pass",
+    "modules": 151,
+    "imports": 647,
+    "unresolvedImports": 0,
+    "cycles": 0
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "f0d15e8315d5191d699123bfdbd2d7cb53be480dab690d2afe6cd271878dbfb4"
+  },
+  "node": {
+    "passed": 255,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen-snapshot divergence in 01-initial across four configurations; no baseline/assertion relaxed."
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selectionScroll": {
+    "passed": 6,
+    "failed": 0
+  },
+  "collation": {
+    "passed": 2,
+    "failed": 0,
+    "includedInNodeTotal": true
+  },
+  "mouseInteraction": {
+    "passed": 12,
+    "failed": 0
+  },
+  "cacheAndHostContracts": {
+    "passed": 14,
+    "failed": 0
+  },
+  "desktopNavigator": {
+    "passed": 55,
+    "failed": 0
+  },
+  "sidebarPopups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "pickerPortal": {
+    "passed": 48,
+    "failed": 0,
+    "engines": [
+      "Chromium"
+    ],
+    "WebKit": "not tested"
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "mobile": 0,
+    "index": 0,
+    "portal": 0,
+    "caret": 0,
+    "desktop": 0,
+    "browser": 1,
+    "popups": 0,
+    "contracts": 0,
+    "selection": 0,
+    "tree": 0,
+    "acceptance": 0
+  },
+  "unverified": [
+    "Native Obsidian on user computer",
+    "Native iOS and Android",
+    "WebKit",
+    "Production-vault third-party integration/performance"
+  ],
+  "fixtureCorrections": [
+    "Use existing bundled Obsidian mock for collation test; direct source import requires the native obsidian module.",
+    "DOM movement instrumentation counts preexisting retained rows only; newly mounted rows are not redundant moves.",
+    "Sidebar popup/acceptance fixtures anchor to the now-visible group title rather than removed ellipsis control. Other hosts retain their original test anchors."
+  ],
+  "finalValidation": "All final gates run after the last source change. Performance traces measured separately from concurrent regression suites."
+}

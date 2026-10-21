@@ -2278,6 +2278,11 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
 .local-search-navigator:not([data-nav-layout="mobile"]) .local-search-nav-section-heading {
     --ls-nav-count-action-reserve: calc(var(--ls-window-control-size) + var(--ls-tree-trailing-gap));
 }
+/* Group management lives in the desktop sidebar's context menu. Counts use
+   the same trailing alignment as ordinary rows; sort grips still reserve space. */
+.local-search-navigator.has-sidebar-toolbar .local-search-nav-section-heading {
+    --ls-nav-count-action-reserve: inherit;
+}
 /* Disclosure buttons contain a glyph, never truncated button text. Keep the
    default desktop host's button ellipsis/overflow policy out of this slot. */
 .local-search-navigator:not([data-nav-layout="mobile"]) .local-search-move-tree-toggle {

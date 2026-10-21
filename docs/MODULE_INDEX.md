@@ -60,8 +60,8 @@
 | `src/features/filters/pool-values.js` | 76 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `filterPoolLabel`、`filterPoolIcon`、`filterPoolValueKey` 等 7 项 |
 | `src/features/folders/exclusions.js` | 89 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeExcludedFolders`、`isFolderExclusionInherited`、`toggleFolderExclusionSelection` 等 4 项 |
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
-| `src/features/navigator/NavigatorCustomization.js` | 605 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
-| `src/features/navigator/SearchNavigatorController.js` | 1285 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
+| `src/features/navigator/NavigatorCustomization.js` | 896 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
+| `src/features/navigator/SearchNavigatorController.js` | 1354 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId` 等 5 项 |
 | `src/features/navigator/desktop-pane.js` | 123 | 桌面分栏拖动、键盘调整、宽度恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid` 等 10 项 |
@@ -153,7 +153,7 @@
 | `src/utils/dom.js` | 49 | 无状态的通用辅助函数 | `hostDocument`、`hostWindow`、`activeWorkspaceDocument` 等 7 项 |
 | `src/utils/markdown-text.js` | 230 | 无状态的通用辅助函数 | `simpleSegment`、`decodeReadableEntities`、`readableWikiTarget` 等 8 项 |
 | `src/utils/normalization.js` | 44 | 无状态的通用辅助函数 | `normalizeIntegerSetting`、`normalizeUniqueStringList`、`normalizeStringListMap` |
-| `src/utils/preferred-order.js` | 77 | 无状态的通用辅助函数 | `moveOrderedKey`、`sortByPreferredOrder`、`updatePreferredSiblingOrder` 等 5 项 |
+| `src/utils/preferred-order.js` | 80 | 无状态的通用辅助函数 | `moveOrderedKey`、`sortByPreferredOrder`、`updatePreferredSiblingOrder` 等 5 项 |
 | `src/utils/search-text.js` | 307 | 无状态的通用辅助函数 | `mergeTextRanges`、`fillSearchHitText`、`tagQueryMatchRanges` 等 12 项 |
 | `src/utils/tree-match.js` | 14 | 无状态的通用辅助函数 | `treeNodeMatches` |
 | `src/utils/vault-paths.js` | 30 | 无状态的通用辅助函数 | `normalizeVaultFolderPath`、`isSameOrDescendantVaultPath` |
@@ -416,12 +416,12 @@
 - **导出**：`normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig`
 
 ### `src/features/navigator/NavigatorCustomization.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；605 行，37,555 字节。
-- **直接依赖**：`../../core/picker-cleanup.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-values.js`、`../../interactions/PointerSortCoordinator.js`、`../../ui/components/input-controls.js`、`../../ui/dialogs/dialog-session.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/icon-picker.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/preferred-order.js`、`../folders/folder-colors.js`、`./customization-model.js`、`obsidian`
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；896 行，56,118 字节。
+- **直接依赖**：`../../core/picker-cleanup.js`、`../../data/properties/property-values.js`、`../../data/properties/property-types.js`、`../../data/tags/tag-values.js`、`../../ui/dialogs/dialog-session.js`、`../../interactions/PointerSortCoordinator.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/icon-picker.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/preferred-order.js`、`../folders/folder-colors.js`、`./customization-model.js`、`obsidian`
 - **导出**：`NavigatorCustomization`
 
 ### `src/features/navigator/SearchNavigatorController.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1285 行，76,832 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1,354 行，80,927 字节。
 - **直接依赖**：`../../core/picker-cleanup.js`、`../../core/session-values.js`、`../../data/folders/folder-tree.js`、`../../data/formats/file-types.js`、`../../data/properties/property-catalog.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-tree.js`、`../../data/tags/tag-values.js`、`../../interactions/scroll-anchor.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/normalization.js`、`../sort/sort-model.js`、`./NavigatorCustomization.js`、`./desktop-pane.js`、`./customization-model.js`、`./toolbar-config.js`、`obsidian`
 - **导出**：`SearchNavigatorController`
 
@@ -871,7 +871,7 @@
 - **导出**：`normalizeIntegerSetting`、`normalizeUniqueStringList`、`normalizeStringListMap`
 
 ### `src/utils/preferred-order.js`
-- **职责**：无状态的通用辅助函数；77 行，3,016 字节。
+- **职责**：无状态的通用辅助函数；80 行，3,236 字节。
 - **直接依赖**：`../features/filters/pool-config.js`、`./normalization.js`
 - **导出**：`moveOrderedKey`、`sortByPreferredOrder`、`updatePreferredSiblingOrder`、`remapPreferredPathOrder`、`remapFilterPoolStoredKeys`
 

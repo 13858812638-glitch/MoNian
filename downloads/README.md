@@ -1,3 +1,13 @@
+# 最新候选：目录切换与折叠优化（2026-10-21）
+
+下载 [GLS-Sidebar-Tree-Fast-20261021.zip](GLS-Sidebar-Tree-Fast-20261021.zip)，在 GitHub 文件页点击 Download raw file。
+
+关闭插件，备份并覆盖 `main.js`、`styles.css`，保留原 `manifest.json`、`data.json`，再启用插件。左侧分组管理改为右键标题 →“选择和管理…”。
+
+[说明与验证](../docs/SIDEBAR_TREE_EFFICIENCY_20261021.md) · [文件校验与下载验证](../reports/sidebar-tree-delivery.json)。以下旧包用于回退。
+
+---
+
 # 最新候选：桌面侧栏点击与折叠交互（2026-10-21）
 
 下载 [GLS-Sidebar-Click-Fix-20261021.zip](GLS-Sidebar-Click-Fix-20261021.zip)，在 GitHub 文件页点击 Download raw file。

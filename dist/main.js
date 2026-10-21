@@ -1984,6 +1984,9 @@ exports.remapFilterPoolStoredKeys = remapFilterPoolStoredKeys;
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 const pool_config_js_1 = require("../features/filters/pool-config.js");
 const normalization_js_1 = require("./normalization.js");
+// Same locale/options as the former per-pair localeCompare. Reuse its ICU
+// comparator across folder/tag projections without changing sort semantics.
+const preferredOrderCollator = new Intl.Collator("zh-Hans-CN", { numeric: true });
 function moveOrderedKey(order, key, beforeKey = null) {
     const source = (0, normalization_js_1.normalizeUniqueStringList)(order);
     if (!key || !source.includes(key))
@@ -2006,7 +2009,7 @@ function sortByPreferredOrder(items, preferredOrder, getKey = item => item?.path
         const bi = order.has(bKey) ? order.get(bKey) : Number.MAX_SAFE_INTEGER;
         if (ai !== bi)
             return ai - bi;
-        return String(aKey).localeCompare(String(bKey), "zh-Hans-CN", { numeric: true });
+        return preferredOrderCollator.compare(String(aKey), String(bKey));
     });
 }
 function updatePreferredSiblingOrder(existingOrder, siblingKeys, draggedKey, beforeKey = null) {
@@ -22439,6 +22442,10 @@ class NavigatorCustomization {
             item.button.dataset.navAction = id;
             return item;
         };
+        if (core.navigator?.desktopSidebar && descriptor.kind === "group"
+            && ["folder", "tags", "properties"].includes(descriptor.key)) {
+            add("manage-group", `选择和管理${descriptor.label}`, "list-filter", () => core.navigator.openSection(descriptor.key, anchor));
+        }
         if (descriptor.kind !== "separator") {
             const target = { ...this._maintenanceTarget(descriptor), mergeExisting: true };
             const facets = core.facets;
@@ -23701,6 +23708,10 @@ class SearchNavigatorController {
     select(kind, value, key = "") {
         if (!this.prepareSearch())
             return;
+        // Read before the result commit dirties layout. This snapshot belongs
+        // only to the projection queued by this synchronous selection.
+        const scrollSnapshot = this.desktopSidebar && !this.facets.hidden
+            ? { top: this.scroll.scrollTop } : null;
         const state = this.core.filterState;
         if (kind === "tag")
             state.tagMatchMode = "all";
@@ -23725,6 +23736,16 @@ class SearchNavigatorController {
             this.core._applyFacetSelection(kind, value, { key, mode: "replace" });
         }
         this.core._onFilterChanged();
+        if (scrollSnapshot) {
+            scrollSnapshot.generation = this.core._resultGeneration;
+            this._selectionScrollSnapshot = scrollSnapshot;
+            // sync() queued the projection first. Expire unused snapshots too:
+            // a sort/maintenance guard must not carry this position forward.
+            queueMicrotask(() => {
+                if (this._selectionScrollSnapshot === scrollSnapshot)
+                    this._selectionScrollSnapshot = null;
+            });
+        }
         if (this.layout === "mobile")
             this.showResults(false);
     }
@@ -23817,7 +23838,7 @@ class SearchNavigatorController {
             ref.manage.setAttribute("title", `选择和管理${title}`);
         }
         ref.content.hidden = this.collapsed.has(id);
-        ref.manage.hidden = this.layout === "mobile";
+        ref.manage.hidden = this.desktopSidebar || this.layout === "mobile";
         ref.toggle.setAttribute("aria-expanded", String(!ref.content.hidden));
         const chevronIcon = ref.content.hidden ? "chevron-right" : "chevron-down";
         if (ref.chevron.dataset.navIcon !== chevronIcon) {
@@ -23925,6 +23946,10 @@ class SearchNavigatorController {
     }
     _placeProjectionRow(ref, id, row) {
         ref.usedRows?.add(id);
+        if (this.desktopSidebar && ref.plannedRows) {
+            ref.plannedRows.push(row);
+            return;
+        }
         if (row !== ref.rowCursor)
             ref.content.insertBefore(row, ref.rowCursor || null);
         ref.rowCursor = row.nextElementSibling;
@@ -23950,6 +23975,18 @@ class SearchNavigatorController {
                 tree.row.remove();
                 ref.rows.delete(id);
             }
+        // Remove collapsed descendants before reconciling order. Otherwise a
+        // stale child at rowCursor makes every following sibling move around
+        // it, even though those siblings never changed their relative order.
+        if (ref.plannedRows) {
+            let cursor = ref.content.firstElementChild;
+            for (const row of ref.plannedRows) {
+                if (row !== cursor)
+                    ref.content.insertBefore(row, cursor);
+                cursor = row.nextElementSibling;
+            }
+            ref.plannedRows = null;
+        }
         ref.usedRows = null;
         ref.rowCursor = null;
     }
@@ -24097,7 +24134,11 @@ class SearchNavigatorController {
         const state = core.createFlow?.searchResultFilterState?.() || core.filterState;
         this.renderRevision = core._resultGeneration;
         // Batch one projection per open section; no file reads and no per-row vault scans.
-        const scroll = this._restoreScrollTop ?? (this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop);
+        const selectionScroll = this._selectionScrollSnapshot;
+        this._selectionScrollSnapshot = null;
+        const scroll = this._restoreScrollTop
+            ?? (selectionScroll?.generation === core._resultGeneration ? selectionScroll.top
+                : this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop);
         const anchorOptions = { selector: "[data-nav-id]", keyFrom: row => row.dataset.navId };
         // At the desktop list's origin there is no displaced row to preserve.
         // Avoid measuring every row and forcing layout on each disclosure.
@@ -24197,6 +24238,8 @@ class SearchNavigatorController {
             ref.generation = core._resultGeneration;
             ref.usedRows = new Set();
             ref.rowCursor = ref.content.firstElementChild;
+            if (this.desktopSidebar)
+                ref.plannedRows = [];
             if (id === "folder") {
                 // Structural counts, not result counts: result-only hiding,
                 // search text and facets cannot make the folder tree fluctuate.
@@ -24336,6 +24379,7 @@ class SearchNavigatorController {
         if (this._projectionTimer != null)
             this.root.ownerDocument.defaultView.clearTimeout(this._projectionTimer);
         this._projectionTimer = null;
+        this._selectionScrollSnapshot = null;
         this.observer?.disconnect();
         this._desktopPane?.destroy();
         this._desktopPane = null;

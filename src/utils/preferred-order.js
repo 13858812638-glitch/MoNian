@@ -3,6 +3,9 @@
 import { normalizeFilterPools } from "../features/filters/pool-config.js";
 import { normalizeUniqueStringList } from "./normalization.js";
 
+// Same locale/options as the former per-pair localeCompare. Reuse its ICU
+// comparator across folder/tag projections without changing sort semantics.
+const preferredOrderCollator = new Intl.Collator("zh-Hans-CN", { numeric: true });
 
 export function moveOrderedKey(order, key, beforeKey = null) {
     const source = normalizeUniqueStringList(order);
@@ -27,7 +30,7 @@ export function sortByPreferredOrder(items, preferredOrder, getKey = item => ite
         const ai = order.has(aKey) ? order.get(aKey) : Number.MAX_SAFE_INTEGER;
         const bi = order.has(bKey) ? order.get(bKey) : Number.MAX_SAFE_INTEGER;
         if (ai !== bi) return ai - bi;
-        return String(aKey).localeCompare(String(bKey), "zh-Hans-CN", { numeric: true });
+        return preferredOrderCollator.compare(String(aKey), String(bKey));
     });
 }
 
