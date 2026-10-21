@@ -6916,7 +6916,10 @@ body:not(.is-mobile) .local-search-centered-picker-surface.local-search-dropdown
 }
 
 /* Tree Row 是组合控件：子命中层只声明语义，Pressed 仍由外层 Row 唯一绘制。 */
-:is(.local-search-picker-dropdown, .local-search-nav-scroll) .local-search-move-tree-row:not(
+/* Desktop sidebar mouse clicks keep the hover surface until release, then
+   show the committed selection. No separate held-mouse fill between them.
+   Mobile Navigator and every shared Picker retain their pressed feedback. */
+:is(.local-search-picker-dropdown, .local-search-nav-scroll:not(:where(.has-sidebar-toolbar .local-search-nav-scroll))) .local-search-move-tree-row:not(
     .is-selected, .is-partial, .is-unavailable, .is-nav-touch-dragged, .is-sort-mode *
 ):not(.is-persistent-toggle :not(.is-action-row)):has(> [data-ls-interaction="tree-hit"]:active:not(:disabled, [aria-disabled="true"])) {
     background: var(--ls-state-pressed-bg) !important;

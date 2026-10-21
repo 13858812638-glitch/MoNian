@@ -22160,7 +22160,10 @@ class NavigatorCustomization {
         for (const row of this.rows.keys())
             if (!row.isConnected)
                 this.rows.delete(row);
-        this._syncSortControls();
+        // Desktop rows are decorated when created/changed; setSortMode owns
+        // updates to retained grips. Do not restamp the whole tree per branch.
+        if (!this.core?.navigator?.desktopSidebar)
+            this._syncSortControls();
     }
     setSortMode(value, scope = null) {
         const priorMaintenance = this.maintenanceMode;
@@ -23853,6 +23856,27 @@ class SearchNavigatorController {
             ref.rows.set(id, tree);
         }
         tree._navOptions = options;
+        // A desktop disclosure changes one branch. Keep callbacks current but
+        // do not restamp every unchanged sibling, icon, style and sort control.
+        // Preference/index invalidation advances the epoch, so appearance and
+        // maintenance changes still pass through the original decorator.
+        if (this.desktopSidebar) {
+            // Folder nodes expose lazy children. Never serialize the node (or
+            // its fixed-row callbacks), which would walk collapsed subtrees.
+            const { navDescriptor, ...presentation } = options;
+            const { node, fixedOptions, ...descriptor } = navDescriptor || {};
+            const signature = JSON.stringify([presentation, descriptor, Boolean(options.onClick), this._desktopFolderEpoch || 0,
+                this.customization.sortMode, this.customization.sortScope, this.customization.maintenanceMode]);
+            const appearance = this.core.plugin.settings.navigatorCustomization;
+            const colors = this.core.plugin.settings.resultFolderColors;
+            if (tree._desktopSignature === signature && tree._desktopAppearance === appearance && tree._desktopColors === colors) {
+                this._placeProjectionRow(ref, id, tree.row);
+                return tree;
+            }
+            tree._desktopSignature = signature;
+            tree._desktopAppearance = appearance;
+            tree._desktopColors = colors;
+        }
         tree.row.dataset.navRowKey = id;
         tree.row.dataset.pickerKey = options.itemTitle || options.name || "";
         tree.row.classList.toggle("is-selected", Boolean(options.active));
@@ -24023,7 +24047,9 @@ class SearchNavigatorController {
         const n = core.fullResults.length;
         this.resultsButton.setAttribute("aria-label", `查看结果 · ${n}`);
         this.resultsButton.setAttribute("title", `查看结果 · ${n}`);
-        this.resultTitle.textContent = this._scopeTitle();
+        const title = this._scopeTitle();
+        if (this.resultTitle.textContent !== title)
+            this.resultTitle.textContent = title;
         this.resultTitle.title = this.resultTitle.textContent;
         this._syncMobileTools();
         // A hidden tree has no work to paint. Rebuild only on returning to it.
@@ -24031,15 +24057,22 @@ class SearchNavigatorController {
             return;
         if (this.renderRevision === core._resultGeneration)
             return;
-        // Result cards commit first. Navigation projection is one cancellable
-        // follow-up task and always consumes the latest query/generation.
+        // Result cards commit first. Desktop sidebar selection/tree follows in
+        // the same paint, without a timer frame showing the previous location.
+        // Other hosts retain their original deferred projection.
         if (this._projectionTimer != null)
             return;
-        this._projectionTimer = this.root.ownerDocument.defaultView.setTimeout(() => {
+        const project = () => {
             this._projectionTimer = null;
             if (this.core === core && !core._destroyed)
                 this._renderProjection();
-        }, 0);
+        };
+        if (this.desktopSidebar) {
+            this._projectionTimer = -1;
+            queueMicrotask(project);
+        }
+        else
+            this._projectionTimer = this.root.ownerDocument.defaultView.setTimeout(project, 0);
     }
     _renderProjection() {
         const core = this.core;
@@ -24267,11 +24300,19 @@ class SearchNavigatorController {
                 : oldAnchors.filter(anchor => remaining.has(anchor.key)).sort((a, b) => Math.abs(a.offset - scrollAnchor.offset) - Math.abs(b.offset - scrollAnchor.offset))[0];
             (0, scroll_anchor_js_1.restoreScrollableAnchor)(this.scroll, nearest || scrollAnchor, anchorOptions);
         }
-        else
+        else if (!this.desktopSidebar || this._restoreScrollTop != null || scroll !== 0) {
             this.scroll.scrollTop = scroll;
-        this._filterScrollTop = this.scroll.scrollTop;
+        }
+        // At the origin a no-op scroll assignment/read forces the browser to
+        // lay out the entire freshly updated tree. Let the normal paint do it.
+        this._filterScrollTop = this.desktopSidebar && !scrollAnchor && scroll === 0
+            ? 0 : this.scroll.scrollTop;
         this._restoreScrollTop = null;
-        this.syncPage();
+        // Desktop panes remain visible during disclosure and folder selection.
+        // Page/layout transitions already own syncPage; tree refresh must not
+        // refresh the results toolbar and conditions a second time.
+        if (!this.desktopSidebar)
+            this.syncPage();
         // Deferred projection replaces rows after the shared Tree Primitive's
         // synchronous action has returned. Restore only a removed owned focus;
         // an input/Picker that has since taken focus must remain untouched.
@@ -32974,6 +33015,13 @@ class SharedSearchStateCoordinator {
         this.state = normalized;
         this.revision++;
         this._remember();
+        // A desktop sidebar has already rendered its own committed state.
+        // Acknowledge it before scheduling peers instead of consuming it back
+        // through the scroll gate (which forces layout of the new result DOM).
+        // A stale host may have merged only one dimension: it must still wait
+        // for its normal interaction gate and consume the remaining fields.
+        if (core.navigator?.desktopSidebar && this._same(current, normalized))
+            member.applied = this.revision;
         for (const target of this.members.keys())
             if (!closing || target !== core)
                 this.schedule(target);

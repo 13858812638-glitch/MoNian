@@ -1,0 +1,92 @@
+{
+  "candidate": "Desktop sidebar click interaction 2026-10-21",
+  "parentCommit": "605a463",
+  "environment": "Chromium with mocked Obsidian API and real SearchView lifecycle",
+  "static": {
+    "status": "pass",
+    "unresolvedImports": 0,
+    "cycles": 0
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass"
+  },
+  "node": {
+    "passed": 253,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen-snapshot divergence; no baseline or assertion relaxed."
+  },
+  "newMouseInteraction": {
+    "passed": 12,
+    "failed": 0
+  },
+  "newCacheAndHostContracts": {
+    "passed": 14,
+    "failed": 0
+  },
+  "newSharedStateTests": {
+    "passed": 2,
+    "failed": 0,
+    "includedInNodeTotal": true
+  },
+  "desktopNavigator": {
+    "passed": 55,
+    "failed": 0
+  },
+  "sidebarPopups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "pickerPortal": {
+    "passed": 48,
+    "failed": 0,
+    "engines": [
+      "Chromium"
+    ],
+    "WebKit": "not tested"
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0,
+    "engine": "Chromium"
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0,
+    "configurations": [
+      "desktop-light",
+      "desktop-dark",
+      "mobile-light",
+      "mobile-dark"
+    ]
+  },
+  "unverified": [
+    "Native Obsidian on the user computer",
+    "Native iOS and Android",
+    "WebKit",
+    "Production-vault third-party integration/performance"
+  ],
+  "testFixtureCorrections": [
+    "New Node test uses the existing bundled Obsidian mock, since direct source import requires Obsidian. The resulting before-test reproduces the redundant layout read (1 failure), and passes after the fix.",
+    "Cache appearance oracle follows the existing folder-color settings owner and uppercase hex normalization. Tab press coverage opens its real folder Picker, since Tab has no Navigator. Mobile hold coverage uses the existing trailing-count touch owner.",
+    "An intermediate full test overlapped the final CSS edit and reported build/source mismatch. Final gates were restarted after source freeze; that mismatch is absent from final results."
+  ]
+}

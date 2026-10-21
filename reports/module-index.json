@@ -155,11 +155,11 @@
     ],
     "dependencies": [
       "../features/filters/filter-state.js",
-      "./session-values.js",
-      "../features/sort/sort-model.js"
+      "../features/sort/sort-model.js",
+      "./session-values.js"
     ],
-    "lines": 207,
-    "bytes": 9313,
+    "lines": 213,
+    "bytes": 9814,
     "origins": [
       {
         "id": "SharedSearchStateCoordinator",
@@ -3906,23 +3906,24 @@
       "NavigatorCustomization"
     ],
     "dependencies": [
-      "obsidian",
-      "../../interactions/PointerSortCoordinator.js",
-      "../../ui/pickers/picker-header.js",
+      "../../core/picker-cleanup.js",
+      "../../data/properties/property-values.js",
+      "../../data/properties/property-types.js",
+      "../../data/tags/tag-values.js",
       "../../ui/dialogs/dialog-session.js",
-      "../../ui/pickers/tree-row.js",
+      "../../interactions/PointerSortCoordinator.js",
       "../../ui/components/input-controls.js",
-      "./customization-model.js",
-      "../folders/folder-colors.js",
       "../../ui/pickers/count-rail.js",
       "../../ui/pickers/icon-picker.js",
-      "../../data/properties/property-values.js",
-      "../../core/picker-cleanup.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/tree-row.js",
       "../../utils/preferred-order.js",
-      "../../data/tags/tag-values.js"
+      "../folders/folder-colors.js",
+      "./customization-model.js",
+      "obsidian"
     ],
-    "lines": 605,
-    "bytes": 37555,
+    "lines": 891,
+    "bytes": 55798,
     "origins": [
       {
         "id": "NavigatorCustomization",
@@ -3941,29 +3942,29 @@
       "SearchNavigatorController"
     ],
     "dependencies": [
-      "../../data/tags/tag-values.js",
-      "./NavigatorCustomization.js",
-      "obsidian",
-      "../../data/properties/property-values.js",
-      "../../data/formats/file-types.js",
-      "../sort/sort-model.js",
-      "../../data/tags/tag-tree.js",
-      "../../interactions/scroll-anchor.js",
-      "../../data/properties/property-catalog.js",
-      "../../ui/pickers/picker-header.js",
-      "../../ui/components/input-controls.js",
+      "../../core/picker-cleanup.js",
+      "../../core/session-values.js",
       "../../data/folders/folder-tree.js",
+      "../../data/formats/file-types.js",
+      "../../data/properties/property-catalog.js",
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-tree.js",
+      "../../data/tags/tag-values.js",
+      "../../interactions/scroll-anchor.js",
+      "../../ui/components/input-controls.js",
+      "../../ui/pickers/count-rail.js",
+      "../../ui/pickers/picker-header.js",
       "../../ui/pickers/tree-row.js",
+      "../../utils/normalization.js",
+      "../sort/sort-model.js",
+      "./NavigatorCustomization.js",
+      "./desktop-pane.js",
       "./customization-model.js",
       "./toolbar-config.js",
-      "../../core/session-values.js",
-      "../../utils/normalization.js",
-      "../../ui/pickers/count-rail.js",
-      "../../core/picker-cleanup.js",
-      "./desktop-pane.js"
+      "obsidian"
     ],
-    "lines": 1285,
-    "bytes": 76832,
+    "lines": 1320,
+    "bytes": 79142,
     "origins": [
       {
         "id": "SearchNavigatorController",

@@ -1,0 +1,199 @@
+{
+  "environment": "Chromium mock Obsidian SearchView, 714px desktop sidebar, 4x CPU throttle; native-device smoothness unverified",
+  "sourceSha256": {
+    "src/features/navigator/SearchNavigatorController.js": "169d4665f2ee3916a08738eee175d051f62662d2969b9410b89b8f69d3af72de",
+    "src/features/navigator/NavigatorCustomization.js": "afc383ba01cde664de6124c40c25e5d9aeea164447a802510785ff8cbfdf5502",
+    "src/core/SharedSearchStateCoordinator.js": "b6b67cc712d96fda7ec27703be7c44482c87d1453b7ac242de31ee286752589a",
+    "src/styles/styles.css": "ec8bb7b0314d48946a30af5c77d63ca5006602ca85585d227b6f7d9991d57fa4"
+  },
+  "cases": [
+    {
+      "before": {
+        "files": 161,
+        "unrelatedRowWritesPerExpandCollapse": [
+          36,
+          36,
+          36,
+          36,
+          36,
+          36
+        ],
+        "heldFillDiffersFromHover": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "metrics": {
+          "LayoutCount": 84,
+          "LayoutDuration": 0.295021,
+          "RecalcStyleCount": 235,
+          "RecalcStyleDuration": 0.29638,
+          "TaskDuration": 3.249952
+        },
+        "navigationProjectionMedianMs": 20.399999991059303,
+        "checks": {}
+      },
+      "after": {
+        "files": 161,
+        "unrelatedRowWritesPerExpandCollapse": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "heldFillDiffersFromHover": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "metrics": {
+          "LayoutCount": 66,
+          "LayoutDuration": 0.235757,
+          "RecalcStyleCount": 199,
+          "RecalcStyleDuration": 0.244704,
+          "TaskDuration": 2.911535
+        },
+        "navigationProjectionMedianMs": 11.799999997019768,
+        "checks": {
+          "held mouse has no second fill": true,
+          "unrelated sibling is untouched": true,
+          "folder scope matches selection": true,
+          "latest rapid click commits before paint": true,
+          "branch commits before paint": true,
+          "disclosure does not rerender results": true
+        }
+      }
+    },
+    {
+      "before": {
+        "files": 2400,
+        "unrelatedRowWritesPerExpandCollapse": [
+          36,
+          36,
+          36,
+          36,
+          36,
+          36
+        ],
+        "heldFillDiffersFromHover": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "metrics": {
+          "LayoutCount": 84,
+          "LayoutDuration": 0.43647,
+          "RecalcStyleCount": 235,
+          "RecalcStyleDuration": 0.50086,
+          "TaskDuration": 4.614914
+        },
+        "navigationProjectionMedianMs": 53.1000000089407,
+        "checks": {}
+      },
+      "after": {
+        "files": 2400,
+        "unrelatedRowWritesPerExpandCollapse": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "heldFillDiffersFromHover": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "metrics": {
+          "LayoutCount": 66,
+          "LayoutDuration": 0.363953,
+          "RecalcStyleCount": 199,
+          "RecalcStyleDuration": 0.437672,
+          "TaskDuration": 4.135156
+        },
+        "navigationProjectionMedianMs": 40.05000001192093,
+        "checks": {
+          "held mouse has no second fill": true,
+          "unrelated sibling is untouched": true,
+          "folder scope matches selection": true,
+          "latest rapid click commits before paint": true,
+          "branch commits before paint": true,
+          "disclosure does not rerender results": true
+        }
+      }
+    }
+  ],
+  "contracts": [
+    {
+      "name": "light row cache leaves lazy subtrees unread",
+      "passed": true
+    },
+    {
+      "name": "light appearance edits from another host invalidate rows",
+      "passed": true
+    },
+    {
+      "name": "light dragging off a held folder does not select it",
+      "passed": true
+    },
+    {
+      "name": "light keyboard collapse retains visible focus",
+      "passed": true
+    },
+    {
+      "name": "light pending projection is harmless after teardown",
+      "passed": true
+    },
+    {
+      "name": "light desktop tab retains held-mouse feedback",
+      "passed": true
+    },
+    {
+      "name": "light mobile sidebar retains touch feedback",
+      "passed": true
+    },
+    {
+      "name": "dark row cache leaves lazy subtrees unread",
+      "passed": true
+    },
+    {
+      "name": "dark appearance edits from another host invalidate rows",
+      "passed": true
+    },
+    {
+      "name": "dark dragging off a held folder does not select it",
+      "passed": true
+    },
+    {
+      "name": "dark keyboard collapse retains visible focus",
+      "passed": true
+    },
+    {
+      "name": "dark pending projection is harmless after teardown",
+      "passed": true
+    },
+    {
+      "name": "dark desktop tab retains held-mouse feedback",
+      "passed": true
+    },
+    {
+      "name": "dark mobile sidebar retains touch feedback",
+      "passed": true
+    }
+  ]
+}

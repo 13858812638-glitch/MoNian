@@ -438,7 +438,9 @@ export class NavigatorCustomization {
 
     finishRender() {
         for (const row of this.rows.keys()) if (!row.isConnected) this.rows.delete(row);
-        this._syncSortControls();
+        // Desktop rows are decorated when created/changed; setSortMode owns
+        // updates to retained grips. Do not restamp the whole tree per branch.
+        if (!this.core?.navigator?.desktopSidebar) this._syncSortControls();
     }
 
     setSortMode(value, scope = null) {

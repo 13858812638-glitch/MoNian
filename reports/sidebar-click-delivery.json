@@ -1,0 +1,25 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Sidebar-Click-Fix-20261021.zip",
+  "bytes": 427674,
+  "sha256": "ec92001df206ecb2443900c1cd04b06173caf83097bc24ffbcc6729fc1c59981",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1747779,
+      "sha256": "634d957232a58cc8ee77cb7cb6793962ec8a277ad49e6c791b0bf1606b410d16"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 263749,
+      "sha256": "ec8bb7b0314d48946a30af5c77d63ca5006602ca85585d227b6f7d9991d57fa4"
+    }
+  ],
+  "sourceParentCommit": "605a463",
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Click-Fix-20261021.zip",
+  "remoteDownloadVerified": false
+}

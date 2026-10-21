@@ -1,3 +1,15 @@
+# 最新候选：桌面侧栏点击与折叠交互（2026-10-21）
+
+下载 [GLS-Sidebar-Click-Fix-20261021.zip](GLS-Sidebar-Click-Fix-20261021.zip)，在 GitHub 文件页点击 Download raw file。
+
+关闭插件，备份并覆盖 `main.js`、`styles.css`，保留原 `manifest.json`、`data.json`，再启用插件。
+
+[说明与验证](../docs/SIDEBAR_CLICK_INTERACTION_20261021.md)。以下旧包用于回退。
+
+当前 ZIP SHA-256：`ec92001df206ecb2443900c1cd04b06173caf83097bc24ffbcc6729fc1c59981`
+
+---
+
 # 最新候选：侧栏弹窗与顶部命令栏（2026-10-21）
 
 下载 [GLS-Sidebar-Popups-Toolbar-20261021.zip](GLS-Sidebar-Popups-Toolbar-20261021.zip)，在 GitHub 文件页点击 Download raw file。

@@ -1,8 +1,8 @@
 {
-  "revision": "2026-10-21-sidebar-popups-and-command-toolbar-candidate",
+  "revision": "2026-10-21-sidebar-click-interaction-candidate",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -105,7 +105,8 @@
     "renderSharedFolderTreePicker",
     "sharedFolderChildren",
     "SearchResultRendererController._isOverscrolling",
-    "navigatorToolbarIcon"
+    "navigatorToolbarIcon",
+    "SharedSearchStateCoordinator"
   ],
   "files": [
     {
@@ -232,13 +233,13 @@
       "file": "src/features/navigator/NavigatorCustomization.js",
       "baseline": "baseline/modular.3-source/features/navigator/NavigatorCustomization.js",
       "before": "3e10a9d5bc687ef6e316b8253e257db8db0a7fd36d9849fe295c153118c46c81",
-      "after": "3a12b92507585c31461fb8f47f50938970cdc566964a55bf4db4319bc50de2b2"
+      "after": "afc383ba01cde664de6124c40c25e5d9aeea164447a802510785ff8cbfdf5502"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
       "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
       "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
-      "after": "aae1fa96edae820cbc09a583b0e5be8fdcf4293c37fe45930740ba882224ede9"
+      "after": "169d4665f2ee3916a08738eee175d051f62662d2969b9410b89b8f69d3af72de"
     },
     {
       "file": "src/features/navigator/toolbar-config.js",
@@ -376,7 +377,7 @@
       "file": "src/styles/styles.css",
       "baseline": "baseline/modular.3-source/styles/styles.css",
       "before": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad",
-      "after": "742f0f181ee1432e1d16d260229601c2eb80d7fe48d9127862b82e4ad542f0e8"
+      "after": "ec8bb7b0314d48946a30af5c77d63ca5006602ca85585d227b6f7d9991d57fa4"
     },
     {
       "file": "src/ui/components/input-controls.js",
@@ -461,6 +462,12 @@
       "baseline": "baseline/modular.3-source/features/results/viewport-geometry-methods.js",
       "before": "758128bd7cd446455dcd90a3cbdf5d9db026ce427e80df565167566cc4131524",
       "after": "89d09c34033618bf37493a1c9ce453edb67fa4cb0bbde191a9ab19c9729e3dd1"
+    },
+    {
+      "file": "src/core/SharedSearchStateCoordinator.js",
+      "baseline": "baseline/modular.3-source/core/SharedSearchStateCoordinator.js",
+      "before": "e5dda84a5c870c85b596e8d9135385645f057714bb64c2f6726b35dbf38c80a8",
+      "after": "b6b67cc712d96fda7ec27703be7c44482c87d1453b7ac242de31ee286752589a"
     }
   ],
   "retiredFiles": [
