@@ -21,5 +21,7 @@
   ],
   "sourceParentCommit": "605a463",
   "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Click-Fix-20261021.zip",
-  "remoteDownloadVerified": false
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "sourceCommit": "427dd2161dd1705403625e8150ccb5ee13be7e09"
 }
