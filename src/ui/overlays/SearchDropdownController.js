@@ -5,6 +5,7 @@ import { createDialogSubmission } from "../dialogs/submission.js";
 import { MOBILE_FRAME_OWNER, mountMobileFrame } from "../mobile/mobile-frame.js";
 import { configureSharedPickerHeader } from "../pickers/picker-header.js";
 import { resolveDropdownViewportBounds } from "./geometry.js";
+import { resolveSidebarPopupBounds } from "./sidebar-popup.js";
 import { markSearchPopupActive, topSearchPopupSurface } from "./popup-order.js";
 import { Notice, Platform } from "obsidian";
 
@@ -226,6 +227,13 @@ export class SearchDropdownController {
 
     _applyFrameLock(panel, frame) {
         if (!panel?.isConnected || !frame) return false;
+        const bounds = resolveSidebarPopupBounds(this.owner);
+        if (bounds) {
+            const width = Math.min(frame.width, bounds.width), height = Math.min(frame.height, bounds.height);
+            frame = { width, height,
+                left: Math.max(bounds.left, Math.min(frame.left, bounds.right - width)),
+                top: Math.max(bounds.top, Math.min(frame.top, bounds.bottom - height)) };
+        }
         const sizes = {
             "--ls-dropdown-width": `${frame.width}px`,
             "--ls-dropdown-height": `${frame.height}px`,
@@ -339,6 +347,10 @@ export class SearchDropdownController {
         const panel = this.panel;
         const anchor = this.anchor;
         if (!owner || !panel?.isConnected || !anchor?.isConnected) return;
+        if (!Platform.isMobile && owner.hostKind === "sidebar" && !owner.containerEl.getClientRects().length) {
+            panel.style.visibility = "hidden";
+            return;
+        }
         // 子 Picker 继承父 Frame；移动端固定尺寸 Picker 首次定位后也保留
         // 同一 Frame，后续 focus / resize / 标题模式更新不再二次计算几何。
         if (!Platform.isMobile && this._frameLock && this._applyFrameLock(panel, this._frameLock)) {
@@ -489,6 +501,11 @@ export class SearchDropdownController {
         const doc = panel.ownerDocument;
         const win = doc.defaultView;
         if (bindGlobalListeners) {
+            const sidebar = !Platform.isMobile && owner.hostKind === "sidebar";
+            const sidebarScroll = event => {
+                if (event.target === doc || owner.containerEl?.contains(event.target)) this._queueReposition();
+            };
+            if (sidebar) doc.addEventListener("scroll", sidebarScroll, true);
             doc.addEventListener("click", this._outsideHandler, true);
             // The parent input outlives this Picker: gate edits without changing
             // its readonly state, which would otherwise survive a forced close.
@@ -509,6 +526,7 @@ export class SearchDropdownController {
             }
             // 清理捕获注册时的文档/窗口，不能在关闭时改去主窗口解绑。
             this._listenersCleanup = () => {
+                if (sidebar) doc.removeEventListener("scroll", sidebarScroll, true);
                 doc.removeEventListener("click", this._outsideHandler, true);
                 input?.removeEventListener("beforeinput", guardInput);
                 doc.removeEventListener("keydown", this._keyHandler, true);
@@ -525,6 +543,7 @@ export class SearchDropdownController {
         if (!Platform.isMobile) {
             this._resizeObserver ??= new win.ResizeObserver(this._positionHandler);
             this._resizeObserver.observe(panel);
+            if (owner.hostKind === "sidebar") this._resizeObserver.observe(owner.containerEl);
         }
         this._positionHandler();
         return panel;

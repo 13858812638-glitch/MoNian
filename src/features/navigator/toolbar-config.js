@@ -100,8 +100,8 @@ export function normalizeNavigatorToolbars(raw) {
 
 export function navigatorToolbarIcon(core, id, fallback, preferences = null) {
     const nav = core?.navigator;
-    if (!nav || nav.layout !== "mobile") return fallback;
-    const context = nav.page === "filters" ? "filters" : core.createFlow?.isCreateView?.() ? "create" : "results";
+    if (!nav || (nav.layout !== "mobile" && !nav.desktopSidebar)) return fallback;
+    const context = nav.desktopSidebar || nav.page === "filters" ? "filters" : core.createFlow?.isCreateView?.() ? "create" : "results";
     const config = preferences || normalizeNavigatorToolbars(core.plugin.settings.navigatorToolbars)[context];
     return resolvePickerIcon(core.plugin, config.icons[id], fallback);
 }

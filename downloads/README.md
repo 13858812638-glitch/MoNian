@@ -1,3 +1,13 @@
+# 最新候选：侧栏弹窗与顶部命令栏（2026-10-21）
+
+下载 [GLS-Sidebar-Popups-Toolbar-20261021.zip](GLS-Sidebar-Popups-Toolbar-20261021.zip)，在 GitHub 文件页点击 Download raw file。
+
+包含之前的性能、调宽与搜索条右置改进，以及本轮侧栏内弹窗定位、子窗边界、顶部命令栏。安装时只覆盖 `main.js`、`styles.css`，保留原配置。
+
+[说明与验证](../docs/SIDEBAR_POPUPS_TOOLBAR_20261021.md) · SHA-256：`51f5d63b5b73eef7596894bc7271a6a74634fe24c7c5a8c111f4ca3afbc6c057`
+
+---
+
 # 桌面侧栏与搜索条右置候选
 
 下载 `GLS-Desktop-Search-Right.zip`（在 GitHub 文件页点击 Download raw file）。

@@ -3962,8 +3962,8 @@
       "../../core/picker-cleanup.js",
       "./desktop-pane.js"
     ],
-    "lines": 1275,
-    "bytes": 76111,
+    "lines": 1285,
+    "bytes": 76832,
     "origins": [
       {
         "id": "SearchNavigatorController",
@@ -4072,7 +4072,7 @@
       "../../utils/preferred-order.js"
     ],
     "lines": 127,
-    "bytes": 7355,
+    "bytes": 7402,
     "origins": [
       {
         "id": "NAVIGATOR_TOOLBAR_CONTEXTS",
@@ -8587,10 +8587,11 @@
       "obsidian",
       "./submission.js",
       "../../utils/dom.js",
-      "./dialog-surface.js"
+      "./dialog-surface.js",
+      "../overlays/sidebar-popup.js"
     ],
-    "lines": 209,
-    "bytes": 9356,
+    "lines": 215,
+    "bytes": 9669,
     "origins": [
       {
         "id": "createDialogSession",
@@ -8844,10 +8845,11 @@
       "../../core/picker-cleanup.js",
       "./popup-order.js",
       "../mobile/mobile-frame.js",
-      "./geometry.js"
+      "./geometry.js",
+      "./sidebar-popup.js"
     ],
-    "lines": 684,
-    "bytes": 31101,
+    "lines": 712,
+    "bytes": 32730,
     "origins": [
       {
         "id": "SearchDropdownController",
@@ -8932,6 +8934,20 @@
         "sha256": "d15d5673e91a7559b67b10fc3c72c38729b793e32aceac6c1baa2611b99f2eae"
       }
     ]
+  },
+  {
+    "file": "src/ui/overlays/sidebar-popup.js",
+    "exports": [
+      "resolveSidebarPopupBounds",
+      "bindSidebarDialogPosition"
+    ],
+    "dependencies": [
+      "obsidian",
+      "./geometry.js"
+    ],
+    "lines": 55,
+    "bytes": 2867,
+    "origins": []
   },
   {
     "file": "src/ui/pickers/count-rail.js",

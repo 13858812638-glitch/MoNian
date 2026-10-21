@@ -1,3 +1,5 @@
+> **2026-10-21 侧栏弹窗与命令栏**：未新增类原型方法。Navigator 原命令栏方法识别 `desktopSidebar` 并复用筛选导航配置；`navigatorToolbarIcon` 沿用该配置。`createDialogSession` 管理 `bindSidebarDialogPosition` 的定位与清理。Dropdown 的 `_applyFrameLock` 对侧栏子窗约束尺寸，`_mountPanel` 增加侧栏滚动/尺寸订阅，`reposition` 在侧栏收起时隐藏其浮层。宿主边界由新增内部函数 `resolveSidebarPopupBounds` 统一判断。
+
 > **桌面搜索条右置补充**：`SearchNavigatorController.constructor` 在初始化时将既有 `.local-search-input-wrap`（含搜索动作按钮）放到结果标题前方；原导航标题仍留在左侧。移动端及缩放过程不重建搜索控件。
 
 > **2026-10-19 桌面侧栏候选更新**：无新增类原型方法。`SearchNavigatorController` 构造器/`destroy` 管理目录缓存失效订阅与桌面分栏的生命周期；`capture`/`restore` 使用现有会话的可选 `navigator.paneWidth`；`resize` 同步分栏；`_section` 在桌面投影有效时直接切换分组显隐；`_cached`/`_renderProjection` 复用物理目录计数和行。`SearchResultRendererController._isOverscrolling` 保留原边界语义，在列表原点提前返回，避免读取布局高度。内部工厂 `src/features/navigator/desktop-pane.js#createDesktopNavigatorPane` 返回 `sync`/`restore`/`destroy`，事件回调、rAF 与指针捕获由此工厂创建和释放。

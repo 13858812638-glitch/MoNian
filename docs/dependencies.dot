@@ -640,4 +640,7 @@ digraph GLS {
   "src/utils/preferred-order.js" -> "src/utils/normalization.js";
   "src/utils/search-text.js" -> "src/utils/dom.js";
   "src/features/navigator/SearchNavigatorController.js" -> "src/features/navigator/desktop-pane.js";
+  "src/ui/dialogs/dialog-session.js" -> "src/ui/overlays/sidebar-popup.js";
+  "src/ui/overlays/SearchDropdownController.js" -> "src/ui/overlays/sidebar-popup.js";
+  "src/ui/overlays/sidebar-popup.js" -> "src/ui/overlays/geometry.js";
 }

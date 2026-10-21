@@ -1,0 +1,504 @@
+{
+  "passed": 40,
+  "failed": 16,
+  "results": [
+    {
+      "name": "sidebar-light command rail above navigation",
+      "passed": false,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": [
+          "collapse",
+          "results",
+          "view",
+          "history",
+          "create"
+        ]
+      }
+    },
+    {
+      "name": "sidebar-light rename-folder within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 339.5546875,
+        "w": 420,
+        "h": 156.890625,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-light create-folder within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 339.5546875,
+        "w": 420,
+        "h": 156.890625,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-light delete-tag within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 373.8515625,
+        "w": 420,
+        "h": 88.296875,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-light appearance within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 754,
+        "y": 336,
+        "w": 292,
+        "h": 164,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-light rename-file within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 351.8515625,
+        "w": 420,
+        "h": 132.296875,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-light folder picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 200,
+        "y": 121,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light tags picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 200,
+        "y": 285,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light property picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 200,
+        "y": 322,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light sort picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 488,
+        "y": 136,
+        "w": 244,
+        "h": 444,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light view picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 284,
+        "y": 96,
+        "w": 300,
+        "h": 620,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light history picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 332,
+        "y": 84,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light file-move picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 284,
+        "y": 96,
+        "w": 400,
+        "h": 242,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light icon picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 284,
+        "y": 90,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-light live dialog follows narrower sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 339.5546875,
+        "w": 420,
+        "h": 156.890625,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-light resize preserves edited input and focus",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sidebar-light Escape closes dialog",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sidebar-light nested picker remains bounded after resize",
+      "passed": false,
+      "evidence": {
+        "inside": false,
+        "w": 284
+      }
+    },
+    {
+      "name": "sidebar-light teardown removes popups",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sidebar-light no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "tab-light has no sidebar command rail",
+      "passed": true,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": []
+      }
+    },
+    {
+      "name": "tab-light no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "window-light has no sidebar command rail",
+      "passed": true,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": []
+      }
+    },
+    {
+      "name": "window-light no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "embedded-light has no sidebar command rail",
+      "passed": true,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": []
+      }
+    },
+    {
+      "name": "embedded-light no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "mobile-light retains bottom command rail",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-light no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "sidebar-dark command rail above navigation",
+      "passed": false,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": [
+          "collapse",
+          "results",
+          "view",
+          "history",
+          "create"
+        ]
+      }
+    },
+    {
+      "name": "sidebar-dark rename-folder within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 339.5546875,
+        "w": 420,
+        "h": 156.890625,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-dark create-folder within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 339.5546875,
+        "w": 420,
+        "h": 156.890625,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-dark delete-tag within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 373.8515625,
+        "w": 420,
+        "h": 88.296875,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-dark appearance within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 754,
+        "y": 336,
+        "w": 292,
+        "h": 164,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-dark rename-file within sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 351.8515625,
+        "w": 420,
+        "h": 132.296875,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-dark folder picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 200,
+        "y": 121,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark tags picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 200,
+        "y": 285,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark property picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 200,
+        "y": 322,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark sort picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 488,
+        "y": 136,
+        "w": 244,
+        "h": 444,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark view picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 284,
+        "y": 96,
+        "w": 300,
+        "h": 620,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark history picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 332,
+        "y": 84,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark file-move picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 284,
+        "y": 96,
+        "w": 400,
+        "h": 242,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark icon picker within sidebar",
+      "passed": true,
+      "evidence": {
+        "x": 284,
+        "y": 90,
+        "w": 400,
+        "h": 560,
+        "inside": true
+      }
+    },
+    {
+      "name": "sidebar-dark live dialog follows narrower sidebar",
+      "passed": false,
+      "evidence": {
+        "x": 690,
+        "y": 339.5546875,
+        "w": 420,
+        "h": 156.890625,
+        "inside": false
+      }
+    },
+    {
+      "name": "sidebar-dark resize preserves edited input and focus",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sidebar-dark Escape closes dialog",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sidebar-dark nested picker remains bounded after resize",
+      "passed": false,
+      "evidence": {
+        "inside": false,
+        "w": 284
+      }
+    },
+    {
+      "name": "sidebar-dark teardown removes popups",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sidebar-dark no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "tab-dark has no sidebar command rail",
+      "passed": true,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": []
+      }
+    },
+    {
+      "name": "tab-dark no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "window-dark has no sidebar command rail",
+      "passed": true,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": []
+      }
+    },
+    {
+      "name": "window-dark no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "embedded-dark has no sidebar command rail",
+      "passed": true,
+      "evidence": {
+        "visible": false,
+        "atTop": false,
+        "buttons": []
+      }
+    },
+    {
+      "name": "embedded-dark no page errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "mobile-dark retains bottom command rail",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile-dark no page errors",
+      "passed": true,
+      "evidence": []
+    }
+  ]
+}

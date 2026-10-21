@@ -1,8 +1,8 @@
 {
-  "revision": "2026-10-19-desktop-navigator-performance-resize-candidate",
+  "revision": "2026-10-21-sidebar-popups-and-command-toolbar-candidate",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -104,7 +104,8 @@
     "normalizeEditableTagValue",
     "renderSharedFolderTreePicker",
     "sharedFolderChildren",
-    "SearchResultRendererController._isOverscrolling"
+    "SearchResultRendererController._isOverscrolling",
+    "navigatorToolbarIcon"
   ],
   "files": [
     {
@@ -237,13 +238,13 @@
       "file": "src/features/navigator/SearchNavigatorController.js",
       "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
       "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
-      "after": "80b78acc23a277bce1735b9ca4f3130684df07b8719c89d1fa2db79d54109409"
+      "after": "aae1fa96edae820cbc09a583b0e5be8fdcf4293c37fe45930740ba882224ede9"
     },
     {
       "file": "src/features/navigator/toolbar-config.js",
       "baseline": "baseline/modular.3-source/features/navigator/toolbar-config.js",
       "before": "895c2f9cd68c923b2483b783de2029888c767118a859621db665c23cb35f5df7",
-      "after": "2d13e87101559e63b142a52987edba8ed8dec08b739590ac26e54a31002e0b68"
+      "after": "bad58f9c22b0eaeba5b3648671ad524016a0a014afded62816da92c486cecbfa"
     },
     {
       "file": "src/features/plugin/content-cache-methods.js",
@@ -375,7 +376,7 @@
       "file": "src/styles/styles.css",
       "baseline": "baseline/modular.3-source/styles/styles.css",
       "before": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad",
-      "after": "3608da6c5764afbbcfd82284db55cdd97c36871787f0378135ffaf04b722d8d6"
+      "after": "742f0f181ee1432e1d16d260229601c2eb80d7fe48d9127862b82e4ad542f0e8"
     },
     {
       "file": "src/ui/components/input-controls.js",
@@ -387,7 +388,7 @@
       "file": "src/ui/dialogs/dialog-session.js",
       "baseline": "baseline/modular.3-source/ui/dialogs/dialog-session.js",
       "before": "c1fc3d78c2f13a9102914b76fe66f2259ebb60ecffbf8636807c08bb36d35758",
-      "after": "0ec332f20538c4aabfe247e37930fcef8cae498f106246edd7001224bd9963e1"
+      "after": "7d9f32e878ad20f2ebb4be90d581b7fc61940ee4ff93727100de23c8115ca2b5"
     },
     {
       "file": "src/ui/hosts/SearchWindowSession.js",
@@ -411,7 +412,7 @@
       "file": "src/ui/overlays/SearchDropdownController.js",
       "baseline": "baseline/modular.3-source/ui/overlays/SearchDropdownController.js",
       "before": "d9520e2d9f9718bde77361f4995cea61172d6b100ce583d060f2afb396f81f22",
-      "after": "dbe31ddb8df4c48ea5e51112b63c1ae7196b24cf165669e0de69f77ca523a9b4"
+      "after": "84ca3b8da1914e162bb756b05be95e998b455331effc71f1bee85cb9db770ec3"
     },
     {
       "file": "src/ui/pickers/folder-picker.js",
@@ -551,6 +552,10 @@
     {
       "file": "src/features/navigator/desktop-pane.js",
       "sha256": "3672c9e97e19e4bdab04a172a096c19cf7dd4c0ec74cc9eb2a648c0aa09963f7"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "sha256": "7700a6f5583843144f2bfc8e0e4c9ef22acea65f23d25521cbb0fd147f5595db"
     }
   ]
 }

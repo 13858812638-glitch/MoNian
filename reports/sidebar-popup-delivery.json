@@ -1,0 +1,11 @@
+{
+  "file": "downloads/GLS-Sidebar-Popups-Toolbar-20261021.zip",
+  "sha256": "51f5d63b5b73eef7596894bc7271a6a74634fe24c7c5a8c111f4ca3afbc6c057",
+  "bytes": 426633,
+  "crc": "PASS",
+  "matchesDist": true,
+  "contains": [
+    "main.js",
+    "styles.css"
+  ]
+}

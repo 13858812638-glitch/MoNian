@@ -787,7 +787,8 @@
   "src/ui/dialogs/dialog-session.js": [
     "src/utils/dom.js",
     "src/ui/dialogs/dialog-surface.js",
-    "src/ui/dialogs/submission.js"
+    "src/ui/dialogs/submission.js",
+    "src/ui/overlays/sidebar-popup.js"
   ],
   "src/ui/dialogs/dialog-surface.js": [
     "src/ui/components/input-controls.js"
@@ -823,12 +824,16 @@
     "src/ui/mobile/mobile-frame.js",
     "src/ui/pickers/picker-header.js",
     "src/ui/overlays/geometry.js",
+    "src/ui/overlays/sidebar-popup.js",
     "src/ui/overlays/popup-order.js"
   ],
   "src/ui/overlays/geometry.js": [
     "src/utils/dom.js"
   ],
   "src/ui/overlays/popup-order.js": [],
+  "src/ui/overlays/sidebar-popup.js": [
+    "src/ui/overlays/geometry.js"
+  ],
   "src/ui/pickers/count-rail.js": [],
   "src/ui/pickers/folder-picker.js": [
     "src/data/folders/folder-tree.js",

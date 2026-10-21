@@ -27,7 +27,7 @@ window.auditCases={
  'toolbar-return-clears-query-and-refreshes-counts':async()=>{await auditQuery('不存在的词甲');await auditReturn('filters');return{pass:C.queryState.raw===''&&C.searchInput.value===''&&C.fullResults.length===6&&C.navigator.sections.get('folder').summary.firstChild?.textContent==='6'&&C.navigator.sections.get('tags').summary.firstChild?.textContent==='6'&&C.propertyFilterRow.hidden,evidence:auditState()};},
  'toolbar-return-keeps-real-filter-not-draft':async()=>{await auditFacet('folder','项目');await auditQuery('不存在的词甲');await auditFacet('folder','资料');await auditReturn('filters');return{pass:C.queryState.raw===''&&C.filterState.folders.has('项目')&&C.activeFilterWrap.textContent.includes('项目')&&!C.activeFilterWrap.textContent.includes('资料')&&C.fullResults.length===2&&C.navigator.sections.get('tags').summary.firstChild?.textContent==='2',evidence:auditState()};},
  'back-route-uses-the-same-query-reset':async()=>{await auditQuery('周报');await auditReturn('back');return{pass:C.queryState.raw===''&&C.navigator.page==='filters'&&C.fullResults.length===6,evidence:auditState()};},
- 'collapse-route-uses-the-same-query-reset':async()=>{await auditQuery('周报');await auditReturn('collapse');return{pass:C.queryState.raw===''&&C.navigator.page==='filters'&&C.fullResults.length===6,evidence:auditState()};},
+ 'collapse-preserves-desktop-search-and-resets-mobile-page':async()=>{await auditQuery('周报');await auditReturn('collapse');const mobile=C.navigator.layout==='mobile';return{pass:mobile?C.queryState.raw===''&&C.navigator.page==='filters'&&C.fullResults.length===6:C.queryState.raw==='周报'&&C.searchInput.value==='周报'&&C.fullResults.length===1,evidence:auditState()};},
  'pending-debounce-cannot-revive-returned-query':async()=>{await auditQuery('周报');C.searchInput.value='鞋垫';C.searchInput.dispatchEvent(new InputEvent('input',{bubbles:true}));await auditReturn('filters');await waitFixture(200);return{pass:C.queryState.raw===''&&C.searchInput.value===''&&!C.searchTimer&&C.fullResults.length===6,evidence:auditState()};},
  'pending-new-word-then-facet-uses-live-input':async()=>{await auditQuery('周报');C.searchInput.value='鞋垫';C.searchInput.dispatchEvent(new InputEvent('input',{bubbles:true}));C._applyFacetSelection('folder','资料');C._onFilterChanged();await waitFixture(240);return{pass:C.queryState.raw==='鞋垫'&&C.searchInput.value==='鞋垫'&&!C.createFlow.isCreateView()&&C.fullResults.length===2,evidence:auditState()};},
  'clear-uses-committed-query-even-if-dom-already-empty':async()=>{await auditQuery('周报');C.searchInput.value='';const cleared=C._clearSearchContext();await waitFixture(90);return{pass:cleared&&C.queryState.raw===''&&C.fullResults.length===6,evidence:{cleared,...auditState()}};},
@@ -37,7 +37,10 @@ window.auditCases={
  'unload-cancels-pending-search-and-projection':async()=>{C.searchInput.value='鞋垫';C.searchInput.dispatchEvent(new InputEvent('input',{bubbles:true}));const old=C;old.destroy();await waitFixture(220);return{pass:old._destroyed&&old.searchTimer===null&&old.navigator===null&&!P.activeSearchCores.has(old),evidence:{destroyed:old._destroyed,timer:old.searchTimer,registered:P.activeSearchCores.has(old)}};}
 };
 window.auditOpenPicker=async function(kind){
- const anchor=C.navigator.tools.get('filters').button;
+ // Desktop navigation stays visible alongside results. Anchor to its actual
+ // section control, not the mobile-only Return button hidden in the top rail.
+ const section=kind.endsWith('folder')?'folder':kind.endsWith('tags')?'tags':'properties';
+ const anchor=C.navigator.layout==='mobile'?C.navigator.tools.get('filters').button:C.navigator.sections.get(section).manage;
  if(kind.startsWith('create-'))await auditQuery('不存在的词甲');
  if(kind.endsWith('folder'))C.facets.showFolderDropdown({anchor});
  else if(kind.endsWith('tags'))C.facets.openTagPicker({anchor});

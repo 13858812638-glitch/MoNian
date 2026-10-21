@@ -1,0 +1,52 @@
+{
+  "host": "Chromium 154 / controlled Obsidian host; not native Obsidian",
+  "sidebar_popup": {
+    "passed": 80,
+    "failed": 0,
+    "non_sidebar_geometry_unchanged": [
+      "tab",
+      "window",
+      "embedded",
+      "mobile"
+    ]
+  },
+  "desktop_navigation": {
+    "passed": 55,
+    "failed": 0
+  },
+  "mobile_sidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "index_retry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "portal_chromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "caret_chromium": {
+    "passed": 36,
+    "failed": 0
+  },
+  "search_conditions": {
+    "passed": 144,
+    "failed": 0,
+    "note": "72 mobile cases from full run + 72 desktop cases rerun with visible section anchors and desktop query-preserving collapse oracle"
+  },
+  "node": {
+    "passed": 251,
+    "failed": 4,
+    "note": "Existing prototype/method snapshot mismatches: BatchMetadataService, NavigatorCustomization, LocalSearchPlugin, v5.2 method snapshot"
+  },
+  "historical_browser_ab": {
+    "passed": 0,
+    "failed": 4,
+    "note": "Initial snapshots differ from the old baseline"
+  },
+  "static_check": "PASS-ENGINEERING",
+  "build": "PASS",
+  "native_devices_verified": false,
+  "webkit_verified": false
+}

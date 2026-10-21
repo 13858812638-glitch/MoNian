@@ -59,6 +59,8 @@ export class SearchNavigatorController {
         this.workspace = workspace;
         this.facets = facets;
         this.main = main;
+        this.desktopSidebar = !Platform.isMobile && core.hostKind === "sidebar";
+        if (this.desktopSidebar) this.root.addClass("has-sidebar-toolbar");
         this.page = "filters";
         this.layout = "stack";
         this.expanded = new Set();
@@ -229,6 +231,7 @@ export class SearchNavigatorController {
     _buildMobileToolbar() {
         const core = this.core;
         this.mobileToolbar = this.root.createDiv({ cls: "local-search-nav-mobile-toolbar", attr: { role: "toolbar", "aria-label": "导航操作" } });
+        if (this.desktopSidebar) this.header.after(this.mobileToolbar);
         this.tools = new Map();
         this.movedTools = [];
         const slot = (id, button) => {
@@ -252,6 +255,10 @@ export class SearchNavigatorController {
             this.movedTools.push({ button, marker, host: slot(id, button) });
         };
         action("search", "search", "搜索文件", () => {
+            if (this.desktopSidebar) {
+                if (this.prepareSearch()) core.searchInput.focus({ preventScroll: true });
+                return;
+            }
             if (this.page === "filters") {
                 if (!this.prepareSearch()) return;
                 this.searchVisible = true;
@@ -264,7 +271,7 @@ export class SearchNavigatorController {
         });
         action("collapse", "chevrons-down-up", "折叠全部导航", () => {
             if (!this.prepareSearch()) return;
-            this.setPage("filters");
+            if (!this.desktopSidebar) this.setPage("filters");
             const ids = this._definitions().map(([id]) => id);
             const allCollapsed = ids.every(id => this.collapsed.has(id));
             for (const id of ids) allCollapsed ? this.collapsed.delete(id) : this.collapsed.add(id);
@@ -279,7 +286,8 @@ export class SearchNavigatorController {
         });
         action("sort-navigation", "list-tree", "侧栏工具", button => {
             if (!this.prepareSearch()) return;
-            this.setPage("filters"); this.openSidebarTools(button);
+            if (!this.desktopSidebar) this.setPage("filters");
+            this.openSidebarTools(button);
         });
         move("sort", core.sorting.pickerBtn);
         action("view", "sliders-horizontal", "视图设置", button => {
@@ -304,17 +312,18 @@ export class SearchNavigatorController {
 
     _placeMobileTools(mobile) {
         for (const { button, marker, host } of this.movedTools) {
-            if (mobile && button.parentElement !== host) host.append(button);
-            else if (!mobile && button.parentNode !== marker.parentNode) marker.after(button);
+            const docked = mobile || (this.desktopSidebar && !host.hidden);
+            if (docked && button.parentElement !== host) host.append(button);
+            else if (!docked && button.parentNode !== marker.parentNode) marker.after(button);
         }
-        this.mobileToolbar.hidden = !mobile;
+        this.mobileToolbar.hidden = !mobile && !this.desktopSidebar;
     }
 
     _syncMobileTools() {
         if (!this.tools) return;
         const core = this.core;
-        const create = this.page === "results" && Boolean(core.createFlow?.isCreateView?.());
-        const filters = this.page === "filters";
+        const create = !this.desktopSidebar && this.page === "results" && Boolean(core.createFlow?.isCreateView?.());
+        const filters = this.desktopSidebar || this.page === "filters";
         const state = filters ? core.createFlow?.searchResultFilterState?.() || core.filterState : core.filterState;
         const context = create ? "create" : filters ? "filters" : "results";
         const preferences = normalizeNavigatorToolbars(core.plugin.settings.navigatorToolbars)[context];
@@ -371,7 +380,8 @@ export class SearchNavigatorController {
                 tool.button.setAttribute("aria-expanded", String(core.dropdown.isOpenFor(tool.button)));
             }
         }
-        this.mobileToolbar.hidden = this.layout !== "mobile" || visible.size === 0;
+        if (this.desktopSidebar) this._placeMobileTools(false);
+        this.mobileToolbar.hidden = (this.layout !== "mobile" && !this.desktopSidebar) || visible.size === 0;
         const timeTool = this.tools.get("time")?.button;
         if (timeTool) timeTool.disabled = !navigatorToolbarActionAvailable("time", context);
         const sidebarTool = this.tools.get("sort-navigation")?.button;
@@ -1267,7 +1277,7 @@ export class SearchNavigatorController {
         this._desktopFolderCounts = null;
         this.customization?.destroy();
         for (const cleanup of this.cleanups.splice(0)) cleanup();
-        this.root.removeClass("local-search-navigator", "is-nav-search-visible", "has-nav-query");
+        this.root.removeClass("local-search-navigator", "is-nav-search-visible", "has-nav-query", "has-sidebar-toolbar");
         for (const key of ["navLayout", "navPage"]) delete this.root.dataset[key];
         this.root.removeAttribute("data-ignore-swipe");
         this.core = null;

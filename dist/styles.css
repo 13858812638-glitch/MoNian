@@ -2223,6 +2223,31 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
     border-inline-end: 1px solid var(--ls-divider);
 }
 .local-search-nav-divider.local-search-resize-handle { display: none; }
+/* Only the native desktop sidebar exposes navigation commands above its tree. */
+.local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 8px;
+    border-bottom: 1px solid var(--ls-divider);
+    background: var(--ls-toolbar-surface);
+}
+.local-search-navigator.has-sidebar-toolbar .local-search-nav-tool-slot {
+    display: flex;
+    flex: 0 0 auto;
+}
+.local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar button.local-search-nav-tool {
+    margin: 0;
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    padding: 0;
+}
+.local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar button.local-search-nav-tool:is(:hover, [aria-pressed="true"], [aria-expanded="true"]) {
+    background: var(--ls-state-active-filter-highlight-bg) !important;
+}
 .local-search-navigator[data-nav-layout="split"] > .local-search-workspace > .local-search-nav-divider {
     display: block;
     position: relative;
@@ -7622,3 +7647,14 @@ body.is-mobile .local-search-metadata-panel .local-search-tag-tree
     font-weight: 600;
 }
 .local-search-nav-actions-picker .local-search-move-tree-row { margin-bottom: 1px; }
+
+/* Instance-scoped portal geometry: other hosts retain the shared Dialog44 frame. */
+body:not(.is-mobile) .local-search-dialog-surface[data-ls-sidebar-dialog] {
+    left: var(--ls-sidebar-dialog-x);
+    top: var(--ls-sidebar-dialog-y);
+    max-width: var(--ls-sidebar-dialog-width);
+    max-height: var(--ls-sidebar-dialog-height);
+}
+body:not(.is-mobile) .local-search-dialog-backdrop[data-ls-sidebar-backdrop] {
+    inset: auto;
+}

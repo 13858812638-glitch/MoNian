@@ -3,6 +3,7 @@
 import { isDomElement } from "../../utils/dom.js";
 import { createSharedDialogSurface } from "./dialog-surface.js";
 import { createDialogSubmission, trapDialogTab } from "./submission.js";
+import { bindSidebarDialogPosition } from "../overlays/sidebar-popup.js";
 import { Notice, Platform } from "obsidian";
 
 
@@ -36,7 +37,7 @@ export function createDialogSession(core, {
         ? focused : null;
     const fallbackFocus = focusOrigin.querySelector("button:not(:disabled)");
     const backdrop = host.createDiv({ cls: `${backdropClass} local-search-dialog-backdrop`.trim() });
-    let dialog = null, submission = null, swipeCleanup = null, settled = false, resolveFinished;
+    let dialog = null, submission = null, swipeCleanup = null, positionCleanup = null, settled = false, resolveFinished;
     const finished = new Promise(resolve => { resolveFinished = resolve; });
     const active = () => !settled && !core._destroyed && dialog?.isConnected && core.containerEl.isConnected;
 
@@ -47,6 +48,8 @@ export function createDialogSession(core, {
         const shouldRestore = restoreFocus && previousFocus && focusOwner.isConnected && !core._destroyed
             && (dialog?.contains(doc.activeElement) || doc.activeElement === doc.body);
         settled = true;
+        positionCleanup?.();
+        positionCleanup = null;
         swipeCleanup?.();
         swipeCleanup = null;
         host.removeEventListener("keydown", trapKeyboard, true);
@@ -89,10 +92,13 @@ export function createDialogSession(core, {
         get busy() { return Boolean(submission?.busy); },
         submit(operation, controls, errorText) { return submission?.submit(operation, controls, errorText) ?? false; },
         setDialog(value) {
+            positionCleanup?.();
+            positionCleanup = null;
             swipeCleanup?.();
             swipeCleanup = null;
             dialog = value;
             if (isDomElement(dialog)) {
+                positionCleanup = bindSidebarDialogPosition(core, dialog, backdrop);
                 submission = createDialogSubmission(dialog, active, () => finish(true),
                     (error, fallback) => new Notice(error?.message || fallback));
                 swipeCleanup = core.plugin?.swipeBack?.register(dialog, {
