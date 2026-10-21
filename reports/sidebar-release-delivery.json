@@ -21,6 +21,7 @@
   ],
   "sourceParentCommit": "c14c3f09f17571ffa4127a9b36a869745cb2b541",
   "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Release-Audit-20261021.zip",
-  "remoteDownloadVerified": false,
-  "remotePayloadMatchesBuild": false
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "sourceCommit": "e2016d8f3c4a6880c263170924c84342283d5be8"
 }
