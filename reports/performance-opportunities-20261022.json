@@ -1,0 +1,3255 @@
+{
+  "baseline": "64449edaaa6847bd52ae0cf2f887c8e58544fd51",
+  "scope": "audit only; production JS/CSS unchanged",
+  "methodology": {
+    "host": "controlled SearchView + Chromium, not native Obsidian",
+    "cpuThrottle": 4,
+    "realMouseClicksPerCase": {
+      "folders": 24,
+      "disclosures": 24
+    },
+    "timing": "uninstrumented production methods; separate instrumented work pass; nested durations must not be summed",
+    "samples": "161 files/11 folders; 2400 files/200 folders"
+  },
+  "inputs": {
+    "subjectSha256": "ea01addcbe30f608e477bfa34dc349bb6c1abb729ff8dcab9a51b704f789e6fa",
+    "cssSha256": "da4d7f9fa63b5707675b46104589fb7530aef364aec3035090dd44e01be039d2",
+    "scriptSha256": "5c2472a6b4f0cd2ee833544b54a2ccdade17f1f7c32286e390842eb59e61dc09"
+  },
+  "runs": [
+    {
+      "name": "current",
+      "cases": [
+        {
+          "files": 161,
+          "cpuThrottle": 4,
+          "timing": {
+            "folder": {
+              "Layout": {
+                "count": 72,
+                "totalMs": 1112.921,
+                "maxMs": 58.201
+              },
+              "UpdateLayoutTree": {
+                "count": 191,
+                "totalMs": 55.67,
+                "maxMs": 2.253
+              },
+              "Paint": {
+                "count": 72,
+                "totalMs": 467.986,
+                "maxMs": 13.773
+              },
+              "FunctionCall": {
+                "count": 747,
+                "totalMs": 887.7810000000001,
+                "maxMs": 67.667
+              },
+              "EventDispatch": {
+                "count": 403,
+                "totalMs": 890.349,
+                "maxMs": 92.941
+              },
+              "layoutInsideClickHandler": 48
+            },
+            "disclosure": {
+              "Layout": {
+                "count": 24,
+                "totalMs": 164.534,
+                "maxMs": 14.585
+              },
+              "UpdateLayoutTree": {
+                "count": 51,
+                "totalMs": 10.909,
+                "maxMs": 1.915
+              },
+              "Paint": {
+                "count": 66,
+                "totalMs": 119.004,
+                "maxMs": 4.853
+              },
+              "FunctionCall": {
+                "count": 648,
+                "totalMs": 99.849,
+                "maxMs": 9.13
+              },
+              "EventDispatch": {
+                "count": 226,
+                "totalMs": 116.674,
+                "maxMs": 11.87
+              },
+              "layoutInsideClickHandler": 0
+            }
+          },
+          "work": {
+            "phases": {
+              "folder": {
+                "facets.renderPinnedPropertyFilters": 24,
+                "renderer._setScrollTop": 24,
+                "core._recomputeCurrentResults": 24,
+                "renderer.renderPage": 24,
+                "renderer._windowSize": 48,
+                "renderer._observeShell": 360,
+                "renderer._syncMountedState": 24,
+                "renderer._mountedShells": 24,
+                "core._notifyStateChange": 24,
+                "nav._renderProjection": 24
+              },
+              "disclosure": {
+                "core._notifyStateChange": 24
+              }
+            },
+            "conditions": {
+              "syncs": 8,
+              "mutations": 28,
+              "removedNodes": 8,
+              "addedNodes": 10,
+              "sameButton": false,
+              "focusedBefore": true,
+              "focusedAfter": false
+            },
+            "folder": [
+              "Folder005"
+            ],
+            "results": 15,
+            "mounted": 15,
+            "cacheSize": 90,
+            "consistent": true
+          },
+          "pageErrors": []
+        },
+        {
+          "files": 2400,
+          "cpuThrottle": 4,
+          "timing": {
+            "folder": {
+              "Layout": {
+                "count": 72,
+                "totalMs": 854.526,
+                "maxMs": 40.893
+              },
+              "UpdateLayoutTree": {
+                "count": 191,
+                "totalMs": 64.875,
+                "maxMs": 2.165
+              },
+              "Paint": {
+                "count": 72,
+                "totalMs": 361.088,
+                "maxMs": 11.679
+              },
+              "FunctionCall": {
+                "count": 756,
+                "totalMs": 886.601,
+                "maxMs": 42.336
+              },
+              "EventDispatch": {
+                "count": 403,
+                "totalMs": 846.732,
+                "maxMs": 57.557
+              },
+              "layoutInsideClickHandler": 48
+            },
+            "disclosure": {
+              "Layout": {
+                "count": 24,
+                "totalMs": 667.259,
+                "maxMs": 64.483
+              },
+              "UpdateLayoutTree": {
+                "count": 51,
+                "totalMs": 14.546,
+                "maxMs": 1.267
+              },
+              "Paint": {
+                "count": 63,
+                "totalMs": 431.19599999999997,
+                "maxMs": 20.074
+              },
+              "FunctionCall": {
+                "count": 648,
+                "totalMs": 79.267,
+                "maxMs": 3.833
+              },
+              "EventDispatch": {
+                "count": 226,
+                "totalMs": 99.801,
+                "maxMs": 4.128
+              },
+              "layoutInsideClickHandler": 0
+            }
+          },
+          "work": {
+            "phases": {
+              "folder": {
+                "facets.renderPinnedPropertyFilters": 24,
+                "renderer._setScrollTop": 24,
+                "core._recomputeCurrentResults": 24,
+                "renderer.renderPage": 24,
+                "renderer._windowSize": 48,
+                "renderer._observeShell": 288,
+                "renderer._syncMountedState": 24,
+                "renderer._mountedShells": 24,
+                "core._notifyStateChange": 24,
+                "nav._renderProjection": 24
+              },
+              "disclosure": {
+                "core._notifyStateChange": 24
+              }
+            },
+            "conditions": {
+              "syncs": 8,
+              "mutations": 28,
+              "removedNodes": 8,
+              "addedNodes": 10,
+              "sameButton": false,
+              "focusedBefore": true,
+              "focusedAfter": false
+            },
+            "folder": [
+              "Folder005"
+            ],
+            "results": 12,
+            "mounted": 12,
+            "cacheSize": 72,
+            "consistent": true
+          },
+          "pageErrors": []
+        }
+      ],
+      "traces": [
+        {
+          "path": "/workspace/opportunities-audit/current/large-trace.json",
+          "sha256": "e89fb2755cabea47469d56f522fa6689af59625d2a5e2d5bc1ee1e36a4e443a0",
+          "bytes": 1880041
+        },
+        {
+          "path": "/workspace/opportunities-audit/current/small-trace.json",
+          "sha256": "bee8dcde7584b36445f32febca028b158d04aa59c05c332e0f20db92c2f8c2ab",
+          "bytes": 1807133
+        }
+      ]
+    },
+    {
+      "name": "repeat",
+      "cases": [
+        {
+          "files": 161,
+          "cpuThrottle": 4,
+          "timing": {
+            "folder": {
+              "Layout": {
+                "count": 72,
+                "totalMs": 935.77,
+                "maxMs": 48.984
+              },
+              "UpdateLayoutTree": {
+                "count": 191,
+                "totalMs": 57.188,
+                "maxMs": 1.865
+              },
+              "Paint": {
+                "count": 72,
+                "totalMs": 411.351,
+                "maxMs": 13.913
+              },
+              "FunctionCall": {
+                "count": 747,
+                "totalMs": 748.085,
+                "maxMs": 59.773
+              },
+              "EventDispatch": {
+                "count": 403,
+                "totalMs": 752.71,
+                "maxMs": 75.326
+              },
+              "layoutInsideClickHandler": 48
+            },
+            "disclosure": {
+              "Layout": {
+                "count": 24,
+                "totalMs": 147.32,
+                "maxMs": 10.103
+              },
+              "UpdateLayoutTree": {
+                "count": 51,
+                "totalMs": 17.495,
+                "maxMs": 2.731
+              },
+              "Paint": {
+                "count": 63,
+                "totalMs": 108.769,
+                "maxMs": 4.193
+              },
+              "FunctionCall": {
+                "count": 648,
+                "totalMs": 70.44,
+                "maxMs": 4.264
+              },
+              "EventDispatch": {
+                "count": 226,
+                "totalMs": 95.278,
+                "maxMs": 5.724
+              },
+              "layoutInsideClickHandler": 0
+            }
+          },
+          "work": {
+            "phases": {
+              "folder": {
+                "facets.renderPinnedPropertyFilters": 24,
+                "renderer._setScrollTop": 24,
+                "core._recomputeCurrentResults": 24,
+                "renderer.renderPage": 24,
+                "renderer._windowSize": 48,
+                "renderer._observeShell": 360,
+                "renderer._syncMountedState": 24,
+                "renderer._mountedShells": 24,
+                "core._notifyStateChange": 24,
+                "nav._renderProjection": 24
+              },
+              "disclosure": {
+                "core._notifyStateChange": 24
+              }
+            },
+            "conditions": {
+              "syncs": 8,
+              "mutations": 28,
+              "removedNodes": 8,
+              "addedNodes": 10,
+              "sameButton": false,
+              "focusedBefore": true,
+              "focusedAfter": false
+            },
+            "folder": [
+              "Folder005"
+            ],
+            "results": 15,
+            "mounted": 15,
+            "cacheSize": 90,
+            "consistent": true,
+            "synchronousLayoutOwners": {
+              "renderer._setScrollTop": 24,
+              "renderer.renderPage": 24,
+              "outside wrapped methods": 23
+            }
+          },
+          "pageErrors": []
+        },
+        {
+          "files": 2400,
+          "cpuThrottle": 4,
+          "timing": {
+            "folder": {
+              "Layout": {
+                "count": 72,
+                "totalMs": 808.134,
+                "maxMs": 36.149
+              },
+              "UpdateLayoutTree": {
+                "count": 191,
+                "totalMs": 53.056,
+                "maxMs": 1.334
+              },
+              "Paint": {
+                "count": 74,
+                "totalMs": 378.955,
+                "maxMs": 13.744
+              },
+              "FunctionCall": {
+                "count": 755,
+                "totalMs": 818.664,
+                "maxMs": 54.935
+              },
+              "EventDispatch": {
+                "count": 403,
+                "totalMs": 797.016,
+                "maxMs": 71.986
+              },
+              "layoutInsideClickHandler": 48
+            },
+            "disclosure": {
+              "Layout": {
+                "count": 24,
+                "totalMs": 622.314,
+                "maxMs": 53.236
+              },
+              "UpdateLayoutTree": {
+                "count": 51,
+                "totalMs": 17.378,
+                "maxMs": 2.375
+              },
+              "Paint": {
+                "count": 66,
+                "totalMs": 398.453,
+                "maxMs": 16.186
+              },
+              "FunctionCall": {
+                "count": 648,
+                "totalMs": 81.34,
+                "maxMs": 8.702
+              },
+              "EventDispatch": {
+                "count": 226,
+                "totalMs": 97.011,
+                "maxMs": 9.459
+              },
+              "layoutInsideClickHandler": 0
+            }
+          },
+          "work": {
+            "phases": {
+              "folder": {
+                "facets.renderPinnedPropertyFilters": 24,
+                "renderer._setScrollTop": 24,
+                "core._recomputeCurrentResults": 24,
+                "renderer.renderPage": 24,
+                "renderer._windowSize": 48,
+                "renderer._observeShell": 288,
+                "renderer._syncMountedState": 24,
+                "renderer._mountedShells": 24,
+                "core._notifyStateChange": 24,
+                "nav._renderProjection": 24
+              },
+              "disclosure": {
+                "core._notifyStateChange": 24
+              }
+            },
+            "conditions": {
+              "syncs": 8,
+              "mutations": 28,
+              "removedNodes": 8,
+              "addedNodes": 10,
+              "sameButton": false,
+              "focusedBefore": true,
+              "focusedAfter": false
+            },
+            "folder": [
+              "Folder005"
+            ],
+            "results": 12,
+            "mounted": 12,
+            "cacheSize": 72,
+            "consistent": true,
+            "synchronousLayoutOwners": {
+              "renderer._setScrollTop": 24,
+              "renderer.renderPage": 24,
+              "outside wrapped methods": 23
+            }
+          },
+          "pageErrors": []
+        }
+      ],
+      "traces": [
+        {
+          "path": "/workspace/opportunities-audit/repeat/large-trace.json",
+          "sha256": "d847fbefbf9c5c1ab4246da3662f4e97054d8e16304ad6022fabe18ed06437d8",
+          "bytes": 1884882
+        },
+        {
+          "path": "/workspace/opportunities-audit/repeat/large-work-trace.json",
+          "sha256": "d0f9c430c901cc612cad7603ba9f441589a4bba2bd8211672b5e615e7c953c20",
+          "bytes": 559807
+        },
+        {
+          "path": "/workspace/opportunities-audit/repeat/small-trace.json",
+          "sha256": "9c5f1062dcf687c594c5f08e09090bfd7a31a66b8b76cdf49e109208b2e6514f",
+          "bytes": 1807405
+        },
+        {
+          "path": "/workspace/opportunities-audit/repeat/small-work-trace.json",
+          "sha256": "98d2943e63b98bd0dfb222cf281824d9d9e71fb511e40ba0bd4c34a46ec7072c",
+          "bytes": 623489
+        }
+      ]
+    },
+    {
+      "name": "verified",
+      "cases": [
+        {
+          "files": 161,
+          "cpuThrottle": 4,
+          "timing": {
+            "folder": {
+              "Layout": {
+                "count": 72,
+                "totalMs": 989.748,
+                "maxMs": 47.909
+              },
+              "UpdateLayoutTree": {
+                "count": 191,
+                "totalMs": 67.106,
+                "maxMs": 1.588
+              },
+              "Paint": {
+                "count": 72,
+                "totalMs": 432.855,
+                "maxMs": 12.807
+              },
+              "FunctionCall": {
+                "count": 747,
+                "totalMs": 761.42,
+                "maxMs": 48.197
+              },
+              "EventDispatch": {
+                "count": 403,
+                "totalMs": 751.014,
+                "maxMs": 68.825
+              },
+              "layoutInsideClickHandler": 48
+            },
+            "disclosure": {
+              "Layout": {
+                "count": 24,
+                "totalMs": 185.255,
+                "maxMs": 14.337
+              },
+              "UpdateLayoutTree": {
+                "count": 51,
+                "totalMs": 12.783,
+                "maxMs": 2.096
+              },
+              "Paint": {
+                "count": 48,
+                "totalMs": 101.336,
+                "maxMs": 4.64
+              },
+              "FunctionCall": {
+                "count": 648,
+                "totalMs": 78.229,
+                "maxMs": 4.411
+              },
+              "EventDispatch": {
+                "count": 226,
+                "totalMs": 104.847,
+                "maxMs": 5.086
+              },
+              "layoutInsideClickHandler": 0
+            }
+          },
+          "work": {
+            "phases": {
+              "folder": {
+                "facets.renderPinnedPropertyFilters": 24,
+                "renderer._setScrollTop": 24,
+                "core._recomputeCurrentResults": 24,
+                "renderer.renderPage": 24,
+                "renderer._windowSize": 48,
+                "renderer._observeShell": 360,
+                "renderer._syncMountedState": 24,
+                "renderer._mountedShells": 24,
+                "core._notifyStateChange": 24,
+                "nav._renderProjection": 24
+              },
+              "disclosure": {
+                "core._notifyStateChange": 24
+              }
+            },
+            "conditions": {
+              "syncs": 8,
+              "mutations": 28,
+              "removedNodes": 8,
+              "addedNodes": 10,
+              "sameButton": false,
+              "focusedBefore": true,
+              "focusedAfter": false
+            },
+            "folder": [
+              "Folder005"
+            ],
+            "results": 15,
+            "mounted": 15,
+            "cacheSize": 90,
+            "consistent": true,
+            "synchronousLayoutOwners": {
+              "renderer._setScrollTop": 24,
+              "renderer.renderPage": 24,
+              "outside wrapped methods": 23
+            }
+          },
+          "pageErrors": []
+        },
+        {
+          "files": 2400,
+          "cpuThrottle": 4,
+          "timing": {
+            "folder": {
+              "Layout": {
+                "count": 72,
+                "totalMs": 820.935,
+                "maxMs": 46.61
+              },
+              "UpdateLayoutTree": {
+                "count": 191,
+                "totalMs": 61.805,
+                "maxMs": 2.308
+              },
+              "Paint": {
+                "count": 72,
+                "totalMs": 371.57099999999997,
+                "maxMs": 10.49
+              },
+              "FunctionCall": {
+                "count": 754,
+                "totalMs": 876.807,
+                "maxMs": 39.548
+              },
+              "EventDispatch": {
+                "count": 403,
+                "totalMs": 840.263,
+                "maxMs": 54.148
+              },
+              "layoutInsideClickHandler": 48
+            },
+            "disclosure": {
+              "Layout": {
+                "count": 24,
+                "totalMs": 653.816,
+                "maxMs": 54.201
+              },
+              "UpdateLayoutTree": {
+                "count": 51,
+                "totalMs": 16.658,
+                "maxMs": 1.16
+              },
+              "Paint": {
+                "count": 66,
+                "totalMs": 452.333,
+                "maxMs": 15.004
+              },
+              "FunctionCall": {
+                "count": 648,
+                "totalMs": 83.465,
+                "maxMs": 4.674
+              },
+              "EventDispatch": {
+                "count": 226,
+                "totalMs": 107.04,
+                "maxMs": 4.791
+              },
+              "layoutInsideClickHandler": 0
+            }
+          },
+          "work": {
+            "phases": {
+              "folder": {
+                "facets.renderPinnedPropertyFilters": 24,
+                "renderer._setScrollTop": 24,
+                "core._recomputeCurrentResults": 24,
+                "renderer.renderPage": 24,
+                "renderer._windowSize": 48,
+                "renderer._observeShell": 288,
+                "renderer._syncMountedState": 24,
+                "renderer._mountedShells": 24,
+                "core._notifyStateChange": 24,
+                "nav._renderProjection": 24
+              },
+              "disclosure": {
+                "core._notifyStateChange": 24
+              }
+            },
+            "conditions": {
+              "syncs": 8,
+              "mutations": 28,
+              "removedNodes": 8,
+              "addedNodes": 10,
+              "sameButton": false,
+              "focusedBefore": true,
+              "focusedAfter": false
+            },
+            "folder": [
+              "Folder005"
+            ],
+            "results": 12,
+            "mounted": 12,
+            "cacheSize": 72,
+            "consistent": true,
+            "synchronousLayoutOwners": {
+              "renderer._setScrollTop": 24,
+              "renderer.renderPage": 24,
+              "outside wrapped methods": 23
+            }
+          },
+          "pageErrors": []
+        }
+      ],
+      "traces": [
+        {
+          "path": "/workspace/opportunities-audit/verified/large-trace.json",
+          "sha256": "0a0cfeca683e39803b2416a64fd4a324ffd31e9ee4050711ff9eb585fffcea99",
+          "bytes": 1867486
+        },
+        {
+          "path": "/workspace/opportunities-audit/verified/large-work-trace.json",
+          "sha256": "57270ddd152fa4ceba7cb1763e3fdbab5770b10211bb0fb6bdb43a6a045dbfa3",
+          "bytes": 570531
+        },
+        {
+          "path": "/workspace/opportunities-audit/verified/small-trace.json",
+          "sha256": "96241fbade66f96ad85337d6af40f42e03e669d09182199e7fc4ac4add1efb31",
+          "bytes": 1788827
+        },
+        {
+          "path": "/workspace/opportunities-audit/verified/small-work-trace.json",
+          "sha256": "f82b34647ab5951562cab052e005dfe3b377450a2378ea1fd78d9bd179536902",
+          "bytes": 621813
+        }
+      ]
+    }
+  ],
+  "conditionContexts": [
+    {
+      "mobile": false,
+      "host": "sidebar",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": false,
+      "sameButton": false
+    },
+    {
+      "mobile": false,
+      "host": "tab",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": false,
+      "sameButton": false
+    },
+    {
+      "mobile": true,
+      "host": "sidebar",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": false,
+      "sameButton": false
+    },
+    {
+      "mobile": true,
+      "host": "tab",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": false,
+      "sameButton": false
+    }
+  ],
+  "sourceAudit": {
+    "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
+    "modules": 153,
+    "sourceFiles": 154,
+    "jsLines": 34800,
+    "jsBytes": 1613014,
+    "cssBytes": 264925,
+    "cssLines": 7685,
+    "cssParseErrors": [],
+    "cssRuleCount": 723,
+    "duplicateSelectorsSameContext": [
+      {
+        "context": [],
+        "selector": ":root",
+        "lines": [
+          1444,
+          7287
+        ]
+      },
+      {
+        "context": [],
+        "selector": ".local-search-navigator .local-search-nav-scroll",
+        "lines": [
+          1905,
+          1926
+        ]
+      },
+      {
+        "context": [],
+        "selector": "body.is-mobile",
+        "lines": [
+          7115,
+          7295
+        ]
+      }
+    ],
+    "duplicatePropertiesSameRule": [
+      {
+        "line": 3571,
+        "selector": ".local-search-results-shell",
+        "property": "overflow",
+        "earlier": 3570
+      }
+    ],
+    "styleSettings": {
+      "sectionName": "本地搜索",
+      "sectionId": "gls-local-search-ui",
+      "headings": 28,
+      "parameters": 143,
+      "duplicateIds": [],
+      "duplicateSectionNamedHeading": [],
+      "missingConsumerCandidates": []
+    },
+    "tokenDefinitionCount": 289,
+    "unconsumedTokenCandidates": [],
+    "resourceReferences": [
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "line": 185,
+        "code": "this.registerEvent(this.app.workspace.on(\"css-change\", () => {"
+      },
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "line": 272,
+        "code": "this.registerEvent(this.app.metadataCache.on(\"changed\", (file) => {"
+      },
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "line": 278,
+        "code": "this.registerEvent(this.app.vault.on(\"create\", (file) => {"
+      },
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "line": 289,
+        "code": "this.registerEvent(this.app.vault.on(\"modify\", (file) => {"
+      },
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "line": 297,
+        "code": "this.registerEvent(this.app.vault.on(\"delete\", (file) => {"
+      },
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "line": 343,
+        "code": "this.registerEvent(this.app.vault.on(\"rename\", (file, oldPath) => {"
+      },
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "line": 354,
+        "code": "this.registerEvent(this.app.workspace.on(\"file-open\", (file) => {"
+      },
+      {
+        "file": "src/core/search/file-actions-methods.js",
+        "line": 224,
+        "code": "surface.dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/core/search/file-actions-methods.js",
+        "line": 225,
+        "code": "surface.dialog.addEventListener(\"click\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "line": 68,
+        "code": "this.searchTimer = setTimeout(() => {"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "line": 78,
+        "code": "this.searchInput.addEventListener(\"compositionstart\", () => {"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "line": 83,
+        "code": "this.searchInput.addEventListener(\"compositionend\", () => {"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "line": 88,
+        "code": "this.searchInput.addEventListener(\"blur\", () => this.plugin.sharedSearchState?.schedule(this));"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "line": 89,
+        "code": "this.searchInput.addEventListener(\"input\", () => this._commitSearchInputValue());"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "line": 91,
+        "code": "this.searchInput.addEventListener(\"keydown\", async (e) => {"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "line": 149,
+        "code": "this.containerEl.addEventListener(\"keydown\", e => {"
+      },
+      {
+        "file": "src/core/search/result-menu-events-methods.js",
+        "line": 109,
+        "code": "this.resultsContainer.addEventListener(\"pointerdown\", evt => {"
+      },
+      {
+        "file": "src/core/search/result-menu-events-methods.js",
+        "line": 126,
+        "code": "this.resultsContainer.addEventListener(\"click\", async evt => {"
+      },
+      {
+        "file": "src/core/search/result-menu-events-methods.js",
+        "line": 245,
+        "code": "this.resultsContainer.addEventListener(\"contextmenu\", evt => {"
+      },
+      {
+        "file": "src/core/search/shell-methods.js",
+        "line": 127,
+        "code": "closeBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/core/search/shell-methods.js",
+        "line": 208,
+        "code": "this.tagFilterBtn.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/core/search/shell-methods.js",
+        "line": 213,
+        "code": "this.propertyFilterBtn.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/core/search/shell-methods.js",
+        "line": 239,
+        "code": "this.folderBtn.addEventListener(\"click\", (e) => {"
+      },
+      {
+        "file": "src/core/search/shell-methods.js",
+        "line": 291,
+        "code": "this.clearFiltersBtn.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/core/search/shell-methods.js",
+        "line": 309,
+        "code": "this.resultsContainer.addEventListener(\"scroll\", e => {"
+      },
+      {
+        "file": "src/features/batch/mutation-flow-methods.js",
+        "line": 231,
+        "code": "cancel.addEventListener(\"click\", () => this.owner.dropdown.close(false));"
+      },
+      {
+        "file": "src/features/batch/mutation-flow-methods.js",
+        "line": 232,
+        "code": "confirm.addEventListener(\"click\", () => onConfirm?.(confirm, cancel));"
+      },
+      {
+        "file": "src/features/batch/property-editor-methods.js",
+        "line": 430,
+        "code": "typeButton.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/batch/property-editor-methods.js",
+        "line": 543,
+        "code": "add.addEventListener(\"click\", commit);"
+      },
+      {
+        "file": "src/features/batch/property-editor-methods.js",
+        "line": 544,
+        "code": "cancel.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/features/batch/property-editor-methods.js",
+        "line": 548,
+        "code": "input.addEventListener(\"keydown\", event => {"
+      },
+      {
+        "file": "src/features/batch/property-editor-methods.js",
+        "line": 672,
+        "code": "add.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/batch/tag-editor-methods.js",
+        "line": 142,
+        "code": "else button.addEventListener(\"click\", () => enterParent(crumb.path));"
+      },
+      {
+        "file": "src/features/batch/tag-editor-methods.js",
+        "line": 346,
+        "code": "search.addEventListener(\"compositionstart\", () => { composing = true; });"
+      },
+      {
+        "file": "src/features/batch/tag-editor-methods.js",
+        "line": 347,
+        "code": "search.addEventListener(\"compositionend\", () => { composing = false; handleSearchInput(); });"
+      },
+      {
+        "file": "src/features/batch/tag-editor-methods.js",
+        "line": 348,
+        "code": "search.addEventListener(\"keydown\", event => {"
+      },
+      {
+        "file": "src/features/create/preview-methods.js",
+        "line": 32,
+        "code": "create.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/create/preview-methods.js",
+        "line": 43,
+        "code": "openCreated.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/features/create/preview-methods.js",
+        "line": 49,
+        "code": "retainCreated.addEventListener(\"click\", () => this.retainPartialFileAndReturn());"
+      },
+      {
+        "file": "src/features/create/preview-methods.js",
+        "line": 67,
+        "code": "field.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/facets/folder-colors-methods.js",
+        "line": 135,
+        "code": "panel.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/features/facets/folder-colors-methods.js",
+        "line": 136,
+        "code": "panel.addEventListener(\"click\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/features/facets/folder-colors-methods.js",
+        "line": 231,
+        "code": "input.addEventListener(\"input\", () => {"
+      },
+      {
+        "file": "src/features/facets/folder-colors-methods.js",
+        "line": 237,
+        "code": "input.addEventListener(\"change\", () => {"
+      },
+      {
+        "file": "src/features/facets/property-picker-methods.js",
+        "line": 952,
+        "code": "chip.addEventListener(\"click\", e => {"
+      },
+      {
+        "file": "src/features/facets/property-picker-methods.js",
+        "line": 988,
+        "code": "keyButton.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/facets/property-picker-methods.js",
+        "line": 1003,
+        "code": "valueButton.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/facets/type-picker-methods.js",
+        "line": 228,
+        "code": "search.addEventListener(\"input\", render);"
+      },
+      {
+        "file": "src/features/facets/type-picker-methods.js",
+        "line": 251,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 48,
+        "code": "this.scroll.addEventListener(\"contextmenu\", this._contextMenu);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 70,
+        "code": "hold.timer = win.setTimeout(() => {"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 93,
+        "code": "this.scroll.addEventListener(\"pointerdown\", this._holdDown, { passive: true });"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 94,
+        "code": "this.scroll.addEventListener(\"pointermove\", this._holdMove, { passive: true });"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 95,
+        "code": "this.scroll.addEventListener(\"pointerup\", this._holdEnd, { passive: true });"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 96,
+        "code": "this.scroll.addEventListener(\"pointercancel\", this._holdEnd, { passive: true });"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 97,
+        "code": "this.scroll.addEventListener(\"scroll\", this._holdScroll, { passive: true });"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 98,
+        "code": "this.scroll.addEventListener(\"click\", this._holdClickGuard, true);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 109,
+        "code": "this.scroll.addEventListener(\"click\", this._actionAnchorClick, true);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 124,
+        "code": "this.scroll.addEventListener(\"click\", this._maintenanceClick, true);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 330,
+        "code": "grip.addEventListener(\"click\", event => { event.preventDefault(); event.stopPropagation(); });"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 331,
+        "code": "grip.addEventListener(\"keydown\", event => {"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 833,
+        "code": "panel.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 834,
+        "code": "panel.addEventListener(\"click\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 869,
+        "code": "input.addEventListener(\"input\", preview);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 871,
+        "code": "input.addEventListener(\"change\", () => {"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 888,
+        "code": "this.scroll.removeEventListener(type, fn);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 889,
+        "code": "this.scroll.removeEventListener(\"click\", this._holdClickGuard, true);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 890,
+        "code": "this.scroll.removeEventListener(\"contextmenu\", this._contextMenu);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 891,
+        "code": "this.scroll.removeEventListener(\"click\", this._actionAnchorClick, true);"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "line": 892,
+        "code": "this.scroll.removeEventListener(\"click\", this._maintenanceClick, true);"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 109,
+        "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 111,
+        "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 162,
+        "code": "this.backButton.addEventListener(\"click\", () => this.back());"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 179,
+        "code": "this.resultsButton.addEventListener(\"click\", () => { if (this.prepareSearch()) this.showResults(); });"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 291,
+        "code": "node.addEventListener(type, fn, options);"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 292,
+        "code": "this.cleanups.push(() => node.removeEventListener(type, fn, options));"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 312,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "line": 925,
+        "code": "manage.addEventListener(\"click\", () => this.openSection(id, manage));"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 43,
+        "code": "if (frame === null) frame = win.requestAnimationFrame(flush);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 47,
+        "code": "if (frame !== null) { win.cancelAnimationFrame(frame); frame = null; }"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 56,
+        "code": "win.removeEventListener(\"pointermove\", move);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 57,
+        "code": "win.removeEventListener(\"pointerup\", up);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 58,
+        "code": "win.removeEventListener(\"pointercancel\", cancel);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 59,
+        "code": "win.removeEventListener(\"blur\", cancel);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 83,
+        "code": "win.addEventListener(\"pointermove\", move);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 84,
+        "code": "win.addEventListener(\"pointerup\", up);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 85,
+        "code": "win.addEventListener(\"pointercancel\", cancel);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 86,
+        "code": "win.addEventListener(\"blur\", cancel);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 105,
+        "code": "divider.addEventListener(\"pointerdown\", down);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 106,
+        "code": "divider.addEventListener(\"lostpointercapture\", cancel);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 107,
+        "code": "divider.addEventListener(\"keydown\", key);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 108,
+        "code": "divider.addEventListener(\"dblclick\", reset);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 121,
+        "code": "divider.removeEventListener(\"pointerdown\", down);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 122,
+        "code": "divider.removeEventListener(\"lostpointercapture\", cancel);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 123,
+        "code": "divider.removeEventListener(\"keydown\", key);"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "line": 124,
+        "code": "divider.removeEventListener(\"dblclick\", reset);"
+      },
+      {
+        "file": "src/features/plugin/content-cache-methods.js",
+        "line": 175,
+        "code": "this._persistTimer = setTimeout(async () => {"
+      },
+      {
+        "file": "src/features/plugin/external-search-methods.js",
+        "line": 216,
+        "code": "host.addEventListener(\"keydown\", containEscape);"
+      },
+      {
+        "file": "src/features/plugin/external-search-methods.js",
+        "line": 221,
+        "code": "host.removeEventListener(\"keydown\", containEscape);"
+      },
+      {
+        "file": "src/features/plugin/index-queue-methods.js",
+        "line": 18,
+        "code": "this._indexRefreshTimer = setTimeout(() => {"
+      },
+      {
+        "file": "src/features/plugin/index-queue-methods.js",
+        "line": 116,
+        "code": "this._indexRetryTimer = setTimeout(() => {"
+      },
+      {
+        "file": "src/features/plugin/index-storage-methods.js",
+        "line": 65,
+        "code": "await new Promise(resolve => setTimeout(resolve, 0));"
+      },
+      {
+        "file": "src/features/plugin/non-markdown-metadata-methods.js",
+        "line": 214,
+        "code": "this._nonMarkdownSaveTimer = setTimeout(() => {"
+      },
+      {
+        "file": "src/features/plugin/notifications-methods.js",
+        "line": 13,
+        "code": "this._activitySaveTimer = setTimeout(() => {"
+      },
+      {
+        "file": "src/features/plugin/recent-history-state-methods.js",
+        "line": 197,
+        "code": "this._metadataHistorySaveTimer = setTimeout(() => {"
+      },
+      {
+        "file": "src/features/plugin/time-cache-methods.js",
+        "line": 107,
+        "code": "this._contentTimePersistTimer = setTimeout(async () => {"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "line": 553,
+        "code": "search.addEventListener(\"input\", render);"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "line": 636,
+        "code": "automatic.addEventListener(\"click\", apply(\"automatic\"));"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "line": 637,
+        "code": "bulkAction.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "line": 690,
+        "code": "single.addEventListener(\"click\", choose(\"single\"));"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "line": 691,
+        "code": "multi.addEventListener(\"click\", choose(\"multi\"));"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "line": 692,
+        "code": "automatic.addEventListener(\"click\", applyVisibility(\"automatic\"));"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "line": 693,
+        "code": "bulkAction.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/search-history-methods.js",
+        "line": 52,
+        "code": "search.addEventListener(\"input\", () => render());"
+      },
+      {
+        "file": "src/features/result-controls/search-history-methods.js",
+        "line": 53,
+        "code": "clearRecent.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/search-history-methods.js",
+        "line": 114,
+        "code": "hit.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/toolbar-methods.js",
+        "line": 58,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/toolbar-methods.js",
+        "line": 76,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/toolbar-methods.js",
+        "line": 88,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/toolbar-methods.js",
+        "line": 108,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "line": 221,
+        "code": "section.toggle.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "line": 400,
+        "code": "view.toggle.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "line": 484,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "line": 512,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "line": 869,
+        "code": "reset.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "line": 897,
+        "code": "const frame = hostWindow(panel).requestAnimationFrame(() => {"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "line": 901,
+        "code": "registerPickerCleanup(panel, () => hostWindow(panel).cancelAnimationFrame(frame));"
+      },
+      {
+        "file": "src/features/results/SearchResultRendererController.js",
+        "line": 66,
+        "code": "if (this._scrollFrame) hostWindow(this.owner?.resultsContainer).cancelAnimationFrame(this._scrollFrame);"
+      },
+      {
+        "file": "src/features/results/card-metadata-methods.js",
+        "line": 173,
+        "code": "button.addEventListener(\"click\", e => {"
+      },
+      {
+        "file": "src/features/results/card-metadata-methods.js",
+        "line": 227,
+        "code": "expand.addEventListener(\"click\", e => {"
+      },
+      {
+        "file": "src/features/results/filter-channels-methods.js",
+        "line": 93,
+        "code": "bestToggle.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/features/results/filter-channels-methods.js",
+        "line": 120,
+        "code": "bodyToggle.addEventListener(\"click\", () => {"
+      },
+      {
+        "file": "src/features/results/filter-channels-methods.js",
+        "line": 160,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/results/filter-channels-methods.js",
+        "line": 283,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/results/result-card-methods.js",
+        "line": 41,
+        "code": "item.addEventListener(\"keydown\", event => {"
+      },
+      {
+        "file": "src/features/results/viewport-geometry-methods.js",
+        "line": 81,
+        "code": "for (const [type, fn] of handlers) container.addEventListener(type, fn, { capture: true, passive: true });"
+      },
+      {
+        "file": "src/features/results/viewport-geometry-methods.js",
+        "line": 83,
+        "code": "for (const [type, fn] of handlers) container.removeEventListener(type, fn, true);"
+      },
+      {
+        "file": "src/features/results/viewport-geometry-methods.js",
+        "line": 119,
+        "code": "this._scrollSettleTimer = win.setTimeout(() => {"
+      },
+      {
+        "file": "src/features/results/viewport-geometry-methods.js",
+        "line": 347,
+        "code": "this._geometrySettleTimer = hostWindow(list).setTimeout(() => {"
+      },
+      {
+        "file": "src/features/results/virtual-window-methods.js",
+        "line": 398,
+        "code": "this._scrollFrame = hostWindow(container).requestAnimationFrame(() => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 86,
+        "code": "this.batchEntryBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 118,
+        "code": "this.externalSubmitBtn.addEventListener(\"click\", () => void this.submitExternalSelection());"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 126,
+        "code": "this.batchSelectToggleBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 132,
+        "code": "this.expandActionsBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 140,
+        "code": "this.tagMetadataBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 146,
+        "code": "this.propertyMetadataBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 152,
+        "code": "this.moveFilesBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 159,
+        "code": "this.deleteFilesBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "line": 171,
+        "code": "this.exitBatchBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/sort/SearchSortController.js",
+        "line": 284,
+        "code": "view.fieldBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/sort/SearchSortController.js",
+        "line": 298,
+        "code": "view.pickerBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/features/sort/SearchSortController.js",
+        "line": 311,
+        "code": "view.directionBtn.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/integrations/SearchWorkspaceCapabilities.js",
+        "line": 16,
+        "code": "node.addEventListener(type, handler, options);"
+      },
+      {
+        "file": "src/integrations/SearchWorkspaceCapabilities.js",
+        "line": 17,
+        "code": "this.cleanups.push(() => node.removeEventListener(type, handler, options));"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 56,
+        "code": "this.list?.addEventListener(\"pointerdown\", this._pointerDown);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 57,
+        "code": "this.list?.addEventListener(\"click\", this._clickCapture, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 114,
+        "code": "win.addEventListener(\"pointermove\", this._move, { passive: false, capture: true });"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 115,
+        "code": "win.addEventListener(\"pointerup\", this._finish, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 116,
+        "code": "win.addEventListener(\"pointercancel\", this._cancel, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 117,
+        "code": "win.addEventListener(\"blur\", this._blur, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 245,
+        "code": "this._raf = win.requestAnimationFrame(tick);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 249,
+        "code": "this._raf = win.requestAnimationFrame(tick);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 261,
+        "code": "session.win.removeEventListener(\"pointermove\", this._move, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 262,
+        "code": "session.win.removeEventListener(\"pointerup\", this._finish, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 263,
+        "code": "session.win.removeEventListener(\"pointercancel\", this._cancel, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 264,
+        "code": "session.win.removeEventListener(\"blur\", this._blur, true);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 268,
+        "code": "if (this._raf) session.win.cancelAnimationFrame(this._raf);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 305,
+        "code": "if (this._raf) this.list?.ownerDocument.defaultView.cancelAnimationFrame(this._raf);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 314,
+        "code": "this.list?.removeEventListener(\"pointerdown\", this._pointerDown);"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "line": 315,
+        "code": "this.list?.removeEventListener(\"click\", this._clickCapture, true);"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 83,
+        "code": "this.ownerDocument.addEventListener("
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 88,
+        "code": "this.ownerDocument.addEventListener("
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 167,
+        "code": "this.ownerDocument?.removeEventListener("
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 172,
+        "code": "this.ownerDocument?.removeEventListener("
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 233,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 400,
+        "code": "row.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 414,
+        "code": "desktopTrigger.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 513,
+        "code": "win.removeEventListener(\"pointermove\", pointerMove, true);"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 514,
+        "code": "win.removeEventListener(\"pointerup\", pointerEnd, true);"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 515,
+        "code": "win.removeEventListener(\"pointercancel\", pointerCancel, true);"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 591,
+        "code": "win.addEventListener(\"pointermove\", pointerMove, { capture: true, passive: false });"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 592,
+        "code": "win.addEventListener(\"pointerup\", pointerEnd, true);"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 593,
+        "code": "win.addEventListener(\"pointercancel\", pointerCancel, true);"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 599,
+        "code": "row.addEventListener(\"pointerdown\", event => {"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 617,
+        "code": "row.addEventListener(\"touchstart\", event => {"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 638,
+        "code": "row.addEventListener(\"touchmove\", event => {"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 650,
+        "code": "row.addEventListener(\"touchend\", event => {"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "line": 658,
+        "code": "row.addEventListener(\"touchcancel\", event => {"
+      },
+      {
+        "file": "src/interactions/swipe-back.js",
+        "line": 76,
+        "code": "if (remaining > 0) { releaseTimer = win.setTimeout(releaseIfIdle, remaining); return; }"
+      },
+      {
+        "file": "src/interactions/swipe-back.js",
+        "line": 86,
+        "code": "win.addEventListener(type, listener, options);"
+      },
+      {
+        "file": "src/interactions/swipe-back.js",
+        "line": 87,
+        "code": "cleanups.push(() => win.removeEventListener(type, listener, options));"
+      },
+      {
+        "file": "src/interactions/swipe-back.js",
+        "line": 176,
+        "code": "if (remaining > 0) { releaseTimer = win.setTimeout(releaseIfIdle, remaining); return; }"
+      },
+      {
+        "file": "src/interactions/swipe-back.js",
+        "line": 179,
+        "code": "win.removeEventListener(\"wheel\", onWheel, true);"
+      },
+      {
+        "file": "src/interactions/swipe-back.js",
+        "line": 253,
+        "code": "win.addEventListener(\"wheel\", onWheel, { capture: true, passive: false });"
+      },
+      {
+        "file": "src/services/IoPool.js",
+        "line": 44,
+        "code": "if (i + batchSize < items.length) await new Promise(resolve => setTimeout(resolve, 0));"
+      },
+      {
+        "file": "src/ui/components/input-controls.js",
+        "line": 97,
+        "code": "surface.addEventListener(\"pointerdown\", onPointerDown);"
+      },
+      {
+        "file": "src/ui/components/input-controls.js",
+        "line": 98,
+        "code": "return () => surface.removeEventListener(\"pointerdown\", onPointerDown);"
+      },
+      {
+        "file": "src/ui/components/property-state.js",
+        "line": 66,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/components/view-composer.js",
+        "line": 113,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 55,
+        "code": "host.removeEventListener(\"keydown\", trapKeyboard, true);"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 84,
+        "code": "host.addEventListener(\"keydown\", trapKeyboard, true);"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 86,
+        "code": "backdrop.addEventListener(\"pointerdown\", swallow);"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 87,
+        "code": "backdrop.addEventListener(\"pointerup\", swallow);"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 88,
+        "code": "backdrop.addEventListener(\"click\", event => { event.preventDefault(); swallow(event); finish(false); });"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 169,
+        "code": "dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 170,
+        "code": "dialog.addEventListener(\"click\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 171,
+        "code": "input.addEventListener(\"keydown\", event => {"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 211,
+        "code": "surface.dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "line": 212,
+        "code": "surface.dialog.addEventListener(\"click\", event => event.stopPropagation());"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-surface.js",
+        "line": 86,
+        "code": "closeButton.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-surface.js",
+        "line": 92,
+        "code": "cancelButton.addEventListener(\"click\", () => finish(false));"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-surface.js",
+        "line": 93,
+        "code": "confirmButton.addEventListener(\"click\", () => finish(true));"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-surface.js",
+        "line": 94,
+        "code": "dialog.addEventListener(\"keydown\", event => {"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 181,
+        "code": "else this._geometrySaveTimer = this._hostWindow().setTimeout(() => {"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 231,
+        "code": "win.removeEventListener(\"pointermove\", onMove, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 232,
+        "code": "win.removeEventListener(\"pointerup\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 233,
+        "code": "win.removeEventListener(\"pointercancel\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 251,
+        "code": "win.addEventListener(\"pointermove\", onMove, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 252,
+        "code": "win.addEventListener(\"pointerup\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 253,
+        "code": "win.addEventListener(\"pointercancel\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 256,
+        "code": "dragHandle.addEventListener(\"pointerdown\", onPointerDown);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 258,
+        "code": "dragHandle.removeEventListener(\"pointerdown\", onPointerDown);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 299,
+        "code": "win.removeEventListener(\"pointermove\", onMove, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 300,
+        "code": "win.removeEventListener(\"pointerup\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 301,
+        "code": "win.removeEventListener(\"pointercancel\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 319,
+        "code": "win.addEventListener(\"pointermove\", onMove, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 320,
+        "code": "win.addEventListener(\"pointerup\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 321,
+        "code": "win.addEventListener(\"pointercancel\", finish, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 324,
+        "code": "resizeHandle.addEventListener(\"pointerdown\", onResizeDown);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 326,
+        "code": "resizeHandle.removeEventListener(\"pointerdown\", onResizeDown);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 337,
+        "code": "win.addEventListener(\"resize\", onWindowResize);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 338,
+        "code": "this._windowResizeCleanup = () => win.removeEventListener(\"resize\", onWindowResize);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 384,
+        "code": "eventRoot.addEventListener(type, blockBackdropDismiss, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 385,
+        "code": "eventRoot.addEventListener(\"click\", closeAfterCommandDockClick, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 389,
+        "code": "eventRoot.removeEventListener(type, blockBackdropDismiss, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 390,
+        "code": "eventRoot.removeEventListener(\"click\", closeAfterCommandDockClick, true);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 408,
+        "code": "if (this._autofocusFrame) this._hostWindow().cancelAnimationFrame(this._autofocusFrame);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 426,
+        "code": "this._autofocusFrame = win.requestAnimationFrame(() => {"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 427,
+        "code": "this._autofocusFrame = win.requestAnimationFrame(() => {"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 456,
+        "code": "this.modalEl.addEventListener(\"contextmenu\", this._contextMenuCloseHandler);"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 522,
+        "code": "this._startupTimer = this._hostWindow().setTimeout(() => {"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 550,
+        "code": "this._startupTimer = this._hostWindow().setTimeout(() => {"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 635,
+        "code": "this.modalEl.removeEventListener("
+      },
+      {
+        "file": "src/ui/mobile/mobile-frame.js",
+        "line": 24,
+        "code": "target.addEventListener(type, handler);"
+      },
+      {
+        "file": "src/ui/mobile/mobile-frame.js",
+        "line": 25,
+        "code": "this.cleanups.push(() => target.removeEventListener(type, handler));"
+      },
+      {
+        "file": "src/ui/mobile/mobile-frame.js",
+        "line": 89,
+        "code": "root.addEventListener(type, handler, true);"
+      },
+      {
+        "file": "src/ui/mobile/mobile-frame.js",
+        "line": 90,
+        "code": "this.cleanups.push(() => root.removeEventListener(type, handler, true));"
+      },
+      {
+        "file": "src/ui/mobile/mobile-frame.js",
+        "line": 137,
+        "code": "this.frame = this.win.requestAnimationFrame(() => {"
+      },
+      {
+        "file": "src/ui/mobile/mobile-frame.js",
+        "line": 205,
+        "code": "if (this.frame) this.win.cancelAnimationFrame(this.frame);"
+      },
+      {
+        "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+        "line": 50,
+        "code": "overlay.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+        "line": 54,
+        "code": "overlay.addEventListener(\"contextmenu\", event => {"
+      },
+      {
+        "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+        "line": 80,
+        "code": "doc.addEventListener(\"keydown\", this._keydownHandler, true);"
+      },
+      {
+        "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+        "line": 105,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+        "line": 126,
+        "code": "this.ownerDocument?.removeEventListener(\"keydown\", this._keydownHandler, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 318,
+        "code": "this._positionFrame = win.requestAnimationFrame(() => {"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 498,
+        "code": "panel.addEventListener(\"contextmenu\", this._contextHandler);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 499,
+        "code": "panel.addEventListener(\"click\", this._clickGuardHandler, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 514,
+        "code": "if (sidebar) doc.addEventListener(\"scroll\", sidebarScroll, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 515,
+        "code": "doc.addEventListener(\"click\", this._outsideHandler, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 520,
+        "code": "input?.addEventListener(\"beforeinput\", guardInput);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 524,
+        "code": "doc.addEventListener(\"keydown\", this._keyHandler, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 529,
+        "code": "win.addEventListener(\"resize\", this._positionHandler);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 530,
+        "code": "win.visualViewport?.addEventListener(\"resize\", this._positionHandler);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 531,
+        "code": "win.visualViewport?.addEventListener(\"scroll\", this._positionHandler);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 535,
+        "code": "if (sidebar) doc.removeEventListener(\"scroll\", sidebarScroll, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 536,
+        "code": "doc.removeEventListener(\"click\", this._outsideHandler, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 537,
+        "code": "input?.removeEventListener(\"beforeinput\", guardInput);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 538,
+        "code": "doc.removeEventListener(\"keydown\", this._keyHandler, true);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 540,
+        "code": "win.removeEventListener(\"resize\", this._positionHandler);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 541,
+        "code": "win.visualViewport?.removeEventListener(\"resize\", this._positionHandler);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 542,
+        "code": "win.visualViewport?.removeEventListener(\"scroll\", this._positionHandler);"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 544,
+        "code": "if (this._positionFrame) win.cancelAnimationFrame(this._positionFrame);"
+      },
+      {
+        "file": "src/ui/overlays/sidebar-popup.js",
+        "line": 40,
+        "code": "if (!disposed && frame === null) frame = win.requestAnimationFrame(sync);"
+      },
+      {
+        "file": "src/ui/overlays/sidebar-popup.js",
+        "line": 46,
+        "code": "win.addEventListener(\"resize\", queue);"
+      },
+      {
+        "file": "src/ui/overlays/sidebar-popup.js",
+        "line": 47,
+        "code": "doc.addEventListener(\"scroll\", scroll, true);"
+      },
+      {
+        "file": "src/ui/overlays/sidebar-popup.js",
+        "line": 51,
+        "code": "if (frame !== null) win.cancelAnimationFrame(frame);"
+      },
+      {
+        "file": "src/ui/overlays/sidebar-popup.js",
+        "line": 53,
+        "code": "win.removeEventListener(\"resize\", queue);"
+      },
+      {
+        "file": "src/ui/overlays/sidebar-popup.js",
+        "line": 54,
+        "code": "doc.removeEventListener(\"scroll\", scroll, true);"
+      },
+      {
+        "file": "src/ui/pickers/count-rail.js",
+        "line": 14,
+        "code": "let frame = view.requestAnimationFrame(() => { frame = null; sync(); });"
+      },
+      {
+        "file": "src/ui/pickers/count-rail.js",
+        "line": 18,
+        "code": "if (frame !== null) view.cancelAnimationFrame(frame);"
+      },
+      {
+        "file": "src/ui/pickers/folder-picker.js",
+        "line": 183,
+        "code": "search.addEventListener(\"input\", () => render());"
+      },
+      {
+        "file": "src/ui/pickers/picker-header.js",
+        "line": 39,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/pickers/picker-shell.js",
+        "line": 18,
+        "code": "if (frame !== null) win.cancelAnimationFrame(frame);"
+      },
+      {
+        "file": "src/ui/pickers/picker-shell.js",
+        "line": 24,
+        "code": "if (frame !== null) win.cancelAnimationFrame(frame);"
+      },
+      {
+        "file": "src/ui/pickers/picker-shell.js",
+        "line": 25,
+        "code": "frame = win.requestAnimationFrame(() => {"
+      },
+      {
+        "file": "src/ui/pickers/picker-shell.js",
+        "line": 101,
+        "code": "search.addEventListener(\"input\", onInput);"
+      },
+      {
+        "file": "src/ui/pickers/selection-mode.js",
+        "line": 170,
+        "code": "confirm?.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/pickers/selection-strip.js",
+        "line": 16,
+        "code": "clearButton.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/pickers/selection-strip.js",
+        "line": 31,
+        "code": "chip.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/pickers/template-picker.js",
+        "line": 164,
+        "code": "search.addEventListener(\"input\", render);"
+      },
+      {
+        "file": "src/ui/pickers/tree-row.js",
+        "line": 114,
+        "code": "iconEl.addEventListener(\"click\", e => {"
+      },
+      {
+        "file": "src/ui/pickers/tree-row.js",
+        "line": 130,
+        "code": "toggle.addEventListener(\"click\", e => {"
+      },
+      {
+        "file": "src/ui/pickers/tree-row.js",
+        "line": 137,
+        "code": "button.addEventListener(\"click\", e => {"
+      },
+      {
+        "file": "src/ui/pickers/tree-row.js",
+        "line": 216,
+        "code": "button.addEventListener(\"click\", event => {"
+      },
+      {
+        "file": "src/ui/settings/LocalSearchSettingTab.js",
+        "line": 147,
+        "code": "input.addEventListener(\"change\", () => void commit());"
+      },
+      {
+        "file": "src/ui/settings/LocalSearchSettingTab.js",
+        "line": 148,
+        "code": "input.addEventListener(\"keydown\", event => {"
+      },
+      {
+        "file": "src/ui/settings/LocalSearchSettingTab.js",
+        "line": 238,
+        "code": "button.addEventListener(\"click\", () => renderModule(module.id));"
+      },
+      {
+        "file": "src/ui/settings/LocalSearchSettingTab.js",
+        "line": 242,
+        "code": "tabs.addEventListener(\"keydown\", event => {"
+      }
+    ],
+    "literalStyleCandidates": [
+      {
+        "file": "src/features/batch/property-editor-methods.js",
+        "line": 387,
+        "code": "row.style.setProperty(\"--ls-move-depth\", \"1\");"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "line": 611,
+        "code": "if (Platform.isMobile && container) container.style.display = \"none\";"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 351,
+        "code": "panel.style.visibility = \"hidden\";"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "line": 473,
+        "code": "panel.style.visibility = \"hidden\";"
+      }
+    ],
+    "notes": [
+      "Selectors are grouped by at-rule context; repeated rules are candidates for ownership review, not proven conflicts.",
+      "Dynamic class/token names and external Style Settings consumers can produce scan false positives.",
+      "DOM-owned listeners may be collected with their element; global listeners require explicit scope cleanup.",
+      "No user theme/CSS snippets/data/manifest were supplied."
+    ],
+    "files": [
+      {
+        "file": "src/core/LocalSearchPlugin.js",
+        "lines": 457,
+        "bytes": 30327,
+        "sha256": "86480cba2ef9e5d56b696d92649be6b90188f408e3c714bd577a6df462d197e5"
+      },
+      {
+        "file": "src/core/SearchCore.js",
+        "lines": 220,
+        "bytes": 13130,
+        "sha256": "5a81dbc84b6441f73824a3edbfa456a5928e06bc7284d45a80b4f51a6573a65d"
+      },
+      {
+        "file": "src/core/SharedSearchStateCoordinator.js",
+        "lines": 213,
+        "bytes": 9780,
+        "sha256": "e02466644be2f2ca17d8d5aadcfe94238c039a0b7d81720ad62eb05bc6819ed2"
+      },
+      {
+        "file": "src/core/compose-class-methods.js",
+        "lines": 30,
+        "bytes": 1580,
+        "sha256": "c850d8abded43f57e6484867c2308a5605daf4c2abb245a5ed83766525795a41"
+      },
+      {
+        "file": "src/core/default-settings.js",
+        "lines": 58,
+        "bytes": 5180,
+        "sha256": "0942191aa8fbdc7631e8b1dceb638f9cff304b4ae0909d78a827ff875ace9c2e"
+      },
+      {
+        "file": "src/core/picker-cleanup.js",
+        "lines": 20,
+        "bytes": 729,
+        "sha256": "d8c9cf43b89bd044ed8e0a3b8624e8b36a7f7e6443dacb5802787e24bcb0676e"
+      },
+      {
+        "file": "src/core/search/file-actions-methods.js",
+        "lines": 359,
+        "bytes": 14229,
+        "sha256": "451fe867533c4f34e3da216855533f36c8c72f753cf2880537b1a51da840df8b"
+      },
+      {
+        "file": "src/core/search/input-and-filters-methods.js",
+        "lines": 533,
+        "bytes": 23503,
+        "sha256": "2989f1dc21fcb519b5f33359d84ee5203db806159a515f83318f5429939c3752"
+      },
+      {
+        "file": "src/core/search/result-menu-events-methods.js",
+        "lines": 269,
+        "bytes": 11710,
+        "sha256": "f368905d6fc1c52d90f5e75e0714c96cb4904f7568e7a6913805f4fad2d15f10"
+      },
+      {
+        "file": "src/core/search/search-and-ranking-methods.js",
+        "lines": 531,
+        "bytes": 22958,
+        "sha256": "eabd50e64aa2dc5214318684ca1376c8a42282eea21e009429c5c800e99f3e5b"
+      },
+      {
+        "file": "src/core/search/session-methods.js",
+        "lines": 129,
+        "bytes": 5816,
+        "sha256": "cead174449ced749446b564fd9510a5182fc8b367898f0693d7440cf6ab9d4a0"
+      },
+      {
+        "file": "src/core/search/shell-methods.js",
+        "lines": 410,
+        "bytes": 18350,
+        "sha256": "379e956d83bd74fe01fd4089207acc321cf6bb2b32ba14424ca7d912d4fdb3c4"
+      },
+      {
+        "file": "src/core/session-values.js",
+        "lines": 35,
+        "bytes": 1064,
+        "sha256": "2b4bdb513c657de375226e4b98c9ff409a126645e213c827e6da9c38524f8e0e"
+      },
+      {
+        "file": "src/core/view-types.js",
+        "lines": 9,
+        "bytes": 345,
+        "sha256": "8a566ec5cc47aeb3226a8ca654d3e98958cbad5fd5a5f028ee13d3099e756fbf"
+      },
+      {
+        "file": "src/data/folders/folder-tree.js",
+        "lines": 181,
+        "bytes": 6861,
+        "sha256": "6a7fb8a7ea7943f904957f6da02c3184b16ed2e9f170f16ad711ff65dc930108"
+      },
+      {
+        "file": "src/data/formats/drawing-content.js",
+        "lines": 158,
+        "bytes": 4623,
+        "sha256": "07f876014877d737cce17441a3b5c6d89532cdd9cac7871518abb93f7bec77ad"
+      },
+      {
+        "file": "src/data/formats/drawing-detection.js",
+        "lines": 21,
+        "bytes": 925,
+        "sha256": "153bfc7c0dc089a31d291f85b39d1cf1eef5b5003eae5c7ef79e042f9ae3bbf8"
+      },
+      {
+        "file": "src/data/formats/file-types.js",
+        "lines": 116,
+        "bytes": 4212,
+        "sha256": "d06cb15c1d5ad746ae98fa2b47bac708c3ef7fe7f9b4b14aa160a471457b30a5"
+      },
+      {
+        "file": "src/data/index/BodyIndex.js",
+        "lines": 32,
+        "bytes": 1347,
+        "sha256": "f9f804e8db76e3b5014ef65cd788384bd93e95afaa9a725358d722748e2c0c7d"
+      },
+      {
+        "file": "src/data/index/index-version.js",
+        "lines": 6,
+        "bytes": 173,
+        "sha256": "bd56a6dd4dcd974a52235cf80bcbb33be046c15d8e6ddc0c5afa273eb7d3843b"
+      },
+      {
+        "file": "src/data/properties/cross-key-transfer.js",
+        "lines": 52,
+        "bytes": 3288,
+        "sha256": "dbf304fee2142cb2fc66f3b53921e63e4ba0d67952fb76be62c816f12a52a1a1"
+      },
+      {
+        "file": "src/data/properties/key-merge.js",
+        "lines": 20,
+        "bytes": 1239,
+        "sha256": "60172e697467fda99a0fff84f658714199df8f66f63fba924666af5d54a6623c"
+      },
+      {
+        "file": "src/data/properties/property-catalog.js",
+        "lines": 117,
+        "bytes": 3833,
+        "sha256": "8cc10a0257684cb480c12650cfafaf27e6af460d7f6b30f86c2fe1539ed7caec"
+      },
+      {
+        "file": "src/data/properties/property-types.js",
+        "lines": 146,
+        "bytes": 6057,
+        "sha256": "3782c276c986c4f0852366e2a3693065413296bcd4f63f7b628244237dcec43d"
+      },
+      {
+        "file": "src/data/properties/property-values.js",
+        "lines": 393,
+        "bytes": 14592,
+        "sha256": "3d62afc259c1af55e2115aabccedaaa249060e9f122762972f4edefbdd4002d6"
+      },
+      {
+        "file": "src/data/properties/raw-mutations.js",
+        "lines": 99,
+        "bytes": 3731,
+        "sha256": "98a3de29d5c26f2ecfd2dac4e551d541958cc3ffd274faa4ae8a493b77562aa7"
+      },
+      {
+        "file": "src/data/tags/tag-tree.js",
+        "lines": 99,
+        "bytes": 3436,
+        "sha256": "97bc25daeb0070467e23cdf109ba4f7f2184f9d5f16834ca5921094f3cab2b3c"
+      },
+      {
+        "file": "src/data/tags/tag-values.js",
+        "lines": 103,
+        "bytes": 3526,
+        "sha256": "967f1d26f98206c4ef965fe9582b9d1ff2f53f8cfa8c2495274906d7287938c2"
+      },
+      {
+        "file": "src/data/time/time-values.js",
+        "lines": 158,
+        "bytes": 6714,
+        "sha256": "915fa65a098e0eba0cad6dab53513142271411d052a0d0125c4b98d9e3f81489"
+      },
+      {
+        "file": "src/features/batch/BatchMetadataController.js",
+        "lines": 31,
+        "bytes": 1420,
+        "sha256": "5b57df2a5d7eee5873ab87c2aabf66e7409eb09e5341a23c3641171bd3adf827"
+      },
+      {
+        "file": "src/features/batch/mutation-flow-methods.js",
+        "lines": 245,
+        "bytes": 10333,
+        "sha256": "3ab0f017d79566691321cd4327959c1a5e2b710936be6a81f17bf56bc87f18a4"
+      },
+      {
+        "file": "src/features/batch/property-editor-methods.js",
+        "lines": 789,
+        "bytes": 38006,
+        "sha256": "cc44dbb7ba6ebeaab2d6fc1a26a9612f0241295e14dbf46ea3629f7552c6483e"
+      },
+      {
+        "file": "src/features/batch/tag-editor-methods.js",
+        "lines": 376,
+        "bytes": 18391,
+        "sha256": "44f69c9aa08e4646ff2992c3cb709d16c933cdda31cb60af2a77ea01d7c55e4b"
+      },
+      {
+        "file": "src/features/batch/tag-hierarchy-compose.js",
+        "lines": 46,
+        "bytes": 1968,
+        "sha256": "5202346afcfbf072c3b9413843ec892fd668ea8f05eac8eaa60e1b53e921a1ef"
+      },
+      {
+        "file": "src/features/create/SearchCreateController.js",
+        "lines": 42,
+        "bytes": 3114,
+        "sha256": "f1449ab13337e6526fdf9c754a990e2524f57f94b6bbeedfe9f59a0534f66de0"
+      },
+      {
+        "file": "src/features/create/create-file-methods.js",
+        "lines": 233,
+        "bytes": 13031,
+        "sha256": "8afc706e7514e1a925df6e51681b6a71faccd0c60479cd727d18ac13b3fe5488"
+      },
+      {
+        "file": "src/features/create/create-model.js",
+        "lines": 92,
+        "bytes": 3542,
+        "sha256": "90ee35857ad8cff0492c123fa3ea9eb71174ba713eeceb824d36ecb499851b8e"
+      },
+      {
+        "file": "src/features/create/draft-and-metadata-methods.js",
+        "lines": 399,
+        "bytes": 17659,
+        "sha256": "70315dec5d2409861c725df2cb69f81fe030663cb6cfdbdd73291ecc1bd3c4e4"
+      },
+      {
+        "file": "src/features/create/input-mode-methods.js",
+        "lines": 342,
+        "bytes": 14585,
+        "sha256": "0145a02f576708d752ca1fd1e7a2b6e6a74781b1c6f12ef1a11e5e729bdf7af4"
+      },
+      {
+        "file": "src/features/create/payload-methods.js",
+        "lines": 263,
+        "bytes": 8692,
+        "sha256": "a6bd5d158f8db6d3f9f88e47b9389f4175443f30e6fddaad2b57279a7e0bdd28"
+      },
+      {
+        "file": "src/features/create/preview-methods.js",
+        "lines": 242,
+        "bytes": 10863,
+        "sha256": "94edfcb0bcdedd73506a9cf86a1aa53d29236cbcec5f6e5d8db57a194efaf31c"
+      },
+      {
+        "file": "src/features/facets/SearchFacetController.js",
+        "lines": 102,
+        "bytes": 5065,
+        "sha256": "8fe1465fd961f60c897b0601d4ad4eb1a20b640f921794cef88a5fc442efd070"
+      },
+      {
+        "file": "src/features/facets/folder-colors-methods.js",
+        "lines": 270,
+        "bytes": 10558,
+        "sha256": "64861ef403d2189f0203255a0a4a3dd2b6dcbf5072544113f76e3e8c727693d1"
+      },
+      {
+        "file": "src/features/facets/folder-picker-methods.js",
+        "lines": 519,
+        "bytes": 22217,
+        "sha256": "eff859cc0cefcee070d1e0649d7b023a479e95b88dca2d9ffce7ea36128754ff"
+      },
+      {
+        "file": "src/features/facets/property-picker-methods.js",
+        "lines": 1093,
+        "bytes": 53370,
+        "sha256": "212e41416c17da0da7a5177a1d01a929dd1575f850b0e77638d192447a855832"
+      },
+      {
+        "file": "src/features/facets/sidebar-maintenance-methods.js",
+        "lines": 278,
+        "bytes": 17589,
+        "sha256": "0019c61b749ea36d85bc9ff0349b7ba25f95b913a5ab420c5fdb13156a9949da"
+      },
+      {
+        "file": "src/features/facets/tag-picker-methods.js",
+        "lines": 549,
+        "bytes": 25039,
+        "sha256": "2fabd924996a6cc299fce8d5f0a66ed946ad884cc8ada37f1fe1039aa5849859"
+      },
+      {
+        "file": "src/features/facets/type-picker-methods.js",
+        "lines": 314,
+        "bytes": 14239,
+        "sha256": "799a42c8869f7b458816771b89384ea3ec269df5c41e19ff00766d44594ed384"
+      },
+      {
+        "file": "src/features/filters/FilterEngine.js",
+        "lines": 83,
+        "bytes": 3991,
+        "sha256": "8c89d6555183cc12bcbb3555885296d4b3327b838c69abf9ac091c6e44eae01c"
+      },
+      {
+        "file": "src/features/filters/filter-state.js",
+        "lines": 334,
+        "bytes": 12971,
+        "sha256": "f09f8ca1797c025b08948fdd8157df2361cafdfdc656f1754e8a52dbc47f33ac"
+      },
+      {
+        "file": "src/features/filters/pool-config.js",
+        "lines": 121,
+        "bytes": 4342,
+        "sha256": "aef9ed41e7647f2fd4d481dd944681e1796746eda8b98922858d67def4e1e75e"
+      },
+      {
+        "file": "src/features/filters/pool-values.js",
+        "lines": 76,
+        "bytes": 2735,
+        "sha256": "c30f825a9670140bc11a12a9c28a37bc20125f53d051b83632d175a96535a634"
+      },
+      {
+        "file": "src/features/folders/exclusions.js",
+        "lines": 89,
+        "bytes": 3718,
+        "sha256": "0ead733e30c3dd3c857547bff375ed4d6c38f676ca5a32791e370930d2e10239"
+      },
+      {
+        "file": "src/features/folders/folder-colors.js",
+        "lines": 63,
+        "bytes": 1821,
+        "sha256": "b830f20f708a5bf8c8b6cd9cb6a8a98ada4c8a62a9b93e2fc9ab48e0972c6b75"
+      },
+      {
+        "file": "src/features/navigator/NavigatorCustomization.js",
+        "lines": 897,
+        "bytes": 56193,
+        "sha256": "85137620e51c720ebfb48d37ecb91ac54676242118afe037b0d1e66a1f077457"
+      },
+      {
+        "file": "src/features/navigator/SearchNavigatorController.js",
+        "lines": 1455,
+        "bytes": 87038,
+        "sha256": "b195df8507745b39740b81f79801ed4d4c64937001dae753064a4d7da21a277a"
+      },
+      {
+        "file": "src/features/navigator/customization-model.js",
+        "lines": 141,
+        "bytes": 8232,
+        "sha256": "fb37df96bf8cfd7021ad345770160b7c42a3eecb50744b031d883e989384de95"
+      },
+      {
+        "file": "src/features/navigator/desktop-pane.js",
+        "lines": 128,
+        "bytes": 6596,
+        "sha256": "6aabd966698dd0bc499a033f20ebf79dd4410366466b39fbadf2ce5f83d5ec31"
+      },
+      {
+        "file": "src/features/navigator/navigation-icon.js",
+        "lines": 15,
+        "bytes": 797,
+        "sha256": "1cab595a8d9f1aa551ae1c241ec3997925d7251ea9abe943a96b05ec59ac2fd7"
+      },
+      {
+        "file": "src/features/navigator/toolbar-config.js",
+        "lines": 127,
+        "bytes": 7402,
+        "sha256": "bad58f9c22b0eaeba5b3648671ad524016a0a014afded62816da92c486cecbfa"
+      },
+      {
+        "file": "src/features/plugin/content-cache-methods.js",
+        "lines": 196,
+        "bytes": 9495,
+        "sha256": "4e22229c1842e9a77ad8556798e78ae56129f6261007737563f1e7c5bf43d96a"
+      },
+      {
+        "file": "src/features/plugin/external-properties-methods.js",
+        "lines": 272,
+        "bytes": 15602,
+        "sha256": "ba1d4f65240d366fdb2a6a5f19acbf4a237599bafc633fb9cd56ba3a176e0d89"
+      },
+      {
+        "file": "src/features/plugin/external-search-methods.js",
+        "lines": 326,
+        "bytes": 15235,
+        "sha256": "7e9ff3392f39bbcbdbad45a7a67add46a13f978e98d3a0b492756c48a6c217df"
+      },
+      {
+        "file": "src/features/plugin/file-command-actions-methods.js",
+        "lines": 100,
+        "bytes": 4446,
+        "sha256": "6bfe962404faa3dfc441cb3b509b0e9c8352abac15c5723b6ffd2aeecd13fe1d"
+      },
+      {
+        "file": "src/features/plugin/file-index-methods.js",
+        "lines": 401,
+        "bytes": 18864,
+        "sha256": "f03270fa3a3e0868f71d47d6476fdd5f1d83caf83387dc71ecbafd1d4f99e690"
+      },
+      {
+        "file": "src/features/plugin/index-queue-methods.js",
+        "lines": 131,
+        "bytes": 5804,
+        "sha256": "d8530ec6eeec8923058033414a7268610887b3a035e16c26a50777238cc9a0d8"
+      },
+      {
+        "file": "src/features/plugin/index-storage-methods.js",
+        "lines": 253,
+        "bytes": 12145,
+        "sha256": "7bf749679650ca198851817bf4b7c44d1cb526e41c028d3ca0ec8eea30054449"
+      },
+      {
+        "file": "src/features/plugin/markdown-write-tracking-methods.js",
+        "lines": 318,
+        "bytes": 19657,
+        "sha256": "0fbe5aa5aab5ceb6a57957a2b1b6e94220a98a7139b0b0b2928910887bdba194"
+      },
+      {
+        "file": "src/features/plugin/metadata-directory-methods.js",
+        "lines": 123,
+        "bytes": 5875,
+        "sha256": "c6a24c728be70c23ed72f6cf3a527d9d363608ac5e27950bf0d7eefab1f6c52d"
+      },
+      {
+        "file": "src/features/plugin/non-markdown-metadata-methods.js",
+        "lines": 342,
+        "bytes": 21296,
+        "sha256": "f6a7fafa9bbc4aa2c728777d4dc4cfac432dc688c9807eed96882f3f978566ad"
+      },
+      {
+        "file": "src/features/plugin/notifications-methods.js",
+        "lines": 115,
+        "bytes": 4315,
+        "sha256": "9c5f3466ce2c8707a3295e9b8975d97fc96717d255840a71e42db7373ca53f67"
+      },
+      {
+        "file": "src/features/plugin/path-lifecycle-methods.js",
+        "lines": 607,
+        "bytes": 24039,
+        "sha256": "de9daea5b7519e5f0f3dfa23da8252fb40774831f5027627154d7aa7fd5c64ee"
+      },
+      {
+        "file": "src/features/plugin/property-catalog-methods.js",
+        "lines": 220,
+        "bytes": 11683,
+        "sha256": "c232ea5d80184017b65e7406a4dee2c72c97922b4c7ad4ac09f62117d54edc83"
+      },
+      {
+        "file": "src/features/plugin/property-maintenance-methods.js",
+        "lines": 604,
+        "bytes": 31299,
+        "sha256": "ca6f6a442aa74d02d9bc622c0ad7a2da6249bd6befa9d2f834d2065e2b95fd60"
+      },
+      {
+        "file": "src/features/plugin/recent-history-state-methods.js",
+        "lines": 232,
+        "bytes": 10676,
+        "sha256": "e0b3589fce7d0f90db0f96da3a4be154768d684934a760eaf68303d7a47a1241"
+      },
+      {
+        "file": "src/features/plugin/search-history-methods.js",
+        "lines": 252,
+        "bytes": 8896,
+        "sha256": "e43dfa600264cc8fb3c447729e0d89230536e04195170dfbfe7b9bc813d97dab"
+      },
+      {
+        "file": "src/features/plugin/settings-storage-methods.js",
+        "lines": 411,
+        "bytes": 17627,
+        "sha256": "2907d25196fab6549a3e5f4d4b5b4d8b2f79f8da208077098b0b939436b03bc0"
+      },
+      {
+        "file": "src/features/plugin/time-cache-methods.js",
+        "lines": 144,
+        "bytes": 5171,
+        "sha256": "8247422fb86742fa96b95ffda788ce5d6aea09fd512c90d7bba54a835719a258"
+      },
+      {
+        "file": "src/features/plugin/tree-maintenance-methods.js",
+        "lines": 351,
+        "bytes": 16475,
+        "sha256": "708936052dc8fcd6e68a015ab7be22d72c242f3860faf731546baee2248b2e9c"
+      },
+      {
+        "file": "src/features/plugin/view-preferences-methods.js",
+        "lines": 282,
+        "bytes": 10581,
+        "sha256": "5e4183860c8f7631a8afee2dc0eefed8a479648a5d1f3f5136d8bddba83f50fd"
+      },
+      {
+        "file": "src/features/plugin/workspace-entry-methods.js",
+        "lines": 87,
+        "bytes": 4193,
+        "sha256": "f93f20fc42f26b237f7c3627c89c4195dcf88bc7574b231ca65992d534cb1482"
+      },
+      {
+        "file": "src/features/result-controls/SearchResultControlsController.js",
+        "lines": 35,
+        "bytes": 2612,
+        "sha256": "0fbe3d15d770aa50829f878b0cc3fad9bb2a7afc7fd9fcab5602cd1070e0f7b8"
+      },
+      {
+        "file": "src/features/result-controls/filter-pool-editor-methods.js",
+        "lines": 789,
+        "bytes": 36216,
+        "sha256": "41d55c673e62e4fd2612f885097cacd6b6c3240879c7213634bc88f9ef5a0925"
+      },
+      {
+        "file": "src/features/result-controls/search-history-methods.js",
+        "lines": 206,
+        "bytes": 9577,
+        "sha256": "390695c0c2bb3314a8f013244fc0d8e36ccb41d7e6d50feb15a38b953be97d69"
+      },
+      {
+        "file": "src/features/result-controls/toolbar-methods.js",
+        "lines": 148,
+        "bytes": 5900,
+        "sha256": "2d248a15eabafa1c2e808ab349eae0e756e887345e10a3f03315e8fdb8628d0b"
+      },
+      {
+        "file": "src/features/result-controls/view-composer-methods.js",
+        "lines": 948,
+        "bytes": 45702,
+        "sha256": "967fab7c9c4b70697090ff8fce069b237cad8911a9d916868502b234fcecc885"
+      },
+      {
+        "file": "src/features/results/SearchResultRendererController.js",
+        "lines": 100,
+        "bytes": 6967,
+        "sha256": "410c17f92854c87db8f75643661467a7e8ebcd4ba15cce1a3f566b1bee3b5385"
+      },
+      {
+        "file": "src/features/results/SparseHeightIndex.js",
+        "lines": 87,
+        "bytes": 3147,
+        "sha256": "d5a1603fbc0c45136633e69cbbd6fac3d9b4dcdd91661f143dd8471b6e21dc68"
+      },
+      {
+        "file": "src/features/results/browse-card-reuse.js",
+        "lines": 89,
+        "bytes": 4411,
+        "sha256": "682d910b093c278bbfd6653931efe8ccf5452f658e6744973c1e12d97ac4aa77"
+      },
+      {
+        "file": "src/features/results/card-metadata-methods.js",
+        "lines": 347,
+        "bytes": 15887,
+        "sha256": "2e8f5a2070ac65acb9e8dd6d014dbec2e73526cc4d516cdadbd104cdaf4fc4b7"
+      },
+      {
+        "file": "src/features/results/filter-channels-methods.js",
+        "lines": 312,
+        "bytes": 14842,
+        "sha256": "bfeb27fcd1b1ab6b841ee040a3c0911dc032a7cdf58b221c605e8c9350c19e29"
+      },
+      {
+        "file": "src/features/results/page-and-snippets-methods.js",
+        "lines": 294,
+        "bytes": 15190,
+        "sha256": "361d3e38803d5e790c1550c1143f06106aec5cdf9132826e37dad0867c919a48"
+      },
+      {
+        "file": "src/features/results/result-card-methods.js",
+        "lines": 208,
+        "bytes": 9822,
+        "sha256": "8a36a7b91d0f82cc2b962ef4d6591344e74fd3cc233836cf99c67484a6ab390c"
+      },
+      {
+        "file": "src/features/results/view-config.js",
+        "lines": 166,
+        "bytes": 5756,
+        "sha256": "4b86e8faa8dcb2e9e0860f69c1021edd1a66e6535f65ea65601b1196733547b0"
+      },
+      {
+        "file": "src/features/results/viewport-anchors-methods.js",
+        "lines": 397,
+        "bytes": 18130,
+        "sha256": "2db93f1a744d7f39c66ff585b4625ccade4cc91bc7c5ad5c07f1d8af48858830"
+      },
+      {
+        "file": "src/features/results/viewport-geometry-methods.js",
+        "lines": 445,
+        "bytes": 18690,
+        "sha256": "89d09c34033618bf37493a1c9ce453edb67fa4cb0bbde191a9ab19c9729e3dd1"
+      },
+      {
+        "file": "src/features/results/virtual-window-methods.js",
+        "lines": 460,
+        "bytes": 20715,
+        "sha256": "c30f1716ecdb2ed51ff24fc937348bb33fa8475dbb5ce4e913643bf6d365267d"
+      },
+      {
+        "file": "src/features/results/virtualization-config.js",
+        "lines": 51,
+        "bytes": 2106,
+        "sha256": "3828f9ffc5540fa87620532e79403681d8f3400942a337c7986fa601226f24ee"
+      },
+      {
+        "file": "src/features/search/QueryState.js",
+        "lines": 19,
+        "bytes": 679,
+        "sha256": "2eb6e904fbcbc583b5eadc892e69e8a5f401ca8a90f512819cbddcb3d466ab94"
+      },
+      {
+        "file": "src/features/search/ResultRanker.js",
+        "lines": 59,
+        "bytes": 2451,
+        "sha256": "557fdf77628e81ef01f0c29985ab0e68baed673c5077e996ae76676cc1dbc04f"
+      },
+      {
+        "file": "src/features/selection/SearchSelectionController.js",
+        "lines": 543,
+        "bytes": 22904,
+        "sha256": "b4b5e89d816d8ef73b1c31d0414cdb897e1b0a808cb9cc57c319040f01646977"
+      },
+      {
+        "file": "src/features/sort/SearchSortController.js",
+        "lines": 396,
+        "bytes": 17073,
+        "sha256": "9f3f0f6f358e2ff257d84f42a4e7d8d3e798debebc6f7531f6badbd7f96361ab"
+      },
+      {
+        "file": "src/features/sort/sort-model.js",
+        "lines": 106,
+        "bytes": 3642,
+        "sha256": "ef5c681b11037a1d905d14ab11da679c6141508bdb2c5883933dd431fda2b57b"
+      },
+      {
+        "file": "src/integrations/SearchWorkspaceCapabilities.js",
+        "lines": 47,
+        "bytes": 2444,
+        "sha256": "91c9dbcec7f4d5aae65f51eefeb6389769ae00bd1b5bdaf004f0cc7c121b26ef"
+      },
+      {
+        "file": "src/integrations/public-contract.js",
+        "lines": 31,
+        "bytes": 972,
+        "sha256": "09044b6a6f33549d2b607aaea35a308d701035959cd82b8a85a40159ecf97d22"
+      },
+      {
+        "file": "src/interactions/PointerSortCoordinator.js",
+        "lines": 330,
+        "bytes": 12843,
+        "sha256": "ef26ba9152544c50cab40256a7159ed91442c1122e69fe74bcf6a29fff46c451"
+      },
+      {
+        "file": "src/interactions/SwipeActionCoordinator.js",
+        "lines": 679,
+        "bytes": 29113,
+        "sha256": "4e37bd0e3aa33daa6b4516742077b89751cdf3df3d050b126e8dcd342c4f4b29"
+      },
+      {
+        "file": "src/interactions/hover-hints.js",
+        "lines": 129,
+        "bytes": 6639,
+        "sha256": "f4dedef440a4591faca7fc3021b6a473345088304125d848eb4ecdfcc3e98727"
+      },
+      {
+        "file": "src/interactions/scroll-anchor.js",
+        "lines": 120,
+        "bytes": 4141,
+        "sha256": "f1e74df45cc5f119d2cdf5dbe472fb88edbc6757dfa988e46515c4ff386a79f7"
+      },
+      {
+        "file": "src/interactions/sort-feedback.js",
+        "lines": 65,
+        "bytes": 3650,
+        "sha256": "1e6e63aac7e2ebd3e565bc574f73b3b52b8cff47b815a55544f2d9eddd1bc35a"
+      },
+      {
+        "file": "src/interactions/swipe-back.js",
+        "lines": 314,
+        "bytes": 15347,
+        "sha256": "a7de82c6e035163649f70ce23b3c0ce97e8c02001952b72461748570003f1d15"
+      },
+      {
+        "file": "src/main.js",
+        "lines": 2,
+        "bytes": 145,
+        "sha256": "e07a0c92d44c431d72d157ce0e76a82a6098c99ff042af3b54f14448db395433"
+      },
+      {
+        "file": "src/services/BatchMetadataService.js",
+        "lines": 426,
+        "bytes": 19653,
+        "sha256": "5a82955dfcfeebd61d6249c058504ab94d92e4b92be7ab980bcc5544227df34c"
+      },
+      {
+        "file": "src/services/FileOperationService.js",
+        "lines": 285,
+        "bytes": 14268,
+        "sha256": "e2b8e982a563a11fb89565ca45cdaab92deaf6488b7d580d33ed3ec1ad7939f5"
+      },
+      {
+        "file": "src/services/IoPool.js",
+        "lines": 47,
+        "bytes": 1490,
+        "sha256": "f5c1a75e28f192f737e8e85bcbf70a34d65329ed2c86ebe183f75814df950743"
+      },
+      {
+        "file": "src/ui/components/indicator-label.js",
+        "lines": 14,
+        "bytes": 673,
+        "sha256": "5753fd4a6077ec42fa08134a309b42e118bf8f39f312f1976a1e91cb4910f02f"
+      },
+      {
+        "file": "src/ui/components/input-controls.js",
+        "lines": 99,
+        "bytes": 3885,
+        "sha256": "61fbcf0c3a9e7123e2b4d43bcaf5c91f48947f8eddf5224a97d8de9efcf24c4f"
+      },
+      {
+        "file": "src/ui/components/property-state.js",
+        "lines": 75,
+        "bytes": 2561,
+        "sha256": "f933749917e8dbaf71572b4254bb9347d4c91ae5fe08c9fb639a4597a9d2a5ac"
+      },
+      {
+        "file": "src/ui/components/view-composer.js",
+        "lines": 120,
+        "bytes": 3644,
+        "sha256": "154a9708a5f691a72fc340506a4d9a4b17c362f66ad648073263cbaeb9891d5f"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-session.js",
+        "lines": 215,
+        "bytes": 9669,
+        "sha256": "7d9f32e878ad20f2ebb4be90d581b7fc61940ee4ff93727100de23c8115ca2b5"
+      },
+      {
+        "file": "src/ui/dialogs/dialog-surface.js",
+        "lines": 100,
+        "bytes": 3853,
+        "sha256": "d6134d6933f6acbc4db113218c51aedf0cdfd53a717df369674c119ac3f95033"
+      },
+      {
+        "file": "src/ui/dialogs/submission.js",
+        "lines": 65,
+        "bytes": 3312,
+        "sha256": "42a1cead8507a7aebee03a46215d6e26b53b9855fb434748249cf2941cb0770d"
+      },
+      {
+        "file": "src/ui/hosts/SearchWindowSession.js",
+        "lines": 690,
+        "bytes": 29439,
+        "sha256": "60ed2265832e16ebf668ec8de0ee80e93c2a95a6c43f8a75f1556b45d15645cf"
+      },
+      {
+        "file": "src/ui/hosts/modal-host.js",
+        "lines": 56,
+        "bytes": 1561,
+        "sha256": "effd420306f5c50a1ea02e217ab63333c010e01fc999a99d19b5772ae82d2552"
+      },
+      {
+        "file": "src/ui/mobile/mobile-frame.js",
+        "lines": 217,
+        "bytes": 11742,
+        "sha256": "311cc145e77b03cdb2f1f3eecf0f742533acb278a1bf7b2eb8af5f97f458ccc8"
+      },
+      {
+        "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+        "lines": 139,
+        "bytes": 6778,
+        "sha256": "34b0f65e5b3eb5800885facd7abdb75637490c813454bf8f203e3f5176ce85b7"
+      },
+      {
+        "file": "src/ui/overlays/OperationOverlayController.js",
+        "lines": 153,
+        "bytes": 6690,
+        "sha256": "3a1f820acba45f858a1f90be32eb727ccd77ac5c425e67c37c87e33394842ead"
+      },
+      {
+        "file": "src/ui/overlays/SearchDropdownController.js",
+        "lines": 718,
+        "bytes": 33157,
+        "sha256": "dce0d00ce849c2542debe68d7d012f8607a505912c10ca30c18dc3396fdfc219"
+      },
+      {
+        "file": "src/ui/overlays/geometry.js",
+        "lines": 33,
+        "bytes": 2194,
+        "sha256": "64499dcc3faab9f1e69b8e4b27f8f9ccc44e530a18d4047a43e32a142931470f"
+      },
+      {
+        "file": "src/ui/overlays/popup-order.js",
+        "lines": 25,
+        "bytes": 1156,
+        "sha256": "861d048a695d81ce4c861711ce920f993051e6c9d96efa13e0494d370253f836"
+      },
+      {
+        "file": "src/ui/overlays/sidebar-popup.js",
+        "lines": 56,
+        "bytes": 2942,
+        "sha256": "c004e9d7d860e1e809dfa9f014538afa83a7d968edef5effa197911a6bbc434e"
+      },
+      {
+        "file": "src/ui/pickers/count-rail.js",
+        "lines": 21,
+        "bytes": 791,
+        "sha256": "48664d1f8d5fd122db2517f227ea015d56e139e7082eeb59f88b5a306371f9db"
+      },
+      {
+        "file": "src/ui/pickers/folder-picker.js",
+        "lines": 216,
+        "bytes": 8024,
+        "sha256": "767b39e0966d1fe185d43239c6a664b05196593c5931b6bfc146824328d5482d"
+      },
+      {
+        "file": "src/ui/pickers/header-modes.js",
+        "lines": 117,
+        "bytes": 4969,
+        "sha256": "3ba606e38477515868143d011080086b43ad85ea0b21b6036adb68306b4ec497"
+      },
+      {
+        "file": "src/ui/pickers/icon-catalog.js",
+        "lines": 52,
+        "bytes": 2208,
+        "sha256": "556a505276ab62d3e808895a8e150f7958a845bbb5408c28a68812f0267e5670"
+      },
+      {
+        "file": "src/ui/pickers/icon-picker.js",
+        "lines": 82,
+        "bytes": 4559,
+        "sha256": "40336d682771c991d919f5283a44158bf3dff2e70fea69b093ee8e8494317f32"
+      },
+      {
+        "file": "src/ui/pickers/picker-header.js",
+        "lines": 131,
+        "bytes": 3886,
+        "sha256": "00fc6c579ae6afff96158d23b7e60c7509f94f68eb4e547652719b9f2bba120e"
+      },
+      {
+        "file": "src/ui/pickers/picker-shell.js",
+        "lines": 140,
+        "bytes": 5350,
+        "sha256": "e9d390f48d1b167afddac9b0afb8072a5ad623b46595b96816b2f88669522be3"
+      },
+      {
+        "file": "src/ui/pickers/selection-mode.js",
+        "lines": 193,
+        "bytes": 6456,
+        "sha256": "633e993aeb55b74fe4e951195092e4dc9fd7f893871af9cc532bd2f46c0d3692"
+      },
+      {
+        "file": "src/ui/pickers/selection-strip.js",
+        "lines": 95,
+        "bytes": 4203,
+        "sha256": "2cd9c926d48770a044c9522bb8a2eb8a7f5dd251968e7b0c359ae209f511499d"
+      },
+      {
+        "file": "src/ui/pickers/sort-mode.js",
+        "lines": 86,
+        "bytes": 2647,
+        "sha256": "c99f06c6a9520e7076d6b35cd5d643226e4e6f5cdc76bdfbf6764409b27f66ab"
+      },
+      {
+        "file": "src/ui/pickers/template-picker.js",
+        "lines": 167,
+        "bytes": 6284,
+        "sha256": "edecb2244b8c4f3dc8d2c955d9ff517c9ef72bcf6492f55790fba9dc816b1de8"
+      },
+      {
+        "file": "src/ui/pickers/tree-row.js",
+        "lines": 222,
+        "bytes": 8335,
+        "sha256": "0641d8d88046195dfad37f549d82a8349817c685a6cd941634e3232a6766d185"
+      },
+      {
+        "file": "src/ui/settings/LocalSearchSettingTab.js",
+        "lines": 267,
+        "bytes": 14051,
+        "sha256": "99608552b197e83d7aa45742e45981f9679cbe0ab6e7eb639f305bdc6f74f8e1"
+      },
+      {
+        "file": "src/ui/settings/setting-row.js",
+        "lines": 73,
+        "bytes": 2920,
+        "sha256": "6a394d1311db71d485fb06ba84dd82e2c890c2a07ee8f1f7a71c47ee7359cd0c"
+      },
+      {
+        "file": "src/ui/views/SearchView.js",
+        "lines": 207,
+        "bytes": 10174,
+        "sha256": "5451e1df7407244fe9aad098cc004c4a61d5514a532805329295b1a957b5c198"
+      },
+      {
+        "file": "src/utils/dom.js",
+        "lines": 76,
+        "bytes": 2544,
+        "sha256": "b05cd740147f90342a51d6b15a8ea48c6de2d6a5c6af5ed23f2d80be7c76a864"
+      },
+      {
+        "file": "src/utils/markdown-text.js",
+        "lines": 230,
+        "bytes": 9826,
+        "sha256": "3622c599d0e2abc7acf0a86ed62a7c9b3ded5fe4311d0fd0fe5deab9a250ff5a"
+      },
+      {
+        "file": "src/utils/normalization.js",
+        "lines": 44,
+        "bytes": 1224,
+        "sha256": "29614f719edbbf6c40f0735c01ebde05d256704ecb51d4304e64d9af67a64660"
+      },
+      {
+        "file": "src/utils/preferred-order.js",
+        "lines": 80,
+        "bytes": 3236,
+        "sha256": "a39a3d31e750fc08d6a72c974a069f199291f439835bbd84f8ec044e5701bc81"
+      },
+      {
+        "file": "src/utils/search-text.js",
+        "lines": 307,
+        "bytes": 11466,
+        "sha256": "2cc78e95b1a90eb7bc162774c8a6debd583b0d20e8a06324f49af7cd7196172f"
+      },
+      {
+        "file": "src/utils/tree-match.js",
+        "lines": 14,
+        "bytes": 470,
+        "sha256": "792d46ce713a4268295ae12d126c29df40fb92f2c6a66eedfe4439889ddfb2d9"
+      },
+      {
+        "file": "src/utils/vault-paths.js",
+        "lines": 30,
+        "bytes": 862,
+        "sha256": "d735058a385a4337bcdf98f2936d540ef291ae931b8bce9041801fe810623213"
+      },
+      {
+        "file": "src/styles/styles.css",
+        "lines": 7685,
+        "bytes": 264925,
+        "sha256": "da4d7f9fa63b5707675b46104589fb7530aef364aec3035090dd44e01be039d2"
+      }
+    ],
+    "mobileContract": {
+      "baseHeightToken": true,
+      "keyboardHeightToken": true,
+      "note": "Presence is an inventory check, not a native keyboard/layout acceptance test."
+    }
+  },
+  "validation": {
+    "engineering": "PASS-ENGINEERING",
+    "productionDiffEmpty": true,
+    "browserAuditExit": 0,
+    "firstExpandedFixtureFailure": {
+      "log": "/workspace/opportunities-audit/final.log",
+      "reason": "Tab does not necessarily create Navigator; corrected fixture to use shared _selectBrowseFolder → _onFilterChanged; production unchanged"
+    },
+    "nativeObsidian": "not run",
+    "iOS": "not run",
+    "Android": "not run",
+    "WebKit": "not run",
+    "fullRegressionSuite": "not rerun; no runtime edits"
+  }
+}
