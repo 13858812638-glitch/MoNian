@@ -1,7 +1,7 @@
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 import { logicalFileType } from "../../data/formats/file-types.js";
-import { isDomHTMLElement } from "../../utils/dom.js";
+import { isDomHTMLElement, reconcileDomChildren } from "../../utils/dom.js";
 import { cleanMarkdownForSnippet } from "../../utils/markdown-text.js";
 import { buildSnippetWindow, matchReadableText } from "../../utils/search-text.js";
 import { QueryState } from "../search/QueryState.js";
@@ -218,8 +218,8 @@ export const SearchResultRendererController_page_and_snippets_methods = {
                 }
             }
 
-            // All builders succeeded. Reset the old shelf/observer once, then
-            // submit a complete prepared page in one DOM operation.
+            // All builders succeeded. Commit the ordered node references once;
+            // retained cards stay attached rather than travelling via staging.
             core.swipe?.resetForRender();
             this._rowResizeObserver?.disconnect();
             if (cardReuse) {
@@ -227,8 +227,11 @@ export const SearchResultRendererController_page_and_snippets_methods = {
                 committed = true;
                 cardReuse.commit();
             }
-            rail.replaceChildren(...staging.childNodes);
+            const nextChildren = hasResults
+                ? [nextBeforeSpacer, ...core.resultEls.map(item => item._lsSwipeShell), nextAfterSpacer]
+                : [...staging.childNodes];
             committed = true;
+            reconcileDomChildren(rail, nextChildren);
             this.windowStart = nextStart;
             this.windowEnd = nextEnd;
             this._beforeSpacer = nextBeforeSpacer;
@@ -258,7 +261,7 @@ export const SearchResultRendererController_page_and_snippets_methods = {
             // unsuccessful update retains exactly the old visible children.
             if (committed) {
                 this._rowResizeObserver?.disconnect();
-                rail.replaceChildren(...before.children);
+                reconcileDomChildren(rail, before.children);
                 for (const shell of rail.querySelectorAll(":scope > .local-search-swipe-shell")) {
                     this._observeShell(shell, Number.parseInt(shell.dataset.virtualPosition || "", 10));
                 }

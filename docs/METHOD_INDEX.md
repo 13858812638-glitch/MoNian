@@ -1,3 +1,5 @@
+> **2026-10-22 整合归一**：退休 Navigator `_propertyStats`（无生产调用）；属性值目录与计数统一由 `navigatorPropertyValues` 派生。`_placeProjectionRow` 仅收集有序行，`_finishProjectionRows` 调用 `reconcileDomChildren`，删除旧游标路径。`sync` 持有一个 `_projectionTask`，同步消费/销毁清空任务，已排入微任务通过身份验证退出。全宿主普通浏览共用卡片复用；提交保留已连接节点，失败恢复原页和数组。共享 `setSearchAttribute(node,name,value)` 由 Hover Owner 直接维护辅助标签，`setDomText` 保留标签/图标子节点，`setDomProperty` 跳过同值写入。MobileFrame 只约束本 Frame 内正在编辑的滚动容器；表头/外部焦点释放旧容器，外框保持基准高度。
+
 > **2026-10-22 共享渲染生命周期审计**：`_appendPositionRange(frag,start,end,reuse=null)` 统一索引遍历（原 arity=3 不变），复用事务仅提供 `appendItem`；`_buildResultItem` 只构建，renderPage/虚拟滚动提交/单行替换在节点连接后调用 `_observeShell`。`_fillSnippet` 可接收本次已归一的行数（arity=2 不变）。`resetActiveResultView` 通过配置更新方法提交；相同设置在捕获锚点前返回；共享状态发布者统一确认自己的已应用 revision。
 
 > **2026-10-22 侧栏结果卡工作审计**：`beginBrowseCardReuse(renderer)` 是内部事务工厂，返回 `appendItem/commit/finish/rollback`；`cardContentKey` 和 `reusable` 为内部校验 helper。`renderPage` 在新卡构建成功后才移动复用节点，异常沿用原完整页面回滚。每个 Renderer 最多保留 96 张普通浏览卡，`destroy` 释放。查询、Picker、批量/动作状态和其他宿主继续使用原卡片构建路径；无新增类原型方法。
@@ -3843,14 +3845,6 @@
 
 实例依赖：`_cached`, `core`, `customization`。
 
-### `_propertyStats(key, universe, state)`
-
-归属：`src/features/navigator/SearchNavigatorController.js`；原始行 L20415；种类 method；static=False。
-
-调用：`_cached`。
-
-实例依赖：`_cached`, `core`。
-
 ### `_tree(ref, roots, keyPrefix, row, kind, fixed = null)`
 
 归属：`src/features/navigator/SearchNavigatorController.js`；原始行 L20423；种类 method；static=False。
@@ -3865,15 +3859,15 @@
 
 调用：`_renderProjection`, `_scopeTitle`, `_syncMobileTools`, `setPage`。
 
-实例依赖：`_projectionTimer`, `_renderProjection`, `_scopeTitle`, `_syncMobileTools`, `core`, `layout`, `page`, `renderRevision`, `resultTitle`, `resultsButton`, `root`, `setPage`。
+实例依赖：`_projectionTask`, `_renderProjection`, `_scopeTitle`, `_syncMobileTools`, `core`, `layout`, `page`, `renderRevision`, `resultTitle`, `resultsButton`, `root`, `setPage`。
 
 ### `_renderProjection()`
 
 归属：`src/features/navigator/SearchNavigatorController.js`；原始行 L20471；种类 method；static=False。
 
-调用：`_cached`, `_definitions`, `_finishProjectionRows`, `_more`, `_openProperty`, `_propertyKeys`, `_propertyStats`, `_row`, `_section`, `_separator`, `_tree`, `select`, `sync`, `syncPage`。
+调用：`_cached`, `_definitions`, `_finishProjectionRows`, `_more`, `_openProperty`, `_propertyKeys`, `_row`, `_section`, `_separator`, `_tree`, `select`, `sync`, `syncPage`。
 
-实例依赖：`_cacheRevision`, `_cached`, `_definitions`, `_filterScrollTop`, `_finishProjectionRows`, `_groupSeparators`, `_more`, `_openProperty`, `_projectionCache`, `_propertyKeys`, `_propertyStats`, `_restoreScrollTop`, `_row`, `_section`, `_separator`, `_tree`, `core`, `customization`, `expanded`, `facets`, `layout`, `page`, `renderRevision`, `root`, `scroll`, `sections`, `select`, `sync`, `syncPage`。
+实例依赖：`_cacheRevision`, `_cached`, `_definitions`, `_filterScrollTop`, `_finishProjectionRows`, `_groupSeparators`, `_more`, `_openProperty`, `_projectionCache`, `_propertyKeys`, `_restoreScrollTop`, `_row`, `_section`, `_separator`, `_tree`, `core`, `customization`, `expanded`, `facets`, `layout`, `page`, `renderRevision`, `root`, `scroll`, `sections`, `select`, `sync`, `syncPage`。
 
 ### `destroy()`
 
@@ -3881,7 +3875,7 @@
 
 调用：无直接 this.method 调用。
 
-实例依赖：`_projectionTimer`, `cleanups`, `core`, `customization`, `observer`, `root`。
+实例依赖：`_projectionTask`, `cleanups`, `core`, `customization`, `observer`, `root`。
 
 ## SearchCore
 

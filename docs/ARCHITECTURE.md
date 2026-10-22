@@ -1,3 +1,5 @@
+> **当前整合：2026-10-22 归一版本。** 唯一开发基线 `7fd3f53`，153 个 JS 模块、656 条静态依赖。FilterState / QueryState / Navigator / Renderer / Hover Owner / MobileViewportState 各守原职责；取消平台专属数据缓存、重复标签意图状态和第二条导航提交路径。详见 [整合审计与验证](INTEGRATED_UNIFICATION_20261022.md)。下文保留历史溯源。
+
 > **当前审计：2026-10-22 共享渲染生命周期候选。** 153 个 JS 模块、650 条静态依赖。卡片构建不注册高度监听；提交负责挂载及观察；普通页与缓存页共享区间遍历。当前覆盖与未闭环项见 [全源审计](FULL_AUDIT_20261022.md)。下列旧版本计数与合同按当时背景保留。
 
 # picker-ios-portal.1 当前维护说明

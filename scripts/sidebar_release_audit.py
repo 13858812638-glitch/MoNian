@@ -107,7 +107,7 @@ with sync_playwright() as pw:
             V.containerEl.style.height='100%';V.contentEl.style.height='100%';await V.onOpen();C=V.core;await waitFixture(70);
             restored &&=C.navigator.capture().paneWidth===275&&C.navigator.collapsed.has('tags')&&C.filterState.folders.has('Folder029');
           }
-          return {restored,retired:retired.every(n=>n.core===null&&n.cleanups.length===0&&n._projectionTimer===null),
+          return {restored,retired:retired.every(n=>n.core===null&&n.cleanups.length===0&&n._projectionTask===null),
             roots:document.querySelectorAll('.local-search-navigator').length,pickers:document.querySelectorAll('.local-search-dropdown').length};
         }''')
         check(prefix+'close and reopen preserves session and releases old navigator', result['restored'] and result['retired'] and result['roots']==1 and result['pickers']==0, result)

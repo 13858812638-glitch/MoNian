@@ -19,9 +19,9 @@ test('desktop sidebar mounts visible results with half a viewport of buffer on e
         assert.ok(range.start<=first && range.end>last);
     }
 });
-test('other hosts retain their existing mount size, tall and hidden viewports stay covered', () => {
-    assert.equal(renderer(false)._windowSize(1000),30);
-    assert.equal(renderer(false,0)._windowSize(1000),36);
+test('all hosts share mount size, tall and hidden viewports stay covered', () => {
+    assert.equal(renderer(false)._windowSize(1000),20);
+    assert.equal(renderer(false,0)._windowSize(1000),24);
     for (const sidebar of [true,false]) {
         const r=renderer(sidebar,10000,44);
         assert.ok(r._windowSize(1000)>=Math.ceil(10000/44)+1);

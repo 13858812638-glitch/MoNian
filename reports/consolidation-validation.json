@@ -1,0 +1,237 @@
+{
+  "candidate": "GLS Navigator integrated unification 2026-10-22",
+  "baselineCommit": "7fd3f531f1a2fb991e3fb1ff15a04b4aef56fac7",
+  "scope": "All source/CSS inventoried; integrated shared navigation, node commit, label owner and keyboard scrolling. Native devices not available.",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 153,
+    "importEdges": 656,
+    "cycles": [],
+    "unresolvedSymbols": 0
+  },
+  "build": {
+    "reproducible": true,
+    "sha256": "40a9e980f7cec6c707832bb39d7191383e41e5d4f35eb19c27616e73c24b0e3a"
+  },
+  "node": {
+    "tests": 269,
+    "passed": 265,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "firstGateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "property-count-mobile": 0,
+    "property-count-desktop": 0,
+    "consolidation": 0,
+    "lifecycle": 0,
+    "feishu": 0,
+    "browse": 1,
+    "properties": 0,
+    "rail": 0,
+    "stable": 0,
+    "redundant": 0,
+    "focus": 0,
+    "selection": 0,
+    "tree": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "focus-repair": 0,
+    "contracts": 1,
+    "repeat": 0,
+    "release": 1,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "acceptance-mobile-light": 0,
+    "index": 0,
+    "acceptance-mobile-dark": 0,
+    "portal": 0,
+    "caret": 0,
+    "popups": 0,
+    "workflows": 0
+  },
+  "finalGateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "property-count-mobile": 0,
+    "property-count-desktop": 0,
+    "consolidation": 0,
+    "lifecycle": 0,
+    "feishu": 0,
+    "browse": 0,
+    "properties": 0,
+    "rail": 0,
+    "stable": 0,
+    "redundant": 0,
+    "focus": 0,
+    "selection": 0,
+    "tree": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "focus-repair": 0,
+    "contracts": 0,
+    "repeat": 0,
+    "release": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "acceptance-mobile-light": 0,
+    "index": 0,
+    "acceptance-mobile-dark": 0,
+    "portal": 0,
+    "caret": 0,
+    "popups": 0,
+    "workflows": 0
+  },
+  "firstFailureDisposition": {
+    "node": "Three new failures were obsolete desktop Picker and removed internal _propertyStats expectations; exact approved retirement and shared inline semantics now tested. Four historical parity differences remain.",
+    "browse": "Obsolete desktop-only reuse assertion replaced with shared reuse, no-op builds, lifecycle and real tab identity coverage.",
+    "contracts": "Lazy-row fixture used deleted rowCursor branch; now stages into the sole plannedRows transaction. Lazy getter remains forbidden.",
+    "release": "Teardown assertion renamed from retired _projectionTimer to _projectionTask; all restoration and resource checks retained."
+  },
+  "consolidationBefore": {
+    "passed": 8,
+    "failed": 18
+  },
+  "consolidationAfter": {
+    "passed": 26,
+    "failed": 0
+  },
+  "unverified": [
+    "Native Obsidian desktop performance",
+    "iOS/Android native keyboard and caret",
+    "WebKit",
+    "User vault and real third-party plugin/CSS combination"
+  ],
+  "closedSourceFindings": [
+    "Platform-specific navigation inventory/cache/projection",
+    "Duplicate accessible-label intent caches",
+    "Unconsumed/missing keyboard height contract",
+    "Whole-page detach/reinsert on unchanged browse cards",
+    "Obsolete property-stats and row-cursor paths",
+    "Frame resizing a foreign scrollport or retaining old header-focus scrollport"
+  ],
+  "rawEvidence": "/workspace/consolidation-audit",
+  "lifecycle": {
+    "passed": 14,
+    "failed": 0
+  },
+  "properties": {
+    "passed": 34,
+    "failed": 0
+  },
+  "desktop": {
+    "passed": 55,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mouse": {
+    "passed": 27,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selection": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "repeat": {
+    "passed": 16,
+    "failed": 0
+  },
+  "stable": {
+    "passed": 38,
+    "failed": 0
+  },
+  "redundant": {
+    "passed": 24,
+    "failed": 0
+  },
+  "rail": {
+    "passed": 21,
+    "failed": 0
+  },
+  "browse": {
+    "passed": 24,
+    "failed": 0
+  },
+  "release": {
+    "passed": 32,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0
+  },
+  "feishuComparison": {
+    "passed": 8,
+    "failed": 0
+  },
+  "propertyCountsDesktop": {
+    "passed": 32,
+    "failed": 0
+  },
+  "propertyCountsMobile": {
+    "passed": 32,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "interactionContracts": {
+    "passed": 14,
+    "failed": 0
+  }
+}

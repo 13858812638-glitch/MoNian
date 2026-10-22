@@ -111,14 +111,9 @@ export const SearchResultRendererController_virtual_window_methods = {
         const visibleRows = viewportHeight > 0
             ? Math.max(1, Math.ceil(viewportHeight / estimate) + 1)
             : RESULT_WINDOW_MOUNT_MIN;
-        // Sidebar filter changes rebuild this window synchronously. Half a
-        // viewport on each side keeps scroll headroom without rebuilding two
-        // entire offscreen viewports on every navigation click. Other hosts
-        // retain their existing budget; actual visible spans always win below.
-        const sidebar = Boolean(this.owner?.navigator?.desktopSidebar);
-        const bufferRows = sidebar
-            ? Math.max(Math.ceil(RESULT_WINDOW_BUFFER_MIN / 2), Math.ceil(visibleRows / 2))
-            : Math.max(RESULT_WINDOW_BUFFER_MIN, visibleRows);
+        // The same viewport-driven budget applies to every input/host. Buffer
+        // depends on actual visible rows, never a desktop/mobile business fork.
+        const bufferRows = Math.max(Math.ceil(RESULT_WINDOW_BUFFER_MIN / 2), Math.ceil(visibleRows / 2));
         const desired = visibleRows + bufferRows * 2;
         const bounded = Math.max(
             RESULT_WINDOW_MOUNT_MIN,

@@ -163,13 +163,16 @@ export class MobileFrameController {
             const nextInset = `${inset}px`;
             if (this.root.style.getPropertyValue("--ui-mobile-keyboard-inset") !== nextInset)
                 this.root.style.setProperty("--ui-mobile-keyboard-inset", nextInset);
+            // Preserved frames may lock before focus arrives, but never own
+            // a foreign input or its scrolling ancestors.
+            if (!editing) { this.clearScrollport(); return; }
             let scroller = active.parentElement;
             while (scroller && scroller !== this.root) {
                 if (/(auto|scroll)/.test(this.win.getComputedStyle(scroller).overflowY)) break;
                 scroller = scroller.parentElement;
             }
             // A header input never resizes an unrelated results list.
-            if (!scroller || scroller === this.root) return;
+            if (!scroller || scroller === this.root) { this.clearScrollport(); return; }
             const scrollRect = scroller.getBoundingClientRect();
             const controlRect = active.getBoundingClientRect();
             const gap = Number.parseFloat(this.win.getComputedStyle(this.root).getPropertyValue("--ui-mobile-focus-gap")) || 0;

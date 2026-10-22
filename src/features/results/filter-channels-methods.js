@@ -1,5 +1,7 @@
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
+import { setDomProperty, setDomText } from "../../utils/dom.js";
 import { collectPropertyKeys } from "../../data/properties/property-catalog.js";
 import { setIndicatorLabel } from "../../ui/components/indicator-label.js";
 import { bindInputFocusGuard, createSearchButton } from "../../ui/components/input-controls.js";
@@ -7,28 +9,6 @@ import { sortByPreferredOrder } from "../../utils/preferred-order.js";
 import { normalizePropertyPoolEntries } from "../filters/pool-config.js";
 import { filterPoolLabel, filterPoolValueKey, filterPoolValueVisible, propertyPoolKeyVisible } from "../filters/pool-values.js";
 import { setIcon } from "obsidian";
-// Only the desktop sidebar suppresses redundant presentation writes. Its
-// hover-label owner removes aria-label/title after preserving accessible names;
-// remember label intent on the owned node rather than reintroducing it each time.
-function setFilterRailAttribute(core, node, name, value) {
-    const text = String(value);
-    if (core.navigator?.desktopSidebar) {
-        const current = node.getAttribute(name);
-        if (name === "aria-label" || name === "title") {
-            const labels = node._lsFilterRailLabels ||= {};
-            const sameIntent = labels[name] === text;
-            labels[name] = text;
-            if (sameIntent && current === null) return;
-        }
-        if (current === text) return;
-    }
-    node.setAttribute(name, text);
-}
-
-function setFilterRailProperty(core, node, name, value) {
-    if (!core.navigator?.desktopSidebar || node[name] !== value) node[name] = value;
-}
-
 // Instance method owner. `this` is the unchanged SearchResultRendererController instance. No additional state store.
 export const SearchResultRendererController_filter_channels_methods = {
 
@@ -43,8 +23,8 @@ export const SearchResultRendererController_filter_channels_methods = {
         // pool candidates can name another folder and must not look like a second
         // creation destination. Keep the configured pool intact for search exit.
         if (core.createFlow?.isCreateView?.()) {
-            setFilterRailProperty(core, host, "hidden", true);
-            setFilterRailAttribute(core, host, "aria-hidden", "true");
+            setDomProperty(host, "hidden", true);
+            setSearchAttribute(host, "aria-hidden", "true");
             return;
         }
 
@@ -56,10 +36,10 @@ export const SearchResultRendererController_filter_channels_methods = {
         const visibleGroups = this._syncFilterPoolGroups(values, [], poolSettings, catalog);
         const shortcutCounts = this._syncFilterToolbarEntries(values, shortcuts, [], poolSettings);
 
-        setFilterRailProperty(core, values, "hidden", visibleGroups + shortcutCounts.left === 0);
-        setFilterRailProperty(core, shortcuts, "hidden", shortcutCounts.right === 0);
-        setFilterRailProperty(core, host, "hidden", values.hidden && shortcuts.hidden);
-        setFilterRailAttribute(core, host, "aria-hidden", String(host.hidden));
+        setDomProperty(values, "hidden", visibleGroups + shortcutCounts.left === 0);
+        setDomProperty(shortcuts, "hidden", shortcutCounts.right === 0);
+        setDomProperty(host, "hidden", values.hidden && shortcuts.hidden);
+        setSearchAttribute(host, "aria-hidden", String(host.hidden));
 
         if (values.scrollLeft !== valuesLeft) values.scrollLeft = valuesLeft;
         if (shortcuts.scrollLeft !== shortcutsLeft) shortcuts.scrollLeft = shortcutsLeft;
@@ -164,9 +144,9 @@ export const SearchResultRendererController_filter_channels_methods = {
             ref = { group, label, buttons: new Map() };
             this._filterPoolGroupRefs.set(groupKey, ref);
         }
-        setFilterRailAttribute(this.owner, ref.group, "aria-label", ariaLabel || labelText || "筛选池");
-        setFilterRailProperty(this.owner, ref.label, "textContent", labelText);
-        setFilterRailProperty(this.owner, ref.label, "hidden", !labelText);
+        setSearchAttribute(ref.group, "aria-label", ariaLabel || labelText || "筛选池");
+        setDomProperty(ref.label, "textContent", labelText);
+        setDomProperty(ref.label, "hidden", !labelText);
         return ref;
     },
 
@@ -189,13 +169,10 @@ export const SearchResultRendererController_filter_channels_methods = {
         button._lsPoolAction = action;
         // The first text node is the visible chip label. textContent also
         // includes the hover owner's hidden accessible-name span.
-        const text = button.firstChild;
-        if (core.navigator?.desktopSidebar && text?.nodeType === 3) {
-            if (text.nodeValue !== label) text.nodeValue = label;
-        } else if (button.textContent !== label) button.textContent = label;
+        setDomText(button, label);
         button.classList.toggle("is-selected", active);
-        setFilterRailAttribute(core, button, "aria-pressed", String(active));
-        setFilterRailAttribute(core, button, "aria-label", ariaLabel);
+        setSearchAttribute(button, "aria-pressed", String(active));
+        setSearchAttribute(button, "aria-label", ariaLabel);
         if (button !== cursor) ref.group.insertBefore(button, cursor);
         return button.nextElementSibling;
     },
@@ -316,12 +293,12 @@ export const SearchResultRendererController_filter_channels_methods = {
                 button.replaceChildren(); setIcon(button, entry.shortcutIcon);
                 button.dataset.lsIcon = entry.shortcutIcon;
             }
-            setFilterRailAttribute(core, button, "data-ls-filter-shortcut", id);
+            setSearchAttribute(button, "data-ls-filter-shortcut", id);
             const applied = Boolean(core.filterState?.properties?.get(key)?.size);
             button.classList.toggle("is-applied", applied);
-            setFilterRailAttribute(core, button, "aria-pressed", String(applied));
-            setFilterRailAttribute(core, button, "aria-label", `筛选属性 ${key}`);
-            setFilterRailAttribute(core, button, "title", key);
+            setSearchAttribute(button, "aria-pressed", String(applied));
+            setSearchAttribute(button, "aria-label", `筛选属性 ${key}`);
+            setSearchAttribute(button, "title", key);
             if (button !== cursor || button.parentElement !== shortcutsHost) {
                 shortcutsHost.insertBefore(button, cursor);
             }

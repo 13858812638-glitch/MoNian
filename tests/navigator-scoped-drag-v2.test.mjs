@@ -59,10 +59,10 @@ test('Navigator: fixed Picker frame and explicit rename scroll snapshot',()=>{
     assert.match(nav,/scrollTop: scrollBeforeDismiss \?\? core\.navigator\.scroll\.scrollTop/);
 });
 
-test('Desktop retains Picker until explicit property-value drag; value rows appear temporarily',()=>{
+test('Shared inline properties retain the explicit value-drag action',()=>{
   const ctrl=read('features/navigator/SearchNavigatorController.js');
   const nav=read('features/navigator/NavigatorCustomization.js');
-  assert.match(ctrl,/this\.customization\.sortScope === "property-value"/);
+  assert.match(ctrl,/const expansion = `properties:\$\{key\}`/);
   assert.match(nav,/sort-property-values/);
   assert.match(nav,/previousDesktopValueDrag !== nowDesktopValueDrag/);
 });

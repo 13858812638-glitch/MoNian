@@ -21,8 +21,8 @@ with sync_playwright() as pw:
           const options=tree._navOptions,node=options.navDescriptor.node;
           const saved=Object.getOwnPropertyDescriptor(node,'children');let reads=0;
           Object.defineProperty(node,'children',{configurable:true,get(){reads++;throw Error('collapsed subtree was traversed')}});
-          ref.rowCursor=tree.row;let error='';try{n._row(ref,options)}catch(e){error=e.message}
-          Object.defineProperty(node,'children',saved);ref.rowCursor=null;return {reads,error};
+          ref.plannedRows=[];let error='';try{n._row(ref,options)}catch(e){error=e.message}
+          Object.defineProperty(node,'children',saved);ref.plannedRows=null;return {reads,error};
         }''')
         check(label+'row cache leaves lazy subtrees unread',lazy['reads']==0 and not lazy['error'])
         # A different host replaces shared appearance settings and invalidates
@@ -45,7 +45,7 @@ with sync_playwright() as pw:
         check(label+'keyboard collapse retains visible focus',p.evaluate("C.navigator.sections.get('folder').content.hidden&&document.activeElement===C.navigator.sections.get('folder').chevron"))
         group.press('Enter');p.wait_for_timeout(30)
         # Destroy before queued projection: callbacks cannot touch a dead view.
-        check(label+'pending projection is harmless after teardown',p.evaluate('''async()=>{const n=C.navigator;n.renderRevision=-1;n.sync();await V.onClose();await Promise.resolve();return n.core===null&&!n._projectionTimer}'''))
+        check(label+'pending projection is harmless after teardown',p.evaluate('''async()=>{const n=C.navigator;n.renderRevision=-1;n.sync();await V.onClose();await Promise.resolve();return n.core===null&&!n._projectionTask}'''))
         ctx.close()
         # A desktop tab's folder picker retains its held-mouse feedback.
         ctx,p=scope['boot'](browser,dark=dark)

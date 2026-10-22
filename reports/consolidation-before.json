@@ -1,0 +1,278 @@
+[
+  {
+    "name": "desktop sidebar folder changes preserve global facet inventory",
+    "pass": true,
+    "evidence": {
+      "before": [
+        [
+          "无标签",
+          "tag0",
+          "tag1",
+          "tag2",
+          "tag3"
+        ],
+        [
+          "status"
+        ]
+      ],
+      "after": [
+        [
+          "无标签",
+          "tag0",
+          "tag1",
+          "tag2",
+          "tag3"
+        ],
+        [
+          "status"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "desktop sidebar property key expands through same inline path",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop sidebar ordinary browse uses the same retained-card path",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop sidebar unchanged cards are never detached during page commit",
+    "pass": false,
+    "evidence": {
+      "removed": 6,
+      "retained": true,
+      "same": true
+    }
+  },
+  {
+    "name": "desktop sidebar post-commit failure restores complete page and array",
+    "pass": true,
+    "evidence": {
+      "same": true,
+      "array": true
+    }
+  },
+  {
+    "name": "desktop sidebar unchanged accessible name has no redundant mutations",
+    "pass": false,
+    "evidence": {
+      "mutations": 17,
+      "before": "结果视图：标准",
+      "after": "结果视图：标准"
+    }
+  },
+  {
+    "name": "desktop tab ordinary browse uses the same retained-card path",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop tab unchanged cards are never detached during page commit",
+    "pass": false,
+    "evidence": {
+      "removed": 6,
+      "retained": false,
+      "same": false
+    }
+  },
+  {
+    "name": "desktop tab post-commit failure restores complete page and array",
+    "pass": true,
+    "evidence": {
+      "same": true,
+      "array": true
+    }
+  },
+  {
+    "name": "desktop tab unchanged accessible name has no redundant mutations",
+    "pass": false,
+    "evidence": {
+      "mutations": 17,
+      "before": "结果视图：标准",
+      "after": "结果视图：标准"
+    }
+  },
+  {
+    "name": "mobile sidebar folder changes preserve global facet inventory",
+    "pass": false,
+    "evidence": {
+      "before": [
+        [
+          "无标签",
+          "tag0",
+          "tag1",
+          "tag2",
+          "tag3"
+        ],
+        [
+          "status"
+        ]
+      ],
+      "after": [
+        [
+          "无标签",
+          "tag0",
+          "tag2"
+        ],
+        [
+          "status"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "mobile sidebar property key expands through same inline path",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile sidebar ordinary browse uses the same retained-card path",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile sidebar unchanged cards are never detached during page commit",
+    "pass": false,
+    "evidence": {
+      "removed": 6,
+      "retained": false,
+      "same": false
+    }
+  },
+  {
+    "name": "mobile sidebar post-commit failure restores complete page and array",
+    "pass": true,
+    "evidence": {
+      "same": true,
+      "array": true
+    }
+  },
+  {
+    "name": "mobile sidebar unchanged accessible name has no redundant mutations",
+    "pass": false,
+    "evidence": {
+      "mutations": 16,
+      "before": "结果视图：标准",
+      "after": "结果视图：标准"
+    }
+  },
+  {
+    "name": "mobile sidebar keyboard token limits only internal scrollport",
+    "pass": false,
+    "evidence": {
+      "height": 600,
+      "outer": 751.5,
+      "before": 751.5,
+      "token": "",
+      "released": true,
+      "headerReleased": false,
+      "foreignUntouched": false,
+      "viewport": 900
+    }
+  },
+  {
+    "name": "mobile sidebar header focus releases internal keyboard scrollport",
+    "pass": false,
+    "evidence": {
+      "height": 600,
+      "outer": 751.5,
+      "before": 751.5,
+      "token": "",
+      "released": true,
+      "headerReleased": false,
+      "foreignUntouched": false,
+      "viewport": 900
+    }
+  },
+  {
+    "name": "mobile sidebar frame cannot resize a foreign scroll container",
+    "pass": false,
+    "evidence": {
+      "height": 600,
+      "outer": 751.5,
+      "before": 751.5,
+      "token": "",
+      "released": true,
+      "headerReleased": false,
+      "foreignUntouched": false,
+      "viewport": 900
+    }
+  },
+  {
+    "name": "mobile tab ordinary browse uses the same retained-card path",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile tab unchanged cards are never detached during page commit",
+    "pass": false,
+    "evidence": {
+      "removed": 6,
+      "retained": false,
+      "same": false
+    }
+  },
+  {
+    "name": "mobile tab post-commit failure restores complete page and array",
+    "pass": true,
+    "evidence": {
+      "same": true,
+      "array": true
+    }
+  },
+  {
+    "name": "mobile tab unchanged accessible name has no redundant mutations",
+    "pass": false,
+    "evidence": {
+      "mutations": 16,
+      "before": "结果视图：标准",
+      "after": "结果视图：标准"
+    }
+  },
+  {
+    "name": "mobile tab keyboard token limits only internal scrollport",
+    "pass": false,
+    "evidence": {
+      "height": 600,
+      "outer": 751.5,
+      "before": 751.5,
+      "token": "",
+      "released": true,
+      "headerReleased": false,
+      "foreignUntouched": false,
+      "viewport": 900
+    }
+  },
+  {
+    "name": "mobile tab header focus releases internal keyboard scrollport",
+    "pass": false,
+    "evidence": {
+      "height": 600,
+      "outer": 751.5,
+      "before": 751.5,
+      "token": "",
+      "released": true,
+      "headerReleased": false,
+      "foreignUntouched": false,
+      "viewport": 900
+    }
+  },
+  {
+    "name": "mobile tab frame cannot resize a foreign scroll container",
+    "pass": false,
+    "evidence": {
+      "height": 600,
+      "outer": 751.5,
+      "before": 751.5,
+      "token": "",
+      "released": true,
+      "headerReleased": false,
+      "foreignUntouched": false,
+      "viewport": 900
+    }
+  }
+]

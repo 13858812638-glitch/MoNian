@@ -7286,6 +7286,7 @@ body:not(.ls-show-internal-time-properties) .workspace-leaf-content[data-type="m
    tokens and rules; host styles only own the contents of their window. */
 :root {
     --ui-mobile-modal-height: 83.5dvh;
+    --ui-mobile-keyboard-height: min(520px, 55vh);
     --ui-mobile-modal-inset-x: 12px;
     --ui-mobile-modal-radius: 12px;
     --ui-mobile-focus-gap: 12px;
@@ -7379,9 +7380,9 @@ body.is-mobile .local-search-settings-page :is(input:not([type="checkbox"]):not(
 /* Focus never changes position/transform: the base frame owns placement. */
 body.is-mobile .ui-mobile-keyboard-scrollport {
     box-sizing: border-box;
-    height: var(--ui-mobile-scroll-height) !important;
-    min-height: var(--ui-mobile-scroll-height) !important;
-    max-height: var(--ui-mobile-scroll-height) !important;
+    height: min(var(--ui-mobile-scroll-height), var(--ui-mobile-keyboard-height)) !important;
+    min-height: 0 !important;
+    max-height: min(var(--ui-mobile-scroll-height), var(--ui-mobile-keyboard-height)) !important;
     padding-bottom: calc(var(--ui-mobile-scroll-padding) + var(--ui-mobile-scroll-reserve)) !important;
     flex-shrink: 0;
     overflow-y: auto !important;

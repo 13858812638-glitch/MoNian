@@ -144,7 +144,8 @@ with sync_playwright() as p:
         record('folder-scope-header-total',meta()['header'],'62')
         record('folder-scope-property-key-count',meta()['keyCount'],'62')
         record('folder-scope-project-raw-counts',counts(),{k:v for k,v in expected.items() if k!='拖'})
-        nav_counts=page.evaluate('''()=>{const stats=C.navigator._propertyStats('所属项目',C._navigationCandidates().scope,C.filterState);return Object.fromEntries(['卫康','Obsidian','标准化流程·运营部','拖'].map(key=>[key,stats.counts.get(S.propertyValueKey(key))||0]));}''')
+        page.evaluate("async()=>{C.dropdown.close(false);const n=C.navigator;n.setPage('filters',false);n.collapsed.delete('properties');n.expanded.add('properties:所属项目');n.renderRevision=-1;n.sync();await new Promise(r=>setTimeout(r,60))}")
+        nav_counts=page.evaluate("()=>Object.fromEntries(['卫康','Obsidian','标准化流程·运营部','拖'].map(key=>{const row=[...C.navigator.sections.get('properties').rows.values()].find(t=>t._navOptions.navDescriptor?.key==='所属项目'&&t._navOptions.navDescriptor?.value===key);return [key,Number(row?.row.querySelector('.local-search-move-current-badge')?.firstChild?.nodeValue||0)]}))")
         record('navigator-and-picker-counts-match',nav_counts,{'卫康':34,'Obsidian':13,'标准化流程·运营部':1,'拖':0})
         page.evaluate('C.dropdown.close(false); C.destroy(); P.onunload()')
     except Exception as error:

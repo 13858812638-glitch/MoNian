@@ -54,7 +54,7 @@ with sync_playwright() as pw:
       mo.observe(N.sections.get('properties').content,{subtree:true,childList:true,attributes:true,characterData:true});
       await folder('B');mo.disconnect();
     }''')
-    check('hidden property group skips value scans and DOM writes',p.evaluate("changes===0&&!builds.some(k=>k.startsWith('desktop-property-counts:'))"),p.evaluate('({changes,builds})'))
+    check('hidden property group skips value scans and DOM writes',p.evaluate("changes===0&&!builds.some(k=>k.startsWith('scope-property-counts:'))"),p.evaluate('({changes,builds})'))
     p.evaluate("N.sections.get('properties').toggle.click()");p.wait_for_timeout(60)
     check('reopening hidden group updates counts before display',p.evaluate("count('alpha','x')==='0'&&count('alpha','y')==='0'&&!valueRow('alpha','y').row.classList.contains('is-selected')"))
     p.evaluate("folder('A')")
@@ -87,13 +87,9 @@ with sync_playwright() as pw:
     for mobile in [False,True]:
       ctx,p=base['scope']['boot'](browser,mobile=mobile)
       p.evaluate('''async()=>{window.N=C.navigator;N.collapsed.delete('properties');N.renderRevision=-1;N.sync();await waitFixture(60)}''')
-      if not mobile:
-        # Render the other desktop-host branch without changing its shared picker owner.
-        p.evaluate("N.desktopSidebar=false;for(const r of N.sections.values())r.signature='';N.renderRevision=-1;N.sync()")
-        p.wait_for_timeout(60)
       p.evaluate("[...N.sections.get('properties').rows.values()].find(t=>t._navOptions.navDescriptor?.key==='alpha').button.click()")
       p.wait_for_timeout(60)
-      check('mobile retains inline expansion' if mobile else 'other desktop host retains shared picker',p.evaluate("N.expanded.has('properties:alpha')" if mobile else '!!C.dropdown.panel?.isConnected'))
+      check(('mobile' if mobile else 'desktop')+' shares inline expansion',p.evaluate("N.expanded.has('properties:alpha')&&!C.dropdown.isOpen"))
       p.evaluate('V.onClose()');ctx.close()
     large={'__file__':str(ROOT/'scripts/desktop_navigator_audit.py')}
     exec((ROOT/'scripts/desktop_navigator_audit.py').read_text().split('\nwith sync_playwright()')[0].replace("status:'active'","status:'value'+i%80"),large)
@@ -102,7 +98,7 @@ with sync_playwright() as pw:
       window.N=C.navigator;N.collapsed.delete('properties');N.expanded.add('properties:status');N.renderRevision=-1;N.sync();await waitFixture(80);
       window.values=()=>[...N.sections.get('properties').rows.values()].filter(t=>t._navOptions.navDescriptor?.kind==='property-value');
       window.saved=values().map(t=>t.row);window.stats=0;window.searches=0;window.geometry=0;window.projecting=false;
-      const cached=N._cached;N._cached=function(k,b){return cached.call(this,k,()=>{if(k.startsWith('desktop-property-'))stats++;return b()})};
+      const cached=N._cached;N._cached=function(k,b){return cached.call(this,k,()=>{if((k.startsWith('inventory-property-')||k.startsWith('scope-property-')))stats++;return b()})};
       const search=C.performSearch;C.performSearch=function(...a){searches++;return search.apply(this,a)};
       const project=N._renderProjection;N._renderProjection=function(...a){projecting=true;try{return project.apply(this,a)}finally{projecting=false}};
       for(const name of ['getBoundingClientRect','getClientRects']){const read=Element.prototype[name];Element.prototype[name]=function(...a){if(projecting&&N.scroll.contains(this))geometry++;return read.apply(this,a)}}

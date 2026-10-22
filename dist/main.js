@@ -2236,6 +2236,9 @@ exports.isDomElement = isDomElement;
 exports.isDomHTMLElement = isDomHTMLElement;
 exports.isDomButton = isDomButton;
 exports.isDomInput = isDomInput;
+exports.setDomText = setDomText;
+exports.setDomProperty = setDomProperty;
+exports.reconcileDomChildren = reconcileDomChildren;
 // Host Context Primitive：DOM Realm 永远跟随真实宿主节点，而不是插件加载时的主 window。
 // 多窗口 / Pop-out / 原生 Tab 共用这一套 document/window/Element 判定；
 // 业务层不得直接假定全局 document/window 与当前 Surface 属于同一个 Realm。
@@ -2267,6 +2270,41 @@ function isDomButton(value) {
 }
 function isDomInput(value) {
     return isDomHTMLElement(value) && value.tagName === "INPUT";
+}
+// Retain child-owned icons/accessibility labels while updating visible text.
+function setDomText(node, value) {
+    if (!node)
+        return;
+    const text = String(value ?? "");
+    const child = [...node.childNodes].find(node => node.nodeType === 3);
+    if (child) {
+        if (child.nodeValue !== text)
+            child.nodeValue = text;
+    }
+    else if (text)
+        node.prepend(node.ownerDocument.createTextNode(text));
+}
+function setDomProperty(node, name, value) {
+    if (!node)
+        return;
+    if (name === "textContent")
+        setDomText(node, value);
+    else if (node[name] !== value)
+        node[name] = value;
+}
+// One ordered commit primitive. Remove obsolete children first so retained
+// siblings do not move around disappearing rows, preserving focus and layout.
+function reconcileDomChildren(parent, nodes) {
+    const keep = new Set(nodes);
+    for (const node of [...parent.childNodes])
+        if (!keep.has(node))
+            node.remove();
+    let cursor = parent.firstChild;
+    for (const node of nodes) {
+        if (node !== cursor)
+            parent.insertBefore(node, cursor);
+        cursor = node.nextSibling;
+    }
 }
 
 },
@@ -2555,6 +2593,12 @@ class MobileFrameController {
             const nextInset = `${inset}px`;
             if (this.root.style.getPropertyValue("--ui-mobile-keyboard-inset") !== nextInset)
                 this.root.style.setProperty("--ui-mobile-keyboard-inset", nextInset);
+            // Preserved frames may lock before focus arrives, but never own
+            // a foreign input or its scrolling ancestors.
+            if (!editing) {
+                this.clearScrollport();
+                return;
+            }
             let scroller = active.parentElement;
             while (scroller && scroller !== this.root) {
                 if (/(auto|scroll)/.test(this.win.getComputedStyle(scroller).overflowY))
@@ -2562,8 +2606,10 @@ class MobileFrameController {
                 scroller = scroller.parentElement;
             }
             // A header input never resizes an unrelated results list.
-            if (!scroller || scroller === this.root)
+            if (!scroller || scroller === this.root) {
+                this.clearScrollport();
                 return;
+            }
             const scrollRect = scroller.getBoundingClientRect();
             const controlRect = active.getBoundingClientRect();
             const gap = Number.parseFloat(this.win.getComputedStyle(this.root).getPropertyValue("--ui-mobile-focus-gap")) || 0;
@@ -14009,6 +14055,7 @@ exports.SearchResultControlsController_filter_pool_editor_methods = {
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.supportsPluginFineHover = supportsPluginFineHover;
+exports.setSearchAttribute = setSearchAttribute;
 exports.installPluginHoverHintSuppression = installPluginHoverHintSuppression;
 // Shared UI primitive, bundled identically for independent plugin loading.
 // One observer per document; leases own only the real UI roots they register.
@@ -14020,6 +14067,18 @@ function supportsPluginFineHover(root = null) {
     const query = win?.matchMedia?.("(hover: hover) and (pointer: fine)");
     return query ? query.matches : !(globalThis.navigator?.maxTouchPoints > 0);
 }
+// Attribute updates use the same owner that preserves accessible names. No
+// controller keeps a second label-intent cache or recreates suppressed hints.
+function setSearchAttribute(node, name, value) {
+    if (!node)
+        return;
+    const text = String(value);
+    const owner = globalThis[Symbol.for("gls-dida-pwb.hover-hints.v1")];
+    if (owner?.writeAttribute?.(node, name, text))
+        return;
+    if (node.getAttribute(name) !== text)
+        node.setAttribute(name, text);
+}
 function installPluginHoverHintSuppression() {
     const key = Symbol.for("gls-dida-pwb.hover-hints.v1");
     let owner = globalThis[key];
@@ -14027,13 +14086,12 @@ function installPluginHoverHintSuppression() {
         const documents = new Map(), labels = new WeakMap();
         let sequence = 0;
         const element = node => node?.nodeType === 1;
-        const suppress = node => {
+        const suppress = (node, incoming = node.getAttribute("aria-label")) => {
             if (!element(node))
                 return;
             for (const name of ["title", "data-tooltip-position", "data-tooltip-delay"])
                 if (node.hasAttribute(name))
                     node.removeAttribute(name);
-            const incoming = node.getAttribute("aria-label");
             let saved = labels.get(node);
             const labelledBy = node.getAttribute("aria-labelledby");
             if (labelledBy && labelledBy !== saved?.id) {
@@ -14041,7 +14099,7 @@ function installPluginHoverHintSuppression() {
                     node.removeAttribute("aria-label");
                 return;
             }
-            if (incoming) {
+            if (incoming !== null) {
                 if (!saved) {
                     saved = { id: `plugin-ui-label-${++sequence}`, text: incoming };
                     labels.set(node, saved);
@@ -14066,18 +14124,26 @@ function installPluginHoverHintSuppression() {
                 label.textContent = saved.text;
             if (labelledBy !== saved.id)
                 node.setAttribute("aria-labelledby", saved.id);
-            if (incoming !== null)
+            if (node.hasAttribute("aria-label"))
                 node.removeAttribute("aria-label");
         };
         const scan = root => {
             if (!element(root))
                 return;
             suppress(root);
-            root.querySelectorAll("[title], [aria-label], [data-tooltip-position], [data-tooltip-delay]").forEach(suppress);
+            root.querySelectorAll("[title], [aria-label], [data-tooltip-position], [data-tooltip-delay]").forEach(node => suppress(node));
         };
         const options = { subtree: true, childList: true, attributes: true,
             attributeFilter: ["title", "aria-label", "aria-labelledby", "data-tooltip-position", "data-tooltip-delay"] };
         owner = {
+            writeAttribute(node, name, value) {
+                if (!["aria-label", "title", "data-tooltip-position", "data-tooltip-delay"].includes(name))
+                    return false;
+                if (!documents.get(node.ownerDocument)?.owns(node))
+                    return false;
+                suppress(node, name === "aria-label" ? value : undefined);
+                return true;
+            },
             observe(root) {
                 if (!element(root))
                     return false;
@@ -14106,7 +14172,7 @@ function installPluginHoverHintSuppression() {
                         }
                     };
                     const observer = new win.MutationObserver(process);
-                    record = { roots, observer, process };
+                    record = { roots, observer, process, owns };
                     documents.set(doc, record);
                 }
                 const count = record.roots.get(root) || 0;
@@ -14694,6 +14760,7 @@ function migrateLegacySortState(value, hasQuery = false) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchResultControlsController_view_composer_methods = void 0;
+const hover_hints_js_1 = require("../../interactions/hover-hints.js");
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 const picker_cleanup_js_1 = require("../../core/picker-cleanup.js");
@@ -14736,19 +14803,19 @@ exports.SearchResultControlsController_view_composer_methods = {
         const value = String(core.searchInput?.value || "");
         const hasValue = Boolean(value.trim());
         if (this.createNoteBtn) {
-            this.createNoteBtn.hidden = !core.allowCreate;
-            this.createNoteBtn.setAttribute("aria-hidden", String(!core.allowCreate));
+            (0, dom_js_1.setDomProperty)(this.createNoteBtn, "hidden", !core.allowCreate);
+            (0, hover_hints_js_1.setSearchAttribute)(this.createNoteBtn, "aria-hidden", String(!core.allowCreate));
             this.createNoteBtn.classList.toggle("is-selected", createMode);
-            this.createNoteBtn.setAttribute("aria-pressed", String(createMode));
+            (0, hover_hints_js_1.setSearchAttribute)(this.createNoteBtn, "aria-pressed", String(createMode));
             const label = createMode ? "退出创建笔记" : "创建笔记";
-            this.createNoteBtn.setAttribute("aria-label", label);
+            (0, hover_hints_js_1.setSearchAttribute)(this.createNoteBtn, "aria-label", label);
         }
         if (!this.resultViewBtn)
             return;
         // Create-submit or partial creation has no valid clear action. Do not
         // let a native button click blur the search field during this lock.
-        this.resultViewBtn.disabled = Boolean((createMode || hasValue)
-            && (core.createFlow?._createInFlight || core.createFlow?.createDraft?.pendingCreation));
+        (0, dom_js_1.setDomProperty)(this.resultViewBtn, "disabled", Boolean((createMode || hasValue)
+            && (core.createFlow?._createInFlight || core.createFlow?.createDraft?.pendingCreation)));
         const activeId = this.activeViewId();
         const viewLabel = view_config_js_1.RESULT_VIEW_LABELS[activeId];
         const viewIcon = activeId === "detailed"
@@ -14774,13 +14841,13 @@ exports.SearchResultControlsController_view_composer_methods = {
         const label = createMode
             ? "清空创建标题"
             : (hasValue ? "清空搜索" : `结果视图：${viewLabel}`);
-        this.resultViewBtn.setAttribute("aria-label", label);
+        (0, hover_hints_js_1.setSearchAttribute)(this.resultViewBtn, "aria-label", label);
         if (createMode || hasValue) {
-            this.resultViewBtn.setAttribute("aria-expanded", "false");
+            (0, hover_hints_js_1.setSearchAttribute)(this.resultViewBtn, "aria-expanded", "false");
         }
         else {
             const open = Boolean(core.dropdown.isOpenFor(this.resultViewBtn));
-            this.resultViewBtn.setAttribute("aria-expanded", String(open));
+            (0, hover_hints_js_1.setSearchAttribute)(this.resultViewBtn, "aria-expanded", String(open));
         }
     },
     _openNavigatorToolbarPicker(context, anchor, onAdd) {
@@ -14867,7 +14934,7 @@ exports.SearchResultControlsController_view_composer_methods = {
                 row.visibility.replaceChildren();
                 (0, obsidian_1.setIcon)(row.visibility, enabled ? "eye" : "eye-off");
                 row.visibility.classList.toggle("is-hidden-state", !enabled);
-                row.visibility.setAttribute("aria-label", label);
+                (0, hover_hints_js_1.setSearchAttribute)(row.visibility, "aria-label", label);
                 row.visibility.setAttribute("aria-pressed", String(enabled));
                 row.visibility.title = label;
             }
@@ -14978,7 +15045,7 @@ exports.SearchResultControlsController_view_composer_methods = {
                         });
                     }
                 });
-                view.iconEl.setAttribute("aria-label", `修改${def.label}图标`);
+                (0, hover_hints_js_1.setSearchAttribute)(view.iconEl, "aria-label", `修改${def.label}图标`);
                 view.iconEl.setAttribute("title", `修改${def.label}图标`);
                 view.iconEl.removeAttribute("aria-pressed");
                 const rendered = { ...view, ...buttons };
@@ -15019,7 +15086,7 @@ exports.SearchResultControlsController_view_composer_methods = {
                         (0, obsidian_1.setIcon)(row.visibility, visible ? "eye" : "eye-off");
                     }
                     row.visibility.classList.toggle("is-hidden-state", !visible);
-                    row.visibility.setAttribute("aria-label", label);
+                    (0, hover_hints_js_1.setSearchAttribute)(row.visibility, "aria-label", label);
                     row.visibility.setAttribute("aria-pressed", String(visible));
                     row.visibility.title = label;
                 }
@@ -15131,7 +15198,7 @@ exports.SearchResultControlsController_view_composer_methods = {
             (0, obsidian_1.setIcon)(button, nextIcon);
             button.classList.toggle("is-hidden-state", !visible);
             const actionLabel = visible ? `隐藏${label}` : `显示${label}`;
-            button.setAttribute("aria-label", actionLabel);
+            (0, hover_hints_js_1.setSearchAttribute)(button, "aria-label", actionLabel);
             button.setAttribute("aria-pressed", String(visible));
             button.title = actionLabel;
         };
@@ -16369,6 +16436,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchResultRendererController_filter_channels_methods = void 0;
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
+const hover_hints_js_1 = require("../../interactions/hover-hints.js");
+const dom_js_1 = require("../../utils/dom.js");
 const property_catalog_js_1 = require("../../data/properties/property-catalog.js");
 const indicator_label_js_1 = require("../../ui/components/indicator-label.js");
 const input_controls_js_1 = require("../../ui/components/input-controls.js");
@@ -16376,29 +16445,6 @@ const preferred_order_js_1 = require("../../utils/preferred-order.js");
 const pool_config_js_1 = require("../filters/pool-config.js");
 const pool_values_js_1 = require("../filters/pool-values.js");
 const obsidian_1 = require("obsidian");
-// Only the desktop sidebar suppresses redundant presentation writes. Its
-// hover-label owner removes aria-label/title after preserving accessible names;
-// remember label intent on the owned node rather than reintroducing it each time.
-function setFilterRailAttribute(core, node, name, value) {
-    const text = String(value);
-    if (core.navigator?.desktopSidebar) {
-        const current = node.getAttribute(name);
-        if (name === "aria-label" || name === "title") {
-            const labels = node._lsFilterRailLabels ||= {};
-            const sameIntent = labels[name] === text;
-            labels[name] = text;
-            if (sameIntent && current === null)
-                return;
-        }
-        if (current === text)
-            return;
-    }
-    node.setAttribute(name, text);
-}
-function setFilterRailProperty(core, node, name, value) {
-    if (!core.navigator?.desktopSidebar || node[name] !== value)
-        node[name] = value;
-}
 // Instance method owner. `this` is the unchanged SearchResultRendererController instance. No additional state store.
 exports.SearchResultRendererController_filter_channels_methods = {
     _renderFilterPoolHeader() {
@@ -16412,8 +16458,8 @@ exports.SearchResultRendererController_filter_channels_methods = {
         // pool candidates can name another folder and must not look like a second
         // creation destination. Keep the configured pool intact for search exit.
         if (core.createFlow?.isCreateView?.()) {
-            setFilterRailProperty(core, host, "hidden", true);
-            setFilterRailAttribute(core, host, "aria-hidden", "true");
+            (0, dom_js_1.setDomProperty)(host, "hidden", true);
+            (0, hover_hints_js_1.setSearchAttribute)(host, "aria-hidden", "true");
             return;
         }
         const valuesLeft = values.scrollLeft;
@@ -16423,10 +16469,10 @@ exports.SearchResultRendererController_filter_channels_methods = {
         const catalog = core.resultControls._filterPoolHeaderCatalog(poolSettings);
         const visibleGroups = this._syncFilterPoolGroups(values, [], poolSettings, catalog);
         const shortcutCounts = this._syncFilterToolbarEntries(values, shortcuts, [], poolSettings);
-        setFilterRailProperty(core, values, "hidden", visibleGroups + shortcutCounts.left === 0);
-        setFilterRailProperty(core, shortcuts, "hidden", shortcutCounts.right === 0);
-        setFilterRailProperty(core, host, "hidden", values.hidden && shortcuts.hidden);
-        setFilterRailAttribute(core, host, "aria-hidden", String(host.hidden));
+        (0, dom_js_1.setDomProperty)(values, "hidden", visibleGroups + shortcutCounts.left === 0);
+        (0, dom_js_1.setDomProperty)(shortcuts, "hidden", shortcutCounts.right === 0);
+        (0, dom_js_1.setDomProperty)(host, "hidden", values.hidden && shortcuts.hidden);
+        (0, hover_hints_js_1.setSearchAttribute)(host, "aria-hidden", String(host.hidden));
         if (values.scrollLeft !== valuesLeft)
             values.scrollLeft = valuesLeft;
         if (shortcuts.scrollLeft !== shortcutsLeft)
@@ -16525,9 +16571,9 @@ exports.SearchResultRendererController_filter_channels_methods = {
             ref = { group, label, buttons: new Map() };
             this._filterPoolGroupRefs.set(groupKey, ref);
         }
-        setFilterRailAttribute(this.owner, ref.group, "aria-label", ariaLabel || labelText || "筛选池");
-        setFilterRailProperty(this.owner, ref.label, "textContent", labelText);
-        setFilterRailProperty(this.owner, ref.label, "hidden", !labelText);
+        (0, hover_hints_js_1.setSearchAttribute)(ref.group, "aria-label", ariaLabel || labelText || "筛选池");
+        (0, dom_js_1.setDomProperty)(ref.label, "textContent", labelText);
+        (0, dom_js_1.setDomProperty)(ref.label, "hidden", !labelText);
         return ref;
     },
     _syncFilterPoolButton(ref, cursor, entryKey, { label, ariaLabel, active, action }) {
@@ -16549,16 +16595,10 @@ exports.SearchResultRendererController_filter_channels_methods = {
         button._lsPoolAction = action;
         // The first text node is the visible chip label. textContent also
         // includes the hover owner's hidden accessible-name span.
-        const text = button.firstChild;
-        if (core.navigator?.desktopSidebar && text?.nodeType === 3) {
-            if (text.nodeValue !== label)
-                text.nodeValue = label;
-        }
-        else if (button.textContent !== label)
-            button.textContent = label;
+        (0, dom_js_1.setDomText)(button, label);
         button.classList.toggle("is-selected", active);
-        setFilterRailAttribute(core, button, "aria-pressed", String(active));
-        setFilterRailAttribute(core, button, "aria-label", ariaLabel);
+        (0, hover_hints_js_1.setSearchAttribute)(button, "aria-pressed", String(active));
+        (0, hover_hints_js_1.setSearchAttribute)(button, "aria-label", ariaLabel);
         if (button !== cursor)
             ref.group.insertBefore(button, cursor);
         return button.nextElementSibling;
@@ -16674,12 +16714,12 @@ exports.SearchResultRendererController_filter_channels_methods = {
                 (0, obsidian_1.setIcon)(button, entry.shortcutIcon);
                 button.dataset.lsIcon = entry.shortcutIcon;
             }
-            setFilterRailAttribute(core, button, "data-ls-filter-shortcut", id);
+            (0, hover_hints_js_1.setSearchAttribute)(button, "data-ls-filter-shortcut", id);
             const applied = Boolean(core.filterState?.properties?.get(key)?.size);
             button.classList.toggle("is-applied", applied);
-            setFilterRailAttribute(core, button, "aria-pressed", String(applied));
-            setFilterRailAttribute(core, button, "aria-label", `筛选属性 ${key}`);
-            setFilterRailAttribute(core, button, "title", key);
+            (0, hover_hints_js_1.setSearchAttribute)(button, "aria-pressed", String(applied));
+            (0, hover_hints_js_1.setSearchAttribute)(button, "aria-label", `筛选属性 ${key}`);
+            (0, hover_hints_js_1.setSearchAttribute)(button, "title", key);
             if (button !== cursor || button.parentElement !== shortcutsHost) {
                 shortcutsHost.insertBefore(button, cursor);
             }
@@ -16723,7 +16763,7 @@ exports.QueryState = QueryState;
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.beginBrowseCardReuse = beginBrowseCardReuse;
-// Desktop sidebar browse cards are derived UI, never a second result/index owner.
+// Browse cards are derived UI, never a second result/index owner.
 // Keep a bounded working set; queries, pickers and batch/action states use the
 // normal builder. Live nodes move only after every new card has built successfully.
 const MAX_RETAINED_CARDS = 96;
@@ -16747,7 +16787,7 @@ function reusable(entry, result, key) {
 }
 function beginBrowseCardReuse(renderer) {
     const core = renderer.owner;
-    if (!core.navigator?.desktopSidebar || core.queryState.raw.trim()
+    if (core.queryState.raw.trim()
         || core.externalPickHandler || core.selection.batchMode || core.swipe?.allExpanded
         || core.dropdown?.panel?.isConnected || core._confirmSession || core.createFlow?.isCreateView?.()) {
         renderer._browseCardCache?.entries.clear();
@@ -16771,9 +16811,7 @@ function beginBrowseCardReuse(renderer) {
             const key = cardContentKey(result);
             const entry = cache.entries.get(result.path);
             if (reusable(entry, result, key)) {
-                const placeholder = fragment.ownerDocument.createComment('browse-card');
-                fragment.appendChild(placeholder);
-                staged.push({ entry, position, placeholder, connected: entry.shell.isConnected,
+                staged.push({ entry, position, reused: true, connected: entry.shell.isConnected,
                     oldPosition: entry.shell.getAttribute('data-virtual-position'),
                     oldLast: entry.shell.classList.contains('is-last-result'),
                     oldCurrent: entry.item.classList.contains('is-current') });
@@ -16786,13 +16824,13 @@ function beginBrowseCardReuse(renderer) {
         },
         commit() {
             for (const record of staged) {
-                if (!record.placeholder)
+                if (!record.reused)
                     continue;
                 const { shell, item } = record.entry;
-                shell.dataset.virtualPosition = String(record.position);
+                if (shell.dataset.virtualPosition !== String(record.position))
+                    shell.dataset.virtualPosition = String(record.position);
                 shell.classList.toggle('is-last-result', record.position === renderer.visibleResultCount() - 1);
                 item.classList.remove('is-current');
-                record.placeholder.replaceWith(shell);
             }
         },
         finish() {
@@ -16807,7 +16845,7 @@ function beginBrowseCardReuse(renderer) {
         },
         rollback() {
             for (const record of staged) {
-                if (!record.placeholder)
+                if (!record.reused)
                     continue;
                 const { shell, item } = record.entry;
                 if (record.oldPosition === null)
@@ -17044,8 +17082,8 @@ exports.SearchResultRendererController_page_and_snippets_methods = {
                     hasResults = true;
                 }
             }
-            // All builders succeeded. Reset the old shelf/observer once, then
-            // submit a complete prepared page in one DOM operation.
+            // All builders succeeded. Commit the ordered node references once;
+            // retained cards stay attached rather than travelling via staging.
             core.swipe?.resetForRender();
             this._rowResizeObserver?.disconnect();
             if (cardReuse) {
@@ -17053,8 +17091,11 @@ exports.SearchResultRendererController_page_and_snippets_methods = {
                 committed = true;
                 cardReuse.commit();
             }
-            rail.replaceChildren(...staging.childNodes);
+            const nextChildren = hasResults
+                ? [nextBeforeSpacer, ...core.resultEls.map(item => item._lsSwipeShell), nextAfterSpacer]
+                : [...staging.childNodes];
             committed = true;
+            (0, dom_js_1.reconcileDomChildren)(rail, nextChildren);
             this.windowStart = nextStart;
             this.windowEnd = nextEnd;
             this._beforeSpacer = nextBeforeSpacer;
@@ -17089,7 +17130,7 @@ exports.SearchResultRendererController_page_and_snippets_methods = {
             // unsuccessful update retains exactly the old visible children.
             if (committed) {
                 this._rowResizeObserver?.disconnect();
-                rail.replaceChildren(...before.children);
+                (0, dom_js_1.reconcileDomChildren)(rail, before.children);
                 for (const shell of rail.querySelectorAll(":scope > .local-search-swipe-shell")) {
                     this._observeShell(shell, Number.parseInt(shell.dataset.virtualPosition || "", 10));
                 }
@@ -18920,14 +18961,9 @@ exports.SearchResultRendererController_virtual_window_methods = {
         const visibleRows = viewportHeight > 0
             ? Math.max(1, Math.ceil(viewportHeight / estimate) + 1)
             : virtualization_config_js_1.RESULT_WINDOW_MOUNT_MIN;
-        // Sidebar filter changes rebuild this window synchronously. Half a
-        // viewport on each side keeps scroll headroom without rebuilding two
-        // entire offscreen viewports on every navigation click. Other hosts
-        // retain their existing budget; actual visible spans always win below.
-        const sidebar = Boolean(this.owner?.navigator?.desktopSidebar);
-        const bufferRows = sidebar
-            ? Math.max(Math.ceil(virtualization_config_js_1.RESULT_WINDOW_BUFFER_MIN / 2), Math.ceil(visibleRows / 2))
-            : Math.max(virtualization_config_js_1.RESULT_WINDOW_BUFFER_MIN, visibleRows);
+        // The same viewport-driven budget applies to every input/host. Buffer
+        // depends on actual visible rows, never a desktop/mobile business fork.
+        const bufferRows = Math.max(Math.ceil(virtualization_config_js_1.RESULT_WINDOW_BUFFER_MIN / 2), Math.ceil(visibleRows / 2));
         const desired = visibleRows + bufferRows * 2;
         const bounded = Math.max(virtualization_config_js_1.RESULT_WINDOW_MOUNT_MIN, Math.min(virtualization_config_js_1.RESULT_WINDOW_MOUNT_MAX, desired));
         // MAX 只限制额外预挂载；极端高视口自身若已超过 MAX，
@@ -19345,6 +19381,7 @@ exports.SearchResultRendererController = SearchResultRendererController;
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchSortController = void 0;
+const hover_hints_js_1 = require("../../interactions/hover-hints.js");
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 const input_controls_js_1 = require("../../ui/components/input-controls.js");
@@ -19671,7 +19708,7 @@ class SearchSortController {
             if (view.pickerBtn) {
                 const open = Boolean(core.dropdown.isOpenFor(view.pickerBtn));
                 view.pickerBtn.setAttribute("aria-expanded", String(open));
-                view.pickerBtn.setAttribute("aria-label", `排序与时间；当前：${fieldLabel}${core.filterState.dateRange ? `；${(0, filter_state_js_1.filterDateRangeDisplay)(core.filterState.dateRange)}` : ""}`);
+                (0, hover_hints_js_1.setSearchAttribute)(view.pickerBtn, "aria-label", `排序与时间；当前：${fieldLabel}${core.filterState.dateRange ? `；${(0, filter_state_js_1.filterDateRangeDisplay)(core.filterState.dateRange)}` : ""}`);
                 view.pickerBtn.classList.toggle("has-time-filter", Boolean(core.filterState.dateRange));
                 const iconName = view.pickerBtn === this.pickerBtn
                     ? (0, toolbar_config_js_1.navigatorToolbarIcon)(core, "sort", def.icon || "arrow-up-down")
@@ -19697,7 +19734,7 @@ class SearchSortController {
                     ? `点击返回快捷排序：${targetLabel}`
                     : `点击切换为${targetLabel}`;
                 const label = `排序：${fieldLabel}；${action}`;
-                view.fieldBtn.setAttribute("aria-label", label);
+                (0, hover_hints_js_1.setSearchAttribute)(view.fieldBtn, "aria-label", label);
             }
             if (view.directionBtn) {
                 const isDesc = direction === "desc";
@@ -19722,7 +19759,7 @@ class SearchSortController {
                                     : (isDesc ? "Z → A" : "A → Z");
                 const next = isDesc ? "升序" : "降序";
                 const label = `${fieldLabel}：${human}；点击切换为${next}`;
-                view.directionBtn.setAttribute("aria-label", label);
+                (0, hover_hints_js_1.setSearchAttribute)(view.directionBtn, "aria-label", label);
                 view.directionBtn.setAttribute("aria-pressed", String(!isDesc));
             }
         }
@@ -23052,6 +23089,8 @@ const property_catalog_js_1 = require("../../data/properties/property-catalog.js
 const property_values_js_1 = require("../../data/properties/property-values.js");
 const tag_tree_js_1 = require("../../data/tags/tag-tree.js");
 const tag_values_js_1 = require("../../data/tags/tag-values.js");
+const hover_hints_js_1 = require("../../interactions/hover-hints.js");
+const dom_js_1 = require("../../utils/dom.js");
 const scroll_anchor_js_1 = require("../../interactions/scroll-anchor.js");
 const input_controls_js_1 = require("../../ui/components/input-controls.js");
 const count_rail_js_1 = require("../../ui/pickers/count-rail.js");
@@ -23065,59 +23104,28 @@ const navigation_icon_js_1 = require("./navigation-icon.js");
 const customization_model_js_1 = require("./customization-model.js");
 const toolbar_config_js_1 = require("./toolbar-config.js");
 const obsidian_1 = require("obsidian");
-// Navigation owns these labels. The shared desktop hover-hint owner moves
-// aria-label into aria-labelledby and removes title, so DOM equality alone
-// would keep reintroducing them on every refresh. Remember only label intent;
-// pressed/expanded and other state attributes still check the live DOM.
-function setNavigatorAttribute(nav, node, name, value) {
-    if (!node)
-        return;
-    const text = String(value);
-    if (nav.desktopSidebar) {
-        const current = node.getAttribute(name);
-        if (name === "aria-label" || name === "title") {
-            nav._presentationLabels ||= new WeakMap();
-            let labels = nav._presentationLabels.get(node);
-            if (!labels) {
-                labels = {};
-                nav._presentationLabels.set(node, labels);
-            }
-            const sameIntent = labels[name] === text;
-            labels[name] = text;
-            if (sameIntent && current === null)
-                return;
-        }
-        if (current === text)
-            return;
-    }
-    node.setAttribute(name, text);
-}
-function setNavigatorProperty(nav, node, name, value) {
-    if (node && (!nav.desktopSidebar || node[name] !== value))
-        node[name] = value;
-}
 // Folder changes only alter these values, not the row's presentation.
 function syncNavigatorRowValues(nav, tree, options) {
     const active = Boolean(options.active);
-    if (!nav.desktopSidebar || tree.row.classList.contains("is-selected") !== active)
+    if (tree.row.classList.contains("is-selected") !== active)
         tree.row.classList.toggle("is-selected", active);
-    setNavigatorAttribute(nav, tree.button, "aria-pressed", String(active));
+    (0, hover_hints_js_1.setSearchAttribute)(tree.button, "aria-pressed", String(active));
     let badge = tree.row.querySelector(":scope > .local-search-move-current-badge");
     const hasCount = options.count !== null && options.count !== undefined && options.count !== "";
     if (!badge && hasCount)
         badge = tree.row.createSpan({ cls: "local-search-move-current-badge" });
     if (!badge)
         return;
-    setNavigatorProperty(nav, badge, "hidden", !hasCount);
+    (0, dom_js_1.setDomProperty)(badge, "hidden", !hasCount);
     if (!hasCount)
         return;
     const text = String(options.count);
-    if (nav.desktopSidebar && badge.firstChild?.nodeType === 3) {
+    if (badge.firstChild?.nodeType === 3) {
         if (badge.firstChild.nodeValue !== text)
             badge.firstChild.nodeValue = text;
     }
     else
-        setNavigatorProperty(nav, badge, "textContent", text);
+        (0, dom_js_1.setDomProperty)(badge, "textContent", text);
 }
 // One pass through scoped metadata, without collecting/sorting unused values.
 function navigatorPropertyPresence(nav, scope, keys) {
@@ -23138,24 +23146,24 @@ function navigatorPropertyPresence(nav, scope, keys) {
         return { counts, present };
     });
 }
-// Only expanded desktop keys need value models. Keep inventory independent of
+// Only expanded keys need value models. Keep inventory independent of
 // the folder scope and counts independent of the current property selection.
 // Existing index/catalog/preference invalidation owns both derived caches.
 function navigatorPropertyValues(nav, key, scope, inventory) {
-    const global = nav._cached(`desktop-property-values:${key}`, () => (0, property_values_js_1.buildPropertyUsageStats)(inventory, key, [], nav.core.plugin.propertyCatalogValues(key)));
-    const scoped = nav._cached(`desktop-property-counts:${key}`, () => nav.core.filterState.folders.size ? (0, property_values_js_1.buildPropertyUsageStats)(scope, key) : global);
+    const global = nav._cached(`inventory-property-values:${key}`, () => (0, property_values_js_1.buildPropertyUsageStats)(inventory, key, [], nav.core.plugin.propertyCatalogValues(key)));
+    const scoped = nav._cached(`scope-property-counts:${key}`, () => nav.core.filterState.folders.size ? (0, property_values_js_1.buildPropertyUsageStats)(scope, key) : global);
     return { values: global.values, counts: scoped.counts };
 }
 // Use the same structural key for the preflight and the actual projection.
 function navigatorSectionProjection(nav, id) {
     const prefix = id === "tags" ? "tag:" : `${id}:`;
-    const desktopFolder = !obsidian_1.Platform.isMobile && id === "folder";
-    const stableFacet = nav.desktopSidebar && !nav.customization.sortMode
+    const stableFolder = id === "folder";
+    const stableFacet = !nav.customization.sortMode
         && !nav.customization.maintenanceMode && (id === "tags" || id === "properties");
-    const signature = JSON.stringify([desktopFolder || stableFacet ? nav._desktopFolderEpoch || 0 : nav.core._resultGeneration,
+    const signature = JSON.stringify([stableFolder || stableFacet ? nav._inventoryEpoch || 0 : nav.core._resultGeneration,
         stableFacet, nav.layout, [...nav.expanded].filter(key => key.startsWith(prefix)),
-        ...(desktopFolder ? [nav.core.plugin.settings.excludedFolders || []] : [])]);
-    return { desktopFolder, stableFacet, signature };
+        ...(stableFolder ? [nav.core.plugin.settings.excludedFolders || []] : [])]);
+    return { stableFolder, stableFacet, signature };
 }
 // Internal scroll-to-layout notification boundary; native scrolling itself is
 // untouched. Kept outside the frozen Navigator prototype method contract.
@@ -23208,17 +23216,17 @@ class SearchNavigatorController {
         this.renderRevision = -1;
         this.searchVisible = false;
         this._projectionCache = new Map();
-        this._desktopFacetModels = new Map();
-        this._desktopScopeCache = null;
-        // Desktop folder changes alter selection, not the physical inventory.
+        this._inventoryModels = new Map();
+        this._scopeCache = null;
+        // Folder changes alter selection, not the physical inventory.
         // Invalidate its derived counts on actual vault/index/settings changes.
-        if (!obsidian_1.Platform.isMobile) {
+        {
             const invalidateCounts = () => {
-                this._desktopFolderCounts = null;
-                this._desktopFacetModels.clear();
-                this._desktopScopeCache = null;
+                this._folderCounts = null;
+                this._inventoryModels.clear();
+                this._scopeCache = null;
                 this._projectionCache.clear();
-                this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
+                this._inventoryEpoch = (this._inventoryEpoch || 0) + 1;
                 this.renderRevision = -1;
             };
             this.cleanups.push(core.plugin.subscribeIndexChanges(invalidateCounts));
@@ -23239,7 +23247,7 @@ class SearchNavigatorController {
         heading.prepend(this.backButton);
         this.backButton.addEventListener("click", () => this.back());
         core.searchInput.placeholder = "搜索文件、内容、标签、属性…";
-        core.searchInput.setAttribute("aria-label", "搜索文件、内容、标签、属性");
+        (0, hover_hints_js_1.setSearchAttribute)(core.searchInput, "aria-label", "搜索文件、内容、标签、属性");
         this.scroll = facets.createDiv({ cls: "local-search-nav-scroll", attr: { "aria-label": "筛选导航" } });
         // Native scroll remains entirely owned by the browser. Only workspace
         // layout-save notifications are coalesced; session capture reads the
@@ -23505,7 +23513,7 @@ class SearchNavigatorController {
         // Desktop visibility belongs to the configured command set in sync.
         // Docking must not briefly reveal an intentionally empty toolbar.
         if (!this.desktopSidebar)
-            setNavigatorProperty(this, this.mobileToolbar, "hidden", !mobile);
+            (0, dom_js_1.setDomProperty)(this.mobileToolbar, "hidden", !mobile);
     }
     _syncMobileTools() {
         if (!this.tools)
@@ -23559,7 +23567,7 @@ class SearchNavigatorController {
         for (const [id, tool] of this.tools) {
             if (!visible.has(id) && !this._releaseToolbarAnchor(tool))
                 visible.add(id);
-            setNavigatorProperty(this, tool.host, "hidden", !visible.has(id));
+            (0, dom_js_1.setDomProperty)(tool.host, "hidden", !visible.has(id));
         }
         for (const id of visible) {
             const definition = catalog.get(id), tool = this.tools.get(id);
@@ -23569,40 +23577,40 @@ class SearchNavigatorController {
                     (0, navigation_icon_js_1.setNavigatorIcon)(tool.button, icon);
                     tool.button.dataset.lsIcon = icon;
                 }
-                setNavigatorAttribute(this, tool.button, "aria-label", definition.label);
+                (0, hover_hints_js_1.setSearchAttribute)(tool.button, "aria-label", definition.label);
                 const applied = definition.kind === "property" ? Boolean(state.properties.get(definition.propertyKey)?.size)
                     : definition.poolKind === "folder" ? state.folders.size > 0
                         : definition.poolKind === "tag" ? state.tags.size > 0
                             : definition.poolKind === "property" ? state.properties.size > 0
                                 : state.fileTypes.size > 0;
-                setNavigatorAttribute(this, tool.button, "aria-pressed", String(applied));
-                setNavigatorAttribute(this, tool.button, "aria-expanded", String(core.dropdown.isOpenFor(tool.button)));
+                (0, hover_hints_js_1.setSearchAttribute)(tool.button, "aria-pressed", String(applied));
+                (0, hover_hints_js_1.setSearchAttribute)(tool.button, "aria-expanded", String(core.dropdown.isOpenFor(tool.button)));
             }
         }
         if (this.desktopSidebar)
             this._placeMobileTools(false);
-        setNavigatorProperty(this, this.mobileToolbar, "hidden", (this.layout !== "mobile" && !this.desktopSidebar) || visible.size === 0);
+        (0, dom_js_1.setDomProperty)(this.mobileToolbar, "hidden", (this.layout !== "mobile" && !this.desktopSidebar) || visible.size === 0);
         const timeTool = this.tools.get("time")?.button;
         if (timeTool)
-            setNavigatorProperty(this, timeTool, "disabled", !(0, toolbar_config_js_1.navigatorToolbarActionAvailable)("time", context));
+            (0, dom_js_1.setDomProperty)(timeTool, "disabled", !(0, toolbar_config_js_1.navigatorToolbarActionAvailable)("time", context));
         const sidebarTool = this.tools.get("sort-navigation")?.button;
         const maintenance = this.customization?.maintenanceMode;
         const maintenanceDefinition = maintenance && core.facets.sidebarMaintenanceModes?.(maintenance.kind)?.find(item => item.id === maintenance.id);
         const modeLabel = this.customization?.sortMode ? "拖拽排序" : maintenanceDefinition?.title || "";
-        setNavigatorAttribute(this, sidebarTool, "aria-pressed", String(Boolean(modeLabel)));
-        setNavigatorAttribute(this, sidebarTool, "aria-label", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
-        setNavigatorAttribute(this, sidebarTool, "title", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
+        (0, hover_hints_js_1.setSearchAttribute)(sidebarTool, "aria-pressed", String(Boolean(modeLabel)));
+        (0, hover_hints_js_1.setSearchAttribute)(sidebarTool, "aria-label", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
+        (0, hover_hints_js_1.setSearchAttribute)(sidebarTool, "title", modeLabel ? `侧栏工具 · ${modeLabel}` : "侧栏工具");
         const ids = this._definitions().map(([id]) => id);
         const allCollapsed = ids.every(id => this.collapsed.has(id));
-        setNavigatorAttribute(this, this.tools.get("collapse").button, "aria-label", allCollapsed ? "展开全部导航" : "折叠全部导航");
-        setNavigatorAttribute(this, this.tools.get("search").button, "aria-pressed", String(!filters && (this.searchVisible || create)));
+        (0, hover_hints_js_1.setSearchAttribute)(this.tools.get("collapse").button, "aria-label", allCollapsed ? "展开全部导航" : "折叠全部导航");
+        (0, hover_hints_js_1.setSearchAttribute)(this.tools.get("search").button, "aria-pressed", String(!filters && (this.searchVisible || create)));
         // Search belongs to results/create. A retained query must never re-open
         // the filter page's header or summon the keyboard during navigation.
         this.root.classList.toggle("is-nav-search-visible", !filters && (this.searchVisible || create));
         this.root.classList.toggle("has-nav-query", Boolean(core.searchInput?.value));
         const title = create ? "创建文件" : this._scopeTitle();
-        setNavigatorProperty(this, this.headingTitle, "textContent", this.layout === "mobile" ? `${title}${create ? "" : ` · ${core.fullResults.length}`}` : "GLS Navigator");
-        setNavigatorAttribute(this, this.headingTitle, "title", title);
+        (0, dom_js_1.setDomProperty)(this.headingTitle, "textContent", this.layout === "mobile" ? `${title}${create ? "" : ` · ${core.fullResults.length}`}` : "GLS Navigator");
+        (0, hover_hints_js_1.setSearchAttribute)(this.headingTitle, "title", title);
         // Only the presentation icon is overridden. Labels, disabled/pressed
         // state and behavior still belong to each original command controller.
         for (const [id, tool] of this.tools) {
@@ -23617,7 +23625,7 @@ class SearchNavigatorController {
                 tool.button.dataset.lsIcon = icon;
             }
         }
-        setNavigatorAttribute(this, this.mobileToolbar, "aria-label", filters ? "导航操作" : create ? "创建操作" : "结果操作");
+        (0, hover_hints_js_1.setSearchAttribute)(this.mobileToolbar, "aria-label", filters ? "导航操作" : create ? "创建操作" : "结果操作");
     }
     _releaseToolbarAnchor(tool) {
         const dropdown = this.core.dropdown;
@@ -23836,10 +23844,10 @@ class SearchNavigatorController {
         if (!this.core || this.core._destroyed)
             return;
         this._projectionCache.clear();
-        this._desktopFolderCounts = null;
-        this._desktopFacetModels.clear();
-        this._desktopScopeCache = null;
-        this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
+        this._folderCounts = null;
+        this._inventoryModels.clear();
+        this._scopeCache = null;
+        this._inventoryEpoch = (this._inventoryEpoch || 0) + 1;
         this._cacheRevision = -1;
         this.renderRevision = -1;
         for (const ref of this.sections.values())
@@ -23887,7 +23895,7 @@ class SearchNavigatorController {
         }
         this.root.dataset.navPage = this.page;
         this.backButton.hidden = this.layout !== "mobile" || this.page === "filters";
-        this.backButton.setAttribute("aria-label", "返回导航");
+        (0, hover_hints_js_1.setSearchAttribute)(this.backButton, "aria-label", "返回导航");
         this.footer.hidden = true;
         // hidden removes inactive pages from accessibility and keyboard navigation as well as layout.
         this.facets.hidden = hideFacets;
@@ -23933,13 +23941,12 @@ class SearchNavigatorController {
         this.syncPage();
         if (page === "filters") {
             this.sync();
-            if (returningToFilters && this._projectionTimer != null
+            if (returningToFilters && this._projectionTask != null
                 && !this.customization.coordinator.session && !this.customization.coordinator._committing) {
                 // Core.performSearch already scheduled the latest generation.
                 // Consume that *same* projection synchronously; no new timer,
                 // DOM owner, focus path or background work while Results is shown.
-                this.root.ownerDocument.defaultView.clearTimeout(this._projectionTimer);
-                this._projectionTimer = null;
+                this._projectionTask = null;
                 this._renderProjection();
             }
         }
@@ -24007,7 +24014,7 @@ class SearchNavigatorController {
             return;
         // Read before the result commit dirties layout. This snapshot belongs
         // only to the projection queued by this synchronous selection.
-        const scrollSnapshot = this.desktopSidebar && !this.facets.hidden
+        const scrollSnapshot = !this.facets.hidden
             ? { top: this.scroll.scrollTop } : null;
         const state = this.core.filterState;
         if (kind === "tag")
@@ -24094,9 +24101,9 @@ class SearchNavigatorController {
                     this.collapsed.delete(id);
                 else
                     this.collapsed.add(id);
-                // Once a desktop group is current, disclosure only changes its
+                // Once a group is current, disclosure only changes its
                 // visibility. Retain its live rows and the other groups intact.
-                if (!obsidian_1.Platform.isMobile && this.renderRevision === this.core._resultGeneration
+                if (this.renderRevision === this.core._resultGeneration
                     && ref.signature && ref.generation === this.core._resultGeneration) {
                     const [, currentTitle, currentIcon] = this._definitions().find(([key]) => key === id) || [id, title, icon];
                     this._section(id, currentTitle, currentIcon);
@@ -24128,25 +24135,25 @@ class SearchNavigatorController {
         if (id === "folder") {
             const name = ref.toggle.querySelector(".local-search-move-tree-name");
             if (name && name.textContent !== title)
-                setNavigatorProperty(this, name, "textContent", title);
-            setNavigatorAttribute(this, ref.heading, "data-picker-key", title);
-            setNavigatorAttribute(this, ref.toggle, "aria-label", title);
-            setNavigatorAttribute(this, ref.manage, "aria-label", `选择和管理${title}`);
-            setNavigatorAttribute(this, ref.manage, "title", `选择和管理${title}`);
+                (0, dom_js_1.setDomProperty)(name, "textContent", title);
+            (0, hover_hints_js_1.setSearchAttribute)(ref.heading, "data-picker-key", title);
+            (0, hover_hints_js_1.setSearchAttribute)(ref.toggle, "aria-label", title);
+            (0, hover_hints_js_1.setSearchAttribute)(ref.manage, "aria-label", `选择和管理${title}`);
+            (0, hover_hints_js_1.setSearchAttribute)(ref.manage, "title", `选择和管理${title}`);
         }
-        setNavigatorProperty(this, ref.content, "hidden", this.collapsed.has(id));
-        setNavigatorProperty(this, ref.manage, "hidden", this.desktopSidebar || this.layout === "mobile");
-        setNavigatorAttribute(this, ref.toggle, "aria-expanded", String(!ref.content.hidden));
+        (0, dom_js_1.setDomProperty)(ref.content, "hidden", this.collapsed.has(id));
+        (0, dom_js_1.setDomProperty)(ref.manage, "hidden", this.desktopSidebar || this.layout === "mobile");
+        (0, hover_hints_js_1.setSearchAttribute)(ref.toggle, "aria-expanded", String(!ref.content.hidden));
         const chevronIcon = ref.content.hidden ? "chevron-right" : "chevron-down";
         if (ref.chevron.dataset.navIcon !== chevronIcon) {
             (0, navigation_icon_js_1.setNavigatorIcon)(ref.chevron, chevronIcon);
             ref.chevron.dataset.navIcon = chevronIcon;
         }
-        setNavigatorAttribute(this, ref.chevron, "aria-expanded", String(!ref.content.hidden));
+        (0, hover_hints_js_1.setSearchAttribute)(ref.chevron, "aria-expanded", String(!ref.content.hidden));
         const disclosureLabel = `${ref.content.hidden ? "展开" : "折叠"} ${title}`;
         if (ref.disclosureLabel !== disclosureLabel) {
             ref.disclosureLabel = disclosureLabel;
-            setNavigatorAttribute(this, ref.chevron, "aria-label", disclosureLabel);
+            (0, hover_hints_js_1.setSearchAttribute)(ref.chevron, "aria-label", disclosureLabel);
         }
         return ref;
     }
@@ -24157,8 +24164,6 @@ class SearchNavigatorController {
         ref.rows ||= new Map();
         let tree = ref.rows.get(id);
         if (tree && Number(tree.row.dataset.treeDepth) !== depth) {
-            if (ref.rowCursor === tree.row)
-                ref.rowCursor = tree.row.nextElementSibling;
             tree.row.remove();
             ref.rows.delete(id);
             tree = null;
@@ -24175,30 +24180,30 @@ class SearchNavigatorController {
         }
         tree._navOptions = options;
         syncNavigatorRowValues(this, tree, options);
-        // A desktop disclosure changes one branch. Keep callbacks current but
+        // A disclosure changes one branch. Keep callbacks current but
         // do not restamp every unchanged sibling, icon, style and sort control.
         // Preference/index invalidation advances the epoch, so appearance and
         // maintenance changes still pass through the original decorator.
-        if (this.desktopSidebar) {
+        {
             // Folder nodes expose lazy children. Never serialize the node (or
             // its fixed-row callbacks), which would walk collapsed subtrees.
             const { navDescriptor, count, active, ...presentation } = options;
             const { node, fixedOptions, ...descriptor } = navDescriptor || {};
-            const signature = JSON.stringify([presentation, descriptor, Boolean(options.onClick), this._desktopFolderEpoch || 0,
+            const signature = JSON.stringify([presentation, descriptor, Boolean(options.onClick), this._inventoryEpoch || 0,
                 this.customization.sortMode, this.customization.sortScope, this.customization.maintenanceMode]);
             const appearance = this.core.plugin.settings.navigatorCustomization;
             const colors = this.core.plugin.settings.resultFolderColors;
-            if (tree._desktopSignature === signature && tree._desktopAppearance === appearance && tree._desktopColors === colors) {
+            if (tree._presentationSignature === signature && tree._appearance === appearance && tree._colors === colors) {
                 this._placeProjectionRow(ref, id, tree.row);
                 return tree;
             }
-            tree._desktopSignature = signature;
-            tree._desktopAppearance = appearance;
-            tree._desktopColors = colors;
+            tree._presentationSignature = signature;
+            tree._appearance = appearance;
+            tree._colors = colors;
         }
         tree.row.dataset.navRowKey = id;
         tree.row.dataset.pickerKey = options.itemTitle || options.name || "";
-        tree.button.setAttribute("aria-label", options.itemTitle || options.name || "");
+        (0, hover_hints_js_1.setSearchAttribute)(tree.button, "aria-label", options.itemTitle || options.name || "");
         tree.button.disabled = !options.onClick;
         const name = tree.button.querySelector(".local-search-move-tree-name");
         if (name && name.textContent !== String(options.name || ""))
@@ -24210,7 +24215,7 @@ class SearchNavigatorController {
         if (hasChildren) {
             tree.toggle.removeAttribute("aria-hidden");
             tree.toggle.setAttribute("aria-expanded", String(Boolean(options.expanded)));
-            tree.toggle.setAttribute("aria-label", `${options.expanded ? "折叠" : "展开"} ${options.name || ""}`);
+            (0, hover_hints_js_1.setSearchAttribute)(tree.toggle, "aria-label", `${options.expanded ? "折叠" : "展开"} ${options.name || ""}`);
             const toggleIcon = options.expanded ? "chevron-down" : "chevron-right";
             if (tree.toggle.dataset.navIcon !== toggleIcon) {
                 (0, navigation_icon_js_1.setNavigatorIcon)(tree.toggle, toggleIcon);
@@ -24233,21 +24238,13 @@ class SearchNavigatorController {
     }
     _placeProjectionRow(ref, id, row) {
         ref.usedRows?.add(id);
-        if (this.desktopSidebar && ref.plannedRows) {
-            ref.plannedRows.push(row);
-            return;
-        }
-        if (row !== ref.rowCursor)
-            ref.content.insertBefore(row, ref.rowCursor || null);
-        ref.rowCursor = row.nextElementSibling;
+        ref.plannedRows.push(row);
     }
     _separator(ref, descriptor, depth = 0) {
         ref.rows ||= new Map();
         const signature = JSON.stringify([descriptor, depth, this.layout]);
         let tree = ref.rows.get(descriptor.id);
         if (!tree || tree.separatorSignature !== signature) {
-            if (ref.rowCursor === tree?.row)
-                ref.rowCursor = tree.row.nextElementSibling;
             tree?.row.remove();
             tree = this.customization.renderSeparator(ref.content, descriptor, depth + (this.layout === "mobile" ? 1 : 0));
             tree.separatorSignature = signature;
@@ -24262,20 +24259,10 @@ class SearchNavigatorController {
                 tree.row.remove();
                 ref.rows.delete(id);
             }
-        // Remove collapsed descendants before reconciling order. Otherwise a
-        // stale child at rowCursor makes every following sibling move around
-        // it, even though those siblings never changed their relative order.
-        if (ref.plannedRows) {
-            let cursor = ref.content.firstElementChild;
-            for (const row of ref.plannedRows) {
-                if (row !== cursor)
-                    ref.content.insertBefore(row, cursor);
-                cursor = row.nextElementSibling;
-            }
-            ref.plannedRows = null;
-        }
+        // Remove obsolete descendants, then reconcile retained rows in order.
+        (0, dom_js_1.reconcileDomChildren)(ref.content, ref.plannedRows);
+        ref.plannedRows = null;
         ref.usedRows = null;
-        ref.rowCursor = null;
     }
     _more(ref, kind, text = "显示全部…") {
         const row = this._row(ref, { rowKey: `more:${kind}`, name: text, icon: "ellipsis", itemClasses: "local-search-nav-more",
@@ -24284,29 +24271,29 @@ class SearchNavigatorController {
     _cached(key, build) {
         // Query/tag/property refinements do not change navigation's folder scope.
         // Keep only the current scope (not an unbounded cache of visited folders).
-        if (this.desktopSidebar && (["navigation", "tag-counts", "property-presence"].includes(key)
-            || key.startsWith("desktop-property-counts:"))) {
+        if (["navigation", "tag-counts", "property-presence"].includes(key)
+            || key.startsWith("scope-property-counts:")) {
             const folders = JSON.stringify([...this.core.filterState.folders].sort());
-            if (this._desktopScopeCache?.folders !== folders)
-                this._desktopScopeCache = { folders, values: new Map() };
-            const values = this._desktopScopeCache.values;
+            if (this._scopeCache?.folders !== folders)
+                this._scopeCache = { folders, values: new Map() };
+            const values = this._scopeCache.values;
             if (!values.has(key))
                 values.set(key, build());
             return values.get(key);
         }
-        if (this.desktopSidebar && (key === "desktop-tag-tree" || key.startsWith("desktop-property-keys:")
-            || key.startsWith("desktop-property-values:"))) {
-            if (!this._desktopFacetModels.has(key))
-                this._desktopFacetModels.set(key, build());
-            return this._desktopFacetModels.get(key);
+        if (key === "inventory-tag-tree" || key.startsWith("inventory-property-keys:")
+            || key.startsWith("inventory-property-values:")) {
+            if (!this._inventoryModels.has(key))
+                this._inventoryModels.set(key, build());
+            return this._inventoryModels.get(key);
         }
-        if (!obsidian_1.Platform.isMobile && key === "folder-counts") {
+        if (key === "folder-counts") {
             const exclusions = JSON.stringify(this.core.plugin.settings.excludedFolders || []);
-            if (!this._desktopFolderCounts || this._desktopFolderCountExclusions !== exclusions) {
-                this._desktopFolderCounts = build();
-                this._desktopFolderCountExclusions = exclusions;
+            if (!this._folderCounts || this._folderCountExclusions !== exclusions) {
+                this._folderCounts = build();
+                this._folderCountExclusions = exclusions;
             }
-            return this._desktopFolderCounts;
+            return this._folderCounts;
         }
         if (!this._projectionCache.has(key))
             this._projectionCache.set(key, build());
@@ -24315,16 +24302,7 @@ class SearchNavigatorController {
     _propertyKeys(universe) {
         const showExcluded = this.customization.maintenanceMode?.kind === "property-key" && this.customization.maintenanceMode.id === "exclude";
         const excluded = showExcluded ? [] : this.core.plugin.settings.excludedKeys;
-        return this._cached(this.desktopSidebar ? `desktop-property-keys:${showExcluded}` : "property-keys", () => !this.desktopSidebar && this.core.filterState.folders.size
-            ? (0, property_catalog_js_1.collectPropertyKeys)(universe, excluded)
-            : this.core.plugin.propertyCatalogKeys((0, property_catalog_js_1.collectPropertyKeys)(universe, excluded), excluded));
-    }
-    _propertyStats(key, universe, state) {
-        return this._cached(`property:${key}`, () => {
-            const selected = state.properties.get(key);
-            const known = this.core.filterState.folders.size ? [] : this.core.plugin.propertyCatalogValues(key);
-            return (0, property_values_js_1.buildPropertyUsageStats)(universe, key, selected, known);
-        });
+        return this._cached(`inventory-property-keys:${showExcluded}`, () => this.core.plugin.propertyCatalogKeys((0, property_catalog_js_1.collectPropertyKeys)(universe, excluded), excluded));
     }
     _tree(ref, roots, keyPrefix, row, kind, fixed = null) {
         let count = 0, truncated = false;
@@ -24387,34 +24365,31 @@ class SearchNavigatorController {
         if (core.createFlow?.isCreateMode?.() && this.page !== "results")
             this.setPage("results", false);
         const n = core.fullResults.length;
-        setNavigatorAttribute(this, this.resultsButton, "aria-label", `查看结果 · ${n}`);
-        setNavigatorAttribute(this, this.resultsButton, "title", `查看结果 · ${n}`);
+        (0, hover_hints_js_1.setSearchAttribute)(this.resultsButton, "aria-label", `查看结果 · ${n}`);
+        (0, hover_hints_js_1.setSearchAttribute)(this.resultsButton, "title", `查看结果 · ${n}`);
         const title = this._scopeTitle();
         if (this.resultTitle.textContent !== title)
-            setNavigatorProperty(this, this.resultTitle, "textContent", title);
-        setNavigatorAttribute(this, this.resultTitle, "title", this.resultTitle.textContent);
+            (0, dom_js_1.setDomProperty)(this.resultTitle, "textContent", title);
+        (0, hover_hints_js_1.setSearchAttribute)(this.resultTitle, "title", this.resultTitle.textContent);
         this._syncMobileTools();
         // A hidden tree has no work to paint. Rebuild only on returning to it.
         if (this.layout === "mobile" && this.page !== "filters")
             return;
         if (this.renderRevision === core._resultGeneration)
             return;
-        // Result cards commit first. Desktop sidebar selection/tree follows in
-        // the same paint, without a timer frame showing the previous location.
-        // Other hosts retain their original deferred projection.
-        if (this._projectionTimer != null)
+        // Result cards commit first. Selection/tree follows in
+        // the same paint on every host; hidden navigation stays deferred until shown.
+        if (this._projectionTask != null)
             return;
         const project = () => {
-            this._projectionTimer = null;
+            if (this._projectionTask !== project)
+                return;
+            this._projectionTask = null;
             if (this.core === core && !core._destroyed)
                 this._renderProjection();
         };
-        if (this.desktopSidebar) {
-            this._projectionTimer = -1;
-            queueMicrotask(project);
-        }
-        else
-            this._projectionTimer = this.root.ownerDocument.defaultView.setTimeout(project, 0);
+        this._projectionTask = project;
+        queueMicrotask(project);
     }
     _renderProjection() {
         const core = this.core;
@@ -24446,11 +24421,11 @@ class SearchNavigatorController {
                 : this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop);
         const definitions = this._definitions();
         const projections = new Map(definitions.map(([id]) => [id, navigatorSectionProjection(this, id)]));
-        // A settled desktop projection changes text/counts, not row geometry.
+        // A settled projection changes text/counts, not row geometry.
         // Structural changes, maintenance and explicit restoration still need
         // the original anchor path. Never infer this just from a result generation.
-        const stableProjection = this.desktopSidebar && !this.facets.hidden
-            && this._desktopProjectionEpoch === (this._desktopFolderEpoch || 0)
+        const stableProjection = !this.facets.hidden
+            && this._projectionEpoch === (this._inventoryEpoch || 0)
             && this._restoreScrollTop == null && !this.customization.sortMode && !this.customization.maintenanceMode
             && definitions.every(([id]) => {
                 const ref = this.sections.get(id);
@@ -24458,9 +24433,9 @@ class SearchNavigatorController {
                     && (ref.content.hidden || ref.signature === projections.get(id).signature);
             }) && [...this.sections].every(([id, ref]) => ref.section.hidden || projections.has(id));
         const anchorOptions = { selector: "[data-nav-id]", keyFrom: row => row.dataset.navId };
-        // At the desktop list's origin there is no displaced row to preserve.
+        // At the list's origin there is no displaced row to preserve.
         // Avoid measuring every row and forcing layout on each disclosure.
-        const scrollAnchor = !stableProjection && this._restoreScrollTop == null && (obsidian_1.Platform.isMobile || scroll > 0)
+        const scrollAnchor = !stableProjection && this._restoreScrollTop == null && scroll > 0
             ? (0, scroll_anchor_js_1.captureScrollableAnchor)(this.scroll, anchorOptions) : null;
         const scrollBounds = scrollAnchor ? this.scroll.getBoundingClientRect() : null;
         const oldAnchors = scrollAnchor ? [...this.scroll.querySelectorAll("[data-nav-id]")].flatMap(row => {
@@ -24473,9 +24448,9 @@ class SearchNavigatorController {
         }
         const navigation = this._cached("navigation", () => core._navigationCandidates());
         const universe = navigation.scope;
-        const inventory = this.desktopSidebar ? navigation.all : universe;
+        const inventory = navigation.all;
         for (const [id, ref] of this.sections)
-            setNavigatorProperty(this, ref.section, "hidden", !definitions.some(def => def[0] === id));
+            (0, dom_js_1.setDomProperty)(ref.section, "hidden", !definitions.some(def => def[0] === id));
         this._groupSeparators ||= new Map();
         const activeGroupSeparators = new Set();
         const groups = this.customization.order("groups", definitions.map(([key, label, icon]) => ({ kind: "group", key, label, icon, depth: 0 })));
@@ -24507,7 +24482,7 @@ class SearchNavigatorController {
                 this.customization.sortScope, this.customization.maintenanceMode]);
             const appearance = core.plugin.settings.navigatorCustomization;
             const colors = core.plugin.settings.resultFolderColors;
-            if (!this.desktopSidebar || ref.decoration !== decoration
+            if (ref.decoration !== decoration
                 || ref.appearance !== appearance || ref.colors !== colors) {
                 this.customization.decorate(ref.heading, group);
                 ref.decoration = decoration;
@@ -24515,7 +24490,7 @@ class SearchNavigatorController {
                 ref.colors = colors;
             }
             // Expanding one branch does not rebuild unrelated sections or scan the vault.
-            const { desktopFolder, stableFacet, signature } = projections.get(id);
+            const { stableFolder, stableFacet, signature } = projections.get(id);
             let count = 0, selected = false;
             if (id === "folder") {
                 count = navigation.all.length;
@@ -24528,28 +24503,27 @@ class SearchNavigatorController {
             else if (id === "properties") {
                 const candidates = universe;
                 const keys = this._propertyKeys(inventory);
-                count = this.desktopSidebar ? navigatorPropertyPresence(this, candidates, keys).present
-                    : this._cached("property-present-count", () => candidates.filter(meta => keys.some(key => (0, property_values_js_1.metaHasProperty)(meta, key))).length);
+                count = navigatorPropertyPresence(this, candidates, keys).present;
                 selected = state.properties.size > 0;
             }
             // The hover-hint owner may append a hidden accessible-name span.
             // Update the visible text node without removing that owned label.
             const countText = ref.summary.firstChild;
-            if (this.desktopSidebar && countText?.nodeType === 3) {
+            if (countText?.nodeType === 3) {
                 if (countText.nodeValue !== String(count))
                     countText.nodeValue = String(count);
             }
             else
-                setNavigatorProperty(this, ref.summary, "textContent", String(count));
-            setNavigatorProperty(this, ref.summary, "hidden", false);
-            setNavigatorAttribute(this, ref.summary, "aria-label", `${count} 个文件`);
+                (0, dom_js_1.setDomProperty)(ref.summary, "textContent", String(count));
+            (0, dom_js_1.setDomProperty)(ref.summary, "hidden", false);
+            (0, hover_hints_js_1.setSearchAttribute)(ref.summary, "aria-label", `${count} 个文件`);
             // Section headings are navigation/disclosure, not filter values.
             // Keep an informational flag but do not paint a Selected surface
             // when a descendant folder/tag/property is the actual selection.
-            if (!this.desktopSidebar || ref.heading.classList.contains("is-selected"))
+            if (ref.heading.classList.contains("is-selected"))
                 ref.heading.classList.remove("is-selected");
-            setNavigatorAttribute(this, ref.heading, "data-has-applied-children", String(selected));
-            if (ref.signature === signature && desktopFolder) {
+            (0, hover_hints_js_1.setSearchAttribute)(ref.heading, "data-has-applied-children", String(selected));
+            if (ref.signature === signature && stableFolder) {
                 // Scope selection never changes the folder inventory or tree.
                 // Update only the previous/new selected surfaces, without
                 // sorting, rebuilding row descriptors, or restamping labels.
@@ -24604,9 +24578,7 @@ class SearchNavigatorController {
             ref.signature = signature;
             ref.generation = core._resultGeneration;
             ref.usedRows = new Set();
-            ref.rowCursor = ref.content.firstElementChild;
-            if (this.desktopSidebar)
-                ref.plannedRows = [];
+            ref.plannedRows = [];
             if (id === "folder") {
                 // Structural counts, not result counts: result-only hiding,
                 // search text and facets cannot make the folder tree fluctuate.
@@ -24632,7 +24604,7 @@ class SearchNavigatorController {
             else if (id === "tags") {
                 const candidates = universe;
                 const counts = this._cached("tag-counts", () => (0, tag_values_js_1.buildHierarchicalTagUsageCounts)(candidates));
-                this._tree(ref, this._cached(this.desktopSidebar ? "desktop-tag-tree" : "tag-tree", () => (0, tag_tree_js_1.buildTagTreeModel)(inventory, core.plugin.settings.pickerTagOrder)), "tag", node => ({
+                this._tree(ref, this._cached("inventory-tag-tree", () => (0, tag_tree_js_1.buildTagTreeModel)(inventory, core.plugin.settings.pickerTagOrder)), "tag", node => ({
                     name: node.name, itemTitle: node.path, icon: "tag", count: counts.counts.get((0, tag_values_js_1.tagIdentityKey)(node.path)) || 0,
                     active: [...state.tags].some(tag => (0, tag_values_js_1.tagIdentityKey)(tag) === (0, tag_values_js_1.tagIdentityKey)(node.path)), onClick: () => this.select("tag", node.path)
                 }), id, { kind: "tag", key: tag_values_js_1.NO_TAGS_FILTER_VALUE, label: "无标签", icon: "tag", sortable: false,
@@ -24650,15 +24622,7 @@ class SearchNavigatorController {
                     if (++displayedKeys > 40)
                         break;
                     const key = descriptor.key;
-                    if (this.layout !== "mobile" && !this.desktopSidebar
-                        && !(this.customization.sortMode && this.customization.sortScope === "property-value")) {
-                        // Other desktop hosts retain their shared Picker flow.
-                        const present = this._propertyStats(key, universe, state).present;
-                        const row = this._row(ref, { name: key, icon: "list", navDescriptor: descriptor, count: present, active: false, onClick: () => this._openProperty(key, row.button) });
-                        continue;
-                    }
-                    const legacyStats = this.desktopSidebar ? null : this._propertyStats(key, universe, state);
-                    const present = this.desktopSidebar ? navigatorPropertyPresence(this, universe, keys).counts.get(key) || 0 : legacyStats.present;
+                    const present = navigatorPropertyPresence(this, universe, keys).counts.get(key) || 0;
                     const expansion = `properties:${key}`;
                     const expanded = this.expanded.has(expansion);
                     const toggle = () => {
@@ -24670,12 +24634,12 @@ class SearchNavigatorController {
                     const keyRow = this._row(ref, { name: key, itemTitle: key, icon: "list", navDescriptor: descriptor, rowClasses: "local-search-nav-property-key",
                         hasChildren: true, expanded, count: present, toggleTitle: expanded ? "折叠" : "展开",
                         active: false, onClick: toggle, onToggle: toggle });
-                    setNavigatorAttribute(this, keyRow.row, "data-property-key", key);
+                    (0, hover_hints_js_1.setSearchAttribute)(keyRow.row, "data-property-key", key);
                     if (!expanded)
                         continue;
-                    const stats = this.desktopSidebar ? navigatorPropertyValues(this, key, universe, inventory) : legacyStats;
+                    const stats = navigatorPropertyValues(this, key, universe, inventory);
                     const values = stats.values.filter(value => value !== property_values_js_1.PRESENT_PROPERTY_VALUE
-                        && (this.desktopSidebar ? value !== property_values_js_1.MISSING_PROPERTY_VALUE : !(0, property_values_js_1.isSpecialPropertyValue)(value)));
+                        && value !== property_values_js_1.MISSING_PROPERTY_VALUE);
                     let displayedValues = 0;
                     for (const valueDescriptor of this.customization.order(descriptor.id, values.map(value => ({ kind: "property-value", key, value,
                         label: (0, property_values_js_1.propertyValueDisplay)(value), icon: "equal", sortable: (0, property_values_js_1.isSpecialPropertyValue)(value) ? false : undefined })))) {
@@ -24707,27 +24671,23 @@ class SearchNavigatorController {
                 this._groupSeparators.delete(id);
             }
         this.customization.finishRender();
-        if (this.desktopSidebar)
-            this._desktopProjectionEpoch = this._desktopFolderEpoch || 0;
+        this._projectionEpoch = this._inventoryEpoch || 0;
         if (scrollAnchor) {
             const remaining = new Set([...this.scroll.querySelectorAll("[data-nav-id]")].filter(row => row.getClientRects().length).map(row => row.dataset.navId));
             const nearest = remaining.has(scrollAnchor.key) ? scrollAnchor
                 : oldAnchors.filter(anchor => remaining.has(anchor.key)).sort((a, b) => Math.abs(a.offset - scrollAnchor.offset) - Math.abs(b.offset - scrollAnchor.offset))[0];
             (0, scroll_anchor_js_1.restoreScrollableAnchor)(this.scroll, nearest || scrollAnchor, anchorOptions);
         }
-        else if (!stableProjection && (!this.desktopSidebar || this._restoreScrollTop != null || scroll !== 0)) {
+        else if (!stableProjection && (this._restoreScrollTop != null || scroll !== 0)) {
             this.scroll.scrollTop = scroll;
         }
         // At the origin a no-op scroll assignment/read forces the browser to
         // lay out the entire freshly updated tree. Let the normal paint do it.
-        this._filterScrollTop = stableProjection || (this.desktopSidebar && !scrollAnchor && scroll === 0)
+        this._filterScrollTop = stableProjection || (!scrollAnchor && scroll === 0)
             ? scroll : this.scroll.scrollTop;
         this._restoreScrollTop = null;
-        // Desktop panes remain visible during disclosure and folder selection.
         // Page/layout transitions already own syncPage; tree refresh must not
         // refresh the results toolbar and conditions a second time.
-        if (!this.desktopSidebar)
-            this.syncPage();
         // Deferred projection replaces rows after the shared Tree Primitive's
         // synchronous action has returned. Restore only a removed owned focus;
         // an input/Picker that has since taken focus must remain untouched.
@@ -24748,17 +24708,14 @@ class SearchNavigatorController {
             this.root.ownerDocument.defaultView.clearTimeout(this._scrollStateTimer);
         this._scrollStateTimer = null;
         this._scrollStatePending = false;
-        if (this._projectionTimer != null)
-            this.root.ownerDocument.defaultView.clearTimeout(this._projectionTimer);
-        this._projectionTimer = null;
+        this._projectionTask = null;
         this._selectionScrollSnapshot = null;
-        this._presentationLabels = null;
         this.observer?.disconnect();
         this._desktopPane?.destroy();
         this._desktopPane = null;
-        this._desktopFolderCounts = null;
-        this._desktopFacetModels?.clear();
-        this._desktopScopeCache = null;
+        this._folderCounts = null;
+        this._inventoryModels?.clear();
+        this._scopeCache = null;
         this._projectionCache?.clear();
         this.customization?.destroy();
         for (const cleanup of this.cleanups.splice(0))
@@ -33995,7 +33952,7 @@ Object.defineProperty(exports, "default", { enumerable: true, get: function () {
 
 }
 };
-const __links = {"src/utils/markdown-text.js":{},"src/data/index/BodyIndex.js":{"../../utils/markdown-text.js":"src/utils/markdown-text.js"},"src/data/time/time-values.js":{"obsidian":"@host/obsidian"},"src/data/tags/tag-values.js":{},"src/data/properties/property-values.js":{},"src/data/properties/property-types.js":{"../time/time-values.js":"src/data/time/time-values.js","../tags/tag-values.js":"src/data/tags/tag-values.js","./property-values.js":"src/data/properties/property-values.js"},"src/utils/vault-paths.js":{},"src/utils/normalization.js":{},"src/ui/pickers/icon-catalog.js":{"../../utils/normalization.js":"src/utils/normalization.js","obsidian":"@host/obsidian"},"src/features/filters/pool-config.js":{"../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../utils/normalization.js":"src/utils/normalization.js"},"src/features/filters/filter-state.js":{"../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","./pool-config.js":"src/features/filters/pool-config.js"},"src/features/create/create-model.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../filters/filter-state.js":"src/features/filters/filter-state.js"},"src/features/results/virtualization-config.js":{},"src/features/plugin/content-cache-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","../results/virtualization-config.js":"src/features/results/virtualization-config.js"},"src/core/picker-cleanup.js":{},"src/utils/preferred-order.js":{"../features/filters/pool-config.js":"src/features/filters/pool-config.js","./normalization.js":"src/utils/normalization.js"},"src/data/folders/folder-tree.js":{"../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","obsidian":"@host/obsidian"},"src/utils/dom.js":{},"src/ui/components/input-controls.js":{"../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/ui/mobile/mobile-frame.js":{"obsidian":"@host/obsidian"},"src/ui/overlays/popup-order.js":{},"src/ui/overlays/LocalSearchOverlayHost.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../utils/dom.js":"src/utils/dom.js","../components/input-controls.js":"src/ui/components/input-controls.js","../mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","./popup-order.js":"src/ui/overlays/popup-order.js","obsidian":"@host/obsidian"},"src/ui/dialogs/submission.js":{},"src/ui/pickers/picker-header.js":{"../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/ui/overlays/geometry.js":{"../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/ui/overlays/sidebar-popup.js":{"obsidian":"@host/obsidian","./geometry.js":"src/ui/overlays/geometry.js"},"src/ui/overlays/SearchDropdownController.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../dialogs/submission.js":"src/ui/dialogs/submission.js","../mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","../pickers/picker-header.js":"src/ui/pickers/picker-header.js","./geometry.js":"src/ui/overlays/geometry.js","./sidebar-popup.js":"src/ui/overlays/sidebar-popup.js","./popup-order.js":"src/ui/overlays/popup-order.js","obsidian":"@host/obsidian"},"src/interactions/scroll-anchor.js":{"../utils/dom.js":"src/utils/dom.js"},"src/ui/pickers/count-rail.js":{},"src/ui/pickers/tree-row.js":{"../../utils/dom.js":"src/utils/dom.js","../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/ui/pickers/picker-shell.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../components/input-controls.js":"src/ui/components/input-controls.js","./count-rail.js":"src/ui/pickers/count-rail.js","./tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian"},"src/ui/pickers/folder-picker.js":{"../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian"},"src/ui/pickers/selection-strip.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/core/compose-class-methods.js":{},"src/data/tags/tag-tree.js":{"../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","./tag-values.js":"src/data/tags/tag-values.js"},"src/data/properties/property-catalog.js":{"../../utils/preferred-order.js":"src/utils/preferred-order.js","../tags/tag-tree.js":"src/data/tags/tag-tree.js","./property-values.js":"src/data/properties/property-values.js"},"src/features/batch/mutation-flow-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","obsidian":"@host/obsidian"},"src/features/batch/property-editor-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","obsidian":"@host/obsidian"},"src/features/batch/tag-hierarchy-compose.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js"},"src/utils/tree-match.js":{},"src/features/batch/tag-editor-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","./tag-hierarchy-compose.js":"src/features/batch/tag-hierarchy-compose.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian","../../utils/tree-match.js":"src/utils/tree-match.js"},"src/features/batch/BatchMetadataController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","./mutation-flow-methods.js":"src/features/batch/mutation-flow-methods.js","./property-editor-methods.js":"src/features/batch/property-editor-methods.js","./tag-editor-methods.js":"src/features/batch/tag-editor-methods.js"},"src/features/folders/exclusions.js":{"../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/features/selection/SearchSelectionController.js":{"../../ui/components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/features/plugin/external-properties-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../ui/overlays/LocalSearchOverlayHost.js":"src/ui/overlays/LocalSearchOverlayHost.js","../../ui/overlays/SearchDropdownController.js":"src/ui/overlays/SearchDropdownController.js","../../ui/pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../utils/dom.js":"src/utils/dom.js","../../utils/normalization.js":"src/utils/normalization.js","../batch/BatchMetadataController.js":"src/features/batch/BatchMetadataController.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../selection/SearchSelectionController.js":"src/features/selection/SearchSelectionController.js","obsidian":"@host/obsidian"},"src/data/formats/drawing-detection.js":{"obsidian":"@host/obsidian"},"src/features/create/create-file-methods.js":{"../../data/formats/drawing-detection.js":"src/data/formats/drawing-detection.js","../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/data/formats/file-types.js":{"../../features/filters/filter-state.js":"src/features/filters/filter-state.js","./drawing-detection.js":"src/data/formats/drawing-detection.js"},"src/ui/pickers/template-picker.js":{"../../data/formats/drawing-detection.js":"src/data/formats/drawing-detection.js","../../utils/dom.js":"src/utils/dom.js","../../utils/normalization.js":"src/utils/normalization.js","./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js"},"src/features/create/draft-and-metadata-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/pickers/template-picker.js":"src/ui/pickers/template-picker.js","../filters/filter-state.js":"src/features/filters/filter-state.js","./create-model.js":"src/features/create/create-model.js","obsidian":"@host/obsidian"},"src/features/create/input-mode-methods.js":{"../../utils/dom.js":"src/utils/dom.js","../filters/filter-state.js":"src/features/filters/filter-state.js","obsidian":"@host/obsidian"},"src/features/create/payload-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/features/create/preview-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/dom.js":"src/utils/dom.js","../filters/filter-state.js":"src/features/filters/filter-state.js","obsidian":"@host/obsidian"},"src/features/create/SearchCreateController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../filters/filter-state.js":"src/features/filters/filter-state.js","./create-file-methods.js":"src/features/create/create-file-methods.js","./draft-and-metadata-methods.js":"src/features/create/draft-and-metadata-methods.js","./input-mode-methods.js":"src/features/create/input-mode-methods.js","./payload-methods.js":"src/features/create/payload-methods.js","./preview-methods.js":"src/features/create/preview-methods.js"},"src/ui/dialogs/dialog-surface.js":{"../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/ui/dialogs/dialog-session.js":{"../../utils/dom.js":"src/utils/dom.js","./dialog-surface.js":"src/ui/dialogs/dialog-surface.js","./submission.js":"src/ui/dialogs/submission.js","../overlays/sidebar-popup.js":"src/ui/overlays/sidebar-popup.js","obsidian":"@host/obsidian"},"src/features/folders/folder-colors.js":{"../../utils/vault-paths.js":"src/utils/vault-paths.js"},"src/features/facets/folder-colors-methods.js":{"../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../utils/dom.js":"src/utils/dom.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","obsidian":"@host/obsidian"},"src/interactions/sort-feedback.js":{},"src/interactions/PointerSortCoordinator.js":{"./sort-feedback.js":"src/interactions/sort-feedback.js","obsidian":"@host/obsidian"},"src/ui/components/indicator-label.js":{"../../utils/dom.js":"src/utils/dom.js"},"src/ui/pickers/header-modes.js":{"./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js"},"src/ui/pickers/selection-mode.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../components/input-controls.js":"src/ui/components/input-controls.js","./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js"},"src/ui/pickers/sort-mode.js":{"./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./selection-mode.js":"src/ui/pickers/selection-mode.js"},"src/features/facets/folder-picker-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../folders/exclusions.js":"src/features/folders/exclusions.js","obsidian":"@host/obsidian"},"src/ui/components/property-state.js":{"../../data/properties/property-values.js":"src/data/properties/property-values.js","./input-controls.js":"src/ui/components/input-controls.js"},"src/ui/pickers/icon-picker.js":{"../../utils/normalization.js":"src/utils/normalization.js","./icon-catalog.js":"src/ui/pickers/icon-catalog.js","./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js"},"src/features/filters/pool-values.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","./pool-config.js":"src/features/filters/pool-config.js"},"src/features/facets/property-picker-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/components/property-state.js":"src/ui/components/property-state.js","../../ui/dialogs/submission.js":"src/ui/dialogs/submission.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../ui/pickers/icon-picker.js":"src/ui/pickers/icon-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../filters/pool-values.js":"src/features/filters/pool-values.js","obsidian":"@host/obsidian"},"src/features/facets/sidebar-maintenance-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../filters/pool-values.js":"src/features/filters/pool-values.js","../folders/exclusions.js":"src/features/folders/exclusions.js","obsidian":"@host/obsidian"},"src/features/facets/tag-picker-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/tree-match.js":"src/utils/tree-match.js"},"src/features/facets/type-picker-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian"},"src/features/facets/SearchFacetController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","./folder-colors-methods.js":"src/features/facets/folder-colors-methods.js","./folder-picker-methods.js":"src/features/facets/folder-picker-methods.js","./property-picker-methods.js":"src/features/facets/property-picker-methods.js","./sidebar-maintenance-methods.js":"src/features/facets/sidebar-maintenance-methods.js","./tag-picker-methods.js":"src/features/facets/tag-picker-methods.js","./type-picker-methods.js":"src/features/facets/type-picker-methods.js"},"src/features/results/view-config.js":{"../../utils/normalization.js":"src/utils/normalization.js"},"src/ui/components/view-composer.js":{"../../utils/dom.js":"src/utils/dom.js","../pickers/tree-row.js":"src/ui/pickers/tree-row.js","./indicator-label.js":"src/ui/components/indicator-label.js","./input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/features/result-controls/filter-pool-editor-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/components/view-composer.js":"src/ui/components/view-composer.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../filters/pool-values.js":"src/features/filters/pool-values.js"},"src/interactions/hover-hints.js":{},"src/features/result-controls/search-history-methods.js":{"../../interactions/hover-hints.js":"src/interactions/hover-hints.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/features/result-controls/toolbar-methods.js":{"../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../results/view-config.js":"src/features/results/view-config.js","obsidian":"@host/obsidian"},"src/features/navigator/toolbar-config.js":{"../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/pool-config.js":"src/features/filters/pool-config.js"},"src/features/sort/sort-model.js":{"../../utils/normalization.js":"src/utils/normalization.js"},"src/features/result-controls/view-composer-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/components/view-composer.js":"src/ui/components/view-composer.js","../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../ui/pickers/icon-picker.js":"src/ui/pickers/icon-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/dom.js":"src/utils/dom.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/pool-values.js":"src/features/filters/pool-values.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","../results/view-config.js":"src/features/results/view-config.js","../sort/sort-model.js":"src/features/sort/sort-model.js","obsidian":"@host/obsidian"},"src/features/result-controls/SearchResultControlsController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../results/view-config.js":"src/features/results/view-config.js","./filter-pool-editor-methods.js":"src/features/result-controls/filter-pool-editor-methods.js","./search-history-methods.js":"src/features/result-controls/search-history-methods.js","./toolbar-methods.js":"src/features/result-controls/toolbar-methods.js","./view-composer-methods.js":"src/features/result-controls/view-composer-methods.js"},"src/features/results/SparseHeightIndex.js":{"./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/utils/search-text.js":{"./dom.js":"src/utils/dom.js"},"src/features/results/card-metadata-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../../utils/search-text.js":"src/utils/search-text.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","obsidian":"@host/obsidian"},"src/features/results/filter-channels-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../filters/pool-values.js":"src/features/filters/pool-values.js","obsidian":"@host/obsidian"},"src/features/search/QueryState.js":{"../../utils/markdown-text.js":"src/utils/markdown-text.js"},"src/features/results/browse-card-reuse.js":{},"src/features/results/page-and-snippets-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../utils/dom.js":"src/utils/dom.js","../../utils/markdown-text.js":"src/utils/markdown-text.js","../../utils/search-text.js":"src/utils/search-text.js","../search/QueryState.js":"src/features/search/QueryState.js","./browse-card-reuse.js":"src/features/results/browse-card-reuse.js"},"src/features/results/result-card-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/dom.js":"src/utils/dom.js","../../utils/search-text.js":"src/utils/search-text.js","./view-config.js":"src/features/results/view-config.js","obsidian":"@host/obsidian"},"src/core/session-values.js":{},"src/features/results/viewport-anchors-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../../utils/dom.js":"src/utils/dom.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/interactions/SwipeActionCoordinator.js":{"../ui/components/input-controls.js":"src/ui/components/input-controls.js","../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/features/results/viewport-geometry-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../../interactions/SwipeActionCoordinator.js":"src/interactions/SwipeActionCoordinator.js","../../utils/dom.js":"src/utils/dom.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/features/results/virtual-window-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../../utils/dom.js":"src/utils/dom.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/features/results/SearchResultRendererController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../../utils/dom.js":"src/utils/dom.js","./SparseHeightIndex.js":"src/features/results/SparseHeightIndex.js","./card-metadata-methods.js":"src/features/results/card-metadata-methods.js","./filter-channels-methods.js":"src/features/results/filter-channels-methods.js","./page-and-snippets-methods.js":"src/features/results/page-and-snippets-methods.js","./result-card-methods.js":"src/features/results/result-card-methods.js","./viewport-anchors-methods.js":"src/features/results/viewport-anchors-methods.js","./viewport-geometry-methods.js":"src/features/results/viewport-geometry-methods.js","./virtual-window-methods.js":"src/features/results/virtual-window-methods.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/features/sort/SearchSortController.js":{"../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","./sort-model.js":"src/features/sort/sort-model.js","obsidian":"@host/obsidian"},"src/services/IoPool.js":{},"src/core/search/file-actions-methods.js":{"../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../ui/dialogs/dialog-surface.js":"src/ui/dialogs/dialog-surface.js","../../ui/pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","../picker-cleanup.js":"src/core/picker-cleanup.js","obsidian":"@host/obsidian"},"src/features/filters/FilterEngine.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","./filter-state.js":"src/features/filters/filter-state.js"},"src/core/search/input-and-filters-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../features/filters/FilterEngine.js":"src/features/filters/FilterEngine.js","../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../../utils/dom.js":"src/utils/dom.js","../../utils/vault-paths.js":"src/utils/vault-paths.js"},"src/core/search/result-menu-events-methods.js":{"../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/features/search/ResultRanker.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/search-text.js":"src/utils/search-text.js"},"src/core/search/search-and-ranking-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../features/filters/FilterEngine.js":"src/features/filters/FilterEngine.js","../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../../features/search/ResultRanker.js":"src/features/search/ResultRanker.js","../../features/sort/sort-model.js":"src/features/sort/sort-model.js","../../utils/search-text.js":"src/utils/search-text.js","obsidian":"@host/obsidian"},"src/core/search/session-methods.js":{"../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../../features/sort/sort-model.js":"src/features/sort/sort-model.js","../../utils/normalization.js":"src/utils/normalization.js","../session-values.js":"src/core/session-values.js"},"src/features/navigator/navigation-icon.js":{"obsidian":"@host/obsidian"},"src/features/navigator/customization-model.js":{"../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","./toolbar-config.js":"src/features/navigator/toolbar-config.js"},"src/features/navigator/NavigatorCustomization.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/count-rail.js":"src/ui/pickers/count-rail.js","../../ui/pickers/icon-picker.js":"src/ui/pickers/icon-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","./navigation-icon.js":"src/features/navigator/navigation-icon.js","./customization-model.js":"src/features/navigator/customization-model.js","obsidian":"@host/obsidian"},"src/features/navigator/desktop-pane.js":{},"src/features/navigator/SearchNavigatorController.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../core/session-values.js":"src/core/session-values.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/count-rail.js":"src/ui/pickers/count-rail.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../sort/sort-model.js":"src/features/sort/sort-model.js","./NavigatorCustomization.js":"src/features/navigator/NavigatorCustomization.js","./desktop-pane.js":"src/features/navigator/desktop-pane.js","./navigation-icon.js":"src/features/navigator/navigation-icon.js","./customization-model.js":"src/features/navigator/customization-model.js","./toolbar-config.js":"src/features/navigator/toolbar-config.js","obsidian":"@host/obsidian"},"src/core/search/shell-methods.js":{"../../features/navigator/SearchNavigatorController.js":"src/features/navigator/SearchNavigatorController.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/dom.js":"src/utils/dom.js"},"src/core/SearchCore.js":{"../features/batch/BatchMetadataController.js":"src/features/batch/BatchMetadataController.js","../features/create/SearchCreateController.js":"src/features/create/SearchCreateController.js","../features/create/create-model.js":"src/features/create/create-model.js","../features/facets/SearchFacetController.js":"src/features/facets/SearchFacetController.js","../features/filters/filter-state.js":"src/features/filters/filter-state.js","../features/result-controls/SearchResultControlsController.js":"src/features/result-controls/SearchResultControlsController.js","../features/results/SearchResultRendererController.js":"src/features/results/SearchResultRendererController.js","../features/search/QueryState.js":"src/features/search/QueryState.js","../features/selection/SearchSelectionController.js":"src/features/selection/SearchSelectionController.js","../features/sort/SearchSortController.js":"src/features/sort/SearchSortController.js","../features/sort/sort-model.js":"src/features/sort/sort-model.js","../interactions/SwipeActionCoordinator.js":"src/interactions/SwipeActionCoordinator.js","../services/IoPool.js":"src/services/IoPool.js","../ui/overlays/SearchDropdownController.js":"src/ui/overlays/SearchDropdownController.js","../utils/normalization.js":"src/utils/normalization.js","../utils/vault-paths.js":"src/utils/vault-paths.js","./compose-class-methods.js":"src/core/compose-class-methods.js","./search/file-actions-methods.js":"src/core/search/file-actions-methods.js","./search/input-and-filters-methods.js":"src/core/search/input-and-filters-methods.js","./search/result-menu-events-methods.js":"src/core/search/result-menu-events-methods.js","./search/search-and-ranking-methods.js":"src/core/search/search-and-ranking-methods.js","./search/session-methods.js":"src/core/search/session-methods.js","./search/shell-methods.js":"src/core/search/shell-methods.js","./session-values.js":"src/core/session-values.js","obsidian":"@host/obsidian"},"src/integrations/SearchWorkspaceCapabilities.js":{"../ui/mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","obsidian":"@host/obsidian"},"src/ui/hosts/modal-host.js":{"obsidian":"@host/obsidian"},"src/ui/hosts/SearchWindowSession.js":{"../../core/SearchCore.js":"src/core/SearchCore.js","../../utils/dom.js":"src/utils/dom.js","../mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","./modal-host.js":"src/ui/hosts/modal-host.js","obsidian":"@host/obsidian"},"src/features/plugin/external-search-methods.js":{"../../core/SearchCore.js":"src/core/SearchCore.js","../../core/session-values.js":"src/core/session-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../integrations/SearchWorkspaceCapabilities.js":"src/integrations/SearchWorkspaceCapabilities.js","../../ui/hosts/SearchWindowSession.js":"src/ui/hosts/SearchWindowSession.js","../../utils/normalization.js":"src/utils/normalization.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../sort/sort-model.js":"src/features/sort/sort-model.js"},"src/core/view-types.js":{},"src/ui/overlays/OperationOverlayController.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../utils/dom.js":"src/utils/dom.js","../dialogs/dialog-surface.js":"src/ui/dialogs/dialog-surface.js","../dialogs/submission.js":"src/ui/dialogs/submission.js","../pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","./LocalSearchOverlayHost.js":"src/ui/overlays/LocalSearchOverlayHost.js","obsidian":"@host/obsidian"},"src/features/plugin/file-command-actions-methods.js":{"../../core/view-types.js":"src/core/view-types.js","../../ui/overlays/OperationOverlayController.js":"src/ui/overlays/OperationOverlayController.js","obsidian":"@host/obsidian"},"src/data/formats/drawing-content.js":{},"src/features/plugin/file-index-methods.js":{"../../data/formats/drawing-content.js":"src/data/formats/drawing-content.js","../../data/formats/drawing-detection.js":"src/data/formats/drawing-detection.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../services/IoPool.js":"src/services/IoPool.js","../../utils/markdown-text.js":"src/utils/markdown-text.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/features/plugin/index-queue-methods.js":{"../../services/IoPool.js":"src/services/IoPool.js","obsidian":"@host/obsidian"},"src/data/index/index-version.js":{},"src/features/plugin/index-storage-methods.js":{"../../data/index/index-version.js":"src/data/index/index-version.js","../../data/time/time-values.js":"src/data/time/time-values.js","obsidian":"@host/obsidian"},"src/data/properties/raw-mutations.js":{"./property-types.js":"src/data/properties/property-types.js","./property-values.js":"src/data/properties/property-values.js"},"src/data/properties/key-merge.js":{},"src/data/properties/cross-key-transfer.js":{"./property-values.js":"src/data/properties/property-values.js"},"src/services/BatchMetadataService.js":{"../data/properties/property-types.js":"src/data/properties/property-types.js","../data/properties/property-values.js":"src/data/properties/property-values.js","../data/properties/raw-mutations.js":"src/data/properties/raw-mutations.js","../data/properties/key-merge.js":"src/data/properties/key-merge.js","../data/properties/cross-key-transfer.js":"src/data/properties/cross-key-transfer.js","../data/tags/tag-values.js":"src/data/tags/tag-values.js","obsidian":"@host/obsidian"},"src/features/plugin/markdown-write-tracking-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","../../services/BatchMetadataService.js":"src/services/BatchMetadataService.js","../../services/IoPool.js":"src/services/IoPool.js","obsidian":"@host/obsidian"},"src/features/plugin/metadata-directory-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js"},"src/features/plugin/non-markdown-metadata-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","obsidian":"@host/obsidian"},"src/features/plugin/notifications-methods.js":{"../filters/filter-state.js":"src/features/filters/filter-state.js"},"src/features/plugin/path-lifecycle-methods.js":{"../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js","obsidian":"@host/obsidian"},"src/features/plugin/property-catalog-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../utils/normalization.js":"src/utils/normalization.js","obsidian":"@host/obsidian"},"src/features/plugin/property-maintenance-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../services/BatchMetadataService.js":"src/services/BatchMetadataService.js","../../data/properties/key-merge.js":"src/data/properties/key-merge.js","../../utils/normalization.js":"src/utils/normalization.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js"},"src/features/plugin/recent-history-state-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","obsidian":"@host/obsidian"},"src/features/plugin/search-history-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../sort/sort-model.js":"src/features/sort/sort-model.js"},"src/core/default-settings.js":{"../data/time/time-values.js":"src/data/time/time-values.js","../features/navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","../features/results/view-config.js":"src/features/results/view-config.js","../features/sort/sort-model.js":"src/features/sort/sort-model.js"},"src/features/plugin/settings-storage-methods.js":{"../../core/default-settings.js":"src/core/default-settings.js","../../core/session-values.js":"src/core/session-values.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js","../navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","../results/view-config.js":"src/features/results/view-config.js","../sort/sort-model.js":"src/features/sort/sort-model.js"},"src/features/plugin/time-cache-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js"},"src/features/plugin/tree-maintenance-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../create/create-model.js":"src/features/create/create-model.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js","obsidian":"@host/obsidian"},"src/features/plugin/view-preferences-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../results/view-config.js":"src/features/results/view-config.js","../sort/sort-model.js":"src/features/sort/sort-model.js","obsidian":"@host/obsidian"},"src/ui/views/SearchView.js":{"../../core/SearchCore.js":"src/core/SearchCore.js","../../core/view-types.js":"src/core/view-types.js","../../integrations/SearchWorkspaceCapabilities.js":"src/integrations/SearchWorkspaceCapabilities.js","obsidian":"@host/obsidian"},"src/features/plugin/workspace-entry-methods.js":{"../../core/view-types.js":"src/core/view-types.js","../../ui/views/SearchView.js":"src/ui/views/SearchView.js","obsidian":"@host/obsidian"},"src/integrations/public-contract.js":{},"src/interactions/swipe-back.js":{"obsidian":"@host/obsidian"},"src/services/FileOperationService.js":{"../data/properties/property-types.js":"src/data/properties/property-types.js","../data/tags/tag-values.js":"src/data/tags/tag-values.js","../data/time/time-values.js":"src/data/time/time-values.js","../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/ui/settings/setting-row.js":{"obsidian":"@host/obsidian"},"src/ui/settings/LocalSearchSettingTab.js":{"../../core/view-types.js":"src/core/view-types.js","../../data/time/time-values.js":"src/data/time/time-values.js","../components/input-controls.js":"src/ui/components/input-controls.js","./setting-row.js":"src/ui/settings/setting-row.js","obsidian":"@host/obsidian"},"src/core/SharedSearchStateCoordinator.js":{"../features/filters/filter-state.js":"src/features/filters/filter-state.js","../features/sort/sort-model.js":"src/features/sort/sort-model.js","./session-values.js":"src/core/session-values.js"},"src/core/LocalSearchPlugin.js":{"../data/index/BodyIndex.js":"src/data/index/BodyIndex.js","../features/create/create-model.js":"src/features/create/create-model.js","../features/plugin/content-cache-methods.js":"src/features/plugin/content-cache-methods.js","../features/plugin/external-properties-methods.js":"src/features/plugin/external-properties-methods.js","../features/plugin/external-search-methods.js":"src/features/plugin/external-search-methods.js","../features/plugin/file-command-actions-methods.js":"src/features/plugin/file-command-actions-methods.js","../features/plugin/file-index-methods.js":"src/features/plugin/file-index-methods.js","../features/plugin/index-queue-methods.js":"src/features/plugin/index-queue-methods.js","../features/plugin/index-storage-methods.js":"src/features/plugin/index-storage-methods.js","../features/plugin/markdown-write-tracking-methods.js":"src/features/plugin/markdown-write-tracking-methods.js","../features/plugin/metadata-directory-methods.js":"src/features/plugin/metadata-directory-methods.js","../features/plugin/non-markdown-metadata-methods.js":"src/features/plugin/non-markdown-metadata-methods.js","../features/plugin/notifications-methods.js":"src/features/plugin/notifications-methods.js","../features/plugin/path-lifecycle-methods.js":"src/features/plugin/path-lifecycle-methods.js","../features/plugin/property-catalog-methods.js":"src/features/plugin/property-catalog-methods.js","../features/plugin/property-maintenance-methods.js":"src/features/plugin/property-maintenance-methods.js","../features/plugin/recent-history-state-methods.js":"src/features/plugin/recent-history-state-methods.js","../features/plugin/search-history-methods.js":"src/features/plugin/search-history-methods.js","../features/plugin/settings-storage-methods.js":"src/features/plugin/settings-storage-methods.js","../features/plugin/time-cache-methods.js":"src/features/plugin/time-cache-methods.js","../features/plugin/tree-maintenance-methods.js":"src/features/plugin/tree-maintenance-methods.js","../features/plugin/view-preferences-methods.js":"src/features/plugin/view-preferences-methods.js","../features/plugin/workspace-entry-methods.js":"src/features/plugin/workspace-entry-methods.js","../integrations/public-contract.js":"src/integrations/public-contract.js","../interactions/hover-hints.js":"src/interactions/hover-hints.js","../interactions/swipe-back.js":"src/interactions/swipe-back.js","../services/BatchMetadataService.js":"src/services/BatchMetadataService.js","../services/FileOperationService.js":"src/services/FileOperationService.js","../ui/mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","../ui/settings/LocalSearchSettingTab.js":"src/ui/settings/LocalSearchSettingTab.js","../ui/views/SearchView.js":"src/ui/views/SearchView.js","../utils/normalization.js":"src/utils/normalization.js","./SharedSearchStateCoordinator.js":"src/core/SharedSearchStateCoordinator.js","./compose-class-methods.js":"src/core/compose-class-methods.js","./view-types.js":"src/core/view-types.js","obsidian":"@host/obsidian"},"src/main.js":{"./core/LocalSearchPlugin.js":"src/core/LocalSearchPlugin.js"}};
+const __links = {"src/utils/markdown-text.js":{},"src/data/index/BodyIndex.js":{"../../utils/markdown-text.js":"src/utils/markdown-text.js"},"src/data/time/time-values.js":{"obsidian":"@host/obsidian"},"src/data/tags/tag-values.js":{},"src/data/properties/property-values.js":{},"src/data/properties/property-types.js":{"../time/time-values.js":"src/data/time/time-values.js","../tags/tag-values.js":"src/data/tags/tag-values.js","./property-values.js":"src/data/properties/property-values.js"},"src/utils/vault-paths.js":{},"src/utils/normalization.js":{},"src/ui/pickers/icon-catalog.js":{"../../utils/normalization.js":"src/utils/normalization.js","obsidian":"@host/obsidian"},"src/features/filters/pool-config.js":{"../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../utils/normalization.js":"src/utils/normalization.js"},"src/features/filters/filter-state.js":{"../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","./pool-config.js":"src/features/filters/pool-config.js"},"src/features/create/create-model.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../filters/filter-state.js":"src/features/filters/filter-state.js"},"src/features/results/virtualization-config.js":{},"src/features/plugin/content-cache-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","../results/virtualization-config.js":"src/features/results/virtualization-config.js"},"src/core/picker-cleanup.js":{},"src/utils/preferred-order.js":{"../features/filters/pool-config.js":"src/features/filters/pool-config.js","./normalization.js":"src/utils/normalization.js"},"src/data/folders/folder-tree.js":{"../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","obsidian":"@host/obsidian"},"src/utils/dom.js":{},"src/ui/components/input-controls.js":{"../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/ui/mobile/mobile-frame.js":{"obsidian":"@host/obsidian"},"src/ui/overlays/popup-order.js":{},"src/ui/overlays/LocalSearchOverlayHost.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../utils/dom.js":"src/utils/dom.js","../components/input-controls.js":"src/ui/components/input-controls.js","../mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","./popup-order.js":"src/ui/overlays/popup-order.js","obsidian":"@host/obsidian"},"src/ui/dialogs/submission.js":{},"src/ui/pickers/picker-header.js":{"../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/ui/overlays/geometry.js":{"../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/ui/overlays/sidebar-popup.js":{"obsidian":"@host/obsidian","./geometry.js":"src/ui/overlays/geometry.js"},"src/ui/overlays/SearchDropdownController.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../dialogs/submission.js":"src/ui/dialogs/submission.js","../mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","../pickers/picker-header.js":"src/ui/pickers/picker-header.js","./geometry.js":"src/ui/overlays/geometry.js","./sidebar-popup.js":"src/ui/overlays/sidebar-popup.js","./popup-order.js":"src/ui/overlays/popup-order.js","obsidian":"@host/obsidian"},"src/interactions/scroll-anchor.js":{"../utils/dom.js":"src/utils/dom.js"},"src/ui/pickers/count-rail.js":{},"src/ui/pickers/tree-row.js":{"../../utils/dom.js":"src/utils/dom.js","../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/ui/pickers/picker-shell.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../components/input-controls.js":"src/ui/components/input-controls.js","./count-rail.js":"src/ui/pickers/count-rail.js","./tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian"},"src/ui/pickers/folder-picker.js":{"../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian"},"src/ui/pickers/selection-strip.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/core/compose-class-methods.js":{},"src/data/tags/tag-tree.js":{"../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","./tag-values.js":"src/data/tags/tag-values.js"},"src/data/properties/property-catalog.js":{"../../utils/preferred-order.js":"src/utils/preferred-order.js","../tags/tag-tree.js":"src/data/tags/tag-tree.js","./property-values.js":"src/data/properties/property-values.js"},"src/features/batch/mutation-flow-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","obsidian":"@host/obsidian"},"src/features/batch/property-editor-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","obsidian":"@host/obsidian"},"src/features/batch/tag-hierarchy-compose.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js"},"src/utils/tree-match.js":{},"src/features/batch/tag-editor-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","./tag-hierarchy-compose.js":"src/features/batch/tag-hierarchy-compose.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian","../../utils/tree-match.js":"src/utils/tree-match.js"},"src/features/batch/BatchMetadataController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","./mutation-flow-methods.js":"src/features/batch/mutation-flow-methods.js","./property-editor-methods.js":"src/features/batch/property-editor-methods.js","./tag-editor-methods.js":"src/features/batch/tag-editor-methods.js"},"src/features/folders/exclusions.js":{"../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/features/selection/SearchSelectionController.js":{"../../ui/components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/features/plugin/external-properties-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../ui/overlays/LocalSearchOverlayHost.js":"src/ui/overlays/LocalSearchOverlayHost.js","../../ui/overlays/SearchDropdownController.js":"src/ui/overlays/SearchDropdownController.js","../../ui/pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../utils/dom.js":"src/utils/dom.js","../../utils/normalization.js":"src/utils/normalization.js","../batch/BatchMetadataController.js":"src/features/batch/BatchMetadataController.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../selection/SearchSelectionController.js":"src/features/selection/SearchSelectionController.js","obsidian":"@host/obsidian"},"src/data/formats/drawing-detection.js":{"obsidian":"@host/obsidian"},"src/features/create/create-file-methods.js":{"../../data/formats/drawing-detection.js":"src/data/formats/drawing-detection.js","../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/data/formats/file-types.js":{"../../features/filters/filter-state.js":"src/features/filters/filter-state.js","./drawing-detection.js":"src/data/formats/drawing-detection.js"},"src/ui/pickers/template-picker.js":{"../../data/formats/drawing-detection.js":"src/data/formats/drawing-detection.js","../../utils/dom.js":"src/utils/dom.js","../../utils/normalization.js":"src/utils/normalization.js","./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js"},"src/features/create/draft-and-metadata-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/pickers/template-picker.js":"src/ui/pickers/template-picker.js","../filters/filter-state.js":"src/features/filters/filter-state.js","./create-model.js":"src/features/create/create-model.js","obsidian":"@host/obsidian"},"src/features/create/input-mode-methods.js":{"../../utils/dom.js":"src/utils/dom.js","../filters/filter-state.js":"src/features/filters/filter-state.js","obsidian":"@host/obsidian"},"src/features/create/payload-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/features/create/preview-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/dom.js":"src/utils/dom.js","../filters/filter-state.js":"src/features/filters/filter-state.js","obsidian":"@host/obsidian"},"src/features/create/SearchCreateController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../filters/filter-state.js":"src/features/filters/filter-state.js","./create-file-methods.js":"src/features/create/create-file-methods.js","./draft-and-metadata-methods.js":"src/features/create/draft-and-metadata-methods.js","./input-mode-methods.js":"src/features/create/input-mode-methods.js","./payload-methods.js":"src/features/create/payload-methods.js","./preview-methods.js":"src/features/create/preview-methods.js"},"src/ui/dialogs/dialog-surface.js":{"../components/input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/ui/dialogs/dialog-session.js":{"../../utils/dom.js":"src/utils/dom.js","./dialog-surface.js":"src/ui/dialogs/dialog-surface.js","./submission.js":"src/ui/dialogs/submission.js","../overlays/sidebar-popup.js":"src/ui/overlays/sidebar-popup.js","obsidian":"@host/obsidian"},"src/features/folders/folder-colors.js":{"../../utils/vault-paths.js":"src/utils/vault-paths.js"},"src/features/facets/folder-colors-methods.js":{"../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../utils/dom.js":"src/utils/dom.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","obsidian":"@host/obsidian"},"src/interactions/sort-feedback.js":{},"src/interactions/PointerSortCoordinator.js":{"./sort-feedback.js":"src/interactions/sort-feedback.js","obsidian":"@host/obsidian"},"src/ui/components/indicator-label.js":{"../../utils/dom.js":"src/utils/dom.js"},"src/ui/pickers/header-modes.js":{"./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js"},"src/ui/pickers/selection-mode.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../components/input-controls.js":"src/ui/components/input-controls.js","./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js"},"src/ui/pickers/sort-mode.js":{"./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./selection-mode.js":"src/ui/pickers/selection-mode.js"},"src/features/facets/folder-picker-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../folders/exclusions.js":"src/features/folders/exclusions.js","obsidian":"@host/obsidian"},"src/ui/components/property-state.js":{"../../data/properties/property-values.js":"src/data/properties/property-values.js","./input-controls.js":"src/ui/components/input-controls.js"},"src/ui/pickers/icon-picker.js":{"../../utils/normalization.js":"src/utils/normalization.js","./icon-catalog.js":"src/ui/pickers/icon-catalog.js","./picker-header.js":"src/ui/pickers/picker-header.js","./picker-shell.js":"src/ui/pickers/picker-shell.js","./tree-row.js":"src/ui/pickers/tree-row.js"},"src/features/filters/pool-values.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","./pool-config.js":"src/features/filters/pool-config.js"},"src/features/facets/property-picker-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/components/property-state.js":"src/ui/components/property-state.js","../../ui/dialogs/submission.js":"src/ui/dialogs/submission.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../ui/pickers/icon-picker.js":"src/ui/pickers/icon-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../filters/pool-values.js":"src/features/filters/pool-values.js","obsidian":"@host/obsidian"},"src/features/facets/sidebar-maintenance-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../filters/pool-values.js":"src/features/filters/pool-values.js","../folders/exclusions.js":"src/features/folders/exclusions.js","obsidian":"@host/obsidian"},"src/features/facets/tag-picker-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/tree-match.js":"src/utils/tree-match.js"},"src/features/facets/type-picker-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/header-modes.js":"src/ui/pickers/header-modes.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-strip.js":"src/ui/pickers/selection-strip.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","obsidian":"@host/obsidian"},"src/features/facets/SearchFacetController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","./folder-colors-methods.js":"src/features/facets/folder-colors-methods.js","./folder-picker-methods.js":"src/features/facets/folder-picker-methods.js","./property-picker-methods.js":"src/features/facets/property-picker-methods.js","./sidebar-maintenance-methods.js":"src/features/facets/sidebar-maintenance-methods.js","./tag-picker-methods.js":"src/features/facets/tag-picker-methods.js","./type-picker-methods.js":"src/features/facets/type-picker-methods.js"},"src/features/results/view-config.js":{"../../utils/normalization.js":"src/utils/normalization.js"},"src/ui/components/view-composer.js":{"../../utils/dom.js":"src/utils/dom.js","../pickers/tree-row.js":"src/ui/pickers/tree-row.js","./indicator-label.js":"src/ui/components/indicator-label.js","./input-controls.js":"src/ui/components/input-controls.js","obsidian":"@host/obsidian"},"src/features/result-controls/filter-pool-editor-methods.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/components/view-composer.js":"src/ui/components/view-composer.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/selection-mode.js":"src/ui/pickers/selection-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../filters/pool-values.js":"src/features/filters/pool-values.js"},"src/interactions/hover-hints.js":{},"src/features/result-controls/search-history-methods.js":{"../../interactions/hover-hints.js":"src/interactions/hover-hints.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/features/result-controls/toolbar-methods.js":{"../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../results/view-config.js":"src/features/results/view-config.js","obsidian":"@host/obsidian"},"src/features/navigator/toolbar-config.js":{"../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/pool-config.js":"src/features/filters/pool-config.js"},"src/features/sort/sort-model.js":{"../../utils/normalization.js":"src/utils/normalization.js"},"src/features/result-controls/view-composer-methods.js":{"../../interactions/hover-hints.js":"src/interactions/hover-hints.js","../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/components/view-composer.js":"src/ui/components/view-composer.js","../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../ui/pickers/icon-picker.js":"src/ui/pickers/icon-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/picker-shell.js":"src/ui/pickers/picker-shell.js","../../ui/pickers/sort-mode.js":"src/ui/pickers/sort-mode.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/dom.js":"src/utils/dom.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/pool-values.js":"src/features/filters/pool-values.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","../results/view-config.js":"src/features/results/view-config.js","../sort/sort-model.js":"src/features/sort/sort-model.js","obsidian":"@host/obsidian"},"src/features/result-controls/SearchResultControlsController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../results/view-config.js":"src/features/results/view-config.js","./filter-pool-editor-methods.js":"src/features/result-controls/filter-pool-editor-methods.js","./search-history-methods.js":"src/features/result-controls/search-history-methods.js","./toolbar-methods.js":"src/features/result-controls/toolbar-methods.js","./view-composer-methods.js":"src/features/result-controls/view-composer-methods.js"},"src/features/results/SparseHeightIndex.js":{"./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/utils/search-text.js":{"./dom.js":"src/utils/dom.js"},"src/features/results/card-metadata-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../../utils/search-text.js":"src/utils/search-text.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","obsidian":"@host/obsidian"},"src/features/results/filter-channels-methods.js":{"../../interactions/hover-hints.js":"src/interactions/hover-hints.js","../../utils/dom.js":"src/utils/dom.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../filters/pool-values.js":"src/features/filters/pool-values.js","obsidian":"@host/obsidian"},"src/features/search/QueryState.js":{"../../utils/markdown-text.js":"src/utils/markdown-text.js"},"src/features/results/browse-card-reuse.js":{},"src/features/results/page-and-snippets-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../utils/dom.js":"src/utils/dom.js","../../utils/markdown-text.js":"src/utils/markdown-text.js","../../utils/search-text.js":"src/utils/search-text.js","../search/QueryState.js":"src/features/search/QueryState.js","./browse-card-reuse.js":"src/features/results/browse-card-reuse.js"},"src/features/results/result-card-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/dom.js":"src/utils/dom.js","../../utils/search-text.js":"src/utils/search-text.js","./view-config.js":"src/features/results/view-config.js","obsidian":"@host/obsidian"},"src/core/session-values.js":{},"src/features/results/viewport-anchors-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../../utils/dom.js":"src/utils/dom.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/interactions/SwipeActionCoordinator.js":{"../ui/components/input-controls.js":"src/ui/components/input-controls.js","../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/features/results/viewport-geometry-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../../interactions/SwipeActionCoordinator.js":"src/interactions/SwipeActionCoordinator.js","../../utils/dom.js":"src/utils/dom.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/features/results/virtual-window-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../../utils/dom.js":"src/utils/dom.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/features/results/SearchResultRendererController.js":{"../../core/compose-class-methods.js":"src/core/compose-class-methods.js","../../utils/dom.js":"src/utils/dom.js","./SparseHeightIndex.js":"src/features/results/SparseHeightIndex.js","./card-metadata-methods.js":"src/features/results/card-metadata-methods.js","./filter-channels-methods.js":"src/features/results/filter-channels-methods.js","./page-and-snippets-methods.js":"src/features/results/page-and-snippets-methods.js","./result-card-methods.js":"src/features/results/result-card-methods.js","./viewport-anchors-methods.js":"src/features/results/viewport-anchors-methods.js","./viewport-geometry-methods.js":"src/features/results/viewport-geometry-methods.js","./virtual-window-methods.js":"src/features/results/virtual-window-methods.js","./virtualization-config.js":"src/features/results/virtualization-config.js"},"src/features/sort/SearchSortController.js":{"../../interactions/hover-hints.js":"src/interactions/hover-hints.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","./sort-model.js":"src/features/sort/sort-model.js","obsidian":"@host/obsidian"},"src/services/IoPool.js":{},"src/core/search/file-actions-methods.js":{"../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../ui/dialogs/dialog-surface.js":"src/ui/dialogs/dialog-surface.js","../../ui/pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","../picker-cleanup.js":"src/core/picker-cleanup.js","obsidian":"@host/obsidian"},"src/features/filters/FilterEngine.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","./filter-state.js":"src/features/filters/filter-state.js"},"src/core/search/input-and-filters-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../features/filters/FilterEngine.js":"src/features/filters/FilterEngine.js","../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../../utils/dom.js":"src/utils/dom.js","../../utils/vault-paths.js":"src/utils/vault-paths.js"},"src/core/search/result-menu-events-methods.js":{"../../utils/dom.js":"src/utils/dom.js","obsidian":"@host/obsidian"},"src/features/search/ResultRanker.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/search-text.js":"src/utils/search-text.js"},"src/core/search/search-and-ranking-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../features/filters/FilterEngine.js":"src/features/filters/FilterEngine.js","../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../../features/search/ResultRanker.js":"src/features/search/ResultRanker.js","../../features/sort/sort-model.js":"src/features/sort/sort-model.js","../../utils/search-text.js":"src/utils/search-text.js","obsidian":"@host/obsidian"},"src/core/search/session-methods.js":{"../../features/filters/filter-state.js":"src/features/filters/filter-state.js","../../features/sort/sort-model.js":"src/features/sort/sort-model.js","../../utils/normalization.js":"src/utils/normalization.js","../session-values.js":"src/core/session-values.js"},"src/features/navigator/navigation-icon.js":{"obsidian":"@host/obsidian"},"src/features/navigator/customization-model.js":{"../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","./toolbar-config.js":"src/features/navigator/toolbar-config.js"},"src/features/navigator/NavigatorCustomization.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../ui/dialogs/dialog-session.js":"src/ui/dialogs/dialog-session.js","../../interactions/PointerSortCoordinator.js":"src/interactions/PointerSortCoordinator.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/count-rail.js":"src/ui/pickers/count-rail.js","../../ui/pickers/icon-picker.js":"src/ui/pickers/icon-picker.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","./navigation-icon.js":"src/features/navigator/navigation-icon.js","./customization-model.js":"src/features/navigator/customization-model.js","obsidian":"@host/obsidian"},"src/features/navigator/desktop-pane.js":{},"src/features/navigator/SearchNavigatorController.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../core/session-values.js":"src/core/session-values.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-tree.js":"src/data/tags/tag-tree.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../interactions/hover-hints.js":"src/interactions/hover-hints.js","../../utils/dom.js":"src/utils/dom.js","../../interactions/scroll-anchor.js":"src/interactions/scroll-anchor.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../ui/pickers/count-rail.js":"src/ui/pickers/count-rail.js","../../ui/pickers/picker-header.js":"src/ui/pickers/picker-header.js","../../ui/pickers/tree-row.js":"src/ui/pickers/tree-row.js","../../utils/normalization.js":"src/utils/normalization.js","../sort/sort-model.js":"src/features/sort/sort-model.js","./NavigatorCustomization.js":"src/features/navigator/NavigatorCustomization.js","./desktop-pane.js":"src/features/navigator/desktop-pane.js","./navigation-icon.js":"src/features/navigator/navigation-icon.js","./customization-model.js":"src/features/navigator/customization-model.js","./toolbar-config.js":"src/features/navigator/toolbar-config.js","obsidian":"@host/obsidian"},"src/core/search/shell-methods.js":{"../../features/navigator/SearchNavigatorController.js":"src/features/navigator/SearchNavigatorController.js","../../ui/components/indicator-label.js":"src/ui/components/indicator-label.js","../../ui/components/input-controls.js":"src/ui/components/input-controls.js","../../utils/dom.js":"src/utils/dom.js"},"src/core/SearchCore.js":{"../features/batch/BatchMetadataController.js":"src/features/batch/BatchMetadataController.js","../features/create/SearchCreateController.js":"src/features/create/SearchCreateController.js","../features/create/create-model.js":"src/features/create/create-model.js","../features/facets/SearchFacetController.js":"src/features/facets/SearchFacetController.js","../features/filters/filter-state.js":"src/features/filters/filter-state.js","../features/result-controls/SearchResultControlsController.js":"src/features/result-controls/SearchResultControlsController.js","../features/results/SearchResultRendererController.js":"src/features/results/SearchResultRendererController.js","../features/search/QueryState.js":"src/features/search/QueryState.js","../features/selection/SearchSelectionController.js":"src/features/selection/SearchSelectionController.js","../features/sort/SearchSortController.js":"src/features/sort/SearchSortController.js","../features/sort/sort-model.js":"src/features/sort/sort-model.js","../interactions/SwipeActionCoordinator.js":"src/interactions/SwipeActionCoordinator.js","../services/IoPool.js":"src/services/IoPool.js","../ui/overlays/SearchDropdownController.js":"src/ui/overlays/SearchDropdownController.js","../utils/normalization.js":"src/utils/normalization.js","../utils/vault-paths.js":"src/utils/vault-paths.js","./compose-class-methods.js":"src/core/compose-class-methods.js","./search/file-actions-methods.js":"src/core/search/file-actions-methods.js","./search/input-and-filters-methods.js":"src/core/search/input-and-filters-methods.js","./search/result-menu-events-methods.js":"src/core/search/result-menu-events-methods.js","./search/search-and-ranking-methods.js":"src/core/search/search-and-ranking-methods.js","./search/session-methods.js":"src/core/search/session-methods.js","./search/shell-methods.js":"src/core/search/shell-methods.js","./session-values.js":"src/core/session-values.js","obsidian":"@host/obsidian"},"src/integrations/SearchWorkspaceCapabilities.js":{"../ui/mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","obsidian":"@host/obsidian"},"src/ui/hosts/modal-host.js":{"obsidian":"@host/obsidian"},"src/ui/hosts/SearchWindowSession.js":{"../../core/SearchCore.js":"src/core/SearchCore.js","../../utils/dom.js":"src/utils/dom.js","../mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","./modal-host.js":"src/ui/hosts/modal-host.js","obsidian":"@host/obsidian"},"src/features/plugin/external-search-methods.js":{"../../core/SearchCore.js":"src/core/SearchCore.js","../../core/session-values.js":"src/core/session-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../integrations/SearchWorkspaceCapabilities.js":"src/integrations/SearchWorkspaceCapabilities.js","../../ui/hosts/SearchWindowSession.js":"src/ui/hosts/SearchWindowSession.js","../../utils/normalization.js":"src/utils/normalization.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../sort/sort-model.js":"src/features/sort/sort-model.js"},"src/core/view-types.js":{},"src/ui/overlays/OperationOverlayController.js":{"../../core/picker-cleanup.js":"src/core/picker-cleanup.js","../../data/folders/folder-tree.js":"src/data/folders/folder-tree.js","../../utils/dom.js":"src/utils/dom.js","../dialogs/dialog-surface.js":"src/ui/dialogs/dialog-surface.js","../dialogs/submission.js":"src/ui/dialogs/submission.js","../pickers/folder-picker.js":"src/ui/pickers/folder-picker.js","./LocalSearchOverlayHost.js":"src/ui/overlays/LocalSearchOverlayHost.js","obsidian":"@host/obsidian"},"src/features/plugin/file-command-actions-methods.js":{"../../core/view-types.js":"src/core/view-types.js","../../ui/overlays/OperationOverlayController.js":"src/ui/overlays/OperationOverlayController.js","obsidian":"@host/obsidian"},"src/data/formats/drawing-content.js":{},"src/features/plugin/file-index-methods.js":{"../../data/formats/drawing-content.js":"src/data/formats/drawing-content.js","../../data/formats/drawing-detection.js":"src/data/formats/drawing-detection.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../services/IoPool.js":"src/services/IoPool.js","../../utils/markdown-text.js":"src/utils/markdown-text.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/features/plugin/index-queue-methods.js":{"../../services/IoPool.js":"src/services/IoPool.js","obsidian":"@host/obsidian"},"src/data/index/index-version.js":{},"src/features/plugin/index-storage-methods.js":{"../../data/index/index-version.js":"src/data/index/index-version.js","../../data/time/time-values.js":"src/data/time/time-values.js","obsidian":"@host/obsidian"},"src/data/properties/raw-mutations.js":{"./property-types.js":"src/data/properties/property-types.js","./property-values.js":"src/data/properties/property-values.js"},"src/data/properties/key-merge.js":{},"src/data/properties/cross-key-transfer.js":{"./property-values.js":"src/data/properties/property-values.js"},"src/services/BatchMetadataService.js":{"../data/properties/property-types.js":"src/data/properties/property-types.js","../data/properties/property-values.js":"src/data/properties/property-values.js","../data/properties/raw-mutations.js":"src/data/properties/raw-mutations.js","../data/properties/key-merge.js":"src/data/properties/key-merge.js","../data/properties/cross-key-transfer.js":"src/data/properties/cross-key-transfer.js","../data/tags/tag-values.js":"src/data/tags/tag-values.js","obsidian":"@host/obsidian"},"src/features/plugin/markdown-write-tracking-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","../../services/BatchMetadataService.js":"src/services/BatchMetadataService.js","../../services/IoPool.js":"src/services/IoPool.js","obsidian":"@host/obsidian"},"src/features/plugin/metadata-directory-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","../../utils/vault-paths.js":"src/utils/vault-paths.js"},"src/features/plugin/non-markdown-metadata-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","obsidian":"@host/obsidian"},"src/features/plugin/notifications-methods.js":{"../filters/filter-state.js":"src/features/filters/filter-state.js"},"src/features/plugin/path-lifecycle-methods.js":{"../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js","obsidian":"@host/obsidian"},"src/features/plugin/property-catalog-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../utils/normalization.js":"src/utils/normalization.js","obsidian":"@host/obsidian"},"src/features/plugin/property-maintenance-methods.js":{"../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../services/BatchMetadataService.js":"src/services/BatchMetadataService.js","../../data/properties/key-merge.js":"src/data/properties/key-merge.js","../../utils/normalization.js":"src/utils/normalization.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js"},"src/features/plugin/recent-history-state-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js","obsidian":"@host/obsidian"},"src/features/plugin/search-history-methods.js":{"../../core/session-values.js":"src/core/session-values.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../sort/sort-model.js":"src/features/sort/sort-model.js"},"src/core/default-settings.js":{"../data/time/time-values.js":"src/data/time/time-values.js","../features/navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","../features/results/view-config.js":"src/features/results/view-config.js","../features/sort/sort-model.js":"src/features/sort/sort-model.js"},"src/features/plugin/settings-storage-methods.js":{"../../core/default-settings.js":"src/core/default-settings.js","../../core/session-values.js":"src/core/session-values.js","../../data/formats/file-types.js":"src/data/formats/file-types.js","../../data/properties/property-types.js":"src/data/properties/property-types.js","../../data/time/time-values.js":"src/data/time/time-values.js","../../ui/pickers/icon-catalog.js":"src/ui/pickers/icon-catalog.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../create/create-model.js":"src/features/create/create-model.js","../filters/filter-state.js":"src/features/filters/filter-state.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../folders/folder-colors.js":"src/features/folders/folder-colors.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js","../navigator/toolbar-config.js":"src/features/navigator/toolbar-config.js","../results/view-config.js":"src/features/results/view-config.js","../sort/sort-model.js":"src/features/sort/sort-model.js"},"src/features/plugin/time-cache-methods.js":{"../../data/time/time-values.js":"src/data/time/time-values.js"},"src/features/plugin/tree-maintenance-methods.js":{"../../data/properties/property-catalog.js":"src/data/properties/property-catalog.js","../../data/properties/property-values.js":"src/data/properties/property-values.js","../../data/tags/tag-values.js":"src/data/tags/tag-values.js","../../utils/normalization.js":"src/utils/normalization.js","../../utils/preferred-order.js":"src/utils/preferred-order.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../create/create-model.js":"src/features/create/create-model.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../navigator/customization-model.js":"src/features/navigator/customization-model.js","obsidian":"@host/obsidian"},"src/features/plugin/view-preferences-methods.js":{"../../data/formats/file-types.js":"src/data/formats/file-types.js","../../utils/vault-paths.js":"src/utils/vault-paths.js","../filters/pool-config.js":"src/features/filters/pool-config.js","../folders/exclusions.js":"src/features/folders/exclusions.js","../results/view-config.js":"src/features/results/view-config.js","../sort/sort-model.js":"src/features/sort/sort-model.js","obsidian":"@host/obsidian"},"src/ui/views/SearchView.js":{"../../core/SearchCore.js":"src/core/SearchCore.js","../../core/view-types.js":"src/core/view-types.js","../../integrations/SearchWorkspaceCapabilities.js":"src/integrations/SearchWorkspaceCapabilities.js","obsidian":"@host/obsidian"},"src/features/plugin/workspace-entry-methods.js":{"../../core/view-types.js":"src/core/view-types.js","../../ui/views/SearchView.js":"src/ui/views/SearchView.js","obsidian":"@host/obsidian"},"src/integrations/public-contract.js":{},"src/interactions/swipe-back.js":{"obsidian":"@host/obsidian"},"src/services/FileOperationService.js":{"../data/properties/property-types.js":"src/data/properties/property-types.js","../data/tags/tag-values.js":"src/data/tags/tag-values.js","../data/time/time-values.js":"src/data/time/time-values.js","../utils/vault-paths.js":"src/utils/vault-paths.js","obsidian":"@host/obsidian"},"src/ui/settings/setting-row.js":{"obsidian":"@host/obsidian"},"src/ui/settings/LocalSearchSettingTab.js":{"../../core/view-types.js":"src/core/view-types.js","../../data/time/time-values.js":"src/data/time/time-values.js","../components/input-controls.js":"src/ui/components/input-controls.js","./setting-row.js":"src/ui/settings/setting-row.js","obsidian":"@host/obsidian"},"src/core/SharedSearchStateCoordinator.js":{"../features/filters/filter-state.js":"src/features/filters/filter-state.js","../features/sort/sort-model.js":"src/features/sort/sort-model.js","./session-values.js":"src/core/session-values.js"},"src/core/LocalSearchPlugin.js":{"../data/index/BodyIndex.js":"src/data/index/BodyIndex.js","../features/create/create-model.js":"src/features/create/create-model.js","../features/plugin/content-cache-methods.js":"src/features/plugin/content-cache-methods.js","../features/plugin/external-properties-methods.js":"src/features/plugin/external-properties-methods.js","../features/plugin/external-search-methods.js":"src/features/plugin/external-search-methods.js","../features/plugin/file-command-actions-methods.js":"src/features/plugin/file-command-actions-methods.js","../features/plugin/file-index-methods.js":"src/features/plugin/file-index-methods.js","../features/plugin/index-queue-methods.js":"src/features/plugin/index-queue-methods.js","../features/plugin/index-storage-methods.js":"src/features/plugin/index-storage-methods.js","../features/plugin/markdown-write-tracking-methods.js":"src/features/plugin/markdown-write-tracking-methods.js","../features/plugin/metadata-directory-methods.js":"src/features/plugin/metadata-directory-methods.js","../features/plugin/non-markdown-metadata-methods.js":"src/features/plugin/non-markdown-metadata-methods.js","../features/plugin/notifications-methods.js":"src/features/plugin/notifications-methods.js","../features/plugin/path-lifecycle-methods.js":"src/features/plugin/path-lifecycle-methods.js","../features/plugin/property-catalog-methods.js":"src/features/plugin/property-catalog-methods.js","../features/plugin/property-maintenance-methods.js":"src/features/plugin/property-maintenance-methods.js","../features/plugin/recent-history-state-methods.js":"src/features/plugin/recent-history-state-methods.js","../features/plugin/search-history-methods.js":"src/features/plugin/search-history-methods.js","../features/plugin/settings-storage-methods.js":"src/features/plugin/settings-storage-methods.js","../features/plugin/time-cache-methods.js":"src/features/plugin/time-cache-methods.js","../features/plugin/tree-maintenance-methods.js":"src/features/plugin/tree-maintenance-methods.js","../features/plugin/view-preferences-methods.js":"src/features/plugin/view-preferences-methods.js","../features/plugin/workspace-entry-methods.js":"src/features/plugin/workspace-entry-methods.js","../integrations/public-contract.js":"src/integrations/public-contract.js","../interactions/hover-hints.js":"src/interactions/hover-hints.js","../interactions/swipe-back.js":"src/interactions/swipe-back.js","../services/BatchMetadataService.js":"src/services/BatchMetadataService.js","../services/FileOperationService.js":"src/services/FileOperationService.js","../ui/mobile/mobile-frame.js":"src/ui/mobile/mobile-frame.js","../ui/settings/LocalSearchSettingTab.js":"src/ui/settings/LocalSearchSettingTab.js","../ui/views/SearchView.js":"src/ui/views/SearchView.js","../utils/normalization.js":"src/utils/normalization.js","./SharedSearchStateCoordinator.js":"src/core/SharedSearchStateCoordinator.js","./compose-class-methods.js":"src/core/compose-class-methods.js","./view-types.js":"src/core/view-types.js","obsidian":"@host/obsidian"},"src/main.js":{"./core/LocalSearchPlugin.js":"src/core/LocalSearchPlugin.js"}};
 const __cache = Object.create(null);
 const __hostCache = Object.create(null);
 function __load(id) {

@@ -1,3 +1,4 @@
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 import { createSearchButton } from "../../ui/components/input-controls.js";
@@ -337,7 +338,7 @@ export class SearchSortController {
         if (view.pickerBtn) {
             const open = Boolean(core.dropdown.isOpenFor(view.pickerBtn));
             view.pickerBtn.setAttribute("aria-expanded", String(open));
-            view.pickerBtn.setAttribute("aria-label", `排序与时间；当前：${fieldLabel}${core.filterState.dateRange ? `；${filterDateRangeDisplay(core.filterState.dateRange)}` : ""}`);
+            setSearchAttribute(view.pickerBtn, "aria-label", `排序与时间；当前：${fieldLabel}${core.filterState.dateRange ? `；${filterDateRangeDisplay(core.filterState.dateRange)}` : ""}`);
             view.pickerBtn.classList.toggle("has-time-filter", Boolean(core.filterState.dateRange));
             const iconName = view.pickerBtn === this.pickerBtn
                 ? navigatorToolbarIcon(core, "sort", def.icon || "arrow-up-down")
@@ -362,7 +363,7 @@ export class SearchSortController {
                 ? `点击返回快捷排序：${targetLabel}`
                 : `点击切换为${targetLabel}`;
             const label = `排序：${fieldLabel}；${action}`;
-            view.fieldBtn.setAttribute("aria-label", label);
+            setSearchAttribute(view.fieldBtn, "aria-label", label);
         }
         if (view.directionBtn) {
             const isDesc = direction === "desc";
@@ -387,7 +388,7 @@ export class SearchSortController {
                                 : (isDesc ? "Z → A" : "A → Z");
             const next = isDesc ? "升序" : "降序";
             const label = `${fieldLabel}：${human}；点击切换为${next}`;
-            view.directionBtn.setAttribute("aria-label", label);
+            setSearchAttribute(view.directionBtn, "aria-label", label);
             view.directionBtn.setAttribute("aria-pressed", String(!isDesc));
         }
         }

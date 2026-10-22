@@ -1,4 +1,4 @@
-// Desktop sidebar browse cards are derived UI, never a second result/index owner.
+// Browse cards are derived UI, never a second result/index owner.
 // Keep a bounded working set; queries, pickers and batch/action states use the
 // normal builder. Live nodes move only after every new card has built successfully.
 const MAX_RETAINED_CARDS = 96;
@@ -22,7 +22,7 @@ function reusable(entry, result, key) {
 
 export function beginBrowseCardReuse(renderer) {
     const core = renderer.owner;
-    if (!core.navigator?.desktopSidebar || core.queryState.raw.trim()
+    if (core.queryState.raw.trim()
         || core.externalPickHandler || core.selection.batchMode || core.swipe?.allExpanded
         || core.dropdown?.panel?.isConnected || core._confirmSession || core.createFlow?.isCreateView?.()) {
         renderer._browseCardCache?.entries.clear();
@@ -46,9 +46,7 @@ export function beginBrowseCardReuse(renderer) {
             const key = cardContentKey(result);
             const entry = cache.entries.get(result.path);
             if (reusable(entry, result, key)) {
-                const placeholder = fragment.ownerDocument.createComment('browse-card');
-                fragment.appendChild(placeholder);
-                staged.push({ entry, position, placeholder, connected: entry.shell.isConnected,
+                staged.push({ entry, position, reused: true, connected: entry.shell.isConnected,
                     oldPosition: entry.shell.getAttribute('data-virtual-position'),
                     oldLast: entry.shell.classList.contains('is-last-result'),
                     oldCurrent: entry.item.classList.contains('is-current') });
@@ -60,12 +58,11 @@ export function beginBrowseCardReuse(renderer) {
         },
         commit() {
             for (const record of staged) {
-                if (!record.placeholder) continue;
+                if (!record.reused) continue;
                 const { shell, item } = record.entry;
-                shell.dataset.virtualPosition = String(record.position);
+                if (shell.dataset.virtualPosition !== String(record.position)) shell.dataset.virtualPosition = String(record.position);
                 shell.classList.toggle('is-last-result', record.position === renderer.visibleResultCount() - 1);
                 item.classList.remove('is-current');
-                record.placeholder.replaceWith(shell);
             }
         },
         finish() {
@@ -79,7 +76,7 @@ export function beginBrowseCardReuse(renderer) {
         },
         rollback() {
             for (const record of staged) {
-                if (!record.placeholder) continue;
+                if (!record.reused) continue;
                 const { shell, item } = record.entry;
                 if (record.oldPosition === null) shell.removeAttribute('data-virtual-position');
                 else shell.setAttribute('data-virtual-position', record.oldPosition);

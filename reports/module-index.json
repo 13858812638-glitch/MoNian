@@ -5,45 +5,45 @@
       "LocalSearchPlugin"
     ],
     "dependencies": [
-      "../integrations/public-contract.js",
-      "../interactions/swipe-back.js",
-      "./SharedSearchStateCoordinator.js",
-      "../ui/mobile/mobile-frame.js",
-      "../services/BatchMetadataService.js",
       "../data/index/BodyIndex.js",
       "../features/create/create-model.js",
-      "../services/FileOperationService.js",
-      "../ui/settings/LocalSearchSettingTab.js",
-      "obsidian",
-      "../ui/views/SearchView.js",
-      "./view-types.js",
-      "../interactions/hover-hints.js",
-      "../utils/normalization.js",
-      "../features/plugin/tree-maintenance-methods.js",
-      "../features/plugin/property-maintenance-methods.js",
-      "../features/plugin/file-command-actions-methods.js",
-      "../features/plugin/workspace-entry-methods.js",
-      "../features/plugin/search-history-methods.js",
-      "../features/plugin/recent-history-state-methods.js",
-      "../features/plugin/path-lifecycle-methods.js",
-      "../features/plugin/notifications-methods.js",
-      "../features/plugin/property-catalog-methods.js",
-      "../features/plugin/index-queue-methods.js",
-      "../features/plugin/time-cache-methods.js",
-      "../features/plugin/metadata-directory-methods.js",
-      "../features/plugin/markdown-write-tracking-methods.js",
-      "../features/plugin/non-markdown-metadata-methods.js",
-      "../features/plugin/external-properties-methods.js",
       "../features/plugin/content-cache-methods.js",
-      "../features/plugin/file-index-methods.js",
-      "../features/plugin/view-preferences-methods.js",
+      "../features/plugin/external-properties-methods.js",
       "../features/plugin/external-search-methods.js",
-      "../features/plugin/settings-storage-methods.js",
+      "../features/plugin/file-command-actions-methods.js",
+      "../features/plugin/file-index-methods.js",
+      "../features/plugin/index-queue-methods.js",
       "../features/plugin/index-storage-methods.js",
-      "./compose-class-methods.js"
+      "../features/plugin/markdown-write-tracking-methods.js",
+      "../features/plugin/metadata-directory-methods.js",
+      "../features/plugin/non-markdown-metadata-methods.js",
+      "../features/plugin/notifications-methods.js",
+      "../features/plugin/path-lifecycle-methods.js",
+      "../features/plugin/property-catalog-methods.js",
+      "../features/plugin/property-maintenance-methods.js",
+      "../features/plugin/recent-history-state-methods.js",
+      "../features/plugin/search-history-methods.js",
+      "../features/plugin/settings-storage-methods.js",
+      "../features/plugin/time-cache-methods.js",
+      "../features/plugin/tree-maintenance-methods.js",
+      "../features/plugin/view-preferences-methods.js",
+      "../features/plugin/workspace-entry-methods.js",
+      "../integrations/public-contract.js",
+      "../interactions/hover-hints.js",
+      "../interactions/swipe-back.js",
+      "../services/BatchMetadataService.js",
+      "../services/FileOperationService.js",
+      "../ui/mobile/mobile-frame.js",
+      "../ui/settings/LocalSearchSettingTab.js",
+      "../ui/views/SearchView.js",
+      "../utils/normalization.js",
+      "./SharedSearchStateCoordinator.js",
+      "./compose-class-methods.js",
+      "./view-types.js",
+      "obsidian"
     ],
-    "lines": 456,
-    "bytes": 30170,
+    "lines": 457,
+    "bytes": 30327,
     "origins": [
       {
         "id": "LocalSearchPlugin.constructor",
@@ -77,35 +77,35 @@
   {
     "file": "src/core/SearchCore.js",
     "exports": [
-      "SearchCore",
-      "SEARCH_CORE_UI_REF_KEYS"
+      "SEARCH_CORE_UI_REF_KEYS",
+      "SearchCore"
     ],
     "dependencies": [
       "../features/batch/BatchMetadataController.js",
-      "../features/create/create-model.js",
-      "../features/filters/filter-state.js",
-      "../services/IoPool.js",
-      "../features/search/QueryState.js",
       "../features/create/SearchCreateController.js",
-      "../ui/overlays/SearchDropdownController.js",
+      "../features/create/create-model.js",
       "../features/facets/SearchFacetController.js",
+      "../features/filters/filter-state.js",
       "../features/result-controls/SearchResultControlsController.js",
       "../features/results/SearchResultRendererController.js",
+      "../features/search/QueryState.js",
       "../features/selection/SearchSelectionController.js",
       "../features/sort/SearchSortController.js",
-      "../interactions/SwipeActionCoordinator.js",
-      "./session-values.js",
       "../features/sort/sort-model.js",
+      "../interactions/SwipeActionCoordinator.js",
+      "../services/IoPool.js",
+      "../ui/overlays/SearchDropdownController.js",
       "../utils/normalization.js",
       "../utils/vault-paths.js",
-      "obsidian",
-      "./search/shell-methods.js",
-      "./search/result-menu-events-methods.js",
-      "./search/input-and-filters-methods.js",
+      "./compose-class-methods.js",
       "./search/file-actions-methods.js",
-      "./search/session-methods.js",
+      "./search/input-and-filters-methods.js",
+      "./search/result-menu-events-methods.js",
       "./search/search-and-ranking-methods.js",
-      "./compose-class-methods.js"
+      "./search/session-methods.js",
+      "./search/shell-methods.js",
+      "./session-values.js",
+      "obsidian"
     ],
     "lines": 220,
     "bytes": 13130,
@@ -159,7 +159,7 @@
       "./session-values.js"
     ],
     "lines": 213,
-    "bytes": 9814,
+    "bytes": 9780,
     "origins": [
       {
         "id": "SharedSearchStateCoordinator",
@@ -188,13 +188,13 @@
       "DEFAULT_SETTINGS"
     ],
     "dependencies": [
-      "../features/results/view-config.js",
-      "../features/sort/sort-model.js",
       "../data/time/time-values.js",
-      "../features/navigator/toolbar-config.js"
+      "../features/navigator/toolbar-config.js",
+      "../features/results/view-config.js",
+      "../features/sort/sort-model.js"
     ],
-    "lines": 57,
-    "bytes": 5072,
+    "lines": 58,
+    "bytes": 5180,
     "origins": [
       {
         "id": "DEFAULT_SETTINGS",
@@ -244,13 +244,13 @@
       "SearchCore_open_selection_methods"
     ],
     "dependencies": [
+      "../../data/folders/folder-tree.js",
       "../../data/formats/file-types.js",
       "../../ui/dialogs/dialog-session.js",
-      "obsidian",
-      "../../data/folders/folder-tree.js",
-      "../../ui/pickers/folder-picker.js",
       "../../ui/dialogs/dialog-surface.js",
-      "../picker-cleanup.js"
+      "../../ui/pickers/folder-picker.js",
+      "../picker-cleanup.js",
+      "obsidian"
     ],
     "lines": 359,
     "bytes": 14229,
@@ -344,17 +344,17 @@
       "SearchCore_input_and_filters_methods"
     ],
     "dependencies": [
-      "../../utils/dom.js",
-      "../../features/filters/filter-state.js",
-      "../../data/tags/tag-values.js",
-      "../../data/properties/property-values.js",
-      "../../utils/vault-paths.js",
       "../../data/formats/file-types.js",
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-values.js",
       "../../data/time/time-values.js",
-      "../../features/filters/FilterEngine.js"
+      "../../features/filters/FilterEngine.js",
+      "../../features/filters/filter-state.js",
+      "../../utils/dom.js",
+      "../../utils/vault-paths.js"
     ],
-    "lines": 521,
-    "bytes": 22878,
+    "lines": 533,
+    "bytes": 23503,
     "origins": [
       {
         "id": "SearchCore._initializeResultState",
@@ -481,8 +481,8 @@
       "SearchCore_result_menu_events_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "../../utils/dom.js"
+      "../../utils/dom.js",
+      "obsidian"
     ],
     "lines": 269,
     "bytes": 11710,
@@ -546,21 +546,21 @@
   {
     "file": "src/core/search/search-and-ranking-methods.js",
     "exports": [
-      "SearchCore_search_and_ranking_methods",
-      "RESULT_TEXT_COLLATOR"
+      "RESULT_TEXT_COLLATOR",
+      "SearchCore_search_and_ranking_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "../../data/time/time-values.js",
-      "../../features/search/ResultRanker.js",
       "../../data/formats/file-types.js",
-      "../../utils/search-text.js",
+      "../../data/time/time-values.js",
       "../../features/filters/FilterEngine.js",
       "../../features/filters/filter-state.js",
-      "../../features/sort/sort-model.js"
+      "../../features/search/ResultRanker.js",
+      "../../features/sort/sort-model.js",
+      "../../utils/search-text.js",
+      "obsidian"
     ],
-    "lines": 442,
-    "bytes": 18638,
+    "lines": 531,
+    "bytes": 22958,
     "origins": [
       {
         "id": "SearchCore._shouldCloseAfterFileOpen",
@@ -697,9 +697,9 @@
     ],
     "dependencies": [
       "../../features/filters/filter-state.js",
-      "../session-values.js",
       "../../features/sort/sort-model.js",
-      "../../utils/normalization.js"
+      "../../utils/normalization.js",
+      "../session-values.js"
     ],
     "lines": 129,
     "bytes": 5816,
@@ -784,10 +784,10 @@
       "SearchCore_shell_methods"
     ],
     "dependencies": [
-      "../../ui/components/input-controls.js",
+      "../../features/navigator/SearchNavigatorController.js",
       "../../ui/components/indicator-label.js",
-      "../../utils/dom.js",
-      "../../features/navigator/SearchNavigatorController.js"
+      "../../ui/components/input-controls.js",
+      "../../utils/dom.js"
     ],
     "lines": 410,
     "bytes": 18350,
@@ -978,12 +978,16 @@
       "comparePickerTreePaths",
       "orderFolderSelectionsForPicker",
       "sharedFolderAncestors",
-      "createSharedFolderCountProvider"
+      "createSharedFolderCountProvider",
+      "createSharedFolderDirectAndRecursiveCounts",
+      "formatSharedFolderDirectAndRecursiveCount",
+      "sharedFolderDisplayIcon"
     ],
     "dependencies": [
-      "obsidian",
+      "../../utils/normalization.js",
+      "../../utils/vault-paths.js",
       "../../utils/preferred-order.js",
-      "../../utils/normalization.js"
+      "obsidian"
     ],
     "lines": 181,
     "bytes": 6861,
@@ -1343,9 +1347,9 @@
       "materializePropertyPickerOrders"
     ],
     "dependencies": [
-      "./property-values.js",
       "../../utils/preferred-order.js",
-      "../tags/tag-tree.js"
+      "../tags/tag-tree.js",
+      "./property-values.js"
     ],
     "lines": 117,
     "bytes": 3833,
@@ -1421,8 +1425,9 @@
       "editableTagError"
     ],
     "dependencies": [
-      "./property-values.js",
-      "../time/time-values.js"
+      "../time/time-values.js",
+      "../tags/tag-values.js",
+      "./property-values.js"
     ],
     "lines": 146,
     "bytes": 6057,
@@ -1756,8 +1761,8 @@
       "renameRawPropertyValue"
     ],
     "dependencies": [
-      "./property-values.js",
-      "./property-types.js"
+      "./property-types.js",
+      "./property-values.js"
     ],
     "lines": 99,
     "bytes": 3731,
@@ -1792,8 +1797,8 @@
     ],
     "dependencies": [
       "../../utils/normalization.js",
-      "./tag-values.js",
-      "../../utils/preferred-order.js"
+      "../../utils/preferred-order.js",
+      "./tag-values.js"
     ],
     "lines": 99,
     "bytes": 3436,
@@ -2084,10 +2089,10 @@
       "BatchMetadataController"
     ],
     "dependencies": [
+      "../../core/compose-class-methods.js",
       "./mutation-flow-methods.js",
-      "./tag-editor-methods.js",
       "./property-editor-methods.js",
-      "../../core/compose-class-methods.js"
+      "./tag-editor-methods.js"
     ],
     "lines": 31,
     "bytes": 1420,
@@ -2127,14 +2132,14 @@
       "BatchMetadataController_mutation_flow_methods"
     ],
     "dependencies": [
-      "../../data/tags/tag-values.js",
       "../../data/properties/property-catalog.js",
-      "../../data/properties/property-values.js",
-      "../../utils/preferred-order.js",
       "../../data/properties/property-types.js",
-      "obsidian",
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-values.js",
       "../../ui/components/input-controls.js",
-      "../../ui/pickers/picker-shell.js"
+      "../../ui/pickers/picker-shell.js",
+      "../../utils/preferred-order.js",
+      "obsidian"
     ],
     "lines": 245,
     "bytes": 10333,
@@ -2264,21 +2269,21 @@
       "BatchMetadataController_property_editor_methods"
     ],
     "dependencies": [
-      "../../data/properties/property-values.js",
-      "obsidian",
+      "../../data/properties/property-catalog.js",
       "../../data/properties/property-types.js",
+      "../../data/properties/property-values.js",
       "../../interactions/scroll-anchor.js",
-      "../../ui/pickers/picker-header.js",
       "../../ui/components/input-controls.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/picker-shell.js",
       "../../ui/pickers/selection-strip.js",
       "../../ui/pickers/tree-row.js",
-      "../../ui/pickers/picker-shell.js",
       "../../utils/normalization.js",
-      "../../data/properties/property-catalog.js",
-      "../../utils/preferred-order.js"
+      "../../utils/preferred-order.js",
+      "obsidian"
     ],
     "lines": 789,
-    "bytes": 37957,
+    "bytes": 38006,
     "origins": [
       {
         "id": "BatchMetadataController._renderPropertyPicker",
@@ -2306,18 +2311,21 @@
       "BatchMetadataController_tag_editor_methods"
     ],
     "dependencies": [
-      "../../data/tags/tag-values.js",
+      "../../data/properties/property-types.js",
       "../../data/tags/tag-tree.js",
+      "./tag-hierarchy-compose.js",
+      "../../data/tags/tag-values.js",
       "../../interactions/scroll-anchor.js",
       "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/picker-shell.js",
+      "../../ui/components/input-controls.js",
       "../../ui/pickers/selection-strip.js",
       "../../ui/pickers/tree-row.js",
-      "../../ui/pickers/picker-shell.js",
-      "../../data/properties/property-types.js",
+      "obsidian",
       "../../utils/tree-match.js"
     ],
-    "lines": 252,
-    "bytes": 11114,
+    "lines": 376,
+    "bytes": 18391,
     "origins": [
       {
         "id": "BatchMetadataController._renderTagPicker",
@@ -2353,13 +2361,13 @@
       "SearchCreateController"
     ],
     "dependencies": [
+      "../../core/compose-class-methods.js",
       "../filters/filter-state.js",
+      "./create-file-methods.js",
       "./draft-and-metadata-methods.js",
       "./input-mode-methods.js",
-      "./preview-methods.js",
       "./payload-methods.js",
-      "./create-file-methods.js",
-      "../../core/compose-class-methods.js"
+      "./preview-methods.js"
     ],
     "lines": 42,
     "bytes": 3114,
@@ -2391,8 +2399,8 @@
     ],
     "dependencies": [
       "../../data/formats/drawing-detection.js",
-      "obsidian",
-      "../../utils/dom.js"
+      "../../utils/dom.js",
+      "obsidian"
     ],
     "lines": 233,
     "bytes": 13031,
@@ -2420,10 +2428,10 @@
     ],
     "dependencies": [
       "../../data/properties/property-types.js",
-      "../filters/filter-state.js",
-      "../../data/tags/tag-values.js",
       "../../data/properties/property-values.js",
-      "../../utils/vault-paths.js"
+      "../../data/tags/tag-values.js",
+      "../../utils/vault-paths.js",
+      "../filters/filter-state.js"
     ],
     "lines": 92,
     "bytes": 3542,
@@ -2490,13 +2498,13 @@
       "SearchCreateController_draft_and_metadata_methods"
     ],
     "dependencies": [
-      "./create-model.js",
-      "../filters/filter-state.js",
-      "../../data/tags/tag-values.js",
       "../../data/formats/file-types.js",
       "../../data/properties/property-types.js",
       "../../data/properties/property-values.js",
+      "../../data/tags/tag-values.js",
       "../../ui/pickers/template-picker.js",
+      "../filters/filter-state.js",
+      "./create-model.js",
       "obsidian"
     ],
     "lines": 399,
@@ -2867,11 +2875,11 @@
       "SearchCreateController_payload_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "../../utils/vault-paths.js",
-      "../../data/properties/property-values.js",
       "../../data/properties/property-types.js",
-      "../../data/tags/tag-values.js"
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-values.js",
+      "../../utils/vault-paths.js",
+      "obsidian"
     ],
     "lines": 263,
     "bytes": 8692,
@@ -3010,14 +3018,14 @@
       "SearchCreateController_preview_methods"
     ],
     "dependencies": [
-      "obsidian",
+      "../../data/properties/property-catalog.js",
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-tree.js",
+      "../../data/tags/tag-values.js",
       "../../ui/components/input-controls.js",
       "../../utils/dom.js",
-      "../../data/properties/property-values.js",
-      "../../data/tags/tag-values.js",
-      "../../data/tags/tag-tree.js",
-      "../../data/properties/property-catalog.js",
-      "../filters/filter-state.js"
+      "../filters/filter-state.js",
+      "obsidian"
     ],
     "lines": 242,
     "bytes": 10863,
@@ -3076,15 +3084,15 @@
       "SearchFacetController_picker_model_methods"
     ],
     "dependencies": [
-      "./sidebar-maintenance-methods.js",
-      "./tag-picker-methods.js",
-      "./property-picker-methods.js",
-      "./type-picker-methods.js",
-      "./folder-colors-methods.js",
-      "./folder-picker-methods.js",
       "../../core/compose-class-methods.js",
       "../../data/properties/property-catalog.js",
-      "../../data/properties/property-values.js"
+      "../../data/properties/property-values.js",
+      "./folder-colors-methods.js",
+      "./folder-picker-methods.js",
+      "./property-picker-methods.js",
+      "./sidebar-maintenance-methods.js",
+      "./tag-picker-methods.js",
+      "./type-picker-methods.js"
     ],
     "lines": 102,
     "bytes": 5065,
@@ -3115,12 +3123,12 @@
       "SearchFacetController_folder_colors_methods"
     ],
     "dependencies": [
+      "../../ui/components/input-controls.js",
+      "../../ui/dialogs/dialog-session.js",
+      "../../ui/pickers/picker-header.js",
       "../../utils/dom.js",
       "../folders/folder-colors.js",
-      "obsidian",
-      "../../ui/pickers/picker-header.js",
-      "../../ui/dialogs/dialog-session.js",
-      "../../ui/components/input-controls.js"
+      "obsidian"
     ],
     "lines": 270,
     "bytes": 10558,
@@ -3196,24 +3204,23 @@
       "SearchFacetController_folder_picker_methods"
     ],
     "dependencies": [
-      "../../ui/pickers/picker-header.js",
-      "../folders/exclusions.js",
-      "../../ui/pickers/folder-picker.js",
-      "../../data/folders/folder-tree.js",
-      "obsidian",
-      "../../interactions/PointerSortCoordinator.js",
-      "../../ui/pickers/header-modes.js",
-      "../../ui/pickers/sort-mode.js",
-      "../../ui/pickers/selection-mode.js",
-      "../../ui/pickers/tree-row.js",
-      "../../ui/pickers/selection-strip.js",
-      "../../ui/dialogs/dialog-session.js",
       "../../core/picker-cleanup.js",
+      "../../data/folders/folder-tree.js",
+      "../../interactions/PointerSortCoordinator.js",
+      "../../ui/components/indicator-label.js",
+      "../../ui/pickers/folder-picker.js",
+      "../../ui/pickers/header-modes.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/selection-mode.js",
+      "../../ui/pickers/selection-strip.js",
+      "../../ui/pickers/sort-mode.js",
+      "../../ui/pickers/tree-row.js",
       "../../utils/preferred-order.js",
-      "../../ui/components/indicator-label.js"
+      "../folders/exclusions.js",
+      "obsidian"
     ],
-    "lines": 523,
-    "bytes": 22204,
+    "lines": 518,
+    "bytes": 22138,
     "origins": [
       {
         "id": "SearchFacetController._showManagedFolderDropdown",
@@ -3250,37 +3257,36 @@
       "SearchFacetController_property_picker_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "../../data/properties/property-values.js",
-      "../../ui/pickers/icon-catalog.js",
-      "../../interactions/PointerSortCoordinator.js",
-      "../../ui/pickers/picker-shell.js",
-      "../../ui/components/property-state.js",
-      "../../ui/pickers/header-modes.js",
-      "../../ui/pickers/sort-mode.js",
-      "../../data/properties/property-catalog.js",
-      "../../ui/pickers/picker-header.js",
-      "../../ui/dialogs/submission.js",
-      "../../ui/pickers/selection-mode.js",
-      "../../ui/pickers/tree-row.js",
-      "../../ui/pickers/selection-strip.js",
-      "../filters/pool-config.js",
-      "../../utils/dom.js",
-      "../../data/properties/property-types.js",
-      "../../ui/pickers/icon-picker.js",
-      "../filters/pool-values.js",
       "../../core/picker-cleanup.js",
-      "../../interactions/scroll-anchor.js",
-      "../../utils/preferred-order.js",
-      "../../data/tags/tag-values.js",
-      "../../ui/components/input-controls.js",
-      "../../data/formats/file-types.js",
-      "../filters/filter-state.js",
       "../../data/folders/folder-tree.js",
-      "../../data/tags/tag-tree.js"
+      "../../data/formats/file-types.js",
+      "../../data/properties/property-catalog.js",
+      "../../data/properties/property-types.js",
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-tree.js",
+      "../../data/tags/tag-values.js",
+      "../../interactions/PointerSortCoordinator.js",
+      "../../interactions/scroll-anchor.js",
+      "../../ui/components/input-controls.js",
+      "../../ui/components/property-state.js",
+      "../../ui/dialogs/submission.js",
+      "../../ui/pickers/header-modes.js",
+      "../../ui/pickers/icon-catalog.js",
+      "../../ui/pickers/icon-picker.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/picker-shell.js",
+      "../../ui/pickers/selection-mode.js",
+      "../../ui/pickers/selection-strip.js",
+      "../../ui/pickers/sort-mode.js",
+      "../../ui/pickers/tree-row.js",
+      "../../utils/preferred-order.js",
+      "../filters/filter-state.js",
+      "../filters/pool-config.js",
+      "../filters/pool-values.js",
+      "obsidian"
     ],
-    "lines": 1088,
-    "bytes": 52462,
+    "lines": 1093,
+    "bytes": 53370,
     "origins": [
       {
         "id": "SearchFacetController.openPropertyPicker",
@@ -3308,18 +3314,18 @@
       "SearchFacetController_sidebar_maintenance_methods"
     ],
     "dependencies": [
-      "../../data/tags/tag-values.js",
-      "../../data/properties/property-values.js",
-      "../folders/exclusions.js",
-      "../filters/pool-values.js",
-      "obsidian",
       "../../data/properties/property-types.js",
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-values.js",
+      "../../ui/dialogs/dialog-session.js",
       "../../utils/normalization.js",
       "../../utils/vault-paths.js",
-      "../../ui/dialogs/dialog-session.js"
+      "../filters/pool-values.js",
+      "../folders/exclusions.js",
+      "obsidian"
     ],
-    "lines": 235,
-    "bytes": 15139,
+    "lines": 278,
+    "bytes": 17589,
     "origins": [
       {
         "id": "SearchFacetController.sidebarMaintenanceModes",
@@ -3365,24 +3371,22 @@
       "SearchFacetController_tag_picker_methods"
     ],
     "dependencies": [
-      "../filters/FilterEngine.js",
+      "../../core/picker-cleanup.js",
+      "../../data/tags/tag-tree.js",
       "../../data/tags/tag-values.js",
       "../../interactions/PointerSortCoordinator.js",
-      "../../ui/pickers/picker-shell.js",
-      "../../ui/pickers/header-modes.js",
-      "../../ui/pickers/sort-mode.js",
-      "../../data/tags/tag-tree.js",
-      "../../ui/pickers/picker-header.js",
-      "../../ui/pickers/selection-mode.js",
-      "../../ui/pickers/tree-row.js",
-      "../../ui/pickers/selection-strip.js",
-      "../../utils/dom.js",
-      "../../core/picker-cleanup.js",
       "../../interactions/scroll-anchor.js",
+      "../../ui/pickers/header-modes.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/picker-shell.js",
+      "../../ui/pickers/selection-mode.js",
+      "../../ui/pickers/selection-strip.js",
+      "../../ui/pickers/sort-mode.js",
+      "../../ui/pickers/tree-row.js",
       "../../utils/tree-match.js"
     ],
-    "lines": 552,
-    "bytes": 24786,
+    "lines": 549,
+    "bytes": 25039,
     "origins": [
       {
         "id": "SearchFacetController.openTimePicker",
@@ -3410,16 +3414,16 @@
       "SearchFacetController_type_picker_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "../../ui/pickers/header-modes.js",
       "../../data/formats/file-types.js",
-      "../../ui/pickers/picker-header.js",
-      "../../ui/pickers/tree-row.js",
-      "../../ui/pickers/selection-strip.js",
-      "../../ui/pickers/picker-shell.js",
       "../../interactions/scroll-anchor.js",
+      "../../ui/components/indicator-label.js",
       "../../ui/components/input-controls.js",
-      "../../ui/components/indicator-label.js"
+      "../../ui/pickers/header-modes.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/picker-shell.js",
+      "../../ui/pickers/selection-strip.js",
+      "../../ui/pickers/tree-row.js",
+      "obsidian"
     ],
     "lines": 313,
     "bytes": 14102,
@@ -3468,10 +3472,10 @@
       "FilterEngine"
     ],
     "dependencies": [
-      "./filter-state.js",
-      "../../data/tags/tag-values.js",
       "../../data/formats/file-types.js",
-      "../../data/properties/property-values.js"
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-values.js",
+      "./filter-state.js"
     ],
     "lines": 83,
     "bytes": 3948,
@@ -3500,12 +3504,13 @@
       "filterDateRangeDisplay",
       "recentFilterDateRange",
       "FilterState",
-      "normalizeLegacyFilterPoolSnapshot"
+      "normalizeLegacyFilterPoolSnapshot",
+      "clearBrowseRefinements"
     ],
     "dependencies": [
-      "../../data/time/time-values.js",
-      "../../data/tags/tag-values.js",
       "../../data/properties/property-values.js",
+      "../../data/tags/tag-values.js",
+      "../../data/time/time-values.js",
       "../../utils/normalization.js",
       "../../utils/vault-paths.js",
       "./pool-config.js"
@@ -3729,11 +3734,11 @@
       "propertyPoolKeyVisible"
     ],
     "dependencies": [
-      "./pool-config.js",
+      "../../data/formats/file-types.js",
+      "../../data/properties/property-values.js",
       "../../data/tags/tag-values.js",
       "../../utils/vault-paths.js",
-      "../../data/properties/property-values.js",
-      "../../data/formats/file-types.js"
+      "./pool-config.js"
     ],
     "lines": 76,
     "bytes": 2735,
@@ -3812,10 +3817,10 @@
       "createFolderExclusionController"
     ],
     "dependencies": [
-      "../../utils/vault-paths.js",
+      "../../ui/pickers/tree-row.js",
       "../../utils/normalization.js",
-      "obsidian",
-      "../../ui/pickers/tree-row.js"
+      "../../utils/vault-paths.js",
+      "obsidian"
     ],
     "lines": 89,
     "bytes": 3718,
@@ -3911,19 +3916,22 @@
       "../../data/properties/property-types.js",
       "../../data/tags/tag-values.js",
       "../../ui/dialogs/dialog-session.js",
+      "../../data/tags/tag-values.js",
       "../../interactions/PointerSortCoordinator.js",
       "../../ui/components/input-controls.js",
+      "../../ui/dialogs/dialog-session.js",
       "../../ui/pickers/count-rail.js",
       "../../ui/pickers/icon-picker.js",
       "../../ui/pickers/picker-header.js",
       "../../ui/pickers/tree-row.js",
       "../../utils/preferred-order.js",
       "../folders/folder-colors.js",
+      "./navigation-icon.js",
       "./customization-model.js",
       "obsidian"
     ],
-    "lines": 891,
-    "bytes": 55798,
+    "lines": 897,
+    "bytes": 56193,
     "origins": [
       {
         "id": "NavigatorCustomization",
@@ -3939,6 +3947,7 @@
   {
     "file": "src/features/navigator/SearchNavigatorController.js",
     "exports": [
+      "scheduleNavigatorScrollStateSave",
       "SearchNavigatorController"
     ],
     "dependencies": [
@@ -3950,6 +3959,8 @@
       "../../data/properties/property-values.js",
       "../../data/tags/tag-tree.js",
       "../../data/tags/tag-values.js",
+      "../../interactions/hover-hints.js",
+      "../../utils/dom.js",
       "../../interactions/scroll-anchor.js",
       "../../ui/components/input-controls.js",
       "../../ui/pickers/count-rail.js",
@@ -3959,12 +3970,13 @@
       "../sort/sort-model.js",
       "./NavigatorCustomization.js",
       "./desktop-pane.js",
+      "./navigation-icon.js",
       "./customization-model.js",
       "./toolbar-config.js",
       "obsidian"
     ],
-    "lines": 1320,
-    "bytes": 79142,
+    "lines": 1454,
+    "bytes": 87009,
     "origins": [
       {
         "id": "SearchNavigatorController",
@@ -3987,9 +3999,9 @@
       "remapNavigatorCustomization"
     ],
     "dependencies": [
-      "../../utils/vault-paths.js",
       "../../data/properties/property-values.js",
       "../../data/tags/tag-values.js",
+      "../../utils/vault-paths.js",
       "../folders/folder-colors.js",
       "./toolbar-config.js"
     ],
@@ -4049,8 +4061,8 @@
       "createDesktopNavigatorPane"
     ],
     "dependencies": [],
-    "lines": 123,
-    "bytes": 6278,
+    "lines": 128,
+    "bytes": 6596,
     "origins": []
   },
   {
@@ -4068,9 +4080,9 @@
       "normalizeNavigatorTimeField"
     ],
     "dependencies": [
-      "../filters/pool-config.js",
       "../../ui/pickers/icon-catalog.js",
-      "../../utils/preferred-order.js"
+      "../../utils/preferred-order.js",
+      "../filters/pool-config.js"
     ],
     "lines": 127,
     "bytes": 7402,
@@ -4176,8 +4188,8 @@
       "../../data/time/time-values.js",
       "../results/virtualization-config.js"
     ],
-    "lines": 193,
-    "bytes": 9062,
+    "lines": 196,
+    "bytes": 9495,
     "origins": [
       {
         "id": "LocalSearchPlugin._writablePluginDirectory",
@@ -4241,20 +4253,20 @@
       "LocalSearchPlugin_external_properties_methods"
     ],
     "dependencies": [
-      "../../ui/overlays/LocalSearchOverlayHost.js",
-      "obsidian",
-      "../../utils/dom.js",
-      "../../ui/pickers/picker-header.js",
-      "../folders/exclusions.js",
-      "../../ui/pickers/selection-strip.js",
       "../../core/picker-cleanup.js",
-      "../../ui/pickers/folder-picker.js",
       "../../data/folders/folder-tree.js",
-      "../batch/BatchMetadataController.js",
+      "../../data/properties/property-types.js",
+      "../../ui/overlays/LocalSearchOverlayHost.js",
       "../../ui/overlays/SearchDropdownController.js",
-      "../selection/SearchSelectionController.js",
+      "../../ui/pickers/folder-picker.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/selection-strip.js",
+      "../../utils/dom.js",
       "../../utils/normalization.js",
-      "../../data/properties/property-types.js"
+      "../batch/BatchMetadataController.js",
+      "../folders/exclusions.js",
+      "../selection/SearchSelectionController.js",
+      "obsidian"
     ],
     "lines": 272,
     "bytes": 15602,
@@ -4330,16 +4342,15 @@
       "LocalSearchPlugin_external_search_methods"
     ],
     "dependencies": [
-      "../sort/sort-model.js",
+      "../../core/SearchCore.js",
       "../../core/session-values.js",
+      "../../data/tags/tag-values.js",
+      "../../integrations/SearchWorkspaceCapabilities.js",
       "../../ui/hosts/SearchWindowSession.js",
+      "../../utils/normalization.js",
       "../create/create-model.js",
       "../filters/filter-state.js",
-      "../../data/tags/tag-values.js",
-      "../../utils/normalization.js",
-      "../../core/SearchCore.js",
-      "../../integrations/SearchWorkspaceCapabilities.js",
-      "obsidian"
+      "../sort/sort-model.js"
     ],
     "lines": 326,
     "bytes": 15235,
@@ -4425,8 +4436,8 @@
     ],
     "dependencies": [
       "../../core/view-types.js",
-      "obsidian",
-      "../../ui/overlays/OperationOverlayController.js"
+      "../../ui/overlays/OperationOverlayController.js",
+      "obsidian"
     ],
     "lines": 100,
     "bytes": 4446,
@@ -4466,15 +4477,15 @@
       "LocalSearchPlugin_file_index_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "../../data/time/time-values.js",
       "../../data/formats/drawing-content.js",
-      "../../utils/markdown-text.js",
-      "../../data/formats/file-types.js",
       "../../data/formats/drawing-detection.js",
+      "../../data/formats/file-types.js",
       "../../data/tags/tag-values.js",
+      "../../data/time/time-values.js",
+      "../../services/IoPool.js",
+      "../../utils/markdown-text.js",
       "../../utils/vault-paths.js",
-      "../../services/IoPool.js"
+      "obsidian"
     ],
     "lines": 401,
     "bytes": 18864,
@@ -4604,8 +4615,8 @@
       "../../data/time/time-values.js",
       "obsidian"
     ],
-    "lines": 183,
-    "bytes": 8693,
+    "lines": 253,
+    "bytes": 12145,
     "origins": [
       {
         "id": "LocalSearchPlugin._clearResidentSearchResults",
@@ -4679,9 +4690,9 @@
     ],
     "dependencies": [
       "../../data/time/time-values.js",
-      "obsidian",
       "../../services/BatchMetadataService.js",
-      "../../services/IoPool.js"
+      "../../services/IoPool.js",
+      "obsidian"
     ],
     "lines": 318,
     "bytes": 19657,
@@ -5059,15 +5070,15 @@
       "LocalSearchPlugin_path_lifecycle_methods"
     ],
     "dependencies": [
-      "../filters/filter-state.js",
       "../../utils/normalization.js",
+      "../../utils/preferred-order.js",
+      "../../utils/vault-paths.js",
       "../create/create-model.js",
+      "../filters/filter-state.js",
       "../folders/exclusions.js",
       "../folders/folder-colors.js",
-      "../../utils/preferred-order.js",
       "../navigator/customization-model.js",
-      "obsidian",
-      "../../utils/vault-paths.js"
+      "obsidian"
     ],
     "lines": 607,
     "bytes": 24039,
@@ -5167,17 +5178,17 @@
   {
     "file": "src/features/plugin/property-catalog-methods.js",
     "exports": [
-      "LocalSearchPlugin_project_catalog_methods"
+      "LocalSearchPlugin_property_catalog_methods"
     ],
     "dependencies": [
       "../../data/properties/property-types.js",
       "../../data/properties/property-values.js",
+      "../../data/time/time-values.js",
       "../../utils/normalization.js",
-      "obsidian",
-      "../../data/time/time-values.js"
+      "obsidian"
     ],
-    "lines": 213,
-    "bytes": 11187,
+    "lines": 220,
+    "bytes": 11683,
     "origins": [
       {
         "id": "LocalSearchPlugin._publishIndexChanges",
@@ -5349,17 +5360,18 @@
       "LocalSearchPlugin_property_maintenance_methods"
     ],
     "dependencies": [
-      "../filters/filter-state.js",
-      "../create/create-model.js",
-      "../../services/BatchMetadataService.js",
-      "../filters/pool-config.js",
       "../../data/properties/property-types.js",
       "../../data/properties/property-values.js",
+      "../../services/BatchMetadataService.js",
+      "../../data/properties/key-merge.js",
       "../../utils/normalization.js",
+      "../create/create-model.js",
+      "../filters/filter-state.js",
+      "../filters/pool-config.js",
       "../navigator/customization-model.js"
     ],
-    "lines": 508,
-    "bytes": 24558,
+    "lines": 604,
+    "bytes": 31299,
     "origins": [
       {
         "id": "LocalSearchPlugin._withPropertyCatalogMutation",
@@ -5478,8 +5490,8 @@
       "LocalSearchPlugin_recent_history_storage_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "../../data/time/time-values.js"
+      "../../data/time/time-values.js",
+      "obsidian"
     ],
     "lines": 232,
     "bytes": 10676,
@@ -5537,8 +5549,8 @@
       "LocalSearchPlugin_search_history_methods"
     ],
     "dependencies": [
-      "../filters/filter-state.js",
       "../../core/session-values.js",
+      "../filters/filter-state.js",
       "../sort/sort-model.js"
     ],
     "lines": 252,
@@ -5679,25 +5691,25 @@
     ],
     "dependencies": [
       "../../core/default-settings.js",
-      "../../data/time/time-values.js",
-      "../create/create-model.js",
-      "../../data/formats/file-types.js",
-      "../folders/exclusions.js",
-      "../filters/pool-config.js",
-      "../sort/sort-model.js",
-      "../../utils/normalization.js",
-      "../filters/filter-state.js",
       "../../core/session-values.js",
+      "../../data/formats/file-types.js",
+      "../../data/properties/property-types.js",
+      "../../data/time/time-values.js",
+      "../../ui/pickers/icon-catalog.js",
+      "../../utils/normalization.js",
+      "../../utils/vault-paths.js",
+      "../create/create-model.js",
+      "../filters/filter-state.js",
+      "../filters/pool-config.js",
+      "../folders/exclusions.js",
+      "../folders/folder-colors.js",
       "../navigator/customization-model.js",
       "../navigator/toolbar-config.js",
-      "../../data/properties/property-types.js",
-      "../../ui/pickers/icon-catalog.js",
-      "../folders/folder-colors.js",
       "../results/view-config.js",
-      "../../utils/vault-paths.js"
+      "../sort/sort-model.js"
     ],
-    "lines": 407,
-    "bytes": 17279,
+    "lines": 411,
+    "bytes": 17627,
     "origins": [
       {
         "id": "LocalSearchPlugin._normalizeSettingsInPlace",
@@ -5819,19 +5831,19 @@
       "LocalSearchPlugin_tree_maintenance_methods"
     ],
     "dependencies": [
-      "../../utils/normalization.js",
-      "../../utils/preferred-order.js",
-      "obsidian",
-      "../../utils/vault-paths.js",
-      "../../data/tags/tag-values.js",
       "../../data/properties/property-catalog.js",
       "../../data/properties/property-values.js",
-      "../filters/pool-config.js",
+      "../../data/tags/tag-values.js",
+      "../../utils/normalization.js",
+      "../../utils/preferred-order.js",
+      "../../utils/vault-paths.js",
       "../create/create-model.js",
-      "../navigator/customization-model.js"
+      "../filters/pool-config.js",
+      "../navigator/customization-model.js",
+      "obsidian"
     ],
     "lines": 351,
-    "bytes": 16434,
+    "bytes": 16475,
     "origins": [
       {
         "id": "LocalSearchPlugin.setPickerSiblingOrder",
@@ -5931,16 +5943,16 @@
       "LocalSearchPlugin_view_preferences_methods"
     ],
     "dependencies": [
-      "../../utils/vault-paths.js",
-      "../folders/exclusions.js",
       "../../data/formats/file-types.js",
+      "../../utils/vault-paths.js",
       "../filters/pool-config.js",
-      "obsidian",
+      "../folders/exclusions.js",
+      "../results/view-config.js",
       "../sort/sort-model.js",
-      "../results/view-config.js"
+      "obsidian"
     ],
-    "lines": 293,
-    "bytes": 10822,
+    "lines": 282,
+    "bytes": 10581,
     "origins": [
       {
         "id": "LocalSearchPlugin._captureActiveResultViewAnchors",
@@ -6086,8 +6098,8 @@
     ],
     "dependencies": [
       "../../core/view-types.js",
-      "obsidian",
-      "../../ui/views/SearchView.js"
+      "../../ui/views/SearchView.js",
+      "obsidian"
     ],
     "lines": 87,
     "bytes": 4193,
@@ -6136,12 +6148,12 @@
       "SearchResultControlsController"
     ],
     "dependencies": [
+      "../../core/compose-class-methods.js",
       "../results/view-config.js",
-      "./toolbar-methods.js",
       "./filter-pool-editor-methods.js",
-      "./view-composer-methods.js",
       "./search-history-methods.js",
-      "../../core/compose-class-methods.js"
+      "./toolbar-methods.js",
+      "./view-composer-methods.js"
     ],
     "lines": 35,
     "bytes": 2612,
@@ -6172,24 +6184,24 @@
       "SearchResultControlsController_filter_pool_editor_methods"
     ],
     "dependencies": [
-      "../filters/pool-config.js",
-      "../../data/tags/tag-values.js",
-      "../../data/formats/file-types.js",
-      "../../data/tags/tag-tree.js",
-      "../../data/properties/property-catalog.js",
+      "../../core/picker-cleanup.js",
       "../../data/folders/folder-tree.js",
-      "../filters/pool-values.js",
-      "../../utils/normalization.js",
-      "../../ui/pickers/picker-shell.js",
-      "../../ui/pickers/picker-header.js",
-      "../../ui/pickers/selection-mode.js",
-      "../../ui/pickers/tree-row.js",
+      "../../data/formats/file-types.js",
+      "../../data/properties/property-catalog.js",
+      "../../data/properties/property-values.js",
+      "../../data/tags/tag-tree.js",
+      "../../data/tags/tag-values.js",
       "../../interactions/scroll-anchor.js",
       "../../ui/components/input-controls.js",
       "../../ui/components/view-composer.js",
-      "../../core/picker-cleanup.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/picker-shell.js",
+      "../../ui/pickers/selection-mode.js",
+      "../../ui/pickers/tree-row.js",
+      "../../utils/normalization.js",
       "../filters/filter-state.js",
-      "../../data/properties/property-values.js"
+      "../filters/pool-config.js",
+      "../filters/pool-values.js"
     ],
     "lines": 789,
     "bytes": 36216,
@@ -6400,13 +6412,13 @@
       "SearchResultControlsController_search_history_methods"
     ],
     "dependencies": [
-      "../../ui/pickers/picker-header.js",
+      "../../interactions/hover-hints.js",
       "../../ui/components/input-controls.js",
+      "../../ui/pickers/picker-header.js",
       "../../ui/pickers/picker-shell.js",
       "../../ui/pickers/tree-row.js",
-      "obsidian",
-      "../../interactions/hover-hints.js",
-      "../../utils/dom.js"
+      "../../utils/dom.js",
+      "obsidian"
     ],
     "lines": 206,
     "bytes": 9577,
@@ -6447,8 +6459,8 @@
     ],
     "dependencies": [
       "../../ui/components/input-controls.js",
-      "obsidian",
-      "../results/view-config.js"
+      "../results/view-config.js",
+      "obsidian"
     ],
     "lines": 148,
     "bytes": 5900,
@@ -6515,28 +6527,29 @@
       "SearchResultControlsController_view_composer_methods"
     ],
     "dependencies": [
-      "../results/view-config.js",
-      "obsidian",
-      "../../ui/pickers/picker-shell.js",
+      "../../interactions/hover-hints.js",
+      "../../core/picker-cleanup.js",
       "../../data/properties/property-catalog.js",
-      "../../ui/pickers/picker-header.js",
-      "../../ui/pickers/tree-row.js",
-      "../navigator/toolbar-config.js",
       "../../interactions/PointerSortCoordinator.js",
-      "../../ui/pickers/sort-mode.js",
-      "../../ui/components/view-composer.js",
-      "../../utils/preferred-order.js",
-      "../../ui/pickers/icon-picker.js",
-      "../../ui/pickers/icon-catalog.js",
-      "../sort/sort-model.js",
       "../../ui/components/input-controls.js",
-      "../filters/pool-values.js",
+      "../../ui/components/view-composer.js",
+      "../../ui/pickers/icon-catalog.js",
+      "../../ui/pickers/icon-picker.js",
+      "../../ui/pickers/picker-header.js",
+      "../../ui/pickers/picker-shell.js",
+      "../../ui/pickers/sort-mode.js",
+      "../../ui/pickers/tree-row.js",
       "../../utils/dom.js",
+      "../../utils/preferred-order.js",
+      "../filters/pool-values.js",
       "../folders/exclusions.js",
-      "../../core/picker-cleanup.js"
+      "../navigator/toolbar-config.js",
+      "../results/view-config.js",
+      "../sort/sort-model.js",
+      "obsidian"
     ],
-    "lines": 947,
-    "bytes": 45508,
+    "lines": 948,
+    "bytes": 45702,
     "origins": [
       {
         "id": "SearchResultControlsController.refreshFilterPoolHeader",
@@ -6627,20 +6640,20 @@
       "SearchResultRendererController"
     ],
     "dependencies": [
-      "./SparseHeightIndex.js",
+      "../../core/compose-class-methods.js",
       "../../utils/dom.js",
-      "./virtualization-config.js",
-      "./viewport-geometry-methods.js",
-      "./viewport-anchors-methods.js",
-      "./virtual-window-methods.js",
-      "./page-and-snippets-methods.js",
-      "./filter-channels-methods.js",
+      "./SparseHeightIndex.js",
       "./card-metadata-methods.js",
+      "./filter-channels-methods.js",
+      "./page-and-snippets-methods.js",
       "./result-card-methods.js",
-      "../../core/compose-class-methods.js"
+      "./viewport-anchors-methods.js",
+      "./viewport-geometry-methods.js",
+      "./virtual-window-methods.js",
+      "./virtualization-config.js"
     ],
-    "lines": 94,
-    "bytes": 6638,
+    "lines": 100,
+    "bytes": 6967,
     "origins": [
       {
         "id": "SearchResultRendererController.constructor",
@@ -6690,17 +6703,17 @@
       "SearchResultRendererController_card_metadata_methods"
     ],
     "dependencies": [
-      "../../utils/search-text.js",
-      "../../ui/components/input-controls.js",
       "../../data/formats/file-types.js",
-      "obsidian",
+      "../../data/properties/property-catalog.js",
       "../../data/properties/property-values.js",
       "../../data/tags/tag-tree.js",
       "../../data/tags/tag-values.js",
-      "../../data/properties/property-catalog.js",
-      "../../utils/preferred-order.js",
+      "../../ui/components/input-controls.js",
       "../../utils/normalization.js",
-      "../folders/folder-colors.js"
+      "../../utils/preferred-order.js",
+      "../../utils/search-text.js",
+      "../folders/folder-colors.js",
+      "obsidian"
     ],
     "lines": 347,
     "bytes": 15887,
@@ -6821,16 +6834,18 @@
       "SearchResultRendererController_filter_channels_methods"
     ],
     "dependencies": [
-      "../../ui/components/input-controls.js",
-      "../../ui/components/indicator-label.js",
+      "../../interactions/hover-hints.js",
+      "../../utils/dom.js",
       "../../data/properties/property-catalog.js",
-      "../filters/pool-values.js",
+      "../../ui/components/indicator-label.js",
+      "../../ui/components/input-controls.js",
       "../../utils/preferred-order.js",
       "../filters/pool-config.js",
+      "../filters/pool-values.js",
       "obsidian"
     ],
-    "lines": 310,
-    "bytes": 14513,
+    "lines": 314,
+    "bytes": 14957,
     "origins": [
       {
         "id": "SearchResultRendererController._renderFilterPoolHeader",
@@ -6912,14 +6927,15 @@
       "SearchResultRendererController_page_and_snippets_methods"
     ],
     "dependencies": [
-      "../search/QueryState.js",
-      "../../utils/search-text.js",
-      "../../utils/markdown-text.js",
       "../../data/formats/file-types.js",
-      "../../utils/dom.js"
+      "../../utils/dom.js",
+      "../../utils/markdown-text.js",
+      "../../utils/search-text.js",
+      "../search/QueryState.js",
+      "./browse-card-reuse.js"
     ],
-    "lines": 274,
-    "bytes": 14272,
+    "lines": 294,
+    "bytes": 15190,
     "origins": [
       {
         "id": "SearchResultRendererController.renderCurrentView",
@@ -6965,15 +6981,15 @@
       "SearchResultRendererController_result_card_methods"
     ],
     "dependencies": [
-      "obsidian",
-      "./view-config.js",
-      "../../utils/dom.js",
-      "../../ui/components/input-controls.js",
       "../../data/formats/file-types.js",
-      "../../utils/search-text.js"
+      "../../ui/components/input-controls.js",
+      "../../utils/dom.js",
+      "../../utils/search-text.js",
+      "./view-config.js",
+      "obsidian"
     ],
-    "lines": 207,
-    "bytes": 9729,
+    "lines": 208,
+    "bytes": 9822,
     "origins": [
       {
         "id": "SearchResultRendererController._buildResultItem",
@@ -7141,8 +7157,8 @@
       "SearchResultRendererController_viewport_anchors_methods"
     ],
     "dependencies": [
-      "../../utils/dom.js",
       "../../core/session-values.js",
+      "../../utils/dom.js",
       "./virtualization-config.js"
     ],
     "lines": 397,
@@ -7300,10 +7316,10 @@
       "SearchResultRendererController_viewport_geometry_methods"
     ],
     "dependencies": [
-      "../../utils/dom.js",
+      "../../core/session-values.js",
       "../../interactions/SwipeActionCoordinator.js",
-      "./virtualization-config.js",
-      "../../core/session-values.js"
+      "../../utils/dom.js",
+      "./virtualization-config.js"
     ],
     "lines": 445,
     "bytes": 18690,
@@ -7491,8 +7507,8 @@
       "../../utils/dom.js",
       "./virtualization-config.js"
     ],
-    "lines": 441,
-    "bytes": 19497,
+    "lines": 460,
+    "bytes": 20715,
     "origins": [
       {
         "id": "SearchResultRendererController.renderInitialPage",
@@ -7757,11 +7773,11 @@
     ],
     "dependencies": [
       "../../data/formats/file-types.js",
-      "../../utils/search-text.js",
-      "../../data/tags/tag-values.js"
+      "../../data/tags/tag-values.js",
+      "../../utils/search-text.js"
     ],
-    "lines": 58,
-    "bytes": 2292,
+    "lines": 59,
+    "bytes": 2451,
     "origins": [
       {
         "id": "ResultRanker",
@@ -7781,8 +7797,8 @@
       "SearchSelectionController"
     ],
     "dependencies": [
-      "obsidian",
-      "../../ui/components/input-controls.js"
+      "../../ui/components/input-controls.js",
+      "obsidian"
     ],
     "lines": 543,
     "bytes": 22904,
@@ -7813,16 +7829,17 @@
       "SearchSortController"
     ],
     "dependencies": [
-      "../filters/filter-state.js",
-      "obsidian",
-      "./sort-model.js",
-      "../../ui/pickers/picker-header.js",
+      "../../interactions/hover-hints.js",
       "../../ui/components/input-controls.js",
+      "../../ui/pickers/picker-header.js",
       "../../ui/pickers/tree-row.js",
-      "../navigator/toolbar-config.js"
+      "../filters/filter-state.js",
+      "../navigator/toolbar-config.js",
+      "./sort-model.js",
+      "obsidian"
     ],
-    "lines": 381,
-    "bytes": 15848,
+    "lines": 396,
+    "bytes": 17073,
     "origins": [
       {
         "id": "SearchSortController",
@@ -7963,8 +7980,8 @@
       "SearchWorkspaceCapabilities"
     ],
     "dependencies": [
-      "obsidian",
-      "../ui/mobile/mobile-frame.js"
+      "../ui/mobile/mobile-frame.js",
+      "obsidian"
     ],
     "lines": 47,
     "bytes": 2444,
@@ -8016,11 +8033,11 @@
       "PointerSortCoordinator"
     ],
     "dependencies": [
-      "obsidian",
-      "./sort-feedback.js"
+      "./sort-feedback.js",
+      "obsidian"
     ],
-    "lines": 327,
-    "bytes": 12683,
+    "lines": 330,
+    "bytes": 12843,
     "origins": [
       {
         "id": "PointerSortCoordinator",
@@ -8043,9 +8060,9 @@
       "SwipeActionCoordinator"
     ],
     "dependencies": [
-      "obsidian",
       "../ui/components/input-controls.js",
-      "../utils/dom.js"
+      "../utils/dom.js",
+      "obsidian"
     ],
     "lines": 679,
     "bytes": 29113,
@@ -8101,11 +8118,12 @@
     "file": "src/interactions/hover-hints.js",
     "exports": [
       "supportsPluginFineHover",
+      "setSearchAttribute",
       "installPluginHoverHintSuppression"
     ],
     "dependencies": [],
-    "lines": 114,
-    "bytes": 5767,
+    "lines": 129,
+    "bytes": 6639,
     "origins": [
       {
         "id": "supportsPluginFineHover",
@@ -8309,14 +8327,16 @@
       "BatchMetadataService"
     ],
     "dependencies": [
-      "../data/properties/property-values.js",
-      "obsidian",
       "../data/properties/property-types.js",
+      "../data/properties/property-values.js",
+      "../data/properties/raw-mutations.js",
+      "../data/properties/key-merge.js",
+      "../data/properties/cross-key-transfer.js",
       "../data/tags/tag-values.js",
-      "../data/properties/raw-mutations.js"
+      "obsidian"
     ],
-    "lines": 389,
-    "bytes": 17381,
+    "lines": 426,
+    "bytes": 19653,
     "origins": [
       {
         "id": "NO_FRONTMATTER_WRITE",
@@ -8353,11 +8373,11 @@
       "FileOperationService"
     ],
     "dependencies": [
-      "obsidian",
+      "../data/properties/property-types.js",
+      "../data/tags/tag-values.js",
       "../data/time/time-values.js",
       "../utils/vault-paths.js",
-      "../data/tags/tag-values.js",
-      "../data/properties/property-types.js"
+      "obsidian"
     ],
     "lines": 285,
     "bytes": 14268,
@@ -8494,8 +8514,8 @@
       "appendPropertySpecialStateInlineGroup"
     ],
     "dependencies": [
-      "./input-controls.js",
-      "../../data/properties/property-values.js"
+      "../../data/properties/property-values.js",
+      "./input-controls.js"
     ],
     "lines": 75,
     "bytes": 2561,
@@ -8521,11 +8541,11 @@
       "createViewComposerRemoveButton"
     ],
     "dependencies": [
-      "./input-controls.js",
-      "./indicator-label.js",
       "../../utils/dom.js",
-      "obsidian",
-      "../pickers/tree-row.js"
+      "../pickers/tree-row.js",
+      "./indicator-label.js",
+      "./input-controls.js",
+      "obsidian"
     ],
     "lines": 120,
     "bytes": 3644,
@@ -8585,11 +8605,11 @@
       "openPickerDeleteDialog"
     ],
     "dependencies": [
-      "obsidian",
-      "./submission.js",
       "../../utils/dom.js",
       "./dialog-surface.js",
-      "../overlays/sidebar-popup.js"
+      "./submission.js",
+      "../overlays/sidebar-popup.js",
+      "obsidian"
     ],
     "lines": 215,
     "bytes": 9669,
@@ -8692,12 +8712,11 @@
       "SearchWindowSession"
     ],
     "dependencies": [
-      "obsidian",
       "../../core/SearchCore.js",
-      "./floating-host.js",
-      "./modal-host.js",
       "../../utils/dom.js",
-      "../mobile/mobile-frame.js"
+      "../mobile/mobile-frame.js",
+      "./modal-host.js",
+      "obsidian"
     ],
     "lines": 690,
     "bytes": 29439,
@@ -8746,8 +8765,8 @@
     "dependencies": [
       "obsidian"
     ],
-    "lines": 214,
-    "bytes": 11516,
+    "lines": 217,
+    "bytes": 11742,
     "origins": [
       {
         "id": "MOBILE_FRAME_OWNER",
@@ -8784,15 +8803,15 @@
       "LocalSearchOverlayHost"
     ],
     "dependencies": [
-      "../mobile/mobile-frame.js",
-      "obsidian",
-      "../components/input-controls.js",
+      "../../core/picker-cleanup.js",
       "../../utils/dom.js",
+      "../components/input-controls.js",
+      "../mobile/mobile-frame.js",
       "./popup-order.js",
-      "../../core/picker-cleanup.js"
+      "obsidian"
     ],
-    "lines": 131,
-    "bytes": 5874,
+    "lines": 139,
+    "bytes": 6778,
     "origins": [
       {
         "id": "LocalSearchOverlayHost",
@@ -8811,14 +8830,14 @@
       "OperationOverlayController"
     ],
     "dependencies": [
-      "./LocalSearchOverlayHost.js",
-      "obsidian",
-      "../../utils/dom.js",
-      "../dialogs/submission.js",
-      "../dialogs/dialog-surface.js",
-      "../../data/folders/folder-tree.js",
       "../../core/picker-cleanup.js",
-      "../pickers/folder-picker.js"
+      "../../data/folders/folder-tree.js",
+      "../../utils/dom.js",
+      "../dialogs/dialog-surface.js",
+      "../dialogs/submission.js",
+      "../pickers/folder-picker.js",
+      "./LocalSearchOverlayHost.js",
+      "obsidian"
     ],
     "lines": 153,
     "bytes": 6690,
@@ -8840,17 +8859,17 @@
       "SearchDropdownController"
     ],
     "dependencies": [
-      "obsidian",
-      "../pickers/picker-header.js",
-      "../dialogs/submission.js",
       "../../core/picker-cleanup.js",
-      "./popup-order.js",
+      "../dialogs/submission.js",
       "../mobile/mobile-frame.js",
+      "../pickers/picker-header.js",
       "./geometry.js",
-      "./sidebar-popup.js"
+      "./sidebar-popup.js",
+      "./popup-order.js",
+      "obsidian"
     ],
-    "lines": 712,
-    "bytes": 32730,
+    "lines": 718,
+    "bytes": 33157,
     "origins": [
       {
         "id": "SearchDropdownController",
@@ -8870,8 +8889,8 @@
       "resolveDropdownViewportBounds"
     ],
     "dependencies": [
-      "obsidian",
-      "../../utils/dom.js"
+      "../../utils/dom.js",
+      "obsidian"
     ],
     "lines": 33,
     "bytes": 2194,
@@ -8946,8 +8965,8 @@
       "obsidian",
       "./geometry.js"
     ],
-    "lines": 55,
-    "bytes": 2867,
+    "lines": 56,
+    "bytes": 2942,
     "origins": []
   },
   {
@@ -8976,16 +8995,15 @@
       "renderSharedFolderTreePicker"
     ],
     "dependencies": [
-      "obsidian",
+      "../../data/folders/folder-tree.js",
       "../../interactions/scroll-anchor.js",
-      "./tree-row.js",
-      "./picker-shell.js",
-      "../../utils/dom.js",
       "../../utils/preferred-order.js",
-      "../../data/folders/folder-tree.js"
+      "./picker-shell.js",
+      "./tree-row.js",
+      "obsidian"
     ],
     "lines": 216,
-    "bytes": 7989,
+    "bytes": 8024,
     "origins": [
       {
         "id": "renderSharedFolderTreePicker",
@@ -9006,11 +9024,11 @@
     ],
     "dependencies": [
       "./picker-header.js",
-      "./tree-row.js",
-      "./picker-shell.js"
+      "./picker-shell.js",
+      "./tree-row.js"
     ],
     "lines": 117,
-    "bytes": 4890,
+    "bytes": 4969,
     "origins": [
       {
         "id": "attachFacetPickerOverflow",
@@ -9111,11 +9129,11 @@
       "openFilterToolbarIconPicker"
     ],
     "dependencies": [
+      "../../utils/normalization.js",
       "./icon-catalog.js",
-      "./picker-shell.js",
       "./picker-header.js",
-      "./tree-row.js",
-      "../../utils/normalization.js"
+      "./picker-shell.js",
+      "./tree-row.js"
     ],
     "lines": 82,
     "bytes": 4559,
@@ -9167,6 +9185,7 @@
   {
     "file": "src/ui/pickers/picker-shell.js",
     "exports": [
+      "createPickerAutoLocateScheduler",
       "createSharedPickerFooter",
       "createSharedPickerTreeShell",
       "setPickerSearchMode",
@@ -9174,14 +9193,14 @@
       "renderSharedPickerRoot"
     ],
     "dependencies": [
+      "../../core/picker-cleanup.js",
       "../components/input-controls.js",
       "./count-rail.js",
-      "../../core/picker-cleanup.js",
-      "obsidian",
-      "./tree-row.js"
+      "./tree-row.js",
+      "obsidian"
     ],
-    "lines": 117,
-    "bytes": 4501,
+    "lines": 140,
+    "bytes": 5350,
     "origins": [
       {
         "id": "createSharedPickerFooter",
@@ -9235,17 +9254,19 @@
     "exports": [
       "facetSelectionCount",
       "commitFacetSelectionState",
+      "deactivateConflictingFacetPickerModes",
       "createFacetPickerSelectionMode"
     ],
     "dependencies": [
+      "../../core/picker-cleanup.js",
       "../../data/properties/property-values.js",
-      "./picker-header.js",
+      "../../features/filters/filter-state.js",
       "../components/input-controls.js",
-      "./picker-shell.js",
-      "../../core/picker-cleanup.js"
+      "./picker-header.js",
+      "./picker-shell.js"
     ],
-    "lines": 171,
-    "bytes": 5323,
+    "lines": 193,
+    "bytes": 6456,
     "origins": [
       {
         "id": "facetSelectionCount",
@@ -9282,8 +9303,8 @@
       "createSharedPickerSelectionStrip"
     ],
     "dependencies": [
-      "../components/input-controls.js",
       "../../core/picker-cleanup.js",
+      "../components/input-controls.js",
       "obsidian"
     ],
     "lines": 95,
@@ -9303,14 +9324,16 @@
   {
     "file": "src/ui/pickers/sort-mode.js",
     "exports": [
-      "attachPickerSortModeToggle"
+      "attachPickerSortModeToggle",
+      "attachFacetPickerSortModeToggle"
     ],
     "dependencies": [
       "./picker-header.js",
-      "./picker-shell.js"
+      "./picker-shell.js",
+      "./selection-mode.js"
     ],
-    "lines": 56,
-    "bytes": 1682,
+    "lines": 86,
+    "bytes": 2647,
     "origins": [
       {
         "id": "attachPickerSortModeToggle",
@@ -9332,11 +9355,11 @@
     ],
     "dependencies": [
       "../../data/formats/drawing-detection.js",
+      "../../utils/dom.js",
       "../../utils/normalization.js",
       "./picker-header.js",
-      "./tree-row.js",
       "./picker-shell.js",
-      "../../utils/dom.js"
+      "./tree-row.js"
     ],
     "lines": 167,
     "bytes": 6284,
@@ -9379,9 +9402,9 @@
       "createPickerRowAction"
     ],
     "dependencies": [
+      "../../utils/dom.js",
       "../components/input-controls.js",
-      "obsidian",
-      "../../utils/dom.js"
+      "obsidian"
     ],
     "lines": 222,
     "bytes": 8335,
@@ -9430,14 +9453,14 @@
       "LocalSearchSettingTab"
     ],
     "dependencies": [
-      "../../data/time/time-values.js",
-      "obsidian",
-      "./setting-row.js",
       "../../core/view-types.js",
-      "../components/input-controls.js"
+      "../../data/time/time-values.js",
+      "../components/input-controls.js",
+      "./setting-row.js",
+      "obsidian"
     ],
-    "lines": 257,
-    "bytes": 13454,
+    "lines": 267,
+    "bytes": 14051,
     "origins": [
       {
         "id": "LocalSearchSettingTab",
@@ -9488,13 +9511,13 @@
       "SearchView"
     ],
     "dependencies": [
-      "obsidian",
       "../../core/SearchCore.js",
+      "../../core/view-types.js",
       "../../integrations/SearchWorkspaceCapabilities.js",
-      "../../core/view-types.js"
+      "obsidian"
     ],
-    "lines": 205,
-    "bytes": 10105,
+    "lines": 207,
+    "bytes": 10174,
     "origins": [
       {
         "id": "SearchView",
@@ -9516,11 +9539,14 @@
       "isDomElement",
       "isDomHTMLElement",
       "isDomButton",
-      "isDomInput"
+      "isDomInput",
+      "setDomText",
+      "setDomProperty",
+      "reconcileDomChildren"
     ],
     "dependencies": [],
-    "lines": 49,
-    "bytes": 1448,
+    "lines": 76,
+    "bytes": 2544,
     "origins": [
       {
         "id": "hostDocument",
@@ -9727,11 +9753,11 @@
       "remapFilterPoolStoredKeys"
     ],
     "dependencies": [
-      "./normalization.js",
-      "../features/filters/pool-config.js"
+      "../features/filters/pool-config.js",
+      "./normalization.js"
     ],
-    "lines": 77,
-    "bytes": 3016,
+    "lines": 80,
+    "bytes": 3236,
     "origins": [
       {
         "id": "moveOrderedKey",

@@ -2,10 +2,10 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34847,
-  "jsBytes": 1616894,
-  "cssBytes": 264825,
-  "cssLines": 7684,
+  "jsLines": 34799,
+  "jsBytes": 1612839,
+  "cssBytes": 264925,
+  "cssLines": 7685,
   "cssParseErrors": [],
   "cssRuleCount": 723,
   "duplicateSelectorsSameContext": [
@@ -30,7 +30,7 @@
       "selector": "body.is-mobile",
       "lines": [
         7115,
-        7294
+        7295
       ]
     }
   ],
@@ -51,7 +51,7 @@
     "duplicateSectionNamedHeading": [],
     "missingConsumerCandidates": []
   },
-  "tokenDefinitionCount": 288,
+  "tokenDefinitionCount": 289,
   "unconsumedTokenCandidates": [],
   "resourceReferences": [
     {
@@ -406,48 +406,43 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 134,
+      "line": 109,
       "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 136,
+      "line": 111,
       "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 187,
+      "line": 162,
       "code": "this.backButton.addEventListener(\"click\", () => this.back());"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 204,
+      "line": 179,
       "code": "this.resultsButton.addEventListener(\"click\", () => { if (this.prepareSearch()) this.showResults(); });"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 316,
+      "line": 291,
       "code": "node.addEventListener(type, fn, options);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 317,
+      "line": 292,
       "code": "this.cleanups.push(() => node.removeEventListener(type, fn, options));"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 337,
+      "line": 312,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 951,
+      "line": 925,
       "code": "manage.addEventListener(\"click\", () => this.openSection(id, manage));"
-    },
-    {
-      "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 1207,
-      "code": "} else this._projectionTimer = this.root.ownerDocument.defaultView.setTimeout(project, 0);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
@@ -661,37 +656,37 @@
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "line": 220,
+      "line": 221,
       "code": "section.toggle.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "line": 399,
+      "line": 400,
       "code": "view.toggle.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "line": 483,
+      "line": 484,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "line": 511,
+      "line": 512,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "line": 868,
+      "line": 869,
       "code": "reset.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "line": 896,
+      "line": 897,
       "code": "const frame = hostWindow(panel).requestAnimationFrame(() => {"
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "line": 900,
+      "line": 901,
       "code": "registerPickerCleanup(panel, () => hostWindow(panel).cancelAnimationFrame(frame));"
     },
     {
@@ -711,22 +706,22 @@
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 115,
+      "line": 95,
       "code": "bestToggle.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 142,
+      "line": 122,
       "code": "bodyToggle.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 182,
+      "line": 162,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 308,
+      "line": 285,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
@@ -756,7 +751,7 @@
     },
     {
       "file": "src/features/results/virtual-window-methods.js",
-      "line": 403,
+      "line": 398,
       "code": "this._scrollFrame = hostWindow(container).requestAnimationFrame(() => {"
     },
     {
@@ -806,17 +801,17 @@
     },
     {
       "file": "src/features/sort/SearchSortController.js",
-      "line": 283,
+      "line": 284,
       "code": "view.fieldBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/sort/SearchSortController.js",
-      "line": 297,
+      "line": 298,
       "code": "view.pickerBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/sort/SearchSortController.js",
-      "line": 310,
+      "line": 311,
       "code": "view.directionBtn.addEventListener(\"click\", event => {"
     },
     {
@@ -1301,7 +1296,7 @@
     },
     {
       "file": "src/ui/mobile/mobile-frame.js",
-      "line": 202,
+      "line": 205,
       "code": "if (this.frame) this.win.cancelAnimationFrame(this.frame);"
     },
     {
@@ -1911,9 +1906,9 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "lines": 1521,
-      "bytes": 92087,
-      "sha256": "5dc41a8acd57c79490203901426dd6ea8f1eeee1ae6f1623e21d60d56cfe055a"
+      "lines": 1454,
+      "bytes": 87009,
+      "sha256": "d3e321599d9bdae0ceeec73514b466a639c83daedcb4b4001328209157f76170"
     },
     {
       "file": "src/features/navigator/customization-model.js",
@@ -2091,9 +2086,9 @@
     },
     {
       "file": "src/features/result-controls/view-composer-methods.js",
-      "lines": 947,
-      "bytes": 45508,
-      "sha256": "8e0d2ed2916e9b7e80a7fb29832427d98d57c80cbcb26995627455a6eb5bf3ac"
+      "lines": 948,
+      "bytes": 45702,
+      "sha256": "967fab7c9c4b70697090ff8fce069b237cad8911a9d916868502b234fcecc885"
     },
     {
       "file": "src/features/results/SearchResultRendererController.js",
@@ -2109,9 +2104,9 @@
     },
     {
       "file": "src/features/results/browse-card-reuse.js",
-      "lines": 92,
-      "bytes": 4603,
-      "sha256": "ca6ad075f5d664afa55ade3e70a2ac3bde398c896e2b8e0bb3dec0a0121d164e"
+      "lines": 89,
+      "bytes": 4411,
+      "sha256": "682d910b093c278bbfd6653931efe8ccf5452f658e6744973c1e12d97ac4aa77"
     },
     {
       "file": "src/features/results/card-metadata-methods.js",
@@ -2121,15 +2116,15 @@
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "lines": 337,
-      "bytes": 16142,
-      "sha256": "c08b1b0c31c3c4aaead11c69b767fe2cadef1905d546877fbce124a91ef463eb"
+      "lines": 314,
+      "bytes": 14957,
+      "sha256": "cf566fb571f9e1abf75ff9a250607f2c20c97221f2943bf63e2cd350d6d25f3a"
     },
     {
       "file": "src/features/results/page-and-snippets-methods.js",
-      "lines": 291,
-      "bytes": 14964,
-      "sha256": "16026b5abe536f7d7b1e7c61df61b24190828c66d789bb1a5f28f6d5f499778e"
+      "lines": 294,
+      "bytes": 15190,
+      "sha256": "361d3e38803d5e790c1550c1143f06106aec5cdf9132826e37dad0867c919a48"
     },
     {
       "file": "src/features/results/result-card-methods.js",
@@ -2157,9 +2152,9 @@
     },
     {
       "file": "src/features/results/virtual-window-methods.js",
-      "lines": 465,
-      "bytes": 21022,
-      "sha256": "22b8d64bd720db89ef080a0c6e6b54f7bb0ffb87d9670052b00fb69244b90e4f"
+      "lines": 460,
+      "bytes": 20715,
+      "sha256": "c30f1716ecdb2ed51ff24fc937348bb33fa8475dbb5ce4e913643bf6d365267d"
     },
     {
       "file": "src/features/results/virtualization-config.js",
@@ -2187,9 +2182,9 @@
     },
     {
       "file": "src/features/sort/SearchSortController.js",
-      "lines": 395,
-      "bytes": 16980,
-      "sha256": "25b69689a3f6945f79da329ce49bab56870101feac71e5dd3020a850aa1ddcf4"
+      "lines": 396,
+      "bytes": 17073,
+      "sha256": "9f3f0f6f358e2ff257d84f42a4e7d8d3e798debebc6f7531f6badbd7f96361ab"
     },
     {
       "file": "src/features/sort/sort-model.js",
@@ -2223,9 +2218,9 @@
     },
     {
       "file": "src/interactions/hover-hints.js",
-      "lines": 114,
-      "bytes": 5767,
-      "sha256": "44e2166d67b4c14472df4ddbd64da551220a11d858420046c7db19356ea63303"
+      "lines": 129,
+      "bytes": 6639,
+      "sha256": "f4dedef440a4591faca7fc3021b6a473345088304125d848eb4ecdfcc3e98727"
     },
     {
       "file": "src/interactions/scroll-anchor.js",
@@ -2325,9 +2320,9 @@
     },
     {
       "file": "src/ui/mobile/mobile-frame.js",
-      "lines": 214,
-      "bytes": 11516,
-      "sha256": "358b29f6a6e24e0468cbd981a4943d9c6d708ce35c238396ad7aa019f5ca3fd3"
+      "lines": 217,
+      "bytes": 11742,
+      "sha256": "311cc145e77b03cdb2f1f3eecf0f742533acb278a1bf7b2eb8af5f97f458ccc8"
     },
     {
       "file": "src/ui/overlays/LocalSearchOverlayHost.js",
@@ -2457,9 +2452,9 @@
     },
     {
       "file": "src/utils/dom.js",
-      "lines": 49,
-      "bytes": 1448,
-      "sha256": "15f1d8424d35eb118a70f47c5b491338fc120d3a51ceebcffb9acbe950d0af99"
+      "lines": 76,
+      "bytes": 2544,
+      "sha256": "b05cd740147f90342a51d6b15a8ea48c6de2d6a5c6af5ed23f2d80be7c76a864"
     },
     {
       "file": "src/utils/markdown-text.js",
@@ -2499,14 +2494,14 @@
     },
     {
       "file": "src/styles/styles.css",
-      "lines": 7684,
-      "bytes": 264825,
-      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+      "lines": 7685,
+      "bytes": 264925,
+      "sha256": "da4d7f9fa63b5707675b46104589fb7530aef364aec3035090dd44e01be039d2"
     }
   ],
   "mobileContract": {
     "baseHeightToken": true,
-    "keyboardHeightToken": false,
+    "keyboardHeightToken": true,
     "note": "Presence is an inventory check, not a native keyboard/layout acceptance test."
   }
 }

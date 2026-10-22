@@ -26,7 +26,7 @@ function navFixture(){
  Object.assign(nav,{core,scroll:{scrollTop:0},root,facets:{hidden:false},page:'filters',searchVisible:false,
     expanded:new Set(),collapsed:new Set(),
     _scrollStateTimer:null,_scrollStatePending:false,_lastScrollStateTop:0,
-    _projectionTimer:null,observer:{disconnect(){disposed++;}},customization:{destroy(){disposed++;}},cleanups:[()=>disposed++]});
+    _projectionTask:null,observer:{disconnect(){disposed++;}},customization:{destroy(){disposed++;}},cleanups:[()=>disposed++]});
  return {nav,core,time,root,get calls(){return calls;},get disposed(){return disposed;}};
 }
 

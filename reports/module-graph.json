@@ -411,6 +411,8 @@
     "src/data/properties/property-values.js",
     "src/data/tags/tag-tree.js",
     "src/data/tags/tag-values.js",
+    "src/interactions/hover-hints.js",
+    "src/utils/dom.js",
     "src/interactions/scroll-anchor.js",
     "src/ui/components/input-controls.js",
     "src/ui/pickers/count-rail.js",
@@ -625,6 +627,7 @@
     "src/features/results/view-config.js"
   ],
   "src/features/result-controls/view-composer-methods.js": [
+    "src/interactions/hover-hints.js",
     "src/core/picker-cleanup.js",
     "src/data/properties/property-catalog.js",
     "src/interactions/PointerSortCoordinator.js",
@@ -674,6 +677,8 @@
     "src/features/folders/folder-colors.js"
   ],
   "src/features/results/filter-channels-methods.js": [
+    "src/interactions/hover-hints.js",
+    "src/utils/dom.js",
     "src/data/properties/property-catalog.js",
     "src/ui/components/indicator-label.js",
     "src/ui/components/input-controls.js",
@@ -728,6 +733,7 @@
     "src/ui/components/input-controls.js"
   ],
   "src/features/sort/SearchSortController.js": [
+    "src/interactions/hover-hints.js",
     "src/ui/components/input-controls.js",
     "src/ui/pickers/picker-header.js",
     "src/ui/pickers/tree-row.js",

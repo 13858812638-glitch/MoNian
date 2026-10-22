@@ -14,6 +14,16 @@ export function supportsPluginFineHover(root = null) {
     return query ? query.matches : !(globalThis.navigator?.maxTouchPoints > 0);
 }
 
+// Attribute updates use the same owner that preserves accessible names. No
+// controller keeps a second label-intent cache or recreates suppressed hints.
+export function setSearchAttribute(node, name, value) {
+    if (!node) return;
+    const text = String(value);
+    const owner = globalThis[Symbol.for("gls-dida-pwb.hover-hints.v1")];
+    if (owner?.writeAttribute?.(node, name, text)) return;
+    if (node.getAttribute(name) !== text) node.setAttribute(name, text);
+}
+
 export function installPluginHoverHintSuppression() {
     const key = Symbol.for("gls-dida-pwb.hover-hints.v1");
     let owner = globalThis[key];
@@ -21,18 +31,17 @@ export function installPluginHoverHintSuppression() {
         const documents = new Map(), labels = new WeakMap();
         let sequence = 0;
         const element = node => node?.nodeType === 1;
-        const suppress = node => {
+        const suppress = (node, incoming = node.getAttribute("aria-label")) => {
             if (!element(node)) return;
             for (const name of ["title", "data-tooltip-position", "data-tooltip-delay"])
                 if (node.hasAttribute(name)) node.removeAttribute(name);
-            const incoming = node.getAttribute("aria-label");
             let saved = labels.get(node);
             const labelledBy = node.getAttribute("aria-labelledby");
             if (labelledBy && labelledBy !== saved?.id) {
                 if (incoming !== null) node.removeAttribute("aria-label");
                 return;
             }
-            if (incoming) {
+            if (incoming !== null) {
                 if (!saved) { saved = { id: `plugin-ui-label-${++sequence}`, text: incoming }; labels.set(node, saved); }
                 else saved.text = incoming;
             }
@@ -49,16 +58,22 @@ export function installPluginHoverHintSuppression() {
             }
             if (label.textContent !== saved.text) label.textContent = saved.text;
             if (labelledBy !== saved.id) node.setAttribute("aria-labelledby", saved.id);
-            if (incoming !== null) node.removeAttribute("aria-label");
+            if (node.hasAttribute("aria-label")) node.removeAttribute("aria-label");
         };
         const scan = root => {
             if (!element(root)) return;
             suppress(root);
-            root.querySelectorAll("[title], [aria-label], [data-tooltip-position], [data-tooltip-delay]").forEach(suppress);
+            root.querySelectorAll("[title], [aria-label], [data-tooltip-position], [data-tooltip-delay]").forEach(node => suppress(node));
         };
         const options = { subtree: true, childList: true, attributes: true,
             attributeFilter: ["title", "aria-label", "aria-labelledby", "data-tooltip-position", "data-tooltip-delay"] };
         owner = {
+            writeAttribute(node, name, value) {
+                if (!["aria-label", "title", "data-tooltip-position", "data-tooltip-delay"].includes(name)) return false;
+                if (!documents.get(node.ownerDocument)?.owns(node)) return false;
+                suppress(node, name === "aria-label" ? value : undefined);
+                return true;
+            },
             observe(root) {
                 if (!element(root)) return false;
                 const doc = root.ownerDocument, win = doc.defaultView;
@@ -81,7 +96,7 @@ export function installPluginHoverHintSuppression() {
                         }
                     };
                     const observer = new win.MutationObserver(process);
-                    record = { roots, observer, process };
+                    record = { roots, observer, process, owns };
                     documents.set(doc, record);
                 }
                 const count = record.roots.get(root) || 0;

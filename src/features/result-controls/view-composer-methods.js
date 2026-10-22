@@ -1,3 +1,4 @@
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 import { registerPickerCleanup } from "../../core/picker-cleanup.js";
@@ -11,7 +12,7 @@ import { configureSharedPickerHeader, createPickerHeaderIconAction } from "../..
 import { activatePickerSearch, createSharedPickerTreeShell } from "../../ui/pickers/picker-shell.js";
 import { attachPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
 import { createPickerRowAction, createSharedPickerTreeRow } from "../../ui/pickers/tree-row.js";
-import { hostWindow } from "../../utils/dom.js";
+import { hostWindow, setDomProperty } from "../../utils/dom.js";
 import { moveOrderedKey } from "../../utils/preferred-order.js";
 import { filterPoolIcon, filterPoolLabel } from "../filters/pool-values.js";
 import { normalizeExcludedFolders } from "../folders/exclusions.js";
@@ -46,19 +47,19 @@ export const SearchResultControlsController_view_composer_methods = {
         const hasValue = Boolean(value.trim());
 
         if (this.createNoteBtn) {
-            this.createNoteBtn.hidden = !core.allowCreate;
-            this.createNoteBtn.setAttribute("aria-hidden", String(!core.allowCreate));
+            setDomProperty(this.createNoteBtn, "hidden", !core.allowCreate);
+            setSearchAttribute(this.createNoteBtn, "aria-hidden", String(!core.allowCreate));
             this.createNoteBtn.classList.toggle("is-selected", createMode);
-            this.createNoteBtn.setAttribute("aria-pressed", String(createMode));
+            setSearchAttribute(this.createNoteBtn, "aria-pressed", String(createMode));
             const label = createMode ? "退出创建笔记" : "创建笔记";
-            this.createNoteBtn.setAttribute("aria-label", label);
+            setSearchAttribute(this.createNoteBtn, "aria-label", label);
         }
 
         if (!this.resultViewBtn) return;
         // Create-submit or partial creation has no valid clear action. Do not
         // let a native button click blur the search field during this lock.
-        this.resultViewBtn.disabled = Boolean((createMode || hasValue)
-            && (core.createFlow?._createInFlight || core.createFlow?.createDraft?.pendingCreation));
+        setDomProperty(this.resultViewBtn, "disabled", Boolean((createMode || hasValue)
+            && (core.createFlow?._createInFlight || core.createFlow?.createDraft?.pendingCreation)));
         const activeId = this.activeViewId();
         const viewLabel = RESULT_VIEW_LABELS[activeId];
         const viewIcon = activeId === "detailed"
@@ -87,12 +88,12 @@ export const SearchResultControlsController_view_composer_methods = {
         const label = createMode
             ? "清空创建标题"
             : (hasValue ? "清空搜索" : `结果视图：${viewLabel}`);
-        this.resultViewBtn.setAttribute("aria-label", label);
+        setSearchAttribute(this.resultViewBtn, "aria-label", label);
         if (createMode || hasValue) {
-            this.resultViewBtn.setAttribute("aria-expanded", "false");
+            setSearchAttribute(this.resultViewBtn, "aria-expanded", "false");
         } else {
             const open = Boolean(core.dropdown.isOpenFor(this.resultViewBtn));
-            this.resultViewBtn.setAttribute("aria-expanded", String(open));
+            setSearchAttribute(this.resultViewBtn, "aria-expanded", String(open));
         }
     },
 
@@ -179,7 +180,7 @@ export const SearchResultControlsController_view_composer_methods = {
                 row.visibility.replaceChildren();
                 setIcon(row.visibility, enabled ? "eye" : "eye-off");
                 row.visibility.classList.toggle("is-hidden-state", !enabled);
-                row.visibility.setAttribute("aria-label", label);
+                setSearchAttribute(row.visibility, "aria-label", label);
                 row.visibility.setAttribute("aria-pressed", String(enabled));
                 row.visibility.title = label;
             }
@@ -280,7 +281,7 @@ export const SearchResultControlsController_view_composer_methods = {
                         });
                     }
                 });
-                view.iconEl.setAttribute("aria-label", `修改${def.label}图标`);
+                setSearchAttribute(view.iconEl, "aria-label", `修改${def.label}图标`);
                 view.iconEl.setAttribute("title", `修改${def.label}图标`);
                 view.iconEl.removeAttribute("aria-pressed");
                 const rendered = { ...view, ...buttons };
@@ -316,7 +317,7 @@ export const SearchResultControlsController_view_composer_methods = {
                         setIcon(row.visibility, visible ? "eye" : "eye-off");
                     }
                     row.visibility.classList.toggle("is-hidden-state", !visible);
-                    row.visibility.setAttribute("aria-label", label);
+                    setSearchAttribute(row.visibility, "aria-label", label);
                     row.visibility.setAttribute("aria-pressed", String(visible));
                     row.visibility.title = label;
                 }
@@ -413,7 +414,7 @@ export const SearchResultControlsController_view_composer_methods = {
             setIcon(button, nextIcon);
             button.classList.toggle("is-hidden-state", !visible);
             const actionLabel = visible ? `隐藏${label}` : `显示${label}`;
-            button.setAttribute("aria-label", actionLabel);
+            setSearchAttribute(button, "aria-label", actionLabel);
             button.setAttribute("aria-pressed", String(visible));
             button.title = actionLabel;
         };

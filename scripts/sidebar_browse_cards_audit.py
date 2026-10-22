@@ -21,7 +21,7 @@ with sync_playwright() as pw:
    await go('Folder000');window.first=C.resultEls[0];await go('Folder001');await go('Folder000');
   }''')
   if mobile:
-   check('mobile keeps its existing fresh-card path',p.evaluate('C.resultEls[0]!==first'));p.evaluate('V.onClose()');ctx.close();continue
+   check('mobile shares retained-card path',p.evaluate('C.resultEls[0]===first'));p.evaluate('V.onClose()');ctx.close();continue
   check('returning to a folder reuses the same unchanged card',p.evaluate('C.resultEls[0]===first'))
   p.evaluate('''async()=>{built=0;searches=0;durations=[];for(let i=0;i<10;i++)await go(i%2?'Folder000':'Folder001')}''')
   measured=p.evaluate('({built,searches,durations,count:C.fullResults.length})')
@@ -70,7 +70,7 @@ with sync_playwright() as pw:
   p.evaluate('''async()=>{for(let i=2;i<18;i++)await go('Folder'+String(i).padStart(3,'0'))}''')
   check('desktop retained card cache stays bounded',p.evaluate('R._browseCardCache?.entries.size<=96'),p.evaluate('R._browseCardCache?.entries.size??null'))
   p.evaluate('''async()=>{N.desktopSidebar=false;built=0;C.performSearch('');await waitFixture(40)}''')
-  check('other desktop host branch builds fresh cards',p.evaluate('built>0&&!R._browseCardCache'))
+  check('presentation flags do not change shared card reuse',p.evaluate('built===0&&!!R._browseCardCache'))
   p.evaluate('''async()=>{N.desktopSidebar=true;C.performSearch('');await waitFixture(40)}''')
   p.evaluate('V.onClose()')
   check('closing the view releases the retained cards',p.evaluate('!R._browseCardCache||R._browseCardCache.entries.size===0'))

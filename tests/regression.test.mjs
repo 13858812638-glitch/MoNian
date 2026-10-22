@@ -48,7 +48,9 @@ for(const name of classNames.filter(name=>name!=='SearchFloatingHost'))test('pro
  // its absence in the historical baseline is not a regression.
  const excluded=new Set(['getProjectOwnerMigration','getIndexedProjectGroups','subscribeProjectPropertyChanges','_publishProjectChanges','_connectDidaProjectCatalog','_refreshDidaProjectCatalog','subscribeIndexChanges','getIndexedFiles','_publishPropertyCatalogChanges']);
  const keep=x=>!(name==='LocalSearchPlugin'&&x.key==='openFloatingSearch')&&!(name==='SearchFacetController'&&x.key==='openFolderCreateDialog')&&!(name==='LocalSearchPlugin'&&excluded.has(x.key))&&!(name==='SearchCore'&&['_navigationCandidates','_selectBrowseFolder'].includes(x.key));
- assert.deepEqual(describe(A.subject[name]).filter(keep),describe(B.subject[name]).filter(keep));
+ const retired=name==='SearchNavigatorController'?'_propertyStats':null;
+ if(retired)assert.equal(B.subject[name].prototype[retired],undefined);
+ assert.deepEqual(describe(A.subject[name]).filter(keep).filter(x=>x.key!==retired),describe(B.subject[name]).filter(keep));
  if(name==='LocalSearchPlugin'){
    assert.equal(typeof B.subject[name].prototype.getIndexedFiles,'function');
    assert.equal(typeof B.subject[name].prototype.subscribeIndexChanges,'function');

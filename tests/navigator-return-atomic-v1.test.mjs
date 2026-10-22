@@ -18,8 +18,8 @@ test('return projection is limited to real mobile Results -> Filters navigation'
   assert.match(source, /this\.syncPage\(\);\s*if \(page === "filters"\) \{\s*this\.sync\(\);/);
 });
 test('consume the existing scheduled projection before first visible frame', () => {
-  assert.match(source, /if \(returningToFilters && this\._projectionTimer != null/);
-  assert.match(source, /this\.root\.ownerDocument\.defaultView\.clearTimeout\(this\._projectionTimer\);\s*this\._projectionTimer = null;\s*this\._renderProjection\(\);/);
+  assert.match(source, /if \(returningToFilters && this\._projectionTask != null/);
+  assert.match(source, /this\._projectionTask = null;\s*this\._renderProjection\(\);/);
   // Original hidden page short-circuit is kept to avoid continuous hidden DOM refreshes.
   assert.match(source, /if \(this\.layout === "mobile" && this\.page !== "filters"\) return;/);
 });

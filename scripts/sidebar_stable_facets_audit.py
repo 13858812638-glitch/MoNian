@@ -42,12 +42,8 @@ with sync_playwright() as pw:
           one:count('tags','Work/One'),beta:count('properties','beta'),alpha:count('properties','alpha'),
           empty:count('properties','empty'),flag:count('properties','flag'),amount:count('properties','amount'),
           same:[...originalRows].every(([key,r])=>r.isConnected&&row(...[key.slice(0,key.indexOf(':')),key.slice(key.indexOf(':')+1)])===r)})''')
-        if mobile:
-            check('mobile retains folder-scoped inventory','Remote' not in a['inventory']['tags'] and 'beta' not in a['inventory']['properties'],a)
-            check('mobile counts remain folder-scoped',a['work']=='2' and a['alpha']=='2',a)
-            p.evaluate('V.onClose()');ctx.close();continue
-        check('desktop keeps complete tag and property inventory',a['inventory']==a['initial'],a)
-        check('desktop retains the same DOM row nodes',a['same'])
+        check(('mobile' if mobile else 'desktop')+' keeps complete tag and property inventory',a['inventory']==a['initial'],a)
+        check(('mobile' if mobile else 'desktop')+' retains the same DOM row nodes',a['same'])
         check('unrelated tags and keys stay visible with zero counts',a.get('remote')=='0' and a.get('beta')=='0',a)
         check('hierarchical tags count each file once',a['work']=='2' and a['one']=='2',a)
         check('empty false and zero are present properties',all(a[k]=='1' for k in ['empty','flag','amount']),a)
