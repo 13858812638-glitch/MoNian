@@ -21,7 +21,8 @@
   ],
   "sourceParentCommit": "542fe7219fa404c91ecd7918ab2b25b6f6cb48b7",
   "reproducibleBuild": true,
-  "remoteDownloadVerified": false,
-  "remotePayloadMatchesBuild": false,
-  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Filter-Rail-20261022.zip"
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Filter-Rail-20261022.zip",
+  "sourceCommit": "91b5fe96ad3fbbd0202bcd47f4b5af313cacc226"
 }
