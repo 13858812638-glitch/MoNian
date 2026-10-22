@@ -21,6 +21,7 @@
   "manifestIncluded": false,
   "sourceParentCommit": "f113a8d",
   "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Desktop-Sidebar-Mouse-20261022.zip",
-  "remoteDownloadVerified": false,
-  "remotePayloadMatchesBuild": false
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "sourceCommit": "ee98d4d7d2c93acdea0fad29d281200ce2bd5e92"
 }
