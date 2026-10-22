@@ -129,7 +129,7 @@
 | `src/ui/hosts/SearchWindowSession.js` | 690 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchWindowSession` |
 | `src/ui/hosts/modal-host.js` | 56 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchModalHost`、`stripObsidianModalChrome` |
 | `src/ui/mobile/mobile-frame.js` | 214 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `MOBILE_FRAME_OWNER`、`MobileFrameController`、`mountMobileFrame` |
-| `src/ui/overlays/LocalSearchOverlayHost.js` | 131 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `LocalSearchOverlayHost` |
+| `src/ui/overlays/LocalSearchOverlayHost.js` | 139 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `LocalSearchOverlayHost` |
 | `src/ui/overlays/OperationOverlayController.js` | 153 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `OperationOverlayController` |
 | `src/ui/overlays/SearchDropdownController.js` | 718 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchDropdownController` |
 | `src/ui/overlays/geometry.js` | 33 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `resolveOverlayBounds`、`resolveDropdownViewportBounds` |
@@ -756,7 +756,7 @@
 - **导出**：`MOBILE_FRAME_OWNER`、`MobileFrameController`、`mountMobileFrame`
 
 ### `src/ui/overlays/LocalSearchOverlayHost.js`
-- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；131 行，5,874 字节。
+- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；139 行，6,778 字节。
 - **直接依赖**：`../../core/picker-cleanup.js`、`../../utils/dom.js`、`../components/input-controls.js`、`../mobile/mobile-frame.js`、`./popup-order.js`、`obsidian`
 - **导出**：`LocalSearchOverlayHost`
 

@@ -1,8 +1,8 @@
 {
-  "revision": "2026-10-21-sidebar-release-audit-candidate",
+  "revision": "2026-10-22-move-picker-caret-candidate",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors. User requested continued product audit: keep an empty desktop toolbar hidden without redundant toggles; cancel stale divider drags on host resize and resynchronize actual/accessible width after commit or cancellation. No public prototype changes in this round.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors. User requested continued product audit: keep an empty desktop toolbar hidden without redundant toggles; cancel stale divider drags on host resize and resynchronize actual/accessible width after commit or cancellation. No public prototype changes in this round. User reports missing caret specifically in the move-folder Picker: align standalone folder Picker iOS paint host and mobile focus handling with the existing shared Picker; retain backdrop dismissal, popup order and all host positions.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -107,7 +107,8 @@
     "normalizeEditableTagValue",
     "renderSharedFolderTreePicker",
     "sharedFolderChildren",
-    "sortByPreferredOrder"
+    "sortByPreferredOrder",
+    "LocalSearchOverlayHost"
   ],
   "files": [
     {
@@ -378,7 +379,7 @@
       "file": "src/styles/styles.css",
       "baseline": "baseline/modular.3-source/styles/styles.css",
       "before": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad",
-      "after": "4cb02ae0a17a7057094dea15c58ba0feed1bafdb52f9538503b39ece51bda5cb"
+      "after": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
     },
     {
       "file": "src/ui/components/input-controls.js",
@@ -475,6 +476,12 @@
       "baseline": "baseline/modular.3-source/utils/preferred-order.js",
       "before": "4afaf198eae65cb880cfc0fdddeb44b1a19dd38e2b033af6478b2f02417b4c2a",
       "after": "a39a3d31e750fc08d6a72c974a069f199291f439835bbd84f8ec044e5701bc81"
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "baseline": "baseline/modular.3-source/ui/overlays/LocalSearchOverlayHost.js",
+      "before": "20f3cb25f99a8948cf4dd1d98596c02d92ab1739efdd5fc8eb2fe9df9a2e6cc7",
+      "after": "34b0f65e5b3eb5800885facd7abdb75637490c813454bf8f203e3f5176ce85b7"
     }
   ],
   "retiredFiles": [

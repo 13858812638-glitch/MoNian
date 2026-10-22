@@ -1,0 +1,26 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Move-Picker-Caret-20261022.zip",
+  "bytes": 429853,
+  "sha256": "8d47ecec6859343708a842bff06b900328e1ead1bcba35800fd7064952af2441",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1755181,
+      "sha256": "19e4374b053afc1a0767750e1900cae590224d19e0f93476b26b1b4bc898960f"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264825,
+      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+    }
+  ],
+  "sourceParentCommit": "aa1ed73",
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Move-Picker-Caret-20261022.zip",
+  "remoteDownloadVerified": false,
+  "remotePayloadMatchesBuild": false
+}

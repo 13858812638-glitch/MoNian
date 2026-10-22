@@ -1,3 +1,5 @@
+> **2026-10-22 移动文件夹 Picker 光标归一**：无新增类方法。`LocalSearchOverlayHost.createCloseButton` 为独立文件夹 Picker 挂载同级背景点击层，复用既有打开顺序；移动端不把焦点转移到 Picker 外壳。`open` 的背景关闭处理接受该同级层。iOS 绘制规则与现有 Popup Portal 共用 `display: contents`。
+
 > **2026-10-21 交付边界审计**：未新增类原型方法。桌面命令栏显隐由 `_syncMobileTools` 单独负责，`_placeMobileTools` 只调整停靠位置。`createDesktopNavigatorPane` 的 `sync` 在宿主几何变化时取消旧拖动；`finish` 在结束后同步实际宽度和无障碍读数。
 
 > **2026-10-21 整体侧栏刷新优化**：未新增类原型方法。Navigator 模块内部 `setNavigatorAttribute` / `setNavigatorProperty` 只对桌面 sidebar 抑制重复显示写入，动态状态检查实时 DOM；文本标签沿用现有 Hover Hint 的无障碍名称 Owner。`_renderProjection` 复用未变化的分组装饰并更新独立计数文本节点。Dropdown `_mountPanel` 的侧栏滚动订阅只响应当前/父级锚点及宿主祖先；`bindSidebarDialogPosition` 只跟随宿主移动。

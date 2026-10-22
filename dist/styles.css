@@ -5074,8 +5074,24 @@ body.local-search-pointer-sorting
 /* The same paint-free portal is required by *every* native text input,
    including create/rename dialogs. It is an input-surface contract, not a
    Picker-specific caret workaround. Fixed children own their own positioning. */
-body.is-ios .ui-popup-portal.local-search-content:has(> :is(.local-search-dropdown, .local-search-dialog-surface)) {
+body.is-ios :is(.ui-popup-portal.local-search-content:has(> :is(.local-search-dropdown, .local-search-dialog-surface)),
+    .local-search-overlay-host:has(> .local-search-command-shared-picker)) {
     display: contents !important;
+}
+
+/* Standalone move/folder Pickers share the native-input paint boundary.
+   Their backdrop is a sibling, never an extra painted ancestor of the input.
+   Existing popup order keeps multiple standalone Pickers stacked as before. */
+.local-search-overlay-picker-backdrop { display: none; }
+body.is-ios .local-search-overlay-host:has(> .local-search-command-shared-picker) > .local-search-overlay-picker-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: calc(100000 + 2 * var(--ls-overlay-open-order, 0));
+    background: transparent;
+}
+body.is-ios .local-search-overlay-host > .local-search-command-shared-picker {
+    z-index: calc(100001 + 2 * var(--ls-overlay-open-order, 0));
 }
 
 /* Phase-E `display:contents` removes the portal's stacking context on iOS.

@@ -1,0 +1,108 @@
+{
+  "candidate": "Move Picker caret 2026-10-22",
+  "parentCommit": "aa1ed73",
+  "environment": "Chromium with mocked Obsidian; native device not verified",
+  "gateExitCodes": {
+    "build": 0,
+    "node": 1,
+    "browser": 1,
+    "focus": 0,
+    "feishu": 0,
+    "mobile": 0,
+    "index": 0,
+    "portal": 0,
+    "caret": 0,
+    "focus-repair": 0,
+    "popups": 0,
+    "workflows": 0,
+    "acceptance": 0
+  },
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 151,
+    "importEdges": 647,
+    "cycles": [],
+    "external": [
+      "obsidian"
+    ],
+    "unresolvedSymbols": 0,
+    "sourceFragments": 826,
+    "byteExactFragments": 717,
+    "approvedMaintenanceFragments": 105,
+    "cssByteExact": false,
+    "fullTypescriptTypeCheck": "not-applicable: JavaScript sources; unresolved-symbol check only",
+    "manifestStatus": "BLOCKED: absent from uploaded baseline; plugin ID/release version cannot be verified",
+    "failures": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "19e4374b053afc1a0767750e1900cae590224d19e0f93476b26b1b4bc898960f"
+  },
+  "node": {
+    "passed": 256,
+    "failed": 4,
+    "classification": "Four preexisting frozen prototype differences; no new failure"
+  },
+  "browserFrozenParity": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Four preexisting 01-initial snapshot differences; reference and assertions unchanged"
+  },
+  "movePicker": {
+    "passed": 156,
+    "failed": 0
+  },
+  "hostGuards": {
+    "passed": 24,
+    "failed": 0
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0
+  },
+  "feishuFocus": {
+    "passed": 8,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "portal": {
+    "passed": 48,
+    "failed": 0,
+    "engines": [
+      "Chromium"
+    ],
+    "WebKit": "not tested"
+  },
+  "caret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "limitations": [
+    "Chromium caret was visible even before this patch. Reproduced failures are missing iOS paint-host and mobile focus contracts, not native iOS caret disappearance.",
+    "Original iPhone phase-E evidence supports the paint-host rule; this new package still requires native iOS/Android/Obsidian verification."
+  ]
+}

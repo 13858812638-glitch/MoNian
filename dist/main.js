@@ -2697,12 +2697,12 @@ class LocalSearchOverlayHost {
         });
         (0, popup_order_js_1.markSearchPopupActive)(overlay);
         overlay.addEventListener("click", event => {
-            if (event.target === overlay)
+            if (event.target === overlay || event.target === overlay.querySelector(":scope > .local-search-overlay-picker-backdrop"))
                 this.close();
         });
         if (this.closeOnContextmenu) {
             overlay.addEventListener("contextmenu", event => {
-                if (event.target !== overlay)
+                if (event.target !== overlay && event.target !== overlay.querySelector(":scope > .local-search-overlay-picker-backdrop"))
                     return;
                 event.preventDefault();
                 this.close();
@@ -2737,6 +2737,14 @@ class LocalSearchOverlayHost {
         return overlay;
     }
     createCloseButton(surface, { title = "关闭", positioned = false } = {}) {
+        const standalonePicker = surface.classList.contains("local-search-command-shared-picker");
+        if (standalonePicker && this.overlayEl && !this.overlayEl.querySelector(":scope > .local-search-overlay-picker-backdrop")) {
+            // iOS uses the same paint-free host as ordinary Pickers. A sibling
+            // backdrop retains outside-click dismissal without wrapping input.
+            const backdrop = this.overlayEl.createDiv({ cls: "local-search-overlay-picker-backdrop", attr: { "aria-hidden": "true" } });
+            this.overlayEl.prepend(backdrop);
+            this.overlayEl.style.setProperty("--ls-overlay-open-order", String(this.overlayEl._lsOpenedOrder));
+        }
         if (obsidian_1.Platform.isMobile && !surface[mobile_frame_js_1.MOBILE_FRAME_OWNER]) {
             const frame = (0, mobile_frame_js_1.mountMobileFrame)(surface);
             if (frame)
@@ -2754,7 +2762,7 @@ class LocalSearchOverlayHost {
             this.close();
         });
         if (!surface.contains(surface.ownerDocument.activeElement)
-            && (!obsidian_1.Platform.isMobile || this.ownerElement?.matches?.(":focus-visible"))) {
+            && (!obsidian_1.Platform.isMobile || (!standalonePicker && this.ownerElement?.matches?.(":focus-visible")))) {
             surface.tabIndex = -1;
             surface.focus({ preventScroll: true });
         }

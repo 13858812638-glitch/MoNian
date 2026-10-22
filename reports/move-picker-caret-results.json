@@ -1,0 +1,4670 @@
+{
+  "scope": "Chromium with mocked Obsidian; real SearchView lifecycle. Native iOS not verified.",
+  "before": {
+    "passed": 148,
+    "failed": 8,
+    "nativeIOSVerified": false,
+    "results": [
+      {
+        "name": "desktop-False-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-False-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-False-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-False-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-False-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-False-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-False-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-False-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-False-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-False-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-False-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-True-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-True-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-True-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-True-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-True-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-True-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-True-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-True-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-True-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-True-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-True-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-False-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-False-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-False-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-False-command paint-free iOS picker host",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-False-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-False-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-False-external paint-free iOS picker host",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-external mobile opening preserves current edit session",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-False-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-False-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-True-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-True-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-True-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-True-command paint-free iOS picker host",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-True-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-True-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-True-external paint-free iOS picker host",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-external mobile opening preserves current edit session",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-True-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-True-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-False-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-False-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-False-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-False-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-False-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-False-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-False-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-external mobile opening preserves current edit session",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-False-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-False-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-True-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-True-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-True-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-True-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-True-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-True-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-True-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-external mobile opening preserves current edit session",
+        "passed": false,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-True-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-True-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      }
+    ]
+  },
+  "after": {
+    "passed": 156,
+    "failed": 0,
+    "nativeIOSVerified": false,
+    "results": [
+      {
+        "name": "desktop-False-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-False-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-False-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-False-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-False-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-False-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-False-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-False-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-False-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-False-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-False-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-False-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-True-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-True-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-True-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-True-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-True-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-True-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-True-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-True-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "desktop-True-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": "-1",
+          "main": false,
+          "calls": [
+            "focus"
+          ],
+          "rect": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "desktop-True-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "desktop-True-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "desktop-True-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-True-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-False-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-False-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-False-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-False-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-False-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-False-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-False-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-False-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-False-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-False-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-False-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-True-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-True-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-True-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-True-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-True-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-True-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "ios-True-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "contents",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "ios-True-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "ios-True-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "ios-True-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "ios-True-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-False-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-False-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-False-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-False-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-False-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-False-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-False-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(37, 37, 37)",
+          "color": "rgb(37, 37, 37)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-False-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-False-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-False-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-False-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-True-list paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-list mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "block",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-list shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-list actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-True-list composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-list folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-True-list Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-list no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-True-command paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-command mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-command shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-command actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-True-command composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-command folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-True-command Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-command outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-command no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      },
+      {
+        "name": "android-True-external paint-free iOS picker host",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-external mobile opening preserves current edit session",
+        "passed": true,
+        "evidence": {
+          "display": "flex",
+          "tabindex": null,
+          "main": true,
+          "calls": [],
+          "rect": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-external shared input stays native and hittable",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "value": "Folder001",
+          "caret": "rgb(238, 238, 238)",
+          "color": "rgb(238, 238, 238)",
+          "hit": true,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-external actual caret pixels with transparent control",
+        "passed": true,
+        "evidence": {
+          "differences": [
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ],
+            [
+              54,
+              12,
+              55,
+              26
+            ]
+          ],
+          "negative": null
+        }
+      },
+      {
+        "name": "android-True-external composition and SearchView resize retain selection",
+        "passed": true,
+        "evidence": {
+          "same": true,
+          "active": true,
+          "start": 2,
+          "end": 2,
+          "calls": []
+        }
+      },
+      {
+        "name": "android-True-external folder selection still commits and cleans host",
+        "passed": true,
+        "evidence": {
+          "closed": true,
+          "moved": true,
+          "overlayGone": true
+        }
+      },
+      {
+        "name": "android-True-external Escape releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-external outside click releases picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "android-True-external no orphan overlays or browser errors",
+        "passed": true,
+        "evidence": []
+      }
+    ]
+  },
+  "hostGuards": {
+    "passed": 24,
+    "failed": 0,
+    "results": [
+      {
+        "name": "new overlay backdrop covers older picker",
+        "passed": true,
+        "evidence": {
+          "inTop": true,
+          "backdrop": true,
+          "first": true,
+          "second": true
+        }
+      },
+      {
+        "name": "outside click closes top overlay only",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "underlying picker remains dismissible",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "delete dialog keeps original host layout",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "native modal owns picker outside transformed inner shell",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "close button releases modal picker",
+        "passed": true,
+        "evidence": null
+      },
+      {
+        "name": "desktop-False-list position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          },
+          "after": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-False-command position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          },
+          "after": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-False-external position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          },
+          "after": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-list position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          },
+          "after": {
+            "x": 426,
+            "y": 64,
+            "width": 400,
+            "height": 432,
+            "top": 64,
+            "right": 826,
+            "bottom": 496,
+            "left": 426
+          }
+        }
+      },
+      {
+        "name": "desktop-True-command position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          },
+          "after": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "desktop-True-external position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          },
+          "after": {
+            "x": 400,
+            "y": 170,
+            "width": 400,
+            "height": 560,
+            "top": 170,
+            "right": 800,
+            "bottom": 730,
+            "left": 400
+          }
+        }
+      },
+      {
+        "name": "ios-False-list position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-command position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-False-external position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-list position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-command position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "ios-True-external position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-list position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-command position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-False-external position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-list position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-command position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      },
+      {
+        "name": "android-True-external position and size unchanged",
+        "passed": true,
+        "evidence": {
+          "before": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          },
+          "after": {
+            "x": 12,
+            "y": 0,
+            "width": 366,
+            "height": 751.5,
+            "top": 0,
+            "right": 378,
+            "bottom": 751.5,
+            "left": 12
+          }
+        }
+      }
+    ]
+  }
+}

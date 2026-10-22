@@ -48,11 +48,11 @@ export class LocalSearchOverlayHost {
         });
         markSearchPopupActive(overlay);
         overlay.addEventListener("click", event => {
-            if (event.target === overlay) this.close();
+            if (event.target === overlay || event.target === overlay.querySelector(":scope > .local-search-overlay-picker-backdrop")) this.close();
         });
         if (this.closeOnContextmenu) {
             overlay.addEventListener("contextmenu", event => {
-                if (event.target !== overlay) return;
+                if (event.target !== overlay && event.target !== overlay.querySelector(":scope > .local-search-overlay-picker-backdrop")) return;
                 event.preventDefault();
                 this.close();
             });
@@ -84,6 +84,14 @@ export class LocalSearchOverlayHost {
     }
 
     createCloseButton(surface, { title = "关闭", positioned = false } = {}) {
+        const standalonePicker = surface.classList.contains("local-search-command-shared-picker");
+        if (standalonePicker && this.overlayEl && !this.overlayEl.querySelector(":scope > .local-search-overlay-picker-backdrop")) {
+            // iOS uses the same paint-free host as ordinary Pickers. A sibling
+            // backdrop retains outside-click dismissal without wrapping input.
+            const backdrop = this.overlayEl.createDiv({ cls: "local-search-overlay-picker-backdrop", attr: { "aria-hidden": "true" } });
+            this.overlayEl.prepend(backdrop);
+            this.overlayEl.style.setProperty("--ls-overlay-open-order", String(this.overlayEl._lsOpenedOrder));
+        }
         if (Platform.isMobile && !surface[MOBILE_FRAME_OWNER]) {
             const frame = mountMobileFrame(surface);
             if (frame) registerPickerCleanup(surface, () => frame.destroy());
@@ -100,7 +108,7 @@ export class LocalSearchOverlayHost {
             this.close();
         });
         if (!surface.contains(surface.ownerDocument.activeElement)
-            && (!Platform.isMobile || this.ownerElement?.matches?.(":focus-visible"))) {
+            && (!Platform.isMobile || (!standalonePicker && this.ownerElement?.matches?.(":focus-visible")))) {
             surface.tabIndex = -1;
             surface.focus({ preventScroll: true });
         }
