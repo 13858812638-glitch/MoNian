@@ -1,3 +1,5 @@
+> 2026-10-22 桌面侧栏鼠标候选：`SearchView.onOpen` 仅为 Tab 或移动 sidebar 注册整面板 SwipeBack；桌面 sidebar 取消该注册，子 Picker 继续独立管理返回层。公开原型、移动端与 Tab 的导航逻辑不变。
+
 > 2026-10-22 侧栏图标与点击候选：内部函数 `setNavigatorIcon` 归属 `features/navigator/navigation-icon.js`，由 Navigator 与其 customization 复用，替换 SVG 并保留辅助标签；`SearchResultRendererController._windowSize` 仍是窗口预算唯一 Owner，仅桌面 sidebar 使用半屏双侧缓冲。无新增公开方法。
 
 > **2026-10-22 移动文件夹 Picker 光标归一**：无新增类方法。`LocalSearchOverlayHost.createCloseButton` 为独立文件夹 Picker 挂载同级背景点击层，复用既有打开顺序；移动端不把焦点转移到 Picker 外壳。`open` 的背景关闭处理接受该同级层。iOS 绘制规则与现有 Popup Portal 共用 `display: contents`。

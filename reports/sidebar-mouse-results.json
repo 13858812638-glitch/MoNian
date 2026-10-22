@@ -1,0 +1,1699 @@
+{
+  "parentCommit": "f113a8d",
+  "environment": "Chromium; mocked Obsidian SearchView; light desktop/Linux and dark Mac platform emulation; mobile emulation",
+  "before": [
+    {
+      "name": "light desktop sidebar has no swipe-back lease",
+      "pass": false,
+      "evidence": null
+    },
+    {
+      "name": "light mouse selection performs zero swipe geometry reads",
+      "pass": false,
+      "evidence": 1224
+    },
+    {
+      "name": "light all twelve slightly moving clicks select the intended folder",
+      "pass": false,
+      "evidence": [
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light selection and results agree",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light divider drag remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light right-click management remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light picker retains its own swipe lease",
+      "pass": false,
+      "evidence": 2
+    },
+    {
+      "name": "light closing picker leaves no sidebar swipe lease",
+      "pass": false,
+      "evidence": 1
+    },
+    {
+      "name": "light tab keeps its independent swipe lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light another host listener does not scan sidebar geometry",
+      "pass": false,
+      "evidence": 26
+    },
+    {
+      "name": "light tab deliberate swipe still navigates",
+      "pass": true,
+      "evidence": 1
+    },
+    {
+      "name": "light close releases all navigation leases",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark desktop sidebar has no swipe-back lease",
+      "pass": false,
+      "evidence": null
+    },
+    {
+      "name": "dark mouse selection performs zero swipe geometry reads",
+      "pass": false,
+      "evidence": 1224
+    },
+    {
+      "name": "dark all twelve slightly moving clicks select the intended folder",
+      "pass": false,
+      "evidence": [
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [],
+          "selected": [],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md",
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md",
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md",
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md",
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md",
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark selection and results agree",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark divider drag remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark right-click management remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark picker retains its own swipe lease",
+      "pass": false,
+      "evidence": 2
+    },
+    {
+      "name": "dark closing picker leaves no sidebar swipe lease",
+      "pass": false,
+      "evidence": 1
+    },
+    {
+      "name": "dark tab keeps its independent swipe lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark another host listener does not scan sidebar geometry",
+      "pass": false,
+      "evidence": 26
+    },
+    {
+      "name": "Mac sidebar horizontal wheel skips back recognition",
+      "pass": false,
+      "evidence": {
+        "cancelled": [
+          false,
+          false,
+          true
+        ],
+        "reads": 66,
+        "tabDetached": 0
+      }
+    },
+    {
+      "name": "dark tab deliberate swipe still navigates",
+      "pass": true,
+      "evidence": 1
+    },
+    {
+      "name": "dark close releases all navigation leases",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile sidebar retains swipe-back lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile close releases navigation lease",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "after": [
+    {
+      "name": "light desktop sidebar has no swipe-back lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light mouse selection performs zero swipe geometry reads",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "light all twelve slightly moving clicks select the intended folder",
+      "pass": true,
+      "evidence": [
+        {
+          "scope": [
+            "Folder000"
+          ],
+          "selected": [
+            "Folder000"
+          ],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder001"
+          ],
+          "selected": [
+            "Folder001"
+          ],
+          "results": [
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder002"
+          ],
+          "selected": [
+            "Folder002"
+          ],
+          "results": [
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder003"
+          ],
+          "selected": [
+            "Folder003"
+          ],
+          "results": [
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder004"
+          ],
+          "selected": [
+            "Folder004"
+          ],
+          "results": [
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder005"
+          ],
+          "selected": [
+            "Folder005"
+          ],
+          "results": [
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder000"
+          ],
+          "selected": [
+            "Folder000"
+          ],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder001"
+          ],
+          "selected": [
+            "Folder001"
+          ],
+          "results": [
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder002"
+          ],
+          "selected": [
+            "Folder002"
+          ],
+          "results": [
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder003"
+          ],
+          "selected": [
+            "Folder003"
+          ],
+          "results": [
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder004"
+          ],
+          "selected": [
+            "Folder004"
+          ],
+          "results": [
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder005"
+          ],
+          "selected": [
+            "Folder005"
+          ],
+          "results": [
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light selection and results agree",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light divider drag remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light right-click management remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light picker retains its own swipe lease",
+      "pass": true,
+      "evidence": 1
+    },
+    {
+      "name": "light closing picker leaves no sidebar swipe lease",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "light tab keeps its independent swipe lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "light another host listener does not scan sidebar geometry",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "light tab deliberate swipe still navigates",
+      "pass": true,
+      "evidence": 1
+    },
+    {
+      "name": "light close releases all navigation leases",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark desktop sidebar has no swipe-back lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark mouse selection performs zero swipe geometry reads",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "dark all twelve slightly moving clicks select the intended folder",
+      "pass": true,
+      "evidence": [
+        {
+          "scope": [
+            "Folder000"
+          ],
+          "selected": [
+            "Folder000"
+          ],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder001"
+          ],
+          "selected": [
+            "Folder001"
+          ],
+          "results": [
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder002"
+          ],
+          "selected": [
+            "Folder002"
+          ],
+          "results": [
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder003"
+          ],
+          "selected": [
+            "Folder003"
+          ],
+          "results": [
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder004"
+          ],
+          "selected": [
+            "Folder004"
+          ],
+          "results": [
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder005"
+          ],
+          "selected": [
+            "Folder005"
+          ],
+          "results": [
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder000"
+          ],
+          "selected": [
+            "Folder000"
+          ],
+          "results": [
+            "Folder000/Child/note0.md",
+            "Folder000/Child/note6.md",
+            "Folder000/Child/note12.md",
+            "Folder000/Child/note18.md",
+            "Folder000/Child/note24.md",
+            "Folder000/Child/note30.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder001"
+          ],
+          "selected": [
+            "Folder001"
+          ],
+          "results": [
+            "Folder001/Child/note1.md",
+            "Folder001/Child/note7.md",
+            "Folder001/Child/note13.md",
+            "Folder001/Child/note19.md",
+            "Folder001/Child/note25.md",
+            "Folder001/Child/note31.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder002"
+          ],
+          "selected": [
+            "Folder002"
+          ],
+          "results": [
+            "Folder002/Child/note2.md",
+            "Folder002/Child/note8.md",
+            "Folder002/Child/note14.md",
+            "Folder002/Child/note20.md",
+            "Folder002/Child/note26.md",
+            "Folder002/Child/note32.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder003"
+          ],
+          "selected": [
+            "Folder003"
+          ],
+          "results": [
+            "Folder003/Child/note3.md",
+            "Folder003/Child/note9.md",
+            "Folder003/Child/note15.md",
+            "Folder003/Child/note21.md",
+            "Folder003/Child/note27.md",
+            "Folder003/Child/note33.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder004"
+          ],
+          "selected": [
+            "Folder004"
+          ],
+          "results": [
+            "Folder004/Child/note4.md",
+            "Folder004/Child/note10.md",
+            "Folder004/Child/note16.md",
+            "Folder004/Child/note22.md",
+            "Folder004/Child/note28.md",
+            "Folder004/Child/note34.md"
+          ]
+        },
+        {
+          "scope": [
+            "Folder005"
+          ],
+          "selected": [
+            "Folder005"
+          ],
+          "results": [
+            "Folder005/Child/note5.md",
+            "Folder005/Child/note11.md",
+            "Folder005/Child/note17.md",
+            "Folder005/Child/note23.md",
+            "Folder005/Child/note29.md",
+            "Folder005/Child/note35.md"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark selection and results agree",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark divider drag remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark right-click management remains available",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark picker retains its own swipe lease",
+      "pass": true,
+      "evidence": 1
+    },
+    {
+      "name": "dark closing picker leaves no sidebar swipe lease",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "dark tab keeps its independent swipe lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "dark another host listener does not scan sidebar geometry",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "Mac sidebar horizontal wheel skips back recognition",
+      "pass": true,
+      "evidence": {
+        "cancelled": [
+          false,
+          false,
+          false
+        ],
+        "reads": 0,
+        "tabDetached": 0
+      }
+    },
+    {
+      "name": "dark tab deliberate swipe still navigates",
+      "pass": true,
+      "evidence": 1
+    },
+    {
+      "name": "dark close releases all navigation leases",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile sidebar retains swipe-back lease",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "mobile close releases navigation lease",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "notes": [
+    "Twelve real mouse down/move/up sequences per theme; 14px rightward movement stays within the same folder button.",
+    "The native swipe recognizer starts at 10px and suppresses click after claimed movement even when the 48px back threshold is not reached.",
+    "Geometry-read counts measure scrollWidth/clientWidth accesses in swipeBackNativeGestureOwner, not forced layout counts.",
+    "Tab deliberate swipe uses a temporary button probe inside a real SearchView tab surface.",
+    "Mac wheel events are synthetic; the normal mouse sequences are Playwright mouse input.",
+    "No native Obsidian, iOS, Android or WebKit verification."
+  ],
+  "rawEvidence": "/workspace/sidebar-mouse-audit"
+}

@@ -1,0 +1,95 @@
+{
+  "candidate": "Desktop sidebar mouse input 2026-10-22",
+  "parentCommit": "f113a8d",
+  "environment": "Chromium, mocked Obsidian SearchView lifecycle",
+  "runtimeSourceChanges": [
+    "src/ui/views/SearchView.js"
+  ],
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 152,
+    "importEdges": 649,
+    "unresolvedSymbols": 0,
+    "cycles": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "be3b2f24a43df6cbe53a86f43906b6ef8aa60907e12cd7cd51db1c790e1d502e"
+  },
+  "node": {
+    "passed": 258,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "newMouseGestureChecks": {
+    "passed": 27,
+    "failed": 0,
+    "beforePassed": 14,
+    "beforeFailed": 13
+  },
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS",
+    "Native Android",
+    "WebKit",
+    "Third-party integrations in a real vault"
+  ],
+  "rawEvidence": "/workspace/sidebar-mouse-audit",
+  "desktopNavigator": {
+    "passed": 55,
+    "failed": 0
+  },
+  "sidebarPopups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "desktop": 0,
+    "mobile": 0,
+    "index": 0,
+    "browser": 1,
+    "portal": 0,
+    "caret": 0,
+    "workflows": 0,
+    "popups": 0,
+    "acceptance": 0
+  }
+}

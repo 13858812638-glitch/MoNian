@@ -152,7 +152,7 @@
 | `src/ui/pickers/tree-row.js` | 222 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `createSharedPickerTreeRow`、`syncSharedPickerTreeRowAvailability`、`createTreeActionButton` 等 4 项 |
 | `src/ui/settings/LocalSearchSettingTab.js` | 257 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `LocalSearchSettingTab` |
 | `src/ui/settings/setting-row.js` | 73 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `createPluginSettingClass`、`SearchSettingRow` |
-| `src/ui/views/SearchView.js` | 205 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchView` |
+| `src/ui/views/SearchView.js` | 207 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchView` |
 | `src/utils/dom.js` | 49 | 无状态的通用辅助函数 | `hostDocument`、`hostWindow`、`activeWorkspaceDocument` 等 7 项 |
 | `src/utils/markdown-text.js` | 230 | 无状态的通用辅助函数 | `simpleSegment`、`decodeReadableEntities`、`readableWikiTarget` 等 8 项 |
 | `src/utils/normalization.js` | 44 | 无状态的通用辅助函数 | `normalizeIntegerSetting`、`normalizeUniqueStringList`、`normalizeStringListMap` |
@@ -854,7 +854,7 @@
 - **导出**：`createPluginSettingClass`、`SearchSettingRow`
 
 ### `src/ui/views/SearchView.js`
-- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；205 行，10,105 字节。
+- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；207 行，10,174 字节。
 - **直接依赖**：`../../core/SearchCore.js`、`../../core/view-types.js`、`../../integrations/SearchWorkspaceCapabilities.js`、`obsidian`
 - **导出**：`SearchView`
 

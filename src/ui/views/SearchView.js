@@ -129,10 +129,12 @@ export class SearchView extends ItemView {
                 core.sessionKey = this._sessionKey;
                 core.restoreSession(this.plugin.recoverSearchSession(this._sessionKey, this._state.session));
 
-                // Dida Bridge 3.0.53：Native Tab 自身就是一级导航宿主。
-                // 必须把 Tab Surface 注册到同一个 SwipeBack Primitive，back 直接交给 WorkspaceLeaf.detach()；
-                // data-ignore-swipe 只隔离 Obsidian 工作区原生侧栏手势，不拦截本插件内部 Result/Picker 手势。
-                if (this.viewType === TAB_VIEW_TYPE || this.viewType === VIEW_TYPE) {
+                // Tabs and mobile drawers own swipe-back navigation. A desktop
+                // sidebar is persistent mouse UI: registering its whole surface
+                // makes ordinary clicks scan ancestor geometry, and a small
+                // horizontal pointer drift suppresses the eventual click.
+                // Child Pickers keep their own independent navigation leases.
+                if (this.viewType === TAB_VIEW_TYPE || (Platform.isMobile && this.viewType === VIEW_TYPE)) {
                     this.contentEl.setAttribute("data-ignore-swipe", "true");
                     this._swipeBackCleanup?.();
                     this._swipeBackCleanup = this.plugin.swipeBack.register(this.contentEl, {

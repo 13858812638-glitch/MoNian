@@ -1,0 +1,26 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Desktop-Sidebar-Mouse-20261022.zip",
+  "bytes": 430356,
+  "sha256": "3d42c74108ea0e3bd6b02d5aeb04a9ad9139d42cdb487ad514f7c10a6099a5b2",
+  "entries": 2,
+  "crc32": "PASS",
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1757283,
+      "sha256": "be3b2f24a43df6cbe53a86f43906b6ef8aa60907e12cd7cd51db1c790e1d502e"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264825,
+      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+    }
+  ],
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "sourceParentCommit": "f113a8d",
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Desktop-Sidebar-Mouse-20261022.zip",
+  "remoteDownloadVerified": false,
+  "remotePayloadMatchesBuild": false
+}
