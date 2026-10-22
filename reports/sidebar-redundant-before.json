@@ -1,0 +1,400 @@
+[
+  {
+    "name": "light scrolled folder change skips per-row geometry",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 1,
+        "getBoundingClientRect": 163,
+        "navigation": 1,
+        "tag-counts": 1,
+        "property-presence": 1,
+        "getClientRects": 146
+      },
+      "top": 450,
+      "startTop": 450,
+      "anchor": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "light scrolled folder change retains viewport and anchor",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "search": 1,
+        "getBoundingClientRect": 163,
+        "navigation": 1,
+        "tag-counts": 1,
+        "property-presence": 1,
+        "getClientRects": 146
+      },
+      "top": 450,
+      "startTop": 450,
+      "anchor": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "light folder change performs one search and one scope scan",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "search": 1,
+        "getBoundingClientRect": 163,
+        "navigation": 1,
+        "tag-counts": 1,
+        "property-presence": 1,
+        "getClientRects": 146
+      },
+      "top": 450,
+      "startTop": 450,
+      "anchor": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "light tag toggles reuse unchanged folder candidates and counts",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 6,
+        "getBoundingClientRect": 978,
+        "navigation": 6,
+        "tag-counts": 6,
+        "property-presence": 6,
+        "getClientRects": 876
+      },
+      "count": 12,
+      "selected": [],
+      "top": 450
+    }
+  },
+  {
+    "name": "light tag toggles skip per-row geometry",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 6,
+        "getBoundingClientRect": 978,
+        "navigation": 6,
+        "tag-counts": 6,
+        "property-presence": 6,
+        "getClientRects": 876
+      },
+      "count": 12,
+      "selected": [],
+      "top": 450
+    }
+  },
+  {
+    "name": "light tag toggles still apply and clear the result filter",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "search": 6,
+        "getBoundingClientRect": 978,
+        "navigation": 6,
+        "tag-counts": 6,
+        "property-presence": 6,
+        "getClientRects": 876
+      },
+      "count": 12,
+      "selected": [],
+      "top": 450
+    }
+  },
+  {
+    "name": "light query changes reuse unchanged navigation scope",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 3,
+        "getBoundingClientRect": 489,
+        "navigation": 3,
+        "tag-counts": 3,
+        "property-presence": 3,
+        "getClientRects": 438
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "light branch expansion retains necessary anchor restoration",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "getBoundingClientRect": 163,
+        "getClientRects": 146
+      },
+      "before": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "expanded": true
+    }
+  },
+  {
+    "name": "light disclosure does not search or rescan unchanged scope",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "getBoundingClientRect": 163,
+        "getClientRects": 146
+      },
+      "before": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "expanded": true
+    }
+  },
+  {
+    "name": "light index edits invalidate cached scope and property counts",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "light global exclusions invalidate navigation counts",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "dark scrolled folder change skips per-row geometry",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 1,
+        "getBoundingClientRect": 163,
+        "navigation": 1,
+        "tag-counts": 1,
+        "property-presence": 1,
+        "getClientRects": 146
+      },
+      "top": 450,
+      "startTop": 450,
+      "anchor": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "dark scrolled folder change retains viewport and anchor",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "search": 1,
+        "getBoundingClientRect": 163,
+        "navigation": 1,
+        "tag-counts": 1,
+        "property-presence": 1,
+        "getClientRects": 146
+      },
+      "top": 450,
+      "startTop": 450,
+      "anchor": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "dark folder change performs one search and one scope scan",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "search": 1,
+        "getBoundingClientRect": 163,
+        "navigation": 1,
+        "tag-counts": 1,
+        "property-presence": 1,
+        "getClientRects": 146
+      },
+      "top": 450,
+      "startTop": 450,
+      "anchor": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "dark tag toggles reuse unchanged folder candidates and counts",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 6,
+        "getBoundingClientRect": 978,
+        "navigation": 6,
+        "tag-counts": 6,
+        "property-presence": 6,
+        "getClientRects": 876
+      },
+      "count": 12,
+      "selected": [],
+      "top": 450
+    }
+  },
+  {
+    "name": "dark tag toggles skip per-row geometry",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 6,
+        "getBoundingClientRect": 978,
+        "navigation": 6,
+        "tag-counts": 6,
+        "property-presence": 6,
+        "getClientRects": 876
+      },
+      "count": 12,
+      "selected": [],
+      "top": 450
+    }
+  },
+  {
+    "name": "dark tag toggles still apply and clear the result filter",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "search": 6,
+        "getBoundingClientRect": 978,
+        "navigation": 6,
+        "tag-counts": 6,
+        "property-presence": 6,
+        "getClientRects": 876
+      },
+      "count": 12,
+      "selected": [],
+      "top": 450
+    }
+  },
+  {
+    "name": "dark query changes reuse unchanged navigation scope",
+    "passed": false,
+    "evidence": {
+      "measures": {
+        "search": 3,
+        "getBoundingClientRect": 489,
+        "navigation": 3,
+        "tag-counts": 3,
+        "property-presence": 3,
+        "getClientRects": 438
+      },
+      "count": 12
+    }
+  },
+  {
+    "name": "dark branch expansion retains necessary anchor restoration",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "getBoundingClientRect": 163,
+        "getClientRects": 146
+      },
+      "before": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "expanded": true
+    }
+  },
+  {
+    "name": "dark disclosure does not search or rescan unchanged scope",
+    "passed": true,
+    "evidence": {
+      "measures": {
+        "getBoundingClientRect": 163,
+        "getClientRects": 146
+      },
+      "before": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "after": {
+        "key": "[\"folder\",\"Folder010\",\"\"]",
+        "offset": 18,
+        "height": 34
+      },
+      "expanded": true
+    }
+  },
+  {
+    "name": "dark index edits invalidate cached scope and property counts",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "dark global exclusions invalidate navigation counts",
+    "passed": true,
+    "evidence": null
+  }
+]

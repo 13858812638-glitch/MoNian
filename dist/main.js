@@ -22999,6 +22999,17 @@ function navigatorPropertyPresence(nav, scope, keys) {
         return { counts, present };
     });
 }
+// Use the same structural key for the preflight and the actual projection.
+function navigatorSectionProjection(nav, id) {
+    const prefix = id === "tags" ? "tag:" : `${id}:`;
+    const desktopFolder = !obsidian_1.Platform.isMobile && id === "folder";
+    const stableFacet = nav.desktopSidebar && !nav.customization.sortMode
+        && !nav.customization.maintenanceMode && (id === "tags" || id === "properties");
+    const signature = JSON.stringify([desktopFolder || stableFacet ? nav._desktopFolderEpoch || 0 : nav.core._resultGeneration,
+        stableFacet, nav.layout, [...nav.expanded].filter(key => key.startsWith(prefix)),
+        ...(desktopFolder ? [nav.core.plugin.settings.excludedFolders || []] : [])]);
+    return { desktopFolder, stableFacet, signature };
+}
 // Internal scroll-to-layout notification boundary; native scrolling itself is
 // untouched. Kept outside the frozen Navigator prototype method contract.
 function scheduleNavigatorScrollStateSave(nav) {
@@ -23051,12 +23062,14 @@ class SearchNavigatorController {
         this.searchVisible = false;
         this._projectionCache = new Map();
         this._desktopFacetModels = new Map();
+        this._desktopScopeCache = null;
         // Desktop folder changes alter selection, not the physical inventory.
         // Invalidate its derived counts on actual vault/index/settings changes.
         if (!obsidian_1.Platform.isMobile) {
             const invalidateCounts = () => {
                 this._desktopFolderCounts = null;
                 this._desktopFacetModels.clear();
+                this._desktopScopeCache = null;
                 this._projectionCache.clear();
                 this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
                 this.renderRevision = -1;
@@ -23678,6 +23691,7 @@ class SearchNavigatorController {
         this._projectionCache.clear();
         this._desktopFolderCounts = null;
         this._desktopFacetModels.clear();
+        this._desktopScopeCache = null;
         this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
         this._cacheRevision = -1;
         this.renderRevision = -1;
@@ -24121,6 +24135,17 @@ class SearchNavigatorController {
             onClick: () => this.openSection(kind, row.button) });
     }
     _cached(key, build) {
+        // Query/tag/property refinements do not change navigation's folder scope.
+        // Keep only the current scope (not an unbounded cache of visited folders).
+        if (this.desktopSidebar && ["navigation", "tag-counts", "property-presence"].includes(key)) {
+            const folders = JSON.stringify([...this.core.filterState.folders].sort());
+            if (this._desktopScopeCache?.folders !== folders)
+                this._desktopScopeCache = { folders, values: new Map() };
+            const values = this._desktopScopeCache.values;
+            if (!values.has(key))
+                values.set(key, build());
+            return values.get(key);
+        }
         if (this.desktopSidebar && (key === "desktop-tag-tree" || key.startsWith("desktop-property-keys:"))) {
             if (!this._desktopFacetModels.has(key))
                 this._desktopFacetModels.set(key, build());
@@ -24270,10 +24295,23 @@ class SearchNavigatorController {
         const scroll = this._restoreScrollTop
             ?? (selectionScroll?.generation === core._resultGeneration ? selectionScroll.top
                 : this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop);
+        const definitions = this._definitions();
+        const projections = new Map(definitions.map(([id]) => [id, navigatorSectionProjection(this, id)]));
+        // A settled desktop projection changes text/counts, not row geometry.
+        // Structural changes, maintenance and explicit restoration still need
+        // the original anchor path. Never infer this just from a result generation.
+        const stableProjection = this.desktopSidebar && !this.facets.hidden
+            && this._desktopProjectionEpoch === (this._desktopFolderEpoch || 0)
+            && this._restoreScrollTop == null && !this.customization.sortMode && !this.customization.maintenanceMode
+            && definitions.every(([id]) => {
+                const ref = this.sections.get(id);
+                return ref && !ref.section.hidden && ref.content.hidden === this.collapsed.has(id)
+                    && (ref.content.hidden || ref.signature === projections.get(id).signature);
+            }) && [...this.sections].every(([id, ref]) => ref.section.hidden || projections.has(id));
         const anchorOptions = { selector: "[data-nav-id]", keyFrom: row => row.dataset.navId };
         // At the desktop list's origin there is no displaced row to preserve.
         // Avoid measuring every row and forcing layout on each disclosure.
-        const scrollAnchor = this._restoreScrollTop == null && (obsidian_1.Platform.isMobile || scroll > 0)
+        const scrollAnchor = !stableProjection && this._restoreScrollTop == null && (obsidian_1.Platform.isMobile || scroll > 0)
             ? (0, scroll_anchor_js_1.captureScrollableAnchor)(this.scroll, anchorOptions) : null;
         const scrollBounds = scrollAnchor ? this.scroll.getBoundingClientRect() : null;
         const oldAnchors = scrollAnchor ? [...this.scroll.querySelectorAll("[data-nav-id]")].flatMap(row => {
@@ -24287,7 +24325,6 @@ class SearchNavigatorController {
         const navigation = this._cached("navigation", () => core._navigationCandidates());
         const universe = navigation.scope;
         const inventory = this.desktopSidebar ? navigation.all : universe;
-        const definitions = this._definitions();
         for (const [id, ref] of this.sections)
             setNavigatorProperty(this, ref.section, "hidden", !definitions.some(def => def[0] === id));
         this._groupSeparators ||= new Map();
@@ -24329,14 +24366,7 @@ class SearchNavigatorController {
                 ref.colors = colors;
             }
             // Expanding one branch does not rebuild unrelated sections or scan the vault.
-            const prefix = id === "tags" ? "tag:" : `${id}:`;
-            const desktopFolder = !obsidian_1.Platform.isMobile && id === "folder";
-            const stableFacet = this.desktopSidebar && !this.customization.sortMode
-                && !this.customization.maintenanceMode && (id === "tags" || id === "properties");
-            const signature = JSON.stringify([desktopFolder || stableFacet ? this._desktopFolderEpoch || 0 : core._resultGeneration,
-                stableFacet,
-                this.layout, [...this.expanded].filter(key => key.startsWith(prefix)),
-                ...(desktopFolder ? [core.plugin.settings.excludedFolders || []] : [])]);
+            const { desktopFolder, stableFacet, signature } = projections.get(id);
             let count = 0, selected = false;
             if (id === "folder") {
                 count = navigation.all.length;
@@ -24514,19 +24544,21 @@ class SearchNavigatorController {
                 this._groupSeparators.delete(id);
             }
         this.customization.finishRender();
+        if (this.desktopSidebar)
+            this._desktopProjectionEpoch = this._desktopFolderEpoch || 0;
         if (scrollAnchor) {
             const remaining = new Set([...this.scroll.querySelectorAll("[data-nav-id]")].filter(row => row.getClientRects().length).map(row => row.dataset.navId));
             const nearest = remaining.has(scrollAnchor.key) ? scrollAnchor
                 : oldAnchors.filter(anchor => remaining.has(anchor.key)).sort((a, b) => Math.abs(a.offset - scrollAnchor.offset) - Math.abs(b.offset - scrollAnchor.offset))[0];
             (0, scroll_anchor_js_1.restoreScrollableAnchor)(this.scroll, nearest || scrollAnchor, anchorOptions);
         }
-        else if (!this.desktopSidebar || this._restoreScrollTop != null || scroll !== 0) {
+        else if (!stableProjection && (!this.desktopSidebar || this._restoreScrollTop != null || scroll !== 0)) {
             this.scroll.scrollTop = scroll;
         }
         // At the origin a no-op scroll assignment/read forces the browser to
         // lay out the entire freshly updated tree. Let the normal paint do it.
-        this._filterScrollTop = this.desktopSidebar && !scrollAnchor && scroll === 0
-            ? 0 : this.scroll.scrollTop;
+        this._filterScrollTop = stableProjection || (this.desktopSidebar && !scrollAnchor && scroll === 0)
+            ? scroll : this.scroll.scrollTop;
         this._restoreScrollTop = null;
         // Desktop panes remain visible during disclosure and folder selection.
         // Page/layout transitions already own syncPage; tree refresh must not
@@ -24563,6 +24595,7 @@ class SearchNavigatorController {
         this._desktopPane = null;
         this._desktopFolderCounts = null;
         this._desktopFacetModels?.clear();
+        this._desktopScopeCache = null;
         this._projectionCache?.clear();
         this.customization?.destroy();
         for (const cleanup of this.cleanups.splice(0))

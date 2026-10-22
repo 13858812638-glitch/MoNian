@@ -1,0 +1,27 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Sidebar-Lean-20261022.zip",
+  "bytes": 431705,
+  "sha256": "a86a56397f81dd8aa685debb5668c8cb3947081318a49a66f0b1766adedfbfb4",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1763440,
+      "sha256": "7118cb3000785cc77f5ff73a76fb4347324f7144fc3be1566ba6e0b964d9a0ba"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264825,
+      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+    }
+  ],
+  "sourceParentCommit": "24e974473ab6aacab7f1559a49cb6c46cb270d27",
+  "reproducibleBuild": true,
+  "remoteDownloadVerified": false,
+  "remotePayloadMatchesBuild": false,
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Lean-20261022.zip"
+}
