@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "5e8fb14f15baabffe7ecaf30c2128a34d4f7b129",
+  "branch": "fix/desktop-sidebar",
+  "remoteVerified": true,
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Unified-20261022.zip",
+  "bytes": 433347,
+  "sha256": "65ab187e56c7c6bee117735a71b5c65e9cf4bfa2f000e520438e690edb9d9715",
+  "entries": [
+    "main.js",
+    "styles.css"
+  ],
+  "crc": "pass",
+  "distBytesMatch": true,
+  "instruction": "Replace main.js/styles.css; preserve installed manifest.json/data.json."
+}
