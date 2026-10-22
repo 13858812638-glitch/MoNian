@@ -261,11 +261,10 @@ export const SearchResultRendererController_virtual_window_methods = {
         // Prebuild the entire incoming window before removing any mounted row.
         // Virtual scrolling must have the same failure safety as renderPage:
         // a thrown card builder must not expose a spacer or the note beneath.
-        const staged = [];
         const previousItems = core.resultEls;
+        core.resultEls = [];
         const prepare = (from, to) => {
             const frag = rail.ownerDocument.createDocumentFragment();
-            staged.push(frag); // Register before building so partial rows can be unobserved.
             this._appendPositionRange(frag, from, to);
             return frag;
         };
@@ -283,11 +282,6 @@ export const SearchResultRendererController_virtual_window_methods = {
                 }
             }
         } catch (error) {
-            for (const fragment of staged) {
-                for (const shell of fragment.querySelectorAll('.local-search-swipe-shell')) {
-                    this._rowResizeObserver?.unobserve(shell);
-                }
-            }
             core.resultEls = previousItems;
             // A subsequent scroll event may retry; do not add a timer or
             // clear any existing result DOM to recover from this failure.
@@ -316,6 +310,10 @@ export const SearchResultRendererController_virtual_window_methods = {
 
         this.windowStart = newStart;
         this.windowEnd = newEnd;
+        for (const item of core.resultEls) {
+            const shell = item._lsSwipeShell;
+            this._observeShell(shell, Number.parseInt(shell.dataset.virtualPosition, 10));
+        }
         this._syncSpacerHeights(total);
         this._syncMountedState();
         this.queueLazySnippetFill(0, core._resultGeneration);
@@ -409,10 +407,12 @@ export const SearchResultRendererController_virtual_window_methods = {
     },
 
 
-    _appendPositionRange(frag, start, end) {
+    _appendPositionRange(frag, start, end, reuse = null) {
         for (let position = start; position < end; position++) {
             const actualIndex = this._actualIndexAtDisplayPosition(position);
-            if (actualIndex >= 0) this._buildResultItem(actualIndex, frag, position);
+            if (actualIndex < 0) continue;
+            if (reuse) reuse.appendItem(actualIndex, frag, position);
+            else this._buildResultItem(actualIndex, frag, position);
         }
     },
 
@@ -453,6 +453,7 @@ export const SearchResultRendererController_virtual_window_methods = {
             if (slot >= 0) core.resultEls[slot] = replacement;
             this._unobserveShell(oldShell);
             oldShell.replaceWith(replacement._lsSwipeShell);
+            this._observeShell(replacement._lsSwipeShell, position);
             replacement._lsSwipeShell._lsResultBinding?.syncAllExpanded();
         }
         core.renderedResults = core.renderedResults.map(row => mounted.get(row.path)

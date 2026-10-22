@@ -1,0 +1,155 @@
+{
+  "scope": "Chromium fixture, CPU 4x, 40 disclosure + 50 folder clicks each run; synchronous nav.select only, not native latency. Ordered baseline/candidate/candidate/baseline.",
+  "datasets": [
+    {
+      "files": 161,
+      "before": [
+        {
+          "meanMs": 19.78799999833107,
+          "p95Ms": 43.39999997615814,
+          "maxMs": 59.60000002384186,
+          "clicks": 50,
+          "cardBuilds": 74,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        },
+        {
+          "meanMs": 20.131999996900557,
+          "p95Ms": 40.5,
+          "maxMs": 45.69999998807907,
+          "clicks": 50,
+          "cardBuilds": 74,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        }
+      ],
+      "after": [
+        {
+          "meanMs": 20.196000002622604,
+          "p95Ms": 43,
+          "maxMs": 45.59999996423721,
+          "clicks": 50,
+          "cardBuilds": 74,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        },
+        {
+          "meanMs": 19.96200000166893,
+          "p95Ms": 42.60000002384186,
+          "maxMs": 52.39999997615814,
+          "clicks": 50,
+          "cardBuilds": 74,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        }
+      ]
+    },
+    {
+      "files": 2400,
+      "before": [
+        {
+          "meanMs": 20.992000007629393,
+          "p95Ms": 38,
+          "maxMs": 47.09999996423721,
+          "clicks": 50,
+          "cardBuilds": 56,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        },
+        {
+          "meanMs": 21.817999993562697,
+          "p95Ms": 37.10000002384186,
+          "maxMs": 46.30000001192093,
+          "clicks": 50,
+          "cardBuilds": 56,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        }
+      ],
+      "after": [
+        {
+          "meanMs": 19.95799999833107,
+          "p95Ms": 40.69999998807907,
+          "maxMs": 47.39999997615814,
+          "clicks": 50,
+          "cardBuilds": 56,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        },
+        {
+          "meanMs": 21.08800000309944,
+          "p95Ms": 44.700000047683716,
+          "maxMs": 45,
+          "clicks": 50,
+          "cardBuilds": 56,
+          "checks": {
+            "one icon per reused host": true,
+            "every real click delivered": true,
+            "repeat selection toggles on and off": true,
+            "selection and results commit together": true,
+            "last click wins": true,
+            "icon changes preserve accessible names": true,
+            "wheel scrolling keeps visible rows mounted": true,
+            "far keyboard navigation reaches final result": true
+          }
+        }
+      ]
+    }
+  ]
+}

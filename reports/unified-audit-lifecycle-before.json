@@ -1,0 +1,1554 @@
+[
+  {
+    "name": "desktop page observes connected cards exactly once",
+    "pass": false,
+    "evidence": {
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note601.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note601.md"
+        }
+      ],
+      "ranges": 0,
+      "configReads": 34,
+      "cards": 16
+    }
+  },
+  {
+    "name": "desktop page uses the shared range traversal",
+    "pass": false,
+    "evidence": 0
+  },
+  {
+    "name": "desktop card config normalized once per card",
+    "pass": false,
+    "evidence": {
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note601.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note601.md"
+        }
+      ],
+      "ranges": 0,
+      "configReads": 34,
+      "cards": 16
+    }
+  },
+  {
+    "name": "desktop failed scroll build preserves live row array",
+    "pass": false,
+    "evidence": {
+      "success": false,
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note210.md"
+        }
+      ],
+      "itemsUnchanged": false,
+      "nodesUnchanged": true
+    }
+  },
+  {
+    "name": "desktop failed scroll build acquires no height observers",
+    "pass": false,
+    "evidence": {
+      "success": false,
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note210.md"
+        }
+      ],
+      "itemsUnchanged": false,
+      "nodesUnchanged": true
+    }
+  },
+  {
+    "name": "desktop successful scroll observes only mounted new rows",
+    "pass": false,
+    "evidence": {
+      "success": true,
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note210.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note410.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note610.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note810.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1010.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1210.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1410.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1610.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1810.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note2010.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note2210.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note11.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note211.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note411.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note611.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note811.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note1011.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note1211.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note1411.md"
+        }
+      ],
+      "matching": true
+    }
+  },
+  {
+    "name": "desktop single-row refresh observes one connected replacement",
+    "pass": false,
+    "evidence": {
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        }
+      ],
+      "connected": true
+    }
+  },
+  {
+    "name": "mobile page observes connected cards exactly once",
+    "pass": false,
+    "evidence": {
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note601.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note801.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1001.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1401.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1601.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1801.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note2001.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note2201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note2.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note202.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note402.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note602.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note802.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1002.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1202.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1402.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1602.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1802.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note2002.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note2202.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note3.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note203.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note403.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note603.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note803.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1003.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1203.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1403.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1603.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1803.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note2003.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note2203.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note4.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note204.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note404.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note604.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note804.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1004.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1204.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1404.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1604.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1804.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note2004.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note2204.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note601.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note801.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1001.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1401.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1601.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1801.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note2001.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note2201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note2.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note202.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note402.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note602.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note802.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1002.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1202.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1402.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1602.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1802.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note2002.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note2202.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note3.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note203.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note403.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note603.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note803.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1003.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1203.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1403.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1603.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1803.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note2003.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note2203.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note4.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note204.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note404.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note604.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note804.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1004.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1204.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1404.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1604.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1804.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note2004.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note2204.md"
+        }
+      ],
+      "ranges": 1,
+      "configReads": 121,
+      "cards": 60
+    }
+  },
+  {
+    "name": "mobile page uses the shared range traversal",
+    "pass": true,
+    "evidence": 1
+  },
+  {
+    "name": "mobile card config normalized once per card",
+    "pass": false,
+    "evidence": {
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note601.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note801.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1001.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1401.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1601.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note1801.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note2001.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder001/Child/note2201.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note2.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note202.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note402.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note602.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note802.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1002.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1202.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1402.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1602.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note1802.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note2002.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder002/Child/note2202.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note3.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note203.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note403.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note603.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note803.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1003.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1203.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1403.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1603.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note1803.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note2003.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder003/Child/note2203.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note4.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note204.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note404.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note604.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note804.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1004.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1204.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1404.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1604.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note1804.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note2004.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder004/Child/note2204.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note0.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1400.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1600.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note1800.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2000.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder000/Child/note2200.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note401.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note601.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note801.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1001.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1401.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1601.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note1801.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note2001.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder001/Child/note2201.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note2.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note202.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note402.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note602.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note802.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1002.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1202.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1402.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1602.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note1802.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note2002.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder002/Child/note2202.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note3.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note203.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note403.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note603.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note803.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1003.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1203.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1403.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1603.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note1803.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note2003.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder003/Child/note2203.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note4.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note204.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note404.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note604.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note804.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1004.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1204.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1404.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1604.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note1804.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note2004.md"
+        },
+        {
+          "connected": true,
+          "path": "Folder004/Child/note2204.md"
+        }
+      ],
+      "ranges": 1,
+      "configReads": 121,
+      "cards": 60
+    }
+  },
+  {
+    "name": "mobile failed scroll build preserves live row array",
+    "pass": false,
+    "evidence": {
+      "success": false,
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note210.md"
+        }
+      ],
+      "itemsUnchanged": false,
+      "nodesUnchanged": true
+    }
+  },
+  {
+    "name": "mobile failed scroll build acquires no height observers",
+    "pass": false,
+    "evidence": {
+      "success": false,
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note210.md"
+        }
+      ],
+      "itemsUnchanged": false,
+      "nodesUnchanged": true
+    }
+  },
+  {
+    "name": "mobile successful scroll observes only mounted new rows",
+    "pass": false,
+    "evidence": {
+      "success": true,
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note210.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note410.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note610.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note810.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1010.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1210.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1410.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1610.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note1810.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note2010.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder010/Child/note2210.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note11.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note211.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note411.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note611.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note811.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note1011.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note1211.md"
+        },
+        {
+          "connected": false,
+          "path": "Folder011/Child/note1411.md"
+        }
+      ],
+      "matching": true
+    }
+  },
+  {
+    "name": "mobile single-row refresh observes one connected replacement",
+    "pass": false,
+    "evidence": {
+      "observations": [
+        {
+          "connected": false,
+          "path": "Folder010/Child/note10.md"
+        }
+      ],
+      "connected": true
+    }
+  }
+]

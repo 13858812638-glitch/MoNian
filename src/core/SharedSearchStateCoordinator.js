@@ -134,12 +134,12 @@ export class SharedSearchStateCoordinator {
         this.state = normalized;
         this.revision++;
         this._remember();
-        // A desktop sidebar has already rendered its own committed state.
+        // A publishing host has already rendered its own committed state.
         // Acknowledge it before scheduling peers instead of consuming it back
         // through the scroll gate (which forces layout of the new result DOM).
         // A stale host may have merged only one dimension: it must still wait
         // for its normal interaction gate and consume the remaining fields.
-        if (core.navigator?.desktopSidebar && this._same(current, normalized)) member.applied = this.revision;
+        if (this._same(current, normalized)) member.applied = this.revision;
         for (const target of this.members.keys()) if (!closing || target !== core) this.schedule(target);
         return true;
     }

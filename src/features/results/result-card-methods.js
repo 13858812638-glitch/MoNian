@@ -4,7 +4,7 @@ import { logicalFileType } from "../../data/formats/file-types.js";
 import { initializeSearchInteractionElement } from "../../ui/components/input-controls.js";
 import { hostDocument, isDomElement, isDomHTMLElement } from "../../utils/dom.js";
 import { fillSearchHitText } from "../../utils/search-text.js";
-import { RESULT_CONTENT_DEF_MAP, normalizeResultContentOrder } from "./view-config.js";
+import { RESULT_CONTENT_DEF_MAP } from "./view-config.js";
 import { Notice } from "obsidian";
 // Instance method owner. `this` is the unchanged SearchResultRendererController instance. No additional state store.
 export const SearchResultRendererController_result_card_methods = {
@@ -60,7 +60,7 @@ export const SearchResultRendererController_result_card_methods = {
         const view = core.resultControls.activeViewConfig();
         if (view.snippetLines !== 0 && result.snippet) {
             const snippet = body.createDiv({ cls: "local-search-item-snippet" });
-            this._fillSnippet(snippet, result);
+            this._fillSnippet(snippet, result, view.snippetLines);
         }
 
         // 结果卡顺序只由 View Composer 的 contentOrder 决定。
@@ -72,7 +72,7 @@ export const SearchResultRendererController_result_card_methods = {
             this._appendMetaFields(body, result, pendingMeta);
             pendingMeta = [];
         };
-        for (const id of normalizeResultContentOrder(view.contentOrder)) {
+        for (const id of view.contentOrder) {
             const def = RESULT_CONTENT_DEF_MAP.get(id);
             if (!def || !view[def.flag]) continue;
             if (metaIds.has(id)) {
@@ -131,14 +131,14 @@ export const SearchResultRendererController_result_card_methods = {
         // 所有卡内控件创建完成后再由 Selection Owner 一次性同步行/子控件交互状态。
         core.selection.syncElement(item, result.path);
         frag.appendChild(shell);
-        this._observeShell(shell, resolvedPosition);
+        // Construction owns content only. The committing caller acquires the
+        // height observer after attachment, never for staged/failed cards.
         core.resultEls.push(item);
         return item;
     },
 
     
-    _fillSnippet(snippetEl, res) {
-        const maxLines = this.owner.resultControls.activeViewConfig().snippetLines;
+    _fillSnippet(snippetEl, res, maxLines = this.owner.resultControls.activeViewConfig().snippetLines) {
         snippetEl.dataset.lines = String(maxLines);
         const text = String(res?.snippet || "");
         fillSearchHitText(snippetEl, text, res?.snippetMatchRanges || []);
@@ -153,7 +153,8 @@ export const SearchResultRendererController_result_card_methods = {
         if (!el)
             return;
         let snippetEl = el.querySelector(".local-search-item-snippet");
-        if (core.resultControls.activeViewConfig().snippetLines === 0) {
+        const maxLines = core.resultControls.activeViewConfig().snippetLines;
+        if (maxLines === 0) {
             snippetEl?.remove();
             return;
         }
@@ -174,7 +175,7 @@ export const SearchResultRendererController_result_card_methods = {
             else
                 el.prepend(snippetEl);
         }
-        this._fillSnippet(snippetEl, res);
+        this._fillSnippet(snippetEl, res, maxLines);
     },
 
     

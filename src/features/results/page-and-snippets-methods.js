@@ -169,7 +169,6 @@ export const SearchResultRendererController_page_and_snippets_methods = {
         };
         const staging = rail.ownerDocument.createElement("div");
         let committed = false;
-        let pendingResultFragment = null;
         let nextStart = 0, nextEnd = 0;
         let nextBeforeSpacer = null, nextAfterSpacer = null;
         let hasResults = false;
@@ -209,12 +208,10 @@ export const SearchResultRendererController_page_and_snippets_methods = {
                     const beforeHeight = heightIndex.prefix(nextStart);
                     const afterHeight = Math.max(0, heightIndex.total() - heightIndex.prefix(nextEnd));
                     const fragment = rail.ownerDocument.createDocumentFragment();
-                    pendingResultFragment = fragment;
                     nextBeforeSpacer = this._spacer(beforeHeight);
                     nextAfterSpacer = this._spacer(afterHeight, "is-after");
                     fragment.appendChild(nextBeforeSpacer);
-                    if (cardReuse) cardReuse.append(fragment, nextStart, nextEnd);
-                    else this._appendPositionRange(fragment, nextStart, nextEnd);
+                    this._appendPositionRange(fragment, nextStart, nextEnd, cardReuse);
                     fragment.appendChild(nextAfterSpacer);
                     staging.appendChild(fragment);
                     hasResults = true;
@@ -266,15 +263,6 @@ export const SearchResultRendererController_page_and_snippets_methods = {
                     this._observeShell(shell, Number.parseInt(shell.dataset.virtualPosition || "", 10));
                 }
                 list.scrollTop = before.scrollTop;
-            } else {
-                // A builder can throw before its DocumentFragment is appended
-                // to staging. Unobserve *both* possible detached hosts so a
-                // failed attempt cannot retain orphaned ResizeObserver targets.
-                for (const host of [staging, pendingResultFragment].filter(Boolean)) {
-                    for (const shell of host.querySelectorAll(".local-search-swipe-shell")) {
-                        this._rowResizeObserver?.unobserve(shell);
-                    }
-                }
             }
             core.resultEls = before.resultEls;
             core.renderedResults = before.renderedResults;

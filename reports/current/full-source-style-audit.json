@@ -1,20 +1,20 @@
 {
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
-  "modules": 146,
-  "sourceFiles": 147,
-  "jsLines": 33207,
-  "jsBytes": 1518939,
-  "cssBytes": 256695,
-  "cssLines": 7472,
+  "modules": 153,
+  "sourceFiles": 154,
+  "jsLines": 34847,
+  "jsBytes": 1616894,
+  "cssBytes": 264825,
+  "cssLines": 7684,
   "cssParseErrors": [],
-  "cssRuleCount": 690,
+  "cssRuleCount": 723,
   "duplicateSelectorsSameContext": [
     {
       "context": [],
       "selector": ":root",
       "lines": [
         1444,
-        7196
+        7287
       ]
     },
     {
@@ -29,17 +29,17 @@
       "context": [],
       "selector": "body.is-mobile",
       "lines": [
-        7024,
-        7203
+        7115,
+        7294
       ]
     }
   ],
   "duplicatePropertiesSameRule": [
     {
-      "line": 3500,
+      "line": 3571,
       "selector": ".local-search-results-shell",
       "property": "overflow",
-      "earlier": 3499
+      "earlier": 3570
     }
   ],
   "styleSettings": {
@@ -215,6 +215,26 @@
       "code": "add.addEventListener(\"click\", event => {"
     },
     {
+      "file": "src/features/batch/tag-editor-methods.js",
+      "line": 142,
+      "code": "else button.addEventListener(\"click\", () => enterParent(crumb.path));"
+    },
+    {
+      "file": "src/features/batch/tag-editor-methods.js",
+      "line": 346,
+      "code": "search.addEventListener(\"compositionstart\", () => { composing = true; });"
+    },
+    {
+      "file": "src/features/batch/tag-editor-methods.js",
+      "line": 347,
+      "code": "search.addEventListener(\"compositionend\", () => { composing = false; handleSearchInput(); });"
+    },
+    {
+      "file": "src/features/batch/tag-editor-methods.js",
+      "line": 348,
+      "code": "search.addEventListener(\"keydown\", event => {"
+    },
+    {
       "file": "src/features/create/preview-methods.js",
       "line": 32,
       "code": "create.addEventListener(\"click\", event => {"
@@ -256,11 +276,6 @@
     },
     {
       "file": "src/features/facets/property-picker-methods.js",
-      "line": 848,
-      "code": "hostWindow(list).requestAnimationFrame(() => {"
-    },
-    {
-      "file": "src/features/facets/property-picker-methods.js",
       "line": 952,
       "code": "chip.addEventListener(\"click\", e => {"
     },
@@ -275,11 +290,6 @@
       "code": "valueButton.addEventListener(\"click\", event => {"
     },
     {
-      "file": "src/features/facets/tag-picker-methods.js",
-      "line": 476,
-      "code": "hostWindow(list).requestAnimationFrame(() => {"
-    },
-    {
       "file": "src/features/facets/type-picker-methods.js",
       "line": 226,
       "code": "search.addEventListener(\"input\", render);"
@@ -291,98 +301,243 @@
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 37,
+      "line": 48,
       "code": "this.scroll.addEventListener(\"contextmenu\", this._contextMenu);"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 48,
+      "line": 70,
+      "code": "hold.timer = win.setTimeout(() => {"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 93,
+      "code": "this.scroll.addEventListener(\"pointerdown\", this._holdDown, { passive: true });"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 94,
+      "code": "this.scroll.addEventListener(\"pointermove\", this._holdMove, { passive: true });"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 95,
+      "code": "this.scroll.addEventListener(\"pointerup\", this._holdEnd, { passive: true });"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 96,
+      "code": "this.scroll.addEventListener(\"pointercancel\", this._holdEnd, { passive: true });"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 97,
+      "code": "this.scroll.addEventListener(\"scroll\", this._holdScroll, { passive: true });"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 98,
+      "code": "this.scroll.addEventListener(\"click\", this._holdClickGuard, true);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 109,
       "code": "this.scroll.addEventListener(\"click\", this._actionAnchorClick, true);"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 63,
+      "line": 124,
       "code": "this.scroll.addEventListener(\"click\", this._maintenanceClick, true);"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 212,
+      "line": 330,
       "code": "grip.addEventListener(\"click\", event => { event.preventDefault(); event.stopPropagation(); });"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 213,
+      "line": 331,
       "code": "grip.addEventListener(\"keydown\", event => {"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 547,
+      "line": 833,
       "code": "panel.addEventListener(\"pointerdown\", event => event.stopPropagation());"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 548,
+      "line": 834,
       "code": "panel.addEventListener(\"click\", event => event.stopPropagation());"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 583,
+      "line": 869,
       "code": "input.addEventListener(\"input\", preview);"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 585,
+      "line": 871,
       "code": "input.addEventListener(\"change\", () => {"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 598,
+      "line": 888,
+      "code": "this.scroll.removeEventListener(type, fn);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 889,
+      "code": "this.scroll.removeEventListener(\"click\", this._holdClickGuard, true);"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "line": 890,
       "code": "this.scroll.removeEventListener(\"contextmenu\", this._contextMenu);"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 599,
+      "line": 891,
       "code": "this.scroll.removeEventListener(\"click\", this._actionAnchorClick, true);"
     },
     {
       "file": "src/features/navigator/NavigatorCustomization.js",
-      "line": 600,
+      "line": 892,
       "code": "this.scroll.removeEventListener(\"click\", this._maintenanceClick, true);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 51,
+      "line": 134,
+      "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 136,
+      "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "line": 187,
       "code": "this.backButton.addEventListener(\"click\", () => this.back());"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 62,
+      "line": 204,
       "code": "this.resultsButton.addEventListener(\"click\", () => { if (this.prepareSearch()) this.showResults(); });"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 150,
+      "line": 316,
       "code": "node.addEventListener(type, fn, options);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 151,
+      "line": 317,
       "code": "this.cleanups.push(() => node.removeEventListener(type, fn, options));"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 169,
+      "line": 337,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 720,
+      "line": 951,
       "code": "manage.addEventListener(\"click\", () => this.openSection(id, manage));"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 905,
-      "code": "this._projectionTimer = this.root.ownerDocument.defaultView.setTimeout(() => {"
+      "line": 1207,
+      "code": "} else this._projectionTimer = this.root.ownerDocument.defaultView.setTimeout(project, 0);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 43,
+      "code": "if (frame === null) frame = win.requestAnimationFrame(flush);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 47,
+      "code": "if (frame !== null) { win.cancelAnimationFrame(frame); frame = null; }"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 56,
+      "code": "win.removeEventListener(\"pointermove\", move);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 57,
+      "code": "win.removeEventListener(\"pointerup\", up);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 58,
+      "code": "win.removeEventListener(\"pointercancel\", cancel);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 59,
+      "code": "win.removeEventListener(\"blur\", cancel);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 83,
+      "code": "win.addEventListener(\"pointermove\", move);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 84,
+      "code": "win.addEventListener(\"pointerup\", up);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 85,
+      "code": "win.addEventListener(\"pointercancel\", cancel);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 86,
+      "code": "win.addEventListener(\"blur\", cancel);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 105,
+      "code": "divider.addEventListener(\"pointerdown\", down);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 106,
+      "code": "divider.addEventListener(\"lostpointercapture\", cancel);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 107,
+      "code": "divider.addEventListener(\"keydown\", key);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 108,
+      "code": "divider.addEventListener(\"dblclick\", reset);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 121,
+      "code": "divider.removeEventListener(\"pointerdown\", down);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 122,
+      "code": "divider.removeEventListener(\"lostpointercapture\", cancel);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 123,
+      "code": "divider.removeEventListener(\"keydown\", key);"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "line": 124,
+      "code": "divider.removeEventListener(\"dblclick\", reset);"
     },
     {
       "file": "src/features/plugin/content-cache-methods.js",
@@ -556,22 +711,22 @@
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 93,
+      "line": 115,
       "code": "bestToggle.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 120,
+      "line": 142,
       "code": "bodyToggle.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 160,
+      "line": 182,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 281,
+      "line": 308,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
@@ -591,17 +746,17 @@
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
-      "line": 115,
+      "line": 119,
       "code": "this._scrollSettleTimer = win.setTimeout(() => {"
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
-      "line": 343,
+      "line": 347,
       "code": "this._geometrySettleTimer = hostWindow(list).setTimeout(() => {"
     },
     {
       "file": "src/features/results/virtual-window-methods.js",
-      "line": 401,
+      "line": 403,
       "code": "this._scrollFrame = hostWindow(container).requestAnimationFrame(() => {"
     },
     {
@@ -676,82 +831,82 @@
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 54,
+      "line": 56,
       "code": "this.list?.addEventListener(\"pointerdown\", this._pointerDown);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 55,
+      "line": 57,
       "code": "this.list?.addEventListener(\"click\", this._clickCapture, true);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 112,
+      "line": 114,
       "code": "win.addEventListener(\"pointermove\", this._move, { passive: false, capture: true });"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 113,
+      "line": 115,
       "code": "win.addEventListener(\"pointerup\", this._finish, true);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 114,
+      "line": 116,
       "code": "win.addEventListener(\"pointercancel\", this._cancel, true);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 115,
+      "line": 117,
       "code": "win.addEventListener(\"blur\", this._blur, true);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 242,
+      "line": 245,
       "code": "this._raf = win.requestAnimationFrame(tick);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 246,
+      "line": 249,
       "code": "this._raf = win.requestAnimationFrame(tick);"
-    },
-    {
-      "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 258,
-      "code": "session.win.removeEventListener(\"pointermove\", this._move, true);"
-    },
-    {
-      "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 259,
-      "code": "session.win.removeEventListener(\"pointerup\", this._finish, true);"
-    },
-    {
-      "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 260,
-      "code": "session.win.removeEventListener(\"pointercancel\", this._cancel, true);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
       "line": 261,
+      "code": "session.win.removeEventListener(\"pointermove\", this._move, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 262,
+      "code": "session.win.removeEventListener(\"pointerup\", this._finish, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 263,
+      "code": "session.win.removeEventListener(\"pointercancel\", this._cancel, true);"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "line": 264,
       "code": "session.win.removeEventListener(\"blur\", this._blur, true);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 265,
+      "line": 268,
       "code": "if (this._raf) session.win.cancelAnimationFrame(this._raf);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 302,
+      "line": 305,
       "code": "if (this._raf) this.list?.ownerDocument.defaultView.cancelAnimationFrame(this._raf);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 311,
+      "line": 314,
       "code": "this.list?.removeEventListener(\"pointerdown\", this._pointerDown);"
     },
     {
       "file": "src/interactions/PointerSortCoordinator.js",
-      "line": 312,
+      "line": 315,
       "code": "this.list?.removeEventListener(\"click\", this._clickCapture, true);"
     },
     {
@@ -901,52 +1056,52 @@
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 52,
+      "line": 55,
       "code": "host.removeEventListener(\"keydown\", trapKeyboard, true);"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 81,
+      "line": 84,
       "code": "host.addEventListener(\"keydown\", trapKeyboard, true);"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 83,
+      "line": 86,
       "code": "backdrop.addEventListener(\"pointerdown\", swallow);"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 84,
+      "line": 87,
       "code": "backdrop.addEventListener(\"pointerup\", swallow);"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 85,
+      "line": 88,
       "code": "backdrop.addEventListener(\"click\", event => { event.preventDefault(); swallow(event); finish(false); });"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 163,
+      "line": 169,
       "code": "dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 164,
+      "line": 170,
       "code": "dialog.addEventListener(\"click\", event => event.stopPropagation());"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 165,
+      "line": 171,
       "code": "input.addEventListener(\"keydown\", event => {"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 205,
+      "line": 211,
       "code": "surface.dialog.addEventListener(\"pointerdown\", event => event.stopPropagation());"
     },
     {
       "file": "src/ui/dialogs/dialog-session.js",
-      "line": 206,
+      "line": 212,
       "code": "surface.dialog.addEventListener(\"click\", event => event.stopPropagation());"
     },
     {
@@ -1166,93 +1321,133 @@
     },
     {
       "file": "src/ui/overlays/LocalSearchOverlayHost.js",
-      "line": 97,
+      "line": 105,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/ui/overlays/LocalSearchOverlayHost.js",
-      "line": 118,
+      "line": 126,
       "code": "this.ownerDocument?.removeEventListener(\"keydown\", this._keydownHandler, true);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 301,
+      "line": 318,
       "code": "this._positionFrame = win.requestAnimationFrame(() => {"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 477,
+      "line": 498,
       "code": "panel.addEventListener(\"contextmenu\", this._contextHandler);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 478,
+      "line": 499,
       "code": "panel.addEventListener(\"click\", this._clickGuardHandler, true);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 483,
+      "line": 514,
+      "code": "if (sidebar) doc.addEventListener(\"scroll\", sidebarScroll, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 515,
       "code": "doc.addEventListener(\"click\", this._outsideHandler, true);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 488,
+      "line": 520,
       "code": "input?.addEventListener(\"beforeinput\", guardInput);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 492,
+      "line": 524,
       "code": "doc.addEventListener(\"keydown\", this._keyHandler, true);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 497,
+      "line": 529,
       "code": "win.addEventListener(\"resize\", this._positionHandler);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 498,
+      "line": 530,
       "code": "win.visualViewport?.addEventListener(\"resize\", this._positionHandler);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 499,
+      "line": 531,
       "code": "win.visualViewport?.addEventListener(\"scroll\", this._positionHandler);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 503,
+      "line": 535,
+      "code": "if (sidebar) doc.removeEventListener(\"scroll\", sidebarScroll, true);"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 536,
       "code": "doc.removeEventListener(\"click\", this._outsideHandler, true);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 504,
+      "line": 537,
       "code": "input?.removeEventListener(\"beforeinput\", guardInput);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 505,
+      "line": 538,
       "code": "doc.removeEventListener(\"keydown\", this._keyHandler, true);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 507,
+      "line": 540,
       "code": "win.removeEventListener(\"resize\", this._positionHandler);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 508,
+      "line": 541,
       "code": "win.visualViewport?.removeEventListener(\"resize\", this._positionHandler);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 509,
+      "line": 542,
       "code": "win.visualViewport?.removeEventListener(\"scroll\", this._positionHandler);"
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 511,
+      "line": 544,
       "code": "if (this._positionFrame) win.cancelAnimationFrame(this._positionFrame);"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "line": 40,
+      "code": "if (!disposed && frame === null) frame = win.requestAnimationFrame(sync);"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "line": 46,
+      "code": "win.addEventListener(\"resize\", queue);"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "line": 47,
+      "code": "doc.addEventListener(\"scroll\", scroll, true);"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "line": 51,
+      "code": "if (frame !== null) win.cancelAnimationFrame(frame);"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "line": 53,
+      "code": "win.removeEventListener(\"resize\", queue);"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "line": 54,
+      "code": "doc.removeEventListener(\"scroll\", scroll, true);"
     },
     {
       "file": "src/ui/pickers/count-rail.js",
@@ -1266,11 +1461,6 @@
     },
     {
       "file": "src/ui/pickers/folder-picker.js",
-      "line": 175,
-      "code": "hostWindow(list).requestAnimationFrame(() => {"
-    },
-    {
-      "file": "src/ui/pickers/folder-picker.js",
       "line": 183,
       "code": "search.addEventListener(\"input\", () => render());"
     },
@@ -1281,7 +1471,22 @@
     },
     {
       "file": "src/ui/pickers/picker-shell.js",
-      "line": 78,
+      "line": 18,
+      "code": "if (frame !== null) win.cancelAnimationFrame(frame);"
+    },
+    {
+      "file": "src/ui/pickers/picker-shell.js",
+      "line": 24,
+      "code": "if (frame !== null) win.cancelAnimationFrame(frame);"
+    },
+    {
+      "file": "src/ui/pickers/picker-shell.js",
+      "line": 25,
+      "code": "frame = win.requestAnimationFrame(() => {"
+    },
+    {
+      "file": "src/ui/pickers/picker-shell.js",
+      "line": 101,
       "code": "search.addEventListener(\"input\", onInput);"
     },
     {
@@ -1326,22 +1531,22 @@
     },
     {
       "file": "src/ui/settings/LocalSearchSettingTab.js",
-      "line": 137,
+      "line": 147,
       "code": "input.addEventListener(\"change\", () => void commit());"
     },
     {
       "file": "src/ui/settings/LocalSearchSettingTab.js",
-      "line": 138,
+      "line": 148,
       "code": "input.addEventListener(\"keydown\", event => {"
     },
     {
       "file": "src/ui/settings/LocalSearchSettingTab.js",
-      "line": 228,
+      "line": 238,
       "code": "button.addEventListener(\"click\", () => renderModule(module.id));"
     },
     {
       "file": "src/ui/settings/LocalSearchSettingTab.js",
-      "line": 232,
+      "line": 242,
       "code": "tabs.addEventListener(\"keydown\", event => {"
     }
   ],
@@ -1358,7 +1563,12 @@
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 452,
+      "line": 351,
+      "code": "panel.style.visibility = \"hidden\";"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "line": 473,
       "code": "panel.style.visibility = \"hidden\";"
     }
   ],
@@ -1367,5 +1577,936 @@
     "Dynamic class/token names and external Style Settings consumers can produce scan false positives.",
     "DOM-owned listeners may be collected with their element; global listeners require explicit scope cleanup.",
     "No user theme/CSS snippets/data/manifest were supplied."
-  ]
+  ],
+  "files": [
+    {
+      "file": "src/core/LocalSearchPlugin.js",
+      "lines": 457,
+      "bytes": 30327,
+      "sha256": "86480cba2ef9e5d56b696d92649be6b90188f408e3c714bd577a6df462d197e5"
+    },
+    {
+      "file": "src/core/SearchCore.js",
+      "lines": 220,
+      "bytes": 13130,
+      "sha256": "5a81dbc84b6441f73824a3edbfa456a5928e06bc7284d45a80b4f51a6573a65d"
+    },
+    {
+      "file": "src/core/SharedSearchStateCoordinator.js",
+      "lines": 213,
+      "bytes": 9780,
+      "sha256": "e02466644be2f2ca17d8d5aadcfe94238c039a0b7d81720ad62eb05bc6819ed2"
+    },
+    {
+      "file": "src/core/compose-class-methods.js",
+      "lines": 30,
+      "bytes": 1580,
+      "sha256": "c850d8abded43f57e6484867c2308a5605daf4c2abb245a5ed83766525795a41"
+    },
+    {
+      "file": "src/core/default-settings.js",
+      "lines": 58,
+      "bytes": 5180,
+      "sha256": "0942191aa8fbdc7631e8b1dceb638f9cff304b4ae0909d78a827ff875ace9c2e"
+    },
+    {
+      "file": "src/core/picker-cleanup.js",
+      "lines": 20,
+      "bytes": 729,
+      "sha256": "d8c9cf43b89bd044ed8e0a3b8624e8b36a7f7e6443dacb5802787e24bcb0676e"
+    },
+    {
+      "file": "src/core/search/file-actions-methods.js",
+      "lines": 359,
+      "bytes": 14229,
+      "sha256": "451fe867533c4f34e3da216855533f36c8c72f753cf2880537b1a51da840df8b"
+    },
+    {
+      "file": "src/core/search/input-and-filters-methods.js",
+      "lines": 533,
+      "bytes": 23503,
+      "sha256": "2989f1dc21fcb519b5f33359d84ee5203db806159a515f83318f5429939c3752"
+    },
+    {
+      "file": "src/core/search/result-menu-events-methods.js",
+      "lines": 269,
+      "bytes": 11710,
+      "sha256": "f368905d6fc1c52d90f5e75e0714c96cb4904f7568e7a6913805f4fad2d15f10"
+    },
+    {
+      "file": "src/core/search/search-and-ranking-methods.js",
+      "lines": 531,
+      "bytes": 22958,
+      "sha256": "eabd50e64aa2dc5214318684ca1376c8a42282eea21e009429c5c800e99f3e5b"
+    },
+    {
+      "file": "src/core/search/session-methods.js",
+      "lines": 129,
+      "bytes": 5816,
+      "sha256": "cead174449ced749446b564fd9510a5182fc8b367898f0693d7440cf6ab9d4a0"
+    },
+    {
+      "file": "src/core/search/shell-methods.js",
+      "lines": 410,
+      "bytes": 18350,
+      "sha256": "379e956d83bd74fe01fd4089207acc321cf6bb2b32ba14424ca7d912d4fdb3c4"
+    },
+    {
+      "file": "src/core/session-values.js",
+      "lines": 35,
+      "bytes": 1064,
+      "sha256": "2b4bdb513c657de375226e4b98c9ff409a126645e213c827e6da9c38524f8e0e"
+    },
+    {
+      "file": "src/core/view-types.js",
+      "lines": 9,
+      "bytes": 345,
+      "sha256": "8a566ec5cc47aeb3226a8ca654d3e98958cbad5fd5a5f028ee13d3099e756fbf"
+    },
+    {
+      "file": "src/data/folders/folder-tree.js",
+      "lines": 181,
+      "bytes": 6861,
+      "sha256": "6a7fb8a7ea7943f904957f6da02c3184b16ed2e9f170f16ad711ff65dc930108"
+    },
+    {
+      "file": "src/data/formats/drawing-content.js",
+      "lines": 158,
+      "bytes": 4623,
+      "sha256": "07f876014877d737cce17441a3b5c6d89532cdd9cac7871518abb93f7bec77ad"
+    },
+    {
+      "file": "src/data/formats/drawing-detection.js",
+      "lines": 21,
+      "bytes": 925,
+      "sha256": "153bfc7c0dc089a31d291f85b39d1cf1eef5b5003eae5c7ef79e042f9ae3bbf8"
+    },
+    {
+      "file": "src/data/formats/file-types.js",
+      "lines": 116,
+      "bytes": 4212,
+      "sha256": "d06cb15c1d5ad746ae98fa2b47bac708c3ef7fe7f9b4b14aa160a471457b30a5"
+    },
+    {
+      "file": "src/data/index/BodyIndex.js",
+      "lines": 32,
+      "bytes": 1347,
+      "sha256": "f9f804e8db76e3b5014ef65cd788384bd93e95afaa9a725358d722748e2c0c7d"
+    },
+    {
+      "file": "src/data/index/index-version.js",
+      "lines": 6,
+      "bytes": 173,
+      "sha256": "bd56a6dd4dcd974a52235cf80bcbb33be046c15d8e6ddc0c5afa273eb7d3843b"
+    },
+    {
+      "file": "src/data/properties/cross-key-transfer.js",
+      "lines": 52,
+      "bytes": 3288,
+      "sha256": "dbf304fee2142cb2fc66f3b53921e63e4ba0d67952fb76be62c816f12a52a1a1"
+    },
+    {
+      "file": "src/data/properties/key-merge.js",
+      "lines": 20,
+      "bytes": 1239,
+      "sha256": "60172e697467fda99a0fff84f658714199df8f66f63fba924666af5d54a6623c"
+    },
+    {
+      "file": "src/data/properties/property-catalog.js",
+      "lines": 117,
+      "bytes": 3833,
+      "sha256": "8cc10a0257684cb480c12650cfafaf27e6af460d7f6b30f86c2fe1539ed7caec"
+    },
+    {
+      "file": "src/data/properties/property-types.js",
+      "lines": 146,
+      "bytes": 6057,
+      "sha256": "3782c276c986c4f0852366e2a3693065413296bcd4f63f7b628244237dcec43d"
+    },
+    {
+      "file": "src/data/properties/property-values.js",
+      "lines": 393,
+      "bytes": 14592,
+      "sha256": "3d62afc259c1af55e2115aabccedaaa249060e9f122762972f4edefbdd4002d6"
+    },
+    {
+      "file": "src/data/properties/raw-mutations.js",
+      "lines": 99,
+      "bytes": 3731,
+      "sha256": "98a3de29d5c26f2ecfd2dac4e551d541958cc3ffd274faa4ae8a493b77562aa7"
+    },
+    {
+      "file": "src/data/tags/tag-tree.js",
+      "lines": 99,
+      "bytes": 3436,
+      "sha256": "97bc25daeb0070467e23cdf109ba4f7f2184f9d5f16834ca5921094f3cab2b3c"
+    },
+    {
+      "file": "src/data/tags/tag-values.js",
+      "lines": 103,
+      "bytes": 3526,
+      "sha256": "967f1d26f98206c4ef965fe9582b9d1ff2f53f8cfa8c2495274906d7287938c2"
+    },
+    {
+      "file": "src/data/time/time-values.js",
+      "lines": 158,
+      "bytes": 6714,
+      "sha256": "915fa65a098e0eba0cad6dab53513142271411d052a0d0125c4b98d9e3f81489"
+    },
+    {
+      "file": "src/features/batch/BatchMetadataController.js",
+      "lines": 31,
+      "bytes": 1420,
+      "sha256": "5b57df2a5d7eee5873ab87c2aabf66e7409eb09e5341a23c3641171bd3adf827"
+    },
+    {
+      "file": "src/features/batch/mutation-flow-methods.js",
+      "lines": 245,
+      "bytes": 10333,
+      "sha256": "3ab0f017d79566691321cd4327959c1a5e2b710936be6a81f17bf56bc87f18a4"
+    },
+    {
+      "file": "src/features/batch/property-editor-methods.js",
+      "lines": 789,
+      "bytes": 38006,
+      "sha256": "cc44dbb7ba6ebeaab2d6fc1a26a9612f0241295e14dbf46ea3629f7552c6483e"
+    },
+    {
+      "file": "src/features/batch/tag-editor-methods.js",
+      "lines": 376,
+      "bytes": 18391,
+      "sha256": "44f69c9aa08e4646ff2992c3cb709d16c933cdda31cb60af2a77ea01d7c55e4b"
+    },
+    {
+      "file": "src/features/batch/tag-hierarchy-compose.js",
+      "lines": 46,
+      "bytes": 1968,
+      "sha256": "5202346afcfbf072c3b9413843ec892fd668ea8f05eac8eaa60e1b53e921a1ef"
+    },
+    {
+      "file": "src/features/create/SearchCreateController.js",
+      "lines": 42,
+      "bytes": 3114,
+      "sha256": "f1449ab13337e6526fdf9c754a990e2524f57f94b6bbeedfe9f59a0534f66de0"
+    },
+    {
+      "file": "src/features/create/create-file-methods.js",
+      "lines": 233,
+      "bytes": 13031,
+      "sha256": "8afc706e7514e1a925df6e51681b6a71faccd0c60479cd727d18ac13b3fe5488"
+    },
+    {
+      "file": "src/features/create/create-model.js",
+      "lines": 92,
+      "bytes": 3542,
+      "sha256": "90ee35857ad8cff0492c123fa3ea9eb71174ba713eeceb824d36ecb499851b8e"
+    },
+    {
+      "file": "src/features/create/draft-and-metadata-methods.js",
+      "lines": 399,
+      "bytes": 17659,
+      "sha256": "70315dec5d2409861c725df2cb69f81fe030663cb6cfdbdd73291ecc1bd3c4e4"
+    },
+    {
+      "file": "src/features/create/input-mode-methods.js",
+      "lines": 342,
+      "bytes": 14585,
+      "sha256": "0145a02f576708d752ca1fd1e7a2b6e6a74781b1c6f12ef1a11e5e729bdf7af4"
+    },
+    {
+      "file": "src/features/create/payload-methods.js",
+      "lines": 263,
+      "bytes": 8692,
+      "sha256": "a6bd5d158f8db6d3f9f88e47b9389f4175443f30e6fddaad2b57279a7e0bdd28"
+    },
+    {
+      "file": "src/features/create/preview-methods.js",
+      "lines": 242,
+      "bytes": 10863,
+      "sha256": "94edfcb0bcdedd73506a9cf86a1aa53d29236cbcec5f6e5d8db57a194efaf31c"
+    },
+    {
+      "file": "src/features/facets/SearchFacetController.js",
+      "lines": 102,
+      "bytes": 5065,
+      "sha256": "8fe1465fd961f60c897b0601d4ad4eb1a20b640f921794cef88a5fc442efd070"
+    },
+    {
+      "file": "src/features/facets/folder-colors-methods.js",
+      "lines": 270,
+      "bytes": 10558,
+      "sha256": "64861ef403d2189f0203255a0a4a3dd2b6dcbf5072544113f76e3e8c727693d1"
+    },
+    {
+      "file": "src/features/facets/folder-picker-methods.js",
+      "lines": 518,
+      "bytes": 22138,
+      "sha256": "d6d97c2906aaaaf0f9e2131cf3bd2e992cdc56dd178f7550e9a090ba81667adf"
+    },
+    {
+      "file": "src/features/facets/property-picker-methods.js",
+      "lines": 1093,
+      "bytes": 53370,
+      "sha256": "212e41416c17da0da7a5177a1d01a929dd1575f850b0e77638d192447a855832"
+    },
+    {
+      "file": "src/features/facets/sidebar-maintenance-methods.js",
+      "lines": 278,
+      "bytes": 17589,
+      "sha256": "0019c61b749ea36d85bc9ff0349b7ba25f95b913a5ab420c5fdb13156a9949da"
+    },
+    {
+      "file": "src/features/facets/tag-picker-methods.js",
+      "lines": 549,
+      "bytes": 25039,
+      "sha256": "2fabd924996a6cc299fce8d5f0a66ed946ad884cc8ada37f1fe1039aa5849859"
+    },
+    {
+      "file": "src/features/facets/type-picker-methods.js",
+      "lines": 313,
+      "bytes": 14102,
+      "sha256": "adfbfdfc3713b9b7fda30bfe17091ced71f23682b18b4e5f902ccc71af4a08d9"
+    },
+    {
+      "file": "src/features/filters/FilterEngine.js",
+      "lines": 83,
+      "bytes": 3948,
+      "sha256": "aa1f84ad2c58a8aa7dd8697762b89747678b92b2500a341d1c45bf90f63ea3d7"
+    },
+    {
+      "file": "src/features/filters/filter-state.js",
+      "lines": 334,
+      "bytes": 12971,
+      "sha256": "f09f8ca1797c025b08948fdd8157df2361cafdfdc656f1754e8a52dbc47f33ac"
+    },
+    {
+      "file": "src/features/filters/pool-config.js",
+      "lines": 121,
+      "bytes": 4342,
+      "sha256": "aef9ed41e7647f2fd4d481dd944681e1796746eda8b98922858d67def4e1e75e"
+    },
+    {
+      "file": "src/features/filters/pool-values.js",
+      "lines": 76,
+      "bytes": 2735,
+      "sha256": "c30f825a9670140bc11a12a9c28a37bc20125f53d051b83632d175a96535a634"
+    },
+    {
+      "file": "src/features/folders/exclusions.js",
+      "lines": 89,
+      "bytes": 3718,
+      "sha256": "0ead733e30c3dd3c857547bff375ed4d6c38f676ca5a32791e370930d2e10239"
+    },
+    {
+      "file": "src/features/folders/folder-colors.js",
+      "lines": 63,
+      "bytes": 1821,
+      "sha256": "b830f20f708a5bf8c8b6cd9cb6a8a98ada4c8a62a9b93e2fc9ab48e0972c6b75"
+    },
+    {
+      "file": "src/features/navigator/NavigatorCustomization.js",
+      "lines": 897,
+      "bytes": 56193,
+      "sha256": "85137620e51c720ebfb48d37ecb91ac54676242118afe037b0d1e66a1f077457"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "lines": 1521,
+      "bytes": 92087,
+      "sha256": "5dc41a8acd57c79490203901426dd6ea8f1eeee1ae6f1623e21d60d56cfe055a"
+    },
+    {
+      "file": "src/features/navigator/customization-model.js",
+      "lines": 141,
+      "bytes": 8232,
+      "sha256": "fb37df96bf8cfd7021ad345770160b7c42a3eecb50744b031d883e989384de95"
+    },
+    {
+      "file": "src/features/navigator/desktop-pane.js",
+      "lines": 128,
+      "bytes": 6596,
+      "sha256": "6aabd966698dd0bc499a033f20ebf79dd4410366466b39fbadf2ce5f83d5ec31"
+    },
+    {
+      "file": "src/features/navigator/navigation-icon.js",
+      "lines": 15,
+      "bytes": 797,
+      "sha256": "1cab595a8d9f1aa551ae1c241ec3997925d7251ea9abe943a96b05ec59ac2fd7"
+    },
+    {
+      "file": "src/features/navigator/toolbar-config.js",
+      "lines": 127,
+      "bytes": 7402,
+      "sha256": "bad58f9c22b0eaeba5b3648671ad524016a0a014afded62816da92c486cecbfa"
+    },
+    {
+      "file": "src/features/plugin/content-cache-methods.js",
+      "lines": 196,
+      "bytes": 9495,
+      "sha256": "4e22229c1842e9a77ad8556798e78ae56129f6261007737563f1e7c5bf43d96a"
+    },
+    {
+      "file": "src/features/plugin/external-properties-methods.js",
+      "lines": 272,
+      "bytes": 15602,
+      "sha256": "ba1d4f65240d366fdb2a6a5f19acbf4a237599bafc633fb9cd56ba3a176e0d89"
+    },
+    {
+      "file": "src/features/plugin/external-search-methods.js",
+      "lines": 326,
+      "bytes": 15235,
+      "sha256": "7e9ff3392f39bbcbdbad45a7a67add46a13f978e98d3a0b492756c48a6c217df"
+    },
+    {
+      "file": "src/features/plugin/file-command-actions-methods.js",
+      "lines": 100,
+      "bytes": 4446,
+      "sha256": "6bfe962404faa3dfc441cb3b509b0e9c8352abac15c5723b6ffd2aeecd13fe1d"
+    },
+    {
+      "file": "src/features/plugin/file-index-methods.js",
+      "lines": 401,
+      "bytes": 18864,
+      "sha256": "f03270fa3a3e0868f71d47d6476fdd5f1d83caf83387dc71ecbafd1d4f99e690"
+    },
+    {
+      "file": "src/features/plugin/index-queue-methods.js",
+      "lines": 131,
+      "bytes": 5804,
+      "sha256": "d8530ec6eeec8923058033414a7268610887b3a035e16c26a50777238cc9a0d8"
+    },
+    {
+      "file": "src/features/plugin/index-storage-methods.js",
+      "lines": 253,
+      "bytes": 12145,
+      "sha256": "7bf749679650ca198851817bf4b7c44d1cb526e41c028d3ca0ec8eea30054449"
+    },
+    {
+      "file": "src/features/plugin/markdown-write-tracking-methods.js",
+      "lines": 318,
+      "bytes": 19657,
+      "sha256": "0fbe5aa5aab5ceb6a57957a2b1b6e94220a98a7139b0b0b2928910887bdba194"
+    },
+    {
+      "file": "src/features/plugin/metadata-directory-methods.js",
+      "lines": 123,
+      "bytes": 5875,
+      "sha256": "c6a24c728be70c23ed72f6cf3a527d9d363608ac5e27950bf0d7eefab1f6c52d"
+    },
+    {
+      "file": "src/features/plugin/non-markdown-metadata-methods.js",
+      "lines": 342,
+      "bytes": 21296,
+      "sha256": "f6a7fafa9bbc4aa2c728777d4dc4cfac432dc688c9807eed96882f3f978566ad"
+    },
+    {
+      "file": "src/features/plugin/notifications-methods.js",
+      "lines": 115,
+      "bytes": 4315,
+      "sha256": "9c5f3466ce2c8707a3295e9b8975d97fc96717d255840a71e42db7373ca53f67"
+    },
+    {
+      "file": "src/features/plugin/path-lifecycle-methods.js",
+      "lines": 607,
+      "bytes": 24039,
+      "sha256": "de9daea5b7519e5f0f3dfa23da8252fb40774831f5027627154d7aa7fd5c64ee"
+    },
+    {
+      "file": "src/features/plugin/property-catalog-methods.js",
+      "lines": 220,
+      "bytes": 11683,
+      "sha256": "c232ea5d80184017b65e7406a4dee2c72c97922b4c7ad4ac09f62117d54edc83"
+    },
+    {
+      "file": "src/features/plugin/property-maintenance-methods.js",
+      "lines": 604,
+      "bytes": 31299,
+      "sha256": "ca6f6a442aa74d02d9bc622c0ad7a2da6249bd6befa9d2f834d2065e2b95fd60"
+    },
+    {
+      "file": "src/features/plugin/recent-history-state-methods.js",
+      "lines": 232,
+      "bytes": 10676,
+      "sha256": "e0b3589fce7d0f90db0f96da3a4be154768d684934a760eaf68303d7a47a1241"
+    },
+    {
+      "file": "src/features/plugin/search-history-methods.js",
+      "lines": 252,
+      "bytes": 8896,
+      "sha256": "e43dfa600264cc8fb3c447729e0d89230536e04195170dfbfe7b9bc813d97dab"
+    },
+    {
+      "file": "src/features/plugin/settings-storage-methods.js",
+      "lines": 411,
+      "bytes": 17627,
+      "sha256": "2907d25196fab6549a3e5f4d4b5b4d8b2f79f8da208077098b0b939436b03bc0"
+    },
+    {
+      "file": "src/features/plugin/time-cache-methods.js",
+      "lines": 144,
+      "bytes": 5171,
+      "sha256": "8247422fb86742fa96b95ffda788ce5d6aea09fd512c90d7bba54a835719a258"
+    },
+    {
+      "file": "src/features/plugin/tree-maintenance-methods.js",
+      "lines": 351,
+      "bytes": 16475,
+      "sha256": "708936052dc8fcd6e68a015ab7be22d72c242f3860faf731546baee2248b2e9c"
+    },
+    {
+      "file": "src/features/plugin/view-preferences-methods.js",
+      "lines": 282,
+      "bytes": 10581,
+      "sha256": "5e4183860c8f7631a8afee2dc0eefed8a479648a5d1f3f5136d8bddba83f50fd"
+    },
+    {
+      "file": "src/features/plugin/workspace-entry-methods.js",
+      "lines": 87,
+      "bytes": 4193,
+      "sha256": "f93f20fc42f26b237f7c3627c89c4195dcf88bc7574b231ca65992d534cb1482"
+    },
+    {
+      "file": "src/features/result-controls/SearchResultControlsController.js",
+      "lines": 35,
+      "bytes": 2612,
+      "sha256": "0fbe3d15d770aa50829f878b0cc3fad9bb2a7afc7fd9fcab5602cd1070e0f7b8"
+    },
+    {
+      "file": "src/features/result-controls/filter-pool-editor-methods.js",
+      "lines": 789,
+      "bytes": 36216,
+      "sha256": "41d55c673e62e4fd2612f885097cacd6b6c3240879c7213634bc88f9ef5a0925"
+    },
+    {
+      "file": "src/features/result-controls/search-history-methods.js",
+      "lines": 206,
+      "bytes": 9577,
+      "sha256": "390695c0c2bb3314a8f013244fc0d8e36ccb41d7e6d50feb15a38b953be97d69"
+    },
+    {
+      "file": "src/features/result-controls/toolbar-methods.js",
+      "lines": 148,
+      "bytes": 5900,
+      "sha256": "2d248a15eabafa1c2e808ab349eae0e756e887345e10a3f03315e8fdb8628d0b"
+    },
+    {
+      "file": "src/features/result-controls/view-composer-methods.js",
+      "lines": 947,
+      "bytes": 45508,
+      "sha256": "8e0d2ed2916e9b7e80a7fb29832427d98d57c80cbcb26995627455a6eb5bf3ac"
+    },
+    {
+      "file": "src/features/results/SearchResultRendererController.js",
+      "lines": 100,
+      "bytes": 6967,
+      "sha256": "410c17f92854c87db8f75643661467a7e8ebcd4ba15cce1a3f566b1bee3b5385"
+    },
+    {
+      "file": "src/features/results/SparseHeightIndex.js",
+      "lines": 87,
+      "bytes": 3147,
+      "sha256": "d5a1603fbc0c45136633e69cbbd6fac3d9b4dcdd91661f143dd8471b6e21dc68"
+    },
+    {
+      "file": "src/features/results/browse-card-reuse.js",
+      "lines": 92,
+      "bytes": 4603,
+      "sha256": "ca6ad075f5d664afa55ade3e70a2ac3bde398c896e2b8e0bb3dec0a0121d164e"
+    },
+    {
+      "file": "src/features/results/card-metadata-methods.js",
+      "lines": 347,
+      "bytes": 15887,
+      "sha256": "2e8f5a2070ac65acb9e8dd6d014dbec2e73526cc4d516cdadbd104cdaf4fc4b7"
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "lines": 337,
+      "bytes": 16142,
+      "sha256": "c08b1b0c31c3c4aaead11c69b767fe2cadef1905d546877fbce124a91ef463eb"
+    },
+    {
+      "file": "src/features/results/page-and-snippets-methods.js",
+      "lines": 291,
+      "bytes": 14964,
+      "sha256": "16026b5abe536f7d7b1e7c61df61b24190828c66d789bb1a5f28f6d5f499778e"
+    },
+    {
+      "file": "src/features/results/result-card-methods.js",
+      "lines": 208,
+      "bytes": 9822,
+      "sha256": "8a36a7b91d0f82cc2b962ef4d6591344e74fd3cc233836cf99c67484a6ab390c"
+    },
+    {
+      "file": "src/features/results/view-config.js",
+      "lines": 166,
+      "bytes": 5756,
+      "sha256": "4b86e8faa8dcb2e9e0860f69c1021edd1a66e6535f65ea65601b1196733547b0"
+    },
+    {
+      "file": "src/features/results/viewport-anchors-methods.js",
+      "lines": 397,
+      "bytes": 18130,
+      "sha256": "2db93f1a744d7f39c66ff585b4625ccade4cc91bc7c5ad5c07f1d8af48858830"
+    },
+    {
+      "file": "src/features/results/viewport-geometry-methods.js",
+      "lines": 445,
+      "bytes": 18690,
+      "sha256": "89d09c34033618bf37493a1c9ce453edb67fa4cb0bbde191a9ab19c9729e3dd1"
+    },
+    {
+      "file": "src/features/results/virtual-window-methods.js",
+      "lines": 465,
+      "bytes": 21022,
+      "sha256": "22b8d64bd720db89ef080a0c6e6b54f7bb0ffb87d9670052b00fb69244b90e4f"
+    },
+    {
+      "file": "src/features/results/virtualization-config.js",
+      "lines": 51,
+      "bytes": 2106,
+      "sha256": "3828f9ffc5540fa87620532e79403681d8f3400942a337c7986fa601226f24ee"
+    },
+    {
+      "file": "src/features/search/QueryState.js",
+      "lines": 19,
+      "bytes": 679,
+      "sha256": "2eb6e904fbcbc583b5eadc892e69e8a5f401ca8a90f512819cbddcb3d466ab94"
+    },
+    {
+      "file": "src/features/search/ResultRanker.js",
+      "lines": 59,
+      "bytes": 2451,
+      "sha256": "557fdf77628e81ef01f0c29985ab0e68baed673c5077e996ae76676cc1dbc04f"
+    },
+    {
+      "file": "src/features/selection/SearchSelectionController.js",
+      "lines": 543,
+      "bytes": 22904,
+      "sha256": "b4b5e89d816d8ef73b1c31d0414cdb897e1b0a808cb9cc57c319040f01646977"
+    },
+    {
+      "file": "src/features/sort/SearchSortController.js",
+      "lines": 395,
+      "bytes": 16980,
+      "sha256": "25b69689a3f6945f79da329ce49bab56870101feac71e5dd3020a850aa1ddcf4"
+    },
+    {
+      "file": "src/features/sort/sort-model.js",
+      "lines": 106,
+      "bytes": 3642,
+      "sha256": "ef5c681b11037a1d905d14ab11da679c6141508bdb2c5883933dd431fda2b57b"
+    },
+    {
+      "file": "src/integrations/SearchWorkspaceCapabilities.js",
+      "lines": 47,
+      "bytes": 2444,
+      "sha256": "91c9dbcec7f4d5aae65f51eefeb6389769ae00bd1b5bdaf004f0cc7c121b26ef"
+    },
+    {
+      "file": "src/integrations/public-contract.js",
+      "lines": 31,
+      "bytes": 972,
+      "sha256": "09044b6a6f33549d2b607aaea35a308d701035959cd82b8a85a40159ecf97d22"
+    },
+    {
+      "file": "src/interactions/PointerSortCoordinator.js",
+      "lines": 330,
+      "bytes": 12843,
+      "sha256": "ef26ba9152544c50cab40256a7159ed91442c1122e69fe74bcf6a29fff46c451"
+    },
+    {
+      "file": "src/interactions/SwipeActionCoordinator.js",
+      "lines": 679,
+      "bytes": 29113,
+      "sha256": "4e37bd0e3aa33daa6b4516742077b89751cdf3df3d050b126e8dcd342c4f4b29"
+    },
+    {
+      "file": "src/interactions/hover-hints.js",
+      "lines": 114,
+      "bytes": 5767,
+      "sha256": "44e2166d67b4c14472df4ddbd64da551220a11d858420046c7db19356ea63303"
+    },
+    {
+      "file": "src/interactions/scroll-anchor.js",
+      "lines": 120,
+      "bytes": 4141,
+      "sha256": "f1e74df45cc5f119d2cdf5dbe472fb88edbc6757dfa988e46515c4ff386a79f7"
+    },
+    {
+      "file": "src/interactions/sort-feedback.js",
+      "lines": 65,
+      "bytes": 3650,
+      "sha256": "1e6e63aac7e2ebd3e565bc574f73b3b52b8cff47b815a55544f2d9eddd1bc35a"
+    },
+    {
+      "file": "src/interactions/swipe-back.js",
+      "lines": 314,
+      "bytes": 15347,
+      "sha256": "a7de82c6e035163649f70ce23b3c0ce97e8c02001952b72461748570003f1d15"
+    },
+    {
+      "file": "src/main.js",
+      "lines": 2,
+      "bytes": 145,
+      "sha256": "e07a0c92d44c431d72d157ce0e76a82a6098c99ff042af3b54f14448db395433"
+    },
+    {
+      "file": "src/services/BatchMetadataService.js",
+      "lines": 426,
+      "bytes": 19653,
+      "sha256": "5a82955dfcfeebd61d6249c058504ab94d92e4b92be7ab980bcc5544227df34c"
+    },
+    {
+      "file": "src/services/FileOperationService.js",
+      "lines": 285,
+      "bytes": 14268,
+      "sha256": "e2b8e982a563a11fb89565ca45cdaab92deaf6488b7d580d33ed3ec1ad7939f5"
+    },
+    {
+      "file": "src/services/IoPool.js",
+      "lines": 47,
+      "bytes": 1490,
+      "sha256": "f5c1a75e28f192f737e8e85bcbf70a34d65329ed2c86ebe183f75814df950743"
+    },
+    {
+      "file": "src/ui/components/indicator-label.js",
+      "lines": 14,
+      "bytes": 671,
+      "sha256": "17bcf22b99fcd4b13a802a79829f4d72dce87554ab66c64648bb0f22142606c2"
+    },
+    {
+      "file": "src/ui/components/input-controls.js",
+      "lines": 99,
+      "bytes": 3885,
+      "sha256": "61fbcf0c3a9e7123e2b4d43bcaf5c91f48947f8eddf5224a97d8de9efcf24c4f"
+    },
+    {
+      "file": "src/ui/components/property-state.js",
+      "lines": 75,
+      "bytes": 2561,
+      "sha256": "f933749917e8dbaf71572b4254bb9347d4c91ae5fe08c9fb639a4597a9d2a5ac"
+    },
+    {
+      "file": "src/ui/components/view-composer.js",
+      "lines": 120,
+      "bytes": 3644,
+      "sha256": "154a9708a5f691a72fc340506a4d9a4b17c362f66ad648073263cbaeb9891d5f"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-session.js",
+      "lines": 215,
+      "bytes": 9669,
+      "sha256": "7d9f32e878ad20f2ebb4be90d581b7fc61940ee4ff93727100de23c8115ca2b5"
+    },
+    {
+      "file": "src/ui/dialogs/dialog-surface.js",
+      "lines": 100,
+      "bytes": 3853,
+      "sha256": "d6134d6933f6acbc4db113218c51aedf0cdfd53a717df369674c119ac3f95033"
+    },
+    {
+      "file": "src/ui/dialogs/submission.js",
+      "lines": 65,
+      "bytes": 3312,
+      "sha256": "42a1cead8507a7aebee03a46215d6e26b53b9855fb434748249cf2941cb0770d"
+    },
+    {
+      "file": "src/ui/hosts/SearchWindowSession.js",
+      "lines": 690,
+      "bytes": 29439,
+      "sha256": "60ed2265832e16ebf668ec8de0ee80e93c2a95a6c43f8a75f1556b45d15645cf"
+    },
+    {
+      "file": "src/ui/hosts/modal-host.js",
+      "lines": 56,
+      "bytes": 1561,
+      "sha256": "effd420306f5c50a1ea02e217ab63333c010e01fc999a99d19b5772ae82d2552"
+    },
+    {
+      "file": "src/ui/mobile/mobile-frame.js",
+      "lines": 214,
+      "bytes": 11516,
+      "sha256": "358b29f6a6e24e0468cbd981a4943d9c6d708ce35c238396ad7aa019f5ca3fd3"
+    },
+    {
+      "file": "src/ui/overlays/LocalSearchOverlayHost.js",
+      "lines": 139,
+      "bytes": 6778,
+      "sha256": "34b0f65e5b3eb5800885facd7abdb75637490c813454bf8f203e3f5176ce85b7"
+    },
+    {
+      "file": "src/ui/overlays/OperationOverlayController.js",
+      "lines": 153,
+      "bytes": 6690,
+      "sha256": "3a1f820acba45f858a1f90be32eb727ccd77ac5c425e67c37c87e33394842ead"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "lines": 718,
+      "bytes": 33157,
+      "sha256": "dce0d00ce849c2542debe68d7d012f8607a505912c10ca30c18dc3396fdfc219"
+    },
+    {
+      "file": "src/ui/overlays/geometry.js",
+      "lines": 33,
+      "bytes": 2194,
+      "sha256": "64499dcc3faab9f1e69b8e4b27f8f9ccc44e530a18d4047a43e32a142931470f"
+    },
+    {
+      "file": "src/ui/overlays/popup-order.js",
+      "lines": 25,
+      "bytes": 1156,
+      "sha256": "861d048a695d81ce4c861711ce920f993051e6c9d96efa13e0494d370253f836"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "lines": 56,
+      "bytes": 2942,
+      "sha256": "c004e9d7d860e1e809dfa9f014538afa83a7d968edef5effa197911a6bbc434e"
+    },
+    {
+      "file": "src/ui/pickers/count-rail.js",
+      "lines": 21,
+      "bytes": 791,
+      "sha256": "48664d1f8d5fd122db2517f227ea015d56e139e7082eeb59f88b5a306371f9db"
+    },
+    {
+      "file": "src/ui/pickers/folder-picker.js",
+      "lines": 216,
+      "bytes": 8024,
+      "sha256": "767b39e0966d1fe185d43239c6a664b05196593c5931b6bfc146824328d5482d"
+    },
+    {
+      "file": "src/ui/pickers/header-modes.js",
+      "lines": 117,
+      "bytes": 4969,
+      "sha256": "3ba606e38477515868143d011080086b43ad85ea0b21b6036adb68306b4ec497"
+    },
+    {
+      "file": "src/ui/pickers/icon-catalog.js",
+      "lines": 52,
+      "bytes": 2208,
+      "sha256": "556a505276ab62d3e808895a8e150f7958a845bbb5408c28a68812f0267e5670"
+    },
+    {
+      "file": "src/ui/pickers/icon-picker.js",
+      "lines": 82,
+      "bytes": 4559,
+      "sha256": "40336d682771c991d919f5283a44158bf3dff2e70fea69b093ee8e8494317f32"
+    },
+    {
+      "file": "src/ui/pickers/picker-header.js",
+      "lines": 131,
+      "bytes": 3886,
+      "sha256": "00fc6c579ae6afff96158d23b7e60c7509f94f68eb4e547652719b9f2bba120e"
+    },
+    {
+      "file": "src/ui/pickers/picker-shell.js",
+      "lines": 140,
+      "bytes": 5350,
+      "sha256": "e9d390f48d1b167afddac9b0afb8072a5ad623b46595b96816b2f88669522be3"
+    },
+    {
+      "file": "src/ui/pickers/selection-mode.js",
+      "lines": 193,
+      "bytes": 6456,
+      "sha256": "633e993aeb55b74fe4e951195092e4dc9fd7f893871af9cc532bd2f46c0d3692"
+    },
+    {
+      "file": "src/ui/pickers/selection-strip.js",
+      "lines": 95,
+      "bytes": 4203,
+      "sha256": "2cd9c926d48770a044c9522bb8a2eb8a7f5dd251968e7b0c359ae209f511499d"
+    },
+    {
+      "file": "src/ui/pickers/sort-mode.js",
+      "lines": 86,
+      "bytes": 2647,
+      "sha256": "c99f06c6a9520e7076d6b35cd5d643226e4e6f5cdc76bdfbf6764409b27f66ab"
+    },
+    {
+      "file": "src/ui/pickers/template-picker.js",
+      "lines": 167,
+      "bytes": 6284,
+      "sha256": "edecb2244b8c4f3dc8d2c955d9ff517c9ef72bcf6492f55790fba9dc816b1de8"
+    },
+    {
+      "file": "src/ui/pickers/tree-row.js",
+      "lines": 222,
+      "bytes": 8335,
+      "sha256": "0641d8d88046195dfad37f549d82a8349817c685a6cd941634e3232a6766d185"
+    },
+    {
+      "file": "src/ui/settings/LocalSearchSettingTab.js",
+      "lines": 267,
+      "bytes": 14051,
+      "sha256": "99608552b197e83d7aa45742e45981f9679cbe0ab6e7eb639f305bdc6f74f8e1"
+    },
+    {
+      "file": "src/ui/settings/setting-row.js",
+      "lines": 73,
+      "bytes": 2920,
+      "sha256": "6a394d1311db71d485fb06ba84dd82e2c890c2a07ee8f1f7a71c47ee7359cd0c"
+    },
+    {
+      "file": "src/ui/views/SearchView.js",
+      "lines": 207,
+      "bytes": 10174,
+      "sha256": "5451e1df7407244fe9aad098cc004c4a61d5514a532805329295b1a957b5c198"
+    },
+    {
+      "file": "src/utils/dom.js",
+      "lines": 49,
+      "bytes": 1448,
+      "sha256": "15f1d8424d35eb118a70f47c5b491338fc120d3a51ceebcffb9acbe950d0af99"
+    },
+    {
+      "file": "src/utils/markdown-text.js",
+      "lines": 230,
+      "bytes": 9826,
+      "sha256": "3622c599d0e2abc7acf0a86ed62a7c9b3ded5fe4311d0fd0fe5deab9a250ff5a"
+    },
+    {
+      "file": "src/utils/normalization.js",
+      "lines": 44,
+      "bytes": 1224,
+      "sha256": "29614f719edbbf6c40f0735c01ebde05d256704ecb51d4304e64d9af67a64660"
+    },
+    {
+      "file": "src/utils/preferred-order.js",
+      "lines": 80,
+      "bytes": 3236,
+      "sha256": "a39a3d31e750fc08d6a72c974a069f199291f439835bbd84f8ec044e5701bc81"
+    },
+    {
+      "file": "src/utils/search-text.js",
+      "lines": 307,
+      "bytes": 11466,
+      "sha256": "2cc78e95b1a90eb7bc162774c8a6debd583b0d20e8a06324f49af7cd7196172f"
+    },
+    {
+      "file": "src/utils/tree-match.js",
+      "lines": 14,
+      "bytes": 470,
+      "sha256": "792d46ce713a4268295ae12d126c29df40fb92f2c6a66eedfe4439889ddfb2d9"
+    },
+    {
+      "file": "src/utils/vault-paths.js",
+      "lines": 30,
+      "bytes": 862,
+      "sha256": "d735058a385a4337bcdf98f2936d540ef291ae931b8bce9041801fe810623213"
+    },
+    {
+      "file": "src/styles/styles.css",
+      "lines": 7684,
+      "bytes": 264825,
+      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+    }
+  ],
+  "mobileContract": {
+    "baseHeightToken": true,
+    "keyboardHeightToken": false,
+    "note": "Presence is an inventory check, not a native keyboard/layout acceptance test."
+  }
 }

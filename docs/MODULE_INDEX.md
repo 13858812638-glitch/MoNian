@@ -13,7 +13,7 @@
 |---|---:|---|---|
 | `src/core/LocalSearchPlugin.js` | 456 | 插件生命周期、搜索会话与状态归属 | `LocalSearchPlugin` |
 | `src/core/SearchCore.js` | 220 | 插件生命周期、搜索会话与状态归属 | `SEARCH_CORE_UI_REF_KEYS`、`SearchCore` |
-| `src/core/SharedSearchStateCoordinator.js` | 207 | 插件生命周期、搜索会话与状态归属 | `SharedSearchStateCoordinator` |
+| `src/core/SharedSearchStateCoordinator.js` | 213 | 插件生命周期、搜索会话与状态归属 | `SharedSearchStateCoordinator` |
 | `src/core/compose-class-methods.js` | 30 | 插件生命周期、搜索会话与状态归属 | `composeClassMethods` |
 | `src/core/default-settings.js` | 57 | 插件生命周期、搜索会话与状态归属 | `DEFAULT_SETTINGS` |
 | `src/core/picker-cleanup.js` | 20 | 插件生命周期、搜索会话与状态归属 | `disposePickerCleanup`、`registerPickerCleanup` |
@@ -87,7 +87,7 @@
 | `src/features/plugin/settings-storage-methods.js` | 407 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_settings_storage_methods` |
 | `src/features/plugin/time-cache-methods.js` | 144 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_time_cache_methods` |
 | `src/features/plugin/tree-maintenance-methods.js` | 351 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_tree_maintenance_methods` |
-| `src/features/plugin/view-preferences-methods.js` | 293 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_view_preferences_methods` |
+| `src/features/plugin/view-preferences-methods.js` | 282 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_view_preferences_methods` |
 | `src/features/plugin/workspace-entry-methods.js` | 87 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_workspace_entry_methods` |
 | `src/features/result-controls/SearchResultControlsController.js` | 35 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController` |
 | `src/features/result-controls/filter-pool-editor-methods.js` | 789 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_filter_pool_editor_methods` |
@@ -98,13 +98,13 @@
 | `src/features/results/SparseHeightIndex.js` | 87 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SparseHeightIndex` |
 | `src/features/results/card-metadata-methods.js` | 347 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_card_metadata_methods` |
 | `src/features/results/filter-channels-methods.js` | 337 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
-| `src/features/results/browse-card-reuse.js` | 96 | 桌面侧栏浏览卡片的有界复用、提交和回滚 | `beginBrowseCardReuse` |
-| `src/features/results/page-and-snippets-methods.js` | 303 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
-| `src/features/results/result-card-methods.js` | 207 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
+| `src/features/results/browse-card-reuse.js` | 92 | 桌面侧栏浏览卡片的有界复用、提交和回滚 | `beginBrowseCardReuse` |
+| `src/features/results/page-and-snippets-methods.js` | 291 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
+| `src/features/results/result-card-methods.js` | 208 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS` 等 11 项 |
 | `src/features/results/viewport-anchors-methods.js` | 397 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_anchors_methods` |
 | `src/features/results/viewport-geometry-methods.js` | 445 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
-| `src/features/results/virtual-window-methods.js` | 464 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
+| `src/features/results/virtual-window-methods.js` | 465 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
 | `src/features/results/virtualization-config.js` | 51 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_WINDOW_MOUNT_MIN`、`RESULT_WINDOW_MOUNT_MAX`、`RESULT_WINDOW_BUFFER_MIN` 等 6 项 |
 | `src/features/search/QueryState.js` | 19 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `QueryState` |
 | `src/features/search/ResultRanker.js` | 58 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `ResultRanker` |
@@ -175,7 +175,7 @@
 - **导出**：`SEARCH_CORE_UI_REF_KEYS`、`SearchCore`
 
 ### `src/core/SharedSearchStateCoordinator.js`
-- **职责**：插件生命周期、搜索会话与状态归属；207 行，9,313 字节。
+- **职责**：插件生命周期、搜索会话与状态归属；213 行，9,780 字节。
 - **直接依赖**：`../features/filters/filter-state.js`、`../features/sort/sort-model.js`、`./session-values.js`
 - **导出**：`SharedSearchStateCoordinator`
 
@@ -535,7 +535,7 @@
 - **导出**：`LocalSearchPlugin_tree_maintenance_methods`
 
 ### `src/features/plugin/view-preferences-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；293 行，10,822 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；282 行，10,581 字节。
 - **直接依赖**：`../../data/formats/file-types.js`、`../../utils/vault-paths.js`、`../filters/pool-config.js`、`../folders/exclusions.js`、`../results/view-config.js`、`../sort/sort-model.js`、`obsidian`
 - **导出**：`LocalSearchPlugin_view_preferences_methods`
 
@@ -590,12 +590,12 @@
 - **导出**：`SearchResultRendererController_filter_channels_methods`
 
 ### `src/features/results/page-and-snippets-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；303 行，15,683 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；291 行，14,964 字节。
 - **直接依赖**：`../../data/formats/file-types.js`、`../../utils/dom.js`、`../../utils/markdown-text.js`、`../../utils/search-text.js`、`../search/QueryState.js`、`./browse-card-reuse.js`
 - **导出**：`SearchResultRendererController_page_and_snippets_methods`
 
 ### `src/features/results/result-card-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；207 行，9,729 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；208 行，9,822 字节。
 - **直接依赖**：`../../data/formats/file-types.js`、`../../ui/components/input-controls.js`、`../../utils/dom.js`、`../../utils/search-text.js`、`./view-config.js`、`obsidian`
 - **导出**：`SearchResultRendererController_result_card_methods`
 
@@ -615,7 +615,7 @@
 - **导出**：`SearchResultRendererController_viewport_geometry_methods`
 
 ### `src/features/results/virtual-window-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；464 行，20,977 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；465 行，21,022 字节。
 - **直接依赖**：`../../core/session-values.js`、`../../utils/dom.js`、`./virtualization-config.js`
 - **导出**：`SearchResultRendererController_virtual_window_methods`
 
@@ -911,6 +911,6 @@
 - **导出**：`setNavigatorIcon`
 
 ### `src/features/results/browse-card-reuse.js`
-- **职责**：桌面侧栏浏览卡片的有界复用、提交和回滚；96 行，4,858 字节。
+- **职责**：桌面侧栏浏览卡片的有界复用、提交和回滚；92 行，4,603 字节。
 - **直接依赖**：无静态导入；消费传入的 ResultRenderer 及其原 Owner。
 - **导出**：`beginBrowseCardReuse`（内部实现，不增加公共接口）。

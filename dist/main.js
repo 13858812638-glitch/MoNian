@@ -16766,27 +16766,22 @@ function beginBrowseCardReuse(renderer) {
     }
     const staged = [];
     return {
-        append(fragment, start, end) {
-            for (let position = start; position < end; position++) {
-                const index = renderer._actualIndexAtDisplayPosition(position);
-                if (index < 0)
-                    continue;
-                const result = core.fullResults[index];
-                const key = cardContentKey(result);
-                const entry = cache.entries.get(result.path);
-                if (reusable(entry, result, key)) {
-                    const placeholder = fragment.ownerDocument.createComment('browse-card');
-                    fragment.appendChild(placeholder);
-                    staged.push({ entry, position, placeholder, connected: entry.shell.isConnected,
-                        oldPosition: entry.shell.getAttribute('data-virtual-position'),
-                        oldLast: entry.shell.classList.contains('is-last-result'),
-                        oldCurrent: entry.item.classList.contains('is-current') });
-                    core.resultEls.push(entry.item);
-                }
-                else {
-                    const item = renderer._buildResultItem(index, fragment, position);
-                    staged.push({ entry: { result, key, item, shell: item._lsSwipeShell }, position });
-                }
+        appendItem(index, fragment, position) {
+            const result = core.fullResults[index];
+            const key = cardContentKey(result);
+            const entry = cache.entries.get(result.path);
+            if (reusable(entry, result, key)) {
+                const placeholder = fragment.ownerDocument.createComment('browse-card');
+                fragment.appendChild(placeholder);
+                staged.push({ entry, position, placeholder, connected: entry.shell.isConnected,
+                    oldPosition: entry.shell.getAttribute('data-virtual-position'),
+                    oldLast: entry.shell.classList.contains('is-last-result'),
+                    oldCurrent: entry.item.classList.contains('is-current') });
+                core.resultEls.push(entry.item);
+            }
+            else {
+                const item = renderer._buildResultItem(index, fragment, position);
+                staged.push({ entry: { result, key, item, shell: item._lsSwipeShell }, position });
             }
         },
         commit() {
@@ -16997,7 +16992,6 @@ exports.SearchResultRendererController_page_and_snippets_methods = {
         };
         const staging = rail.ownerDocument.createElement("div");
         let committed = false;
-        let pendingResultFragment = null;
         let nextStart = 0, nextEnd = 0;
         let nextBeforeSpacer = null, nextAfterSpacer = null;
         let hasResults = false;
@@ -17041,14 +17035,10 @@ exports.SearchResultRendererController_page_and_snippets_methods = {
                     const beforeHeight = heightIndex.prefix(nextStart);
                     const afterHeight = Math.max(0, heightIndex.total() - heightIndex.prefix(nextEnd));
                     const fragment = rail.ownerDocument.createDocumentFragment();
-                    pendingResultFragment = fragment;
                     nextBeforeSpacer = this._spacer(beforeHeight);
                     nextAfterSpacer = this._spacer(afterHeight, "is-after");
                     fragment.appendChild(nextBeforeSpacer);
-                    if (cardReuse)
-                        cardReuse.append(fragment, nextStart, nextEnd);
-                    else
-                        this._appendPositionRange(fragment, nextStart, nextEnd);
+                    this._appendPositionRange(fragment, nextStart, nextEnd, cardReuse);
                     fragment.appendChild(nextAfterSpacer);
                     staging.appendChild(fragment);
                     hasResults = true;
@@ -17104,16 +17094,6 @@ exports.SearchResultRendererController_page_and_snippets_methods = {
                     this._observeShell(shell, Number.parseInt(shell.dataset.virtualPosition || "", 10));
                 }
                 list.scrollTop = before.scrollTop;
-            }
-            else {
-                // A builder can throw before its DocumentFragment is appended
-                // to staging. Unobserve *both* possible detached hosts so a
-                // failed attempt cannot retain orphaned ResizeObserver targets.
-                for (const host of [staging, pendingResultFragment].filter(Boolean)) {
-                    for (const shell of host.querySelectorAll(".local-search-swipe-shell")) {
-                        this._rowResizeObserver?.unobserve(shell);
-                    }
-                }
             }
             core.resultEls = before.resultEls;
             core.renderedResults = before.renderedResults;
@@ -17198,7 +17178,7 @@ exports.SearchResultRendererController_result_card_methods = {
         const view = core.resultControls.activeViewConfig();
         if (view.snippetLines !== 0 && result.snippet) {
             const snippet = body.createDiv({ cls: "local-search-item-snippet" });
-            this._fillSnippet(snippet, result);
+            this._fillSnippet(snippet, result, view.snippetLines);
         }
         // 结果卡顺序只由 View Composer 的 contentOrder 决定。
         // 连续 Meta 字段合并到一行，拖开后才拆成新的 Meta 行，兼顾灵活性与默认密度。
@@ -17210,7 +17190,7 @@ exports.SearchResultRendererController_result_card_methods = {
             this._appendMetaFields(body, result, pendingMeta);
             pendingMeta = [];
         };
-        for (const id of (0, view_config_js_1.normalizeResultContentOrder)(view.contentOrder)) {
+        for (const id of view.contentOrder) {
             const def = view_config_js_1.RESULT_CONTENT_DEF_MAP.get(id);
             if (!def || !view[def.flag])
                 continue;
@@ -17272,12 +17252,12 @@ exports.SearchResultRendererController_result_card_methods = {
         // 所有卡内控件创建完成后再由 Selection Owner 一次性同步行/子控件交互状态。
         core.selection.syncElement(item, result.path);
         frag.appendChild(shell);
-        this._observeShell(shell, resolvedPosition);
+        // Construction owns content only. The committing caller acquires the
+        // height observer after attachment, never for staged/failed cards.
         core.resultEls.push(item);
         return item;
     },
-    _fillSnippet(snippetEl, res) {
-        const maxLines = this.owner.resultControls.activeViewConfig().snippetLines;
+    _fillSnippet(snippetEl, res, maxLines = this.owner.resultControls.activeViewConfig().snippetLines) {
         snippetEl.dataset.lines = String(maxLines);
         const text = String(res?.snippet || "");
         (0, search_text_js_1.fillSearchHitText)(snippetEl, text, res?.snippetMatchRanges || []);
@@ -17290,7 +17270,8 @@ exports.SearchResultRendererController_result_card_methods = {
         if (!el)
             return;
         let snippetEl = el.querySelector(".local-search-item-snippet");
-        if (core.resultControls.activeViewConfig().snippetLines === 0) {
+        const maxLines = core.resultControls.activeViewConfig().snippetLines;
+        if (maxLines === 0) {
             snippetEl?.remove();
             return;
         }
@@ -17311,7 +17292,7 @@ exports.SearchResultRendererController_result_card_methods = {
             else
                 el.prepend(snippetEl);
         }
-        this._fillSnippet(snippetEl, res);
+        this._fillSnippet(snippetEl, res, maxLines);
     },
     navigateResults(direction) {
         const core = this.owner;
@@ -19065,11 +19046,10 @@ exports.SearchResultRendererController_virtual_window_methods = {
         // Prebuild the entire incoming window before removing any mounted row.
         // Virtual scrolling must have the same failure safety as renderPage:
         // a thrown card builder must not expose a spacer or the note beneath.
-        const staged = [];
         const previousItems = core.resultEls;
+        core.resultEls = [];
         const prepare = (from, to) => {
             const frag = rail.ownerDocument.createDocumentFragment();
-            staged.push(frag); // Register before building so partial rows can be unobserved.
             this._appendPositionRange(frag, from, to);
             return frag;
         };
@@ -19091,11 +19071,6 @@ exports.SearchResultRendererController_virtual_window_methods = {
             }
         }
         catch (error) {
-            for (const fragment of staged) {
-                for (const shell of fragment.querySelectorAll('.local-search-swipe-shell')) {
-                    this._rowResizeObserver?.unobserve(shell);
-                }
-            }
             core.resultEls = previousItems;
             // A subsequent scroll event may retry; do not add a timer or
             // clear any existing result DOM to recover from this failure.
@@ -19125,6 +19100,10 @@ exports.SearchResultRendererController_virtual_window_methods = {
         }
         this.windowStart = newStart;
         this.windowEnd = newEnd;
+        for (const item of core.resultEls) {
+            const shell = item._lsSwipeShell;
+            this._observeShell(shell, Number.parseInt(shell.dataset.virtualPosition, 10));
+        }
         this._syncSpacerHeights(total);
         this._syncMountedState();
         this.queueLazySnippetFill(0, core._resultGeneration);
@@ -19199,10 +19178,14 @@ exports.SearchResultRendererController_virtual_window_methods = {
             this._syncWindowToViewport(container);
         });
     },
-    _appendPositionRange(frag, start, end) {
+    _appendPositionRange(frag, start, end, reuse = null) {
         for (let position = start; position < end; position++) {
             const actualIndex = this._actualIndexAtDisplayPosition(position);
-            if (actualIndex >= 0)
+            if (actualIndex < 0)
+                continue;
+            if (reuse)
+                reuse.appendItem(actualIndex, frag, position);
+            else
                 this._buildResultItem(actualIndex, frag, position);
         }
     },
@@ -19246,6 +19229,7 @@ exports.SearchResultRendererController_virtual_window_methods = {
                 core.resultEls[slot] = replacement;
             this._unobserveShell(oldShell);
             oldShell.replaceWith(replacement._lsSwipeShell);
+            this._observeShell(replacement._lsSwipeShell, position);
             replacement._lsSwipeShell._lsResultBinding?.syncAllExpanded();
         }
         core.renderedResults = core.renderedResults.map(row => mounted.get(row.path)
@@ -31772,23 +31756,23 @@ exports.LocalSearchPlugin_view_preferences_methods = {
         const next = (0, pool_config_js_1.normalizeFilterPools)(pools);
         const current = (0, pool_config_js_1.normalizeFilterPools)(this.settings.filterPools);
         const changed = JSON.stringify(next) !== JSON.stringify(current);
+        if (!changed)
+            return current;
         this.settings.filterPools = next;
         this._refreshFilterPoolCores();
-        if (changed) {
-            let saved = false;
-            try {
-                saved = await this.saveSettings();
-            }
-            catch (error) {
-                console.warn("筛选池设置保存失败", error);
-            }
-            if (saved === false) {
-                if (JSON.stringify(this.settings.filterPools) === JSON.stringify(next))
-                    this.settings.filterPools = current;
-                this._refreshFilterPoolCores();
-                new obsidian_1.Notice("筛选设置保存失败，已恢复原设置");
-                return false;
-            }
+        let saved = false;
+        try {
+            saved = await this.saveSettings();
+        }
+        catch (error) {
+            console.warn("筛选池设置保存失败", error);
+        }
+        if (saved === false) {
+            if (JSON.stringify(this.settings.filterPools) === JSON.stringify(next))
+                this.settings.filterPools = current;
+            this._refreshFilterPoolCores();
+            new obsidian_1.Notice("筛选设置保存失败，已恢复原设置");
+            return false;
         }
         return next;
     },
@@ -31809,17 +31793,19 @@ exports.LocalSearchPlugin_view_preferences_methods = {
         const currentHidden = (0, sort_model_js_1.normalizeHiddenSortFields)(this.settings.hiddenResultSortFields, currentOrder);
         const changed = JSON.stringify(nextOrder) !== JSON.stringify(currentOrder)
             || JSON.stringify(nextHidden) !== JSON.stringify(currentHidden);
+        if (!changed)
+            return { order: currentOrder, hidden: currentHidden };
         this.settings.resultSortOrder = nextOrder;
         this.settings.hiddenResultSortFields = nextHidden;
         this._refreshResultSortCores();
-        if (changed)
-            await this.saveSettings();
+        await this.saveSettings();
         return { order: nextOrder, hidden: nextHidden };
     },
     async setActiveResultView(viewId) {
         const next = (0, view_config_js_1.normalizeResultViewId)(viewId);
+        if (this.settings.activeResultView === next)
+            return next;
         const anchors = this._captureActiveResultViewAnchors();
-        const changed = this.settings.activeResultView !== next;
         this.settings.activeResultView = next;
         // 视图之间复用各自已学习的平均行高，但当前 HeightIndex 必须进入新 geometryRevision。
         this._refreshActiveResultViewCores({
@@ -31827,14 +31813,15 @@ exports.LocalSearchPlugin_view_preferences_methods = {
             anchors,
             clearEstimate: false
         });
-        if (changed)
-            await this.saveSettings();
+        await this.saveSettings();
         return next;
     },
     async updateActiveResultViewConfig(patch = {}) {
         const id = (0, view_config_js_1.normalizeResultViewId)(this.settings.activeResultView);
         const current = (0, view_config_js_1.normalizeResultViewConfig)(this.settings.resultViews?.[id], view_config_js_1.DEFAULT_RESULT_VIEWS[id]);
         const next = (0, view_config_js_1.normalizeResultViewConfig)({ ...current, ...patch }, view_config_js_1.DEFAULT_RESULT_VIEWS[id]);
+        if (JSON.stringify(current) === JSON.stringify(next))
+            return current;
         const anchors = this._captureActiveResultViewAnchors();
         this.settings.resultViews = {
             ...(0, view_config_js_1.normalizeResultViews)(this.settings.resultViews),
@@ -31852,17 +31839,8 @@ exports.LocalSearchPlugin_view_preferences_methods = {
     },
     async resetActiveResultView() {
         const id = (0, view_config_js_1.normalizeResultViewId)(this.settings.activeResultView);
-        const anchors = this._captureActiveResultViewAnchors();
-        this.settings.resultViews = {
-            ...(0, view_config_js_1.normalizeResultViews)(this.settings.resultViews),
-            [id]: (0, view_config_js_1.normalizeResultViewConfig)(view_config_js_1.DEFAULT_RESULT_VIEWS[id], view_config_js_1.DEFAULT_RESULT_VIEWS[id])
-        };
-        this._refreshActiveResultViewCores({
-            rerender: true,
-            anchors,
-            clearEstimate: true
-        });
-        await this.saveSettings();
+        // Reset is a config change, not a second capture/refresh/save path.
+        await this.updateActiveResultViewConfig(view_config_js_1.DEFAULT_RESULT_VIEWS[id]);
     },
     async cycleActiveResultView() {
         const current = (0, view_config_js_1.normalizeResultViewId)(this.settings.activeResultView);
@@ -33453,12 +33431,12 @@ class SharedSearchStateCoordinator {
         this.state = normalized;
         this.revision++;
         this._remember();
-        // A desktop sidebar has already rendered its own committed state.
+        // A publishing host has already rendered its own committed state.
         // Acknowledge it before scheduling peers instead of consuming it back
         // through the scroll gate (which forces layout of the new result DOM).
         // A stale host may have merged only one dimension: it must still wait
         // for its normal interaction gate and consume the remaining fields.
-        if (core.navigator?.desktopSidebar && this._same(current, normalized))
+        if (this._same(current, normalized))
             member.applied = this.revision;
         for (const target of this.members.keys())
             if (!closing || target !== core)

@@ -1,0 +1,188 @@
+{
+  "candidate": "Whole-source inventory and shared render lifecycle audit 2026-10-22",
+  "baselineCommit": "90711546f2f12b8972d22cec63c9482f9b8471dd",
+  "scope": "Full static inventory; reviewed chains documented in FULL_AUDIT_20261022.md. Not full native acceptance or full compliance with new unification standard.",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 153,
+    "importEdges": 650,
+    "cycles": [],
+    "unresolvedSymbols": 0
+  },
+  "build": {
+    "reproducible": true,
+    "sha256": "d31373bcfc864d003d0ce545dec5f5482efb040fe6c4f6a529505da4d1769465"
+  },
+  "node": {
+    "tests": 269,
+    "passed": 265,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "lifecycle": 0,
+    "feishu": 0,
+    "browse": 0,
+    "properties": 0,
+    "rail": 0,
+    "stable": 0,
+    "redundant": 0,
+    "focus": 0,
+    "tree": 0,
+    "selection": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "focus-repair": 0,
+    "repeat": 0,
+    "release": 0,
+    "contracts": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "index": 0,
+    "acceptance-mobile-light": 0,
+    "acceptance-mobile-dark": 0,
+    "portal": 0,
+    "caret": 0,
+    "workflows": 0,
+    "popups": 0
+  },
+  "lifecycleBefore": {
+    "passed": 1,
+    "failed": 13
+  },
+  "lifecycleAfter": {
+    "passed": 14,
+    "failed": 0
+  },
+  "preferencesBefore": {
+    "passed": 1,
+    "failed": 5
+  },
+  "preferencesAndSharedStateAfter": {
+    "passed": 9,
+    "failed": 0
+  },
+  "unverified": [
+    "Native Obsidian desktop performance",
+    "iOS/Android native keyboards and caret",
+    "WebKit",
+    "User vault, actual snippets and host Style Settings tree",
+    "All-size/all-content component invariance"
+  ],
+  "openFindings": [
+    "Desktop-only navigation/cache policies",
+    "Duplicated label-intent helpers in Navigator and filter rail",
+    "Missing consumed --ui-mobile-keyboard-height token"
+  ],
+  "rawEvidence": "/workspace/unified-audit",
+  "browse": {
+    "passed": 24,
+    "failed": 0
+  },
+  "properties": {
+    "passed": 34,
+    "failed": 0
+  },
+  "desktop": {
+    "passed": 55,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mouse": {
+    "passed": 27,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selection": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "release": {
+    "passed": 32,
+    "failed": 0
+  },
+  "repeat": {
+    "passed": 16,
+    "failed": 0
+  },
+  "stable": {
+    "passed": 21,
+    "failed": 0
+  },
+  "redundant": {
+    "passed": 24,
+    "failed": 0
+  },
+  "rail": {
+    "passed": 21,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0
+  },
+  "feishuComparison": {
+    "passed": 8,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "interactionContracts": {
+    "passed": 14,
+    "failed": 0
+  },
+  "benchmark": "unified-audit-benchmark.json",
+  "performanceConclusion": "No consistent folder-switch latency improvement established; remaining time concentrated in page commit."
+}

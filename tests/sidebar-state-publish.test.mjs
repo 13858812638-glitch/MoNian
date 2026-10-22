@@ -37,3 +37,12 @@ test('stale sidebar merges its folder with another host query and waits for its 
     assert.equal(sidebar.queryState.raw,'new query');
     assert.deepEqual([...sidebar.filterState.folders],['Projects']);
 });
+
+test('other hosts acknowledge their own commit without reading layout',async()=>{
+    const {shared,sidebar,tab}=setup();shared.attach(sidebar);shared.attach(tab);
+    tab.resultRenderer.reads=0;
+    tab.filterState.folder='Projects';shared.publish(tab);await Promise.resolve();
+    assert.equal(tab.resultRenderer.reads,0);
+    assert.deepEqual([...sidebar.filterState.folders],['Projects']);
+    assert.equal(shared.members.get(tab).applied,shared.revision);
+});

@@ -1,4 +1,6 @@
-> **2026-10-22 侧栏结果卡工作审计**：`beginBrowseCardReuse(renderer)` 是内部事务工厂，返回 `append/commit/finish/rollback`；`cardContentKey` 和 `reusable` 为内部校验 helper。`renderPage` 在新卡构建成功后才移动复用节点，异常沿用原完整页面回滚。每个 Renderer 最多保留 96 张普通浏览卡，`destroy` 释放。查询、Picker、批量/动作状态和其他宿主继续使用原卡片构建路径；无新增类原型方法。
+> **2026-10-22 共享渲染生命周期审计**：`_appendPositionRange(frag,start,end,reuse=null)` 统一索引遍历（原 arity=3 不变），复用事务仅提供 `appendItem`；`_buildResultItem` 只构建，renderPage/虚拟滚动提交/单行替换在节点连接后调用 `_observeShell`。`_fillSnippet` 可接收本次已归一的行数（arity=2 不变）。`resetActiveResultView` 通过配置更新方法提交；相同设置在捕获锚点前返回；共享状态发布者统一确认自己的已应用 revision。
+
+> **2026-10-22 侧栏结果卡工作审计**：`beginBrowseCardReuse(renderer)` 是内部事务工厂，返回 `appendItem/commit/finish/rollback`；`cardContentKey` 和 `reusable` 为内部校验 helper。`renderPage` 在新卡构建成功后才移动复用节点，异常沿用原完整页面回滚。每个 Renderer 最多保留 96 张普通浏览卡，`destroy` 释放。查询、Picker、批量/动作状态和其他宿主继续使用原卡片构建路径；无新增类原型方法。
 
 > **2026-10-22 属性键展开与隐藏列表审计**：Navigator 内部 `navigatorPropertyValues` 复用统一属性语义模型，按需缓存全局属性值和当前目录计数；选择状态即时从 FilterState 读取。`_renderProjection` 让桌面 sidebar 属性键原地展开，稳定投影仅更新值计数和选择；隐藏标签/属性分组保留旧 generation，重开前更新。其他桌面宿主保留共享 Picker，移动端保持既有展开逻辑。无新增类原型方法。
 

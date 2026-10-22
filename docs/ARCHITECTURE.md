@@ -1,3 +1,5 @@
+> **当前审计：2026-10-22 共享渲染生命周期候选。** 153 个 JS 模块、650 条静态依赖。卡片构建不注册高度监听；提交负责挂载及观察；普通页与缓存页共享区间遍历。当前覆盖与未闭环项见 [全源审计](FULL_AUDIT_20261022.md)。下列旧版本计数与合同按当时背景保留。
+
 # picker-ios-portal.1 当前维护说明
 
 用户 iPhone 确认 diagnostic.caret.2 的 E 阶段出现原生光标。当前版本将该条件落实在共享 Portal CSS：仅 iOS 搜索 Picker 存在、且没有独立同级 Dialog 时使用 display:contents；Portal 的 DOM 与所有权不变。独立 Dialog 保留原有 stacking context。详见 PICKER_IOS_PORTAL_FIX.md。

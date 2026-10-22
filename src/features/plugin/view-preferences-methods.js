@@ -147,19 +147,18 @@ export const LocalSearchPlugin_view_preferences_methods = {
         const changed =
             JSON.stringify(next) !== JSON.stringify(current);
 
+        if (!changed) return current;
         this.settings.filterPools = next;
         this._refreshFilterPoolCores();
 
-        if (changed) {
-            let saved = false;
-            try { saved = await this.saveSettings(); }
-            catch (error) { console.warn("筛选池设置保存失败", error); }
-            if (saved === false) {
-                if (JSON.stringify(this.settings.filterPools) === JSON.stringify(next)) this.settings.filterPools = current;
-                this._refreshFilterPoolCores();
-                new Notice("筛选设置保存失败，已恢复原设置");
-                return false;
-            }
+        let saved = false;
+        try { saved = await this.saveSettings(); }
+        catch (error) { console.warn("筛选池设置保存失败", error); }
+        if (saved === false) {
+            if (JSON.stringify(this.settings.filterPools) === JSON.stringify(next)) this.settings.filterPools = current;
+            this._refreshFilterPoolCores();
+            new Notice("筛选设置保存失败，已恢复原设置");
+            return false;
         }
         return next;
     },
@@ -196,18 +195,19 @@ export const LocalSearchPlugin_view_preferences_methods = {
             JSON.stringify(nextOrder) !== JSON.stringify(currentOrder)
             || JSON.stringify(nextHidden) !== JSON.stringify(currentHidden);
 
+        if (!changed) return { order: currentOrder, hidden: currentHidden };
         this.settings.resultSortOrder = nextOrder;
         this.settings.hiddenResultSortFields = nextHidden;
         this._refreshResultSortCores();
-        if (changed) await this.saveSettings();
+        await this.saveSettings();
         return { order: nextOrder, hidden: nextHidden };
     },
 
 
     async setActiveResultView(viewId) {
         const next = normalizeResultViewId(viewId);
+        if (this.settings.activeResultView === next) return next;
         const anchors = this._captureActiveResultViewAnchors();
-        const changed = this.settings.activeResultView !== next;
         this.settings.activeResultView = next;
 
         // 视图之间复用各自已学习的平均行高，但当前 HeightIndex 必须进入新 geometryRevision。
@@ -216,7 +216,7 @@ export const LocalSearchPlugin_view_preferences_methods = {
             anchors,
             clearEstimate: false
         });
-        if (changed) await this.saveSettings();
+        await this.saveSettings();
         return next;
     },
 
@@ -233,6 +233,7 @@ export const LocalSearchPlugin_view_preferences_methods = {
             { ...current, ...patch },
             DEFAULT_RESULT_VIEWS[id]
         );
+        if (JSON.stringify(current) === JSON.stringify(next)) return current;
         const anchors = this._captureActiveResultViewAnchors();
 
         this.settings.resultViews = {
@@ -256,20 +257,8 @@ export const LocalSearchPlugin_view_preferences_methods = {
         const id = normalizeResultViewId(
             this.settings.activeResultView
         );
-        const anchors = this._captureActiveResultViewAnchors();
-        this.settings.resultViews = {
-            ...normalizeResultViews(this.settings.resultViews),
-            [id]: normalizeResultViewConfig(
-                DEFAULT_RESULT_VIEWS[id],
-                DEFAULT_RESULT_VIEWS[id]
-            )
-        };
-        this._refreshActiveResultViewCores({
-            rerender: true,
-            anchors,
-            clearEstimate: true
-        });
-        await this.saveSettings();
+        // Reset is a config change, not a second capture/refresh/save path.
+        await this.updateActiveResultViewConfig(DEFAULT_RESULT_VIEWS[id]);
     },
 
 

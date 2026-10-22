@@ -41,25 +41,21 @@ export function beginBrowseCardReuse(renderer) {
     }
     const staged = [];
     return {
-        append(fragment, start, end) {
-            for (let position = start; position < end; position++) {
-                const index = renderer._actualIndexAtDisplayPosition(position);
-                if (index < 0) continue;
-                const result = core.fullResults[index];
-                const key = cardContentKey(result);
-                const entry = cache.entries.get(result.path);
-                if (reusable(entry, result, key)) {
-                    const placeholder = fragment.ownerDocument.createComment('browse-card');
-                    fragment.appendChild(placeholder);
-                    staged.push({ entry, position, placeholder, connected: entry.shell.isConnected,
-                        oldPosition: entry.shell.getAttribute('data-virtual-position'),
-                        oldLast: entry.shell.classList.contains('is-last-result'),
-                        oldCurrent: entry.item.classList.contains('is-current') });
-                    core.resultEls.push(entry.item);
-                } else {
-                    const item = renderer._buildResultItem(index, fragment, position);
-                    staged.push({ entry: { result, key, item, shell: item._lsSwipeShell }, position });
-                }
+        appendItem(index, fragment, position) {
+            const result = core.fullResults[index];
+            const key = cardContentKey(result);
+            const entry = cache.entries.get(result.path);
+            if (reusable(entry, result, key)) {
+                const placeholder = fragment.ownerDocument.createComment('browse-card');
+                fragment.appendChild(placeholder);
+                staged.push({ entry, position, placeholder, connected: entry.shell.isConnected,
+                    oldPosition: entry.shell.getAttribute('data-virtual-position'),
+                    oldLast: entry.shell.classList.contains('is-last-result'),
+                    oldCurrent: entry.item.classList.contains('is-current') });
+                core.resultEls.push(entry.item);
+            } else {
+                const item = renderer._buildResultItem(index, fragment, position);
+                staged.push({ entry: { result, key, item, shell: item._lsSwipeShell }, position });
             }
         },
         commit() {
