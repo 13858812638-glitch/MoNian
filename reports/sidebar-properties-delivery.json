@@ -21,6 +21,8 @@
   ],
   "sourceParentCommit": "eeae069dec3bdbd20da7e6c81b324171c8d30f5e",
   "reproducibleBuild": true,
-  "remoteDownloadVerified": false,
-  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Properties-20261022.zip"
+  "remoteDownloadVerified": true,
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Properties-20261022.zip",
+  "remotePayloadMatchesBuild": true,
+  "sourceCommit": "95a2e9c5764922e47d2601efe21f56efae3cabcc"
 }
