@@ -2,10 +2,12 @@
 
 > 当前候选见 `DESKTOP_NAVIGATOR_20261019.md`，冻结状态以该文档和 AGENTS.md 顶部为准。新增桌面分栏模块及本轮修改模块的信息已同步；其它条目保留历史职责描述。
 
-- 当前源模块（含入口）：**151**；静态导入边：**647**；工程检查：**PASS-ENGINEERING**。
+- 当前源模块（含入口）：**152**；静态导入边：**649**；工程检查：**PASS-ENGINEERING**。
 - 所有运行模块路径均来自当前 `src/`，没有孤立或已经退役的旧文件。
 - 方法归属由当前 `src/` 及 `composeClassMethods()` 确定；`METHOD_INDEX.md` 的原始行号仅是旧源码溯源，不应作为当前行号。
 - 普通属性目录正式 Owner：`src/features/plugin/property-catalog-methods.js`；当前运行源码不再使用旧项目目录模块。
+
+本轮侧栏图标与点击修订：`src/features/navigator/navigation-icon.js` 由 Navigator 两个控制器消费，显式替换 SVG 并保留隐藏的无障碍标签；结果窗口仅缩减桌面 sidebar 屏外缓冲。
 
 | 当前模块 | 行数 | 主要职责 | 导出 |
 |---|---:|---|---|
@@ -60,8 +62,9 @@
 | `src/features/filters/pool-values.js` | 76 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `filterPoolLabel`、`filterPoolIcon`、`filterPoolValueKey` 等 7 项 |
 | `src/features/folders/exclusions.js` | 89 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeExcludedFolders`、`isFolderExclusionInherited`、`toggleFolderExclusionSelection` 等 4 项 |
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
-| `src/features/navigator/NavigatorCustomization.js` | 896 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
-| `src/features/navigator/SearchNavigatorController.js` | 1398 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
+| `src/features/navigator/NavigatorCustomization.js` | 897 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
+| `src/features/navigator/navigation-icon.js` | 15 | 复用导航控件的 SVG 替换与标签保留 | `setNavigatorIcon` |
+| `src/features/navigator/SearchNavigatorController.js` | 1399 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId` 等 5 项 |
 | `src/features/navigator/desktop-pane.js` | 128 | 桌面分栏拖动、键盘调整、宽度恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid` 等 10 项 |
@@ -100,7 +103,7 @@
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS` 等 11 项 |
 | `src/features/results/viewport-anchors-methods.js` | 397 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_anchors_methods` |
 | `src/features/results/viewport-geometry-methods.js` | 445 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
-| `src/features/results/virtual-window-methods.js` | 441 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
+| `src/features/results/virtual-window-methods.js` | 464 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
 | `src/features/results/virtualization-config.js` | 51 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_WINDOW_MOUNT_MIN`、`RESULT_WINDOW_MOUNT_MAX`、`RESULT_WINDOW_BUFFER_MIN` 等 6 项 |
 | `src/features/search/QueryState.js` | 19 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `QueryState` |
 | `src/features/search/ResultRanker.js` | 58 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `ResultRanker` |
@@ -416,13 +419,13 @@
 - **导出**：`normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig`
 
 ### `src/features/navigator/NavigatorCustomization.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；896 行，56,118 字节。
-- **直接依赖**：`../../core/picker-cleanup.js`、`../../data/properties/property-values.js`、`../../data/properties/property-types.js`、`../../data/tags/tag-values.js`、`../../ui/dialogs/dialog-session.js`、`../../interactions/PointerSortCoordinator.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/icon-picker.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/preferred-order.js`、`../folders/folder-colors.js`、`./customization-model.js`、`obsidian`
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；897 行，56,193 字节。
+- **直接依赖**：`../../core/picker-cleanup.js`、`../../data/properties/property-values.js`、`../../data/properties/property-types.js`、`../../data/tags/tag-values.js`、`../../ui/dialogs/dialog-session.js`、`../../data/tags/tag-values.js`、`../../interactions/PointerSortCoordinator.js`、`../../ui/components/input-controls.js`、`../../ui/dialogs/dialog-session.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/icon-picker.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/preferred-order.js`、`../folders/folder-colors.js`、`./navigation-icon.js`、`./customization-model.js`、`obsidian`
 - **导出**：`NavigatorCustomization`
 
 ### `src/features/navigator/SearchNavigatorController.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1,398 行，84,063 字节。
-- **直接依赖**：`../../core/picker-cleanup.js`、`../../core/session-values.js`、`../../data/folders/folder-tree.js`、`../../data/formats/file-types.js`、`../../data/properties/property-catalog.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-tree.js`、`../../data/tags/tag-values.js`、`../../interactions/scroll-anchor.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/normalization.js`、`../sort/sort-model.js`、`./NavigatorCustomization.js`、`./desktop-pane.js`、`./customization-model.js`、`./toolbar-config.js`、`obsidian`
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1,399 行，84,125 字节。
+- **直接依赖**：`../../core/picker-cleanup.js`、`../../core/session-values.js`、`../../data/folders/folder-tree.js`、`../../data/formats/file-types.js`、`../../data/properties/property-catalog.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-tree.js`、`../../data/tags/tag-values.js`、`../../interactions/scroll-anchor.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/normalization.js`、`../sort/sort-model.js`、`./NavigatorCustomization.js`、`./desktop-pane.js`、`./navigation-icon.js`、`./customization-model.js`、`./toolbar-config.js`、`obsidian`
 - **导出**：`SearchNavigatorController`
 
 ### `src/features/navigator/customization-model.js`
@@ -611,7 +614,7 @@
 - **导出**：`SearchResultRendererController_viewport_geometry_methods`
 
 ### `src/features/results/virtual-window-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；441 行，19,497 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；464 行，20,977 字节。
 - **直接依赖**：`../../core/session-values.js`、`../../utils/dom.js`、`./virtualization-config.js`
 - **导出**：`SearchResultRendererController_virtual_window_methods`
 
@@ -900,3 +903,8 @@
 - **职责**：只针对 desktop sidebar core 的区域边界和 Dialog 定位订阅；复用 `geometry.js`。在 DialogSession 完成/卸载时释放 rAF、ResizeObserver 和事件监听。
 - **导出**：`resolveSidebarPopupBounds`、`bindSidebarDialogPosition`，均为内部工具。
 - **消费者**：`dialog-session.js`、`SearchDropdownController.js`；其它宿主和移动端提前返回，不设置几何。
+
+### `src/features/navigator/navigation-icon.js`
+- **职责**：导航 SVG 替换与无障碍标签保留；15 行，797 字节。
+- **直接依赖**：`obsidian`
+- **导出**：`setNavigatorIcon`

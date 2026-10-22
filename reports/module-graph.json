@@ -399,6 +399,7 @@
     "src/ui/pickers/tree-row.js",
     "src/utils/preferred-order.js",
     "src/features/folders/folder-colors.js",
+    "src/features/navigator/navigation-icon.js",
     "src/features/navigator/customization-model.js"
   ],
   "src/features/navigator/SearchNavigatorController.js": [
@@ -419,6 +420,7 @@
     "src/features/sort/sort-model.js",
     "src/features/navigator/NavigatorCustomization.js",
     "src/features/navigator/desktop-pane.js",
+    "src/features/navigator/navigation-icon.js",
     "src/features/navigator/customization-model.js",
     "src/features/navigator/toolbar-config.js"
   ],
@@ -430,6 +432,7 @@
     "src/features/navigator/toolbar-config.js"
   ],
   "src/features/navigator/desktop-pane.js": [],
+  "src/features/navigator/navigation-icon.js": [],
   "src/features/navigator/toolbar-config.js": [
     "src/ui/pickers/icon-catalog.js",
     "src/utils/preferred-order.js",

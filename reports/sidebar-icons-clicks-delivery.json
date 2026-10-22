@@ -1,0 +1,26 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Sidebar-Icons-Clicks-20261022.zip",
+  "bytes": 430375,
+  "sha256": "c5fa8b11daa03103d1641aeade3367f26bd39fd0af50f12a54f91a507b41f793",
+  "entries": 2,
+  "crc32": "PASS",
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1757203,
+      "sha256": "fb76bd9d5f75d0dda9b8f400f668b9c090858420428dc43d73b2b9038b64f730"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264825,
+      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+    }
+  ],
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "sourceParentCommit": "c3a54b9",
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Icons-Clicks-20261022.zip",
+  "remoteDownloadVerified": false,
+  "remotePayloadMatchesBuild": false
+}

@@ -17,9 +17,10 @@ import { normalizeUniqueStringList } from "../../utils/normalization.js";
 import { SORT_FIELD_DEFS } from "../sort/sort-model.js";
 import { NavigatorCustomization } from "./NavigatorCustomization.js";
 import { createDesktopNavigatorPane } from "./desktop-pane.js";
+import { setNavigatorIcon } from "./navigation-icon.js";
 import { navigatorItemId } from "./customization-model.js";
 import { navigatorToolbarActionAvailable, navigatorToolbarCatalog, navigatorToolbarIcon, normalizeNavigatorToolbars } from "./toolbar-config.js";
-import { Notice, Platform, setIcon } from "obsidian";
+import { Notice, Platform } from "obsidian";
 
 // Navigation owns these labels. The shared desktop hover-hint owner moves
 // aria-label into aria-labelledby and removes title, so DOM equality alone
@@ -397,7 +398,7 @@ export class SearchNavigatorController {
             if (definition?.kind === "property" || definition?.kind === "pool") {
                 const icon = navigatorToolbarIcon(core, id, definition.icon, preferences);
                 if (tool.button.dataset.lsIcon !== icon) {
-                    setIcon(tool.button, icon); tool.button.dataset.lsIcon = icon;
+                    setNavigatorIcon(tool.button, icon); tool.button.dataset.lsIcon = icon;
                 }
                 setNavigatorAttribute(this, tool.button, "aria-label", definition.label);
                 const applied = definition.kind === "property" ? Boolean(state.properties.get(definition.propertyKey)?.size)
@@ -440,7 +441,7 @@ export class SearchNavigatorController {
             if (!fallback) continue;
             const icon = navigatorToolbarIcon(core, id, fallback, preferences);
             if (tool.button.dataset.lsIcon !== icon) {
-                tool.button.replaceChildren(); setIcon(tool.button, icon); tool.button.dataset.lsIcon = icon;
+                setNavigatorIcon(tool.button, icon); tool.button.dataset.lsIcon = icon;
             }
         }
         setNavigatorAttribute(this, this.mobileToolbar, "aria-label", filters ? "导航操作" : create ? "创建操作" : "结果操作");
@@ -902,7 +903,7 @@ export class SearchNavigatorController {
         setNavigatorAttribute(this, ref.toggle, "aria-expanded", String(!ref.content.hidden));
         const chevronIcon = ref.content.hidden ? "chevron-right" : "chevron-down";
         if (ref.chevron.dataset.navIcon !== chevronIcon) {
-            setIcon(ref.chevron, chevronIcon); ref.chevron.dataset.navIcon = chevronIcon;
+            setNavigatorIcon(ref.chevron, chevronIcon); ref.chevron.dataset.navIcon = chevronIcon;
         }
         setNavigatorAttribute(this, ref.chevron, "aria-expanded", String(!ref.content.hidden));
         const disclosureLabel = `${ref.content.hidden ? "展开" : "折叠"} ${title}`;
@@ -972,7 +973,7 @@ export class SearchNavigatorController {
             tree.toggle.setAttribute("aria-expanded", String(Boolean(options.expanded)));
             tree.toggle.setAttribute("aria-label", `${options.expanded ? "折叠" : "展开"} ${options.name || ""}`);
             const toggleIcon = options.expanded ? "chevron-down" : "chevron-right";
-            if (tree.toggle.dataset.navIcon !== toggleIcon) { setIcon(tree.toggle, toggleIcon); tree.toggle.dataset.navIcon = toggleIcon; }
+            if (tree.toggle.dataset.navIcon !== toggleIcon) { setNavigatorIcon(tree.toggle, toggleIcon); tree.toggle.dataset.navIcon = toggleIcon; }
         } else {
             tree.toggle.setAttribute("aria-hidden", "true");
             tree.toggle.removeAttribute("aria-expanded");
@@ -982,7 +983,7 @@ export class SearchNavigatorController {
         if (!badge && hasCount) badge = tree.row.createSpan({ cls: "local-search-move-current-badge" });
         if (badge) { badge.hidden = !hasCount; if (hasCount && badge.textContent !== String(options.count)) badge.textContent = String(options.count); }
         if (options.icon && tree.iconEl.dataset.navIcon !== options.icon && !options.navDescriptor) {
-            setIcon(tree.iconEl, options.icon); tree.iconEl.dataset.navIcon = options.icon;
+            setNavigatorIcon(tree.iconEl, options.icon); tree.iconEl.dataset.navIcon = options.icon;
         }
         if (options.navDescriptor) this.customization.decorate(tree.row, { ...options.navDescriptor,
             depth });

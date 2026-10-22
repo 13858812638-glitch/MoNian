@@ -1,8 +1,8 @@
 {
-  "revision": "2026-10-22-move-picker-caret-candidate",
+  "revision": "2026-10-22-sidebar-icons-clicks-candidate",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors. User requested continued product audit: keep an empty desktop toolbar hidden without redundant toggles; cancel stale divider drags on host resize and resynchronize actual/accessible width after commit or cancellation. No public prototype changes in this round. User reports missing caret specifically in the move-folder Picker: align standalone folder Picker iOS paint host and mobile focus handling with the existing shared Picker; retain backdrop dismissal, popup order and all host positions.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors. User requested continued product audit: keep an empty desktop toolbar hidden without redundant toggles; cancel stale divider drags on host resize and resynchronize actual/accessible width after commit or cancellation. No public prototype changes in this round. User reports missing caret specifically in the move-folder Picker: align standalone folder Picker iOS paint host and mobile focus handling with the existing shared Picker; retain backdrop dismissal, popup order and all host positions. User reports duplicate disclosure arrows and repeated filter click stutter: explicitly replace Navigator SVGs while retaining accessible labels; reduce only desktop-sidebar result overscan to half a viewport on each side, retaining full visible-span coverage and original other-host budgets.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -10,6 +10,7 @@
     "DEFAULT_SETTINGS",
     "EXTERNAL_SEARCH_API_CAPABILITIES",
     "EXTERNAL_SEARCH_API_VERSION",
+    "LocalSearchOverlayHost",
     "LocalSearchPlugin",
     "LocalSearchPlugin._addPropertyCatalogValues",
     "LocalSearchPlugin._connectDidaProjectCatalog",
@@ -79,6 +80,9 @@
     "SearchFacetController.showFolderDropdown",
     "SearchFloatingHost",
     "SearchNavigatorController",
+    "SearchNavigatorController._row",
+    "SearchNavigatorController._section",
+    "SearchNavigatorController._syncMobileTools",
     "SearchResultControlsController.buildToolbar",
     "SearchResultControlsController.syncInputActions",
     "SearchResultControlsController.syncInputActions (create-busy guard)",
@@ -86,6 +90,7 @@
     "SearchResultRendererController._isOverscrolling",
     "SearchResultRendererController._lazyFillSnippet",
     "SearchResultRendererController._shiftWindowRange",
+    "SearchResultRendererController._windowSize",
     "SearchResultRendererController.constructor",
     "SearchResultRendererController.destroy",
     "SearchResultRendererController.refreshChangedRows",
@@ -107,8 +112,7 @@
     "normalizeEditableTagValue",
     "renderSharedFolderTreePicker",
     "sharedFolderChildren",
-    "sortByPreferredOrder",
-    "LocalSearchOverlayHost"
+    "sortByPreferredOrder"
   ],
   "files": [
     {
@@ -235,13 +239,13 @@
       "file": "src/features/navigator/NavigatorCustomization.js",
       "baseline": "baseline/modular.3-source/features/navigator/NavigatorCustomization.js",
       "before": "3e10a9d5bc687ef6e316b8253e257db8db0a7fd36d9849fe295c153118c46c81",
-      "after": "9774fa6b0e51bc569a9cbb98b8b5b30a3ab218af83fd8e3a21d7a1414a2ba809"
+      "after": "85137620e51c720ebfb48d37ecb91ac54676242118afe037b0d1e66a1f077457"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
       "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
       "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
-      "after": "cc2e819a0f396515b68d7bf7387cd1e03073c06c511e72cac44fca014f3ebca4"
+      "after": "27b9051854fb252680d7264576478a69e18ac27e20fa86d12c506ba4e93ff8b2"
     },
     {
       "file": "src/features/navigator/toolbar-config.js",
@@ -337,7 +341,7 @@
       "file": "src/features/results/virtual-window-methods.js",
       "baseline": "baseline/modular.3-source/features/results/virtual-window-methods.js",
       "before": "fcb1fafb28503461a0d772218259af784a566259e3b49600e698993924c5cf07",
-      "after": "6abbd1801296340f46009cd7c4ba7d3c78b355a727f553bda64d5ce0301e5744"
+      "after": "a913d94edfe2e01e897fa7b4368fd88956958b65fc181b23e5f39ba209a37849"
     },
     {
       "file": "src/features/search/ResultRanker.js",
@@ -577,6 +581,11 @@
     {
       "file": "src/ui/overlays/sidebar-popup.js",
       "sha256": "c004e9d7d860e1e809dfa9f014538afa83a7d968edef5effa197911a6bbc434e"
+    },
+    {
+      "file": "src/features/navigator/navigation-icon.js",
+      "sha256": "1cab595a8d9f1aa551ae1c241ec3997925d7251ea9abe943a96b05ec59ac2fd7",
+      "reason": "Navigator-owned SVG replacement without duplicated icons or lost accessible-name children."
     }
   ]
 }

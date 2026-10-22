@@ -1,0 +1,120 @@
+{
+  "candidate": "Sidebar icons and repeated clicks 2026-10-22",
+  "parentCommit": "c3a54b9",
+  "environment": "Chromium with mocked Obsidian API, SearchView lifecycle; not native-device certification",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 152,
+    "importEdges": 649,
+    "unresolvedSymbols": 0,
+    "cycles": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "fb76bd9d5f75d0dda9b8f400f668b9c090858420428dc43d73b2b9038b64f730"
+  },
+  "node": {
+    "passed": 258,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or references relaxed. Candidate behavior is checked separately."
+  },
+  "newRepeatedClickChecks": {
+    "passed": 16,
+    "failed": 0,
+    "realMouseClicks": 180
+  },
+  "newWindowBudgetTests": {
+    "passed": 2,
+    "failed": 0
+  },
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS",
+    "Native Android",
+    "WebKit",
+    "Third-party integrations in a real vault"
+  ],
+  "rawEvidence": "/workspace/sidebar-repeat-audit",
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "release": 0,
+    "node": 1,
+    "mobile": 0,
+    "index": 0,
+    "portal": 0,
+    "caret": 0,
+    "desktop": 0,
+    "browser": 1,
+    "popups": 0,
+    "contracts": 0,
+    "selection": 0,
+    "tree": 0,
+    "refresh": 0,
+    "workflows": 0,
+    "acceptance": 0
+  },
+  "releaseEdges": {
+    "passed": 32,
+    "failed": 0
+  },
+  "desktopNavigator": {
+    "passed": 55,
+    "failed": 0
+  },
+  "sidebarPopups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selectionScroll": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "cacheAndHostContracts": {
+    "passed": 14,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  }
+}

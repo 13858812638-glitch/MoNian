@@ -1,3 +1,5 @@
+> 2026-10-22 侧栏图标与点击候选：内部函数 `setNavigatorIcon` 归属 `features/navigator/navigation-icon.js`，由 Navigator 与其 customization 复用，替换 SVG 并保留辅助标签；`SearchResultRendererController._windowSize` 仍是窗口预算唯一 Owner，仅桌面 sidebar 使用半屏双侧缓冲。无新增公开方法。
+
 > **2026-10-22 移动文件夹 Picker 光标归一**：无新增类方法。`LocalSearchOverlayHost.createCloseButton` 为独立文件夹 Picker 挂载同级背景点击层，复用既有打开顺序；移动端不把焦点转移到 Picker 外壳。`open` 的背景关闭处理接受该同级层。iOS 绘制规则与现有 Popup Portal 共用 `display: contents`。
 
 > **2026-10-21 交付边界审计**：未新增类原型方法。桌面命令栏显隐由 `_syncMobileTools` 单独负责，`_placeMobileTools` 只调整停靠位置。`createDesktopNavigatorPane` 的 `sync` 在宿主几何变化时取消旧拖动；`finish` 在结束后同步实际宽度和无障碍读数。

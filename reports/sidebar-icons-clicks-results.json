@@ -1,0 +1,1632 @@
+{
+  "parentCommit": "c3a54b9",
+  "environment": "Chromium, mocked Obsidian SearchView, append-style icon adapter, CPU throttling 4x",
+  "before": [
+    {
+      "large": false,
+      "svgCount": 175,
+      "checks": {
+        "one icon per reused host": false,
+        "every real click delivered": true,
+        "repeat selection toggles on and off": true,
+        "selection and results commit together": true,
+        "last click wins": true
+      },
+      "duplicates": [
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 42
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 42
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "large": true,
+      "svgCount": 461,
+      "checks": {
+        "one icon per reused host": false,
+        "every real click delivered": true,
+        "repeat selection toggles on and off": true,
+        "selection and results commit together": true,
+        "last click wins": true
+      },
+      "duplicates": [
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 42
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 42
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-folder-icon",
+          "count": 2
+        },
+        {
+          "cls": "local-search-move-tree-toggle local-search-row-hit-target",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "large": false,
+      "svgCount": 61,
+      "checks": {
+        "one icon per reused host": true,
+        "every real click delivered": true,
+        "repeat selection toggles on and off": true,
+        "selection and results commit together": true,
+        "last click wins": true,
+        "icon changes preserve accessible names": true,
+        "wheel scrolling keeps visible rows mounted": true,
+        "far keyboard navigation reaches final result": true
+      },
+      "scrollCoverage": [
+        {
+          "first": 4,
+          "last": 10,
+          "start": 0,
+          "end": 16,
+          "total": 161
+        },
+        {
+          "first": 10,
+          "last": 17,
+          "start": 6,
+          "end": 22,
+          "total": 161
+        },
+        {
+          "first": 21,
+          "last": 27,
+          "start": 17,
+          "end": 33,
+          "total": 161
+        },
+        {
+          "first": 13,
+          "last": 19,
+          "start": 9,
+          "end": 25,
+          "total": 161
+        }
+      ]
+    },
+    {
+      "large": true,
+      "svgCount": 231,
+      "checks": {
+        "one icon per reused host": true,
+        "every real click delivered": true,
+        "repeat selection toggles on and off": true,
+        "selection and results commit together": true,
+        "last click wins": true,
+        "icon changes preserve accessible names": true,
+        "wheel scrolling keeps visible rows mounted": true,
+        "far keyboard navigation reaches final result": true
+      },
+      "scrollCoverage": [
+        {
+          "first": 4,
+          "last": 10,
+          "start": 0,
+          "end": 16,
+          "total": 2400
+        },
+        {
+          "first": 10,
+          "last": 17,
+          "start": 6,
+          "end": 22,
+          "total": 2400
+        },
+        {
+          "first": 21,
+          "last": 27,
+          "start": 17,
+          "end": 33,
+          "total": 2400
+        },
+        {
+          "first": 13,
+          "last": 19,
+          "start": 9,
+          "end": 25,
+          "total": 2400
+        }
+      ]
+    }
+  ],
+  "rawEvidence": "/workspace/sidebar-repeat-audit",
+  "notes": [
+    "Repeated click means the existing select/clear toggle, not a no-op.",
+    "Icon replacement supports append-style and clearing host adapters; default historical test adapter cleared SVGs and masked duplicates.",
+    "Capture-listener microtasks may run before a native target listener. Atomicity is sampled after Navigator.select returns and its projection microtask commits.",
+    "Timing samples in repeat-click profiles are diagnostic; paired isolated performance comparison is reported separately.",
+    "Actual Obsidian desktop, iOS, Android and WebKit not verified."
+  ],
+  "pairedFilterCost": [
+    {
+      "variant": "before",
+      "round": 0,
+      "samples": [
+        {
+          "ms": 71.69999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 61.400000005960464,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 57.19999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 53.900000005960464,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 55.900000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 51.900000005960464,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 52.19999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 57.099999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 49.400000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 76.7999999821186,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 48.19999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 44.099999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 44,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 47.099999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 46.10000002384186,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 45.400000005960464,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 45.5,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 45.099999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 65.40000000596046,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 57.099999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 46.599999994039536,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 52.19999998807907,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 47.80000001192093,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 46.5,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 35.5,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 46,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 44.099999994039536,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 43.69999998807907,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 44.400000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 42.19999998807907,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 42.69999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 46.19999998807907,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 45.900000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 45.900000005960464,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 48.5,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 46.70000001788139,
+          "mounted": 24,
+          "total": 37
+        }
+      ],
+      "medianMs": 46.150000005960464,
+      "mounted": [
+        24
+      ],
+      "allClicksCommitted": true
+    },
+    {
+      "variant": "after",
+      "round": 0,
+      "samples": [
+        {
+          "ms": 58.599999994039536,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 51.39999997615814,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 54.20000001788139,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 52.29999998211861,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 48.599999994039536,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 45.599999994039536,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 44.30000001192093,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 47.19999998807907,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 41.900000005960464,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 41.900000005960464,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 41.30000001192093,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 38.19999998807907,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 47.39999997615814,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 40.900000005960464,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 40.89999997615814,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 44,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 38.80000001192093,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 40.19999998807907,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 41.10000002384186,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 38.70000001788139,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 37.30000001192093,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 35.400000005960464,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 37.69999998807907,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 36.20000001788139,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 35.60000002384186,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 33.70000001788139,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 36.599999994039536,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 37.599999994039536,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 50.10000002384186,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 29.100000023841858,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 29.700000017881393,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 32.69999998807907,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 40.20000001788139,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 38.30000001192093,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 30.599999994039536,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 47.400000005960464,
+          "mounted": 16,
+          "total": 37
+        }
+      ],
+      "medianMs": 38.75000001490116,
+      "mounted": [
+        16
+      ],
+      "allClicksCommitted": true
+    },
+    {
+      "variant": "after",
+      "round": 1,
+      "samples": [
+        {
+          "ms": 85.59999999403954,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 46.70000001788139,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 39.10000002384186,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 42.20000001788139,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 41.5,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 37.30000001192093,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 41,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 37.400000005960464,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 41.5,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 37.20000001788139,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 36.099999994039536,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 37.400000005960464,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 39.20000001788139,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 39.400000005960464,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 38.30000001192093,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 36.20000001788139,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 30.900000005960464,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 30,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 31.600000023841858,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 32.80000001192093,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 32.89999997615814,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 32.400000005960464,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 32.400000005960464,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 30.19999998807907,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 31.700000017881393,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 32.19999998807907,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 30.5,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 31.30000001192093,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 34.80000001192093,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 31.399999976158142,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 34.79999998211861,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 38.29999998211861,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 35.69999998807907,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 31.5,
+          "mounted": 16,
+          "total": 37
+        },
+        {
+          "ms": 29.099999994039536,
+          "mounted": 16,
+          "total": 34
+        },
+        {
+          "ms": 28,
+          "mounted": 16,
+          "total": 37
+        }
+      ],
+      "medianMs": 32.849999994039536,
+      "mounted": [
+        16
+      ],
+      "allClicksCommitted": true
+    },
+    {
+      "variant": "before",
+      "round": 1,
+      "samples": [
+        {
+          "ms": 69.5,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 56.10000002384186,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 55.19999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 62.900000005960464,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 57.19999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 60.5,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 59.900000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 54.30000001192093,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 49.5,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 74.80000001192093,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 45.400000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 46,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 45.599999994039536,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 44.599999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 48.900000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 45.400000005960464,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 44.79999998211861,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 52.5,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 45.60000002384186,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 42.599999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 44.900000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 47.69999998807907,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 42.80000001192093,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 40.29999998211861,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 41.10000002384186,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 44.5,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 42.400000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 42.20000001788139,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 40.400000005960464,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 39.20000001788139,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 41.099999994039536,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 38.70000001788139,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 41,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 43.599999994039536,
+          "mounted": 24,
+          "total": 37
+        },
+        {
+          "ms": 47.69999998807907,
+          "mounted": 24,
+          "total": 34
+        },
+        {
+          "ms": 44.69999998807907,
+          "mounted": 24,
+          "total": 37
+        }
+      ],
+      "medianMs": 44.74999998509884,
+      "mounted": [
+        24
+      ],
+      "allClicksCommitted": true
+    }
+  ]
+}

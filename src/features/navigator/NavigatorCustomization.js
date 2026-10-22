@@ -15,8 +15,9 @@ import { configureSharedPickerHeader, createPickerHeaderIconAction } from "../..
 import { createPickerRowAction, createSharedPickerTreeRow } from "../../ui/pickers/tree-row.js";
 import { sortByPreferredOrder } from "../../utils/preferred-order.js";
 import { normalizeHexColor, normalizeResultFolderColors, resultFolderColorConfig } from "../folders/folder-colors.js";
+import { setNavigatorIcon } from "./navigation-icon.js";
 import { navigatorItemId, normalizeNavigatorCustomization, parseNavigatorItemId } from "./customization-model.js";
-import { Notice, setIcon } from "obsidian";
+import { Notice } from "obsidian";
 
 
 export class NavigatorCustomization {
@@ -312,7 +313,7 @@ export class NavigatorCustomization {
             const appearance = this.resolvedAppearance(descriptor);
             const icon = row.querySelector(".local-search-move-tree-folder-icon");
             if (icon && appearance.icon && icon.dataset.navIcon !== appearance.icon) {
-                setIcon(icon, appearance.icon); icon.dataset.navIcon = appearance.icon;
+                setNavigatorIcon(icon, appearance.icon); icon.dataset.navIcon = appearance.icon;
             }
             for (const field of ["color", "background"]) for (const theme of ["light", "dark"]) {
                 const color = appearance[field][theme];
@@ -325,7 +326,7 @@ export class NavigatorCustomization {
         if (!grip && descriptor.sortable !== false) {
             grip = createSearchButton(row, "chrome", { cls: "local-search-nav-sort-grip",
                 attr: { "aria-label": `拖动排序 ${descriptor.label || "分割线"}`, title: "拖动排序；键盘 Alt + 上下箭头移动" } });
-            setIcon(grip, "grip-vertical");
+            setNavigatorIcon(grip, "grip-vertical");
             grip.addEventListener("click", event => { event.preventDefault(); event.stopPropagation(); });
             grip.addEventListener("keydown", event => {
                 if (!this._canSort(this.rows.get(row)) || !event.altKey || !["ArrowUp", "ArrowDown"].includes(event.key)) return;
@@ -386,7 +387,7 @@ export class NavigatorCustomization {
             action.addClass("local-search-nav-maintenance-action");
             action.dataset.navMaintenance = signature;
         }
-        setIcon(action, presentation.icon);
+        setNavigatorIcon(action, presentation.icon);
         action.setAttribute("aria-label", presentation.label);
         action.title = presentation.label;
         action.disabled = Boolean(presentation.disabled);
