@@ -21,6 +21,7 @@
   ],
   "sourceParentCommit": "aa1ed73",
   "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Move-Picker-Caret-20261022.zip",
-  "remoteDownloadVerified": false,
-  "remotePayloadMatchesBuild": false
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "sourceCommit": "1ef205900783153d31bb9853557929e5ee7e8323"
 }
