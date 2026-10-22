@@ -1,0 +1,254 @@
+{
+  "candidate": "Desktop sidebar browse-card reuse and full interaction audit 2026-10-22",
+  "parentCommit": "75a6cf9c979898da082776d56a310a620253f8a5",
+  "environment": "Chromium, mocked Obsidian SearchView lifecycle",
+  "runtimeSourceChanges": [
+    "src/features/results/page-and-snippets-methods.js",
+    "src/features/results/SearchResultRendererController.js",
+    "src/features/results/browse-card-reuse.js"
+  ],
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 153,
+    "importEdges": 650,
+    "unresolvedSymbols": 0,
+    "cycles": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "d2d0f2e63c6dd06476e88c0023248485b0bda6f1a8b8bb14332bf094ff330e49"
+  },
+  "node": {
+    "passed": 258,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "browseCards": {
+    "passed": 24,
+    "failed": 0
+  },
+  "reproducerBefore": {
+    "passed": 11,
+    "failed": 3
+  },
+  "benchmark": [
+    {
+      "files": 161,
+      "cpuThrottle": 4,
+      "runsPerVersion": 2,
+      "folderClicksPerRun": 50,
+      "disclosureClicksPerRun": 40,
+      "before": {
+        "cardBuildsPerRun": [
+          760,
+          760
+        ],
+        "meanSynchronousClickMs": 42.98,
+        "p95SynchronousClickMs": 58.3,
+        "perRunMeanMs": [
+          43.94,
+          42.02
+        ],
+        "allClickAndScrollChecksPassed": true
+      },
+      "after": {
+        "cardBuildsPerRun": [
+          74,
+          74
+        ],
+        "meanSynchronousClickMs": 20.36,
+        "p95SynchronousClickMs": 47.7,
+        "perRunMeanMs": [
+          21.31,
+          19.41
+        ],
+        "allClickAndScrollChecksPassed": true
+      },
+      "meanReductionPercent": 52.6
+    },
+    {
+      "files": 2400,
+      "cpuThrottle": 4,
+      "runsPerVersion": 2,
+      "folderClicksPerRun": 50,
+      "disclosureClicksPerRun": 40,
+      "before": {
+        "cardBuildsPerRun": [
+          640,
+          640
+        ],
+        "meanSynchronousClickMs": 39.29,
+        "p95SynchronousClickMs": 48.9,
+        "perRunMeanMs": [
+          39.38,
+          39.19
+        ],
+        "allClickAndScrollChecksPassed": true
+      },
+      "after": {
+        "cardBuildsPerRun": [
+          56,
+          56
+        ],
+        "meanSynchronousClickMs": 20.95,
+        "p95SynchronousClickMs": 39.1,
+        "perRunMeanMs": [
+          20.72,
+          21.18
+        ],
+        "allClickAndScrollChecksPassed": true
+      },
+      "meanReductionPercent": 46.7
+    }
+  ],
+  "benchmarkScope": "CPU throttled 4x; real mouse input in fixture, 40 disclosures and 50 folder clicks per dataset/run. Two runs per version: parent then candidate, candidate then parent. Timings measure synchronous Navigator.select only, not all rendering or native input latency. Raw CPU profiles and results retained outside checkout.",
+  "warmTwoFolderWork": {
+    "files": 2400,
+    "clicks": 10,
+    "searches": 10,
+    "cardBuildsBefore": 120,
+    "cardBuildsAfter": 0
+  },
+  "cacheLimit": 96,
+  "cacheReleasedOnClose": true,
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS",
+    "Native Android",
+    "WebKit",
+    "Third-party integrations in a real vault",
+    "Native screen readers"
+  ],
+  "rawEvidence": "/workspace/sidebar-render-audit",
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "rail": 0,
+    "browse": 0,
+    "properties": 0,
+    "stable": 0,
+    "selection": 0,
+    "redundant": 0,
+    "tree": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "contracts": 0,
+    "release": 0,
+    "repeat": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "index": 0,
+    "acceptance-mobile-light": 0,
+    "acceptance-mobile-dark": 0,
+    "portal": 0,
+    "caret": 0,
+    "workflows": 0,
+    "popups": 0,
+    "focus": 0,
+    "focus-repair": 0,
+    "feishu-focus": 0
+  },
+  "properties": {
+    "passed": 34,
+    "failed": 0
+  },
+  "desktop": {
+    "passed": 55,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mouse": {
+    "passed": 27,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selection": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "release": {
+    "passed": 32,
+    "failed": 0
+  },
+  "repeat": {
+    "passed": 16,
+    "failed": 0
+  },
+  "stable": {
+    "passed": 21,
+    "failed": 0
+  },
+  "redundant": {
+    "passed": 24,
+    "failed": 0
+  },
+  "rail": {
+    "passed": 21,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0
+  },
+  "feishuComparison": {
+    "passed": 8,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "interactionContracts": {
+    "passed": 14,
+    "failed": 0
+  }
+}

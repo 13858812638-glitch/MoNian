@@ -1,0 +1,154 @@
+[
+  {
+    "name": "returning to a folder reuses the same unchanged card",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "ten warmed folder switches do not rebuild cards",
+    "pass": true,
+    "evidence": {
+      "built": 0,
+      "searches": 10,
+      "durations": [
+        2.5,
+        2.300000011920929,
+        2.300000011920929,
+        2.400000035762787,
+        2.300000011920929,
+        2.199999988079071,
+        3.300000011920929,
+        2.199999988079071,
+        2.199999988079071,
+        2
+      ],
+      "count": 12
+    }
+  },
+  {
+    "name": "every folder click still searches once and shows the correct files",
+    "pass": true,
+    "evidence": {
+      "built": 0,
+      "searches": 10,
+      "durations": [
+        2.5,
+        2.300000011920929,
+        2.300000011920929,
+        2.400000035762787,
+        2.300000011920929,
+        2.199999988079071,
+        3.300000011920929,
+        2.199999988079071,
+        2.199999988079071,
+        2
+      ],
+      "count": 12
+    }
+  },
+  {
+    "name": "mounted card positions match current results",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "reused title opens its current file exactly once",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "reused property key still opens the shared picker",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "open picker bypasses card reuse",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "sorting updates positions and final-row marker",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "batch mode uses fresh correctly marked checkboxes",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "expanded action shelves bypass card reuse",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "in-place snippet edits invalidate retained content",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "metadata edits rebuild stale cards",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "renames never reuse the old path or title",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "presentation settings rebuild affected content",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "query results never leak their card into browse results",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "switching views rebuilds content with the new display flags",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "builder failure preserves the complete previous page",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "post-commit failure rolls back cached card nodes and positions",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "cards with an opened action shelf are rebuilt",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "deleted cached file never returns to the result list",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop retained card cache stays bounded",
+    "pass": true,
+    "evidence": 96
+  },
+  {
+    "name": "other desktop host branch builds fresh cards",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "closing the view releases the retained cards",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile keeps its existing fresh-card path",
+    "pass": true,
+    "evidence": null
+  }
+]

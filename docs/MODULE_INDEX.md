@@ -2,7 +2,7 @@
 
 > 当前候选见 `DESKTOP_NAVIGATOR_20261019.md`，冻结状态以该文档和 AGENTS.md 顶部为准。新增桌面分栏模块及本轮修改模块的信息已同步；其它条目保留历史职责描述。
 
-- 当前源模块（含入口）：**152**；静态导入边：**649**；工程检查：**PASS-ENGINEERING**。
+- 当前源模块（含入口）：**153**；静态导入边：**650**；工程检查：**PASS-ENGINEERING**。
 - 所有运行模块路径均来自当前 `src/`，没有孤立或已经退役的旧文件。
 - 方法归属由当前 `src/` 及 `composeClassMethods()` 确定；`METHOD_INDEX.md` 的原始行号仅是旧源码溯源，不应作为当前行号。
 - 普通属性目录正式 Owner：`src/features/plugin/property-catalog-methods.js`；当前运行源码不再使用旧项目目录模块。
@@ -94,11 +94,12 @@
 | `src/features/result-controls/search-history-methods.js` | 206 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_search_history_methods` |
 | `src/features/result-controls/toolbar-methods.js` | 148 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_toolbar_methods` |
 | `src/features/result-controls/view-composer-methods.js` | 947 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_view_composer_methods` |
-| `src/features/results/SearchResultRendererController.js` | 94 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController` |
+| `src/features/results/SearchResultRendererController.js` | 100 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController` |
 | `src/features/results/SparseHeightIndex.js` | 87 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SparseHeightIndex` |
 | `src/features/results/card-metadata-methods.js` | 347 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_card_metadata_methods` |
 | `src/features/results/filter-channels-methods.js` | 337 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
-| `src/features/results/page-and-snippets-methods.js` | 274 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
+| `src/features/results/browse-card-reuse.js` | 96 | 桌面侧栏浏览卡片的有界复用、提交和回滚 | `beginBrowseCardReuse` |
+| `src/features/results/page-and-snippets-methods.js` | 303 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
 | `src/features/results/result-card-methods.js` | 207 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS` 等 11 项 |
 | `src/features/results/viewport-anchors-methods.js` | 397 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_anchors_methods` |
@@ -569,7 +570,7 @@
 - **导出**：`SearchResultControlsController_view_composer_methods`
 
 ### `src/features/results/SearchResultRendererController.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；94 行，6,638 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；100 行，6,967 字节。
 - **直接依赖**：`../../core/compose-class-methods.js`、`../../utils/dom.js`、`./SparseHeightIndex.js`、`./card-metadata-methods.js`、`./filter-channels-methods.js`、`./page-and-snippets-methods.js`、`./result-card-methods.js`、`./viewport-anchors-methods.js`、`./viewport-geometry-methods.js`、`./virtual-window-methods.js`、`./virtualization-config.js`
 - **导出**：`SearchResultRendererController`
 
@@ -589,8 +590,8 @@
 - **导出**：`SearchResultRendererController_filter_channels_methods`
 
 ### `src/features/results/page-and-snippets-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；274 行，14,272 字节。
-- **直接依赖**：`../../data/formats/file-types.js`、`../../utils/dom.js`、`../../utils/markdown-text.js`、`../../utils/search-text.js`、`../search/QueryState.js`
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；303 行，15,683 字节。
+- **直接依赖**：`../../data/formats/file-types.js`、`../../utils/dom.js`、`../../utils/markdown-text.js`、`../../utils/search-text.js`、`../search/QueryState.js`、`./browse-card-reuse.js`
 - **导出**：`SearchResultRendererController_page_and_snippets_methods`
 
 ### `src/features/results/result-card-methods.js`
@@ -908,3 +909,8 @@
 - **职责**：导航 SVG 替换与无障碍标签保留；15 行，797 字节。
 - **直接依赖**：`obsidian`
 - **导出**：`setNavigatorIcon`
+
+### `src/features/results/browse-card-reuse.js`
+- **职责**：桌面侧栏浏览卡片的有界复用、提交和回滚；96 行，4,858 字节。
+- **直接依赖**：无静态导入；消费传入的 ResultRenderer 及其原 Owner。
+- **导出**：`beginBrowseCardReuse`（内部实现，不增加公共接口）。

@@ -88,6 +88,8 @@ export class SearchResultRendererController {
         this._filterPoolGroupRefs.clear();
         this._filterToolbarButtonRefs.clear();
         this._snippetInFlight.clear();
+        this._browseCardCache?.entries.clear();
+        this._browseCardCache = null;
         this._heightIndex.reset(0, RESULT_ROW_HEIGHT_ESTIMATE);
         this._pendingViewportMeasurement = null;
         this.owner = null;

@@ -14,6 +14,8 @@ scope = {'__file__': str(ROOT/'scripts/desktop_navigator_audit.py')}
 setup = (ROOT/'scripts/desktop_navigator_audit.py').read_text().split('with sync_playwright()')[0]
 setup = setup.replace('large?2400:36', 'large?2400:161').replace('large?200:6', 'large?200:11')
 setup = setup.replace('__makeHost({files,mobile})', '__makeHost({files,mobile,appendIcons:true})')
+if os.environ.get('GLS_REPEAT_SUBJECT'):
+    setup = setup.replace("(ROOT/'tests/generated/subject.cjs')", 'Path('+repr(os.environ['GLS_REPEAT_SUBJECT'])+')')
 exec(setup, scope)
 report = []
 with sync_playwright() as pw:

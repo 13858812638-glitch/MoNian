@@ -5,6 +5,7 @@ import { isDomHTMLElement } from "../../utils/dom.js";
 import { cleanMarkdownForSnippet } from "../../utils/markdown-text.js";
 import { buildSnippetWindow, matchReadableText } from "../../utils/search-text.js";
 import { QueryState } from "../search/QueryState.js";
+import { beginBrowseCardReuse } from "./browse-card-reuse.js";
 // Instance method owner. `this` is the unchanged SearchResultRendererController instance. No additional state store.
 export const SearchResultRendererController_page_and_snippets_methods = {
 
@@ -172,6 +173,7 @@ export const SearchResultRendererController_page_and_snippets_methods = {
         let nextStart = 0, nextEnd = 0;
         let nextBeforeSpacer = null, nextAfterSpacer = null;
         let hasResults = false;
+        let cardReuse = null;
         core._isRendering = true;
         try {
             // _buildResultItem pushes the staged cards into resultEls. Keep the
@@ -179,6 +181,7 @@ export const SearchResultRendererController_page_and_snippets_methods = {
             core.resultEls = [];
             core.selectedIndex = -1;
             core.createFlow?.syncDerivedCreateViewState?.();
+            cardReuse = beginBrowseCardReuse(this);
             if (core.createFlow?.isCreateView?.()) {
                 core.createFlow.renderQuickCreatePreview(staging, core.createFlow.currentCreateTitle());
             } else {
@@ -210,7 +213,8 @@ export const SearchResultRendererController_page_and_snippets_methods = {
                     nextBeforeSpacer = this._spacer(beforeHeight);
                     nextAfterSpacer = this._spacer(afterHeight, "is-after");
                     fragment.appendChild(nextBeforeSpacer);
-                    this._appendPositionRange(fragment, nextStart, nextEnd);
+                    if (cardReuse) cardReuse.append(fragment, nextStart, nextEnd);
+                    else this._appendPositionRange(fragment, nextStart, nextEnd);
                     fragment.appendChild(nextAfterSpacer);
                     staging.appendChild(fragment);
                     hasResults = true;
@@ -221,6 +225,11 @@ export const SearchResultRendererController_page_and_snippets_methods = {
             // submit a complete prepared page in one DOM operation.
             core.swipe?.resetForRender();
             this._rowResizeObserver?.disconnect();
+            if (cardReuse) {
+                // From here rollback must restore live nodes as well as new DOM.
+                committed = true;
+                cardReuse.commit();
+            }
             rail.replaceChildren(...staging.childNodes);
             committed = true;
             this.windowStart = nextStart;
@@ -245,7 +254,9 @@ export const SearchResultRendererController_page_and_snippets_methods = {
             }
             if (syncControls) core.selection.syncControls();
             if (hasResults) this.queueLazySnippetFill(0, core._resultGeneration);
+            cardReuse?.finish();
         } catch (error) {
+            cardReuse?.rollback();
             // Roll back even after a post-commit UI/observer exception. An
             // unsuccessful update retains exactly the old visible children.
             if (committed) {

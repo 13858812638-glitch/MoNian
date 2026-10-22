@@ -1,3 +1,5 @@
+> **2026-10-22 侧栏结果卡工作审计**：`beginBrowseCardReuse(renderer)` 是内部事务工厂，返回 `append/commit/finish/rollback`；`cardContentKey` 和 `reusable` 为内部校验 helper。`renderPage` 在新卡构建成功后才移动复用节点，异常沿用原完整页面回滚。每个 Renderer 最多保留 96 张普通浏览卡，`destroy` 释放。查询、Picker、批量/动作状态和其他宿主继续使用原卡片构建路径；无新增类原型方法。
+
 > **2026-10-22 属性键展开与隐藏列表审计**：Navigator 内部 `navigatorPropertyValues` 复用统一属性语义模型，按需缓存全局属性值和当前目录计数；选择状态即时从 FilterState 读取。`_renderProjection` 让桌面 sidebar 属性键原地展开，稳定投影仅更新值计数和选择；隐藏标签/属性分组保留旧 generation，重开前更新。其他桌面宿主保留共享 Picker，移动端保持既有展开逻辑。无新增类原型方法。
 
 > **2026-10-22 侧栏结果筛选条审计**：仅 `filter-channels-methods.js` 增加内部 `setFilterRailAttribute` / `setFilterRailProperty`，在桌面 sidebar 抑制不变的显示写入；标签意图仅附着于对应 DOM 节点，生命周期随该节点释放。`_syncFilterPoolButton` 更新可见文本节点并保留 Hover Hint 拥有的无障碍标签。分组、快捷按钮、筛选条显隐仍由原方法负责，无新增原型方法或数据状态。

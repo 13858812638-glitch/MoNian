@@ -660,6 +660,7 @@
   "src/features/results/SparseHeightIndex.js": [
     "src/features/results/virtualization-config.js"
   ],
+  "src/features/results/browse-card-reuse.js": [],
   "src/features/results/card-metadata-methods.js": [
     "src/data/formats/file-types.js",
     "src/data/properties/property-catalog.js",
@@ -685,7 +686,8 @@
     "src/utils/dom.js",
     "src/utils/markdown-text.js",
     "src/utils/search-text.js",
-    "src/features/search/QueryState.js"
+    "src/features/search/QueryState.js",
+    "src/features/results/browse-card-reuse.js"
   ],
   "src/features/results/result-card-methods.js": [
     "src/data/formats/file-types.js",

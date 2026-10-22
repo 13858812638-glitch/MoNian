@@ -1,0 +1,104 @@
+[
+  {
+    "name": "returning to a folder reuses the same unchanged card",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "ten warmed folder switches do not rebuild cards",
+    "pass": false,
+    "evidence": {
+      "built": 120,
+      "searches": 10,
+      "durations": [
+        5.900000035762787,
+        5.600000023841858,
+        5.799999952316284,
+        5.700000047683716,
+        5.600000023841858,
+        5.299999952316284,
+        5.5,
+        5.5,
+        6,
+        5.299999952316284
+      ],
+      "count": 12
+    }
+  },
+  {
+    "name": "every folder click still searches once and shows the correct files",
+    "pass": true,
+    "evidence": {
+      "built": 120,
+      "searches": 10,
+      "durations": [
+        5.900000035762787,
+        5.600000023841858,
+        5.799999952316284,
+        5.700000047683716,
+        5.600000023841858,
+        5.299999952316284,
+        5.5,
+        5.5,
+        6,
+        5.299999952316284
+      ],
+      "count": 12
+    }
+  },
+  {
+    "name": "mounted card positions match current results",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "metadata edits rebuild stale cards",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "renames never reuse the old path or title",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "presentation settings rebuild affected content",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "query results never leak their card into browse results",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "builder failure preserves the complete previous page",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "post-commit failure rolls back cached card nodes and positions",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "cards with an opened action shelf are rebuilt",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop retained card cache stays bounded",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "closing the view releases the retained cards",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile keeps its existing fresh-card path",
+    "pass": true,
+    "evidence": null
+  }
+]
