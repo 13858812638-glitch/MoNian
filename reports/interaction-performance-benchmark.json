@@ -1,0 +1,913 @@
+{
+  "environment": "Chromium mock Obsidian, CPU 4x throttling; no native-device evidence",
+  "order": [
+    "before",
+    "after",
+    "after2",
+    "before2"
+  ],
+  "definitions": {
+    "nav.select": "synchronous call only",
+    "throughMicrotask": "recorded after navigation microtask, not input-to-paint",
+    "frameGaps": "rAF intervals across automated stream, not per-event latency"
+  },
+  "runs": {
+    "before": [
+      {
+        "files": 161,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.0011111113760207,
+            "p95": 2,
+            "max": 2.199999988079071
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 3.1099999964237215,
+            "p95": 4.199999988079071,
+            "max": 12
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 2.342000002861023,
+            "p95": 3.600000023841858,
+            "max": 7
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 121,
+            "mean": 0.08677686098193334,
+            "p95": 0.6000000238418579,
+            "max": 1
+          },
+          "renderer._windowSize": {
+            "samples": 121,
+            "mean": 0.02727272589344624,
+            "p95": 0.09999996423721313,
+            "max": 0.7999999523162842
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 3.9719999969005584,
+            "p95": 28.900000035762787,
+            "max": 37.700000047683716
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.42199999928474424,
+            "p95": 1,
+            "max": 1.5
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 10.981999996900559,
+            "p95": 38.5,
+            "max": 49
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 14.65399999976158,
+            "p95": 41.69999998807907,
+            "max": 54.39999997615814
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 18.731999999284746,
+            "p95": 45.69999998807907,
+            "max": 59.40000003576279
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 19.294000000953673,
+            "p95": 45.69999998807907,
+            "max": 59.69999998807907
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 2.387999997138977,
+            "p95": 3.5,
+            "max": 5.600000023841858
+          },
+          "renderer._handleRowResize": {
+            "samples": 50,
+            "mean": 0.6900000011920929,
+            "p95": 1.5,
+            "max": 2.900000035762787
+          },
+          "renderer._buildResultItem": {
+            "samples": 74,
+            "mean": 2.037837837193463,
+            "p95": 3,
+            "max": 3.900000035762787
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 23.323999997377395,
+          "p95": 54.799999952316284,
+          "max": 72.69999998807907
+        },
+        "frameGaps": {
+          "samples": 168,
+          "mean": 35.811904761904756,
+          "p95": 83.39999999999964,
+          "max": 533.3
+        }
+      },
+      {
+        "files": 2400,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.1422222197055816,
+            "p95": 2,
+            "max": 2.800000011920929
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 3.2759999990463258,
+            "p95": 4.199999988079071,
+            "max": 11.5
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 4.169999998807907,
+            "p95": 6.600000023841858,
+            "max": 19.799999952316284
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 121,
+            "mean": 0.04793388439604074,
+            "p95": 0.10000002384185791,
+            "max": 1
+          },
+          "renderer._windowSize": {
+            "samples": 121,
+            "mean": 0.02809917335667886,
+            "p95": 0.10000002384185791,
+            "max": 0.699999988079071
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 3.0180000042915345,
+            "p95": 19.599999964237213,
+            "max": 29.30000001192093
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.3079999995231628,
+            "p95": 1.0999999642372131,
+            "max": 1.199999988079071
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 9.637999997138976,
+            "p95": 27.80000001192093,
+            "max": 37.40000003576279
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 15.16399999976158,
+            "p95": 33.30000001192093,
+            "max": 45
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 19.388000000715255,
+            "p95": 43.30000001192093,
+            "max": 50.19999998807907
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 19.983999999761583,
+            "p95": 44.39999997615814,
+            "max": 51
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 8.857999999523162,
+            "p95": 12.400000035762787,
+            "max": 17.69999998807907
+          },
+          "renderer._handleRowResize": {
+            "samples": 50,
+            "mean": 0.7559999978542328,
+            "p95": 1.5999999642372131,
+            "max": 2
+          },
+          "renderer._buildResultItem": {
+            "samples": 56,
+            "mean": 1.944642855652741,
+            "p95": 2.900000035762787,
+            "max": 3.5
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 30.266000000238417,
+          "p95": 58,
+          "max": 68.29999995231628
+        },
+        "frameGaps": {
+          "samples": 176,
+          "mean": 49.430113636363636,
+          "p95": 100.09999999999991,
+          "max": 566.6999999999998
+        }
+      }
+    ],
+    "after": [
+      {
+        "files": 161,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.0955555604563818,
+            "p95": 1.800000011920929,
+            "max": 4.600000023841858
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 0.15200000286102294,
+            "p95": 0.800000011920929,
+            "max": 1
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 2.4459999978542326,
+            "p95": 3.399999976158142,
+            "max": 13.700000047683716
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 121,
+            "mean": 0.05371900924966355,
+            "p95": 0.30000001192092896,
+            "max": 1
+          },
+          "renderer._windowSize": {
+            "samples": 121,
+            "mean": 0.027272727371247345,
+            "p95": 0.10000002384185791,
+            "max": 0.699999988079071
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 3.6619999957084657,
+            "p95": 26.80000001192093,
+            "max": 30.80000001192093
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.32200000047683713,
+            "p95": 0.800000011920929,
+            "max": 3.199999988079071
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 10.479999996423722,
+            "p95": 34.80000001192093,
+            "max": 40.19999998807907
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 17.036000007390975,
+            "p95": 40.80000001192093,
+            "max": 47.30000001192093
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 18.27000000476837,
+            "p95": 42.10000002384186,
+            "max": 49.10000002384186
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 18.86000000834465,
+            "p95": 42.60000002384186,
+            "max": 50.10000002384186
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 2.17799999833107,
+            "p95": 3.199999988079071,
+            "max": 5.900000035762787
+          },
+          "renderer._handleRowResize": {
+            "samples": 50,
+            "mean": 0.8600000047683716,
+            "p95": 1.5,
+            "max": 2.100000023841858
+          },
+          "renderer._buildResultItem": {
+            "samples": 74,
+            "mean": 1.8054054041166563,
+            "p95": 2.799999952316284,
+            "max": 3.800000011920929
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 22.54399999976158,
+          "p95": 50.10000002384186,
+          "max": 59.5
+        },
+        "frameGaps": {
+          "samples": 166,
+          "mean": 36.042771084337346,
+          "p95": 83.39999999999964,
+          "max": 499.9999999999999
+        }
+      },
+      {
+        "files": 2400,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.0866666654745738,
+            "p95": 2,
+            "max": 3.200000047683716
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 0.20400000214576722,
+            "p95": 0.9000000357627869,
+            "max": 1.100000023841858
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 3.187999997138977,
+            "p95": 4.800000011920929,
+            "max": 14.800000011920929
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 121,
+            "mean": 0.08264462760657318,
+            "p95": 0.5999999642372131,
+            "max": 1.800000011920929
+          },
+          "renderer._windowSize": {
+            "samples": 121,
+            "mean": 0.022314049980857155,
+            "p95": 0.10000002384185791,
+            "max": 0.800000011920929
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 2.535999997854233,
+            "p95": 19,
+            "max": 19.799999952316284
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.30199999928474425,
+            "p95": 0.800000011920929,
+            "max": 1.300000011920929
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 8.30799999833107,
+            "p95": 25.899999976158142,
+            "max": 27.5
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 15.281999998092651,
+            "p95": 34.700000047683716,
+            "max": 35.89999997615814
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 16.33,
+            "p95": 35.30000001192093,
+            "max": 38.5
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 16.902000000476836,
+            "p95": 35.90000003576279,
+            "max": 40.89999997615814
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 6.569999997615814,
+            "p95": 10.5,
+            "max": 18.299999952316284
+          },
+          "renderer._handleRowResize": {
+            "samples": 50,
+            "mean": 0.6840000057220459,
+            "p95": 1.600000023841858,
+            "max": 2.5
+          },
+          "renderer._buildResultItem": {
+            "samples": 56,
+            "mean": 1.5517857106668609,
+            "p95": 2.300000011920929,
+            "max": 3.199999988079071
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 24.84200000166893,
+          "p95": 45.40000003576279,
+          "max": 55.80000001192093
+        },
+        "frameGaps": {
+          "samples": 172,
+          "mean": 46.50988372093023,
+          "p95": 100,
+          "max": 566.5999999999999
+        }
+      }
+    ],
+    "after2": [
+      {
+        "files": 161,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.0433333297570546,
+            "p95": 1.699999988079071,
+            "max": 3.900000035762787
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 0.22399999976158141,
+            "p95": 0.9000000357627869,
+            "max": 1.0999999642372131
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 2.1499999964237215,
+            "p95": 3,
+            "max": 6
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 118,
+            "mean": 0.044915252317816526,
+            "p95": 0.19999998807907104,
+            "max": 0.6000000238418579
+          },
+          "renderer._windowSize": {
+            "samples": 119,
+            "mean": 0.010924369848075034,
+            "p95": 0.09999996423721313,
+            "max": 0.5999999642372131
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 3.7719999980926513,
+            "p95": 27.400000035762787,
+            "max": 30.400000035762787
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.31000000357627866,
+            "p95": 1,
+            "max": 2
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 10.272000005245209,
+            "p95": 35.90000003576279,
+            "max": 37
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 16.42399999856949,
+            "p95": 41.69999998807907,
+            "max": 43.5
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 17.54400000333786,
+            "p95": 42.39999997615814,
+            "max": 44.30000001192093
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 18.08800000309944,
+            "p95": 43,
+            "max": 44.40000003576279
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 1.9560000038146972,
+            "p95": 2.899999976158142,
+            "max": 5.800000011920929
+          },
+          "renderer._handleRowResize": {
+            "samples": 49,
+            "mean": 0.789795922989748,
+            "p95": 1.300000011920929,
+            "max": 1.800000011920929
+          },
+          "renderer._buildResultItem": {
+            "samples": 74,
+            "mean": 1.8243243243243243,
+            "p95": 3.099999964237213,
+            "max": 3.5
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 21.614000005722048,
+          "p95": 51.80000001192093,
+          "max": 53.39999997615814
+        },
+        "frameGaps": {
+          "samples": 166,
+          "mean": 35.94277108433735,
+          "p95": 100,
+          "max": 500
+        }
+      },
+      {
+        "files": 2400,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.1022222174538507,
+            "p95": 2.099999964237213,
+            "max": 2.5
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 0.09800000548362732,
+            "p95": 0.30000001192092896,
+            "max": 0.800000011920929
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 3.2760000002384184,
+            "p95": 5.5,
+            "max": 13.300000011920929
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 118,
+            "mean": 0.0542372894489159,
+            "p95": 0.5,
+            "max": 0.9000000357627869
+          },
+          "renderer._windowSize": {
+            "samples": 119,
+            "mean": 0.016806723189955,
+            "p95": 0,
+            "max": 1
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 2.657999994754791,
+            "p95": 19.30000001192093,
+            "max": 22.5
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.3580000030994415,
+            "p95": 0.800000011920929,
+            "max": 1.100000023841858
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 9.004000002145768,
+            "p95": 25.400000035762787,
+            "max": 28.69999998807907
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 16.32799999475479,
+            "p95": 33,
+            "max": 36.19999998807907
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 17.418000000715256,
+            "p95": 34.80000001192093,
+            "max": 37.40000003576279
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 18.091999996900558,
+            "p95": 35.80000001192093,
+            "max": 37.5
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 7.216000001430512,
+            "p95": 12.5,
+            "max": 16.19999998807907
+          },
+          "renderer._handleRowResize": {
+            "samples": 49,
+            "mean": 0.7306122402755582,
+            "p95": 1.399999976158142,
+            "max": 2.199999988079071
+          },
+          "renderer._buildResultItem": {
+            "samples": 56,
+            "mean": 1.610714285501412,
+            "p95": 2.300000011920929,
+            "max": 3.100000023841858
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 26.614000000953673,
+          "p95": 44.90000003576279,
+          "max": 52.19999998807907
+        },
+        "frameGaps": {
+          "samples": 172,
+          "mean": 48.15697674418605,
+          "p95": 100,
+          "max": 549.9999999999998
+        }
+      }
+    ],
+    "before2": [
+      {
+        "files": 161,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.0366666615009308,
+            "p95": 1.9000000357627869,
+            "max": 2.400000035762787
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 2.6880000019073487,
+            "p95": 3.700000047683716,
+            "max": 10.599999964237213
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 2.1439999961853027,
+            "p95": 3.099999964237213,
+            "max": 6.200000047683716
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 121,
+            "mean": 0.04132231454218715,
+            "p95": 0.10000002384185791,
+            "max": 0.8999999761581421
+          },
+          "renderer._windowSize": {
+            "samples": 121,
+            "mean": 0.028925619342110374,
+            "p95": 0.10000002384185791,
+            "max": 0.6000000238418579
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 3.6759999978542326,
+            "p95": 29.100000023841858,
+            "max": 30.099999964237213
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.2940000033378601,
+            "p95": 0.9000000357627869,
+            "max": 1.100000023841858
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 9.928000012636184,
+            "p95": 36.39999997615814,
+            "max": 39.10000002384186
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 13.255999995470047,
+            "p95": 39.69999998807907,
+            "max": 43.799999952316284
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 16.859999997615816,
+            "p95": 43.60000002384186,
+            "max": 46.799999952316284
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 17.495999999046326,
+            "p95": 44.80000001192093,
+            "max": 47.5
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 2.16,
+            "p95": 3.5,
+            "max": 6
+          },
+          "renderer._handleRowResize": {
+            "samples": 50,
+            "mean": 0.6500000035762787,
+            "p95": 1.100000023841858,
+            "max": 4.600000023841858
+          },
+          "renderer._buildResultItem": {
+            "samples": 74,
+            "mean": 1.8608108106497172,
+            "p95": 2.800000011920929,
+            "max": 3.300000011920929
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 21.207999999523164,
+          "p95": 54.5,
+          "max": 55.80000001192093
+        },
+        "frameGaps": {
+          "samples": 166,
+          "mean": 34.234939759036145,
+          "p95": 66.80000000000018,
+          "max": 499.9
+        }
+      },
+      {
+        "files": 2400,
+        "checks": {
+          "one icon per reused host": true,
+          "every real click delivered": true,
+          "repeat selection toggles on and off": true,
+          "selection and results commit together": true,
+          "last click wins": true,
+          "icon changes preserve accessible names": true,
+          "wheel scrolling keeps visible rows mounted": true,
+          "far keyboard navigation reaches final result": true
+        },
+        "methods": {
+          "core._notifyStateChange": {
+            "samples": 90,
+            "mean": 1.103333334128062,
+            "p95": 1.9000000357627869,
+            "max": 4.100000023841858
+          },
+          "renderer._renderFilterPoolHeader": {
+            "samples": 50,
+            "mean": 2.8999999988079073,
+            "p95": 4,
+            "max": 11.199999988079071
+          },
+          "core._recomputeCurrentResults": {
+            "samples": 50,
+            "mean": 3.692000000476837,
+            "p95": 6.5,
+            "max": 14.399999976158142
+          },
+          "renderer._ensureHeightIndex": {
+            "samples": 118,
+            "mean": 0.07288135512400482,
+            "p95": 0.5,
+            "max": 1.199999988079071
+          },
+          "renderer._windowSize": {
+            "samples": 119,
+            "mean": 0.021848739696150067,
+            "p95": 0.09999996423721313,
+            "max": 0.9000000357627869
+          },
+          "renderer._appendPositionRange": {
+            "samples": 50,
+            "mean": 2.5560000026226044,
+            "p95": 18.600000023841858,
+            "max": 22.099999964237213
+          },
+          "selection.syncControls": {
+            "samples": 50,
+            "mean": 0.25000000119209287,
+            "p95": 1,
+            "max": 1
+          },
+          "renderer.renderPage": {
+            "samples": 50,
+            "mean": 8.417999995946884,
+            "p95": 25.099999964237213,
+            "max": 28.69999998807907
+          },
+          "core.performSearch": {
+            "samples": 50,
+            "mean": 13.345999999046326,
+            "p95": 30.399999976158142,
+            "max": 34.60000002384186
+          },
+          "core._onFilterChanged": {
+            "samples": 50,
+            "mean": 17.28200000286102,
+            "p95": 37.60000002384186,
+            "max": 38.69999998807907
+          },
+          "nav.select": {
+            "samples": 50,
+            "mean": 17.79,
+            "p95": 37.89999997615814,
+            "max": 40
+          },
+          "nav._renderProjection": {
+            "samples": 50,
+            "mean": 8.54,
+            "p95": 13.700000047683716,
+            "max": 15.800000011920929
+          },
+          "renderer._handleRowResize": {
+            "samples": 49,
+            "mean": 0.9102040772535362,
+            "p95": 1.5,
+            "max": 5.599999964237213
+          },
+          "renderer._buildResultItem": {
+            "samples": 56,
+            "mean": 1.74107142750706,
+            "p95": 2.799999952316284,
+            "max": 6.900000035762787
+          }
+        },
+        "throughMicrotask": {
+          "samples": 50,
+          "mean": 27.722000000476836,
+          "p95": 50.10000002384186,
+          "max": 55.90000003576279
+        },
+        "frameGaps": {
+          "samples": 174,
+          "mean": 48.27413793103448,
+          "p95": 100,
+          "max": 616.5999999999999
+        }
+      }
+    ]
+  },
+  "conclusion": "Large sample mean improves (~7% synchronous / ~11% through navigation microtask); small sample mean unchanged. Filter-rail local decrease partly moves layout cost downstream; no claim of universal smoothness."
+}

@@ -2,8 +2,8 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34799,
-  "jsBytes": 1612839,
+  "jsLines": 34800,
+  "jsBytes": 1613014,
   "cssBytes": 264925,
   "cssLines": 7685,
   "cssParseErrors": [],
@@ -291,12 +291,12 @@
     },
     {
       "file": "src/features/facets/type-picker-methods.js",
-      "line": 226,
+      "line": 228,
       "code": "search.addEventListener(\"input\", render);"
     },
     {
       "file": "src/features/facets/type-picker-methods.js",
-      "line": 249,
+      "line": 251,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
@@ -706,22 +706,22 @@
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 95,
+      "line": 93,
       "code": "bestToggle.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 122,
+      "line": 120,
       "code": "bodyToggle.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 162,
+      "line": 160,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 285,
+      "line": 283,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
@@ -1834,9 +1834,9 @@
     },
     {
       "file": "src/features/facets/folder-picker-methods.js",
-      "lines": 518,
-      "bytes": 22138,
-      "sha256": "d6d97c2906aaaaf0f9e2131cf3bd2e992cdc56dd178f7550e9a090ba81667adf"
+      "lines": 519,
+      "bytes": 22217,
+      "sha256": "eff859cc0cefcee070d1e0649d7b023a479e95b88dca2d9ffce7ea36128754ff"
     },
     {
       "file": "src/features/facets/property-picker-methods.js",
@@ -1858,15 +1858,15 @@
     },
     {
       "file": "src/features/facets/type-picker-methods.js",
-      "lines": 313,
-      "bytes": 14102,
-      "sha256": "adfbfdfc3713b9b7fda30bfe17091ced71f23682b18b4e5f902ccc71af4a08d9"
+      "lines": 314,
+      "bytes": 14239,
+      "sha256": "799a42c8869f7b458816771b89384ea3ec269df5c41e19ff00766d44594ed384"
     },
     {
       "file": "src/features/filters/FilterEngine.js",
       "lines": 83,
-      "bytes": 3948,
-      "sha256": "aa1f84ad2c58a8aa7dd8697762b89747678b92b2500a341d1c45bf90f63ea3d7"
+      "bytes": 3991,
+      "sha256": "8c89d6555183cc12bcbb3555885296d4b3327b838c69abf9ac091c6e44eae01c"
     },
     {
       "file": "src/features/filters/filter-state.js",
@@ -1906,9 +1906,9 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "lines": 1454,
-      "bytes": 87009,
-      "sha256": "d3e321599d9bdae0ceeec73514b466a639c83daedcb4b4001328209157f76170"
+      "lines": 1455,
+      "bytes": 87038,
+      "sha256": "b195df8507745b39740b81f79801ed4d4c64937001dae753064a4d7da21a277a"
     },
     {
       "file": "src/features/navigator/customization-model.js",
@@ -2116,9 +2116,9 @@
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "lines": 314,
-      "bytes": 14957,
-      "sha256": "cf566fb571f9e1abf75ff9a250607f2c20c97221f2943bf63e2cd350d6d25f3a"
+      "lines": 312,
+      "bytes": 14842,
+      "sha256": "bfeb27fcd1b1ab6b841ee040a3c0911dc032a7cdf58b221c605e8c9350c19e29"
     },
     {
       "file": "src/features/results/page-and-snippets-methods.js",
@@ -2267,8 +2267,8 @@
     {
       "file": "src/ui/components/indicator-label.js",
       "lines": 14,
-      "bytes": 671,
-      "sha256": "17bcf22b99fcd4b13a802a79829f4d72dce87554ab66c64648bb0f22142606c2"
+      "bytes": 673,
+      "sha256": "5753fd4a6077ec42fa08134a309b42e118bf8f39f312f1976a1e91cb4910f02f"
     },
     {
       "file": "src/ui/components/input-controls.js",

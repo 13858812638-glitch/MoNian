@@ -41,11 +41,11 @@ export class FilterEngine {
     static matches(meta, filter) {
         if (!filter) return true;
         if (!FilterEngine.matchesDateRange(meta, filter.dateRange)) return false;
-        const kind = logicalFileType(meta);
         const fileTypes = filter.fileTypes instanceof Set
             ? filter.fileTypes
             : new Set(normalizeFileTypeFilterSelection(filter.fileType));
         if (fileTypes.size) {
+            const kind = logicalFileType(meta);
             const extension = kind === "attachment" ? attachmentExtension(meta) : "";
             let matched = false;
             for (const wanted of fileTypes) {
@@ -70,8 +70,8 @@ export class FilterEngine {
             if (!folderMatched) return false;
         }
         if (!FilterEngine.matchesTags(meta, filter.tags, filter.tagMatchMode)) return false;
-        const propertyEntries = [...filter.properties];
-        if (propertyEntries.length) {
+        const propertyEntries = filter.properties.size === 0 ? null : [...filter.properties];
+        if (propertyEntries?.length) {
             const propertyMatches = ([key, wanted]) => propertySelectionMatches(meta, key, wanted);
             const matched = normalizeFilterMatchMode(filter.propertyMatchMode) === "any"
                 ? propertyEntries.some(propertyMatches)

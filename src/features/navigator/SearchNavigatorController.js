@@ -1297,8 +1297,9 @@ export class SearchNavigatorController {
                 for (const tree of ref.rows?.values() || []) {
                     const options = tree._navOptions, descriptor = options?.navDescriptor;
                     if (descriptor?.kind === "tag" && tags) {
-                        options.count = descriptor.key === NO_TAGS_FILTER_VALUE ? tags.noTags : tags.counts.get(tagIdentityKey(descriptor.key)) || 0;
-                        options.active = selectedTags.has(tagIdentityKey(descriptor.key));
+                        const identity = tagIdentityKey(descriptor.key);
+                        options.count = descriptor.key === NO_TAGS_FILTER_VALUE ? tags.noTags : tags.counts.get(identity) || 0;
+                        options.active = selectedTags.has(identity);
                     } else if (descriptor?.kind === "property-key" && properties) {
                         options.count = properties.counts.get(descriptor.key) || 0;
                         options.active = false;

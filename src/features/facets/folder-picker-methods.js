@@ -1,3 +1,4 @@
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 import { registerPickerCleanup } from "../../core/picker-cleanup.js";
@@ -512,7 +513,7 @@ export const SearchFacetController_folder_picker_methods = {
         setIndicatorLabel(core.folderBtn, "文件夹");
         const applied = core.filterState.folders.size > 0;
         core.folderBtn.classList.toggle("is-applied", applied);
-        core.folderBtn.setAttribute("aria-pressed", String(applied));
+        setSearchAttribute(core.folderBtn, "aria-pressed", String(applied));
     },
 };
 

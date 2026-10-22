@@ -1,3 +1,5 @@
+> **2026-10-22 交互热路径审计**：`setIndicatorLabel` 统一调用 `setDomText`；`syncTypeButtons`、`syncFilterButtons`、`updateFolderButton` 走已有同值属性/属性值写入 Primitive。`_renderFilterPoolHeader` 不再读写 scrollLeft，由保留的滚动容器负责原生位置与边界夹取。`FilterEngine.matches` 仅为启用的类型筛选计算 logicalFileType，空属性 Map 不复制条目。无新增方法、状态、缓存、定时器或平台分支；名称、arity 和描述符均不改变。
+
 > **2026-10-22 整合归一**：退休 Navigator `_propertyStats`（无生产调用）；属性值目录与计数统一由 `navigatorPropertyValues` 派生。`_placeProjectionRow` 仅收集有序行，`_finishProjectionRows` 调用 `reconcileDomChildren`，删除旧游标路径。`sync` 持有一个 `_projectionTask`，同步消费/销毁清空任务，已排入微任务通过身份验证退出。全宿主普通浏览共用卡片复用；提交保留已连接节点，失败恢复原页和数组。共享 `setSearchAttribute(node,name,value)` 由 Hover Owner 直接维护辅助标签，`setDomText` 保留标签/图标子节点，`setDomProperty` 跳过同值写入。MobileFrame 只约束本 Frame 内正在编辑的滚动容器；表头/外部焦点释放旧容器，外框保持基准高度。
 
 > **2026-10-22 共享渲染生命周期审计**：`_appendPositionRange(frag,start,end,reuse=null)` 统一索引遍历（原 arity=3 不变），复用事务仅提供 `appendItem`；`_buildResultItem` 只构建，renderPage/虚拟滚动提交/单行替换在节点连接后调用 `_observeShell`。`_fillSnippet` 可接收本次已归一的行数（arity=2 不变）。`resetActiveResultView` 通过配置更新方法提交；相同设置在捕获锚点前返回；共享状态发布者统一确认自己的已应用 revision。

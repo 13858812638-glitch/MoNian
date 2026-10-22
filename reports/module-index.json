@@ -3204,6 +3204,7 @@
       "SearchFacetController_folder_picker_methods"
     ],
     "dependencies": [
+      "../../interactions/hover-hints.js",
       "../../core/picker-cleanup.js",
       "../../data/folders/folder-tree.js",
       "../../interactions/PointerSortCoordinator.js",
@@ -3219,8 +3220,8 @@
       "../folders/exclusions.js",
       "obsidian"
     ],
-    "lines": 518,
-    "bytes": 22138,
+    "lines": 519,
+    "bytes": 22217,
     "origins": [
       {
         "id": "SearchFacetController._showManagedFolderDropdown",
@@ -3414,6 +3415,8 @@
       "SearchFacetController_type_picker_methods"
     ],
     "dependencies": [
+      "../../interactions/hover-hints.js",
+      "../../utils/dom.js",
       "../../data/formats/file-types.js",
       "../../interactions/scroll-anchor.js",
       "../../ui/components/indicator-label.js",
@@ -3425,8 +3428,8 @@
       "../../ui/pickers/tree-row.js",
       "obsidian"
     ],
-    "lines": 313,
-    "bytes": 14102,
+    "lines": 314,
+    "bytes": 14239,
     "origins": [
       {
         "id": "SearchFacetController.openAttachmentTypePicker",
@@ -3478,7 +3481,7 @@
       "./filter-state.js"
     ],
     "lines": 83,
-    "bytes": 3948,
+    "bytes": 3991,
     "origins": [
       {
         "id": "FilterEngine",
@@ -3975,8 +3978,8 @@
       "./toolbar-config.js",
       "obsidian"
     ],
-    "lines": 1454,
-    "bytes": 87009,
+    "lines": 1455,
+    "bytes": 87038,
     "origins": [
       {
         "id": "SearchNavigatorController",
@@ -6844,8 +6847,8 @@
       "../filters/pool-values.js",
       "obsidian"
     ],
-    "lines": 314,
-    "bytes": 14957,
+    "lines": 312,
+    "bytes": 14842,
     "origins": [
       {
         "id": "SearchResultRendererController._renderFilterPoolHeader",
@@ -8422,7 +8425,7 @@
       "../../utils/dom.js"
     ],
     "lines": 14,
-    "bytes": 671,
+    "bytes": 673,
     "origins": [
       {
         "id": "setIndicatorLabel",

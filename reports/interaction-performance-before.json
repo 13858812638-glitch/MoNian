@@ -1,0 +1,318 @@
+[
+  {
+    "name": "desktop sidebar unchanged facet controls preserve nodes without mutations",
+    "passed": false,
+    "evidence": {
+      "mutations": 112,
+      "sameText": false
+    }
+  },
+  {
+    "name": "desktop sidebar filter rail refresh never reads or restores scroll geometry",
+    "passed": false,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 80,
+      "after": 80,
+      "max": 1003,
+      "visible": true
+    }
+  },
+  {
+    "name": "desktop sidebar native horizontal offset survives retained rail updates",
+    "passed": true,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 80,
+      "after": 80,
+      "max": 1003,
+      "visible": true
+    }
+  },
+  {
+    "name": "desktop sidebar shrinking rail is naturally clamped to its scroll range",
+    "passed": true,
+    "evidence": {
+      "left": 0,
+      "max": 0,
+      "oldMax": 1003
+    }
+  },
+  {
+    "name": "desktop sidebar inactive filter fields do no metadata or iterator work",
+    "passed": false,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "desktop sidebar active file type and property filters keep their semantics",
+    "passed": true,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "desktop sidebar stable tag rows normalize each identity only once",
+    "passed": false,
+    "evidence": {
+      "tag0": 2,
+      "tag1": 2,
+      "tag2": 2,
+      "tag3": 2
+    }
+  },
+  {
+    "name": "desktop sidebar no asynchronous browser errors",
+    "passed": true,
+    "evidence": []
+  },
+  {
+    "name": "desktop tab unchanged facet controls preserve nodes without mutations",
+    "passed": false,
+    "evidence": {
+      "mutations": 112,
+      "sameText": false
+    }
+  },
+  {
+    "name": "desktop tab filter rail refresh never reads or restores scroll geometry",
+    "passed": false,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 80,
+      "after": 80,
+      "max": 1003,
+      "visible": true
+    }
+  },
+  {
+    "name": "desktop tab native horizontal offset survives retained rail updates",
+    "passed": true,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 80,
+      "after": 80,
+      "max": 1003,
+      "visible": true
+    }
+  },
+  {
+    "name": "desktop tab shrinking rail is naturally clamped to its scroll range",
+    "passed": true,
+    "evidence": {
+      "left": 0,
+      "max": 0,
+      "oldMax": 1003
+    }
+  },
+  {
+    "name": "desktop tab inactive filter fields do no metadata or iterator work",
+    "passed": false,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "desktop tab active file type and property filters keep their semantics",
+    "passed": true,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "desktop tab no asynchronous browser errors",
+    "passed": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile sidebar unchanged facet controls preserve nodes without mutations",
+    "passed": false,
+    "evidence": {
+      "mutations": 112,
+      "sameText": false
+    }
+  },
+  {
+    "name": "mobile sidebar filter rail refresh never reads or restores scroll geometry",
+    "passed": false,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 0,
+      "after": 0,
+      "max": 0,
+      "visible": false
+    }
+  },
+  {
+    "name": "mobile sidebar hidden mobile rail stays unscrolled",
+    "passed": true,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 0,
+      "after": 0,
+      "max": 0,
+      "visible": false
+    }
+  },
+  {
+    "name": "mobile sidebar shrinking rail is naturally clamped to its scroll range",
+    "passed": true,
+    "evidence": {
+      "left": 0,
+      "max": 0,
+      "oldMax": 0
+    }
+  },
+  {
+    "name": "mobile sidebar inactive filter fields do no metadata or iterator work",
+    "passed": false,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "mobile sidebar active file type and property filters keep their semantics",
+    "passed": true,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "mobile sidebar stable tag rows normalize each identity only once",
+    "passed": false,
+    "evidence": {
+      "tag0": 2,
+      "tag1": 2,
+      "tag2": 2,
+      "tag3": 2
+    }
+  },
+  {
+    "name": "mobile sidebar no asynchronous browser errors",
+    "passed": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile tab unchanged facet controls preserve nodes without mutations",
+    "passed": false,
+    "evidence": {
+      "mutations": 112,
+      "sameText": false
+    }
+  },
+  {
+    "name": "mobile tab filter rail refresh never reads or restores scroll geometry",
+    "passed": false,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 80,
+      "after": 80,
+      "max": 1003,
+      "visible": true
+    }
+  },
+  {
+    "name": "mobile tab native horizontal offset survives retained rail updates",
+    "passed": true,
+    "evidence": {
+      "reads": 32,
+      "writes": 0,
+      "before": 80,
+      "after": 80,
+      "max": 1003,
+      "visible": true
+    }
+  },
+  {
+    "name": "mobile tab shrinking rail is naturally clamped to its scroll range",
+    "passed": true,
+    "evidence": {
+      "left": 0,
+      "max": 0,
+      "oldMax": 1003
+    }
+  },
+  {
+    "name": "mobile tab inactive filter fields do no metadata or iterator work",
+    "passed": false,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "mobile tab active file type and property filters keep their semantics",
+    "passed": true,
+    "evidence": {
+      "match": true,
+      "lazy": {
+        "extensions": 1,
+        "iterations": 1
+      },
+      "rejected": true,
+      "property": true,
+      "activeReads": 3
+    }
+  },
+  {
+    "name": "mobile tab no asynchronous browser errors",
+    "passed": true,
+    "evidence": []
+  }
+]

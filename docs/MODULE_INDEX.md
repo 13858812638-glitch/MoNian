@@ -1,10 +1,12 @@
+> **2026-10-22 交互热路径审计**：共享 Indicator Label 保留可见文本节点；Facet 按钮消费已有同值写入 Primitive；Filter Rail 由原生滚动容器维护偏移；FilterEngine 仅计算启用条件，Navigator 单次归一标签身份。详见 [性能审计](INTERACTION_PERFORMANCE_20261022.md)。
+
 > **2026-10-22 整合归一**：导航目录/计数、卡片复用、投影调度和缓冲预算已共用正式实现；标签写入归属 Hover Owner，详见 [整合审计](INTEGRATED_UNIFICATION_20261022.md)。
 
 # GLS v5.2 · 桌面侧栏优化候选 · 模块职责索引
 
 > 当前候选见 `DESKTOP_NAVIGATOR_20261019.md`，冻结状态以该文档和 AGENTS.md 顶部为准。新增桌面分栏模块及本轮修改模块的信息已同步；其它条目保留历史职责描述。
 
-- 当前源模块（含入口）：**153**；静态导入边：**656**；工程检查：**PASS-ENGINEERING**。
+- 当前源模块（含入口）：**153**；静态导入边：**659**；工程检查：**PASS-ENGINEERING**。
 - 所有运行模块路径均来自当前 `src/`，没有孤立或已经退役的旧文件。
 - 方法归属由当前 `src/` 及 `composeClassMethods()` 确定；`METHOD_INDEX.md` 的原始行号仅是旧源码溯源，不应作为当前行号。
 - 普通属性目录正式 Owner：`src/features/plugin/property-catalog-methods.js`；当前运行源码不再使用旧项目目录模块。
@@ -53,11 +55,11 @@
 | `src/features/create/preview-methods.js` | 242 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchCreateController_preview_methods` |
 | `src/features/facets/SearchFacetController.js` | 102 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController`、`SearchFacetController_picker_model_methods` |
 | `src/features/facets/folder-colors-methods.js` | 270 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_folder_colors_methods` |
-| `src/features/facets/folder-picker-methods.js` | 518 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_folder_picker_methods` |
+| `src/features/facets/folder-picker-methods.js` | 519 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_folder_picker_methods` |
 | `src/features/facets/property-picker-methods.js` | 1093 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_property_picker_methods` |
 | `src/features/facets/sidebar-maintenance-methods.js` | 278 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_sidebar_maintenance_methods` |
 | `src/features/facets/tag-picker-methods.js` | 549 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_tag_picker_methods` |
-| `src/features/facets/type-picker-methods.js` | 313 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_type_picker_methods` |
+| `src/features/facets/type-picker-methods.js` | 314 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_type_picker_methods` |
 | `src/features/filters/FilterEngine.js` | 83 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `FilterEngine` |
 | `src/features/filters/filter-state.js` | 334 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeFileTypeFilterValue`、`normalizeFileTypeFilterSelection`、`normalizeFilterMatchMode`、`FILTER_TIME_FIELDS`、`normalizeFilterDate`、`filterLocalDate`、`normalizeFilterDateRange`、`filterDateRangeDisplay`、`recentFilterDateRange`、`FilterState`、`normalizeLegacyFilterPoolSnapshot`、`clearBrowseRefinements` |
 | `src/features/filters/pool-config.js` | 121 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `FILTER_POOL_KINDS`、`FILTER_POOL_FIXED_DEFS`、`normalizeFilterPoolSelectionMode`、`normalizePropertyPoolEntry`、`normalizePropertyPoolEntries`、`propertyPoolEntryHasState`、`filterPoolId`、`normalizeFilterPoolConfig`、`normalizeFilterPools` |
@@ -66,7 +68,7 @@
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
 | `src/features/navigator/NavigatorCustomization.js` | 897 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
 | `src/features/navigator/navigation-icon.js` | 15 | 复用导航控件的 SVG 替换与标签保留 | `setNavigatorIcon` |
-| `src/features/navigator/SearchNavigatorController.js` | 1454 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
+| `src/features/navigator/SearchNavigatorController.js` | 1455 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId`、`normalizeNavigatorCustomization`、`remapNavigatorCustomization` |
 | `src/features/navigator/desktop-pane.js` | 128 | 桌面分栏拖动、键盘调整、宽度恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid`、`navigatorToolbarActionAvailable`、`navigatorToolbarCatalog`、`normalizeNavigatorToolbars`、`navigatorToolbarIcon`、`NAVIGATOR_VISIBLE_SECTION_DEFS`、`normalizeNavigatorVisibleSections`、`normalizeNavigatorTimeField` |
@@ -99,7 +101,7 @@
 | `src/features/results/SearchResultRendererController.js` | 100 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController` |
 | `src/features/results/SparseHeightIndex.js` | 87 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SparseHeightIndex` |
 | `src/features/results/card-metadata-methods.js` | 347 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_card_metadata_methods` |
-| `src/features/results/filter-channels-methods.js` | 314 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
+| `src/features/results/filter-channels-methods.js` | 312 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
 | `src/features/results/browse-card-reuse.js` | 92 | 全宿主普通浏览卡片的有界复用、提交和回滚 | `beginBrowseCardReuse` |
 | `src/features/results/page-and-snippets-methods.js` | 294 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
 | `src/features/results/result-card-methods.js` | 208 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
@@ -712,7 +714,7 @@
 - **导出**：`IoPool`
 
 ### `src/ui/components/indicator-label.js`
-- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；14 行，671 字节。
+- **职责**：宿主视图、Picker 原语、Dialog 与交互呈现；14 行，673 字节。
 - **直接依赖**：`../../utils/dom.js`
 - **导出**：`setIndicatorLabel`
 

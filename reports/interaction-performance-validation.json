@@ -1,0 +1,194 @@
+{
+  "candidate": "GLS Navigator interaction hot-path audit 2026-10-22",
+  "baselineCommit": "48269f9195c507ce87ba08c63c70f6219dffc46d",
+  "scope": "All 153 JS modules and production CSS inventoried; related interaction/data/DOM/scroll/focus/lifecycle chains reviewed. Only six shared hot-path modules changed.",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 153,
+    "importEdges": 659,
+    "cycles": [],
+    "unresolvedSymbols": 0
+  },
+  "build": {
+    "reproducible": true,
+    "sha256": "98400b1c55598a505a1cac228fe1175c8cacc1a5f77174b08be38093cc9e63a1",
+    "cssUnchanged": true
+  },
+  "node": {
+    "tests": 269,
+    "passed": 265,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "property-count-desktop": 0,
+    "hot-path": 0,
+    "consolidation": 0,
+    "lifecycle": 0,
+    "property-count-mobile": 0,
+    "feishu": 0,
+    "browse": 0,
+    "properties": 0,
+    "rail": 0,
+    "stable": 0,
+    "redundant": 0,
+    "focus": 0,
+    "selection": 0,
+    "tree": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "focus-repair": 0,
+    "repeat": 0,
+    "release": 0,
+    "contracts": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "index": 0,
+    "acceptance-mobile-light": 0,
+    "portal": 0,
+    "acceptance-mobile-dark": 0,
+    "caret": 0,
+    "workflows": 0,
+    "popups": 0
+  },
+  "hotPathBefore": {
+    "passed": 16,
+    "failed": 14
+  },
+  "hotPathAfter": {
+    "passed": 30,
+    "failed": 0
+  },
+  "fixtureCorrection": "Initial horizontal-offset check wrongly required a deliberately CSS-hidden mobile sidebar rail to scroll. Final baseline/candidate tests distinguish visible native scroll preservation and hidden zero offset; product CSS unchanged.",
+  "unverified": [
+    "Native Obsidian desktop performance",
+    "iOS/Android native keyboard and caret",
+    "WebKit",
+    "Actual user vault / CSS snippets / third-party plugin integration"
+  ],
+  "rawEvidence": "/workspace/latency-audit",
+  "consolidation": {
+    "passed": 26,
+    "failed": 0
+  },
+  "lifecycle": {
+    "passed": 14,
+    "failed": 0
+  },
+  "properties": {
+    "passed": 34,
+    "failed": 0
+  },
+  "desktop": {
+    "passed": 55,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mouse": {
+    "passed": 27,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selection": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "repeat": {
+    "passed": 16,
+    "failed": 0
+  },
+  "stable": {
+    "passed": 38,
+    "failed": 0
+  },
+  "redundant": {
+    "passed": 24,
+    "failed": 0
+  },
+  "rail": {
+    "passed": 21,
+    "failed": 0
+  },
+  "browse": {
+    "passed": 24,
+    "failed": 0
+  },
+  "release": {
+    "passed": 32,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0
+  },
+  "feishuComparison": {
+    "passed": 8,
+    "failed": 0
+  },
+  "propertyCountsDesktop": {
+    "passed": 32,
+    "failed": 0
+  },
+  "propertyCountsMobile": {
+    "passed": 32,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "interactionContracts": {
+    "passed": 14,
+    "failed": 0
+  }
+}

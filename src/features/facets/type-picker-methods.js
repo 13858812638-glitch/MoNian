@@ -1,3 +1,5 @@
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
+import { setDomProperty } from "../../utils/dom.js";
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 import { RESULT_FILE_TYPE_ACTIONS, attachmentExtension, fileTypeFilterDisplay, logicalFileType } from "../../data/formats/file-types.js";
@@ -281,31 +283,30 @@ export const SearchFacetController_type_picker_methods = {
         for (const el of core.typeButtonEls || []) {
             const createMode = Boolean(core.createFlow?.isCreateView?.());
             const createUnsupported = createMode && el.dataset.type === "attachment";
-            el.hidden = createUnsupported;
-            el.setAttribute("aria-hidden", String(createUnsupported));
+            setDomProperty(el, "hidden", createUnsupported);
+            setSearchAttribute(el, "aria-hidden", String(createUnsupported));
             const active = !createUnsupported && (
                 core.filterState.fileTypes.has(el.dataset.type)
                 || (el.dataset.type === "attachment"
                     && [...core.filterState.fileTypes].some(value => value === "attachment" || value.startsWith("ext:")))
             );
             el.classList.toggle("is-applied", active);
-            el.setAttribute("aria-pressed", String(active));
+            setSearchAttribute(el, "aria-pressed", String(active));
         }
     },
 
 
     syncFilterButtons() {
         const core = this.owner;
-        const tags = [...core.filterState.tags];
-        const tagApplied = tags.length > 0;
+        const tagApplied = core.filterState.tags.size > 0;
         setIndicatorLabel(core.tagFilterBtn, "标签");
         core.tagFilterBtn.classList.toggle("is-applied", tagApplied);
-        core.tagFilterBtn.setAttribute("aria-pressed", String(tagApplied));
+        setSearchAttribute(core.tagFilterBtn, "aria-pressed", String(tagApplied));
         this.updateFolderButton();
         const propertyApplied = core.filterState.properties.size > 0;
         setIndicatorLabel(core.propertyFilterBtn, "属性");
         core.propertyFilterBtn.classList.toggle("is-applied", propertyApplied);
-        core.propertyFilterBtn.setAttribute("aria-pressed", String(propertyApplied));
+        setSearchAttribute(core.propertyFilterBtn, "aria-pressed", String(propertyApplied));
         this.renderPinnedPropertyFilters();
         this.syncTypeButtons();
     },

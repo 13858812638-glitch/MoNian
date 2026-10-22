@@ -28,8 +28,6 @@ export const SearchResultRendererController_filter_channels_methods = {
             return;
         }
 
-        const valuesLeft = values.scrollLeft;
-        const shortcutsLeft = shortcuts.scrollLeft;
         const poolSettings = core.resultControls.filterPools();
         // Catalog 与结果共用同一个有界缓存；命中时不再等待整库标签/目录统计。
         const catalog = core.resultControls._filterPoolHeaderCatalog(poolSettings);
@@ -41,8 +39,8 @@ export const SearchResultRendererController_filter_channels_methods = {
         setDomProperty(host, "hidden", values.hidden && shortcuts.hidden);
         setSearchAttribute(host, "aria-hidden", String(host.hidden));
 
-        if (values.scrollLeft !== valuesLeft) values.scrollLeft = valuesLeft;
-        if (shortcuts.scrollLeft !== shortcutsLeft) shortcuts.scrollLeft = shortcutsLeft;
+        // Retained scrollers keep their native offsets. The browser clamps
+        // shrinking content; measuring/restoring here only forces layout.
     },
 
 
