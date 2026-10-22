@@ -22957,6 +22957,48 @@ function setNavigatorProperty(nav, node, name, value) {
     if (node && (!nav.desktopSidebar || node[name] !== value))
         node[name] = value;
 }
+// Folder changes only alter these values, not the row's presentation.
+function syncNavigatorRowValues(nav, tree, options) {
+    const active = Boolean(options.active);
+    if (!nav.desktopSidebar || tree.row.classList.contains("is-selected") !== active)
+        tree.row.classList.toggle("is-selected", active);
+    setNavigatorAttribute(nav, tree.button, "aria-pressed", String(active));
+    let badge = tree.row.querySelector(":scope > .local-search-move-current-badge");
+    const hasCount = options.count !== null && options.count !== undefined && options.count !== "";
+    if (!badge && hasCount)
+        badge = tree.row.createSpan({ cls: "local-search-move-current-badge" });
+    if (!badge)
+        return;
+    setNavigatorProperty(nav, badge, "hidden", !hasCount);
+    if (!hasCount)
+        return;
+    const text = String(options.count);
+    if (nav.desktopSidebar && badge.firstChild?.nodeType === 3) {
+        if (badge.firstChild.nodeValue !== text)
+            badge.firstChild.nodeValue = text;
+    }
+    else
+        setNavigatorProperty(nav, badge, "textContent", text);
+}
+// One pass through scoped metadata, without collecting/sorting unused values.
+function navigatorPropertyPresence(nav, scope, keys) {
+    return nav._cached("property-presence", () => {
+        const allowed = new Set(keys), counts = new Map();
+        let present = 0;
+        for (const meta of scope) {
+            let matched = false;
+            for (const key of Object.keys(meta.properties || {})) {
+                if (!allowed.has(key))
+                    continue;
+                counts.set(key, (counts.get(key) || 0) + 1);
+                matched = true;
+            }
+            if (matched)
+                present++;
+        }
+        return { counts, present };
+    });
+}
 // Internal scroll-to-layout notification boundary; native scrolling itself is
 // untouched. Kept outside the frozen Navigator prototype method contract.
 function scheduleNavigatorScrollStateSave(nav) {
@@ -23008,11 +23050,14 @@ class SearchNavigatorController {
         this.renderRevision = -1;
         this.searchVisible = false;
         this._projectionCache = new Map();
+        this._desktopFacetModels = new Map();
         // Desktop folder changes alter selection, not the physical inventory.
         // Invalidate its derived counts on actual vault/index/settings changes.
         if (!obsidian_1.Platform.isMobile) {
             const invalidateCounts = () => {
                 this._desktopFolderCounts = null;
+                this._desktopFacetModels.clear();
+                this._projectionCache.clear();
                 this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
                 this.renderRevision = -1;
             };
@@ -23632,6 +23677,7 @@ class SearchNavigatorController {
             return;
         this._projectionCache.clear();
         this._desktopFolderCounts = null;
+        this._desktopFacetModels.clear();
         this._desktopFolderEpoch = (this._desktopFolderEpoch || 0) + 1;
         this._cacheRevision = -1;
         this.renderRevision = -1;
@@ -23967,6 +24013,7 @@ class SearchNavigatorController {
             ref.rows.set(id, tree);
         }
         tree._navOptions = options;
+        syncNavigatorRowValues(this, tree, options);
         // A desktop disclosure changes one branch. Keep callbacks current but
         // do not restamp every unchanged sibling, icon, style and sort control.
         // Preference/index invalidation advances the epoch, so appearance and
@@ -23974,7 +24021,7 @@ class SearchNavigatorController {
         if (this.desktopSidebar) {
             // Folder nodes expose lazy children. Never serialize the node (or
             // its fixed-row callbacks), which would walk collapsed subtrees.
-            const { navDescriptor, ...presentation } = options;
+            const { navDescriptor, count, active, ...presentation } = options;
             const { node, fixedOptions, ...descriptor } = navDescriptor || {};
             const signature = JSON.stringify([presentation, descriptor, Boolean(options.onClick), this._desktopFolderEpoch || 0,
                 this.customization.sortMode, this.customization.sortScope, this.customization.maintenanceMode]);
@@ -23990,8 +24037,6 @@ class SearchNavigatorController {
         }
         tree.row.dataset.navRowKey = id;
         tree.row.dataset.pickerKey = options.itemTitle || options.name || "";
-        tree.row.classList.toggle("is-selected", Boolean(options.active));
-        tree.button.setAttribute("aria-pressed", String(Boolean(options.active)));
         tree.button.setAttribute("aria-label", options.itemTitle || options.name || "");
         tree.button.disabled = !options.onClick;
         const name = tree.button.querySelector(".local-search-move-tree-name");
@@ -24014,15 +24059,6 @@ class SearchNavigatorController {
         else {
             tree.toggle.setAttribute("aria-hidden", "true");
             tree.toggle.removeAttribute("aria-expanded");
-        }
-        let badge = tree.row.querySelector(":scope > .local-search-move-current-badge");
-        const hasCount = options.count !== null && options.count !== undefined && options.count !== "";
-        if (!badge && hasCount)
-            badge = tree.row.createSpan({ cls: "local-search-move-current-badge" });
-        if (badge) {
-            badge.hidden = !hasCount;
-            if (hasCount && badge.textContent !== String(options.count))
-                badge.textContent = String(options.count);
         }
         if (options.icon && tree.iconEl.dataset.navIcon !== options.icon && !options.navDescriptor) {
             (0, navigation_icon_js_1.setNavigatorIcon)(tree.iconEl, options.icon);
@@ -24085,6 +24121,11 @@ class SearchNavigatorController {
             onClick: () => this.openSection(kind, row.button) });
     }
     _cached(key, build) {
+        if (this.desktopSidebar && (key === "desktop-tag-tree" || key.startsWith("desktop-property-keys:"))) {
+            if (!this._desktopFacetModels.has(key))
+                this._desktopFacetModels.set(key, build());
+            return this._desktopFacetModels.get(key);
+        }
         if (!obsidian_1.Platform.isMobile && key === "folder-counts") {
             const exclusions = JSON.stringify(this.core.plugin.settings.excludedFolders || []);
             if (!this._desktopFolderCounts || this._desktopFolderCountExclusions !== exclusions) {
@@ -24100,7 +24141,7 @@ class SearchNavigatorController {
     _propertyKeys(universe) {
         const showExcluded = this.customization.maintenanceMode?.kind === "property-key" && this.customization.maintenanceMode.id === "exclude";
         const excluded = showExcluded ? [] : this.core.plugin.settings.excludedKeys;
-        return this._cached("property-keys", () => this.core.filterState.folders.size
+        return this._cached(this.desktopSidebar ? `desktop-property-keys:${showExcluded}` : "property-keys", () => !this.desktopSidebar && this.core.filterState.folders.size
             ? (0, property_catalog_js_1.collectPropertyKeys)(universe, excluded)
             : this.core.plugin.propertyCatalogKeys((0, property_catalog_js_1.collectPropertyKeys)(universe, excluded), excluded));
     }
@@ -24245,6 +24286,7 @@ class SearchNavigatorController {
         }
         const navigation = this._cached("navigation", () => core._navigationCandidates());
         const universe = navigation.scope;
+        const inventory = this.desktopSidebar ? navigation.all : universe;
         const definitions = this._definitions();
         for (const [id, ref] of this.sections)
             setNavigatorProperty(this, ref.section, "hidden", !definitions.some(def => def[0] === id));
@@ -24289,7 +24331,10 @@ class SearchNavigatorController {
             // Expanding one branch does not rebuild unrelated sections or scan the vault.
             const prefix = id === "tags" ? "tag:" : `${id}:`;
             const desktopFolder = !obsidian_1.Platform.isMobile && id === "folder";
-            const signature = JSON.stringify([desktopFolder ? this._desktopFolderEpoch || 0 : core._resultGeneration,
+            const stableFacet = this.desktopSidebar && !this.customization.sortMode
+                && !this.customization.maintenanceMode && (id === "tags" || id === "properties");
+            const signature = JSON.stringify([desktopFolder || stableFacet ? this._desktopFolderEpoch || 0 : core._resultGeneration,
+                stableFacet,
                 this.layout, [...this.expanded].filter(key => key.startsWith(prefix)),
                 ...(desktopFolder ? [core.plugin.settings.excludedFolders || []] : [])]);
             let count = 0, selected = false;
@@ -24303,8 +24348,9 @@ class SearchNavigatorController {
             }
             else if (id === "properties") {
                 const candidates = universe;
-                const keys = this._propertyKeys(universe);
-                count = this._cached("property-present-count", () => candidates.filter(meta => keys.some(key => (0, property_values_js_1.metaHasProperty)(meta, key))).length);
+                const keys = this._propertyKeys(inventory);
+                count = this.desktopSidebar ? navigatorPropertyPresence(this, candidates, keys).present
+                    : this._cached("property-present-count", () => candidates.filter(meta => keys.some(key => (0, property_values_js_1.metaHasProperty)(meta, key))).length);
                 selected = state.properties.size > 0;
             }
             // The hover-hint owner may append a hidden accessible-name span.
@@ -24341,6 +24387,26 @@ class SearchNavigatorController {
                 }
                 ref.generation = core._resultGeneration;
             }
+            if (ref.signature === signature && stableFacet) {
+                const tags = id === "tags" ? this._cached("tag-counts", () => (0, tag_values_js_1.buildHierarchicalTagUsageCounts)(universe)) : null;
+                const selectedTags = tags ? new Set([...state.tags].map(tag_values_js_1.tagIdentityKey)) : null;
+                const properties = id === "properties" ? navigatorPropertyPresence(this, universe, this._propertyKeys(inventory)) : null;
+                for (const tree of ref.rows?.values() || []) {
+                    const options = tree._navOptions, descriptor = options?.navDescriptor;
+                    if (descriptor?.kind === "tag" && tags) {
+                        options.count = descriptor.key === tag_values_js_1.NO_TAGS_FILTER_VALUE ? tags.noTags : tags.counts.get((0, tag_values_js_1.tagIdentityKey)(descriptor.key)) || 0;
+                        options.active = selectedTags.has((0, tag_values_js_1.tagIdentityKey)(descriptor.key));
+                    }
+                    else if (descriptor?.kind === "property-key" && properties) {
+                        options.count = properties.counts.get(descriptor.key) || 0;
+                        options.active = false;
+                    }
+                    else
+                        continue;
+                    syncNavigatorRowValues(this, tree, options);
+                }
+                ref.generation = core._resultGeneration;
+            }
             if (ref.content.hidden || ref.signature === signature)
                 continue;
             ref.signature = signature;
@@ -24374,14 +24440,14 @@ class SearchNavigatorController {
             else if (id === "tags") {
                 const candidates = universe;
                 const counts = this._cached("tag-counts", () => (0, tag_values_js_1.buildHierarchicalTagUsageCounts)(candidates));
-                this._tree(ref, this._cached("tag-tree", () => (0, tag_tree_js_1.buildTagTreeModel)(universe, core.plugin.settings.pickerTagOrder)), "tag", node => ({
+                this._tree(ref, this._cached(this.desktopSidebar ? "desktop-tag-tree" : "tag-tree", () => (0, tag_tree_js_1.buildTagTreeModel)(inventory, core.plugin.settings.pickerTagOrder)), "tag", node => ({
                     name: node.name, itemTitle: node.path, icon: "tag", count: counts.counts.get((0, tag_values_js_1.tagIdentityKey)(node.path)) || 0,
                     active: [...state.tags].some(tag => (0, tag_values_js_1.tagIdentityKey)(tag) === (0, tag_values_js_1.tagIdentityKey)(node.path)), onClick: () => this.select("tag", node.path)
                 }), id, { kind: "tag", key: tag_values_js_1.NO_TAGS_FILTER_VALUE, label: "无标签", icon: "tag", sortable: false,
                     fixedOptions: { name: "无标签", icon: "tag", count: counts.noTags, active: state.tags.has(tag_values_js_1.NO_TAGS_FILTER_VALUE), onClick: () => this.select("tag", tag_values_js_1.NO_TAGS_FILTER_VALUE) } });
             }
             else if (id === "properties") {
-                const keys = this._propertyKeys(universe);
+                const keys = this._propertyKeys(inventory);
                 const properties = this.customization.order(group.id, keys.map(key => ({ kind: "property-key", key, label: key, icon: "list" })));
                 let displayedKeys = 0;
                 for (const descriptor of properties) {
@@ -24392,15 +24458,17 @@ class SearchNavigatorController {
                     if (++displayedKeys > 40)
                         break;
                     const key = descriptor.key;
-                    const stats = this._propertyStats(key, universe, state);
                     if (this.layout !== "mobile"
                         && !(this.customization.sortMode && this.customization.sortScope === "property-value")) {
                         // Desktop retains its established click-to-Picker flow.
                         // Nested property values appear only for an explicit
                         // category-local value move, never as a permanent second UI.
-                        const row = this._row(ref, { name: key, icon: "list", navDescriptor: descriptor, count: stats.present, active: false, onClick: () => this._openProperty(key, row.button) });
+                        const present = this.desktopSidebar ? navigatorPropertyPresence(this, universe, keys).counts.get(key) || 0
+                            : this._propertyStats(key, universe, state).present;
+                        const row = this._row(ref, { name: key, icon: "list", navDescriptor: descriptor, count: present, active: false, onClick: () => this._openProperty(key, row.button) });
                         continue;
                     }
+                    const stats = this._propertyStats(key, universe, state);
                     const expansion = `properties:${key}`;
                     const expanded = this.expanded.has(expansion);
                     const toggle = () => {
@@ -24494,6 +24562,8 @@ class SearchNavigatorController {
         this._desktopPane?.destroy();
         this._desktopPane = null;
         this._desktopFolderCounts = null;
+        this._desktopFacetModels?.clear();
+        this._projectionCache?.clear();
         this.customization?.destroy();
         for (const cleanup of this.cleanups.splice(0))
             cleanup();

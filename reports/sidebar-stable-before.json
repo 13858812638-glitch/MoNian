@@ -1,0 +1,419 @@
+[
+  {
+    "name": "desktop keeps complete tag and property inventory",
+    "pass": false,
+    "evidence": {
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "initial": {
+        "tags": [
+          "无标签",
+          "Remote",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "beta",
+          "empty",
+          "flag",
+          "rootOnly"
+        ]
+      },
+      "remote": null,
+      "work": "2",
+      "one": "2",
+      "beta": null,
+      "alpha": "2",
+      "empty": "1",
+      "flag": "1",
+      "amount": "1",
+      "same": false
+    }
+  },
+  {
+    "name": "desktop retains the same DOM row nodes",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "unrelated tags and keys stay visible with zero counts",
+    "pass": false,
+    "evidence": {
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "initial": {
+        "tags": [
+          "无标签",
+          "Remote",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "beta",
+          "empty",
+          "flag",
+          "rootOnly"
+        ]
+      },
+      "remote": null,
+      "work": "2",
+      "one": "2",
+      "beta": null,
+      "alpha": "2",
+      "empty": "1",
+      "flag": "1",
+      "amount": "1",
+      "same": false
+    }
+  },
+  {
+    "name": "hierarchical tags count each file once",
+    "pass": true,
+    "evidence": {
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "initial": {
+        "tags": [
+          "无标签",
+          "Remote",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "beta",
+          "empty",
+          "flag",
+          "rootOnly"
+        ]
+      },
+      "remote": null,
+      "work": "2",
+      "one": "2",
+      "beta": null,
+      "alpha": "2",
+      "empty": "1",
+      "flag": "1",
+      "amount": "1",
+      "same": false
+    }
+  },
+  {
+    "name": "empty false and zero are present properties",
+    "pass": true,
+    "evidence": {
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "initial": {
+        "tags": [
+          "无标签",
+          "Remote",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "beta",
+          "empty",
+          "flag",
+          "rootOnly"
+        ]
+      },
+      "remote": null,
+      "work": "2",
+      "one": "2",
+      "beta": null,
+      "alpha": "2",
+      "empty": "1",
+      "flag": "1",
+      "amount": "1",
+      "same": false
+    }
+  },
+  {
+    "name": "folder switching does not remove insert or reorder facet rows",
+    "pass": false,
+    "evidence": {
+      "writes": 123,
+      "decorations": 56,
+      "modelBuilds": 26,
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "same": false
+    }
+  },
+  {
+    "name": "count updates do not redecorate unchanged rows",
+    "pass": false,
+    "evidence": {
+      "writes": 123,
+      "decorations": 56,
+      "modelBuilds": 26,
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "same": false
+    }
+  },
+  {
+    "name": "folder changes reuse tag and property inventory models",
+    "pass": false,
+    "evidence": {
+      "writes": 123,
+      "decorations": 56,
+      "modelBuilds": 26,
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "same": false
+    }
+  },
+  {
+    "name": "zero-count tag remains selectable and shows empty results",
+    "pass": false,
+    "evidence": {
+      "count": 2,
+      "selected": false,
+      "remote": null
+    }
+  },
+  {
+    "name": "empty folder keeps all rows and zero counts",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "counts": [
+        "0"
+      ]
+    }
+  },
+  {
+    "name": "catalog-only key remains visible in a selected folder",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "index addition refreshes global rows outside current folder",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "new folder scope updates live counts",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "metadata edits invalidate removed and added inventory",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "global property exclusions still hide excluded keys",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "file deletion removes its last unique tag and key",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile retains folder-scoped inventory",
+    "pass": true,
+    "evidence": {
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "initial": {
+        "tags": [
+          "无标签",
+          "Remote",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "beta",
+          "empty",
+          "flag",
+          "rootOnly"
+        ]
+      },
+      "remote": null,
+      "work": "2",
+      "one": "2",
+      "beta": null,
+      "alpha": "2",
+      "empty": "1",
+      "flag": "1",
+      "amount": "1",
+      "same": false
+    }
+  },
+  {
+    "name": "mobile counts remain folder-scoped",
+    "pass": true,
+    "evidence": {
+      "inventory": {
+        "tags": [
+          "无标签",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "empty",
+          "flag"
+        ]
+      },
+      "initial": {
+        "tags": [
+          "无标签",
+          "Remote",
+          "Shared",
+          "Work",
+          "Work/One",
+          "Work/Two"
+        ],
+        "properties": [
+          "alpha",
+          "amount",
+          "beta",
+          "empty",
+          "flag",
+          "rootOnly"
+        ]
+      },
+      "remote": null,
+      "work": "2",
+      "one": "2",
+      "beta": null,
+      "alpha": "2",
+      "empty": "1",
+      "flag": "1",
+      "amount": "1",
+      "same": false
+    }
+  }
+]

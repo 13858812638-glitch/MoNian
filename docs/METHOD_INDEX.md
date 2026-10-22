@@ -1,3 +1,5 @@
+> **2026-10-22 桌面侧栏固定筛选列表**：无新增类原型方法。Navigator 内部 `syncNavigatorRowValues` 仅更新计数/选择，`navigatorPropertyPresence` 在当前目录范围一次扫描统计属性存在性。`_cached` 的全局标签树/属性键派生缓存随索引、文件事件、偏好更新失效并在销毁时清空；`_renderProjection` 在结构不变时直接更新已有行，保留原折叠、维护及共享 Picker 路径。移动端与其他宿主仍按目录生成列表。
+
 > 2026-10-22 桌面侧栏鼠标候选：`SearchView.onOpen` 仅为 Tab 或移动 sidebar 注册整面板 SwipeBack；桌面 sidebar 取消该注册，子 Picker 继续独立管理返回层。公开原型、移动端与 Tab 的导航逻辑不变。
 
 > 2026-10-22 侧栏图标与点击候选：内部函数 `setNavigatorIcon` 归属 `features/navigator/navigation-icon.js`，由 Navigator 与其 customization 复用，替换 SVG 并保留辅助标签；`SearchResultRendererController._windowSize` 仍是窗口预算唯一 Owner，仅桌面 sidebar 使用半屏双侧缓冲。无新增公开方法。

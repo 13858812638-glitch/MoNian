@@ -1,0 +1,155 @@
+{
+  "candidate": "Desktop sidebar stable tag/property inventory 2026-10-22",
+  "parentCommit": "5d9c03c7cf18f56f0b4a0348af4798cf1a5632e6",
+  "environment": "Chromium, mocked Obsidian SearchView lifecycle",
+  "runtimeSourceChanges": [
+    "src/features/navigator/SearchNavigatorController.js"
+  ],
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 152,
+    "importEdges": 649,
+    "unresolvedSymbols": 0,
+    "cycles": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "e71e33521f3fea23294579f705a926e09dd6880edc528544d3cc347300e9f09c"
+  },
+  "node": {
+    "passed": 258,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "initialNodeAdditionalFailures": {
+    "count": 6,
+    "cause": "Lifecycle fixtures construct a partial Navigator without caches; unconditional cleanup threw.",
+    "correction": "Cache release tolerates partial initialization; full Node rerun returns to the 4 preexisting failures."
+  },
+  "stableFacets": {
+    "passed": 21,
+    "failed": 0
+  },
+  "reproducerBefore": {
+    "passed": 8,
+    "failed": 10
+  },
+  "workReduction": {
+    "scenario": "Initial selection of A followed by 12 alternating B/A selections; 4-file fixture, expanded hierarchical tags and properties.",
+    "rowAddRemove": {
+      "before": 123,
+      "after": 0
+    },
+    "rowDecoration": {
+      "before": 56,
+      "after": 0
+    },
+    "inventoryModelBuilds": {
+      "before": 26,
+      "after": 0
+    },
+    "nativeLatencyMeasured": false
+  },
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS",
+    "Native Android",
+    "WebKit",
+    "Third-party integrations in a real vault"
+  ],
+  "rawEvidence": "/workspace/sidebar-stable-audit",
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "selection": 0,
+    "refresh": 0,
+    "tree": 0,
+    "mouse": 0,
+    "release": 0,
+    "contracts": 0,
+    "repeat": 0,
+    "desktop": 0,
+    "mobile": 0,
+    "index": 0,
+    "browser": 1,
+    "portal": 0,
+    "caret": 0,
+    "popups": 0,
+    "workflows": 0,
+    "acceptance": 0,
+    "stable-final": 0,
+    "release-final": 0
+  },
+  "desktop": {
+    "passed": 55,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mouse": {
+    "passed": 27,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selection": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "release": {
+    "passed": 32,
+    "failed": 0
+  },
+  "repeat": {
+    "passed": 16,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "interactionContracts": {
+    "passed": 14,
+    "failed": 0
+  }
+}
