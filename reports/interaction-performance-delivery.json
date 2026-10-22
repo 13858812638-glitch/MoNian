@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "c8237d46a5f951e20023b896c7e175b2b28ca4c6",
+  "branch": "fix/desktop-sidebar",
+  "remoteVerified": true,
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Interaction-20261022.zip",
+  "bytes": 433536,
+  "sha256": "98212fcb95dba00205ce74ccd51670d4488745712c86ccf9d86c68ec1adc3fe1",
+  "entries": [
+    "main.js",
+    "styles.css"
+  ],
+  "crc": "pass",
+  "distBytesMatch": true,
+  "instruction": "Replace main.js/styles.css; preserve installed manifest.json/data.json."
+}
