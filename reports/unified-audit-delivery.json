@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "4299997f3653e18186bc414e9d4a71b0b24ed9b9",
+  "branch": "fix/desktop-sidebar",
+  "remoteVerified": true,
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Shared-Render-Audit-20261022.zip",
+  "bytes": 433789,
+  "sha256": "c0996cde108efc2b39d66fef53bb7a5bb1541b0936ed7af78ebab807243b48cc",
+  "entries": [
+    "main.js",
+    "styles.css"
+  ],
+  "crc": "pass",
+  "distBytesMatch": true,
+  "instruction": "Replace main.js/styles.css only; preserve the installed manifest.json/data.json."
+}
