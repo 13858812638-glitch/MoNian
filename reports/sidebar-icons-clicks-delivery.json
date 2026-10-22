@@ -21,6 +21,7 @@
   "manifestIncluded": false,
   "sourceParentCommit": "c3a54b9",
   "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Icons-Clicks-20261022.zip",
-  "remoteDownloadVerified": false,
-  "remotePayloadMatchesBuild": false
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "sourceCommit": "df047eb103a93581c6233a26872da2f01d9cdf6d"
 }
