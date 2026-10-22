@@ -1,0 +1,174 @@
+[
+  {
+    "name": "light unchanged filter rail refresh performs no DOM writes",
+    "passed": false,
+    "evidence": {
+      "changes": 1510,
+      "labelStable": false,
+      "textStable": false,
+      "text": "tag1",
+      "name": "标签：tag1，9 项"
+    }
+  },
+  {
+    "name": "light visible text and accessible label nodes survive refresh",
+    "passed": false,
+    "evidence": {
+      "changes": 1510,
+      "labelStable": false,
+      "textStable": false,
+      "text": "tag1",
+      "name": "标签：tag1，9 项"
+    }
+  },
+  {
+    "name": "light filter chip keeps its visible and accessible names",
+    "passed": true,
+    "evidence": {
+      "changes": 1510,
+      "labelStable": false,
+      "textStable": false,
+      "text": "tag1",
+      "name": "标签：tag1，9 项"
+    }
+  },
+  {
+    "name": "light chip action still filters matching results",
+    "passed": true,
+    "evidence": {
+      "selected": true,
+      "count": 9,
+      "pressed": "true",
+      "writes": 152
+    }
+  },
+  {
+    "name": "light selection changes only affected presentation",
+    "passed": false,
+    "evidence": {
+      "selected": true,
+      "count": 9,
+      "pressed": "true",
+      "writes": 152
+    }
+  },
+  {
+    "name": "light pinned property keeps its live popup anchor",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "light index changes update accessible usage counts",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "light visibility changes remove the correct group",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "dark unchanged filter rail refresh performs no DOM writes",
+    "passed": false,
+    "evidence": {
+      "changes": 1510,
+      "labelStable": false,
+      "textStable": false,
+      "text": "tag1",
+      "name": "标签：tag1，9 项"
+    }
+  },
+  {
+    "name": "dark visible text and accessible label nodes survive refresh",
+    "passed": false,
+    "evidence": {
+      "changes": 1510,
+      "labelStable": false,
+      "textStable": false,
+      "text": "tag1",
+      "name": "标签：tag1，9 项"
+    }
+  },
+  {
+    "name": "dark filter chip keeps its visible and accessible names",
+    "passed": true,
+    "evidence": {
+      "changes": 1510,
+      "labelStable": false,
+      "textStable": false,
+      "text": "tag1",
+      "name": "标签：tag1，9 项"
+    }
+  },
+  {
+    "name": "dark chip action still filters matching results",
+    "passed": true,
+    "evidence": {
+      "selected": true,
+      "count": 9,
+      "pressed": "true",
+      "writes": 152
+    }
+  },
+  {
+    "name": "dark selection changes only affected presentation",
+    "passed": false,
+    "evidence": {
+      "selected": true,
+      "count": 9,
+      "pressed": "true",
+      "writes": 152
+    }
+  },
+  {
+    "name": "dark pinned property keeps its live popup anchor",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "dark index changes update accessible usage counts",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "dark visibility changes remove the correct group",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile filter chip keeps its visible and accessible names",
+    "passed": true,
+    "evidence": {
+      "changes": 570,
+      "labelStable": false,
+      "textStable": true,
+      "text": "tag1",
+      "name": "标签：tag1，9 项"
+    }
+  },
+  {
+    "name": "mobile chip action still filters matching results",
+    "passed": true,
+    "evidence": {
+      "selected": true,
+      "count": 9,
+      "pressed": "true",
+      "writes": 58
+    }
+  },
+  {
+    "name": "mobile pinned property keeps its live popup anchor",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile index changes update accessible usage counts",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile visibility changes remove the correct group",
+    "passed": true,
+    "evidence": null
+  }
+]

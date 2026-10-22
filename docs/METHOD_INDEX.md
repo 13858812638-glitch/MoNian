@@ -1,3 +1,5 @@
+> **2026-10-22 侧栏结果筛选条审计**：仅 `filter-channels-methods.js` 增加内部 `setFilterRailAttribute` / `setFilterRailProperty`，在桌面 sidebar 抑制不变的显示写入；标签意图仅附着于对应 DOM 节点，生命周期随该节点释放。`_syncFilterPoolButton` 更新可见文本节点并保留 Hover Hint 拥有的无障碍标签。分组、快捷按钮、筛选条显隐仍由原方法负责，无新增原型方法或数据状态。
+
 > **2026-10-22 侧栏冗余动作审计**：Navigator 内部 `navigatorSectionProjection` 统一结构预检和实际渲染签名。`_renderProjection` 仅在桌面侧栏的列表结构不变时省略逐行位置测量及滚动恢复；结构变化和显式恢复仍走原锚点路径。`_cached` 按当前文件夹集合复用导航候选/标签计数/属性存在计数，只保留一个范围；索引、文件事件、偏好更新及销毁统一失效。无新增类原型方法。
 
 > **2026-10-22 桌面侧栏固定筛选列表**：无新增类原型方法。Navigator 内部 `syncNavigatorRowValues` 仅更新计数/选择，`navigatorPropertyPresence` 在当前目录范围一次扫描统计属性存在性。`_cached` 的全局标签树/属性键派生缓存随索引、文件事件、偏好更新失效并在销毁时清空；`_renderProjection` 在结构不变时直接更新已有行，保留原折叠、维护及共享 Picker 路径。移动端与其他宿主仍按目录生成列表。

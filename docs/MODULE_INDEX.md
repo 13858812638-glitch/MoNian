@@ -97,7 +97,7 @@
 | `src/features/results/SearchResultRendererController.js` | 94 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController` |
 | `src/features/results/SparseHeightIndex.js` | 87 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SparseHeightIndex` |
 | `src/features/results/card-metadata-methods.js` | 347 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_card_metadata_methods` |
-| `src/features/results/filter-channels-methods.js` | 310 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
+| `src/features/results/filter-channels-methods.js` | 337 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
 | `src/features/results/page-and-snippets-methods.js` | 274 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
 | `src/features/results/result-card-methods.js` | 207 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS` 等 11 项 |
@@ -584,7 +584,7 @@
 - **导出**：`SearchResultRendererController_card_metadata_methods`
 
 ### `src/features/results/filter-channels-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；310 行，14,513 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；337 行，16,142 字节。
 - **直接依赖**：`../../data/properties/property-catalog.js`、`../../ui/components/indicator-label.js`、`../../ui/components/input-controls.js`、`../../utils/preferred-order.js`、`../filters/pool-config.js`、`../filters/pool-values.js`、`obsidian`
 - **导出**：`SearchResultRendererController_filter_channels_methods`
 

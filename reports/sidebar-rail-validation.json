@@ -1,0 +1,160 @@
+{
+  "candidate": "Desktop sidebar filter rail audit 2026-10-22",
+  "parentCommit": "542fe7219fa404c91ecd7918ab2b25b6f6cb48b7",
+  "environment": "Chromium, mocked Obsidian SearchView lifecycle",
+  "runtimeSourceChanges": [
+    "src/features/results/filter-channels-methods.js"
+  ],
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 152,
+    "importEdges": 649,
+    "unresolvedSymbols": 0,
+    "cycles": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "23955876f299aab16724cd953f1a3a0cac3416b8e1d52acc75f90d0f1e5c7851"
+  },
+  "node": {
+    "passed": 258,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "filterRail": {
+    "passed": 21,
+    "failed": 0
+  },
+  "reproducerBefore": {
+    "passed": 15,
+    "failed": 6
+  },
+  "workReduction": {
+    "scenario": "36-file SearchView fixture with visible pools and a pinned property; DOM mutations counted inside filterPoolHost after hover-label observer settles.",
+    "tenUnchangedRefreshes": {
+      "before": 1510,
+      "after": 0
+    },
+    "oneTagSelection": {
+      "before": 152,
+      "after": 2
+    },
+    "visibleAndAccessibleNodesRetained": true,
+    "nativeLatencyMeasured": false
+  },
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS",
+    "Native Android",
+    "WebKit",
+    "Third-party integrations in a real vault",
+    "Native screen readers"
+  ],
+  "rawEvidence": "/workspace/sidebar-rail-audit",
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "stable": 0,
+    "rail": 0,
+    "redundant": 0,
+    "selection": 0,
+    "tree": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "release": 0,
+    "contracts": 0,
+    "repeat": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "index": 0,
+    "acceptance-mobile-light": 0,
+    "portal": 0,
+    "caret": 0,
+    "acceptance-mobile-dark": 0,
+    "workflows": 0,
+    "popups": 0
+  },
+  "desktop": {
+    "passed": 55,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mouse": {
+    "passed": 27,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selection": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "release": {
+    "passed": 32,
+    "failed": 0
+  },
+  "repeat": {
+    "passed": 16,
+    "failed": 0
+  },
+  "stable": {
+    "passed": 21,
+    "failed": 0
+  },
+  "redundant": {
+    "passed": 24,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "interactionContracts": {
+    "passed": 14,
+    "failed": 0
+  }
+}

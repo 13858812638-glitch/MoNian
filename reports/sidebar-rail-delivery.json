@@ -1,0 +1,27 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Sidebar-Filter-Rail-20261022.zip",
+  "bytes": 432224,
+  "sha256": "b0f6d4624f81168eacd0219f611c32c61d3cb7afbd252825532772c06c107be5",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1765127,
+      "sha256": "23955876f299aab16724cd953f1a3a0cac3416b8e1d52acc75f90d0f1e5c7851"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264825,
+      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+    }
+  ],
+  "sourceParentCommit": "542fe7219fa404c91ecd7918ab2b25b6f6cb48b7",
+  "reproducibleBuild": true,
+  "remoteDownloadVerified": false,
+  "remotePayloadMatchesBuild": false,
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Filter-Rail-20261022.zip"
+}
