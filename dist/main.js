@@ -23029,6 +23029,14 @@ function navigatorPropertyPresence(nav, scope, keys) {
         return { counts, present };
     });
 }
+// Only expanded desktop keys need value models. Keep inventory independent of
+// the folder scope and counts independent of the current property selection.
+// Existing index/catalog/preference invalidation owns both derived caches.
+function navigatorPropertyValues(nav, key, scope, inventory) {
+    const global = nav._cached(`desktop-property-values:${key}`, () => (0, property_values_js_1.buildPropertyUsageStats)(inventory, key, [], nav.core.plugin.propertyCatalogValues(key)));
+    const scoped = nav._cached(`desktop-property-counts:${key}`, () => nav.core.filterState.folders.size ? (0, property_values_js_1.buildPropertyUsageStats)(scope, key) : global);
+    return { values: global.values, counts: scoped.counts };
+}
 // Use the same structural key for the preflight and the actual projection.
 function navigatorSectionProjection(nav, id) {
     const prefix = id === "tags" ? "tag:" : `${id}:`;
@@ -24167,7 +24175,8 @@ class SearchNavigatorController {
     _cached(key, build) {
         // Query/tag/property refinements do not change navigation's folder scope.
         // Keep only the current scope (not an unbounded cache of visited folders).
-        if (this.desktopSidebar && ["navigation", "tag-counts", "property-presence"].includes(key)) {
+        if (this.desktopSidebar && (["navigation", "tag-counts", "property-presence"].includes(key)
+            || key.startsWith("desktop-property-counts:"))) {
             const folders = JSON.stringify([...this.core.filterState.folders].sort());
             if (this._desktopScopeCache?.folders !== folders)
                 this._desktopScopeCache = { folders, values: new Map() };
@@ -24176,7 +24185,8 @@ class SearchNavigatorController {
                 values.set(key, build());
             return values.get(key);
         }
-        if (this.desktopSidebar && (key === "desktop-tag-tree" || key.startsWith("desktop-property-keys:"))) {
+        if (this.desktopSidebar && (key === "desktop-tag-tree" || key.startsWith("desktop-property-keys:")
+            || key.startsWith("desktop-property-values:"))) {
             if (!this._desktopFacetModels.has(key))
                 this._desktopFacetModels.set(key, build());
             return this._desktopFacetModels.get(key);
@@ -24447,10 +24457,13 @@ class SearchNavigatorController {
                 }
                 ref.generation = core._resultGeneration;
             }
-            if (ref.signature === signature && stableFacet) {
+            // Hidden facet rows have nothing to paint. Leave their generation
+            // stale so reopening reconciles current counts before the next paint.
+            if (ref.signature === signature && stableFacet && !ref.content.hidden) {
                 const tags = id === "tags" ? this._cached("tag-counts", () => (0, tag_values_js_1.buildHierarchicalTagUsageCounts)(universe)) : null;
                 const selectedTags = tags ? new Set([...state.tags].map(tag_values_js_1.tagIdentityKey)) : null;
                 const properties = id === "properties" ? navigatorPropertyPresence(this, universe, this._propertyKeys(inventory)) : null;
+                const propertyValues = new Map(), selectedValues = new Map();
                 for (const tree of ref.rows?.values() || []) {
                     const options = tree._navOptions, descriptor = options?.navDescriptor;
                     if (descriptor?.kind === "tag" && tags) {
@@ -24460,6 +24473,16 @@ class SearchNavigatorController {
                     else if (descriptor?.kind === "property-key" && properties) {
                         options.count = properties.counts.get(descriptor.key) || 0;
                         options.active = false;
+                    }
+                    else if (descriptor?.kind === "property-value" && properties) {
+                        const key = descriptor.key;
+                        if (!propertyValues.has(key)) {
+                            propertyValues.set(key, navigatorPropertyValues(this, key, universe, inventory));
+                            selectedValues.set(key, new Set([...(state.properties.get(key) || [])].map(property_values_js_1.propertyValueKey)));
+                        }
+                        const value = (0, property_values_js_1.propertyValueKey)(descriptor.value);
+                        options.count = propertyValues.get(key).counts.get(value) || 0;
+                        options.active = selectedValues.get(key).has(value);
                     }
                     else
                         continue;
@@ -24518,17 +24541,15 @@ class SearchNavigatorController {
                     if (++displayedKeys > 40)
                         break;
                     const key = descriptor.key;
-                    if (this.layout !== "mobile"
+                    if (this.layout !== "mobile" && !this.desktopSidebar
                         && !(this.customization.sortMode && this.customization.sortScope === "property-value")) {
-                        // Desktop retains its established click-to-Picker flow.
-                        // Nested property values appear only for an explicit
-                        // category-local value move, never as a permanent second UI.
-                        const present = this.desktopSidebar ? navigatorPropertyPresence(this, universe, keys).counts.get(key) || 0
-                            : this._propertyStats(key, universe, state).present;
+                        // Other desktop hosts retain their shared Picker flow.
+                        const present = this._propertyStats(key, universe, state).present;
                         const row = this._row(ref, { name: key, icon: "list", navDescriptor: descriptor, count: present, active: false, onClick: () => this._openProperty(key, row.button) });
                         continue;
                     }
-                    const stats = this._propertyStats(key, universe, state);
+                    const legacyStats = this.desktopSidebar ? null : this._propertyStats(key, universe, state);
+                    const present = this.desktopSidebar ? navigatorPropertyPresence(this, universe, keys).counts.get(key) || 0 : legacyStats.present;
                     const expansion = `properties:${key}`;
                     const expanded = this.expanded.has(expansion);
                     const toggle = () => {
@@ -24538,14 +24559,17 @@ class SearchNavigatorController {
                         core._notifyStateChange();
                     };
                     const keyRow = this._row(ref, { name: key, itemTitle: key, icon: "list", navDescriptor: descriptor, rowClasses: "local-search-nav-property-key",
-                        hasChildren: true, expanded, count: stats.present, toggleTitle: expanded ? "折叠" : "展开",
+                        hasChildren: true, expanded, count: present, toggleTitle: expanded ? "折叠" : "展开",
                         active: false, onClick: toggle, onToggle: toggle });
-                    keyRow.row.dataset.propertyKey = key;
+                    setNavigatorAttribute(this, keyRow.row, "data-property-key", key);
                     if (!expanded)
                         continue;
-                    const values = stats.values.filter(value => !(0, property_values_js_1.isSpecialPropertyValue)(value) && value !== property_values_js_1.PRESENT_PROPERTY_VALUE);
+                    const stats = this.desktopSidebar ? navigatorPropertyValues(this, key, universe, inventory) : legacyStats;
+                    const values = stats.values.filter(value => value !== property_values_js_1.PRESENT_PROPERTY_VALUE
+                        && (this.desktopSidebar ? value !== property_values_js_1.MISSING_PROPERTY_VALUE : !(0, property_values_js_1.isSpecialPropertyValue)(value)));
                     let displayedValues = 0;
-                    for (const valueDescriptor of this.customization.order(descriptor.id, values.map(value => ({ kind: "property-value", key, value, label: (0, property_values_js_1.propertyValueDisplay)(value), icon: "equal" })))) {
+                    for (const valueDescriptor of this.customization.order(descriptor.id, values.map(value => ({ kind: "property-value", key, value,
+                        label: (0, property_values_js_1.propertyValueDisplay)(value), icon: "equal", sortable: (0, property_values_js_1.isSpecialPropertyValue)(value) ? false : undefined })))) {
                         if (valueDescriptor.kind === "separator") {
                             this._separator(ref, valueDescriptor, 1);
                             continue;

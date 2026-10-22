@@ -1,0 +1,26 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Sidebar-Properties-20261022.zip",
+  "bytes": 432630,
+  "sha256": "2ac23764853b9deab0b11753f62d8af2e148d737c8bdd61dd4493cf42b604ae7",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1767282,
+      "sha256": "cee9757b1fdb49b3e963b0a72b478f09f76a32b02ce19e8f436fb2169e15752e"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 264825,
+      "sha256": "aa615fdb09eab6129f8cfa37f53dc8e056a1c62253c6e09a8915933aef88a787"
+    }
+  ],
+  "sourceParentCommit": "eeae069dec3bdbd20da7e6c81b324171c8d30f5e",
+  "reproducibleBuild": true,
+  "remoteDownloadVerified": false,
+  "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Sidebar-Properties-20261022.zip"
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "property key click expands inline",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "inline expansion does not open a picker",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "disclosure does not rerun result search",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "one disclosure SVG per key",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "global counts match source",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "collapsed keys never build value statistics",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "zero-count values remain visible in another folder",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "folder changes retain expanded value nodes",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "zero-count value selects and gives empty results",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "returning to folder refreshes counts without losing values",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "six value clicks each commit exactly once",
+    "pass": false,
+    "evidence": 0
+  },
+  {
+    "name": "selection changes reuse all navigation statistics",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "value selection and results agree",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "eight unchanged projections make no property DOM writes",
+    "pass": true,
+    "evidence": 0
+  },
+  {
+    "name": "repeated collapse and expand reuse value models without searching",
+    "pass": true,
+    "evidence": {
+      "searches": 0,
+      "builds": []
+    }
+  },
+  {
+    "name": "repeated disclosure retains exactly one arrow",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "empty false and zero properties can expand to selectable values",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "metadata edit invalidates global values and scoped counts",
+    "pass": false,
+    "evidence": null
+  },
+  {
+    "name": "excluded key removes its expanded values too",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "other desktop host retains shared picker",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile retains inline expansion",
+    "pass": true,
+    "evidence": null
+  }
+]

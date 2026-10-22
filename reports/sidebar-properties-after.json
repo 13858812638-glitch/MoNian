@@ -1,0 +1,200 @@
+[
+  {
+    "name": "property key click expands inline",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "inline expansion does not open a picker",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "disclosure does not rerun result search",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "one disclosure SVG per key",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "property disclosure arrow is visible",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "global counts match source",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "collapsed keys never build value statistics",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "zero-count values remain visible in another folder",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "folder changes retain expanded value nodes",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "zero-count value selects and gives empty results",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "returning to folder refreshes counts without losing values",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "six value clicks each commit exactly once",
+    "pass": true,
+    "evidence": 6
+  },
+  {
+    "name": "selection changes reuse all navigation statistics",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "value selection and results agree",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "eight unchanged projections make no property DOM writes",
+    "pass": true,
+    "evidence": 0
+  },
+  {
+    "name": "hidden property group skips value scans and DOM writes",
+    "pass": true,
+    "evidence": {
+      "changes": 0,
+      "builds": [
+        "navigation",
+        "tag-counts",
+        "property-presence"
+      ]
+    }
+  },
+  {
+    "name": "reopening hidden group updates counts before display",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "pointer click on arrow collapses exactly once",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "keyboard disclosure reopens the property",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "repeated collapse and expand reuse value models without searching",
+    "pass": true,
+    "evidence": {
+      "searches": 0,
+      "builds": []
+    }
+  },
+  {
+    "name": "repeated disclosure retains exactly one arrow",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "empty false and zero properties can expand to selectable values",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "empty-state row cannot be dragged as a real value",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "metadata edit invalidates global values and scoped counts",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "catalog edit refreshes expanded values with zero count",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "deleting last source invalidates expanded values",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "excluded key removes its expanded values too",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "other desktop host retains shared picker",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile retains inline expansion",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "large property inventory mounts at most 60 values and a more action",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "large expanded scope calculates one key once",
+    "pass": true,
+    "evidence": {
+      "stats": 0,
+      "firstStats": 1,
+      "searches": 11,
+      "geometry": 0,
+      "retained": true
+    }
+  },
+  {
+    "name": "ten large value clicks reuse statistics and existing rows",
+    "pass": true,
+    "evidence": {
+      "stats": 0,
+      "firstStats": 1,
+      "searches": 11,
+      "geometry": 0,
+      "retained": true
+    }
+  },
+  {
+    "name": "large scrolled filter clicks skip per-row geometry",
+    "pass": true,
+    "evidence": {
+      "stats": 0,
+      "firstStats": 1,
+      "searches": 11,
+      "geometry": 0,
+      "retained": true
+    }
+  },
+  {
+    "name": "truncated list opens the full shared property picker",
+    "pass": true,
+    "evidence": null
+  }
+]

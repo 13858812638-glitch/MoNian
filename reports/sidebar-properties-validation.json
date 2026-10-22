@@ -1,0 +1,194 @@
+{
+  "candidate": "Desktop sidebar inline property values and hidden refresh audit 2026-10-22",
+  "parentCommit": "eeae069dec3bdbd20da7e6c81b324171c8d30f5e",
+  "environment": "Chromium, mocked Obsidian SearchView lifecycle",
+  "runtimeSourceChanges": [
+    "src/features/navigator/SearchNavigatorController.js"
+  ],
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 152,
+    "importEdges": 649,
+    "unresolvedSymbols": 0,
+    "cycles": []
+  },
+  "build": {
+    "status": "pass",
+    "reproducibility": "pass",
+    "sha256": "cee9757b1fdb49b3e963b0a72b478f09f76a32b02ce19e8f436fb2169e15752e"
+  },
+  "node": {
+    "passed": 258,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "propertyExpansion": {
+    "passed": 34,
+    "failed": 0
+  },
+  "reproducerBefore": {
+    "passed": 10,
+    "failed": 11
+  },
+  "hiddenGroupBefore": {
+    "passed": 27,
+    "failed": 1
+  },
+  "emptyStateDragBefore": {
+    "passed": 33,
+    "failed": 1
+  },
+  "workReduction": {
+    "hiddenPropertyGroupFolderChange": {
+      "domMutationsBefore": 9,
+      "domMutationsAfter": 0,
+      "valueStatsBefore": 1,
+      "valueStatsAfter": 0
+    },
+    "sixValueClicks": {
+      "searches": 6,
+      "navigationStatsBuilds": 0
+    },
+    "eightUnchangedProjections": {
+      "propertyDomMutations": 0
+    },
+    "twelveDisclosures": {
+      "searches": 0,
+      "valueStatsBuilds": 0
+    },
+    "largeFixture": {
+      "files": 2400,
+      "globalValues": 80,
+      "mountedValues": 60,
+      "newFolderKeyStatsBuilds": 1,
+      "tenSubsequentClicks": {
+        "searches": 10,
+        "statsBuilds": 0,
+        "navigationGeometryReads": 0,
+        "rowNodesRetained": true
+      }
+    },
+    "nativeLatencyMeasured": false
+  },
+  "changedTestContract": "sidebar_stable_facets_audit: zero-count key click now asserts inline global values rather than opening a Picker, per user request. Picker via more action and other desktop host remains tested.",
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS",
+    "Native Android",
+    "WebKit",
+    "Third-party integrations in a real vault",
+    "Native screen readers"
+  ],
+  "rawEvidence": "/workspace/sidebar-properties-audit",
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "stable": 0,
+    "rail": 0,
+    "properties": 0,
+    "selection": 0,
+    "redundant": 0,
+    "tree": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "contracts": 0,
+    "release": 0,
+    "repeat": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "index": 0,
+    "acceptance-mobile-light": 0,
+    "portal": 0,
+    "caret": 0,
+    "acceptance-mobile-dark": 0,
+    "workflows": 0,
+    "popups": 0
+  },
+  "finalRefinementValidation": "After marking empty-state rows non-sortable, reran static check, build, full Node tests, properties, stable facets, workflows, browser A/B and all four search acceptance configurations. Remaining gates ran on the identical implementation before this descriptor-only guard.",
+  "desktop": {
+    "passed": 55,
+    "failed": 0
+  },
+  "popups": {
+    "passed": 80,
+    "failed": 0
+  },
+  "workflows": {
+    "passed": 80,
+    "failed": 0
+  },
+  "mouse": {
+    "passed": 27,
+    "failed": 0
+  },
+  "tree": {
+    "passed": 24,
+    "failed": 0
+  },
+  "selection": {
+    "passed": 6,
+    "failed": 0
+  },
+  "refresh": {
+    "passed": 32,
+    "failed": 0
+  },
+  "release": {
+    "passed": 32,
+    "failed": 0
+  },
+  "repeat": {
+    "passed": 16,
+    "failed": 0
+  },
+  "stable": {
+    "passed": 21,
+    "failed": 0
+  },
+  "redundant": {
+    "passed": 24,
+    "failed": 0
+  },
+  "rail": {
+    "passed": 21,
+    "failed": 0
+  },
+  "pickerPortalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "pickerCaret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "searchAcceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "interactionContracts": {
+    "passed": 14,
+    "failed": 0
+  }
+}
