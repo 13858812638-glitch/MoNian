@@ -21,7 +21,8 @@
   ],
   "sourceParentCommit": "5d9c03c7cf18f56f0b4a0348af4798cf1a5632e6",
   "downloadUrl": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Stable-Sidebar-Facets-20261022.zip",
-  "remoteDownloadVerified": false,
-  "remotePayloadMatchesBuild": false,
-  "reproducibleBuild": true
+  "remoteDownloadVerified": true,
+  "remotePayloadMatchesBuild": true,
+  "reproducibleBuild": true,
+  "sourceCommit": "dbea8cc11b505bdf955f01f7f79420e6b7a88167"
 }
