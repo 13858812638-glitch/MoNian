@@ -1,0 +1,15 @@
+{
+  "runtimeCommit": "63b38084f0f271e0c21246b76b461299f78a40c0",
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Scroll-Measure-20261023.zip",
+  "httpStatus": 200,
+  "bytes": 434722,
+  "sha256": "bfa2689bdc8b5238af39310596e3fe06c59aec25281fc4edaeb62444bff76d47",
+  "downloadMatchesLocal": true,
+  "zipCRC": "PASS",
+  "entries": [
+    "main.js",
+    "styles.css"
+  ],
+  "payloadMatchesDist": true,
+  "cssMatchesBaseline": true
+}
