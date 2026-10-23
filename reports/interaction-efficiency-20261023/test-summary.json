@@ -1,0 +1,168 @@
+{
+  "baseline": "90f1ade",
+  "productionModulesChanged": 3,
+  "check": "PASS-ENGINEERING",
+  "build": "PASS",
+  "node": {
+    "tests": 272,
+    "passed": 268,
+    "failed": 4,
+    "baselineFailuresConfirmed": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "efficiency": {
+    "beforePassed": 6,
+    "beforeFailed": 14,
+    "afterPassed": 20,
+    "afterFailed": 0
+  },
+  "countRailNode": {
+    "passed": 3
+  },
+  "ownershipAndEdges": "PASS",
+  "nativeObsidian": false,
+  "nativeIOS": false,
+  "nativeAndroid": false,
+  "webkit": false,
+  "unverified": [
+    "native frame latency",
+    "user vault and third-party CSS/integration combinations"
+  ],
+  "conditions": {
+    "Bpassed": 144,
+    "Bfailed": 0,
+    "errors": []
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0,
+    "errors": []
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0,
+    "errors": []
+  },
+  "feishu": {
+    "passed": 8,
+    "failed": 0
+  },
+  "caret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "portal": {
+    "passed": 48,
+    "failed": 0
+  },
+  "mobile": {
+    "passed": 96,
+    "failed": 0,
+    "errors": []
+  },
+  "index": {
+    "passed": 7,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 0,
+    "failed": 4,
+    "errors": [
+      {
+        "configuration": "desktop-light",
+        "side": "B",
+        "error": "A/B mismatch: desktop-light 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "mobile-light",
+        "side": "B",
+        "error": "A/B mismatch: mobile-light 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "desktop-dark",
+        "side": "B",
+        "error": "A/B mismatch: desktop-dark 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "mobile-dark",
+        "side": "B",
+        "error": "A/B mismatch: mobile-dark 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      }
+    ],
+    "sameFailureLocationsAsBaseline": true
+  },
+  "executions": [
+    {
+      "name": "acceptance",
+      "exit": 0,
+      "seconds": 152.9
+    },
+    {
+      "name": "focus",
+      "exit": 0,
+      "seconds": 41.9
+    },
+    {
+      "name": "focus-repair",
+      "exit": 0,
+      "seconds": 61.31
+    },
+    {
+      "name": "feishu",
+      "exit": 0,
+      "seconds": 5.76
+    },
+    {
+      "name": "browser",
+      "exit": 1,
+      "seconds": 33.17
+    },
+    {
+      "name": "caret",
+      "exit": 0,
+      "seconds": 14.52
+    },
+    {
+      "name": "portal",
+      "exit": 0,
+      "seconds": 10.69
+    },
+    {
+      "name": "mobile",
+      "exit": 0,
+      "seconds": 15.43
+    },
+    {
+      "name": "index",
+      "exit": 0,
+      "seconds": 5.72
+    },
+    {
+      "name": "ownership",
+      "exit": 0,
+      "seconds": 9.32
+    },
+    {
+      "name": "edges",
+      "exit": 0,
+      "seconds": 3.59
+    },
+    {
+      "name": "source",
+      "exit": 0,
+      "seconds": 0.36
+    }
+  ]
+}

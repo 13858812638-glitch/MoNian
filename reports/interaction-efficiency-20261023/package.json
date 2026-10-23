@@ -1,0 +1,22 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Interaction-Efficiency-20261023.zip",
+  "bytes": 435684,
+  "sha256": "e5bf54054375efa26f94fb7100a133a8c5082ae3572395b8dcb58ab4c0c8b329",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1776456,
+      "sha256": "d8491555606ff88eedd198b22b0dbbdeb62bef665d8e618447bcb285f76bb617"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 266664,
+      "sha256": "8ccc69f6e764b9705ae53f2573cdb6f38cea476360e5249304803182f7fba116"
+    }
+  ]
+}

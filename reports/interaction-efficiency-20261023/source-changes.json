@@ -1,0 +1,17 @@
+[
+  {
+    "file": "src/core/search/input-and-filters-methods.js",
+    "before": "a58ad9ef2bfb9b25698279d51ff3908146a4d709587fe99949fa348d28cca233",
+    "after": "94c46d3d3c563773e7cc6f95ade92361183ee03d11e25ce97403d3879308bbf1"
+  },
+  {
+    "file": "src/features/navigator/SearchNavigatorController.js",
+    "before": "2ae06bf72c92a0070fd31d2d0bb74ffb92194924784d6ca354af8719b98ab13c",
+    "after": "a44a546ed7fa7a4960622f0bd176c225f3e341bb7bf11406c9a952fe52275653"
+  },
+  {
+    "file": "src/ui/pickers/count-rail.js",
+    "before": "48664d1f8d5fd122db2517f227ea015d56e139e7082eeb59f88b5a306371f9db",
+    "after": "f02b982b1afb21048e4eaed9ce4f083d4b617652d01e4c1c8f0b74d8fec30ecf"
+  }
+]

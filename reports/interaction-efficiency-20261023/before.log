@@ -1,0 +1,20 @@
+FAIL desktop pending typing saves the live buffer without publishing or projecting
+FAIL desktop debounce commits exactly once
+FAIL desktop empty input has one synchronous commit notification
+PASS desktop IME only commits after composition ends
+FAIL desktop create title owns its single notification
+FAIL desktop unchanged page writes no hidden or page attributes
+FAIL desktop Picker initially measures through one observer
+FAIL desktop Picker unchanged reserve skips write and cleanup stops measurement
+PASS desktop pending local query merges a peer folder without losing either change
+PASS desktop closing preserves and publishes the pending input
+FAIL mobile pending typing saves the live buffer without publishing or projecting
+FAIL mobile debounce commits exactly once
+FAIL mobile empty input has one synchronous commit notification
+PASS mobile IME only commits after composition ends
+FAIL mobile create title owns its single notification
+FAIL mobile unchanged page writes no hidden or page attributes
+FAIL mobile Picker initially measures through one observer
+FAIL mobile Picker unchanged reserve skips write and cleanup stops measurement
+PASS mobile pending local query merges a peer folder without losing either change
+PASS mobile closing preserves and publishes the pending input

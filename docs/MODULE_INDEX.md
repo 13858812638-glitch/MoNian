@@ -1,3 +1,5 @@
+> **2026-10-23 输入与 Picker 重复工作精简（未冻结）**：唯一开发基线 `90f1ade`。待提交输入只保存编辑缓冲，输入显隐不遍历工具栏；页面同值属性不重复写入，Picker 初始测量统一由 ResizeObserver 负责。见 [实现、测量与边界](INTERACTION_EFFICIENCY_20261023.md)。下文保留历史记录。
+
 > **2026-10-23 Owner 与提交链修复（未冻结）**：唯一开发基线 `d26f42a`。修复审计七项：导航提交去重、同值排序失效、通道节点与焦点、排除索引刷新、页面展示与结果提交、共享状态异常重试、CSS 默认值归属。见 [实现、验收与边界](OWNERSHIP_REPAIR_20261023.md)。下文保留历史记录。
 
 > **2026-10-23 滚动测量精简（未冻结）**：唯一开发基线 `176d307`。共享滚动归零省去上界测量与重复位置读取；CSS 试验因收益不稳已撤回。没有新增缓存、延迟提交或第二套组件。见 [实现与测量](SMOOTH_LAYOUT_20261023.md)。下文保留历史记录。
@@ -32,7 +34,7 @@
 | `src/core/default-settings.js` | 58 | 插件生命周期、搜索会话与状态归属 | `DEFAULT_SETTINGS` |
 | `src/core/picker-cleanup.js` | 20 | 插件生命周期、搜索会话与状态归属 | `disposePickerCleanup`、`registerPickerCleanup` |
 | `src/core/search/file-actions-methods.js` | 359 | 插件生命周期、搜索会话与状态归属 | `SearchCore_file_actions_methods`、`SearchCore_open_selection_methods` |
-| `src/core/search/input-and-filters-methods.js` | 531 | 插件生命周期、搜索会话与状态归属 | `SearchCore_input_and_filters_methods` |
+| `src/core/search/input-and-filters-methods.js` | 532 | 插件生命周期、搜索会话与状态归属 | `SearchCore_input_and_filters_methods` |
 | `src/core/search/result-menu-events-methods.js` | 269 | 插件生命周期、搜索会话与状态归属 | `SearchCore_result_menu_events_methods` |
 | `src/core/search/search-and-ranking-methods.js` | 537 | 插件生命周期、搜索会话与状态归属 | `RESULT_TEXT_COLLATOR`、`SearchCore_search_and_ranking_methods` |
 | `src/core/search/session-methods.js` | 129 | 插件生命周期、搜索会话与状态归属 | `SearchCore_session_methods` |
@@ -78,7 +80,7 @@
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
 | `src/features/navigator/NavigatorCustomization.js` | 897 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
 | `src/features/navigator/navigation-icon.js` | 15 | 复用导航控件的 SVG 替换与标签保留 | `setNavigatorIcon` |
-| `src/features/navigator/SearchNavigatorController.js` | 1464 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
+| `src/features/navigator/SearchNavigatorController.js` | 1472 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId`、`normalizeNavigatorCustomization`、`remapNavigatorCustomization` |
 | `src/features/navigator/desktop-pane.js` | 140 | 桌面横纵分栏拖动、键盘调整、宽高恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid`、`navigatorToolbarActionAvailable`、`navigatorToolbarCatalog`、`normalizeNavigatorToolbars`、`navigatorToolbarIcon`、`NAVIGATOR_VISIBLE_SECTION_DEFS`、`normalizeNavigatorVisibleSections`、`normalizeNavigatorTimeField` |
@@ -153,7 +155,7 @@
 | `src/ui/overlays/geometry.js` | 33 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `resolveOverlayBounds`、`resolveDropdownViewportBounds` |
 | `src/ui/overlays/popup-order.js` | 25 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `searchPopupOpenOrder`、`markSearchPopupActive`、`topSearchPopupSurface` |
 | `src/ui/overlays/sidebar-popup.js` | 61 | 桌面侧栏弹窗边界与定位生命周期 | `resolveSidebarPopupBounds`、`bindSidebarDialogPosition` |
-| `src/ui/pickers/count-rail.js` | 21 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `observePickerCountRail` |
+| `src/ui/pickers/count-rail.js` | 22 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `observePickerCountRail` |
 | `src/ui/pickers/folder-picker.js` | 216 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `renderSharedFolderTreePicker` |
 | `src/ui/pickers/header-modes.js` | 117 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `attachFacetPickerOverflow`、`attachPickerHeaderModes` |
 | `src/ui/pickers/icon-catalog.js` | 52 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `PROPERTY_SHORTCUT_DEFAULT_ICON`、`FILTER_TOOLBAR_ICON_PRESETS`、`normalizeRecentIconIds`、`resolvePickerIcon`、`rememberPickerIcon`、`filterToolbarIconCatalog` |

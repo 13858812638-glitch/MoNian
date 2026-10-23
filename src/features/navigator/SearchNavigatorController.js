@@ -24,6 +24,14 @@ import { navigatorItemId } from "./customization-model.js";
 import { navigatorToolbarActionAvailable, navigatorToolbarCatalog, navigatorToolbarIcon, normalizeNavigatorToolbars } from "./toolbar-config.js";
 import { Notice, Platform } from "obsidian";
 
+// Live input only owns this visibility flag. Toolbar configuration and facet
+// state are synchronized by their committed actions, not by each keystroke.
+function syncNavigatorQueryVisibility(nav) {
+    const hasQuery = Boolean(nav.core.searchInput?.value);
+    if (nav.root.classList.contains("has-nav-query") !== hasQuery)
+        nav.root.classList.toggle("has-nav-query", hasQuery);
+}
+
 // Folder changes only alter these values, not the row's presentation.
 function syncNavigatorRowValues(nav, tree, options) {
     const active = Boolean(options.active);
@@ -369,7 +377,7 @@ export class SearchNavigatorController {
             if (this.page === "filters") this.showResults(false);
         }, true);
         move("create", core.resultControls.createNoteBtn);
-        this._listen(core.searchInput, "input", () => this._syncMobileTools());
+        this._listen(core.searchInput, "input", () => syncNavigatorQueryVisibility(this));
         // Native focus is not navigation state. Entry actions already own
         // searchVisible; focusing the live input must not re-project its host.
 
@@ -466,7 +474,7 @@ export class SearchNavigatorController {
         // Search belongs to results/create. A retained query must never re-open
         // the filter page's header or summon the keyboard during navigation.
         this.root.classList.toggle("is-nav-search-visible", !filters && (this.searchVisible || create));
-        this.root.classList.toggle("has-nav-query", Boolean(core.searchInput?.value));
+        syncNavigatorQueryVisibility(this);
         const title = create ? "创建文件" : this._scopeTitle();
         setDomProperty(this.headingTitle, "textContent", this.layout === "mobile" ? `${title}${create ? "" : ` · ${core.fullResults.length}`}` : "GLS Navigator");
         setSearchAttribute(this.headingTitle, "title", title);
@@ -722,13 +730,13 @@ export class SearchNavigatorController {
         if (!wasHidden && hideResults && !this._restoringPage && this.core._resultGeneration) {
             this.resultAnchor = this.core.resultRenderer.captureViewportAnchor();
         }
-        this.root.dataset.navPage = this.page;
-        this.backButton.hidden = this.layout !== "mobile" || this.page === "filters";
+        setSearchAttribute(this.root, "data-nav-page", this.page);
+        setDomProperty(this.backButton, "hidden", this.layout !== "mobile" || this.page === "filters");
         setSearchAttribute(this.backButton, "aria-label", "返回导航");
-        this.footer.hidden = true;
+        setDomProperty(this.footer, "hidden", true);
         // hidden removes inactive pages from accessibility and keyboard navigation as well as layout.
-        this.facets.hidden = hideFacets;
-        this.main.hidden = hideResults;
+        setDomProperty(this.facets, "hidden", hideFacets);
+        setDomProperty(this.main, "hidden", hideResults);
         const conditions = this.core.propertyFilterRow;
         const conditionParent = this.layout === "mobile" ? this.root : this.main;
         if (conditions && conditions.parentElement !== conditionParent) {

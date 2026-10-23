@@ -46,8 +46,6 @@ export const SearchCore_input_and_filters_methods = {
             this._syncSearchHeaderControls();
             return true;
         }
-        this._notifyStateChange();
-
         if (this.createFlow?.isCreateMode?.()) {
             this.createFlow.handleInput(query);
             return true;
@@ -69,6 +67,9 @@ export const SearchCore_input_and_filters_methods = {
             this.searchTimer = null;
             if (!this._destroyed) this.performSearch(query);
         }, 150);
+        // Persist the live editing buffer, but publish/project only the committed
+        // query. performSearch (or Create's handleInput) owns that notification.
+        this.onStateChange?.();
         return true;
     },
 

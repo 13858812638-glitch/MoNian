@@ -1,3 +1,7 @@
+> **2026-10-23 输入与 Picker 重复工作精简（未冻结）**：唯一开发基线 `90f1ade`。待提交输入只保存编辑缓冲，输入显隐不遍历工具栏；页面同值属性不重复写入，Picker 初始测量统一由 ResizeObserver 负责。见 [实现、测量与边界](INTERACTION_EFFICIENCY_20261023.md)。下文保留历史记录。
+
+本轮内部辅助函数 `syncNavigatorQueryVisibility(nav)` 位于 Navigator 模块，不导出、不保存状态；原生 input 与工具栏正式同步共用。`observePickerCountRail(panel,list,property)` 签名及 cleanup 合同不变。所有类方法装配表未变。
+
 > **2026-10-23 Owner 与提交链修复（未冻结）**：唯一开发基线 `d26f42a`。修复审计七项：导航提交去重、同值排序失效、通道节点与焦点、排除索引刷新、页面展示与结果提交、共享状态异常重试、CSS 默认值归属。见 [实现、验收与边界](OWNERSHIP_REPAIR_20261023.md)。下文保留历史记录。
 
 当前内部合同：`SearchNavigatorController.syncPage({commitResults=true}={})`、`setPage(page, notify=true, {commitResults=true}={})`、`showResults(commitInput=true, commit=null)` 共用页面展示与动作提交；`LocalSearchPlugin._refreshFolderStateCores(change=null, {pendingOnly=false}={})` 只按需要兑现索引提交；`SearchDropdownController._cssMetric(name, style)`、`_sizeContract(panel, style=null)` 消费一次定位的 CSS 计算样式；`utils/dom.js.readCssNumber(element, name, style=null)` 是共享数字 Token 读取 Primitive。新增组件引用由 renderer 构造/销毁；方法装配表没有新增或移除方法。

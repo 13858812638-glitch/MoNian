@@ -1,0 +1,20 @@
+PASS desktop pending typing saves the live buffer without publishing or projecting
+PASS desktop debounce commits exactly once
+PASS desktop empty input has one synchronous commit notification
+PASS desktop IME only commits after composition ends
+PASS desktop create title owns its single notification
+PASS desktop unchanged page writes no hidden or page attributes
+PASS desktop Picker initially measures through one observer
+PASS desktop Picker unchanged reserve skips write and cleanup stops measurement
+PASS desktop pending local query merges a peer folder without losing either change
+PASS desktop closing preserves and publishes the pending input
+PASS mobile pending typing saves the live buffer without publishing or projecting
+PASS mobile debounce commits exactly once
+PASS mobile empty input has one synchronous commit notification
+PASS mobile IME only commits after composition ends
+PASS mobile create title owns its single notification
+PASS mobile unchanged page writes no hidden or page attributes
+PASS mobile Picker initially measures through one observer
+PASS mobile Picker unchanged reserve skips write and cleanup stops measurement
+PASS mobile pending local query merges a peer folder without losing either change
+PASS mobile closing preserves and publishes the pending input

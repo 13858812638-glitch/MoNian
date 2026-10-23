@@ -1,0 +1,18 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 build
+> node scripts/build.mjs
+
+{
+  "outfile": "dist/main.js",
+  "modules": 153,
+  "bytes": 1776456,
+  "sha256": "d8491555606ff88eedd198b22b0dbbdeb62bef665d8e618447bcb285f76bb617",
+  "external": [
+    "@host/obsidian"
+  ]
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

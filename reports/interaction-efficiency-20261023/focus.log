@@ -1,0 +1,137 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 test:focus
+> python3 scripts/focus_audit.py
+
+A light native-main-focus-no-navigation-projection PASS
+A light main-focus-does-not-lock-without-keyboard PASS
+A light main-focus-stable-geometry-and-surface PASS
+A light same-width-host-resize-no-navigation-projection PASS
+A light restore-at-same-width-still-projects-page PASS
+A light new-picker-sees-already-open-keyboard-before-tap PASS
+A light one-global-keyboard-subscription-for-two-surfaces PASS
+A light picker-native-handoff-keeps-input-and-keyboard PASS
+A light late-hide-does-not-override-visible-keyboard PASS
+A light native-picker-text-and-collapsed-selection PASS
+A light actual-keyboard-close-unlocks-even-if-input-still-focused PASS
+A light shared-search-touch-contract-folder PASS
+A light picker-focus-no-keyboard-no-frame-mutation-folder PASS
+A light shared-search-touch-contract-tags PASS
+A light picker-focus-no-keyboard-no-frame-mutation-tags PASS
+A light shared-search-touch-contract-property-key PASS
+A light picker-focus-no-keyboard-no-frame-mutation-property-key PASS
+A light shared-search-touch-contract-property-value PASS
+A light picker-focus-no-keyboard-no-frame-mutation-property-value PASS
+A light shared-search-touch-contract-create-folder PASS
+A light picker-focus-no-keyboard-no-frame-mutation-create-folder PASS
+A light shared-search-touch-contract-create-tags PASS
+A light picker-focus-no-keyboard-no-frame-mutation-create-tags PASS
+A light shared-search-touch-contract-create-property PASS
+A light picker-focus-no-keyboard-no-frame-mutation-create-property PASS
+A light viewport-alone-cannot-create-keyboard-state FAIL
+A light composition-keeps-same-native-input PASS
+A light all-global-keyboard-listeners-released PASS
+B light native-main-focus-no-navigation-projection PASS
+B light main-focus-does-not-lock-without-keyboard PASS
+B light main-focus-stable-geometry-and-surface PASS
+B light same-width-host-resize-no-navigation-projection PASS
+B light restore-at-same-width-still-projects-page PASS
+B light new-picker-sees-already-open-keyboard-before-tap PASS
+B light one-global-keyboard-subscription-for-two-surfaces PASS
+B light picker-native-handoff-keeps-input-and-keyboard PASS
+B light late-hide-does-not-override-visible-keyboard PASS
+B light native-picker-text-and-collapsed-selection PASS
+B light actual-keyboard-close-unlocks-even-if-input-still-focused PASS
+B light shared-search-touch-contract-folder PASS
+B light picker-focus-no-keyboard-no-frame-mutation-folder PASS
+B light shared-search-touch-contract-tags PASS
+B light picker-focus-no-keyboard-no-frame-mutation-tags PASS
+B light shared-search-touch-contract-property-key PASS
+B light picker-focus-no-keyboard-no-frame-mutation-property-key PASS
+B light shared-search-touch-contract-property-value PASS
+B light picker-focus-no-keyboard-no-frame-mutation-property-value PASS
+B light shared-search-touch-contract-create-folder PASS
+B light picker-focus-no-keyboard-no-frame-mutation-create-folder PASS
+B light shared-search-touch-contract-create-tags PASS
+B light picker-focus-no-keyboard-no-frame-mutation-create-tags PASS
+B light shared-search-touch-contract-create-property PASS
+B light picker-focus-no-keyboard-no-frame-mutation-create-property PASS
+B light viewport-alone-cannot-create-keyboard-state PASS
+B light composition-keeps-same-native-input PASS
+B light all-global-keyboard-listeners-released PASS
+A dark native-main-focus-no-navigation-projection PASS
+A dark main-focus-does-not-lock-without-keyboard PASS
+A dark main-focus-stable-geometry-and-surface PASS
+A dark same-width-host-resize-no-navigation-projection PASS
+A dark restore-at-same-width-still-projects-page PASS
+A dark new-picker-sees-already-open-keyboard-before-tap PASS
+A dark one-global-keyboard-subscription-for-two-surfaces PASS
+A dark picker-native-handoff-keeps-input-and-keyboard PASS
+A dark late-hide-does-not-override-visible-keyboard PASS
+A dark native-picker-text-and-collapsed-selection PASS
+A dark actual-keyboard-close-unlocks-even-if-input-still-focused PASS
+A dark shared-search-touch-contract-folder PASS
+A dark picker-focus-no-keyboard-no-frame-mutation-folder PASS
+A dark shared-search-touch-contract-tags PASS
+A dark picker-focus-no-keyboard-no-frame-mutation-tags PASS
+A dark shared-search-touch-contract-property-key PASS
+A dark picker-focus-no-keyboard-no-frame-mutation-property-key PASS
+A dark shared-search-touch-contract-property-value PASS
+A dark picker-focus-no-keyboard-no-frame-mutation-property-value PASS
+A dark shared-search-touch-contract-create-folder PASS
+A dark picker-focus-no-keyboard-no-frame-mutation-create-folder PASS
+A dark shared-search-touch-contract-create-tags PASS
+A dark picker-focus-no-keyboard-no-frame-mutation-create-tags PASS
+A dark shared-search-touch-contract-create-property PASS
+A dark picker-focus-no-keyboard-no-frame-mutation-create-property PASS
+A dark viewport-alone-cannot-create-keyboard-state FAIL
+A dark composition-keeps-same-native-input PASS
+A dark all-global-keyboard-listeners-released PASS
+B dark native-main-focus-no-navigation-projection PASS
+B dark main-focus-does-not-lock-without-keyboard PASS
+B dark main-focus-stable-geometry-and-surface PASS
+B dark same-width-host-resize-no-navigation-projection PASS
+B dark restore-at-same-width-still-projects-page PASS
+B dark new-picker-sees-already-open-keyboard-before-tap PASS
+B dark one-global-keyboard-subscription-for-two-surfaces PASS
+B dark picker-native-handoff-keeps-input-and-keyboard PASS
+B dark late-hide-does-not-override-visible-keyboard PASS
+B dark native-picker-text-and-collapsed-selection PASS
+B dark actual-keyboard-close-unlocks-even-if-input-still-focused PASS
+B dark shared-search-touch-contract-folder PASS
+B dark picker-focus-no-keyboard-no-frame-mutation-folder PASS
+B dark shared-search-touch-contract-tags PASS
+B dark picker-focus-no-keyboard-no-frame-mutation-tags PASS
+B dark shared-search-touch-contract-property-key PASS
+B dark picker-focus-no-keyboard-no-frame-mutation-property-key PASS
+B dark shared-search-touch-contract-property-value PASS
+B dark picker-focus-no-keyboard-no-frame-mutation-property-value PASS
+B dark shared-search-touch-contract-create-folder PASS
+B dark picker-focus-no-keyboard-no-frame-mutation-create-folder PASS
+B dark shared-search-touch-contract-create-tags PASS
+B dark picker-focus-no-keyboard-no-frame-mutation-create-tags PASS
+B dark shared-search-touch-contract-create-property PASS
+B dark picker-focus-no-keyboard-no-frame-mutation-create-property PASS
+B dark viewport-alone-cannot-create-keyboard-state PASS
+B dark composition-keeps-same-native-input PASS
+B dark all-global-keyboard-listeners-released PASS
+{
+  "baseline": "modular.3",
+  "candidate": "0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1",
+  "engine": "Chromium 154.0.8037.57",
+  "nativeIOS": false,
+  "nativeObsidian": false,
+  "passed": 56,
+  "failed": 0,
+  "baselineFailToCandidatePass": 2,
+  "errors": [],
+  "limitations": [
+    "Keyboard events, viewport and IME are controlled test signals, not real OS devices.",
+    "No iOS/WebKit caret-paint verification.",
+    "Theme uses controlled host CSS, not the user CSS snippets."
+  ]
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

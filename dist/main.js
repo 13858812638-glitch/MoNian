@@ -3958,18 +3958,19 @@ function observePickerCountRail(panel, list, property) {
     const view = panel.ownerDocument.defaultView;
     let active = true;
     const sync = () => {
-        if (active && panel.isConnected && list.isConnected)
-            panel.style.setProperty(property, `${Math.max(0, list.offsetWidth - list.clientWidth)}px`);
+        if (!active || !panel.isConnected || !list.isConnected)
+            return;
+        const reserve = `${Math.max(0, list.offsetWidth - list.clientWidth)}px`;
+        if (panel.style.getPropertyValue(property) !== reserve)
+            panel.style.setProperty(property, reserve);
     };
+    // ResizeObserver owns both the first connected layout and later changes.
+    // A parallel animation frame repeats that initial measurement and write.
     const observer = new view.ResizeObserver(sync);
     observer.observe(list);
-    let frame = view.requestAnimationFrame(() => { frame = null; sync(); });
     return () => {
         active = false;
         observer.disconnect();
-        if (frame !== null)
-            view.cancelAnimationFrame(frame);
-        frame = null;
     };
 }
 
@@ -20291,7 +20292,6 @@ exports.SearchCore_input_and_filters_methods = {
             this._syncSearchHeaderControls();
             return true;
         }
-        this._notifyStateChange();
         if (this.createFlow?.isCreateMode?.()) {
             this.createFlow.handleInput(query);
             return true;
@@ -20312,6 +20312,9 @@ exports.SearchCore_input_and_filters_methods = {
             if (!this._destroyed)
                 this.performSearch(query);
         }, 150);
+        // Persist the live editing buffer, but publish/project only the committed
+        // query. performSearch (or Create's handleInput) owns that notification.
+        this.onStateChange?.();
         return true;
     },
     _bindSearchInput() {
@@ -23113,6 +23116,13 @@ const navigation_icon_js_1 = require("./navigation-icon.js");
 const customization_model_js_1 = require("./customization-model.js");
 const toolbar_config_js_1 = require("./toolbar-config.js");
 const obsidian_1 = require("obsidian");
+// Live input only owns this visibility flag. Toolbar configuration and facet
+// state are synchronized by their committed actions, not by each keystroke.
+function syncNavigatorQueryVisibility(nav) {
+    const hasQuery = Boolean(nav.core.searchInput?.value);
+    if (nav.root.classList.contains("has-nav-query") !== hasQuery)
+        nav.root.classList.toggle("has-nav-query", hasQuery);
+}
 // Folder changes only alter these values, not the row's presentation.
 function syncNavigatorRowValues(nav, tree, options) {
     const active = Boolean(options.active);
@@ -23507,7 +23517,7 @@ class SearchNavigatorController {
                 this.showResults(false);
         }, true);
         move("create", core.resultControls.createNoteBtn);
-        this._listen(core.searchInput, "input", () => this._syncMobileTools());
+        this._listen(core.searchInput, "input", () => syncNavigatorQueryVisibility(this));
         // Native focus is not navigation state. Entry actions already own
         // searchVisible; focusing the live input must not re-project its host.
     }
@@ -23616,7 +23626,7 @@ class SearchNavigatorController {
         // Search belongs to results/create. A retained query must never re-open
         // the filter page's header or summon the keyboard during navigation.
         this.root.classList.toggle("is-nav-search-visible", !filters && (this.searchVisible || create));
-        this.root.classList.toggle("has-nav-query", Boolean(core.searchInput?.value));
+        syncNavigatorQueryVisibility(this);
         const title = create ? "创建文件" : this._scopeTitle();
         (0, dom_js_1.setDomProperty)(this.headingTitle, "textContent", this.layout === "mobile" ? `${title}${create ? "" : ` · ${core.fullResults.length}`}` : "GLS Navigator");
         (0, hover_hints_js_1.setSearchAttribute)(this.headingTitle, "title", title);
@@ -23908,13 +23918,13 @@ class SearchNavigatorController {
         if (!wasHidden && hideResults && !this._restoringPage && this.core._resultGeneration) {
             this.resultAnchor = this.core.resultRenderer.captureViewportAnchor();
         }
-        this.root.dataset.navPage = this.page;
-        this.backButton.hidden = this.layout !== "mobile" || this.page === "filters";
+        (0, hover_hints_js_1.setSearchAttribute)(this.root, "data-nav-page", this.page);
+        (0, dom_js_1.setDomProperty)(this.backButton, "hidden", this.layout !== "mobile" || this.page === "filters");
         (0, hover_hints_js_1.setSearchAttribute)(this.backButton, "aria-label", "返回导航");
-        this.footer.hidden = true;
+        (0, dom_js_1.setDomProperty)(this.footer, "hidden", true);
         // hidden removes inactive pages from accessibility and keyboard navigation as well as layout.
-        this.facets.hidden = hideFacets;
-        this.main.hidden = hideResults;
+        (0, dom_js_1.setDomProperty)(this.facets, "hidden", hideFacets);
+        (0, dom_js_1.setDomProperty)(this.main, "hidden", hideResults);
         const conditions = this.core.propertyFilterRow;
         const conditionParent = this.layout === "mobile" ? this.root : this.main;
         if (conditions && conditions.parentElement !== conditionParent) {

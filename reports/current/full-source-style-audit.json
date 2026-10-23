@@ -2,8 +2,8 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34832,
-  "jsBytes": 1617418,
+  "jsLines": 34842,
+  "jsBytes": 1618133,
   "cssBytes": 266664,
   "cssLines": 7715,
   "cssParseErrors": [],
@@ -101,37 +101,37 @@
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "line": 68,
+      "line": 66,
       "code": "this.searchTimer = setTimeout(() => {"
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "line": 78,
+      "line": 79,
       "code": "this.searchInput.addEventListener(\"compositionstart\", () => {"
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "line": 83,
+      "line": 84,
       "code": "this.searchInput.addEventListener(\"compositionend\", () => {"
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "line": 88,
+      "line": 89,
       "code": "this.searchInput.addEventListener(\"blur\", () => this.plugin.sharedSearchState?.schedule(this));"
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "line": 89,
+      "line": 90,
       "code": "this.searchInput.addEventListener(\"input\", () => this._commitSearchInputValue());"
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "line": 91,
+      "line": 92,
       "code": "this.searchInput.addEventListener(\"keydown\", async (e) => {"
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "line": 149,
+      "line": 150,
       "code": "this.containerEl.addEventListener(\"keydown\", e => {"
     },
     {
@@ -396,42 +396,42 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 109,
+      "line": 117,
       "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 111,
+      "line": 119,
       "code": "nav._scrollStateTimer = win.setTimeout(settle, 180);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 162,
+      "line": 170,
       "code": "this.backButton.addEventListener(\"click\", () => this.back());"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 179,
+      "line": 187,
       "code": "this.resultsButton.addEventListener(\"click\", () => { if (this.prepareSearch()) this.showResults(); });"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 291,
+      "line": 299,
       "code": "node.addEventListener(type, fn, options);"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 292,
+      "line": 300,
       "code": "this.cleanups.push(() => node.removeEventListener(type, fn, options));"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 312,
+      "line": 320,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 934,
+      "line": 942,
       "code": "manage.addEventListener(\"click\", () => this.openSection(id, manage));"
     },
     {
@@ -1430,16 +1430,6 @@
       "code": "doc.removeEventListener(\"scroll\", scroll, true);"
     },
     {
-      "file": "src/ui/pickers/count-rail.js",
-      "line": 14,
-      "code": "let frame = view.requestAnimationFrame(() => { frame = null; sync(); });"
-    },
-    {
-      "file": "src/ui/pickers/count-rail.js",
-      "line": 18,
-      "code": "if (frame !== null) view.cancelAnimationFrame(frame);"
-    },
-    {
       "file": "src/ui/pickers/folder-picker.js",
       "line": 183,
       "code": "search.addEventListener(\"input\", () => render());"
@@ -1603,9 +1593,9 @@
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "lines": 531,
-      "bytes": 23436,
-      "sha256": "a58ad9ef2bfb9b25698279d51ff3908146a4d709587fe99949fa348d28cca233"
+      "lines": 532,
+      "bytes": 23597,
+      "sha256": "94c46d3d3c563773e7cc6f95ade92361183ee03d11e25ce97403d3879308bbf1"
     },
     {
       "file": "src/core/search/result-menu-events-methods.js",
@@ -1891,9 +1881,9 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "lines": 1464,
-      "bytes": 87735,
-      "sha256": "2ae06bf72c92a0070fd31d2d0bb74ffb92194924784d6ca354af8719b98ab13c"
+      "lines": 1472,
+      "bytes": 88186,
+      "sha256": "a44a546ed7fa7a4960622f0bd176c225f3e341bb7bf11406c9a952fe52275653"
     },
     {
       "file": "src/features/navigator/customization-model.js",
@@ -2347,9 +2337,9 @@
     },
     {
       "file": "src/ui/pickers/count-rail.js",
-      "lines": 21,
-      "bytes": 791,
-      "sha256": "48664d1f8d5fd122db2517f227ea015d56e139e7082eeb59f88b5a306371f9db"
+      "lines": 22,
+      "bytes": 894,
+      "sha256": "f02b982b1afb21048e4eaed9ce4f083d4b617652d01e4c1c8f0b74d8fec30ecf"
     },
     {
       "file": "src/ui/pickers/folder-picker.js",

@@ -1,0 +1,376 @@
+[
+  {
+    "name": "desktop pending typing saves the live buffer without publishing or projecting",
+    "pass": true,
+    "evidence": {
+      "pending": {
+        "calls": {
+          "save": 3
+        },
+        "query": "",
+        "saved": "note",
+        "timer": true,
+        "hasQuery": true
+      },
+      "committed": {
+        "calls": {
+          "save": 4,
+          "search": 1,
+          "publish": 1,
+          "nav": 1,
+          "tools": 1
+        },
+        "query": "note",
+        "count": 36
+      }
+    }
+  },
+  {
+    "name": "desktop debounce commits exactly once",
+    "pass": true,
+    "evidence": {
+      "calls": {
+        "save": 4,
+        "search": 1,
+        "publish": 1,
+        "nav": 1,
+        "tools": 1
+      },
+      "query": "note",
+      "count": 36
+    }
+  },
+  {
+    "name": "desktop empty input has one synchronous commit notification",
+    "pass": true,
+    "evidence": {
+      "calls": {
+        "search": 1,
+        "publish": 1,
+        "nav": 1,
+        "tools": 1,
+        "save": 1
+      },
+      "query": "",
+      "timer": false
+    }
+  },
+  {
+    "name": "desktop IME only commits after composition ends",
+    "pass": true,
+    "evidence": {
+      "composing": {
+        "calls": {},
+        "query": "",
+        "timer": false
+      },
+      "committed": {
+        "calls": {
+          "save": 2,
+          "search": 1,
+          "publish": 1,
+          "nav": 1,
+          "tools": 1
+        },
+        "query": "笔记"
+      }
+    }
+  },
+  {
+    "name": "desktop create title owns its single notification",
+    "pass": true,
+    "evidence": {
+      "calls": {
+        "publish": 1,
+        "nav": 1,
+        "tools": 1,
+        "save": 1
+      },
+      "title": "New draft",
+      "draft": {
+        "title": "New draft",
+        "type": "md",
+        "filterSnapshot": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [
+            "note"
+          ],
+          "fileType": "note",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "propertyTypes": [],
+        "pendingCreation": null,
+        "templates": {
+          "md": {
+            "enabled": false,
+            "path": ""
+          },
+          "canvas": {
+            "enabled": false,
+            "path": ""
+          },
+          "excalidraw": {
+            "enabled": false,
+            "path": ""
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "desktop unchanged page writes no hidden or page attributes",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "desktop Picker initially measures through one observer",
+    "pass": true,
+    "evidence": {
+      "initial": {
+        "frames": 0,
+        "reads": 2,
+        "writes": 1,
+        "reserve": "15px"
+      },
+      "height": {
+        "writes": 1,
+        "correct": true
+      },
+      "revealed": true,
+      "clean": true
+    }
+  },
+  {
+    "name": "desktop Picker unchanged reserve skips write and cleanup stops measurement",
+    "pass": true,
+    "evidence": {
+      "initial": {
+        "frames": 0,
+        "reads": 2,
+        "writes": 1,
+        "reserve": "15px"
+      },
+      "height": {
+        "writes": 1,
+        "correct": true
+      },
+      "revealed": true,
+      "clean": true
+    }
+  },
+  {
+    "name": "desktop pending local query merges a peer folder without losing either change",
+    "pass": true,
+    "evidence": {
+      "pending": true,
+      "localQuery": "note2",
+      "peerQuery": "note2",
+      "localFolders": [
+        "Folder002"
+      ],
+      "peerFolders": [
+        "Folder002"
+      ]
+    }
+  },
+  {
+    "name": "desktop closing preserves and publishes the pending input",
+    "pass": true,
+    "evidence": {
+      "saved": "pending close",
+      "shared": "pending close",
+      "destroyed": true
+    }
+  },
+  {
+    "name": "mobile pending typing saves the live buffer without publishing or projecting",
+    "pass": true,
+    "evidence": {
+      "pending": {
+        "calls": {
+          "save": 3
+        },
+        "query": "",
+        "saved": "note",
+        "timer": true,
+        "hasQuery": true
+      },
+      "committed": {
+        "calls": {
+          "save": 4,
+          "search": 1,
+          "publish": 1,
+          "nav": 1,
+          "tools": 1
+        },
+        "query": "note",
+        "count": 36
+      }
+    }
+  },
+  {
+    "name": "mobile debounce commits exactly once",
+    "pass": true,
+    "evidence": {
+      "calls": {
+        "save": 4,
+        "search": 1,
+        "publish": 1,
+        "nav": 1,
+        "tools": 1
+      },
+      "query": "note",
+      "count": 36
+    }
+  },
+  {
+    "name": "mobile empty input has one synchronous commit notification",
+    "pass": true,
+    "evidence": {
+      "calls": {
+        "search": 1,
+        "publish": 1,
+        "nav": 1,
+        "tools": 1,
+        "save": 1
+      },
+      "query": "",
+      "timer": false
+    }
+  },
+  {
+    "name": "mobile IME only commits after composition ends",
+    "pass": true,
+    "evidence": {
+      "composing": {
+        "calls": {},
+        "query": "",
+        "timer": false
+      },
+      "committed": {
+        "calls": {
+          "save": 2,
+          "search": 1,
+          "publish": 1,
+          "nav": 1,
+          "tools": 1
+        },
+        "query": "笔记"
+      }
+    }
+  },
+  {
+    "name": "mobile create title owns its single notification",
+    "pass": true,
+    "evidence": {
+      "calls": {
+        "publish": 1,
+        "nav": 1,
+        "tools": 1,
+        "save": 1
+      },
+      "title": "New draft",
+      "draft": {
+        "title": "New draft",
+        "type": "md",
+        "filterSnapshot": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [
+            "note"
+          ],
+          "fileType": "note",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "propertyTypes": [],
+        "pendingCreation": null,
+        "templates": {
+          "md": {
+            "enabled": false,
+            "path": ""
+          },
+          "canvas": {
+            "enabled": false,
+            "path": ""
+          },
+          "excalidraw": {
+            "enabled": false,
+            "path": ""
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "mobile unchanged page writes no hidden or page attributes",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile Picker initially measures through one observer",
+    "pass": true,
+    "evidence": {
+      "initial": {
+        "frames": 0,
+        "reads": 2,
+        "writes": 1,
+        "reserve": "0px"
+      },
+      "height": {
+        "writes": 1,
+        "correct": true
+      },
+      "revealed": true,
+      "clean": true
+    }
+  },
+  {
+    "name": "mobile Picker unchanged reserve skips write and cleanup stops measurement",
+    "pass": true,
+    "evidence": {
+      "initial": {
+        "frames": 0,
+        "reads": 2,
+        "writes": 1,
+        "reserve": "0px"
+      },
+      "height": {
+        "writes": 1,
+        "correct": true
+      },
+      "revealed": true,
+      "clean": true
+    }
+  },
+  {
+    "name": "mobile pending local query merges a peer folder without losing either change",
+    "pass": true,
+    "evidence": {
+      "pending": true,
+      "localQuery": "note2",
+      "peerQuery": "note2",
+      "localFolders": [
+        "Folder002"
+      ],
+      "peerFolders": [
+        "Folder002"
+      ]
+    }
+  },
+  {
+    "name": "mobile closing preserves and publishes the pending input",
+    "pass": true,
+    "evidence": {
+      "saved": "pending close",
+      "shared": "pending close",
+      "destroyed": true
+    }
+  }
+]
