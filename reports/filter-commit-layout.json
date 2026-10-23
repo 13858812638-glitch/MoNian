@@ -1,0 +1,449 @@
+{
+  "before": [
+    {
+      "files": 161,
+      "cpuThrottle": 4,
+      "timing": {
+        "folder": {
+          "Layout": {
+            "count": 72,
+            "totalMs": 970.184,
+            "maxMs": 52.105
+          },
+          "UpdateLayoutTree": {
+            "count": 191,
+            "totalMs": 58.756,
+            "maxMs": 1.44
+          },
+          "Paint": {
+            "count": 74,
+            "totalMs": 427.357,
+            "maxMs": 12.112
+          },
+          "FunctionCall": {
+            "count": 747,
+            "totalMs": 761.003,
+            "maxMs": 46.699
+          },
+          "EventDispatch": {
+            "count": 403,
+            "totalMs": 760.483,
+            "maxMs": 65.945
+          }
+        },
+        "disclosure": {
+          "Layout": {
+            "count": 24,
+            "totalMs": 150.84799999999998,
+            "maxMs": 10.998
+          },
+          "UpdateLayoutTree": {
+            "count": 51,
+            "totalMs": 10.387,
+            "maxMs": 1.638
+          },
+          "Paint": {
+            "count": 63,
+            "totalMs": 96.96000000000001,
+            "maxMs": 3.758
+          },
+          "FunctionCall": {
+            "count": 648,
+            "totalMs": 69.89,
+            "maxMs": 4.837
+          },
+          "EventDispatch": {
+            "count": 226,
+            "totalMs": 87.506,
+            "maxMs": 5.09
+          }
+        }
+      },
+      "work": {
+        "phases": {
+          "folder": {
+            "facets.renderPinnedPropertyFilters": 24,
+            "renderer._setScrollTop": 24,
+            "core._recomputeCurrentResults": 24,
+            "renderer.renderPage": 24,
+            "renderer._windowSize": 48,
+            "renderer._observeShell": 360,
+            "renderer._syncMountedState": 24,
+            "renderer._mountedShells": 24,
+            "core._notifyStateChange": 24,
+            "nav._renderProjection": 24
+          },
+          "disclosure": {
+            "core._notifyStateChange": 24
+          }
+        },
+        "conditions": {
+          "syncs": 8,
+          "mutations": 28,
+          "removedNodes": 8,
+          "addedNodes": 10,
+          "sameButton": false,
+          "focusedBefore": true,
+          "focusedAfter": false
+        },
+        "folder": [
+          "Folder005"
+        ],
+        "results": 15,
+        "mounted": 15,
+        "cacheSize": 90,
+        "consistent": true,
+        "synchronousLayoutOwners": {
+          "renderer._setScrollTop": 24,
+          "renderer.renderPage": 24,
+          "outside wrapped methods": 23
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "files": 2400,
+      "cpuThrottle": 4,
+      "timing": {
+        "folder": {
+          "Layout": {
+            "count": 72,
+            "totalMs": 1017.075,
+            "maxMs": 72.34
+          },
+          "UpdateLayoutTree": {
+            "count": 191,
+            "totalMs": 52.498,
+            "maxMs": 3.114
+          },
+          "Paint": {
+            "count": 74,
+            "totalMs": 509.649,
+            "maxMs": 20.241
+          },
+          "FunctionCall": {
+            "count": 756,
+            "totalMs": 936.641,
+            "maxMs": 57.687
+          },
+          "EventDispatch": {
+            "count": 403,
+            "totalMs": 912.477,
+            "maxMs": 86.911
+          }
+        },
+        "disclosure": {
+          "Layout": {
+            "count": 24,
+            "totalMs": 624.705,
+            "maxMs": 61.515
+          },
+          "UpdateLayoutTree": {
+            "count": 51,
+            "totalMs": 15.437,
+            "maxMs": 2.312
+          },
+          "Paint": {
+            "count": 60,
+            "totalMs": 339.315,
+            "maxMs": 14.15
+          },
+          "FunctionCall": {
+            "count": 648,
+            "totalMs": 58.842,
+            "maxMs": 3.136
+          },
+          "EventDispatch": {
+            "count": 226,
+            "totalMs": 80.694,
+            "maxMs": 4.204
+          }
+        }
+      },
+      "work": {
+        "phases": {
+          "folder": {
+            "facets.renderPinnedPropertyFilters": 24,
+            "renderer._setScrollTop": 24,
+            "core._recomputeCurrentResults": 24,
+            "renderer.renderPage": 24,
+            "renderer._windowSize": 48,
+            "renderer._observeShell": 288,
+            "renderer._syncMountedState": 24,
+            "renderer._mountedShells": 24,
+            "core._notifyStateChange": 24,
+            "nav._renderProjection": 24
+          },
+          "disclosure": {
+            "core._notifyStateChange": 24
+          }
+        },
+        "conditions": {
+          "syncs": 8,
+          "mutations": 28,
+          "removedNodes": 8,
+          "addedNodes": 10,
+          "sameButton": false,
+          "focusedBefore": true,
+          "focusedAfter": false
+        },
+        "folder": [
+          "Folder005"
+        ],
+        "results": 12,
+        "mounted": 12,
+        "cacheSize": 72,
+        "consistent": true,
+        "synchronousLayoutOwners": {
+          "renderer._setScrollTop": 24,
+          "renderer.renderPage": 24,
+          "outside wrapped methods": 23
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "after": [
+    {
+      "files": 161,
+      "cpuThrottle": 4,
+      "timing": {
+        "folder": {
+          "Layout": {
+            "count": 48,
+            "totalMs": 1027.842,
+            "maxMs": 62.826
+          },
+          "UpdateLayoutTree": {
+            "count": 167,
+            "totalMs": 49.089,
+            "maxMs": 1.663
+          },
+          "Paint": {
+            "count": 72,
+            "totalMs": 489.629,
+            "maxMs": 17.224
+          },
+          "FunctionCall": {
+            "count": 747,
+            "totalMs": 807.503,
+            "maxMs": 67.138
+          },
+          "EventDispatch": {
+            "count": 403,
+            "totalMs": 804.199,
+            "maxMs": 94.478
+          }
+        },
+        "disclosure": {
+          "Layout": {
+            "count": 24,
+            "totalMs": 145.457,
+            "maxMs": 11.398
+          },
+          "UpdateLayoutTree": {
+            "count": 51,
+            "totalMs": 12.737,
+            "maxMs": 1.505
+          },
+          "Paint": {
+            "count": 48,
+            "totalMs": 83.111,
+            "maxMs": 4.587
+          },
+          "FunctionCall": {
+            "count": 648,
+            "totalMs": 61.94,
+            "maxMs": 3.631
+          },
+          "EventDispatch": {
+            "count": 226,
+            "totalMs": 78.11,
+            "maxMs": 4.944
+          }
+        }
+      },
+      "work": {
+        "phases": {
+          "folder": {
+            "renderer._setScrollTop": 24,
+            "facets.renderPinnedPropertyFilters": 24,
+            "core._recomputeCurrentResults": 24,
+            "renderer.renderPage": 24,
+            "renderer._windowSize": 24,
+            "renderer._observeShell": 360,
+            "renderer._syncMountedState": 24,
+            "core._notifyStateChange": 24,
+            "nav._renderProjection": 24
+          },
+          "disclosure": {
+            "core._notifyStateChange": 24
+          }
+        },
+        "conditions": {
+          "syncs": 8,
+          "mutations": 0,
+          "removedNodes": 0,
+          "addedNodes": 0,
+          "sameButton": true,
+          "focusedBefore": true,
+          "focusedAfter": true
+        },
+        "folder": [
+          "Folder005"
+        ],
+        "results": 15,
+        "mounted": 15,
+        "cacheSize": 90,
+        "consistent": true,
+        "synchronousLayoutOwners": {
+          "renderer.renderPage": 24,
+          "outside wrapped methods": 23
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "files": 2400,
+      "cpuThrottle": 4,
+      "timing": {
+        "folder": {
+          "Layout": {
+            "count": 48,
+            "totalMs": 771.078,
+            "maxMs": 41.322
+          },
+          "UpdateLayoutTree": {
+            "count": 167,
+            "totalMs": 44.28,
+            "maxMs": 1.625
+          },
+          "Paint": {
+            "count": 74,
+            "totalMs": 358.496,
+            "maxMs": 9.97
+          },
+          "FunctionCall": {
+            "count": 755,
+            "totalMs": 810.8,
+            "maxMs": 62.026
+          },
+          "EventDispatch": {
+            "count": 403,
+            "totalMs": 784.279,
+            "maxMs": 81.781
+          }
+        },
+        "disclosure": {
+          "Layout": {
+            "count": 24,
+            "totalMs": 708.948,
+            "maxMs": 62.391
+          },
+          "UpdateLayoutTree": {
+            "count": 51,
+            "totalMs": 13.19,
+            "maxMs": 0.914
+          },
+          "Paint": {
+            "count": 57,
+            "totalMs": 385.37,
+            "maxMs": 18.917
+          },
+          "FunctionCall": {
+            "count": 648,
+            "totalMs": 97.349,
+            "maxMs": 5.495
+          },
+          "EventDispatch": {
+            "count": 226,
+            "totalMs": 121.714,
+            "maxMs": 5.606
+          }
+        }
+      },
+      "work": {
+        "phases": {
+          "folder": {
+            "renderer._setScrollTop": 24,
+            "facets.renderPinnedPropertyFilters": 24,
+            "core._recomputeCurrentResults": 24,
+            "renderer.renderPage": 24,
+            "renderer._windowSize": 24,
+            "renderer._observeShell": 288,
+            "renderer._syncMountedState": 24,
+            "core._notifyStateChange": 24,
+            "nav._renderProjection": 24
+          },
+          "disclosure": {
+            "core._notifyStateChange": 24
+          }
+        },
+        "conditions": {
+          "syncs": 8,
+          "mutations": 0,
+          "removedNodes": 0,
+          "addedNodes": 0,
+          "sameButton": true,
+          "focusedBefore": true,
+          "focusedAfter": true
+        },
+        "folder": [
+          "Folder005"
+        ],
+        "results": 12,
+        "mounted": 12,
+        "cacheSize": 72,
+        "consistent": true,
+        "synchronousLayoutOwners": {
+          "renderer.renderPage": 24,
+          "outside wrapped methods": 23
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "note": "Trace counts are separate from method-marked diagnostic pass; absolute times are not used as native performance claims",
+  "traces": [
+    {
+      "path": "/workspace/commit-audit/perf-before/large-trace.json",
+      "sha256": "d7b7459455bade14b08e8bef20a390324b0294076f3fef4f8255076290e8e148",
+      "bytes": 1848761
+    },
+    {
+      "path": "/workspace/commit-audit/perf-before/large-work-trace.json",
+      "sha256": "dad89b4cdd0f6debf90f7f2be4641b8a31e3e4f7079fbc1d5b29ea3886ef190f",
+      "bytes": 564135
+    },
+    {
+      "path": "/workspace/commit-audit/perf-before/small-trace.json",
+      "sha256": "bc4910ae9ad574a5633cce44d8a7f8be634079e06b7c4d97346c6045af88cde4",
+      "bytes": 1799973
+    },
+    {
+      "path": "/workspace/commit-audit/perf-before/small-work-trace.json",
+      "sha256": "85b03865d87d5b05c2c54b10a3f2bb7f98979d138e5ea69aa41990619bb10346",
+      "bytes": 612542
+    },
+    {
+      "path": "/workspace/commit-audit/perf-after/large-trace.json",
+      "sha256": "014966244c31d79038b1756f370180e793a89a469f4d6bf806010f8efb42d831",
+      "bytes": 1857716
+    },
+    {
+      "path": "/workspace/commit-audit/perf-after/large-work-trace.json",
+      "sha256": "a8b1d4bbcacefa707024a9d98505d9532d440493ac1142ac041f766085dd13d2",
+      "bytes": 516548
+    },
+    {
+      "path": "/workspace/commit-audit/perf-after/small-trace.json",
+      "sha256": "e4ba138329c41ff4c8e4c5f8515e9ef190893bbe18a265374bcfde7e01e0ad75",
+      "bytes": 1760960
+    },
+    {
+      "path": "/workspace/commit-audit/perf-after/small-work-trace.json",
+      "sha256": "bb36449135eff9e4f8f410f50db3b412e1a814f90c965673ad0353e61ae35b60",
+      "bytes": 563057
+    }
+  ]
+}

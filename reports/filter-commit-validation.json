@@ -1,0 +1,224 @@
+{
+  "candidate": "GLS filter commit 2026-10-23",
+  "baselineCommit": "e38dea99dd4e459997fcfe0ea88d09041d806b17",
+  "scope": "Five shared JS modules; CSS unchanged; no new persistent state, host branch or timing/focus workaround",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 153,
+    "importEdges": 661,
+    "cycles": [],
+    "unresolvedSymbols": 0
+  },
+  "build": {
+    "reproducible": true,
+    "sha256": "fe6d5648c490b5c1e228fc450add9216fa646e6e9965676c8a37343c9a57d07a",
+    "cssUnchanged": true
+  },
+  "node": {
+    "tests": 269,
+    "passed": 265,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "hot-path": 0,
+    "consolidation": 0,
+    "filter-commit": 0,
+    "property-count-desktop": 0,
+    "property-count-mobile": 0,
+    "lifecycle": 0,
+    "feishu": 0,
+    "browse": 0,
+    "properties": 0,
+    "rail": 0,
+    "stable": 0,
+    "redundant": 0,
+    "focus": 0,
+    "tree": 0,
+    "selection": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "focus-repair": 0,
+    "repeat": 0,
+    "release": 0,
+    "contracts": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "index": 0,
+    "acceptance-mobile-light": 0,
+    "acceptance-mobile-dark": 0,
+    "portal": 0,
+    "caret": 0,
+    "workflows": 0,
+    "popups": 0
+  },
+  "currentBehavior": {
+    "filter-commit": {
+      "passed": 44,
+      "failed": 0
+    },
+    "hot-path": {
+      "passed": 30,
+      "failed": 0
+    },
+    "consolidation": {
+      "passed": 26,
+      "failed": 0
+    },
+    "lifecycle": {
+      "passed": 14,
+      "failed": 0
+    },
+    "properties": {
+      "passed": 34,
+      "failed": 0
+    },
+    "desktop": {
+      "passed": 55,
+      "failed": 0
+    },
+    "popups": {
+      "passed": 80,
+      "failed": 0
+    },
+    "workflows": {
+      "passed": 80,
+      "failed": 0
+    },
+    "mouse": {
+      "passed": 27,
+      "failed": 0
+    },
+    "tree": {
+      "passed": 24,
+      "failed": 0
+    },
+    "selection": {
+      "passed": 6,
+      "failed": 0
+    },
+    "refresh": {
+      "passed": 32,
+      "failed": 0
+    },
+    "repeat": {
+      "passed": 16,
+      "failed": 0
+    },
+    "stable": {
+      "passed": 38,
+      "failed": 0
+    },
+    "redundant": {
+      "passed": 24,
+      "failed": 0
+    },
+    "rail": {
+      "passed": 21,
+      "failed": 0
+    },
+    "browse": {
+      "passed": 24,
+      "failed": 0
+    },
+    "release": {
+      "passed": 32,
+      "failed": 0
+    },
+    "pickerPortalChromium": {
+      "passed": 48,
+      "failed": 0
+    },
+    "pickerCaret": {
+      "passed": 36,
+      "failed": 0
+    },
+    "focus": {
+      "passed": 56,
+      "failed": 0
+    },
+    "focusRepair": {
+      "passed": 96,
+      "failed": 0
+    },
+    "feishuComparison": {
+      "passed": 8,
+      "failed": 0
+    },
+    "propertyCountsDesktop": {
+      "passed": 32,
+      "failed": 0
+    },
+    "propertyCountsMobile": {
+      "passed": 32,
+      "failed": 0
+    },
+    "searchAcceptance": {
+      "passed": 144,
+      "failed": 0
+    },
+    "mobileSidebar": {
+      "passed": 96,
+      "failed": 0
+    },
+    "indexRetry": {
+      "passed": 7,
+      "failed": 0
+    },
+    "interactionContracts": {
+      "passed": 14,
+      "failed": 0
+    }
+  },
+  "currentBehaviorTotal": 1176,
+  "newRegressionBefore": {
+    "passed": 16,
+    "failed": 28
+  },
+  "newRegressionAfter": {
+    "passed": 44,
+    "failed": 0
+  },
+  "initialRegressionBefore": {
+    "passed": 16,
+    "failed": 16
+  },
+  "initialRegressionAfter": {
+    "passed": 32,
+    "failed": 0
+  },
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS/Android input and performance",
+    "WebKit",
+    "Actual user vault and snippets"
+  ],
+  "rawEvidence": "/workspace/commit-audit",
+  "package": {
+    "file": "downloads/GLS-Filter-Commit-20261023.zip",
+    "bytes": 434150,
+    "sha256": "be7d873473c320778dc422d960a56027eda72c46cbc20196480dee347ca67b9d",
+    "crc": "PASS",
+    "entries": [
+      "main.js",
+      "styles.css"
+    ],
+    "payloadMatchesDist": true
+  }
+}

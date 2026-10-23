@@ -477,7 +477,7 @@ export const SearchCore_search_and_ranking_methods = {
     },
 
 
-    performSearch(rawQuery, preserveSelection = false) {
+    performSearch(rawQuery, preserveSelection = false, { refreshFacets = false } = {}) {
         if (this._destroyed) return;
         // 搜索零命中的派生 Create View 只冻结 UI / CreateDraft；
         // 新一轮查询前先恢复真实 Search FilterState，禁止用创建草稿参与结果计算。
@@ -516,6 +516,11 @@ export const SearchCore_search_and_ranking_methods = {
         const refreshPools = Boolean(this._pendingResultUpdate?.pools);
         this._pendingResultUpdate = null;
         this.resultRenderer.resetViewport();
+        // Reset against the existing layout before condition/header DOM writes.
+        // The final page still measures the real resulting viewport, including
+        // condition-row height changes. No cached or deferred geometry owner.
+        if (refreshFacets) this.facets.syncFilterButtons();
+        if (refreshFacets) this.resultControls.refreshFilterPoolHeader();
         this._recomputeCurrentResults({ preserveSelection });
 
         // 首次会话锚点只消费一次：直接首挂目标窗口并完成恢复，不保留跨阶段中间态。
@@ -524,7 +529,7 @@ export const SearchCore_search_and_ranking_methods = {
         this.resultRenderer.refreshResultChannels();
         if (initialAnchor) this.resultRenderer.renderInitialPage(initialAnchor);
         else this.resultRenderer.renderPage();
-        if (refreshPools) this.resultControls.refreshFilterPoolHeader();
+        if (refreshPools && !refreshFacets) this.resultControls.refreshFilterPoolHeader();
         this._notifyStateChange();
     },
 };

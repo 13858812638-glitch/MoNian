@@ -2,8 +2,8 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34800,
-  "jsBytes": 1613014,
+  "jsLines": 34809,
+  "jsBytes": 1614421,
   "cssBytes": 264925,
   "cssLines": 7685,
   "cssParseErrors": [],
@@ -276,18 +276,8 @@
     },
     {
       "file": "src/features/facets/property-picker-methods.js",
-      "line": 952,
-      "code": "chip.addEventListener(\"click\", e => {"
-    },
-    {
-      "file": "src/features/facets/property-picker-methods.js",
-      "line": 988,
-      "code": "keyButton.addEventListener(\"click\", event => {"
-    },
-    {
-      "file": "src/features/facets/property-picker-methods.js",
-      "line": 1003,
-      "code": "valueButton.addEventListener(\"click\", event => {"
+      "line": 954,
+      "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/facets/type-picker-methods.js",
@@ -751,7 +741,7 @@
     },
     {
       "file": "src/features/results/virtual-window-methods.js",
-      "line": 398,
+      "line": 397,
       "code": "this._scrollFrame = hostWindow(container).requestAnimationFrame(() => {"
     },
     {
@@ -1618,9 +1608,9 @@
     },
     {
       "file": "src/core/search/input-and-filters-methods.js",
-      "lines": 533,
-      "bytes": 23503,
-      "sha256": "2989f1dc21fcb519b5f33359d84ee5203db806159a515f83318f5429939c3752"
+      "lines": 531,
+      "bytes": 23436,
+      "sha256": "a58ad9ef2bfb9b25698279d51ff3908146a4d709587fe99949fa348d28cca233"
     },
     {
       "file": "src/core/search/result-menu-events-methods.js",
@@ -1630,9 +1620,9 @@
     },
     {
       "file": "src/core/search/search-and-ranking-methods.js",
-      "lines": 531,
-      "bytes": 22958,
-      "sha256": "eabd50e64aa2dc5214318684ca1376c8a42282eea21e009429c5c800e99f3e5b"
+      "lines": 536,
+      "bytes": 23382,
+      "sha256": "dee65ca8f106ab7761113ca3abf5b91fc01c3fa668efe5aa97454d37489cb1dc"
     },
     {
       "file": "src/core/search/session-methods.js",
@@ -1840,9 +1830,9 @@
     },
     {
       "file": "src/features/facets/property-picker-methods.js",
-      "lines": 1093,
-      "bytes": 53370,
-      "sha256": "212e41416c17da0da7a5177a1d01a929dd1575f850b0e77638d192447a855832"
+      "lines": 1098,
+      "bytes": 54280,
+      "sha256": "e9af784628f785ce07be416b07524021497f039d3707f021090fdecd008df0e7"
     },
     {
       "file": "src/features/facets/sidebar-maintenance-methods.js",
@@ -2122,9 +2112,9 @@
     },
     {
       "file": "src/features/results/page-and-snippets-methods.js",
-      "lines": 294,
-      "bytes": 15190,
-      "sha256": "361d3e38803d5e790c1550c1143f06106aec5cdf9132826e37dad0867c919a48"
+      "lines": 296,
+      "bytes": 15275,
+      "sha256": "23843a91683ef92628cb7ef57750982e476a9cb9861ab40f1164bae36b8b2ade"
     },
     {
       "file": "src/features/results/result-card-methods.js",
@@ -2152,9 +2142,9 @@
     },
     {
       "file": "src/features/results/virtual-window-methods.js",
-      "lines": 460,
-      "bytes": 20715,
-      "sha256": "c30f1716ecdb2ed51ff24fc937348bb33fa8475dbb5ce4e913643bf6d365267d"
+      "lines": 459,
+      "bytes": 20770,
+      "sha256": "26b5be572fb158e2e01129d83acd3539c022e9527398be50a18a22a1696e2314"
     },
     {
       "file": "src/features/results/virtualization-config.js",

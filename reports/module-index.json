@@ -353,8 +353,8 @@
       "../../utils/dom.js",
       "../../utils/vault-paths.js"
     ],
-    "lines": 533,
-    "bytes": 23503,
+    "lines": 531,
+    "bytes": 23436,
     "origins": [
       {
         "id": "SearchCore._initializeResultState",
@@ -559,8 +559,8 @@
       "../../utils/search-text.js",
       "obsidian"
     ],
-    "lines": 531,
-    "bytes": 22958,
+    "lines": 536,
+    "bytes": 23382,
     "origins": [
       {
         "id": "SearchCore._shouldCloseAfterFileOpen",
@@ -3267,6 +3267,7 @@
       "../../data/tags/tag-tree.js",
       "../../data/tags/tag-values.js",
       "../../interactions/PointerSortCoordinator.js",
+      "../../interactions/hover-hints.js",
       "../../interactions/scroll-anchor.js",
       "../../ui/components/input-controls.js",
       "../../ui/components/property-state.js",
@@ -3281,13 +3282,14 @@
       "../../ui/pickers/sort-mode.js",
       "../../ui/pickers/tree-row.js",
       "../../utils/preferred-order.js",
+      "../../utils/dom.js",
       "../filters/filter-state.js",
       "../filters/pool-config.js",
       "../filters/pool-values.js",
       "obsidian"
     ],
-    "lines": 1093,
-    "bytes": 53370,
+    "lines": 1098,
+    "bytes": 54280,
     "origins": [
       {
         "id": "SearchFacetController.openPropertyPicker",
@@ -6937,8 +6939,8 @@
       "../search/QueryState.js",
       "./browse-card-reuse.js"
     ],
-    "lines": 294,
-    "bytes": 15190,
+    "lines": 296,
+    "bytes": 15275,
     "origins": [
       {
         "id": "SearchResultRendererController.renderCurrentView",
@@ -7510,8 +7512,8 @@
       "../../utils/dom.js",
       "./virtualization-config.js"
     ],
-    "lines": 460,
-    "bytes": 20715,
+    "lines": 459,
+    "bytes": 20770,
     "origins": [
       {
         "id": "SearchResultRendererController.renderInitialPage",

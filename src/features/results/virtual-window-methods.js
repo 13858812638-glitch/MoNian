@@ -125,8 +125,7 @@ export const SearchResultRendererController_virtual_window_methods = {
     },
 
 
-    _windowStartForPosition(position, total) {
-        const size = this._windowSize(total);
+    _windowStartForPosition(position, total, size = this._windowSize(total)) {
         if (!size) return 0;
         const pos = Math.max(0, Math.min(Math.max(0, total - 1), Number(position) || 0));
         const leading = Math.max(2, Math.floor(size / 3));
@@ -183,11 +182,11 @@ export const SearchResultRendererController_virtual_window_methods = {
     },
 
 
-    _syncMountedState() {
+    _syncMountedState(items = null) {
         const core = this.owner;
         if (!core) return;
-        const shells = this._mountedShells();
-        core.resultEls = shells
+        const shells = items ? items.map(item => item._lsSwipeShell) : this._mountedShells();
+        core.resultEls = items || shells
             .map(shell => shell.querySelector(":scope > .local-search-item"))
             .filter(item => isDomHTMLElement(item));
         core.renderedResults = [];

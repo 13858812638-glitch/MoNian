@@ -297,6 +297,7 @@
     "src/data/tags/tag-tree.js",
     "src/data/tags/tag-values.js",
     "src/interactions/PointerSortCoordinator.js",
+    "src/interactions/hover-hints.js",
     "src/interactions/scroll-anchor.js",
     "src/ui/components/input-controls.js",
     "src/ui/components/property-state.js",
@@ -311,6 +312,7 @@
     "src/ui/pickers/sort-mode.js",
     "src/ui/pickers/tree-row.js",
     "src/utils/preferred-order.js",
+    "src/utils/dom.js",
     "src/features/filters/filter-state.js",
     "src/features/filters/pool-config.js",
     "src/features/filters/pool-values.js"

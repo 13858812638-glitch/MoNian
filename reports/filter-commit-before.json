@@ -1,0 +1,470 @@
+[
+  {
+    "name": "desktop sidebar unchanged conditions retain nodes and keyboard focus",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 28,
+      "visible": false
+    }
+  },
+  {
+    "name": "desktop sidebar unchanged conditions perform no DOM mutations",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 28,
+      "visible": false
+    }
+  },
+  {
+    "name": "desktop sidebar folder changes update retained text and accessible name",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "label": "",
+      "text": "文件夹：[Folder000]清除筛选条件 文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "desktop sidebar retained clear action commits once against live state",
+    "pass": true,
+    "evidence": {
+      "same": false,
+      "label": "",
+      "text": "文件夹：[Folder000]清除筛选条件 文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "desktop sidebar removing one tag retains siblings, focus and unrelated groups",
+    "pass": false,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "desktop sidebar property value and group actions preserve other dimensions",
+    "pass": true,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "desktop sidebar date control keeps identity, live display and clear behavior",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "desktop sidebar type values and group clear reconcile the final empty row",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "desktop sidebar pending index and explicit facet refresh commit the filter rail once",
+    "pass": false,
+    "evidence": {
+      "refreshes": 2,
+      "consumed": true,
+      "consistent": true
+    }
+  },
+  {
+    "name": "desktop sidebar filter commit resets a genuinely scrolled list and keeps mounted state aligned",
+    "pass": true,
+    "evidence": {
+      "before": 600,
+      "after": 0,
+      "start": 0,
+      "consistent": true,
+      "mounted": true
+    }
+  },
+  {
+    "name": "desktop sidebar close leaves no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "desktop tab unchanged conditions retain nodes and keyboard focus",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 28,
+      "visible": false
+    }
+  },
+  {
+    "name": "desktop tab unchanged conditions perform no DOM mutations",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 28,
+      "visible": false
+    }
+  },
+  {
+    "name": "desktop tab folder changes update retained text and accessible name",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "label": "",
+      "text": "文件夹：[Folder000]清除筛选条件 文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "desktop tab retained clear action commits once against live state",
+    "pass": true,
+    "evidence": {
+      "same": false,
+      "label": "",
+      "text": "文件夹：[Folder000]清除筛选条件 文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "desktop tab removing one tag retains siblings, focus and unrelated groups",
+    "pass": false,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "desktop tab property value and group actions preserve other dimensions",
+    "pass": true,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "desktop tab date control keeps identity, live display and clear behavior",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "desktop tab type values and group clear reconcile the final empty row",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "desktop tab pending index and explicit facet refresh commit the filter rail once",
+    "pass": false,
+    "evidence": {
+      "refreshes": 2,
+      "consumed": true,
+      "consistent": true
+    }
+  },
+  {
+    "name": "desktop tab filter commit resets a genuinely scrolled list and keeps mounted state aligned",
+    "pass": true,
+    "evidence": {
+      "before": 600,
+      "after": 0,
+      "start": 0,
+      "consistent": true,
+      "mounted": true
+    }
+  },
+  {
+    "name": "desktop tab close leaves no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile sidebar unchanged conditions retain nodes and keyboard focus",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 24,
+      "visible": false
+    }
+  },
+  {
+    "name": "mobile sidebar unchanged conditions perform no DOM mutations",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 24,
+      "visible": false
+    }
+  },
+  {
+    "name": "mobile sidebar folder changes update retained text and accessible name",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "label": "清除筛选条件 文件夹：[Folder000]",
+      "text": "文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "mobile sidebar retained clear action commits once against live state",
+    "pass": true,
+    "evidence": {
+      "same": false,
+      "label": "清除筛选条件 文件夹：[Folder000]",
+      "text": "文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "mobile sidebar removing one tag retains siblings, focus and unrelated groups",
+    "pass": false,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "mobile sidebar property value and group actions preserve other dimensions",
+    "pass": true,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "mobile sidebar date control keeps identity, live display and clear behavior",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "mobile sidebar type values and group clear reconcile the final empty row",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "mobile sidebar pending index and explicit facet refresh commit the filter rail once",
+    "pass": false,
+    "evidence": {
+      "refreshes": 2,
+      "consumed": true,
+      "consistent": true
+    }
+  },
+  {
+    "name": "mobile sidebar filter commit resets a genuinely scrolled list and keeps mounted state aligned",
+    "pass": true,
+    "evidence": {
+      "before": 600,
+      "after": 0,
+      "start": 0,
+      "consistent": true,
+      "mounted": true
+    }
+  },
+  {
+    "name": "mobile sidebar close leaves no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile tab unchanged conditions retain nodes and keyboard focus",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 24,
+      "visible": false
+    }
+  },
+  {
+    "name": "mobile tab unchanged conditions perform no DOM mutations",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "focused": false,
+      "mutations": 24,
+      "visible": false
+    }
+  },
+  {
+    "name": "mobile tab folder changes update retained text and accessible name",
+    "pass": false,
+    "evidence": {
+      "same": false,
+      "label": "清除筛选条件 文件夹：[Folder000]",
+      "text": "文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "mobile tab retained clear action commits once against live state",
+    "pass": true,
+    "evidence": {
+      "same": false,
+      "label": "清除筛选条件 文件夹：[Folder000]",
+      "text": "文件夹：[Folder000]",
+      "consistent": true,
+      "changes": 1,
+      "cleared": true
+    }
+  },
+  {
+    "name": "mobile tab removing one tag retains siblings, focus and unrelated groups",
+    "pass": false,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "mobile tab property value and group actions preserve other dimensions",
+    "pass": true,
+    "evidence": {
+      "one": true,
+      "retained": false,
+      "focused": false,
+      "propertyRetained": false,
+      "collision": true,
+      "single": true,
+      "cleared": true,
+      "unrelated": true
+    }
+  },
+  {
+    "name": "mobile tab date control keeps identity, live display and clear behavior",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "mobile tab type values and group clear reconcile the final empty row",
+    "pass": false,
+    "evidence": {
+      "dateRetained": false,
+      "dateCleared": false,
+      "valueRetained": false,
+      "empty": true
+    }
+  },
+  {
+    "name": "mobile tab pending index and explicit facet refresh commit the filter rail once",
+    "pass": false,
+    "evidence": {
+      "refreshes": 2,
+      "consumed": true,
+      "consistent": true
+    }
+  },
+  {
+    "name": "mobile tab filter commit resets a genuinely scrolled list and keeps mounted state aligned",
+    "pass": true,
+    "evidence": {
+      "before": 600,
+      "after": 0,
+      "start": 0,
+      "consistent": true,
+      "mounted": true
+    }
+  },
+  {
+    "name": "mobile tab close leaves no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  }
+]

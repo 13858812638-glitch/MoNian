@@ -1,3 +1,5 @@
+> **2026-10-23 筛选提交优化（未冻结）**：从 `e38dea9` 唯一基线实施审计结论。共享条件组件保留节点、焦点与实时动作；筛选先复位滚动再写控件，结果提交共用一次窗口预算和已构建节点序列。153 个 JS 模块、661 条静态依赖；CSS 不变。见 [本轮实现与验证](FILTER_COMMIT_20261023.md)。下文保留历史记录。
+
 > **2026-10-22 交互热路径审计**：共享 Indicator Label 保留可见文本节点；Facet 按钮消费已有同值写入 Primitive；Filter Rail 由原生滚动容器维护偏移；FilterEngine 仅计算启用条件，Navigator 单次归一标签身份。详见 [性能审计](INTERACTION_PERFORMANCE_20261022.md)。
 
 > **2026-10-22 整合归一**：导航目录/计数、卡片复用、投影调度和缓冲预算已共用正式实现；标签写入归属 Hover Owner，详见 [整合审计](INTEGRATED_UNIFICATION_20261022.md)。
@@ -6,7 +8,7 @@
 
 > 当前候选见 `DESKTOP_NAVIGATOR_20261019.md`，冻结状态以该文档和 AGENTS.md 顶部为准。新增桌面分栏模块及本轮修改模块的信息已同步；其它条目保留历史职责描述。
 
-- 当前源模块（含入口）：**153**；静态导入边：**659**；工程检查：**PASS-ENGINEERING**。
+- 当前源模块（含入口）：**153**；静态导入边：**661**；工程检查：**PASS-ENGINEERING**。
 - 所有运行模块路径均来自当前 `src/`，没有孤立或已经退役的旧文件。
 - 方法归属由当前 `src/` 及 `composeClassMethods()` 确定；`METHOD_INDEX.md` 的原始行号仅是旧源码溯源，不应作为当前行号。
 - 普通属性目录正式 Owner：`src/features/plugin/property-catalog-methods.js`；当前运行源码不再使用旧项目目录模块。
@@ -22,9 +24,9 @@
 | `src/core/default-settings.js` | 58 | 插件生命周期、搜索会话与状态归属 | `DEFAULT_SETTINGS` |
 | `src/core/picker-cleanup.js` | 20 | 插件生命周期、搜索会话与状态归属 | `disposePickerCleanup`、`registerPickerCleanup` |
 | `src/core/search/file-actions-methods.js` | 359 | 插件生命周期、搜索会话与状态归属 | `SearchCore_file_actions_methods`、`SearchCore_open_selection_methods` |
-| `src/core/search/input-and-filters-methods.js` | 533 | 插件生命周期、搜索会话与状态归属 | `SearchCore_input_and_filters_methods` |
+| `src/core/search/input-and-filters-methods.js` | 531 | 插件生命周期、搜索会话与状态归属 | `SearchCore_input_and_filters_methods` |
 | `src/core/search/result-menu-events-methods.js` | 269 | 插件生命周期、搜索会话与状态归属 | `SearchCore_result_menu_events_methods` |
-| `src/core/search/search-and-ranking-methods.js` | 531 | 插件生命周期、搜索会话与状态归属 | `RESULT_TEXT_COLLATOR`、`SearchCore_search_and_ranking_methods` |
+| `src/core/search/search-and-ranking-methods.js` | 536 | 插件生命周期、搜索会话与状态归属 | `RESULT_TEXT_COLLATOR`、`SearchCore_search_and_ranking_methods` |
 | `src/core/search/session-methods.js` | 129 | 插件生命周期、搜索会话与状态归属 | `SearchCore_session_methods` |
 | `src/core/search/shell-methods.js` | 410 | 插件生命周期、搜索会话与状态归属 | `SearchCore_shell_methods` |
 | `src/core/session-values.js` | 35 | 插件生命周期、搜索会话与状态归属 | `normalizeModalSearchQuery`、`normalizeModalViewportAnchor` |
@@ -56,7 +58,7 @@
 | `src/features/facets/SearchFacetController.js` | 102 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController`、`SearchFacetController_picker_model_methods` |
 | `src/features/facets/folder-colors-methods.js` | 270 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_folder_colors_methods` |
 | `src/features/facets/folder-picker-methods.js` | 519 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_folder_picker_methods` |
-| `src/features/facets/property-picker-methods.js` | 1093 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_property_picker_methods` |
+| `src/features/facets/property-picker-methods.js` | 1098 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_property_picker_methods` |
 | `src/features/facets/sidebar-maintenance-methods.js` | 278 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_sidebar_maintenance_methods` |
 | `src/features/facets/tag-picker-methods.js` | 549 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_tag_picker_methods` |
 | `src/features/facets/type-picker-methods.js` | 314 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchFacetController_type_picker_methods` |
@@ -103,12 +105,12 @@
 | `src/features/results/card-metadata-methods.js` | 347 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_card_metadata_methods` |
 | `src/features/results/filter-channels-methods.js` | 312 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
 | `src/features/results/browse-card-reuse.js` | 92 | 全宿主普通浏览卡片的有界复用、提交和回滚 | `beginBrowseCardReuse` |
-| `src/features/results/page-and-snippets-methods.js` | 294 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
+| `src/features/results/page-and-snippets-methods.js` | 296 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
 | `src/features/results/result-card-methods.js` | 208 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS`、`RESULT_CONTENT_IDS`、`RESULT_CONTENT_DEF_MAP`、`VIEW_COMPOSER_SECTION_IDS`、`normalizeResultContentOrder`、`DEFAULT_RESULT_VIEWS`、`normalizeResultViewId`、`normalizeResultViewConfig`、`normalizeResultViews` |
 | `src/features/results/viewport-anchors-methods.js` | 397 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_anchors_methods` |
 | `src/features/results/viewport-geometry-methods.js` | 445 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
-| `src/features/results/virtual-window-methods.js` | 460 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
+| `src/features/results/virtual-window-methods.js` | 459 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
 | `src/features/results/virtualization-config.js` | 51 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_WINDOW_MOUNT_MIN`、`RESULT_WINDOW_MOUNT_MAX`、`RESULT_WINDOW_BUFFER_MIN`、`RESULT_ROW_HEIGHT_ESTIMATE`、`FULL_CONTENT_CACHE_LIMIT`、`RESULT_GEOMETRY_CSS_TOKENS` |
 | `src/features/search/QueryState.js` | 19 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `QueryState` |
 | `src/features/search/ResultRanker.js` | 59 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `ResultRanker` |

@@ -525,9 +525,7 @@ export const SearchCore_input_and_filters_methods = {
             this._notifyStateChange();
             return;
         }
-        this.facets.syncFilterButtons();
-        this.resultControls?.refreshFilterPoolHeader?.();
-        this.performSearch(rawQuery);
+        this.performSearch(rawQuery, false, { refreshFacets: true });
     },
 };
 

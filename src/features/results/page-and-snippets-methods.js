@@ -203,8 +203,9 @@ export const SearchResultRendererController_page_and_snippets_methods = {
                     const heightIndex = this._ensureHeightIndex(total);
                     const desiredPosition = Number.isFinite(targetPosition)
                         ? Number(targetPosition) : this.windowStart;
-                    nextStart = this._windowStartForPosition(desiredPosition, total);
-                    nextEnd = Math.min(total, nextStart + this._windowSize(total));
+                    const windowSize = this._windowSize(total);
+                    nextStart = this._windowStartForPosition(desiredPosition, total, windowSize);
+                    nextEnd = Math.min(total, nextStart + windowSize);
                     const beforeHeight = heightIndex.prefix(nextStart);
                     const afterHeight = Math.max(0, heightIndex.total() - heightIndex.prefix(nextEnd));
                     const fragment = rail.ownerDocument.createDocumentFragment();
@@ -237,10 +238,11 @@ export const SearchResultRendererController_page_and_snippets_methods = {
             this._beforeSpacer = nextBeforeSpacer;
             this._afterSpacer = nextAfterSpacer;
             if (hasResults) {
-                for (const shell of rail.querySelectorAll(":scope > .local-search-swipe-shell")) {
+                for (const item of core.resultEls) {
+                    const shell = item._lsSwipeShell;
                     this._observeShell(shell, Number.parseInt(shell.dataset.virtualPosition || "", 10));
                 }
-                this._syncMountedState();
+                this._syncMountedState(core.resultEls);
                 if (Number.isFinite(preserveScrollTop)) {
                     this._setScrollTop(Number(preserveScrollTop));
                 } else if (Number.isFinite(targetPosition) && nextStart > 0) {

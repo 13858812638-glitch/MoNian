@@ -9,6 +9,7 @@ import { PRESENT_PROPERTY_VALUE, buildPropertyUsageStats, isSpecialPropertyValue
 import { orderTagSelectionsForPicker } from "../../data/tags/tag-tree.js";
 import { NO_TAGS_FILTER_VALUE } from "../../data/tags/tag-values.js";
 import { PointerSortCoordinator } from "../../interactions/PointerSortCoordinator.js";
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
 import { rerenderPickerListPreservingScroll, revealScrollableKey } from "../../interactions/scroll-anchor.js";
 import { createSearchButton } from "../../ui/components/input-controls.js";
 import { appendPropertySpecialStateInlineGroup } from "../../ui/components/property-state.js";
@@ -23,6 +24,7 @@ import { createSharedPickerSelectionStrip } from "../../ui/pickers/selection-str
 import { attachFacetPickerSortModeToggle } from "../../ui/pickers/sort-mode.js";
 import { createPickerRowAction, createSharedPickerTreeRow, syncSharedPickerTreeRowAvailability } from "../../ui/pickers/tree-row.js";
 import { sortByPreferredOrder } from "../../utils/preferred-order.js";
+import { reconcileDomChildren, setDomText } from "../../utils/dom.js";
 import { filterDateRangeDisplay } from "../filters/filter-state.js";
 import { filterPoolId } from "../filters/pool-config.js";
 import { propertyPoolEntry } from "../filters/pool-values.js";
@@ -933,33 +935,46 @@ export const SearchFacetController_property_picker_methods = {
         const core = this.owner;
         if (!core.propertyFilterRow || !core.activeFilterWrap) return;
 
-        // 只刷新当前条件容器；数量统计已固定在批量操作栏，不属于本行。
-        core.activeFilterWrap.empty();
-
-        const runFilterMutation = mutate => {
-            mutate();
-            core._onFilterChanged();
+        // Reconcile only this component's children. Accessible-name nodes are
+        // owned by Hover Hints and must survive both group and button updates.
+        // Node identity is derived from live DOM; FilterState remains authoritative.
+        const children = parent => new Map([...parent.children]
+            .filter(node => node._lsConditionKey !== undefined)
+            .map(node => [node._lsConditionKey, node]));
+        const commit = (parent, nodes) => reconcileDomChildren(parent, [
+            ...nodes, ...[...parent.childNodes].filter(node => node._lsConditionKey === undefined)
+        ]);
+        const previous = children(core.activeFilterWrap);
+        const planned = [];
+        const syncButton = (parent, old, key, interaction, cls, text, label, action) => {
+            let button = old.get(key);
+            if (!button) {
+                button = createSearchButton(parent, interaction, { cls });
+                button._lsConditionKey = key;
+                button.addEventListener("click", event => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    button._lsConditionAction();
+                    core._onFilterChanged();
+                });
+            }
+            button._lsConditionAction = action;
+            setDomText(button, text);
+            setSearchAttribute(button, "aria-label", label);
+            return button;
         };
 
-        const addClearableChip = (text, clear) => {
-            const chip = createSearchButton(core.activeFilterWrap, "choice", {
-                text,
-                cls: "local-search-condition-chip local-search-active-filter-chip is-applied",
-                attr: {
-                    "aria-label": `清除筛选条件 ${text}`
-                }
-            });
-            chip.addEventListener("click", e => {
-                e.preventDefault();
-                e.stopPropagation();
-                runFilterMutation(clear);
-            });
+        const addClearableChip = (key, text, clear) => {
+            planned.push(syncButton(core.activeFilterWrap, previous, key, "choice",
+                "local-search-condition-chip local-search-active-filter-chip is-applied",
+                text, `清除筛选条件 ${text}`, clear));
         };
 
         // 当前条件的复合筛选只保留这一套 Condition Group Primitive：
         // 外层 Group 唯一拥有 Applied Surface；组名负责清整组，值按钮只移除自身。
         // 标签与属性共享同一 DOM / 视觉 / 命中规则，不再分别维护两套交互。
         const addConditionGroup = ({
+            identity,
             groupLabel,
             ariaLabel,
             orderedValues,
@@ -970,42 +985,27 @@ export const SearchFacetController_property_picker_methods = {
         }) => {
             if (!groupLabel || !orderedValues?.length) return;
 
-            const group = core.activeFilterWrap.createSpan({
-                cls: "local-search-condition-chip local-search-active-condition-group is-applied",
-                attr: {
-                    role: "group",
-                    "aria-label": ariaLabel || groupLabel
-                }
-            });
-
-            const keyButton = createSearchButton(group, "quiet", {
-                text: `${groupLabel}：`,
-                cls: "local-search-active-condition-key",
-                attr: {
-                    "aria-label": `清除整个${ariaLabel || groupLabel}`
-                }
-            });
-            keyButton.addEventListener("click", event => {
-                event.preventDefault();
-                event.stopPropagation();
-                runFilterMutation(clearGroup);
-            });
+            let group = previous.get(identity);
+            if (!group) {
+                group = core.activeFilterWrap.createSpan({
+                    cls: "local-search-condition-chip local-search-active-condition-group is-applied",
+                    attr: { role: "group" }
+                });
+                group._lsConditionKey = identity;
+            }
+            setSearchAttribute(group, "aria-label", ariaLabel || groupLabel);
+            const old = children(group);
+            const nodes = [syncButton(group, old, "key", "quiet",
+                "local-search-active-condition-key", `${groupLabel}：`,
+                `清除整个${ariaLabel || groupLabel}`, clearGroup)];
 
             for (const value of orderedValues) {
-                const label = valueText(value);
-                const valueButton = createSearchButton(group, "quiet", {
-                    text: label,
-                    cls: "local-search-active-condition-value",
-                    attr: {
-                        "aria-label": valueAria(value)
-                    }
-                });
-                valueButton.addEventListener("click", event => {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    runFilterMutation(() => removeValue(value));
-                });
+                nodes.push(syncButton(group, old, JSON.stringify(["value", value]), "quiet",
+                    "local-search-active-condition-value", valueText(value), valueAria(value),
+                    () => removeValue(value)));
             }
+            commit(group, nodes);
+            planned.push(group);
         };
 
         // 当前条件按稳定的信息层级显示：文件类型 → 文件夹 → 标签 → 属性 → 时间。
@@ -1014,6 +1014,7 @@ export const SearchFacetController_property_picker_methods = {
         if (core.filterState.fileTypes.size && !core.createFlow?.isCreateView?.()) {
             const orderedFileTypes = [...core.filterState.fileTypes];
             addConditionGroup({
+                identity: "fileTypes",
                 groupLabel: "文件类型",
                 ariaLabel: "文件类型筛选",
                 orderedValues: orderedFileTypes,
@@ -1029,6 +1030,7 @@ export const SearchFacetController_property_picker_methods = {
                 core.filterState.folders
             );
             addClearableChip(
+                "folders",
                 `文件夹：${orderedFolders.map(v => `[${v}]`).join(" ")}`,
                 () => core._applyFacetSelection("folder", "", { mode: "clear" })
             );
@@ -1039,6 +1041,7 @@ export const SearchFacetController_property_picker_methods = {
                 core.plugin.settings.pickerTagOrder
             );
             addConditionGroup({
+                identity: "tags",
                 groupLabel: "标签",
                 ariaLabel: "标签筛选",
                 orderedValues: orderedTags,
@@ -1061,6 +1064,7 @@ export const SearchFacetController_property_picker_methods = {
         );
         for (const [key, orderedValues] of orderedPropertySelections) {
             addConditionGroup({
+                identity: JSON.stringify(["property", key]),
                 groupLabel: key,
                 ariaLabel: `属性筛选 ${key}`,
                 orderedValues,
@@ -1081,11 +1085,12 @@ export const SearchFacetController_property_picker_methods = {
         }
 
         if (core.filterState.dateRange && !core.createFlow?.isCreateView?.()) {
-            addClearableChip(filterDateRangeDisplay(core.filterState.dateRange), () => {
+            addClearableChip("dateRange", filterDateRangeDisplay(core.filterState.dateRange), () => {
                 core.filterState.dateRange = null;
             });
         }
 
+        commit(core.activeFilterWrap, planned);
         // 状态行只在频道或真实筛选条件存在时显示；无内容不保留空占位。
         core._syncResultStateRow?.();
     },
