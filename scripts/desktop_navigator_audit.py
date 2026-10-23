@@ -131,7 +131,7 @@ with sync_playwright() as pw:
             check(prefix+' Escape cancels drag and restores width',page.evaluate('!C.navigator.root.classList.contains("is-nav-resizing")') and abs(page.evaluate('C.navigator.facets.getBoundingClientRect().width')-cancelWidth)<2)
             page.evaluate("document.querySelector('#host').style.width='600px';V.onResize()")
             page.wait_for_timeout(60)
-            check(prefix+' stack hides resize handle',not handle.is_visible())
+            check(prefix+' stack exposes horizontal resize handle',handle.is_visible() and handle.get_attribute('aria-orientation')=='horizontal')
             page.evaluate("document.querySelector('#host').style.width='900px';V.onResize()")
             page.wait_for_timeout(60)
             page.evaluate('window.savedDesktopState=V.getState();const old=V.containerEl;V.onClose();old.remove()')

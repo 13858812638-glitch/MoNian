@@ -1872,6 +1872,9 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
 .local-search-navigator {
     --ls-nav-facet-width: 220px;
     --ls-nav-result-min-width: 320px;
+    --ls-nav-pane-min-width: 180px;
+    --ls-nav-pane-min-height: 120px;
+    --ls-nav-result-min-height: 160px;
     --ls-nav-stack-height: 180px;
     --ls-nav-count-width: 3ch;
     --ls-nav-background-left: min(var(--ls-nav-background-extend-left), var(--ls-nav-content-inset-left));
@@ -2219,7 +2222,7 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
     flex-direction: row;
 }
 .local-search-navigator[data-nav-layout="split"] .local-search-facets {
-    flex: 0 0 clamp(180px, var(--ls-nav-pane-width, clamp(var(--ls-nav-facet-width), 28%, 280px)), calc(100% - var(--ls-nav-result-min-width)));
+    flex: 0 0 clamp(var(--ls-nav-pane-min-width), var(--ls-nav-pane-width, clamp(var(--ls-nav-facet-width), 28%, 280px)), calc(100% - var(--ls-nav-result-min-width)));
     border-inline-end: 1px solid var(--ls-divider);
 }
 .local-search-nav-divider.local-search-resize-handle { display: none; }
@@ -2245,32 +2248,49 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
 .local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar button.local-search-nav-tool:is(:hover, [aria-pressed="true"], [aria-expanded="true"]) {
     background: var(--ls-state-active-filter-highlight-bg) !important;
 }
-.local-search-navigator[data-nav-layout="split"] > .local-search-workspace > .local-search-nav-divider {
+.local-search-navigator:is([data-nav-layout="split"], [data-nav-layout="stack"]) > .local-search-workspace > .local-search-nav-divider {
     display: block;
     position: relative;
     z-index: 30;
     flex: 0 0 8px;
-    width: 8px;
-    height: auto;
     inset: auto;
-    margin-inline: -4px;
     align-self: stretch;
-    cursor: col-resize;
+    cursor: var(--ls-nav-resize-cursor);
     touch-action: none;
     outline: none;
+}
+/* One separator primitive; only axis geometry changes. */
+.local-search-navigator[data-nav-layout="split"] { --ls-nav-resize-cursor: col-resize; }
+.local-search-navigator[data-nav-layout="stack"] { --ls-nav-resize-cursor: row-resize; }
+.local-search-navigator[data-nav-layout="split"] > .local-search-workspace > .local-search-nav-divider {
+    width: 8px;
+    height: auto;
+    margin-inline: -4px;
+}
+.local-search-navigator[data-nav-layout="stack"] > .local-search-workspace > .local-search-nav-divider {
+    width: auto;
+    height: 8px;
+    margin-block: -4px;
+}
+.local-search-navigator[data-nav-layout="split"] .local-search-nav-divider::after {
+    inset-block: 0;
+    inset-inline-start: 3px;
+    width: 2px;
+}
+.local-search-navigator[data-nav-layout="stack"] .local-search-nav-divider::after {
+    inset-inline: 0;
+    inset-block-start: 3px;
+    height: 2px;
 }
 .local-search-nav-divider::after {
     content: "";
     position: absolute;
-    inset-block: 0;
-    inset-inline-start: 3px;
-    width: 2px;
     background: transparent;
 }
 .local-search-nav-divider:is(:hover, :focus-visible)::after,
 .is-nav-resizing .local-search-nav-divider::after { background: var(--interactive-accent); }
 .local-search-navigator.is-nav-resizing,
-.local-search-navigator.is-nav-resizing * { cursor: col-resize !important; user-select: none !important; }
+.local-search-navigator.is-nav-resizing * { cursor: var(--ls-nav-resize-cursor) !important; user-select: none !important; }
 /* Desktop group headings have a management action as well as a count. */
 .local-search-navigator:not([data-nav-layout="mobile"]) .local-search-nav-section-heading {
     --ls-nav-count-action-reserve: calc(var(--ls-window-control-size) + var(--ls-tree-trailing-gap));
@@ -2294,14 +2314,14 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
     min-width: var(--ls-nav-result-min-width);
 }
 .local-search-navigator[data-nav-layout="stack"] .local-search-facets {
-    flex: 0 0 auto;
-    max-height: 45%;
+    flex: 0 0 var(--ls-nav-pane-height, auto);
+    min-height: min(var(--ls-nav-pane-min-height), 50%);
+    max-height: max(min(var(--ls-nav-pane-min-height), 50%), calc(100% - var(--ls-nav-result-min-height)));
     border-bottom: 1px solid var(--ls-divider);
 }
 .local-search-navigator[data-nav-layout="stack"] .local-search-nav-scroll {
-    flex: 0 1 var(--ls-nav-stack-height);
-    min-height: 100px;
-    max-height: var(--ls-nav-stack-height);
+    flex: 1 1 var(--ls-nav-stack-height);
+    min-height: 0;
 }
 
 /* Mobile has a tree and a result page, with one stable action rail at the

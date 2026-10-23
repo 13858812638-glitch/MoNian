@@ -1,3 +1,5 @@
+> **2026-10-23 自适应上下分栏调高（未冻结）**：唯一开发基线 `aed6f38`。现有分隔条按布局统一切换横纵轴；上下布局可拖动调高，宽高分别随会话保存。高度变化只同步分隔边界，不触发导航投影或搜索。见 [实现与验证](STACK_PANE_HEIGHT_20261023.md)。下文保留历史记录。
+
 > **2026-10-23 工具栏与状态同步优化（未冻结）**：以 `1ab2cd7` 为唯一开发基线。桌面左侧顶部命令栏右对齐，共用右侧动作栏的尺寸 Primitive / Token；统计与条件状态复用共享同值更新函数。153 个 JS 模块、664 条静态依赖；本轮修改 2 个 JS 模块及 CSS。见 [实现、测量与边界](TOOLBAR_PERFORMANCE_20261023.md)。下文保留历史记录。
 
 > **2026-10-23 筛选提交优化（未冻结）**：从 `e38dea9` 唯一基线实施审计结论。共享条件组件保留节点、焦点与实时动作；筛选先复位滚动再写控件，结果提交共用一次窗口预算和已构建节点序列。153 个 JS 模块、661 条静态依赖；CSS 不变。见 [本轮实现与验证](FILTER_COMMIT_20261023.md)。下文保留历史记录。
@@ -72,9 +74,9 @@
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
 | `src/features/navigator/NavigatorCustomization.js` | 897 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
 | `src/features/navigator/navigation-icon.js` | 15 | 复用导航控件的 SVG 替换与标签保留 | `setNavigatorIcon` |
-| `src/features/navigator/SearchNavigatorController.js` | 1455 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
+| `src/features/navigator/SearchNavigatorController.js` | 1461 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId`、`normalizeNavigatorCustomization`、`remapNavigatorCustomization` |
-| `src/features/navigator/desktop-pane.js` | 128 | 桌面分栏拖动、键盘调整、宽度恢复及手势清理 | `createDesktopNavigatorPane` |
+| `src/features/navigator/desktop-pane.js` | 140 | 桌面横纵分栏拖动、键盘调整、宽高恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid`、`navigatorToolbarActionAvailable`、`navigatorToolbarCatalog`、`normalizeNavigatorToolbars`、`navigatorToolbarIcon`、`NAVIGATOR_VISIBLE_SECTION_DEFS`、`normalizeNavigatorVisibleSections`、`normalizeNavigatorTimeField` |
 | `src/features/plugin/content-cache-methods.js` | 196 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_content_cache_methods` |
 | `src/features/plugin/external-properties-methods.js` | 272 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_external_properties_methods` |
@@ -433,7 +435,7 @@
 - **导出**：`NavigatorCustomization`
 
 ### `src/features/navigator/SearchNavigatorController.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1,521 行，92,087 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；1461 行，87,371 字节。
 - **直接依赖**：`../../core/picker-cleanup.js`、`../../core/session-values.js`、`../../data/folders/folder-tree.js`、`../../data/formats/file-types.js`、`../../data/properties/property-catalog.js`、`../../data/properties/property-values.js`、`../../data/tags/tag-tree.js`、`../../data/tags/tag-values.js`、`../../interactions/scroll-anchor.js`、`../../ui/components/input-controls.js`、`../../ui/pickers/count-rail.js`、`../../ui/pickers/picker-header.js`、`../../ui/pickers/tree-row.js`、`../../utils/normalization.js`、`../sort/sort-model.js`、`./NavigatorCustomization.js`、`./desktop-pane.js`、`./navigation-icon.js`、`./customization-model.js`、`./toolbar-config.js`、`obsidian`
 - **导出**：`SearchNavigatorController`
 
@@ -904,7 +906,7 @@
 
 
 ### `src/features/navigator/desktop-pane.js`
-- **职责**：桌面分栏控制；128 行，6,596 字节。宽度保存在现有 Navigator 会话，移动端不创建该控件。
+- **职责**：桌面分栏控制；140 行，6,866 字节。宽度保存在现有 Navigator 会话，移动端不创建该控件。
 - **直接依赖**：无静态导入；接收唯一 Navigator Owner。
 - **导出**：`createDesktopNavigatorPane`（内部工厂，返回 `sync` / `restore` / `destroy`；非公开插件 API）。
 

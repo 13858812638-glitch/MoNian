@@ -1,0 +1,232 @@
+{
+  "candidate": "GLS adaptive pane height 2026-10-23",
+  "baselineCommit": "aed6f383d9c6962df1ddbe8fe0cc8722ee8f96a3",
+  "scope": "Two JS modules and CSS; existing desktop separator supports both axes; Navigator session owns optional paneHeight; mobile unchanged",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 153,
+    "importEdges": 664,
+    "cycles": [],
+    "unresolvedSymbols": 0
+  },
+  "build": {
+    "reproducible": true,
+    "sha256": "653a34347a2cfa6a8f07b1c09dd053d50a3a59f6d6a46f95bf39b86dad518ad3",
+    "cssMatchesSource": true,
+    "cssSha256": "460ecb0165943c6d2edea5b90038ed09ba33de4372b788357c74cfb182ad9beb",
+    "baselineCssSha256": "9bf129113fb50a3d287b9d2164a32cbdf57ac182f5265c93e19c211b55486da8"
+  },
+  "node": {
+    "tests": 269,
+    "passed": 265,
+    "failed": 4,
+    "preexistingFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "browserSnapshotAB": {
+    "passed": 0,
+    "failed": 4,
+    "classification": "Existing frozen initial-snapshot incompatibilities; no assertions or reference data relaxed."
+  },
+  "gateExitCodes": {
+    "check": 0,
+    "build": 0,
+    "node": 1,
+    "toolbar-state": 0,
+    "filter-commit": 0,
+    "stack-pane": 0,
+    "hot-path": 0,
+    "consolidation": 0,
+    "property-count-desktop": 0,
+    "property-count-mobile": 0,
+    "lifecycle": 0,
+    "feishu": 0,
+    "browse": 0,
+    "properties": 0,
+    "rail": 0,
+    "stable": 0,
+    "redundant": 0,
+    "focus": 0,
+    "selection": 0,
+    "tree": 0,
+    "refresh": 0,
+    "mouse": 0,
+    "focus-repair": 0,
+    "repeat": 0,
+    "release": 0,
+    "contracts": 0,
+    "desktop": 0,
+    "browser": 1,
+    "acceptance-desktop-light": 0,
+    "acceptance-desktop-dark": 0,
+    "mobile": 0,
+    "index": 0,
+    "acceptance-mobile-light": 0,
+    "acceptance-mobile-dark": 0,
+    "portal": 0,
+    "caret": 0,
+    "workflows": 0,
+    "popups": 0
+  },
+  "currentBehavior": {
+    "stack-pane": {
+      "passed": 45,
+      "failed": 0
+    },
+    "toolbar-state": {
+      "passed": 26,
+      "failed": 0
+    },
+    "filter-commit": {
+      "passed": 44,
+      "failed": 0
+    },
+    "hot-path": {
+      "passed": 30,
+      "failed": 0
+    },
+    "consolidation": {
+      "passed": 26,
+      "failed": 0
+    },
+    "lifecycle": {
+      "passed": 14,
+      "failed": 0
+    },
+    "properties": {
+      "passed": 34,
+      "failed": 0
+    },
+    "desktop": {
+      "passed": 55,
+      "failed": 0
+    },
+    "popups": {
+      "passed": 80,
+      "failed": 0
+    },
+    "workflows": {
+      "passed": 80,
+      "failed": 0
+    },
+    "mouse": {
+      "passed": 27,
+      "failed": 0
+    },
+    "tree": {
+      "passed": 24,
+      "failed": 0
+    },
+    "selection": {
+      "passed": 6,
+      "failed": 0
+    },
+    "refresh": {
+      "passed": 32,
+      "failed": 0
+    },
+    "repeat": {
+      "passed": 16,
+      "failed": 0
+    },
+    "stable": {
+      "passed": 38,
+      "failed": 0
+    },
+    "redundant": {
+      "passed": 24,
+      "failed": 0
+    },
+    "rail": {
+      "passed": 21,
+      "failed": 0
+    },
+    "browse": {
+      "passed": 24,
+      "failed": 0
+    },
+    "release": {
+      "passed": 32,
+      "failed": 0
+    },
+    "pickerPortalChromium": {
+      "passed": 48,
+      "failed": 0
+    },
+    "pickerCaret": {
+      "passed": 36,
+      "failed": 0
+    },
+    "focus": {
+      "passed": 56,
+      "failed": 0
+    },
+    "focusRepair": {
+      "passed": 96,
+      "failed": 0
+    },
+    "feishuComparison": {
+      "passed": 8,
+      "failed": 0
+    },
+    "propertyCountsDesktop": {
+      "passed": 32,
+      "failed": 0
+    },
+    "propertyCountsMobile": {
+      "passed": 32,
+      "failed": 0
+    },
+    "searchAcceptance": {
+      "passed": 144,
+      "failed": 0
+    },
+    "mobileSidebar": {
+      "passed": 96,
+      "failed": 0
+    },
+    "indexRetry": {
+      "passed": 7,
+      "failed": 0
+    },
+    "interactionContracts": {
+      "passed": 14,
+      "failed": 0
+    }
+  },
+  "currentBehaviorTotal": 1247,
+  "newRegressionBefore": {
+    "passed": 1,
+    "failed": 2
+  },
+  "newRegressionAfter": {
+    "passed": 45,
+    "failed": 0
+  },
+  "initialCandidateRegression": {
+    "passed": 33,
+    "failed": 6
+  },
+  "unverified": [
+    "Native Obsidian desktop",
+    "Native iOS/Android input and performance",
+    "WebKit",
+    "Actual user vault and snippets"
+  ],
+  "rawEvidence": "/workspace/stack-audit",
+  "package": {
+    "file": "downloads/GLS-Stack-Resize-20261023.zip",
+    "bytes": 434635,
+    "sha256": "587a1eb2150318af15a218dd67c8f8038d4b1cb28060584c9048007bc9550877",
+    "crc": "PASS",
+    "entries": [
+      "main.js",
+      "styles.css"
+    ],
+    "payloadMatchesDist": true
+  }
+}

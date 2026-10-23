@@ -614,6 +614,7 @@ export class SearchNavigatorController {
     capture() {
         return { navigationVersion: 2, page: this.page, searchVisible: this.searchVisible,
             ...(this._desktopPaneWidth != null ? { paneWidth: this._desktopPaneWidth } : {}),
+            ...(this._desktopPaneHeight != null ? { paneHeight: this._desktopPaneHeight } : {}),
             expanded: [...this.expanded], collapsed: [...this.collapsed],
             scrollTop: this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop };
     }
@@ -635,7 +636,7 @@ export class SearchNavigatorController {
         if (state.navigationVersion === 2 || !Platform.isMobile) this.collapsed = new Set(normalizeUniqueStringList(state.collapsed));
         this._restoreScrollTop = Math.max(0, Number(state.scrollTop) || 0);
         this._filterScrollTop = this._restoreScrollTop;
-        this._desktopPane?.restore(state.paneWidth);
+        this._desktopPane?.restore(state.paneWidth, state.paneHeight);
         if (!this.resize()) this.syncPage();
         this.renderRevision = -1;
         this.sync();
@@ -644,22 +645,27 @@ export class SearchNavigatorController {
 
     resize() {
         if (!this.core || this.core._destroyed) return;
-        const width = this.root.getBoundingClientRect().width;
+        const { width, height } = this.root.getBoundingClientRect();
         if (!width) return;
         const next = Platform.isMobile ? "mobile" : width >= 650 ? "split" : "stack";
         // Keyboard / host height changes belong to MobileFrameController. Only
         // a real width or layout change can invalidate this navigation layout.
-        if (this.width === width && this.layout === next) return;
+        const heightChanged = !Platform.isMobile && this.height !== height;
+        if (!Platform.isMobile) this.height = height;
+        if (this.width === width && this.layout === next) {
+            if (heightChanged) this._desktopPane?.sync();
+            return;
+        }
         this.width = width;
         const changed = next !== this.layout;
         this.layout = next;
         this.root.dataset.navLayout = next;
-        this._desktopPane?.sync();
         // One live input is moved, never cloned or replaced. An active IME stays attached.
         const parent = next === "mobile" ? this.root : this.facets;
         if (this.header.parentElement !== parent) parent.prepend(this.header);
         this._placeMobileTools(next === "mobile");
         this.syncPage();
+        this._desktopPane?.sync();
         if (changed) { this.renderRevision = -1; this.sync(); }
         this.core.dropdown?._queueReposition();
         return true;

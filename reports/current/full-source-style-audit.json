@@ -2,44 +2,44 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34812,
-  "jsBytes": 1614876,
-  "cssBytes": 265128,
-  "cssLines": 7684,
+  "jsLines": 34830,
+  "jsBytes": 1615479,
+  "cssBytes": 266199,
+  "cssLines": 7704,
   "cssParseErrors": [],
-  "cssRuleCount": 723,
+  "cssRuleCount": 729,
   "duplicateSelectorsSameContext": [
     {
       "context": [],
       "selector": ":root",
       "lines": [
         1444,
-        7286
+        7306
       ]
     },
     {
       "context": [],
       "selector": ".local-search-navigator .local-search-nav-scroll",
       "lines": [
-        1905,
-        1926
+        1908,
+        1929
       ]
     },
     {
       "context": [],
       "selector": "body.is-mobile",
       "lines": [
-        7114,
-        7294
+        7134,
+        7314
       ]
     }
   ],
   "duplicatePropertiesSameRule": [
     {
-      "line": 3570,
+      "line": 3590,
       "selector": ".local-search-results-shell",
       "property": "overflow",
-      "earlier": 3569
+      "earlier": 3589
     }
   ],
   "styleSettings": {
@@ -51,7 +51,7 @@
     "duplicateSectionNamedHeading": [],
     "missingConsumerCandidates": []
   },
-  "tokenDefinitionCount": 289,
+  "tokenDefinitionCount": 293,
   "unconsumedTokenCandidates": [],
   "resourceReferences": [
     {
@@ -431,97 +431,97 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 925,
+      "line": 931,
       "code": "manage.addEventListener(\"click\", () => this.openSection(id, manage));"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 43,
+      "line": 57,
       "code": "if (frame === null) frame = win.requestAnimationFrame(flush);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 47,
+      "line": 61,
       "code": "if (frame !== null) { win.cancelAnimationFrame(frame); frame = null; }"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 56,
+      "line": 66,
       "code": "win.removeEventListener(\"pointermove\", move);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 57,
+      "line": 67,
       "code": "win.removeEventListener(\"pointerup\", up);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 58,
+      "line": 68,
       "code": "win.removeEventListener(\"pointercancel\", cancel);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 59,
+      "line": 69,
       "code": "win.removeEventListener(\"blur\", cancel);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 83,
+      "line": 93,
       "code": "win.addEventListener(\"pointermove\", move);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 84,
+      "line": 94,
       "code": "win.addEventListener(\"pointerup\", up);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 85,
+      "line": 95,
       "code": "win.addEventListener(\"pointercancel\", cancel);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 86,
+      "line": 96,
       "code": "win.addEventListener(\"blur\", cancel);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 105,
+      "line": 117,
       "code": "divider.addEventListener(\"pointerdown\", down);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 106,
+      "line": 118,
       "code": "divider.addEventListener(\"lostpointercapture\", cancel);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 107,
+      "line": 119,
       "code": "divider.addEventListener(\"keydown\", key);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 108,
+      "line": 120,
       "code": "divider.addEventListener(\"dblclick\", reset);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 121,
+      "line": 132,
       "code": "divider.removeEventListener(\"pointerdown\", down);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 122,
+      "line": 133,
       "code": "divider.removeEventListener(\"lostpointercapture\", cancel);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 123,
+      "line": 134,
       "code": "divider.removeEventListener(\"keydown\", key);"
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "line": 124,
+      "line": 135,
       "code": "divider.removeEventListener(\"dblclick\", reset);"
     },
     {
@@ -1896,9 +1896,9 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "lines": 1455,
-      "bytes": 87038,
-      "sha256": "b195df8507745b39740b81f79801ed4d4c64937001dae753064a4d7da21a277a"
+      "lines": 1461,
+      "bytes": 87371,
+      "sha256": "3d281611bb01da893a9041fd1e1f3e495a01f66cc0f3918df252e7ea1ed4e627"
     },
     {
       "file": "src/features/navigator/customization-model.js",
@@ -1908,9 +1908,9 @@
     },
     {
       "file": "src/features/navigator/desktop-pane.js",
-      "lines": 128,
-      "bytes": 6596,
-      "sha256": "6aabd966698dd0bc499a033f20ebf79dd4410366466b39fbadf2ce5f83d5ec31"
+      "lines": 140,
+      "bytes": 6866,
+      "sha256": "298fbfa7321c78dbc2ba51cfdc7453cd74dc448ffcd74edc0522527734407126"
     },
     {
       "file": "src/features/navigator/navigation-icon.js",
@@ -2484,9 +2484,9 @@
     },
     {
       "file": "src/styles/styles.css",
-      "lines": 7684,
-      "bytes": 265128,
-      "sha256": "9bf129113fb50a3d287b9d2164a32cbdf57ac182f5265c93e19c211b55486da8"
+      "lines": 7704,
+      "bytes": 266199,
+      "sha256": "460ecb0165943c6d2edea5b90038ed09ba33de4372b788357c74cfb182ad9beb"
     }
   ],
   "mobileContract": {

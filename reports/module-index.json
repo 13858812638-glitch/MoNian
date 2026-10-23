@@ -3981,8 +3981,8 @@
       "./toolbar-config.js",
       "obsidian"
     ],
-    "lines": 1455,
-    "bytes": 87038,
+    "lines": 1461,
+    "bytes": 87371,
     "origins": [
       {
         "id": "SearchNavigatorController",
@@ -4067,8 +4067,8 @@
       "createDesktopNavigatorPane"
     ],
     "dependencies": [],
-    "lines": 128,
-    "bytes": 6596,
+    "lines": 140,
+    "bytes": 6866,
     "origins": []
   },
   {

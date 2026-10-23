@@ -22909,54 +22909,70 @@ exports.NavigatorCustomization = NavigatorCustomization;
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createDesktopNavigatorPane = createDesktopNavigatorPane;
-// Desktop-only geometry for the existing Navigator facets/results panes.
-// SearchNavigatorController retains the session; no plugin settings or second view.
+// One desktop separator for both adaptive axes; Navigator owns session sizes.
+const PANE_AXES = {
+    split: { size: "width", point: "clientX", state: "_desktopPaneWidth", orientation: "vertical",
+        label: "调整导航面板宽度", previous: "ArrowLeft", next: "ArrowRight" },
+    stack: { size: "height", point: "clientY", state: "_desktopPaneHeight", orientation: "horizontal",
+        label: "调整导航面板高度", previous: "ArrowUp", next: "ArrowDown" }
+};
 function createDesktopNavigatorPane(nav) {
     const win = nav.root.ownerDocument.defaultView;
-    // The existing resize marker also gives this gesture priority over the
-    // document's shared swipe-back recognizer (including other plugin leases).
+    // This shared resize marker excludes the gesture from swipe recognizers.
     const divider = nav.workspace.createDiv({ cls: "local-search-nav-divider local-search-resize-handle", attr: {
-            role: "separator", tabindex: "0", "aria-orientation": "vertical",
-            "aria-label": "调整导航面板宽度", "data-ls-no-drag": "true"
+            role: "separator", tabindex: "0", "data-ls-no-drag": "true"
         } });
     nav.workspace.insertBefore(divider, nav.main);
     let drag = null, frame = null;
-    const limits = () => {
-        const resultMin = Number.parseFloat(win.getComputedStyle(nav.root)
-            .getPropertyValue("--ls-nav-result-min-width")) || 320;
-        return { min: 180, max: Math.max(180, nav.width - resultMin) };
+    const axis = () => PANE_AXES[nav.layout];
+    const limits = a => {
+        const style = win.getComputedStyle(nav.root);
+        const total = nav.workspace.getBoundingClientRect()[a.size];
+        const minimum = Number.parseFloat(style.getPropertyValue(`--ls-nav-pane-min-${a.size}`));
+        const result = Number.parseFloat(style.getPropertyValue(`--ls-nav-result-min-${a.size}`));
+        // Small stacked hosts share the space rather than clipping either pane.
+        const min = a.size === "height" ? Math.min(minimum, total / 2) : minimum;
+        return { min, max: Math.max(min, total - result) };
+    };
+    const write = (a, value) => {
+        nav[a.state] = value;
+        const token = `--ls-nav-pane-${a.size}`;
+        if (value == null)
+            nav.root.style.removeProperty(token);
+        else
+            nav.root.style.setProperty(token, `${value}px`);
     };
     const sync = () => {
-        // Host geometry changed during a gesture: discard its old bounds and
-        // starting coordinates, then let finish resync the restored width.
         if (drag) {
             finish(false);
             return;
         }
-        divider.hidden = nav.layout !== "split";
-        if (divider.hidden)
+        const a = axis();
+        divider.hidden = !a;
+        if (!a)
             return;
-        const { min, max } = limits();
-        divider.setAttribute("aria-valuemin", String(min));
+        const { min, max } = limits(a);
+        divider.setAttribute("aria-orientation", a.orientation);
+        divider.setAttribute("aria-label", a.label);
+        divider.setAttribute("aria-valuemin", String(Math.ceil(min)));
         divider.setAttribute("aria-valuemax", String(Math.floor(max)));
-        // Read actual width only for host resize / settled input, never per row.
-        divider.setAttribute("aria-valuenow", String(Math.round(nav.facets.getBoundingClientRect().width)));
+        divider.setAttribute("aria-valuenow", String(Math.round(nav.facets.getBoundingClientRect()[a.size])));
     };
-    const apply = width => {
-        const { min, max } = drag || limits();
-        nav._desktopPaneWidth = Math.round(Math.max(min, Math.min(max, width)));
-        nav.root.style.setProperty("--ls-nav-pane-width", `${nav._desktopPaneWidth}px`);
-        divider.setAttribute("aria-valuenow", String(nav._desktopPaneWidth));
+    const apply = (a, value, bounds = limits(a)) => {
+        const size = Math.round(Math.max(bounds.min, Math.min(bounds.max, value)));
+        if (nav[a.state] !== size)
+            write(a, size);
+        divider.setAttribute("aria-valuenow", String(size));
     };
     const flush = () => {
         frame = null;
         if (drag)
-            apply(drag.width + (drag.x - drag.startX) * drag.direction);
+            apply(drag.axis, drag.size + (drag.point - drag.start) * drag.direction, drag);
     };
     const move = event => {
         if (!drag || event.pointerId !== drag.pointerId)
             return;
-        drag.x = event.clientX;
+        drag.point = event[drag.axis.point];
         if (frame === null)
             frame = win.requestAnimationFrame(flush);
     };
@@ -22970,13 +22986,8 @@ function createDesktopNavigatorPane(nav) {
         const previous = drag;
         if (commit)
             flush();
-        else {
-            nav._desktopPaneWidth = previous.saved;
-            if (previous.saved == null)
-                nav.root.style.removeProperty("--ls-nav-pane-width");
-            else
-                nav.root.style.setProperty("--ls-nav-pane-width", `${previous.saved}px`);
-        }
+        else
+            write(previous.axis, previous.saved);
         drag = null;
         win.removeEventListener("pointermove", move);
         win.removeEventListener("pointerup", up);
@@ -22985,8 +22996,6 @@ function createDesktopNavigatorPane(nav) {
         nav.root.classList.remove("is-nav-resizing");
         if (divider.hasPointerCapture?.(previous.pointerId))
             divider.releasePointerCapture(previous.pointerId);
-        // Cancellation restores the stored width as well as its accessible
-        // value; commits also reflect the width actually constrained by CSS.
         sync();
         if (commit) {
             nav.core?.onStateChange?.();
@@ -22996,20 +23005,22 @@ function createDesktopNavigatorPane(nav) {
     const up = event => {
         if (event.pointerId !== drag?.pointerId)
             return;
-        drag.x = event.clientX;
+        drag.point = event[drag.axis.point];
         finish(true);
     };
     const cancel = () => finish(false);
+    const direction = a => a.size === "width" && win.getComputedStyle(nav.workspace).direction === "rtl" ? -1 : 1;
     const down = event => {
-        if (event.button !== 0 || event.isPrimary === false || nav.layout !== "split")
+        const a = axis();
+        if (event.button !== 0 || event.isPrimary === false || !a)
             return;
         event.preventDefault();
         event.stopPropagation();
         if (drag)
             finish(false);
-        drag = { ...limits(), pointerId: event.pointerId, startX: event.clientX, x: event.clientX,
-            width: nav.facets.getBoundingClientRect().width, saved: nav._desktopPaneWidth,
-            direction: win.getComputedStyle(nav.workspace).direction === "rtl" ? -1 : 1 };
+        drag = { ...limits(a), axis: a, pointerId: event.pointerId,
+            start: event[a.point], point: event[a.point], size: nav.facets.getBoundingClientRect()[a.size],
+            saved: nav[a.state], direction: direction(a) };
         divider.focus({ preventScroll: true });
         divider.setPointerCapture?.(event.pointerId);
         nav.root.classList.add("is-nav-resizing");
@@ -23025,25 +23036,31 @@ function createDesktopNavigatorPane(nav) {
             finish(false);
             return;
         }
-        if (nav.layout !== "split" || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key))
+        const a = axis();
+        if (!a || ![a.previous, a.next, "Home", "End"].includes(event.key))
             return;
         event.preventDefault();
         event.stopPropagation();
-        const { min, max } = limits();
-        const direction = win.getComputedStyle(nav.workspace).direction === "rtl" ? -1 : 1;
-        const delta = (event.shiftKey ? 40 : 10) * direction * (event.key === "ArrowLeft" ? -1 : 1);
-        apply(event.key === "Home" ? min : event.key === "End" ? max
-            : nav.facets.getBoundingClientRect().width + delta);
+        if (drag)
+            finish(false);
+        const bounds = limits(a);
+        const delta = (event.shiftKey ? 40 : 10) * direction(a) * (event.key === a.previous ? -1 : 1);
+        apply(a, event.key === "Home" ? bounds.min : event.key === "End" ? bounds.max
+            : nav.facets.getBoundingClientRect()[a.size] + delta, bounds);
+        sync();
         nav.core?.onStateChange?.();
         nav.core?.dropdown?._queueReposition();
     };
     const reset = () => {
         if (drag)
             finish(false);
-        nav._desktopPaneWidth = null;
-        nav.root.style.removeProperty("--ls-nav-pane-width");
+        const a = axis();
+        if (!a)
+            return;
+        write(a, null);
         sync();
         nav.core?.onStateChange?.();
+        nav.core?.dropdown?._queueReposition();
     };
     divider.addEventListener("pointerdown", down);
     divider.addEventListener("lostpointercapture", cancel);
@@ -23051,15 +23068,12 @@ function createDesktopNavigatorPane(nav) {
     divider.addEventListener("dblclick", reset);
     return {
         sync,
-        restore(width) {
+        restore(width, height) {
             if (drag)
                 finish(false);
-            nav._desktopPaneWidth = typeof width === "number" && Number.isFinite(width) && width > 0
-                ? Math.max(180, Math.round(width)) : null;
-            if (nav._desktopPaneWidth == null)
-                nav.root.style.removeProperty("--ls-nav-pane-width");
-            else
-                nav.root.style.setProperty("--ls-nav-pane-width", `${nav._desktopPaneWidth}px`);
+            for (const [a, value] of [[PANE_AXES.split, width], [PANE_AXES.stack, height]]) {
+                write(a, typeof value === "number" && Number.isFinite(value) && value > 0 ? Math.round(value) : null);
+            }
             sync();
         },
         destroy() {
@@ -23069,7 +23083,8 @@ function createDesktopNavigatorPane(nav) {
             divider.removeEventListener("keydown", key);
             divider.removeEventListener("dblclick", reset);
             divider.remove();
-            nav.root.style.removeProperty("--ls-nav-pane-width");
+            for (const a of Object.values(PANE_AXES))
+                nav.root.style.removeProperty(`--ls-nav-pane-${a.size}`);
         }
     };
 }
@@ -23784,6 +23799,7 @@ class SearchNavigatorController {
     capture() {
         return { navigationVersion: 2, page: this.page, searchVisible: this.searchVisible,
             ...(this._desktopPaneWidth != null ? { paneWidth: this._desktopPaneWidth } : {}),
+            ...(this._desktopPaneHeight != null ? { paneHeight: this._desktopPaneHeight } : {}),
             expanded: [...this.expanded], collapsed: [...this.collapsed],
             scrollTop: this.facets.hidden ? this._filterScrollTop || 0 : this.scroll.scrollTop };
     }
@@ -23805,7 +23821,7 @@ class SearchNavigatorController {
             this.collapsed = new Set((0, normalization_js_1.normalizeUniqueStringList)(state.collapsed));
         this._restoreScrollTop = Math.max(0, Number(state.scrollTop) || 0);
         this._filterScrollTop = this._restoreScrollTop;
-        this._desktopPane?.restore(state.paneWidth);
+        this._desktopPane?.restore(state.paneWidth, state.paneHeight);
         if (!this.resize())
             this.syncPage();
         this.renderRevision = -1;
@@ -23815,25 +23831,31 @@ class SearchNavigatorController {
     resize() {
         if (!this.core || this.core._destroyed)
             return;
-        const width = this.root.getBoundingClientRect().width;
+        const { width, height } = this.root.getBoundingClientRect();
         if (!width)
             return;
         const next = obsidian_1.Platform.isMobile ? "mobile" : width >= 650 ? "split" : "stack";
         // Keyboard / host height changes belong to MobileFrameController. Only
         // a real width or layout change can invalidate this navigation layout.
-        if (this.width === width && this.layout === next)
+        const heightChanged = !obsidian_1.Platform.isMobile && this.height !== height;
+        if (!obsidian_1.Platform.isMobile)
+            this.height = height;
+        if (this.width === width && this.layout === next) {
+            if (heightChanged)
+                this._desktopPane?.sync();
             return;
+        }
         this.width = width;
         const changed = next !== this.layout;
         this.layout = next;
         this.root.dataset.navLayout = next;
-        this._desktopPane?.sync();
         // One live input is moved, never cloned or replaced. An active IME stays attached.
         const parent = next === "mobile" ? this.root : this.facets;
         if (this.header.parentElement !== parent)
             parent.prepend(this.header);
         this._placeMobileTools(next === "mobile");
         this.syncPage();
+        this._desktopPane?.sync();
         if (changed) {
             this.renderRevision = -1;
             this.sync();

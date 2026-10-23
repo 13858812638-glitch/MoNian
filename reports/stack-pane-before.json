@@ -1,0 +1,17 @@
+[
+  {
+    "name": "light stack exposes horizontal separator",
+    "evidence": null,
+    "pass": false
+  },
+  {
+    "name": "dark stack exposes horizontal separator",
+    "evidence": null,
+    "pass": false
+  },
+  {
+    "name": "mobile has no desktop separator",
+    "evidence": null,
+    "pass": true
+  }
+]
