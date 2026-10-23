@@ -844,14 +844,16 @@
     "src/ui/pickers/picker-header.js",
     "src/ui/overlays/geometry.js",
     "src/ui/overlays/sidebar-popup.js",
-    "src/ui/overlays/popup-order.js"
+    "src/ui/overlays/popup-order.js",
+    "src/utils/dom.js"
   ],
   "src/ui/overlays/geometry.js": [
     "src/utils/dom.js"
   ],
   "src/ui/overlays/popup-order.js": [],
   "src/ui/overlays/sidebar-popup.js": [
-    "src/ui/overlays/geometry.js"
+    "src/ui/overlays/geometry.js",
+    "src/utils/dom.js"
   ],
   "src/ui/pickers/count-rail.js": [],
   "src/ui/pickers/folder-picker.js": [

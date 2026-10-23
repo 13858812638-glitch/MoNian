@@ -1,0 +1,21 @@
+{
+  "file": "downloads/GLS-Owner-Commit-Repair-20261023.zip",
+  "bytes": 435422,
+  "sha256": "73220deac4ac4e713f21e6881c75271b5d2634849822c171b8e5d5c2e9fcc826",
+  "crc": "PASS",
+  "distMatch": true,
+  "entries": [
+    {
+      "name": "main.js",
+      "bytes": 1775663,
+      "sha256": "209f8ed05030f3be68adc3d05db8bdfa0fc8814bfa40defe6991982443be6122"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 266664,
+      "sha256": "8ccc69f6e764b9705ae53f2573cdb6f38cea476360e5249304803182f7fba116"
+    }
+  ],
+  "userDataIncluded": false,
+  "manifestIncluded": false
+}

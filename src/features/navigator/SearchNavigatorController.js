@@ -341,7 +341,7 @@ export class SearchNavigatorController {
             const allCollapsed = ids.every(id => this.collapsed.has(id));
             for (const id of ids) allCollapsed ? this.collapsed.delete(id) : this.collapsed.add(id);
             if (!allCollapsed) this.expanded.clear();
-            this.renderRevision = -1; this.sync(); core._notifyStateChange();
+            this.renderRevision = -1; this.sync(); core.onStateChange?.();
         });
         move("results", this.resultsButton);
         action("filters", "list-filter", "返回筛选导航", () => {
@@ -589,7 +589,7 @@ export class SearchNavigatorController {
                     const active = this.customization.maintenanceMode?.kind === kind && this.customization.maintenanceMode?.id === mode.id;
                     this.customization.setMaintenanceMode(active ? "" : kind, active ? "" : mode.id);
                     if (!active) this.collapsed.delete(kind.startsWith("property") ? "properties" : section);
-                    this.renderRevision = -1; this.sync(); core._notifyStateChange();
+                    this.renderRevision = -1; this.sync(); core.onStateChange?.();
                 } });
         }
         registerPickerCleanup(panel, observePickerCountRail(panel, list, "--ls-picker-scrollbar-reserve"));
@@ -681,7 +681,6 @@ export class SearchNavigatorController {
         this._cacheRevision = -1;
         this.renderRevision = -1;
         for (const ref of this.sections.values()) ref.signature = null;
-        this._syncMobileTools();
         this.sync();
     }
 
@@ -710,7 +709,7 @@ export class SearchNavigatorController {
         this.core.onStateChange?.();
     }
 
-    syncPage() {
+    syncPage({ commitResults = true } = {}) {
         const hideResults = this.layout === "mobile" && this.page !== "results";
         const wasHidden = this.main.hidden;
         const hideFacets = this.layout === "mobile" && this.page !== "filters";
@@ -741,13 +740,13 @@ export class SearchNavigatorController {
         if (wasHidden && !hideResults && !this._restoringPage && this.core._resultGeneration) {
             const anchor = this.resultAnchor;
             this.resultAnchor = null;
-            this.core.resultRenderer.renderInitialPage(anchor);
+            if (commitResults) this.core.resultRenderer.renderInitialPage(anchor);
         }
         this._syncMobileTools();
         this.core._syncResultStateRow();
     }
 
-    setPage(page, notify = true) {
+    setPage(page, notify = true, { commitResults = true } = {}) {
         // A mobile Results -> Filters return must not expose the old tree for
         // one frame while its zero-delay projection waits behind the new query.
         // Hidden Results still skip projection; only the actual return commits
@@ -767,7 +766,7 @@ export class SearchNavigatorController {
                 core.performSearch("");
             }
         }
-        this.syncPage();
+        this.syncPage({ commitResults });
         if (page === "filters") {
             this.sync();
             if (returningToFilters && this._projectionTask != null
@@ -781,19 +780,21 @@ export class SearchNavigatorController {
         }
         // Native sidebar / SwipeBack already owns transitions. Never animate a
         // second translucent, transformed layer around a live virtual scroller.
-        if (notify) this.core._notifyStateChange();
+        if (notify) this.core.onStateChange?.();
     }
 
-    showResults(commitInput = true) {
-        if (commitInput && !this.core.createFlow?.isCreateMode() && this.core.searchInput.value !== this.core.queryState.raw) {
-            this.core.performSearch(this.core.searchInput.value);
-        }
-        const query = this.core.queryState.raw.trim();
-        if (query) this.core.plugin.recordSearchHistory(query);
-        // The existing results page includes its search header, but only the
-        // original explicit tap/focus action may summon the OS keyboard.
+    showResults(commitInput = true, commit = null) {
+        const core = this.core;
+        const apply = commit || (commitInput && !core.createFlow?.isCreateMode()
+            && core.searchInput.value !== core.queryState.raw
+            ? () => core.performSearch(core.searchInput.value) : null);
+        // A navigation action with a new query reveals first, then commits once.
+        // Ordinary reveal still restores the existing result anchor through setPage.
         if (this.page !== "results") this.searchVisible = true;
-        this.setPage("results");
+        this.setPage("results", !apply, { commitResults: !apply });
+        apply?.();
+        const query = core.queryState.raw.trim();
+        if (query) core.plugin.recordSearchHistory(query);
     }
 
     back() {
@@ -851,7 +852,10 @@ export class SearchNavigatorController {
         } else {
             this.core._applyFacetSelection(kind, value, { key, mode: "replace" });
         }
-        this.core._onFilterChanged();
+        // Reveal before the new result commit. Page navigation must not render
+        // the old generation merely to replace it immediately in the same action.
+        if (this.layout === "mobile") this.showResults(false, () => this.core._onFilterChanged());
+        else this.core._onFilterChanged();
         if (scrollSnapshot) {
             scrollSnapshot.generation = this.core._resultGeneration;
             this._selectionScrollSnapshot = scrollSnapshot;
@@ -861,7 +865,6 @@ export class SearchNavigatorController {
                 if (this._selectionScrollSnapshot === scrollSnapshot) this._selectionScrollSnapshot = null;
             });
         }
-        if (this.layout === "mobile") this.showResults(false);
     }
 
     openSection(kind, anchor) {
@@ -915,10 +918,10 @@ export class SearchNavigatorController {
                     this.customization.decorate(ref.heading, {
                         ...this.customization.rows.get(ref.heading), label: currentTitle, icon: currentIcon
                     });
-                    this.core._notifyStateChange();
+                    this.core.onStateChange?.();
                     return;
                 }
-                this.renderRevision = -1; this.sync(); this.core._notifyStateChange();
+                this.renderRevision = -1; this.sync(); this.core.onStateChange?.();
             };
             const tree = createSharedPickerTreeRow(section, { name: title, icon,
                 rowClasses: "local-search-nav-section-heading local-search-nav-group-row",
@@ -1126,7 +1129,7 @@ export class SearchNavigatorController {
                     }, icon, hasChildren: children.length > 0, expanded,
                     toggleTitle: expanded ? "折叠" : "展开",
                     onToggle: () => { if (expanded) this.expanded.delete(key); else this.expanded.add(key);
-                        this.renderRevision = -1; this.sync(); this.core._notifyStateChange(); } });
+                        this.renderRevision = -1; this.sync(); this.core.onStateChange?.(); } });
                 if (expanded && children.length) visit(children, depth + 1, descriptor.id);
             }
         };
@@ -1375,7 +1378,7 @@ export class SearchNavigatorController {
                     const expanded = this.expanded.has(expansion);
                     const toggle = () => {
                         expanded ? this.expanded.delete(expansion) : this.expanded.add(expansion);
-                        this.renderRevision = -1; this.sync(); core._notifyStateChange();
+                        this.renderRevision = -1; this.sync(); core.onStateChange?.();
                     };
                     const keyRow = this._row(ref, { name: key, itemTitle: key, icon: "list", navDescriptor: descriptor, rowClasses: "local-search-nav-property-key",
                         hasChildren: true, expanded, count: present, toggleTitle: expanded ? "折叠" : "展开",

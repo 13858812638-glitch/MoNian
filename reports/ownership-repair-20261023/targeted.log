@@ -1,0 +1,16 @@
+✔ candidate preserves formal prototype contracts with reviewed cross-key additions and internal retirement (3187.04053ms)
+✔ return projection is limited to real mobile Results -> Filters navigation (1.178199ms)
+✔ consume the existing scheduled projection before first visible frame (0.264148ms)
+✔ CSS Snapshot promotes the two requested IDs and their root variables to 6px (0.46197ms)
+✔ unrequested detailed and compact densities retain their defaults (0.367612ms)
+✔ desktop sidebar publishes an already applied folder without reading result layout; peers still follow (3.707911ms)
+✔ stale sidebar merges its folder with another host query and waits for its open picker (0.911687ms)
+✔ other hosts acknowledge their own commit without reading layout (0.639925ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3670.479977

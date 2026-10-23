@@ -1,8 +1,8 @@
 {
-  "revision": "2026-10-23-scroll-origin-measurement",
+  "revision": "2026-10-23-owner-commit-repair",
   "baseline": "GLS v5.2「分级标签极速创建 v1」正式冻结 2026-10-19; immutable",
   "sourceManifest": "baseline/modular.3-source-manifest.json",
-  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors. User requested continued product audit: keep an empty desktop toolbar hidden without redundant toggles; cancel stale divider drags on host resize and resynchronize actual/accessible width after commit or cancellation. No public prototype changes in this round. User reports missing caret specifically in the move-folder Picker: align standalone folder Picker iOS paint host and mobile focus handling with the existing shared Picker; retain backdrop dismissal, popup order and all host positions. User reports duplicate disclosure arrows and repeated filter click stutter: explicitly replace Navigator SVGs while retaining accessible labels; reduce only desktop-sidebar result overscan to half a viewport on each side, retaining full visible-span coverage and original other-host budgets. User reports continued sidebar click stalls and asks to remove unnecessary desktop gestures. Do not register the desktop sidebar root as a swipe-back surface: small mouse drift must not suppress selection and mouse down must not scan ancestor geometry. Keep tab, mobile sidebar and child-picker leases unchanged. User requests stable desktop sidebar tag/property inventory when switching folders, updating counts only. Reuse global navigation-derived inventory and existing row nodes, retain zero counts, compute property presence in one scoped pass, invalidate derived models on vault/index/preferences changes. Mobile and other hosts retain scoped inventories; shared pickers retain their existing scope. Continued user-requested audit: reuse desktop navigation candidates and counts while folder scope is unchanged, bounded to the current scope with existing index/vault/preferences invalidation; skip row geometry scans and scroll restoration only for proven structurally stable desktop projections. Preserve structural disclosure anchoring, explicit session restoration, mobile and other-host paths. Continued user-requested sidebar audit identified result filter-rail textContent rebuilding hidden accessible labels on every refresh. Preserve the visible text and hover-owned label nodes, suppress unchanged presentation attributes/properties only in desktop sidebar, and keep live filter actions, changed accessible counts, popup anchors and other-host behavior. User reports property keys cannot expand and requests another sidebar work audit. Desktop sidebar keys now disclose values inline with stable global inventory and folder-scoped counts; collapsed keys do not build value statistics, selections reuse derived statistics, and hidden facet groups defer row updates until reopening. Empty/false/zero values remain selectable. Other desktop hosts and mobile retain their existing interactions. User reports continued lag and requests a full audit. Profiling identifies synchronous result-card construction as the dominant browse-click cost. Retain at most 96 desktop sidebar browse cards with exact metadata identity/content and presentation guards. Stage reuse with placeholders and commit only after all new builders succeed, preserve rollback, bypass queries/pickers/batch/action/other hosts, and clear retained UI on destroy. Whole-source audit and single shared implementation: builders own content only; commit owns height observation; isolated scroll staging; one range traversal; no redundant config normalization; one config-reset path; no-op preferences skip refresh/persistence; all hosts acknowledge their own published state. Integrated unification from 7fd3f53: all hosts share navigation inventories, scoped count caches, inline property expansion, microtask projection, retained browse-card commit and viewport budget. One hover owner and DOM primitives suppress no-op writes. Retire unused property-stats branch. Shared mobile keyboard token constrains only owned internal scrollports; release on header/foreign focus. Earlier desktop-only exceptions above are superseded by this request. Continued user-requested whole-source performance audit from 48269f9: native filter-rail scrolling removes synchronous geometry roundtrips; shared Indicator Label preserves text nodes; facet controls use existing no-op DOM/attribute primitives; inactive filter types/properties skip unnecessary work; stable tag rows normalize identity once. No new business state, cache or platform branch. User explicitly requested implementation of the e38dea9 performance audit: shared condition controls reconcile semantic node identities and current actions without rebuilding unchanged DOM; normal filter commits reset scroll before facet writes; pending pool refresh coalesces with explicit facet refresh; result commits reuse their staged item sequence and one window budget. All hosts share the same implementations, with no CSS, business cache or focus-restoration path added. User requests desktop sidebar command icons to match the result rail and align right, plus further performance work. Desktop sidebar command buttons now consume the existing action-rail primitive and tokens; mobile geometry is unchanged. Shared selection/statistics/state-row/workbench presentation use existing same-value DOM and Hover Owner helpers, retaining state and focus semantics without extra caches or schedulers. User reports the adaptive stacked desktop sidebar cannot resize height. Generalize the existing separator by axis, preserve independent width/height in the Navigator session, and handle height-only host changes without navigation projection or searches. CSS owns size limits, cursor and hit target; mobile remains unchanged. User requests implementation of the measured performance audit. Shared scroll reset skips upper-bound measurement only for a zero/negative target and avoids a duplicate current-position read, retaining positive bounds, subpixel tolerance and actual-position semantics. CSS containment and offscreen-rendering experiments were rejected after serial traces showed offsetting costs or slower folder switching. No new geometry cache, timer, input state, CSS change or duplicate component.",
+  "reason": "User-requested desktop sidebar optimization: in-place group disclosure, structural folder projection reuse with event invalidation, split pane width control, distinct count/action slots, and layout-free origin overscroll check. Mobile navigation behavior retained. Desktop main search bar and its existing actions now sit above the results, as requested by the user. User requested desktop-sidebar-only popup positioning and a top navigation command rail reusing the mobile navigation controls. User reports continued lag and an unwanted held-mouse fill on desktop sidebar folder/disclosure clicks: remove only its pressed fill, avoid unchanged row and page rewrites, coalesce the sidebar projection before paint, and acknowledge already applied sidebar state without a redundant scroll-layout read. User reports folder switching and disclosure still lag and requests removing redundant filter-list ellipses: reconcile tree rows after removing obsolete descendants, reuse the exact numeric Chinese collator, hide desktop-sidebar group management buttons and preserve their actions in the context menu. Capture desktop-sidebar selection scroll before result writes and consume/expire it within the same queued projection, avoiding a forced layout read after the result commit while retaining live session capture and explicit restoration. User requested whole-sidebar optimization: suppress unchanged desktop navigation presentation writes while preserving accessible labels, reuse unchanged group decoration with preference invalidation, and limit sidebar popup positioning to scrolls moving the leaf or its live/parent anchors. User requested continued product audit: keep an empty desktop toolbar hidden without redundant toggles; cancel stale divider drags on host resize and resynchronize actual/accessible width after commit or cancellation. No public prototype changes in this round. User reports missing caret specifically in the move-folder Picker: align standalone folder Picker iOS paint host and mobile focus handling with the existing shared Picker; retain backdrop dismissal, popup order and all host positions. User reports duplicate disclosure arrows and repeated filter click stutter: explicitly replace Navigator SVGs while retaining accessible labels; reduce only desktop-sidebar result overscan to half a viewport on each side, retaining full visible-span coverage and original other-host budgets. User reports continued sidebar click stalls and asks to remove unnecessary desktop gestures. Do not register the desktop sidebar root as a swipe-back surface: small mouse drift must not suppress selection and mouse down must not scan ancestor geometry. Keep tab, mobile sidebar and child-picker leases unchanged. User requests stable desktop sidebar tag/property inventory when switching folders, updating counts only. Reuse global navigation-derived inventory and existing row nodes, retain zero counts, compute property presence in one scoped pass, invalidate derived models on vault/index/preferences changes. Mobile and other hosts retain scoped inventories; shared pickers retain their existing scope. Continued user-requested audit: reuse desktop navigation candidates and counts while folder scope is unchanged, bounded to the current scope with existing index/vault/preferences invalidation; skip row geometry scans and scroll restoration only for proven structurally stable desktop projections. Preserve structural disclosure anchoring, explicit session restoration, mobile and other-host paths. Continued user-requested sidebar audit identified result filter-rail textContent rebuilding hidden accessible labels on every refresh. Preserve the visible text and hover-owned label nodes, suppress unchanged presentation attributes/properties only in desktop sidebar, and keep live filter actions, changed accessible counts, popup anchors and other-host behavior. User reports property keys cannot expand and requests another sidebar work audit. Desktop sidebar keys now disclose values inline with stable global inventory and folder-scoped counts; collapsed keys do not build value statistics, selections reuse derived statistics, and hidden facet groups defer row updates until reopening. Empty/false/zero values remain selectable. Other desktop hosts and mobile retain their existing interactions. User reports continued lag and requests a full audit. Profiling identifies synchronous result-card construction as the dominant browse-click cost. Retain at most 96 desktop sidebar browse cards with exact metadata identity/content and presentation guards. Stage reuse with placeholders and commit only after all new builders succeed, preserve rollback, bypass queries/pickers/batch/action/other hosts, and clear retained UI on destroy. Whole-source audit and single shared implementation: builders own content only; commit owns height observation; isolated scroll staging; one range traversal; no redundant config normalization; one config-reset path; no-op preferences skip refresh/persistence; all hosts acknowledge their own published state. Integrated unification from 7fd3f53: all hosts share navigation inventories, scoped count caches, inline property expansion, microtask projection, retained browse-card commit and viewport budget. One hover owner and DOM primitives suppress no-op writes. Retire unused property-stats branch. Shared mobile keyboard token constrains only owned internal scrollports; release on header/foreign focus. Earlier desktop-only exceptions above are superseded by this request. Continued user-requested whole-source performance audit from 48269f9: native filter-rail scrolling removes synchronous geometry roundtrips; shared Indicator Label preserves text nodes; facet controls use existing no-op DOM/attribute primitives; inactive filter types/properties skip unnecessary work; stable tag rows normalize identity once. No new business state, cache or platform branch. User explicitly requested implementation of the e38dea9 performance audit: shared condition controls reconcile semantic node identities and current actions without rebuilding unchanged DOM; normal filter commits reset scroll before facet writes; pending pool refresh coalesces with explicit facet refresh; result commits reuse their staged item sequence and one window budget. All hosts share the same implementations, with no CSS, business cache or focus-restoration path added. User requests desktop sidebar command icons to match the result rail and align right, plus further performance work. Desktop sidebar command buttons now consume the existing action-rail primitive and tokens; mobile geometry is unchanged. Shared selection/statistics/state-row/workbench presentation use existing same-value DOM and Hover Owner helpers, retaining state and focus semantics without extra caches or schedulers. User reports the adaptive stacked desktop sidebar cannot resize height. Generalize the existing separator by axis, preserve independent width/height in the Navigator session, and handle height-only host changes without navigation projection or searches. CSS owns size limits, cursor and hit target; mobile remains unchanged. User requests implementation of the measured performance audit. Shared scroll reset skips upper-bound measurement only for a zero/negative target and avoids a duplicate current-position read, retaining positive bounds, subpixel tolerance and actual-position semantics. CSS containment and offscreen-rendering experiments were rejected after serial traces showed offsetting costs or slower folder switching. No new geometry cache, timer, input state, CSS change or duplicate component. User explicitly requests repairing the seven findings of ownership audit d26f42a: one navigation sync per result commit, view-only disclosure notifications, unchanged-sort retention, stable channel component and keyboard focus, one exclusion-only refresh with pending index recovery, reveal-before-commit navigation and failed shared view commit retry, CSS-only popup defaults. Existing state/controllers own these operations; no public API or persistence schema changes.",
   "changedOriginIds": [
     "BatchMetadataController._renderTagPicker",
     "BatchMetadataController.open",
@@ -140,7 +140,12 @@
     "SearchResultRendererController._syncMountedState",
     "SearchSelectionController",
     "SearchCore._syncWorkbenchPresentation",
-    "SearchResultRendererController._setScrollTop"
+    "SearchResultRendererController._setScrollTop",
+    "SearchResultRendererController._renderStateChannels",
+    "SearchCore._refreshCurrentResultsAfterMutation",
+    "SearchCore._commitResultIndexChanges",
+    "LocalSearchPlugin._refreshFolderStateCores",
+    "LocalSearchPlugin.setExcludedFolders"
   ],
   "files": [
     {
@@ -177,7 +182,7 @@
       "file": "src/core/search/search-and-ranking-methods.js",
       "baseline": "baseline/modular.3-source/core/search/search-and-ranking-methods.js",
       "before": "dab97abbcf776f5adb6c7baddab2e3a66bd986ea87fd1da9686cdf313e5551b1",
-      "after": "dee65ca8f106ab7761113ca3abf5b91fc01c3fa668efe5aa97454d37489cb1dc"
+      "after": "66db2cdce1b7370bcad3740e66c2c833cb7a2c5fafe52ea6b1e87bfa30449cec"
     },
     {
       "file": "src/core/search/shell-methods.js",
@@ -273,7 +278,7 @@
       "file": "src/features/navigator/SearchNavigatorController.js",
       "baseline": "baseline/modular.3-source/features/navigator/SearchNavigatorController.js",
       "before": "12bb285bbdfa3fb3df3af4b09cc3897ce74b5eea2a9139c0d8c36c02c6789870",
-      "after": "3d281611bb01da893a9041fd1e1f3e495a01f66cc0f3918df252e7ea1ed4e627"
+      "after": "2ae06bf72c92a0070fd31d2d0bb74ffb92194924784d6ca354af8719b98ab13c"
     },
     {
       "file": "src/features/navigator/toolbar-config.js",
@@ -357,7 +362,7 @@
       "file": "src/features/results/SearchResultRendererController.js",
       "baseline": "baseline/modular.3-source/features/results/SearchResultRendererController.js",
       "before": "0b43ca6f4788812bb082fc955345c3f50008306de85d36ac92edf14980145c10",
-      "after": "410c17f92854c87db8f75643661467a7e8ebcd4ba15cce1a3f566b1bee3b5385"
+      "after": "fae0371497856b2577686a1b56f76612061f5e0f445ee28f6005534e544a0bdd"
     },
     {
       "file": "src/features/results/page-and-snippets-methods.js",
@@ -381,7 +386,7 @@
       "file": "src/features/sort/SearchSortController.js",
       "baseline": "baseline/modular.3-source/features/sort/SearchSortController.js",
       "before": "94abaf42794fde9d964ba9471fe22cf7c693e4b1dbc1cbe9565889a5429b0636",
-      "after": "9f3f0f6f358e2ff257d84f42a4e7d8d3e798debebc6f7531f6badbd7f96361ab"
+      "after": "85d03511b1f18c281cc3fba0f996e81d33ffd0dfc05d10bab92c19485c2bff3d"
     },
     {
       "file": "src/integrations/SearchWorkspaceCapabilities.js",
@@ -411,7 +416,7 @@
       "file": "src/styles/styles.css",
       "baseline": "baseline/modular.3-source/styles/styles.css",
       "before": "621950fca60711fb43d5e355e52deeccf8f611185793115869ececf97c361cad",
-      "after": "460ecb0165943c6d2edea5b90038ed09ba33de4372b788357c74cfb182ad9beb"
+      "after": "8ccc69f6e764b9705ae53f2573cdb6f38cea476360e5249304803182f7fba116"
     },
     {
       "file": "src/ui/components/input-controls.js",
@@ -447,7 +452,7 @@
       "file": "src/ui/overlays/SearchDropdownController.js",
       "baseline": "baseline/modular.3-source/ui/overlays/SearchDropdownController.js",
       "before": "d9520e2d9f9718bde77361f4995cea61172d6b100ce583d060f2afb396f81f22",
-      "after": "dce0d00ce849c2542debe68d7d012f8607a505912c10ca30c18dc3396fdfc219"
+      "after": "556cf8e60a317b0ff229965d226538824dc7bb70f1bc4ba76e9af8dfc3e85a9b"
     },
     {
       "file": "src/ui/pickers/folder-picker.js",
@@ -501,7 +506,7 @@
       "file": "src/core/SharedSearchStateCoordinator.js",
       "baseline": "baseline/modular.3-source/core/SharedSearchStateCoordinator.js",
       "before": "e5dda84a5c870c85b596e8d9135385645f057714bb64c2f6726b35dbf38c80a8",
-      "after": "e02466644be2f2ca17d8d5aadcfe94238c039a0b7d81720ad62eb05bc6819ed2"
+      "after": "c2341a25829434507fb3b0e71c63703d6a57317f8e74256cea33adb9753cd3d0"
     },
     {
       "file": "src/utils/preferred-order.js",
@@ -519,13 +524,13 @@
       "file": "src/features/results/filter-channels-methods.js",
       "baseline": "baseline/modular.3-source/features/results/filter-channels-methods.js",
       "before": "e1f0b8689ae54574ee5a5638b6f6355082b62923de3993d09f4731c81dff7173",
-      "after": "bfeb27fcd1b1ab6b841ee040a3c0911dc032a7cdf58b221c605e8c9350c19e29"
+      "after": "d34adba11ab12dea4291083b2ec09954382e8e545816acd3ef202397ed096323"
     },
     {
       "file": "src/features/plugin/view-preferences-methods.js",
       "baseline": "baseline/modular.3-source/features/plugin/view-preferences-methods.js",
       "before": "6ca385f348d3119d35d8b9c7df78efa0c59e4e44f481c55226241b850f3ce2c0",
-      "after": "5e4183860c8f7631a8afee2dc0eefed8a479648a5d1f3f5136d8bddba83f50fd"
+      "after": "143389b377d1ae9c6f6be96898b201b632c4a71e6bef3b7af800b19bd5b448bf"
     },
     {
       "file": "src/features/results/result-card-methods.js",
@@ -543,7 +548,7 @@
       "file": "src/utils/dom.js",
       "baseline": "baseline/modular.3-source/utils/dom.js",
       "before": "15f1d8424d35eb118a70f47c5b491338fc120d3a51ceebcffb9acbe950d0af99",
-      "after": "b05cd740147f90342a51d6b15a8ea48c6de2d6a5c6af5ed23f2d80be7c76a864"
+      "after": "a7ba727f58dbe1aea61b97cb326ad98d4fe8cd06d2b119e3207289e7e7b067f7"
     },
     {
       "file": "src/features/filters/FilterEngine.js",
@@ -656,7 +661,7 @@
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "sha256": "c004e9d7d860e1e809dfa9f014538afa83a7d968edef5effa197911a6bbc434e"
+      "sha256": "97ec3a4787e75f130cfc8eaf7eb83f0f0576cf33b91a3d3221498f3b6a01297f"
     },
     {
       "file": "src/features/navigator/navigation-icon.js",

@@ -1,10 +1,12 @@
 import { Platform } from "obsidian";
 import { resolveOverlayBounds } from "./geometry.js";
+import { readCssNumber } from "../../utils/dom.js";
 
 // Opt-in by the owning core, never by the active workspace leaf or a body class.
-export function resolveSidebarPopupBounds(core, inset = 8) {
+export function resolveSidebarPopupBounds(core, inset = null) {
     if (Platform.isMobile || core?.hostKind !== "sidebar" || !core.containerEl?.isConnected) return null;
-    return resolveOverlayBounds(core.containerEl, core.containerEl.ownerDocument.defaultView, inset);
+    return resolveOverlayBounds(core.containerEl, core.containerEl.ownerDocument.defaultView,
+        inset ?? readCssNumber(core.containerEl, "--ls-sidebar-popup-inset"));
 }
 
 // Retain the shared viewport portal/focus/submission owners. Only the desktop
@@ -21,13 +23,16 @@ export function bindSidebarDialogPosition(core, dialog, backdrop) {
     const sync = () => {
         frame = null;
         if (disposed || core._destroyed) return;
-        const bounds = resolveSidebarPopupBounds(core);
+        const style = win.getComputedStyle(dialog);
+        const metric = name => readCssNumber(dialog, name, style);
+        const bounds = resolveSidebarPopupBounds(core, metric("--ls-sidebar-popup-inset"));
         const visible = bounds && bounds.owner.width > 0 && bounds.owner.height > 0;
         write(dialog, "visibility", visible ? "" : "hidden");
         write(backdrop, "visibility", visible ? "" : "hidden");
         if (!visible) return;
-        const ratio = Math.min(0.8, Math.max(0.2,
-            (Number.parseFloat(win.getComputedStyle(dialog).getPropertyValue("--ls-dialog-position-y")) || 44) / 100));
+        const ratio = Math.min(metric("--ls-dialog-position-max"),
+            Math.max(metric("--ls-dialog-position-min"),
+                metric("--ls-dialog-position-y"))) / 100;
         const centerY = bounds.top + bounds.height * ratio;
         write(dialog, "--ls-sidebar-dialog-x", `${bounds.left + bounds.width / 2}px`);
         write(dialog, "--ls-sidebar-dialog-y", `${centerY}px`);

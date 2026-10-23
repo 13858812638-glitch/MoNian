@@ -55,79 +55,46 @@ export const SearchResultRendererController_filter_channels_methods = {
         const core = this.owner;
         const host = core.resultChannelHost;
         if (!host) return;
-        host.empty();
-        if (visible) this._appendChannelGroup(host);
+        if (!visible || !this._appendChannelGroup(host)) this._channelGroupRef?.group.remove();
         core._syncResultStateRow?.();
     },
 
 
     _appendChannelGroup(target) {
         const core = this.owner;
-        if (!target) return false;
+        if (!target || !core.queryState.raw.trim() || !this._usesChannels()
+            || core.bestResultCount <= 0 || core.bodyResultCount <= 0) return false;
 
-        const channelActive = Boolean(
-            core.queryState.raw.trim()
-            && this._usesChannels()
-        );
-        if (!channelActive) return false;
-
-        const bodyCount = core.bodyResultCount || 0;
-        const bestCount = core.bestResultCount || 0;
-        // A single populated channel offers no choice. Do not create a
-        // "current conditions" row just to repeat that one result count.
-        if (bestCount <= 0 || bodyCount <= 0) return false;
-
-        const channelGroup = target.createSpan({
-            cls: "local-search-result-channel-group"
-        });
-
-        if (bestCount > 0) {
-            const bestToggle = createSearchButton(channelGroup, "choice", {
-                cls: `local-search-result-channel${!core.bodyExpanded ? " is-selected" : ""}`,
-                attr: {
-                    "aria-pressed": String(!core.bodyExpanded),
-                    "aria-label": `查看标题匹配 ${bestCount} 个结果`
-                }
+        let ref = this._channelGroupRef;
+        if (!ref) {
+            const group = target.createSpan({ cls: "local-search-result-channel-group" });
+            const buttons = [false, true].map((expanded, index) => {
+                if (index) group.createSpan({ cls: "local-search-result-channel-separator",
+                    attr: { "aria-hidden": "true" } });
+                const button = createSearchButton(group, "choice", { cls: "local-search-result-channel" });
+                button.addEventListener("click", () => {
+                    const owner = this.owner;
+                    if (!owner || owner._destroyed || owner.bodyExpanded === expanded) return;
+                    if (owner.selection.selectedPaths.size) owner.selection.clearState();
+                    owner.bodyExpanded = expanded;
+                    this.resetViewport();
+                    this.refreshResultChannels();
+                    this.renderPage();
+                    owner._notifyStateChange();
+                });
+                return button;
             });
-            setIndicatorLabel(bestToggle, `标题 · ${bestCount}`);
-            bestToggle.addEventListener("click", () => {
-                if (!core.bodyExpanded) return;
-                if (core.selection.selectedPaths.size) core.selection.clearState();
-                core.bodyExpanded = false;
-                this.resetViewport();
-                this.refreshResultChannels();
-                this.renderPage();
-                core._notifyStateChange();
-            });
+            ref = this._channelGroupRef = { group, buttons };
         }
-
-        if (bodyCount > 0 && bestCount > 0) {
-            channelGroup.createSpan({
-                cls: "local-search-result-channel-separator",
-                attr: { "aria-hidden": "true" }
-            });
+        for (const [index, button] of ref.buttons.entries()) {
+            const expanded = index === 1, selected = core.bodyExpanded === expanded;
+            const count = expanded ? core.bodyResultCount : core.bestResultCount;
+            if (button.classList.contains("is-selected") !== selected) button.classList.toggle("is-selected", selected);
+            setSearchAttribute(button, "aria-pressed", String(selected));
+            setSearchAttribute(button, "aria-label", expanded ? `查看正文 ${count} 个结果` : `查看标题匹配 ${count} 个结果`);
+            setIndicatorLabel(button, `${expanded ? "正文" : "标题"} · ${count}`);
         }
-
-        if (bodyCount > 0) {
-            const bodyToggle = createSearchButton(channelGroup, "choice", {
-                cls: `local-search-result-channel${core.bodyExpanded ? " is-selected" : ""}`,
-                attr: {
-                    "aria-pressed": String(core.bodyExpanded),
-                    "aria-label": `查看正文 ${bodyCount} 个结果`
-                }
-            });
-            setIndicatorLabel(bodyToggle, `正文 · ${bodyCount}`);
-            bodyToggle.addEventListener("click", () => {
-                if (core.bodyExpanded) return;
-                if (core.selection.selectedPaths.size) core.selection.clearState();
-                core.bodyExpanded = true;
-                this.resetViewport();
-                this.refreshResultChannels();
-                this.renderPage();
-                core._notifyStateChange();
-            });
-        }
-
+        if (ref.group.parentElement !== target) target.appendChild(ref.group);
         return true;
     },
 

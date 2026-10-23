@@ -2,10 +2,10 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34829,
-  "jsBytes": 1615623,
-  "cssBytes": 266199,
-  "cssLines": 7704,
+  "jsLines": 34832,
+  "jsBytes": 1617418,
+  "cssBytes": 266664,
+  "cssLines": 7715,
   "cssParseErrors": [],
   "cssRuleCount": 729,
   "duplicateSelectorsSameContext": [
@@ -14,32 +14,32 @@
       "selector": ":root",
       "lines": [
         1444,
-        7306
+        7317
       ]
     },
     {
       "context": [],
       "selector": ".local-search-navigator .local-search-nav-scroll",
       "lines": [
-        1908,
-        1929
+        1918,
+        1939
       ]
     },
     {
       "context": [],
       "selector": "body.is-mobile",
       "lines": [
-        7134,
-        7314
+        7144,
+        7325
       ]
     }
   ],
   "duplicatePropertiesSameRule": [
     {
-      "line": 3590,
+      "line": 3600,
       "selector": ".local-search-results-shell",
       "property": "overflow",
-      "earlier": 3589
+      "earlier": 3599
     }
   ],
   "styleSettings": {
@@ -51,7 +51,7 @@
     "duplicateSectionNamedHeading": [],
     "missingConsumerCandidates": []
   },
-  "tokenDefinitionCount": 293,
+  "tokenDefinitionCount": 302,
   "unconsumedTokenCandidates": [],
   "resourceReferences": [
     {
@@ -431,7 +431,7 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "line": 931,
+      "line": 934,
       "code": "manage.addEventListener(\"click\", () => this.openSection(id, manage));"
     },
     {
@@ -681,7 +681,7 @@
     },
     {
       "file": "src/features/results/SearchResultRendererController.js",
-      "line": 66,
+      "line": 67,
       "code": "if (this._scrollFrame) hostWindow(this.owner?.resultsContainer).cancelAnimationFrame(this._scrollFrame);"
     },
     {
@@ -696,22 +696,17 @@
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 93,
-      "code": "bestToggle.addEventListener(\"click\", () => {"
+      "line": 75,
+      "code": "button.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 120,
-      "code": "bodyToggle.addEventListener(\"click\", () => {"
-    },
-    {
-      "file": "src/features/results/filter-channels-methods.js",
-      "line": 160,
+      "line": 127,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "line": 283,
+      "line": 250,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
@@ -1316,7 +1311,7 @@
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 318,
+      "line": 315,
       "code": "this._positionFrame = win.requestAnimationFrame(() => {"
     },
     {
@@ -1406,32 +1401,32 @@
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "line": 40,
+      "line": 45,
       "code": "if (!disposed && frame === null) frame = win.requestAnimationFrame(sync);"
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "line": 46,
+      "line": 51,
       "code": "win.addEventListener(\"resize\", queue);"
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "line": 47,
+      "line": 52,
       "code": "doc.addEventListener(\"scroll\", scroll, true);"
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "line": 51,
+      "line": 56,
       "code": "if (frame !== null) win.cancelAnimationFrame(frame);"
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "line": 53,
+      "line": 58,
       "code": "win.removeEventListener(\"resize\", queue);"
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "line": 54,
+      "line": 59,
       "code": "doc.removeEventListener(\"scroll\", scroll, true);"
     },
     {
@@ -1548,7 +1543,7 @@
     },
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
-      "line": 351,
+      "line": 348,
       "code": "panel.style.visibility = \"hidden\";"
     },
     {
@@ -1578,9 +1573,9 @@
     },
     {
       "file": "src/core/SharedSearchStateCoordinator.js",
-      "lines": 213,
-      "bytes": 9780,
-      "sha256": "e02466644be2f2ca17d8d5aadcfe94238c039a0b7d81720ad62eb05bc6819ed2"
+      "lines": 222,
+      "bytes": 10320,
+      "sha256": "c2341a25829434507fb3b0e71c63703d6a57317f8e74256cea33adb9753cd3d0"
     },
     {
       "file": "src/core/compose-class-methods.js",
@@ -1620,9 +1615,9 @@
     },
     {
       "file": "src/core/search/search-and-ranking-methods.js",
-      "lines": 536,
-      "bytes": 23382,
-      "sha256": "dee65ca8f106ab7761113ca3abf5b91fc01c3fa668efe5aa97454d37489cb1dc"
+      "lines": 537,
+      "bytes": 23418,
+      "sha256": "66db2cdce1b7370bcad3740e66c2c833cb7a2c5fafe52ea6b1e87bfa30449cec"
     },
     {
       "file": "src/core/search/session-methods.js",
@@ -1896,9 +1891,9 @@
     },
     {
       "file": "src/features/navigator/SearchNavigatorController.js",
-      "lines": 1461,
-      "bytes": 87371,
-      "sha256": "3d281611bb01da893a9041fd1e1f3e495a01f66cc0f3918df252e7ea1ed4e627"
+      "lines": 1464,
+      "bytes": 87735,
+      "sha256": "2ae06bf72c92a0070fd31d2d0bb74ffb92194924784d6ca354af8719b98ab13c"
     },
     {
       "file": "src/features/navigator/customization-model.js",
@@ -2040,9 +2035,9 @@
     },
     {
       "file": "src/features/plugin/view-preferences-methods.js",
-      "lines": 282,
-      "bytes": 10581,
-      "sha256": "5e4183860c8f7631a8afee2dc0eefed8a479648a5d1f3f5136d8bddba83f50fd"
+      "lines": 289,
+      "bytes": 11002,
+      "sha256": "143389b377d1ae9c6f6be96898b201b632c4a71e6bef3b7af800b19bd5b448bf"
     },
     {
       "file": "src/features/plugin/workspace-entry-methods.js",
@@ -2082,9 +2077,9 @@
     },
     {
       "file": "src/features/results/SearchResultRendererController.js",
-      "lines": 100,
-      "bytes": 6967,
-      "sha256": "410c17f92854c87db8f75643661467a7e8ebcd4ba15cce1a3f566b1bee3b5385"
+      "lines": 103,
+      "bytes": 7090,
+      "sha256": "fae0371497856b2577686a1b56f76612061f5e0f445ee28f6005534e544a0bdd"
     },
     {
       "file": "src/features/results/SparseHeightIndex.js",
@@ -2106,9 +2101,9 @@
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
-      "lines": 312,
-      "bytes": 14842,
-      "sha256": "bfeb27fcd1b1ab6b841ee040a3c0911dc032a7cdf58b221c605e8c9350c19e29"
+      "lines": 279,
+      "bytes": 14280,
+      "sha256": "d34adba11ab12dea4291083b2ec09954382e8e545816acd3ef202397ed096323"
     },
     {
       "file": "src/features/results/page-and-snippets-methods.js",
@@ -2173,8 +2168,8 @@
     {
       "file": "src/features/sort/SearchSortController.js",
       "lines": 396,
-      "bytes": 17073,
-      "sha256": "9f3f0f6f358e2ff257d84f42a4e7d8d3e798debebc6f7531f6badbd7f96361ab"
+      "bytes": 17095,
+      "sha256": "85d03511b1f18c281cc3fba0f996e81d33ffd0dfc05d10bab92c19485c2bff3d"
     },
     {
       "file": "src/features/sort/sort-model.js",
@@ -2329,8 +2324,8 @@
     {
       "file": "src/ui/overlays/SearchDropdownController.js",
       "lines": 718,
-      "bytes": 33157,
-      "sha256": "dce0d00ce849c2542debe68d7d012f8607a505912c10ca30c18dc3396fdfc219"
+      "bytes": 33298,
+      "sha256": "556cf8e60a317b0ff229965d226538824dc7bb70f1bc4ba76e9af8dfc3e85a9b"
     },
     {
       "file": "src/ui/overlays/geometry.js",
@@ -2346,9 +2341,9 @@
     },
     {
       "file": "src/ui/overlays/sidebar-popup.js",
-      "lines": 56,
-      "bytes": 2942,
-      "sha256": "c004e9d7d860e1e809dfa9f014538afa83a7d968edef5effa197911a6bbc434e"
+      "lines": 61,
+      "bytes": 3235,
+      "sha256": "97ec3a4787e75f130cfc8eaf7eb83f0f0576cf33b91a3d3221498f3b6a01297f"
     },
     {
       "file": "src/ui/pickers/count-rail.js",
@@ -2442,9 +2437,9 @@
     },
     {
       "file": "src/utils/dom.js",
-      "lines": 76,
-      "bytes": 2544,
-      "sha256": "b05cd740147f90342a51d6b15a8ea48c6de2d6a5c6af5ed23f2d80be7c76a864"
+      "lines": 84,
+      "bytes": 2961,
+      "sha256": "a7ba727f58dbe1aea61b97cb326ad98d4fe8cd06d2b119e3207289e7e7b067f7"
     },
     {
       "file": "src/utils/markdown-text.js",
@@ -2484,9 +2479,9 @@
     },
     {
       "file": "src/styles/styles.css",
-      "lines": 7704,
-      "bytes": 266199,
-      "sha256": "460ecb0165943c6d2edea5b90038ed09ba33de4372b788357c74cfb182ad9beb"
+      "lines": 7715,
+      "bytes": 266664,
+      "sha256": "8ccc69f6e764b9705ae53f2573cdb6f38cea476360e5249304803182f7fba116"
     }
   ],
   "mobileContract": {

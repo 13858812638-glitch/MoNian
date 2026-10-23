@@ -1,0 +1,110 @@
+{
+  "conditions": {
+    "Bpassed": 144,
+    "Bfailed": 0,
+    "errors": []
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0,
+    "errors": []
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0,
+    "errors": []
+  },
+  "feishu": {
+    "passed": 8,
+    "failed": 0,
+    "pageErrors": []
+  },
+  "caret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "portalChromium": {
+    "passed": 48,
+    "failed": 0
+  },
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0,
+    "errors": []
+  },
+  "indexRetry": {
+    "passed": 7,
+    "failed": 0
+  },
+  "popup": {
+    "passed": 80,
+    "failed": 0
+  },
+  "dialog": {
+    "passed": 72,
+    "failed": 0
+  },
+  "stack": {
+    "checks": 45,
+    "passed": 45
+  },
+  "browserAB": {
+    "passed": 0,
+    "failed": 4,
+    "errors": [
+      {
+        "configuration": "desktop-light",
+        "side": "B",
+        "error": "A/B mismatch: desktop-light 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "mobile-light",
+        "side": "B",
+        "error": "A/B mismatch: mobile-light 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "desktop-dark",
+        "side": "B",
+        "error": "A/B mismatch: desktop-dark 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "mobile-dark",
+        "side": "B",
+        "error": "A/B mismatch: mobile-dark 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      }
+    ]
+  },
+  "node": {
+    "total": 269,
+    "passed": 265,
+    "failed": 4,
+    "confirmedBaselineFailures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: LocalSearchPlugin",
+      "prototype contract: NavigatorCustomization",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ],
+    "followupRelatedTests": {
+      "passed": 8,
+      "failed": 0
+    }
+  },
+  "ownership": {
+    "checks": 13,
+    "passed": 13,
+    "failed": 0
+  },
+  "edges": {
+    "passed": 10,
+    "failed": 0
+  },
+  "scope": "Controlled Node/Chromium host; native Obsidian, iOS, Android, WebKit not run. Full Node run preceded the final showResults body refinement; ownership/edge/related Node tests then passed on final code."
+}

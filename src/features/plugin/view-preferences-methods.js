@@ -42,8 +42,11 @@ export const LocalSearchPlugin_view_preferences_methods = {
     },
 
 
-    _refreshFolderStateCores(change = null) {
+    _refreshFolderStateCores(change = null, { pendingOnly = false } = {}) {
         this._forEachActiveSearchCore(core => {
+            // An index publication may already have committed to an idle host.
+            // Only a blocked host (for example an open Picker) needs an explicit flush.
+            if (pendingOnly && !core._pendingResultUpdate) return;
             core._refreshCurrentResultsAfterMutation({
                 preserveSelection: true,
                 scrollTop: core.resultsContainer?.scrollTop || 0
@@ -62,6 +65,7 @@ export const LocalSearchPlugin_view_preferences_methods = {
         this.settings.excludedFolders = next;
 
         if (changed) {
+            let restoring = false;
             // 仅处理跨越全局排除边界的文件。恢复必须等索引提交后刷新仍打开的
             // Picker，不能把主动点击交给会被 Dropdown 挡住的后台通知。
             for (const file of this.app.vault.getFiles()) {
@@ -69,14 +73,17 @@ export const LocalSearchPlugin_view_preferences_methods = {
                     isSameOrDescendantVaultPath(file.path, folder));
                 const excluded = this.isPathExcluded(file.path);
                 if (excluded) this._evictIndexedPath(file.path);
-                if (wasExcluded && !excluded) this._indexQueue.add(file.path);
+                if (wasExcluded && !excluded) {
+                    this._indexQueue.add(file.path);
+                    restoring = true;
+                }
             }
             this._refreshFolderStateCores();
             try {
                 await Promise.all([this.saveSettings(), this._flushIndexQueueNow()]);
             } finally {
                 if (!this._unloaded) {
-                    this._refreshFolderStateCores();
+                    if (restoring) this._refreshFolderStateCores(null, { pendingOnly: true });
                     this.throttleSaveCache();
                 }
             }

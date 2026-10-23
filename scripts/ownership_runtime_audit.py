@@ -27,23 +27,21 @@ install='''()=>{
  return {name:a.name,calls:a.calls,edges:a.edges,mutations:a.records.length,writes,renderStates:a.renderStates};},destroy(){mo.disconnect();for(const r of restores)r()}};
 }'''
 reports=[]
-# This is a baseline defect reproduction, not an acceptance test that blesses these counts.
-# Re-evaluate these assertions when the implementation changes.
+# Behavioral and work-budget acceptance for the ownership repairs.
 def verify_observations(report):
  phases={p['name']:p for p in report['phases']}
  checks={
-  'folder_sync_enters_more_than_once':phases['folder-switch']['calls'].get('nav.sync',0)>1,
-  'disclosure_sync_enters_twice':phases['child-disclosure']['calls'].get('nav.sync')==2,
-  'same_sort_invalidates_navigation_without_search':phases['same-sort']['calls'].get('nav.refreshPreferences')==1 and phases['same-sort']['calls'].get('core.performSearch',0)==0,
-  'exclude_only_recomputes_twice':phases['exclude-only']['calls'].get('core._recomputeCurrentResults')==2,
-  'channel_keyboard_loses_button_focus':not phases['channel-keyboard-switch']['identity']['oldConnected'] and not phases['channel-keyboard-switch']['identity']['focusInsideChannels'],
-  'retry_acknowledges_before_dom_recovery':report['sharedFailure']['retryRenders']==0 and report['sharedFailure']['immediateOldRows'] and report['sharedFailure']['afterRetry']['applied']==report['sharedFailure']['afterRetry']['revision'],
+  'folder_sync_once':phases['folder-switch']['calls'].get('nav.sync')==1,
+  'disclosure_sync_once_without_query_publication':phases['child-disclosure']['calls'].get('nav.sync')==1 and phases['child-disclosure']['calls'].get('shared.publish',0)==0,
+  'same_sort_keeps_projection':phases['same-sort']['calls'].get('nav.refreshPreferences',0)==0 and phases['same-sort']['calls'].get('nav._renderProjection',0)==0 and phases['same-sort']['calls'].get('core.performSearch',0)==0,
+  'exclude_only_recomputes_once':phases['exclude-only']['calls'].get('core._recomputeCurrentResults')==1,
+  'channel_keyboard_retains_button_focus':phases['channel-keyboard-switch']['identity']['oldConnected'] and phases['channel-keyboard-switch']['identity']['focusedOld'] and phases['channel-keyboard-switch']['identity']['bodyExpanded'],
+  'retry_commits_before_acknowledging':report['sharedFailure']['retryRenders']==1 and not report['sharedFailure']['immediateOldRows'] and report['sharedFailure']['afterRetry']['applied']==report['sharedFailure']['afterRetry']['revision'],
  }
  if report['mobile']:
   states=phases['folder-switch']['renderStates']
-  checks['mobile_same_generation_renders_hidden_then_visible']=len(states)==2 and states[0]['mainHidden'] and not states[1]['mainHidden'] and states[0]['generation']==states[1]['generation']
- report['baselineReproductionChecks']=checks
- assert all(checks.values()),checks
+  checks['mobile_renders_once_after_reveal']=len(states)==1 and not states[0]['mainHidden']
+ report['acceptanceChecks']=checks
 
 with sync_playwright() as pw:
  browser=pw.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox'])
@@ -91,3 +89,5 @@ for report in reports: verify_observations(report)
 assert all(not r['pageErrors'] for r in reports), reports
 (OUT/'results.json').write_text(json.dumps(reports,ensure_ascii=False,indent=2)+'\n')
 for r in reports:print(json.dumps({'mobile':r['mobile'],'calls':{x['name']:x['calls'] for x in r['phases']},'channelIdentity':r['phases'][-1]['identity'],'sharedFailure':r['sharedFailure'],'pageErrors':r['pageErrors']},ensure_ascii=False))
+
+assert all(all(r['acceptanceChecks'].values()) for r in reports), [r['acceptanceChecks'] for r in reports]

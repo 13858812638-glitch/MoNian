@@ -1,0 +1,140 @@
+[
+  {
+    "name": "desktop restore index while Picker blocks background commit",
+    "pass": true,
+    "evidence": {
+      "samePanel": true,
+      "pending": false,
+      "results": 36,
+      "index": 36,
+      "renders": 2
+    }
+  },
+  {
+    "name": "desktop retained channels handle no-op, hide and reactivation",
+    "pass": true,
+    "evidence": {
+      "noOp": true,
+      "detached": true,
+      "same": true,
+      "count": 2,
+      "bodyExpanded": false
+    }
+  },
+  {
+    "name": "desktop reveal commits pending input once and records the committed query",
+    "pass": true,
+    "evidence": {
+      "search": {
+        "renders": [
+          false
+        ],
+        "query": "note0",
+        "timer": false
+      },
+      "selection": {
+        "renders": [
+          false
+        ],
+        "query": "note0",
+        "histories": [],
+        "timer": false
+      }
+    }
+  },
+  {
+    "name": "desktop CSS owns popup defaults and overrides",
+    "pass": true,
+    "evidence": {
+      "contract": {
+        "mobileWidth": 251,
+        "desktopWidth": 287,
+        "maxHeight": 470,
+        "placement": "anchor"
+      },
+      "defaults": {
+        "mobileWidth": 232,
+        "desktopWidth": 244,
+        "maxHeight": 470,
+        "placement": "anchor"
+      },
+      "missing": 0,
+      "gap": 8
+    }
+  },
+  {
+    "name": "desktop no page errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile restore index while Picker blocks background commit",
+    "pass": true,
+    "evidence": {
+      "samePanel": true,
+      "pending": false,
+      "results": 36,
+      "index": 36,
+      "renders": 2
+    }
+  },
+  {
+    "name": "mobile retained channels handle no-op, hide and reactivation",
+    "pass": true,
+    "evidence": {
+      "noOp": true,
+      "detached": true,
+      "same": true,
+      "count": 2,
+      "bodyExpanded": false
+    }
+  },
+  {
+    "name": "mobile reveal commits pending input once and records the committed query",
+    "pass": true,
+    "evidence": {
+      "search": {
+        "renders": [
+          false
+        ],
+        "query": "note0",
+        "timer": false
+      },
+      "selection": {
+        "renders": [
+          false
+        ],
+        "query": "note0",
+        "histories": [
+          "note0"
+        ],
+        "timer": false
+      }
+    }
+  },
+  {
+    "name": "mobile CSS owns popup defaults and overrides",
+    "pass": true,
+    "evidence": {
+      "contract": {
+        "mobileWidth": 251,
+        "desktopWidth": 287,
+        "maxHeight": 470,
+        "placement": "anchor"
+      },
+      "defaults": {
+        "mobileWidth": 232,
+        "desktopWidth": 244,
+        "maxHeight": 470,
+        "placement": "anchor"
+      },
+      "missing": 0,
+      "gap": 6
+    }
+  },
+  {
+    "name": "mobile no page errors",
+    "pass": true,
+    "evidence": []
+  }
+]

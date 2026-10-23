@@ -1,0 +1,428 @@
+{
+  "checks": 72,
+  "passed": 72,
+  "failed": 0,
+  "failures": [],
+  "results": [
+    {
+      "scenario": "ios-portal-h844-w390-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 258.140625,
+        "width": 350,
+        "height": 226.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "center": 371.359375,
+      "target": 371.36,
+      "style": {
+        "top": "371.36px",
+        "width": "350px",
+        "maxHeight": "624.72px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -175, -113.219)",
+        "zIndex": "11021",
+        "display": "flex"
+      },
+      "portalDisplay": "contents"
+    },
+    {
+      "scenario": "ios-portal-h615-w390-long-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 59,
+        "width": 350,
+        "height": 423.1875
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 615
+      },
+      "center": 270.59375,
+      "target": 270.6,
+      "style": {
+        "top": "270.6px",
+        "width": "350px",
+        "maxHeight": "423.2px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -175, -211.594)",
+        "zIndex": "11021",
+        "display": "flex"
+      },
+      "portalDisplay": "contents"
+    },
+    {
+      "scenario": "ios-portal-h568-w320-color-long-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 58.9921875,
+        "width": 280,
+        "height": 381.828125
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 568
+      },
+      "center": 249.90625,
+      "target": 249.92,
+      "style": {
+        "top": "249.92px",
+        "width": "280px",
+        "maxHeight": "381.84px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -140, -190.914)",
+        "zIndex": "11021",
+        "display": "flex"
+      },
+      "portalDisplay": "contents"
+    },
+    {
+      "scenario": "ios-portal-h844-w390-color-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 49,
+        "y": 250.140625,
+        "width": 292,
+        "height": 242.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "center": 371.359375,
+      "target": 371.36,
+      "style": {
+        "top": "371.36px",
+        "width": "292px",
+        "maxHeight": "624.72px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -146, -121.219)",
+        "zIndex": "11021",
+        "display": "flex"
+      },
+      "portalDisplay": "contents"
+    },
+    {
+      "scenario": "ios-portal-h844-w390-pos55",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 350.96875,
+        "width": 350,
+        "height": 226.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "center": 464.1875,
+      "target": 464.2,
+      "style": {
+        "top": "464.2px",
+        "width": "350px",
+        "maxHeight": "667.6px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -175, -113.219)",
+        "zIndex": "11021",
+        "display": "flex"
+      },
+      "portalDisplay": "contents"
+    },
+    {
+      "scenario": "android-portal-h844-w390-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 258.140625,
+        "width": 350,
+        "height": 226.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "center": 371.359375,
+      "target": 371.36,
+      "style": {
+        "top": "371.36px",
+        "width": "350px",
+        "maxHeight": "670.72px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -175, -113.219)",
+        "zIndex": "10121",
+        "display": "flex"
+      },
+      "portalDisplay": "block"
+    },
+    {
+      "scenario": "android-portal-h615-w390-long-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 36,
+        "width": 350,
+        "height": 469.1875
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 615
+      },
+      "center": 270.59375,
+      "target": 270.6,
+      "style": {
+        "top": "270.6px",
+        "width": "350px",
+        "maxHeight": "469.2px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -175, -234.594)",
+        "zIndex": "10121",
+        "display": "flex"
+      },
+      "portalDisplay": "block"
+    },
+    {
+      "scenario": "android-portal-h844-w390-color-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 49,
+        "y": 250.140625,
+        "width": 292,
+        "height": 242.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "center": 371.359375,
+      "target": 371.36,
+      "style": {
+        "top": "371.36px",
+        "width": "292px",
+        "maxHeight": "670.72px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -146, -121.219)",
+        "zIndex": "10121",
+        "display": "flex"
+      },
+      "portalDisplay": "block"
+    },
+    {
+      "scenario": "desktop-portal-h768-w1024-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 302,
+        "y": 224.6875,
+        "width": 420,
+        "height": 226.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 768
+      },
+      "center": 337.90625,
+      "target": 337.92,
+      "style": {
+        "top": "337.92px",
+        "width": "420px",
+        "maxHeight": "651.84px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -210, -113.219)",
+        "zIndex": "10121",
+        "display": "flex"
+      },
+      "portalDisplay": "block"
+    },
+    {
+      "scenario": "desktop-portal-h768-w1024-color-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 366,
+        "y": 216.6875,
+        "width": 292,
+        "height": 242.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 768
+      },
+      "center": 337.90625,
+      "target": 337.92,
+      "style": {
+        "top": "337.92px",
+        "width": "292px",
+        "maxHeight": "651.84px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -146, -121.219)",
+        "zIndex": "10121",
+        "display": "flex"
+      },
+      "portalDisplay": "block"
+    },
+    {
+      "scenario": "ios-overlay-h844-w390-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 258.140625,
+        "width": 350,
+        "height": 226.4375
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "center": 371.359375,
+      "target": 371.36,
+      "style": {
+        "top": "371.36px",
+        "width": "350px",
+        "maxHeight": "624.72px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -175, -113.219)",
+        "zIndex": "10121",
+        "display": "flex"
+      },
+      "portalDisplay": "-"
+    },
+    {
+      "scenario": "ios-overlay-h615-w390-long-pos44",
+      "checks": {
+        "center_at_token": true,
+        "viewport_fixed_dialog": true,
+        "backdrop_is_viewport_fixed": true,
+        "safe_area_respected": true,
+        "color_compact_width": true,
+        "ios_portal_e_preserved": true
+      },
+      "rect": {
+        "x": 20,
+        "y": 59,
+        "width": 350,
+        "height": 423.1875
+      },
+      "backdrop": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 615
+      },
+      "center": 270.59375,
+      "target": 270.6,
+      "style": {
+        "top": "270.6px",
+        "width": "350px",
+        "maxHeight": "423.2px",
+        "position": "fixed",
+        "transform": "matrix(1, 0, 0, 1, -175, -211.594)",
+        "zIndex": "10121",
+        "display": "flex"
+      },
+      "portalDisplay": "-"
+    }
+  ]
+}

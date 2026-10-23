@@ -63,6 +63,14 @@ export function setDomProperty(node, name, value) {
     else if (node[name] !== value) node[name] = value;
 }
 
+// CSS owns visual defaults. A missing/invalid metric contributes no extent;
+// callers still clamp measured geometry to the actual owning viewport.
+export function readCssNumber(element, name, style = null) {
+    const raw = (style || element?.ownerDocument?.defaultView?.getComputedStyle(element))?.getPropertyValue(name);
+    const value = Number.parseFloat(raw);
+    return Number.isFinite(value) ? value : 0;
+}
+
 // One ordered commit primitive. Remove obsolete children first so retained
 // siblings do not move around disappearing rows, preserving focus and layout.
 export function reconcileDomChildren(parent, nodes) {

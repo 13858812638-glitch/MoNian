@@ -1,0 +1,2338 @@
+{
+  "tool": "Chromium",
+  "iPhoneDeviceVerified": false,
+  "nativeObsidianVerified": false,
+  "passed": 96,
+  "failed": 0,
+  "rows": [
+    {
+      "device": "light-390",
+      "case": "native-shell-and-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 390,
+          "height": 49,
+          "top": 795,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "ios-status-safe-area-is-native-drawer-color",
+      "pass_": true,
+      "evidence": {
+        "cover": "rgb(217, 225, 229)",
+        "drawer": "rgb(217, 225, 229)",
+        "native": true
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "mobile-command-tap-target-min-44px",
+      "pass_": true,
+      "evidence": [
+        {
+          "label": "折叠全部导航",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "查看结果 · 6",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "视图设置",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "搜索记录",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "创建笔记",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "device": "light-390",
+      "case": "hidden-actions-no-hitbox",
+      "pass_": true,
+      "evidence": {
+        "hidden": [
+          [
+            "sort-navigation",
+            "none"
+          ],
+          [
+            "search",
+            "none"
+          ],
+          [
+            "filters",
+            "none"
+          ],
+          [
+            "sort",
+            "none"
+          ],
+          [
+            "batch",
+            "none"
+          ]
+        ],
+        "display": [
+          "collapse",
+          "results",
+          "view",
+          "history",
+          "create"
+        ],
+        "size": [
+          [
+            "collapse",
+            76
+          ],
+          [
+            "results",
+            76
+          ],
+          [
+            "view",
+            76
+          ],
+          [
+            "history",
+            76
+          ],
+          [
+            "create",
+            76
+          ],
+          [
+            "sort-navigation",
+            0
+          ],
+          [
+            "search",
+            0
+          ],
+          [
+            "filters",
+            0
+          ],
+          [
+            "sort",
+            0
+          ],
+          [
+            "batch",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "results-action-shows-search-without-auto-focus",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 390,
+          "height": 49,
+          "top": 795,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "search-command-does-open-search",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 390,
+          "height": 49,
+          "top": 795,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "context-switch-restores-leading-tools",
+      "pass_": true,
+      "evidence": {
+        "before": {
+          "x": 58,
+          "max": 58
+        },
+        "after": {
+          "page": "results",
+          "visible": false,
+          "inputShown": false,
+          "scroll": 0,
+          "scrollMax": 146,
+          "drawer": "rgb(217, 225, 229)",
+          "root": "rgb(217, 225, 229)",
+          "toolbar": "rgb(217, 225, 229)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 795,
+            "width": 390,
+            "height": 49,
+            "top": 795,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          },
+          "clientWidth": 390,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "results-toolbar-configured-order-preserved",
+      "pass_": true,
+      "evidence": [
+        "search",
+        "filters",
+        "sort",
+        "view",
+        "batch",
+        "create",
+        "history",
+        "time",
+        "pool:folder",
+        "pool:tag",
+        "pool:property",
+        "pool:fileType"
+      ]
+    },
+    {
+      "device": "light-390",
+      "case": "back-to-filters-leads-from-first-command",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 58,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 390,
+          "height": 49,
+          "top": 795,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "collapsed-search-keeps-native-results",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 146,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 390,
+          "height": 49,
+          "top": 795,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "explicit-search-toggle-shows-and-hides",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 146,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 390,
+          "height": 49,
+          "top": 795,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "foreign-keyboard-does-not-lock-GLS",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 146,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 743,
+          "width": 390,
+          "height": 49,
+          "top": 743,
+          "right": 390,
+          "bottom": 792,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "own-keyboard-native-sidebar-does-not-follow",
+      "pass_": true,
+      "evidence": {
+        "viewportBottom": 584,
+        "before": 812,
+        "after": 812,
+        "details": {
+          "frameMounted": false,
+          "frameClass": false,
+          "inset": "",
+          "margin": "0px"
+        }
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "focus-blur-same-native-drawer-surface",
+      "pass_": true,
+      "evidence": {
+        "focused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 146,
+          "drawer": "rgb(217, 225, 229)",
+          "root": "rgb(217, 225, 229)",
+          "toolbar": "rgb(217, 225, 229)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 390,
+            "height": 49,
+            "top": 763,
+            "right": 390,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 390,
+          "unloaded": false
+        },
+        "unfocused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 146,
+          "drawer": "rgb(217, 225, 229)",
+          "root": "rgb(217, 225, 229)",
+          "toolbar": "rgb(217, 225, 229)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 390,
+            "height": 49,
+            "top": 763,
+            "right": 390,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 390,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "keyboard-hide-cleans-lock-and-inset",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 146,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 390,
+          "height": 49,
+          "top": 763,
+          "right": 390,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "keyboard-dismiss-does-not-reflow-command-dock",
+      "pass_": true,
+      "evidence": {
+        "before": 812,
+        "after": 812
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "native-search-tab-keeps-independent-keyboard-frame",
+      "pass_": true,
+      "evidence": {
+        "has": true,
+        "cleared": true
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "rotation-without-keyboard-keeps-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 146,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 390,
+          "height": 49,
+          "top": 763,
+          "right": 390,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 390,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "other-native-tab-release-and-return-restores-surface",
+      "pass_": true,
+      "evidence": {
+        "off": {
+          "className": "workspace-drawer mod-left",
+          "cover": "rgb(100, 110, 120)"
+        },
+        "on": {
+          "className": "workspace-drawer mod-left gls-mobile-sidebar-active",
+          "cover": "rgb(217, 225, 229)"
+        }
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "native-sidebar-collapse-releases-status-safe-area",
+      "pass_": true,
+      "evidence": {
+        "collapsed": true,
+        "active": false,
+        "cover": "rgb(100, 110, 120)"
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "native-sidebar-resize-reopens-restored-surface",
+      "pass_": true,
+      "evidence": {
+        "collapsed": false,
+        "active": true,
+        "cover": "rgb(217, 225, 229)"
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "ios-portal-external-layer-hit-test",
+      "pass_": true,
+      "evidence": {
+        "portalDisplay": "contents",
+        "hit": true,
+        "actual": "local-search-search-text-input local-search-picker-search",
+        "input": "local-search-search-text-input local-search-picker-search",
+        "zIndex": "11010"
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "portal-input-focus-owned-by-picker-not-sidebar",
+      "pass_": true,
+      "evidence": {
+        "singleNode": true,
+        "focused": true,
+        "caret": "rgb(37, 37, 37)",
+        "frame": false,
+        "popupFrame": true
+      }
+    },
+    {
+      "device": "light-390",
+      "case": "teardown-cleans-surface-and-listeners",
+      "pass_": true,
+      "evidence": {
+        "open": false,
+        "ownerClass": "workspace-drawer mod-left",
+        "events": 0,
+        "ref": null
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "native-shell-and-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 320,
+          "height": 49,
+          "top": 795,
+          "right": 320,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "ios-status-safe-area-is-native-drawer-color",
+      "pass_": true,
+      "evidence": {
+        "cover": "rgb(27, 36, 34)",
+        "drawer": "rgb(27, 36, 34)",
+        "native": true
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "mobile-command-tap-target-min-44px",
+      "pass_": true,
+      "evidence": [
+        {
+          "label": "折叠全部导航",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "查看结果 · 6",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "视图设置",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "搜索记录",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "创建笔记",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "device": "dark-320",
+      "case": "hidden-actions-no-hitbox",
+      "pass_": true,
+      "evidence": {
+        "hidden": [
+          [
+            "sort-navigation",
+            "none"
+          ],
+          [
+            "search",
+            "none"
+          ],
+          [
+            "filters",
+            "none"
+          ],
+          [
+            "sort",
+            "none"
+          ],
+          [
+            "batch",
+            "none"
+          ]
+        ],
+        "display": [
+          "collapse",
+          "results",
+          "view",
+          "history",
+          "create"
+        ],
+        "size": [
+          [
+            "collapse",
+            62
+          ],
+          [
+            "results",
+            62
+          ],
+          [
+            "view",
+            62
+          ],
+          [
+            "history",
+            62
+          ],
+          [
+            "create",
+            62
+          ],
+          [
+            "sort-navigation",
+            0
+          ],
+          [
+            "search",
+            0
+          ],
+          [
+            "filters",
+            0
+          ],
+          [
+            "sort",
+            0
+          ],
+          [
+            "batch",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "results-action-shows-search-without-auto-focus",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 320,
+          "height": 49,
+          "top": 795,
+          "right": 320,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "search-command-does-open-search",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 320,
+          "height": 49,
+          "top": 795,
+          "right": 320,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "context-switch-restores-leading-tools",
+      "pass_": true,
+      "evidence": {
+        "before": {
+          "x": 128,
+          "max": 128
+        },
+        "after": {
+          "page": "results",
+          "visible": false,
+          "inputShown": false,
+          "scroll": 0,
+          "scrollMax": 216,
+          "drawer": "rgb(27, 36, 34)",
+          "root": "rgb(27, 36, 34)",
+          "toolbar": "rgb(27, 36, 34)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 795,
+            "width": 320,
+            "height": 49,
+            "top": 795,
+            "right": 320,
+            "bottom": 844,
+            "left": 0
+          },
+          "clientWidth": 320,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "results-toolbar-configured-order-preserved",
+      "pass_": true,
+      "evidence": [
+        "search",
+        "filters",
+        "sort",
+        "view",
+        "batch",
+        "create",
+        "history",
+        "time",
+        "pool:folder",
+        "pool:tag",
+        "pool:property",
+        "pool:fileType"
+      ]
+    },
+    {
+      "device": "dark-320",
+      "case": "back-to-filters-leads-from-first-command",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 128,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 320,
+          "height": 49,
+          "top": 795,
+          "right": 320,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "collapsed-search-keeps-native-results",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 216,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 320,
+          "height": 49,
+          "top": 795,
+          "right": 320,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "explicit-search-toggle-shows-and-hides",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 216,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 320,
+          "height": 49,
+          "top": 795,
+          "right": 320,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "foreign-keyboard-does-not-lock-GLS",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 216,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 743,
+          "width": 320,
+          "height": 49,
+          "top": 743,
+          "right": 320,
+          "bottom": 792,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "own-keyboard-native-sidebar-does-not-follow",
+      "pass_": true,
+      "evidence": {
+        "viewportBottom": 584,
+        "before": 812,
+        "after": 812,
+        "details": {
+          "frameMounted": false,
+          "frameClass": false,
+          "inset": "",
+          "margin": "0px"
+        }
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "focus-blur-same-native-drawer-surface",
+      "pass_": true,
+      "evidence": {
+        "focused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 216,
+          "drawer": "rgb(27, 36, 34)",
+          "root": "rgb(27, 36, 34)",
+          "toolbar": "rgb(27, 36, 34)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 320,
+            "height": 49,
+            "top": 763,
+            "right": 320,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 320,
+          "unloaded": false
+        },
+        "unfocused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 216,
+          "drawer": "rgb(27, 36, 34)",
+          "root": "rgb(27, 36, 34)",
+          "toolbar": "rgb(27, 36, 34)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 320,
+            "height": 49,
+            "top": 763,
+            "right": 320,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 320,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "keyboard-hide-cleans-lock-and-inset",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 216,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 320,
+          "height": 49,
+          "top": 763,
+          "right": 320,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "keyboard-dismiss-does-not-reflow-command-dock",
+      "pass_": true,
+      "evidence": {
+        "before": 812,
+        "after": 812
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "native-search-tab-keeps-independent-keyboard-frame",
+      "pass_": true,
+      "evidence": {
+        "has": true,
+        "cleared": true
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "rotation-without-keyboard-keeps-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 216,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 320,
+          "height": 49,
+          "top": 763,
+          "right": 320,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 320,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "other-native-tab-release-and-return-restores-surface",
+      "pass_": true,
+      "evidence": {
+        "off": {
+          "className": "workspace-drawer mod-left",
+          "cover": "rgb(100, 110, 120)"
+        },
+        "on": {
+          "className": "workspace-drawer mod-left gls-mobile-sidebar-active",
+          "cover": "rgb(27, 36, 34)"
+        }
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "native-sidebar-collapse-releases-status-safe-area",
+      "pass_": true,
+      "evidence": {
+        "collapsed": true,
+        "active": false,
+        "cover": "rgb(100, 110, 120)"
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "native-sidebar-resize-reopens-restored-surface",
+      "pass_": true,
+      "evidence": {
+        "collapsed": false,
+        "active": true,
+        "cover": "rgb(27, 36, 34)"
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "ios-portal-external-layer-hit-test",
+      "pass_": true,
+      "evidence": {
+        "portalDisplay": "contents",
+        "hit": true,
+        "actual": "local-search-search-text-input local-search-picker-search",
+        "input": "local-search-search-text-input local-search-picker-search",
+        "zIndex": "11010"
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "portal-input-focus-owned-by-picker-not-sidebar",
+      "pass_": true,
+      "evidence": {
+        "singleNode": true,
+        "focused": true,
+        "caret": "rgb(238, 238, 238)",
+        "frame": false,
+        "popupFrame": true
+      }
+    },
+    {
+      "device": "dark-320",
+      "case": "teardown-cleans-surface-and-listeners",
+      "pass_": true,
+      "evidence": {
+        "open": false,
+        "ownerClass": "workspace-drawer mod-left",
+        "events": 0,
+        "ref": null
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "native-shell-and-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 375,
+          "height": 49,
+          "top": 795,
+          "right": 375,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "ios-status-safe-area-is-native-drawer-color",
+      "pass_": true,
+      "evidence": {
+        "cover": "rgb(217, 225, 229)",
+        "drawer": "rgb(217, 225, 229)",
+        "native": true
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "mobile-command-tap-target-min-44px",
+      "pass_": true,
+      "evidence": [
+        {
+          "label": "折叠全部导航",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "查看结果 · 6",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "视图设置",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "搜索记录",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "创建笔记",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "device": "light-375",
+      "case": "hidden-actions-no-hitbox",
+      "pass_": true,
+      "evidence": {
+        "hidden": [
+          [
+            "sort-navigation",
+            "none"
+          ],
+          [
+            "search",
+            "none"
+          ],
+          [
+            "filters",
+            "none"
+          ],
+          [
+            "sort",
+            "none"
+          ],
+          [
+            "batch",
+            "none"
+          ]
+        ],
+        "display": [
+          "collapse",
+          "results",
+          "view",
+          "history",
+          "create"
+        ],
+        "size": [
+          [
+            "collapse",
+            73
+          ],
+          [
+            "results",
+            73
+          ],
+          [
+            "view",
+            73
+          ],
+          [
+            "history",
+            73
+          ],
+          [
+            "create",
+            73
+          ],
+          [
+            "sort-navigation",
+            0
+          ],
+          [
+            "search",
+            0
+          ],
+          [
+            "filters",
+            0
+          ],
+          [
+            "sort",
+            0
+          ],
+          [
+            "batch",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "results-action-shows-search-without-auto-focus",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 375,
+          "height": 49,
+          "top": 795,
+          "right": 375,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "search-command-does-open-search",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 375,
+          "height": 49,
+          "top": 795,
+          "right": 375,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "context-switch-restores-leading-tools",
+      "pass_": true,
+      "evidence": {
+        "before": {
+          "x": 73,
+          "max": 73
+        },
+        "after": {
+          "page": "results",
+          "visible": false,
+          "inputShown": false,
+          "scroll": 0,
+          "scrollMax": 161,
+          "drawer": "rgb(217, 225, 229)",
+          "root": "rgb(217, 225, 229)",
+          "toolbar": "rgb(217, 225, 229)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 795,
+            "width": 375,
+            "height": 49,
+            "top": 795,
+            "right": 375,
+            "bottom": 844,
+            "left": 0
+          },
+          "clientWidth": 375,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "results-toolbar-configured-order-preserved",
+      "pass_": true,
+      "evidence": [
+        "search",
+        "filters",
+        "sort",
+        "view",
+        "batch",
+        "create",
+        "history",
+        "time",
+        "pool:folder",
+        "pool:tag",
+        "pool:property",
+        "pool:fileType"
+      ]
+    },
+    {
+      "device": "light-375",
+      "case": "back-to-filters-leads-from-first-command",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 73,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 375,
+          "height": 49,
+          "top": 795,
+          "right": 375,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "collapsed-search-keeps-native-results",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 161,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 375,
+          "height": 49,
+          "top": 795,
+          "right": 375,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "explicit-search-toggle-shows-and-hides",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 161,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 375,
+          "height": 49,
+          "top": 795,
+          "right": 375,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "foreign-keyboard-does-not-lock-GLS",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 161,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 743,
+          "width": 375,
+          "height": 49,
+          "top": 743,
+          "right": 375,
+          "bottom": 792,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "own-keyboard-native-sidebar-does-not-follow",
+      "pass_": true,
+      "evidence": {
+        "viewportBottom": 584,
+        "before": 812,
+        "after": 812,
+        "details": {
+          "frameMounted": false,
+          "frameClass": false,
+          "inset": "",
+          "margin": "0px"
+        }
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "focus-blur-same-native-drawer-surface",
+      "pass_": true,
+      "evidence": {
+        "focused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 161,
+          "drawer": "rgb(217, 225, 229)",
+          "root": "rgb(217, 225, 229)",
+          "toolbar": "rgb(217, 225, 229)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 375,
+            "height": 49,
+            "top": 763,
+            "right": 375,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 375,
+          "unloaded": false
+        },
+        "unfocused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 161,
+          "drawer": "rgb(217, 225, 229)",
+          "root": "rgb(217, 225, 229)",
+          "toolbar": "rgb(217, 225, 229)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 375,
+            "height": 49,
+            "top": 763,
+            "right": 375,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 375,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "keyboard-hide-cleans-lock-and-inset",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 161,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 375,
+          "height": 49,
+          "top": 763,
+          "right": 375,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "keyboard-dismiss-does-not-reflow-command-dock",
+      "pass_": true,
+      "evidence": {
+        "before": 812,
+        "after": 812
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "native-search-tab-keeps-independent-keyboard-frame",
+      "pass_": true,
+      "evidence": {
+        "has": true,
+        "cleared": true
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "rotation-without-keyboard-keeps-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 161,
+        "drawer": "rgb(217, 225, 229)",
+        "root": "rgb(217, 225, 229)",
+        "toolbar": "rgb(217, 225, 229)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 375,
+          "height": 49,
+          "top": 763,
+          "right": 375,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 375,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "other-native-tab-release-and-return-restores-surface",
+      "pass_": true,
+      "evidence": {
+        "off": {
+          "className": "workspace-drawer mod-left",
+          "cover": "rgb(100, 110, 120)"
+        },
+        "on": {
+          "className": "workspace-drawer mod-left gls-mobile-sidebar-active",
+          "cover": "rgb(217, 225, 229)"
+        }
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "native-sidebar-collapse-releases-status-safe-area",
+      "pass_": true,
+      "evidence": {
+        "collapsed": true,
+        "active": false,
+        "cover": "rgb(100, 110, 120)"
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "native-sidebar-resize-reopens-restored-surface",
+      "pass_": true,
+      "evidence": {
+        "collapsed": false,
+        "active": true,
+        "cover": "rgb(217, 225, 229)"
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "ios-portal-external-layer-hit-test",
+      "pass_": true,
+      "evidence": {
+        "portalDisplay": "contents",
+        "hit": true,
+        "actual": "local-search-search-text-input local-search-picker-search",
+        "input": "local-search-search-text-input local-search-picker-search",
+        "zIndex": "11010"
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "portal-input-focus-owned-by-picker-not-sidebar",
+      "pass_": true,
+      "evidence": {
+        "singleNode": true,
+        "focused": true,
+        "caret": "rgb(37, 37, 37)",
+        "frame": false,
+        "popupFrame": true
+      }
+    },
+    {
+      "device": "light-375",
+      "case": "teardown-cleans-surface-and-listeners",
+      "pass_": true,
+      "evidence": {
+        "open": false,
+        "ownerClass": "workspace-drawer mod-left",
+        "events": 0,
+        "ref": null
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "native-shell-and-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 430,
+          "height": 49,
+          "top": 795,
+          "right": 430,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "ios-status-safe-area-is-native-drawer-color",
+      "pass_": true,
+      "evidence": {
+        "cover": "rgb(27, 36, 34)",
+        "drawer": "rgb(27, 36, 34)",
+        "native": true
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "mobile-command-tap-target-min-44px",
+      "pass_": true,
+      "evidence": [
+        {
+          "label": "折叠全部导航",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "查看结果 · 6",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "视图设置",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "搜索记录",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "创建笔记",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "device": "dark-430",
+      "case": "hidden-actions-no-hitbox",
+      "pass_": true,
+      "evidence": {
+        "hidden": [
+          [
+            "sort-navigation",
+            "none"
+          ],
+          [
+            "search",
+            "none"
+          ],
+          [
+            "filters",
+            "none"
+          ],
+          [
+            "sort",
+            "none"
+          ],
+          [
+            "batch",
+            "none"
+          ]
+        ],
+        "display": [
+          "collapse",
+          "results",
+          "view",
+          "history",
+          "create"
+        ],
+        "size": [
+          [
+            "collapse",
+            84
+          ],
+          [
+            "results",
+            84
+          ],
+          [
+            "view",
+            84
+          ],
+          [
+            "history",
+            84
+          ],
+          [
+            "create",
+            84
+          ],
+          [
+            "sort-navigation",
+            0
+          ],
+          [
+            "search",
+            0
+          ],
+          [
+            "filters",
+            0
+          ],
+          [
+            "sort",
+            0
+          ],
+          [
+            "batch",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "results-action-shows-search-without-auto-focus",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 430,
+          "height": 49,
+          "top": 795,
+          "right": 430,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "search-command-does-open-search",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 0,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 430,
+          "height": 49,
+          "top": 795,
+          "right": 430,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "context-switch-restores-leading-tools",
+      "pass_": true,
+      "evidence": {
+        "before": {
+          "x": 18,
+          "max": 18
+        },
+        "after": {
+          "page": "results",
+          "visible": false,
+          "inputShown": false,
+          "scroll": 0,
+          "scrollMax": 106,
+          "drawer": "rgb(27, 36, 34)",
+          "root": "rgb(27, 36, 34)",
+          "toolbar": "rgb(27, 36, 34)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 795,
+            "width": 430,
+            "height": 49,
+            "top": 795,
+            "right": 430,
+            "bottom": 844,
+            "left": 0
+          },
+          "clientWidth": 430,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "results-toolbar-configured-order-preserved",
+      "pass_": true,
+      "evidence": [
+        "search",
+        "filters",
+        "sort",
+        "view",
+        "batch",
+        "create",
+        "history",
+        "time",
+        "pool:folder",
+        "pool:tag",
+        "pool:property",
+        "pool:fileType"
+      ]
+    },
+    {
+      "device": "dark-430",
+      "case": "back-to-filters-leads-from-first-command",
+      "pass_": true,
+      "evidence": {
+        "page": "filters",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 18,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 430,
+          "height": 49,
+          "top": 795,
+          "right": 430,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "collapsed-search-keeps-native-results",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": false,
+        "inputShown": false,
+        "scroll": 0,
+        "scrollMax": 106,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 430,
+          "height": 49,
+          "top": 795,
+          "right": 430,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "explicit-search-toggle-shows-and-hides",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 106,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 795,
+          "width": 430,
+          "height": 49,
+          "top": 795,
+          "right": 430,
+          "bottom": 844,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "foreign-keyboard-does-not-lock-GLS",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 106,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 743,
+          "width": 430,
+          "height": 49,
+          "top": 743,
+          "right": 430,
+          "bottom": 792,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "own-keyboard-native-sidebar-does-not-follow",
+      "pass_": true,
+      "evidence": {
+        "viewportBottom": 584,
+        "before": 812,
+        "after": 812,
+        "details": {
+          "frameMounted": false,
+          "frameClass": false,
+          "inset": "",
+          "margin": "0px"
+        }
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "focus-blur-same-native-drawer-surface",
+      "pass_": true,
+      "evidence": {
+        "focused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 106,
+          "drawer": "rgb(27, 36, 34)",
+          "root": "rgb(27, 36, 34)",
+          "toolbar": "rgb(27, 36, 34)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 430,
+            "height": 49,
+            "top": 763,
+            "right": 430,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 430,
+          "unloaded": false
+        },
+        "unfocused": {
+          "page": "results",
+          "visible": true,
+          "inputShown": true,
+          "scroll": 0,
+          "scrollMax": 106,
+          "drawer": "rgb(27, 36, 34)",
+          "root": "rgb(27, 36, 34)",
+          "toolbar": "rgb(27, 36, 34)",
+          "rootKeyboard": false,
+          "toolbarRect": {
+            "x": 0,
+            "y": 763,
+            "width": 430,
+            "height": 49,
+            "top": 763,
+            "right": 430,
+            "bottom": 812,
+            "left": 0
+          },
+          "clientWidth": 430,
+          "unloaded": false
+        }
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "keyboard-hide-cleans-lock-and-inset",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 106,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 430,
+          "height": 49,
+          "top": 763,
+          "right": 430,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "keyboard-dismiss-does-not-reflow-command-dock",
+      "pass_": true,
+      "evidence": {
+        "before": 812,
+        "after": 812
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "native-search-tab-keeps-independent-keyboard-frame",
+      "pass_": true,
+      "evidence": {
+        "has": true,
+        "cleared": true
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "rotation-without-keyboard-keeps-toolbar",
+      "pass_": true,
+      "evidence": {
+        "page": "results",
+        "visible": true,
+        "inputShown": true,
+        "scroll": 0,
+        "scrollMax": 106,
+        "drawer": "rgb(27, 36, 34)",
+        "root": "rgb(27, 36, 34)",
+        "toolbar": "rgb(27, 36, 34)",
+        "rootKeyboard": false,
+        "toolbarRect": {
+          "x": 0,
+          "y": 763,
+          "width": 430,
+          "height": 49,
+          "top": 763,
+          "right": 430,
+          "bottom": 812,
+          "left": 0
+        },
+        "clientWidth": 430,
+        "unloaded": false
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "other-native-tab-release-and-return-restores-surface",
+      "pass_": true,
+      "evidence": {
+        "off": {
+          "className": "workspace-drawer mod-left",
+          "cover": "rgb(100, 110, 120)"
+        },
+        "on": {
+          "className": "workspace-drawer mod-left gls-mobile-sidebar-active",
+          "cover": "rgb(27, 36, 34)"
+        }
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "native-sidebar-collapse-releases-status-safe-area",
+      "pass_": true,
+      "evidence": {
+        "collapsed": true,
+        "active": false,
+        "cover": "rgb(100, 110, 120)"
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "native-sidebar-resize-reopens-restored-surface",
+      "pass_": true,
+      "evidence": {
+        "collapsed": false,
+        "active": true,
+        "cover": "rgb(27, 36, 34)"
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "ios-portal-external-layer-hit-test",
+      "pass_": true,
+      "evidence": {
+        "portalDisplay": "contents",
+        "hit": true,
+        "actual": "local-search-search-text-input local-search-picker-search",
+        "input": "local-search-search-text-input local-search-picker-search",
+        "zIndex": "11010"
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "portal-input-focus-owned-by-picker-not-sidebar",
+      "pass_": true,
+      "evidence": {
+        "singleNode": true,
+        "focused": true,
+        "caret": "rgb(238, 238, 238)",
+        "frame": false,
+        "popupFrame": true
+      }
+    },
+    {
+      "device": "dark-430",
+      "case": "teardown-cleans-surface-and-listeners",
+      "pass_": true,
+      "evidence": {
+        "open": false,
+        "ownerClass": "workspace-drawer mod-left",
+        "events": 0,
+        "ref": null
+      }
+    }
+  ],
+  "errors": []
+}

@@ -367,7 +367,6 @@ export const SearchCore_search_and_ranking_methods = {
         }
 
         this.resultControls.sync();
-        this.navigator?.sync();
     },
 
 
@@ -415,6 +414,7 @@ export const SearchCore_search_and_ranking_methods = {
             // 禁止先按旧 windowStart 渲染、再期待 restoreViewportAnchor 跨窗口命中。
             this.resultRenderer.renderInitialPage(viewportAnchor, { syncControls });
             if (refreshPools) this.resultControls.refreshFilterPoolHeader();
+            this.navigator?.sync();
         }
     },
 
@@ -474,6 +474,7 @@ export const SearchCore_search_and_ranking_methods = {
             this.resultRenderer.refreshChangedRows(paths);
         } else this.selection.syncControls();
         if (pools) this.resultControls.refreshFilterPoolHeader();
+        this.navigator?.sync();
     },
 
 

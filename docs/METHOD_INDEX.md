@@ -1,3 +1,7 @@
+> **2026-10-23 Owner 与提交链修复（未冻结）**：唯一开发基线 `d26f42a`。修复审计七项：导航提交去重、同值排序失效、通道节点与焦点、排除索引刷新、页面展示与结果提交、共享状态异常重试、CSS 默认值归属。见 [实现、验收与边界](OWNERSHIP_REPAIR_20261023.md)。下文保留历史记录。
+
+当前内部合同：`SearchNavigatorController.syncPage({commitResults=true}={})`、`setPage(page, notify=true, {commitResults=true}={})`、`showResults(commitInput=true, commit=null)` 共用页面展示与动作提交；`LocalSearchPlugin._refreshFolderStateCores(change=null, {pendingOnly=false}={})` 只按需要兑现索引提交；`SearchDropdownController._cssMetric(name, style)`、`_sizeContract(panel, style=null)` 消费一次定位的 CSS 计算样式；`utils/dom.js.readCssNumber(element, name, style=null)` 是共享数字 Token 读取 Primitive。新增组件引用由 renderer 构造/销毁；方法装配表没有新增或移除方法。
+
 > **2026-10-23 滚动测量精简（未冻结）**：唯一开发基线 `176d307`。共享滚动归零省去上界测量与重复位置读取；CSS 试验因收益不稳已撤回。没有新增缓存、延迟提交或第二套组件。见 [实现与测量](SMOOTH_LAYOUT_20261023.md)。下文保留历史记录。
 
 > **2026-10-23 自适应上下分栏调高（未冻结）**：唯一开发基线 `aed6f38`。现有分隔条按布局统一切换横纵轴；上下布局可拖动调高，宽高分别随会话保存。高度变化只同步分隔边界，不触发导航投影或搜索。见 [实现与验证](STACK_PANE_HEIGHT_20261023.md)。下文保留历史记录。

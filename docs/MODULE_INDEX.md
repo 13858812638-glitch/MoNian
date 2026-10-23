@@ -1,3 +1,5 @@
+> **2026-10-23 Owner 与提交链修复（未冻结）**：唯一开发基线 `d26f42a`。修复审计七项：导航提交去重、同值排序失效、通道节点与焦点、排除索引刷新、页面展示与结果提交、共享状态异常重试、CSS 默认值归属。见 [实现、验收与边界](OWNERSHIP_REPAIR_20261023.md)。下文保留历史记录。
+
 > **2026-10-23 滚动测量精简（未冻结）**：唯一开发基线 `176d307`。共享滚动归零省去上界测量与重复位置读取；CSS 试验因收益不稳已撤回。没有新增缓存、延迟提交或第二套组件。见 [实现与测量](SMOOTH_LAYOUT_20261023.md)。下文保留历史记录。
 
 > **2026-10-23 自适应上下分栏调高（未冻结）**：唯一开发基线 `aed6f38`。现有分隔条按布局统一切换横纵轴；上下布局可拖动调高，宽高分别随会话保存。高度变化只同步分隔边界，不触发导航投影或搜索。见 [实现与验证](STACK_PANE_HEIGHT_20261023.md)。下文保留历史记录。
@@ -14,7 +16,7 @@
 
 > 当前候选见 `DESKTOP_NAVIGATOR_20261019.md`，冻结状态以该文档和 AGENTS.md 顶部为准。新增桌面分栏模块及本轮修改模块的信息已同步；其它条目保留历史职责描述。
 
-- 当前源模块（含入口）：**153**；静态导入边：**664**；工程检查：**PASS-ENGINEERING**。
+- 当前源模块（含入口）：**153**；静态导入边：**666**；工程检查：**PASS-ENGINEERING**。
 - 所有运行模块路径均来自当前 `src/`，没有孤立或已经退役的旧文件。
 - 方法归属由当前 `src/` 及 `composeClassMethods()` 确定；`METHOD_INDEX.md` 的原始行号仅是旧源码溯源，不应作为当前行号。
 - 普通属性目录正式 Owner：`src/features/plugin/property-catalog-methods.js`；当前运行源码不再使用旧项目目录模块。
@@ -25,14 +27,14 @@
 |---|---:|---|---|
 | `src/core/LocalSearchPlugin.js` | 457 | 插件生命周期、搜索会话与状态归属 | `LocalSearchPlugin` |
 | `src/core/SearchCore.js` | 220 | 插件生命周期、搜索会话与状态归属 | `SEARCH_CORE_UI_REF_KEYS`、`SearchCore` |
-| `src/core/SharedSearchStateCoordinator.js` | 213 | 插件生命周期、搜索会话与状态归属 | `SharedSearchStateCoordinator` |
+| `src/core/SharedSearchStateCoordinator.js` | 222 | 插件生命周期、搜索会话与状态归属 | `SharedSearchStateCoordinator` |
 | `src/core/compose-class-methods.js` | 30 | 插件生命周期、搜索会话与状态归属 | `composeClassMethods` |
 | `src/core/default-settings.js` | 58 | 插件生命周期、搜索会话与状态归属 | `DEFAULT_SETTINGS` |
 | `src/core/picker-cleanup.js` | 20 | 插件生命周期、搜索会话与状态归属 | `disposePickerCleanup`、`registerPickerCleanup` |
 | `src/core/search/file-actions-methods.js` | 359 | 插件生命周期、搜索会话与状态归属 | `SearchCore_file_actions_methods`、`SearchCore_open_selection_methods` |
 | `src/core/search/input-and-filters-methods.js` | 531 | 插件生命周期、搜索会话与状态归属 | `SearchCore_input_and_filters_methods` |
 | `src/core/search/result-menu-events-methods.js` | 269 | 插件生命周期、搜索会话与状态归属 | `SearchCore_result_menu_events_methods` |
-| `src/core/search/search-and-ranking-methods.js` | 536 | 插件生命周期、搜索会话与状态归属 | `RESULT_TEXT_COLLATOR`、`SearchCore_search_and_ranking_methods` |
+| `src/core/search/search-and-ranking-methods.js` | 537 | 插件生命周期、搜索会话与状态归属 | `RESULT_TEXT_COLLATOR`、`SearchCore_search_and_ranking_methods` |
 | `src/core/search/session-methods.js` | 129 | 插件生命周期、搜索会话与状态归属 | `SearchCore_session_methods` |
 | `src/core/search/shell-methods.js` | 411 | 插件生命周期、搜索会话与状态归属 | `SearchCore_shell_methods` |
 | `src/core/session-values.js` | 35 | 插件生命周期、搜索会话与状态归属 | `normalizeModalSearchQuery`、`normalizeModalViewportAnchor` |
@@ -76,7 +78,7 @@
 | `src/features/folders/folder-colors.js` | 63 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `normalizeHexColor`、`normalizeResultFolderColors`、`resultFolderColorConfig` |
 | `src/features/navigator/NavigatorCustomization.js` | 897 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NavigatorCustomization` |
 | `src/features/navigator/navigation-icon.js` | 15 | 复用导航控件的 SVG 替换与标签保留 | `setNavigatorIcon` |
-| `src/features/navigator/SearchNavigatorController.js` | 1461 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
+| `src/features/navigator/SearchNavigatorController.js` | 1464 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `scheduleNavigatorScrollStateSave`、`SearchNavigatorController` |
 | `src/features/navigator/customization-model.js` | 141 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_CUSTOMIZATION_KINDS`、`navigatorItemId`、`parseNavigatorItemId`、`normalizeNavigatorCustomization`、`remapNavigatorCustomization` |
 | `src/features/navigator/desktop-pane.js` | 140 | 桌面横纵分栏拖动、键盘调整、宽高恢复及手势清理 | `createDesktopNavigatorPane` |
 | `src/features/navigator/toolbar-config.js` | 127 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `NAVIGATOR_TOOLBAR_CONTEXTS`、`NAVIGATOR_TOOLBAR_ACTIONS`、`navigatorToolbarActionIdIsValid`、`navigatorToolbarActionAvailable`、`navigatorToolbarCatalog`、`normalizeNavigatorToolbars`、`navigatorToolbarIcon`、`NAVIGATOR_VISIBLE_SECTION_DEFS`、`normalizeNavigatorVisibleSections`、`normalizeNavigatorTimeField` |
@@ -99,18 +101,18 @@
 | `src/features/plugin/settings-storage-methods.js` | 411 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_settings_storage_methods` |
 | `src/features/plugin/time-cache-methods.js` | 144 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_time_cache_methods` |
 | `src/features/plugin/tree-maintenance-methods.js` | 351 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_tree_maintenance_methods` |
-| `src/features/plugin/view-preferences-methods.js` | 282 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_view_preferences_methods` |
+| `src/features/plugin/view-preferences-methods.js` | 289 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_view_preferences_methods` |
 | `src/features/plugin/workspace-entry-methods.js` | 87 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `LocalSearchPlugin_workspace_entry_methods` |
 | `src/features/result-controls/SearchResultControlsController.js` | 35 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController` |
 | `src/features/result-controls/filter-pool-editor-methods.js` | 789 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_filter_pool_editor_methods` |
 | `src/features/result-controls/search-history-methods.js` | 206 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_search_history_methods` |
 | `src/features/result-controls/toolbar-methods.js` | 148 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_toolbar_methods` |
 | `src/features/result-controls/view-composer-methods.js` | 948 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultControlsController_view_composer_methods` |
-| `src/features/results/SearchResultRendererController.js` | 100 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController` |
+| `src/features/results/SearchResultRendererController.js` | 103 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController` |
 | `src/features/results/SparseHeightIndex.js` | 87 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SparseHeightIndex` |
 | `src/features/results/card-metadata-methods.js` | 347 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_card_metadata_methods` |
-| `src/features/results/filter-channels-methods.js` | 312 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
-| `src/features/results/browse-card-reuse.js` | 92 | 全宿主普通浏览卡片的有界复用、提交和回滚 | `beginBrowseCardReuse` |
+| `src/features/results/filter-channels-methods.js` | 279 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_filter_channels_methods` |
+| `src/features/results/browse-card-reuse.js` | 89 | 全宿主普通浏览卡片的有界复用、提交和回滚 | `beginBrowseCardReuse` |
 | `src/features/results/page-and-snippets-methods.js` | 296 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_page_and_snippets_methods` |
 | `src/features/results/result-card-methods.js` | 208 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS`、`RESULT_CONTENT_IDS`、`RESULT_CONTENT_DEF_MAP`、`VIEW_COMPOSER_SECTION_IDS`、`normalizeResultContentOrder`、`DEFAULT_RESULT_VIEWS`、`normalizeResultViewId`、`normalizeResultViewConfig`、`normalizeResultViews` |
@@ -150,7 +152,7 @@
 | `src/ui/overlays/SearchDropdownController.js` | 718 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchDropdownController` |
 | `src/ui/overlays/geometry.js` | 33 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `resolveOverlayBounds`、`resolveDropdownViewportBounds` |
 | `src/ui/overlays/popup-order.js` | 25 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `searchPopupOpenOrder`、`markSearchPopupActive`、`topSearchPopupSurface` |
-| `src/ui/overlays/sidebar-popup.js` | 56 | 桌面侧栏弹窗边界与定位生命周期 | `resolveSidebarPopupBounds`、`bindSidebarDialogPosition` |
+| `src/ui/overlays/sidebar-popup.js` | 61 | 桌面侧栏弹窗边界与定位生命周期 | `resolveSidebarPopupBounds`、`bindSidebarDialogPosition` |
 | `src/ui/pickers/count-rail.js` | 21 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `observePickerCountRail` |
 | `src/ui/pickers/folder-picker.js` | 216 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `renderSharedFolderTreePicker` |
 | `src/ui/pickers/header-modes.js` | 117 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `attachFacetPickerOverflow`、`attachPickerHeaderModes` |
@@ -166,7 +168,7 @@
 | `src/ui/settings/LocalSearchSettingTab.js` | 267 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `LocalSearchSettingTab` |
 | `src/ui/settings/setting-row.js` | 73 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `createPluginSettingClass`、`SearchSettingRow` |
 | `src/ui/views/SearchView.js` | 207 | 宿主视图、Picker 原语、Dialog 与交互呈现 | `SearchView` |
-| `src/utils/dom.js` | 76 | 无状态的通用辅助函数 | `hostDocument`、`hostWindow`、`activeWorkspaceDocument`、`isDomElement`、`isDomHTMLElement`、`isDomButton`、`isDomInput`、`setDomText`、`setDomProperty`、`reconcileDomChildren` |
+| `src/utils/dom.js` | 84 | 无状态的通用辅助函数 | `hostDocument`、`hostWindow`、`activeWorkspaceDocument`、`isDomElement`、`isDomHTMLElement`、`isDomButton`、`isDomInput`、`setDomText`、`setDomProperty`、`readCssNumber`、`reconcileDomChildren` |
 | `src/utils/markdown-text.js` | 230 | 无状态的通用辅助函数 | `simpleSegment`、`decodeReadableEntities`、`readableWikiTarget`、`normalizeReadableText`、`stripReadableLineSyntax`、`cleanMarkdownForSnippet`、`extractCountableTextFromMarkdown`、`readableTokenCountFromText` |
 | `src/utils/normalization.js` | 44 | 无状态的通用辅助函数 | `normalizeIntegerSetting`、`normalizeUniqueStringList`、`normalizeStringListMap` |
 | `src/utils/preferred-order.js` | 80 | 无状态的通用辅助函数 | `moveOrderedKey`、`sortByPreferredOrder`、`updatePreferredSiblingOrder`、`remapPreferredPathOrder`、`remapFilterPoolStoredKeys` |

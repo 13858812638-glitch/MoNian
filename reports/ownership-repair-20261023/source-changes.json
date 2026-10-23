@@ -1,0 +1,60 @@
+{
+  "baseline": "d26f42a",
+  "files": [
+    {
+      "file": "src/core/SharedSearchStateCoordinator.js",
+      "before": "e02466644be2f2ca17d8d5aadcfe94238c039a0b7d81720ad62eb05bc6819ed2",
+      "after": "c2341a25829434507fb3b0e71c63703d6a57317f8e74256cea33adb9753cd3d0"
+    },
+    {
+      "file": "src/core/search/search-and-ranking-methods.js",
+      "before": "dee65ca8f106ab7761113ca3abf5b91fc01c3fa668efe5aa97454d37489cb1dc",
+      "after": "66db2cdce1b7370bcad3740e66c2c833cb7a2c5fafe52ea6b1e87bfa30449cec"
+    },
+    {
+      "file": "src/features/navigator/SearchNavigatorController.js",
+      "before": "3d281611bb01da893a9041fd1e1f3e495a01f66cc0f3918df252e7ea1ed4e627",
+      "after": "2ae06bf72c92a0070fd31d2d0bb74ffb92194924784d6ca354af8719b98ab13c"
+    },
+    {
+      "file": "src/features/plugin/view-preferences-methods.js",
+      "before": "5e4183860c8f7631a8afee2dc0eefed8a479648a5d1f3f5136d8bddba83f50fd",
+      "after": "143389b377d1ae9c6f6be96898b201b632c4a71e6bef3b7af800b19bd5b448bf"
+    },
+    {
+      "file": "src/features/results/SearchResultRendererController.js",
+      "before": "410c17f92854c87db8f75643661467a7e8ebcd4ba15cce1a3f566b1bee3b5385",
+      "after": "fae0371497856b2577686a1b56f76612061f5e0f445ee28f6005534e544a0bdd"
+    },
+    {
+      "file": "src/features/results/filter-channels-methods.js",
+      "before": "bfeb27fcd1b1ab6b841ee040a3c0911dc032a7cdf58b221c605e8c9350c19e29",
+      "after": "d34adba11ab12dea4291083b2ec09954382e8e545816acd3ef202397ed096323"
+    },
+    {
+      "file": "src/features/sort/SearchSortController.js",
+      "before": "9f3f0f6f358e2ff257d84f42a4e7d8d3e798debebc6f7531f6badbd7f96361ab",
+      "after": "85d03511b1f18c281cc3fba0f996e81d33ffd0dfc05d10bab92c19485c2bff3d"
+    },
+    {
+      "file": "src/styles/styles.css",
+      "before": "460ecb0165943c6d2edea5b90038ed09ba33de4372b788357c74cfb182ad9beb",
+      "after": "8ccc69f6e764b9705ae53f2573cdb6f38cea476360e5249304803182f7fba116"
+    },
+    {
+      "file": "src/ui/overlays/SearchDropdownController.js",
+      "before": "dce0d00ce849c2542debe68d7d012f8607a505912c10ca30c18dc3396fdfc219",
+      "after": "556cf8e60a317b0ff229965d226538824dc7bb70f1bc4ba76e9af8dfc3e85a9b"
+    },
+    {
+      "file": "src/ui/overlays/sidebar-popup.js",
+      "before": "c004e9d7d860e1e809dfa9f014538afa83a7d968edef5effa197911a6bbc434e",
+      "after": "97ec3a4787e75f130cfc8eaf7eb83f0f0576cf33b91a3d3221498f3b6a01297f"
+    },
+    {
+      "file": "src/utils/dom.js",
+      "before": "b05cd740147f90342a51d6b15a8ea48c6de2d6a5c6af5ed23f2d80be7c76a864",
+      "after": "a7ba727f58dbe1aea61b97cb326ad98d4fe8cd06d2b119e3207289e7e7b067f7"
+    }
+  ]
+}

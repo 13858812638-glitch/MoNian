@@ -1546,6 +1546,16 @@ settings:
     --ls-filter-picker-anchor-gap: 2px; /* 顶部筛选按钮与 Picker 间距，复刻 Dida Bridge */
     --ls-filter-picker-max-height: 560px; /* 顶部筛选 Picker 统一高度上限 */
     --ls-dropdown-default-mobile-width: 400px; /* 普通 Picker 移动端宽度合同 */
+    /* Fixed popup geometry policy; JS only measures and clamps these tokens. */
+    --ls-sidebar-popup-inset: 8px;
+    --ls-dialog-position-min: 20;
+    --ls-dialog-position-max: 80;
+    --ls-dropdown-anchor-gap: 8px;
+    --ls-dropdown-mobile-height-ratio: 0.68;
+    --ls-dropdown-min-height: 120px;
+    --ls-dropdown-upper-offset-min: 24px;
+    --ls-dropdown-upper-offset-max: 180px;
+    --ls-dropdown-upper-offset-ratio: 0.28;
     --ls-dropdown-default-max-height: 560px; /* 普通 Picker 高度上限 */
     --ls-dropdown-mobile-viewport-inset: 16px; /* 移动端 Dropdown 可用视口内缩 */
     --ls-dropdown-desktop-viewport-inset: 8px; /* 桌面端 Dropdown 可用视口内缩 */
@@ -7132,6 +7142,7 @@ body:not(.is-mobile)
 /* ===== C. 移动端 · 环境适配层 ===== */
 
 body.is-mobile {
+    --ls-dropdown-anchor-gap: 6px;
     /* 仅覆盖共享变量 */
 
     /*** 移动环境共享基线 */

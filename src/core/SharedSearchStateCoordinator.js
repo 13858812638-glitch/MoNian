@@ -169,10 +169,13 @@ export class SharedSearchStateCoordinator {
         if (!member || member.applying || core._destroyed || member.applied === this.revision
             || this._blocked(core)) return false;
         const target = this.state;
+        const revision = this.revision;
         member.applying = true;
         try {
             const before = this._capture(core);
-            if (!this._same(before, target)) {
+            // null means a failed view commit, not an applied model revision.
+            // Model equality cannot acknowledge an unfinished renderer transaction.
+            if (member.applied === null || !this._same(before, target)) {
                 // Restore the search-side FilterState before updating a zero-hit create preview.
                 core.createFlow?.prepareSearchEvaluation?.();
                 core.queryState.set(target.query);
@@ -188,11 +191,17 @@ export class SharedSearchStateCoordinator {
                     core._refreshCurrentResultsAfterMutation({ preserveSelection: true, refreshPools: true });
                 }
                 core._syncSearchHeaderControls?.();
-                core._notifyStateChange();
+                // The incoming model is already owned by this coordinator.
+                // Result refresh owns navigation; only persist the host view here.
+                if (!core._resultGeneration) core.navigator?.sync?.();
+                core.onStateChange?.();
             }
-            member.applied = this.revision;
+            member.applied = revision;
             member.observed = this._capture(core);
             return true;
+        } catch (error) {
+            member.applied = null;
+            throw error;
         } finally { member.applying = false; }
     }
 

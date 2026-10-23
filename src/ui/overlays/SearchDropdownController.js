@@ -7,6 +7,7 @@ import { configureSharedPickerHeader } from "../pickers/picker-header.js";
 import { resolveDropdownViewportBounds } from "./geometry.js";
 import { resolveSidebarPopupBounds } from "./sidebar-popup.js";
 import { markSearchPopupActive, topSearchPopupSurface } from "./popup-order.js";
+import { readCssNumber } from "../../utils/dom.js";
 import { Notice, Platform } from "obsidian";
 
 // ========== SearchCore Dropdown：唯一 Surface / 监听 / 定位 / Escape 生命周期 ==========
@@ -200,15 +201,10 @@ export class SearchDropdownController {
         this.owner = null;
     }
 
-    _cssMetric(name, fallback) {
+    _cssMetric(name, style) {
         const host = this.owner?.containerEl?.isConnected
-            ? this.owner.containerEl
-            : this.owner?.modalEl;
-        const raw = host
-            ? host.ownerDocument.defaultView.getComputedStyle(host).getPropertyValue(name).trim()
-            : "";
-        const value = Number.parseFloat(raw);
-        return Number.isFinite(value) ? value : fallback;
+            ? this.owner.containerEl : this.owner?.modalEl;
+        return readCssNumber(host, name, style);
     }
 
     _captureFrame(panel) {
@@ -248,65 +244,66 @@ export class SearchDropdownController {
         return true;
     }
 
-    _sizeContract(panel) {
+    _sizeContract(panel, style = null) {
+        const metric = name => this._cssMetric(name, style);
         const size = panel?.dataset?.lsDropdownSize || "default";
         if (panel?.classList?.contains("local-search-facet-picker")) {
             const createMetadata = panel.classList.contains(
                 "is-create-metadata-picker"
             );
             return {
-                mobileWidth: this._cssMetric("--ls-dropdown-default-mobile-width", 400),
+                mobileWidth: metric("--ls-dropdown-default-mobile-width"),
                 desktopWidth: null,
-                maxHeight: this._cssMetric("--ls-filter-picker-max-height", 560),
+                maxHeight: metric("--ls-filter-picker-max-height"),
                 // 创建模式五类元数据 Picker 在移动端属于同一编辑 Surface：
                 // 不允许因标签/属性入口位于顶部、文件夹/类型/模板入口位于摘要区
                 // 而产生两套 Y 坐标。Anchor 仍保留 aria / Current / 焦点恢复职责；
                 // 桌面端 reposition() 继续沿用原 Anchor 定位。
                 placement: createMetadata ? "create-metadata" : "anchor",
                 anchorAlign: "start",
-                anchorGap: this._cssMetric("--ls-filter-picker-anchor-gap", 2),
+                anchorGap: metric("--ls-filter-picker-anchor-gap"),
                 fixedHeight: true
             };
         }
         if (size === "view-composer") {
-            const width = this._cssMetric("--ls-view-composer-width", 300);
+            const width = metric("--ls-view-composer-width");
             return {
                 mobileWidth: width,
                 desktopWidth: width,
-                maxHeight: this._cssMetric("--ls-view-composer-max-height", 620),
+                maxHeight: metric("--ls-view-composer-max-height"),
                 placement: "anchor",
                 fixedHeight: true
             };
         }
         if (size === "navigator-actions") {
             return {
-                mobileWidth: this._cssMetric("--ls-dropdown-default-mobile-width", 400),
-                desktopWidth: this._cssMetric("--ls-nav-action-desktop-width", 360),
-                maxHeight: this._cssMetric("--ls-nav-action-max-height", 570),
+                mobileWidth: metric("--ls-dropdown-default-mobile-width"),
+                desktopWidth: metric("--ls-nav-action-desktop-width"),
+                maxHeight: metric("--ls-nav-action-max-height"),
                 placement: Platform.isMobile ? "center" : "anchor",
                 fixedHeight: true
             };
         }
         if (size === "compact-view") {
             return {
-                mobileWidth: this._cssMetric("--ls-compact-view-mobile-width", 232),
-                desktopWidth: this._cssMetric("--ls-compact-view-desktop-width", 244),
-                maxHeight: this._cssMetric("--ls-compact-view-max-height", 470),
+                mobileWidth: metric("--ls-compact-view-mobile-width"),
+                desktopWidth: metric("--ls-compact-view-desktop-width"),
+                maxHeight: metric("--ls-compact-view-max-height"),
                 placement: "anchor"
             };
         }
         if (size === "compact-create") {
             return {
-                mobileWidth: this._cssMetric("--ls-compact-create-width", 292),
-                desktopWidth: this._cssMetric("--ls-compact-create-width", 292),
-                maxHeight: this._cssMetric("--ls-compact-create-max-height", 168),
+                mobileWidth: metric("--ls-compact-create-width"),
+                desktopWidth: metric("--ls-compact-create-width"),
+                maxHeight: metric("--ls-compact-create-max-height"),
                 placement: Platform.isMobile ? "upper-center" : "anchor"
             };
         }
         return {
-            mobileWidth: this._cssMetric("--ls-dropdown-default-mobile-width", 400),
+            mobileWidth: metric("--ls-dropdown-default-mobile-width"),
             desktopWidth: null,
-            maxHeight: this._cssMetric("--ls-dropdown-default-max-height", 560),
+            maxHeight: metric("--ls-dropdown-default-max-height"),
             fixedHeight: Platform.isMobile,
             placement: "center"
         };
@@ -359,7 +356,10 @@ export class SearchDropdownController {
         }
 
         const mobile = Platform.isMobile;
-        const contract = this._sizeContract(panel);
+        const metricHost = owner.containerEl?.isConnected ? owner.containerEl : owner.modalEl;
+        const style = metricHost?.ownerDocument.defaultView.getComputedStyle(metricHost);
+        const metric = name => this._cssMetric(name, style);
+        const contract = this._sizeContract(panel, style);
         // Large mobile pickers share one CSS frame regardless of entry point.
         // Anchor geometry remains a desktop/compact-menu concern only.
         const sheet = mobile && !["compact-view", "compact-create"].includes(panel.dataset.lsDropdownSize);
@@ -371,15 +371,15 @@ export class SearchDropdownController {
             this._revealPanel(panel);
             return;
         }
-        const bounds = resolveDropdownViewportBounds(owner.containerEl, this._cssMetric(
+        const bounds = resolveDropdownViewportBounds(owner.containerEl, metric(
             mobile ? "--ls-dropdown-mobile-viewport-inset" : "--ls-dropdown-desktop-viewport-inset",
             mobile ? 16 : 8
         ));
         const widthLimit = mobile ? Math.min(contract.mobileWidth, bounds.width) : bounds.width;
         const requestedWidth = mobile ? widthLimit
             : contract.desktopWidth == null ? null : Math.min(contract.desktopWidth, widthLimit);
-        const preferredHeight = mobile ? bounds.height * 0.68 : bounds.height;
-        const heightLimit = Math.max(0, Math.min(contract.maxHeight, bounds.height, Math.max(120, preferredHeight)));
+        const preferredHeight = mobile ? bounds.height * metric("--ls-dropdown-mobile-height-ratio") : bounds.height;
+        const heightLimit = Math.max(0, Math.min(contract.maxHeight, bounds.height, Math.max(metric("--ls-dropdown-min-height"), preferredHeight)));
 
         // 只发布测量后的尺寸 Token；CSS 是 width / height / max-size 的唯一消费出口。
         // 无固定宽高的类型移除覆盖，回到原组件合同；不再另写同义 style.width/height。
@@ -401,7 +401,7 @@ export class SearchDropdownController {
         let left;
         let top;
         if (!mobile || contract.placement === "anchor") {
-            const gap = Number.isFinite(contract.anchorGap) ? contract.anchorGap : mobile ? 6 : 8;
+            const gap = Number.isFinite(contract.anchorGap) ? contract.anchorGap : metric("--ls-dropdown-anchor-gap");
             const requestedLeft = !mobile || contract.anchorAlign === "start"
                 ? anchorRect.left : anchorRect.right - width;
             left = Math.max(bounds.left, Math.min(requestedLeft, bounds.right - width));
@@ -415,7 +415,7 @@ export class SearchDropdownController {
             const freeHeight = Math.max(0, bounds.height - height);
             if (contract.placement === "create-metadata") top = bounds.top;
             else if (contract.placement === "upper-center") {
-                top = bounds.top + Math.min(freeHeight, Math.min(180, Math.max(24, freeHeight * 0.28)));
+                top = bounds.top + Math.min(freeHeight, Math.min(metric("--ls-dropdown-upper-offset-max"), Math.max(metric("--ls-dropdown-upper-offset-min"), freeHeight * metric("--ls-dropdown-upper-offset-ratio"))));
             } else top = bounds.top + freeHeight / 2;
         }
         panel.style.left = `${Math.round(left)}px`;

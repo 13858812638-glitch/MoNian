@@ -1,0 +1,253 @@
+[
+  {
+    "name": "light stack exposes horizontal separator",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light drag grows navigation height",
+    "evidence": {
+      "before": 254,
+      "after": 344
+    },
+    "pass": true
+  },
+  {
+    "name": "light scroll viewport grows with pane",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light value reflects actual geometry",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light vertical keyboard adjusts height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light Escape restores height and ends drag",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light blur restores height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light pointer cancellation restores height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light layout change cancels drag without changing stored height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light RTL keeps downward height growth",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light session includes height",
+    "evidence": 334,
+    "pass": true
+  },
+  {
+    "name": "light wide layout keeps vertical separator",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light layout switch retains height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light layout switch retains independent width",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light maximum reserves result space",
+    "evidence": {
+      "pane": 689,
+      "results": 160,
+      "total": 850
+    },
+    "pass": true
+  },
+  {
+    "name": "light height-only resize cancels stale drag",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light height-only resize does not reproject or search",
+    "evidence": {
+      "project": 0,
+      "search": 0
+    },
+    "pass": true
+  },
+  {
+    "name": "light height-only resize updates separator bounds",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light short host keeps both panes inside workspace",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light reopened view restores height",
+    "evidence": {
+      "saved": 130,
+      "actual": 130
+    },
+    "pass": true
+  },
+  {
+    "name": "light double click clears only active dimension",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "light close removes separator and pending drag",
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "name": "dark stack exposes horizontal separator",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark drag grows navigation height",
+    "evidence": {
+      "before": 254,
+      "after": 344
+    },
+    "pass": true
+  },
+  {
+    "name": "dark scroll viewport grows with pane",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark value reflects actual geometry",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark vertical keyboard adjusts height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark Escape restores height and ends drag",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark blur restores height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark pointer cancellation restores height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark layout change cancels drag without changing stored height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark RTL keeps downward height growth",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark session includes height",
+    "evidence": 334,
+    "pass": true
+  },
+  {
+    "name": "dark wide layout keeps vertical separator",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark layout switch retains height",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark layout switch retains independent width",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark maximum reserves result space",
+    "evidence": {
+      "pane": 689,
+      "results": 160,
+      "total": 850
+    },
+    "pass": true
+  },
+  {
+    "name": "dark height-only resize cancels stale drag",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark height-only resize does not reproject or search",
+    "evidence": {
+      "project": 0,
+      "search": 0
+    },
+    "pass": true
+  },
+  {
+    "name": "dark height-only resize updates separator bounds",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark short host keeps both panes inside workspace",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark reopened view restores height",
+    "evidence": {
+      "saved": 130,
+      "actual": 130
+    },
+    "pass": true
+  },
+  {
+    "name": "dark double click clears only active dimension",
+    "evidence": null,
+    "pass": true
+  },
+  {
+    "name": "dark close removes separator and pending drag",
+    "evidence": [],
+    "pass": true
+  },
+  {
+    "name": "mobile has no desktop separator",
+    "evidence": null,
+    "pass": true
+  }
+]

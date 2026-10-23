@@ -114,7 +114,7 @@ export class SearchSortController {
             if (changed) void core.plugin.saveSettings().then(saved => {
                 if (saved === false) new Notice("时间依据未能保存，请重试");
             }).catch(error => new Notice(error?.message || "时间依据未能保存"));
-            core.navigator?.refreshPreferences();
+            if (timeBasisChanged) core.navigator?.refreshPreferences();
             if (changed) core.plugin._forEachActiveSearchCore?.(other => {
                 if (other === core || other._destroyed) return;
                 other.sorting?.sync();

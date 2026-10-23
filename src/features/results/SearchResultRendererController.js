@@ -48,6 +48,7 @@ export class SearchResultRendererController {
         // 刷新只更新文本、状态与顺序，不再 empty() 后整行重建。
         this._filterPoolGroupRefs = new Map();
         this._filterToolbarButtonRefs = new Map();
+        this._channelGroupRef = null;
         // 唯一摘要 I/O 调度 Owner：仅追踪在途路径，不另建结果缓存。
         // 已完成的路径仍由 SearchCore.loadedPaths 管理。
         this._snippetInFlight = new Map();
@@ -87,6 +88,8 @@ export class SearchResultRendererController {
         }
         this._filterPoolGroupRefs.clear();
         this._filterToolbarButtonRefs.clear();
+        this._channelGroupRef?.group.remove();
+        this._channelGroupRef = null;
         this._snippetInFlight.clear();
         this._browseCardCache?.entries.clear();
         this._browseCardCache = null;

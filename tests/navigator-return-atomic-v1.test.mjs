@@ -15,7 +15,7 @@ function settingDefault(id) {
 }
 test('return projection is limited to real mobile Results -> Filters navigation', () => {
   assert.match(source, /const returningToFilters = this\.layout === "mobile" && this\.page === "results"\s*&& page === "filters" && !this\._restoringPage/);
-  assert.match(source, /this\.syncPage\(\);\s*if \(page === "filters"\) \{\s*this\.sync\(\);/);
+  assert.match(source, /this\.syncPage\(\{ commitResults \}\);\s*if \(page === "filters"\) \{\s*this\.sync\(\);/);
 });
 test('consume the existing scheduled projection before first visible frame', () => {
   assert.match(source, /if \(returningToFilters && this\._projectionTask != null/);
