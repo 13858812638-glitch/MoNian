@@ -1,0 +1,18 @@
+{
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Filter-Commit-20261023.zip",
+  "runtimeCommit": "822507e446e34a1ceddd09b7c80e12d6baaad78e",
+  "httpStatus": 200,
+  "bytes": 434150,
+  "sha256": "be7d873473c320778dc422d960a56027eda72c46cbc20196480dee347ca67b9d",
+  "downloadMatchesLocal": true,
+  "crc": "PASS",
+  "payloadMatchesDist": true,
+  "entries": [
+    "main.js",
+    "styles.css"
+  ],
+  "preserveInstalledFiles": [
+    "manifest.json",
+    "data.json"
+  ]
+}
