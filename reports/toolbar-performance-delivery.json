@@ -1,0 +1,14 @@
+{
+  "runtimeCommit": "87eab9fefe9494d5c00ab9ebb26833f26baa9e07",
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Toolbar-20261023.zip",
+  "httpStatus": 200,
+  "bytes": 434249,
+  "sha256": "2596176cbfa62c69dddad2e15e0a173abfb812db2b7158547736a6f39c7c4a81",
+  "downloadMatchesLocal": true,
+  "zipCRC": "PASS",
+  "entries": [
+    "main.js",
+    "styles.css"
+  ],
+  "payloadMatchesDist": true
+}
