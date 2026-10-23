@@ -1,0 +1,14 @@
+{
+  "runtimeCommit": "868b096839006cb058a3bf699acb8f4ecb2799df",
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Stack-Resize-20261023.zip",
+  "httpStatus": 200,
+  "bytes": 434635,
+  "sha256": "587a1eb2150318af15a218dd67c8f8038d4b1cb28060584c9048007bc9550877",
+  "downloadMatchesLocal": true,
+  "zipCRC": "PASS",
+  "entries": [
+    "main.js",
+    "styles.css"
+  ],
+  "payloadMatchesDist": true
+}
