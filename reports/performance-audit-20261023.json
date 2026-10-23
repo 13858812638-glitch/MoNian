@@ -1,0 +1,807 @@
+{
+  "baselineCommit": "4d49814fcb4cb4579901be97aa91eb58848be2ee",
+  "runtimeChanged": false,
+  "runtimeSha256": "653a34347a2cfa6a8f07b1c09dd053d50a3a59f6d6a46f95bf39b86dad518ad3",
+  "cssSha256": "460ecb0165943c6d2edea5b90038ed09ba33de4372b788357c74cfb182ad9beb",
+  "static": {
+    "status": "PASS-ENGINEERING",
+    "modules": 153,
+    "importEdges": 664,
+    "cycles": [],
+    "unresolvedSymbols": 0
+  },
+  "inventory": {
+    "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
+    "modules": 153,
+    "sourceFiles": 154,
+    "jsLines": 34830,
+    "jsBytes": 1615479,
+    "cssBytes": 266199,
+    "cssLines": 7704,
+    "cssParseErrors": [],
+    "cssRuleCount": 729,
+    "duplicateSelectorsSameContext": [
+      {
+        "context": [],
+        "selector": ":root",
+        "lines": [
+          1444,
+          7306
+        ]
+      },
+      {
+        "context": [],
+        "selector": ".local-search-navigator .local-search-nav-scroll",
+        "lines": [
+          1908,
+          1929
+        ]
+      },
+      {
+        "context": [],
+        "selector": "body.is-mobile",
+        "lines": [
+          7134,
+          7314
+        ]
+      }
+    ],
+    "duplicatePropertiesSameRule": [
+      {
+        "line": 3590,
+        "selector": ".local-search-results-shell",
+        "property": "overflow",
+        "earlier": 3589
+      }
+    ],
+    "styleSettings": {
+      "sectionName": "本地搜索",
+      "sectionId": "gls-local-search-ui",
+      "headings": 28,
+      "parameters": 143,
+      "duplicateIds": [],
+      "duplicateSectionNamedHeading": [],
+      "missingConsumerCandidates": []
+    },
+    "tokenDefinitionCount": 293,
+    "unconsumedTokenCandidates": [],
+    "notes": [
+      "Selectors are grouped by at-rule context; repeated rules are candidates for ownership review, not proven conflicts.",
+      "Dynamic class/token names and external Style Settings consumers can produce scan false positives.",
+      "DOM-owned listeners may be collected with their element; global listeners require explicit scope cleanup.",
+      "No user theme/CSS snippets/data/manifest were supplied."
+    ],
+    "mobileContract": {
+      "baseHeightToken": true,
+      "keyboardHeightToken": true,
+      "note": "Presence is an inventory check, not a native keyboard/layout acceptance test."
+    }
+  },
+  "resourceReferenceCount": 296,
+  "trace": [
+    {
+      "files": 161,
+      "cpuThrottle": 4,
+      "timing": {
+        "folder": {
+          "Layout": {
+            "count": 48,
+            "totalMs": 843.234,
+            "maxMs": 37.22
+          },
+          "UpdateLayoutTree": {
+            "count": 144,
+            "totalMs": 47.134,
+            "maxMs": 1.526
+          },
+          "Paint": {
+            "count": 72,
+            "totalMs": 353.799,
+            "maxMs": 8.336
+          },
+          "FunctionCall": {
+            "count": 747,
+            "totalMs": 642.787,
+            "maxMs": 40.635
+          },
+          "EventDispatch": {
+            "count": 403,
+            "totalMs": 637.419,
+            "maxMs": 58.465
+          }
+        },
+        "disclosure": {
+          "Layout": {
+            "count": 24,
+            "totalMs": 152.159,
+            "maxMs": 10.787
+          },
+          "UpdateLayoutTree": {
+            "count": 51,
+            "totalMs": 12.498,
+            "maxMs": 1.156
+          },
+          "Paint": {
+            "count": 45,
+            "totalMs": 68.572,
+            "maxMs": 4.072
+          },
+          "FunctionCall": {
+            "count": 648,
+            "totalMs": 55.235,
+            "maxMs": 3.019
+          },
+          "EventDispatch": {
+            "count": 226,
+            "totalMs": 75.211,
+            "maxMs": 4.367
+          }
+        }
+      },
+      "work": {
+        "phases": {
+          "folder": {
+            "renderer._setScrollTop": 24,
+            "facets.renderPinnedPropertyFilters": 24,
+            "core._recomputeCurrentResults": 24,
+            "renderer.renderPage": 24,
+            "renderer._windowSize": 24,
+            "renderer._observeShell": 360,
+            "renderer._syncMountedState": 24,
+            "core._notifyStateChange": 24,
+            "nav._renderProjection": 24
+          },
+          "disclosure": {
+            "core._notifyStateChange": 24
+          }
+        },
+        "conditions": {
+          "syncs": 8,
+          "mutations": 0,
+          "removedNodes": 0,
+          "addedNodes": 0,
+          "sameButton": true,
+          "focusedBefore": true,
+          "focusedAfter": true
+        },
+        "folder": [
+          "Folder005"
+        ],
+        "results": 15,
+        "mounted": 15,
+        "cacheSize": 90,
+        "consistent": true,
+        "synchronousLayoutOwners": {
+          "renderer.renderPage": 24,
+          "outside wrapped methods": 23
+        }
+      },
+      "pageErrors": []
+    },
+    {
+      "files": 2400,
+      "cpuThrottle": 4,
+      "timing": {
+        "folder": {
+          "Layout": {
+            "count": 48,
+            "totalMs": 805.109,
+            "maxMs": 40.685
+          },
+          "UpdateLayoutTree": {
+            "count": 144,
+            "totalMs": 52.948,
+            "maxMs": 2.032
+          },
+          "Paint": {
+            "count": 72,
+            "totalMs": 355.344,
+            "maxMs": 10.496
+          },
+          "FunctionCall": {
+            "count": 757,
+            "totalMs": 817.699,
+            "maxMs": 64.41
+          },
+          "EventDispatch": {
+            "count": 403,
+            "totalMs": 795.9350000000001,
+            "maxMs": 83.996
+          }
+        },
+        "disclosure": {
+          "Layout": {
+            "count": 24,
+            "totalMs": 729.802,
+            "maxMs": 55.506
+          },
+          "UpdateLayoutTree": {
+            "count": 51,
+            "totalMs": 11.862,
+            "maxMs": 1.18
+          },
+          "Paint": {
+            "count": 51,
+            "totalMs": 347.094,
+            "maxMs": 15.901
+          },
+          "FunctionCall": {
+            "count": 648,
+            "totalMs": 91.896,
+            "maxMs": 4.223
+          },
+          "EventDispatch": {
+            "count": 226,
+            "totalMs": 107.055,
+            "maxMs": 4.806
+          }
+        }
+      },
+      "work": {
+        "phases": {
+          "folder": {
+            "renderer._setScrollTop": 24,
+            "facets.renderPinnedPropertyFilters": 24,
+            "core._recomputeCurrentResults": 24,
+            "renderer.renderPage": 24,
+            "renderer._windowSize": 24,
+            "renderer._observeShell": 288,
+            "renderer._syncMountedState": 24,
+            "core._notifyStateChange": 24,
+            "nav._renderProjection": 24
+          },
+          "disclosure": {
+            "core._notifyStateChange": 24
+          }
+        },
+        "conditions": {
+          "syncs": 8,
+          "mutations": 0,
+          "removedNodes": 0,
+          "addedNodes": 0,
+          "sameButton": true,
+          "focusedBefore": true,
+          "focusedAfter": true
+        },
+        "folder": [
+          "Folder005"
+        ],
+        "results": 12,
+        "mounted": 12,
+        "cacheSize": 72,
+        "consistent": true,
+        "synchronousLayoutOwners": {
+          "renderer.renderPage": 24,
+          "outside wrapped methods": 23
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "conditionsAcrossHosts": [
+    {
+      "mobile": false,
+      "host": "sidebar",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": true,
+      "sameButton": true
+    },
+    {
+      "mobile": false,
+      "host": "tab",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": true,
+      "sameButton": true
+    },
+    {
+      "mobile": true,
+      "host": "sidebar",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": true,
+      "sameButton": true
+    },
+    {
+      "mobile": true,
+      "host": "tab",
+      "visible": true,
+      "focusedBefore": true,
+      "focusedAfter": true,
+      "sameButton": true
+    }
+  ],
+  "forcedLayoutGetterSites": [
+    {
+      "name": "scrollTop",
+      "cls": "local-search-results",
+      "stack": "Error\n    at HTMLDivElement.get [as scrollTop] (eval at evaluate (:311:30), <anonymous>:7:69)\n    at SearchResultRendererController.renderPage (<anonymous>:17015:29)\n    at SearchCore.performSearch (<anonymous>:21554:33)\n    at SearchCore._onFilterChanged (<anonymous>:20761:14)\n    at SearchNavigatorController.select (<anonymous>:24065:19)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:318:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "scrollTop",
+      "cls": "local-search-results",
+      "stack": "Error\n    at HTMLDivElement.get [as scrollTop] (eval at evaluate (:311:30), <anonymous>:7:69)\n    at SearchResultRendererController.renderPage (<anonymous>:17015:29)\n    at SearchCore.performSearch (<anonymous>:21554:33)\n    at SearchCore._onFilterChanged (<anonymous>:20761:14)\n    at SearchNavigatorController.select (<anonymous>:24065:19)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:44)\n    at async <anonymous>:337:30"
+    },
+    {
+      "name": "scrollTop",
+      "cls": "local-search-results",
+      "stack": "Error\n    at HTMLDivElement.get [as scrollTop] (eval at evaluate (:311:30), <anonymous>:7:69)\n    at SearchResultRendererController.renderPage (<anonymous>:17015:29)\n    at SearchCore.performSearch (<anonymous>:21554:33)\n    at SearchCore._onFilterChanged (<anonymous>:20761:14)\n    at SearchNavigatorController.select (<anonymous>:24065:19)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:44)\n    at async <anonymous>:337:30"
+    },
+    {
+      "name": "scrollTop",
+      "cls": "local-search-results",
+      "stack": "Error\n    at HTMLDivElement.get [as scrollTop] (eval at evaluate (:311:30), <anonymous>:7:69)\n    at SearchResultRendererController.renderPage (<anonymous>:17015:29)\n    at SearchCore.performSearch (<anonymous>:21554:33)\n    at SearchCore._onFilterChanged (<anonymous>:20761:14)\n    at SearchNavigatorController.select (<anonymous>:24065:19)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:44)\n    at async <anonymous>:337:30"
+    },
+    {
+      "name": "scrollTop",
+      "cls": "local-search-results",
+      "stack": "Error\n    at HTMLDivElement.get [as scrollTop] (eval at evaluate (:311:30), <anonymous>:7:69)\n    at SearchResultRendererController.renderPage (<anonymous>:17015:29)\n    at SearchCore.performSearch (<anonymous>:21554:33)\n    at SearchCore._onFilterChanged (<anonymous>:20761:14)\n    at SearchNavigatorController.select (<anonymous>:24065:19)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:44)\n    at async <anonymous>:337:30"
+    },
+    {
+      "name": "scrollTop",
+      "cls": "local-search-results",
+      "stack": "Error\n    at HTMLDivElement.get [as scrollTop] (eval at evaluate (:311:30), <anonymous>:7:69)\n    at SearchResultRendererController.renderPage (<anonymous>:17015:29)\n    at SearchCore.performSearch (<anonymous>:21554:33)\n    at SearchCore._onFilterChanged (<anonymous>:20761:14)\n    at SearchNavigatorController.select (<anonymous>:24065:19)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:44)\n    at async <anonymous>:337:30"
+    }
+  ],
+  "lifecycleInitialFixture": [
+    {
+      "mobile": false,
+      "idle1500ms": {
+        "work": {},
+        "domWrites": 0
+      },
+      "resizing": [
+        {
+          "layout": "stack",
+          "work": {
+            "renderer._handleViewportResize": 20,
+            "renderer._syncWindowToViewport": 20
+          },
+          "resultCount": 36
+        },
+        {
+          "layout": "split",
+          "work": {
+            "renderer._handleRowResize": 21,
+            "renderer._handleViewportResize": 20,
+            "renderer.renderPage": 1,
+            "renderer._syncWindowToViewport": 1
+          },
+          "resultCount": 36
+        }
+      ],
+      "closedDOMAfterGC": [
+        {
+          "documents": 1,
+          "nodes": 1572,
+          "jsEventListeners": 276
+        },
+        {
+          "documents": 1,
+          "nodes": 3123,
+          "jsEventListeners": 519
+        },
+        {
+          "documents": 1,
+          "nodes": 4674,
+          "jsEventListeners": 762
+        },
+        {
+          "documents": 1,
+          "nodes": 6225,
+          "jsEventListeners": 1005
+        },
+        {
+          "documents": 1,
+          "nodes": 7776,
+          "jsEventListeners": 1248
+        },
+        {
+          "documents": 1,
+          "nodes": 9327,
+          "jsEventListeners": 1491
+        },
+        {
+          "documents": 1,
+          "nodes": 10878,
+          "jsEventListeners": 1734
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "mobile": true,
+      "idle1500ms": {
+        "work": {},
+        "domWrites": 0
+      },
+      "resizing": [],
+      "closedDOMAfterGC": [
+        {
+          "documents": 1,
+          "nodes": 1866,
+          "jsEventListeners": 421
+        },
+        {
+          "documents": 1,
+          "nodes": 3711,
+          "jsEventListeners": 822
+        },
+        {
+          "documents": 1,
+          "nodes": 5556,
+          "jsEventListeners": 1223
+        },
+        {
+          "documents": 1,
+          "nodes": 7401,
+          "jsEventListeners": 1624
+        },
+        {
+          "documents": 1,
+          "nodes": 9246,
+          "jsEventListeners": 2025
+        },
+        {
+          "documents": 1,
+          "nodes": 11091,
+          "jsEventListeners": 2426
+        },
+        {
+          "documents": 1,
+          "nodes": 12936,
+          "jsEventListeners": 2827
+        }
+      ],
+      "pageErrors": []
+    }
+  ],
+  "lifecycleJournalControl": [
+    {
+      "mobile": false,
+      "idle1500ms": {
+        "work": {},
+        "domWrites": 0
+      },
+      "resizing": [
+        {
+          "layout": "stack",
+          "work": {
+            "renderer._handleViewportResize": 20,
+            "renderer._syncWindowToViewport": 20
+          },
+          "resultCount": 36
+        },
+        {
+          "layout": "split",
+          "work": {
+            "renderer._handleRowResize": 21,
+            "renderer._handleViewportResize": 20,
+            "renderer.renderPage": 1,
+            "renderer._syncWindowToViewport": 1
+          },
+          "resultCount": 36
+        }
+      ],
+      "closedDOMAfterGC": [
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 33,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 33,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 33,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 33,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 33,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 33,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 33,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "mobile": true,
+      "idle1500ms": {
+        "work": {},
+        "domWrites": 0
+      },
+      "resizing": [],
+      "closedDOMAfterGC": [
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 20,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 20,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 20,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 20,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 20,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 20,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 21,
+          "jsEventListeners": 20,
+          "hostActiveListeners": 7,
+          "activeCores": 0
+        }
+      ],
+      "pageErrors": []
+    }
+  ],
+  "updateFlows": [
+    {
+      "mobile": false,
+      "typingBurst": {
+        "work": {
+          "core.performSearch": 1,
+          "core._recomputeCurrentResults": 1,
+          "renderer.renderPage": 1,
+          "nav._renderProjection": 1
+        },
+        "query": "note",
+        "results": 2400
+      },
+      "unchangedInput": {},
+      "indexBurstWhilePickerOpen": {
+        "work": {},
+        "pending": true
+      },
+      "afterPickerClosed": {
+        "work": {
+          "core._commitResultIndexChanges": 1,
+          "core._recomputeCurrentResults": 1,
+          "renderer.refreshChangedRows": 1,
+          "nav._renderProjection": 1
+        },
+        "pending": false
+      },
+      "popupOpenClose8": {},
+      "pageErrors": []
+    },
+    {
+      "mobile": true,
+      "typingBurst": {
+        "work": {
+          "core.performSearch": 1,
+          "core._recomputeCurrentResults": 1,
+          "renderer.renderPage": 1,
+          "nav._renderProjection": 1
+        },
+        "query": "note",
+        "results": 2400
+      },
+      "unchangedInput": {},
+      "indexBurstWhilePickerOpen": {
+        "work": {},
+        "pending": true
+      },
+      "afterPickerClosed": {
+        "work": {
+          "core._commitResultIndexChanges": 1,
+          "core._recomputeCurrentResults": 1,
+          "renderer.refreshChangedRows": 1,
+          "nav._renderProjection": 1
+        },
+        "pending": false
+      },
+      "popupOpenClose8": {},
+      "pageErrors": []
+    }
+  ],
+  "disposableContainmentProbe": [
+    {
+      "trial": 0,
+      "contain": false,
+      "stats": {
+        "Layout": {
+          "count": 24,
+          "totalMs": 720.399,
+          "maxMs": 67.196
+        },
+        "Paint": {
+          "count": 63,
+          "totalMs": 423.91,
+          "maxMs": 18.26
+        },
+        "UpdateLayoutTree": {
+          "count": 50,
+          "totalMs": 11.843,
+          "maxMs": 1.337
+        }
+      },
+      "rows": 145
+    },
+    {
+      "trial": 1,
+      "contain": true,
+      "stats": {
+        "Layout": {
+          "count": 24,
+          "totalMs": 662.281,
+          "maxMs": 65.926
+        },
+        "Paint": {
+          "count": 54,
+          "totalMs": 311.081,
+          "maxMs": 16.745
+        },
+        "UpdateLayoutTree": {
+          "count": 50,
+          "totalMs": 17.008,
+          "maxMs": 2.539
+        }
+      },
+      "rows": 145
+    },
+    {
+      "trial": 2,
+      "contain": true,
+      "stats": {
+        "Layout": {
+          "count": 24,
+          "totalMs": 696.62,
+          "maxMs": 63.612
+        },
+        "Paint": {
+          "count": 54,
+          "totalMs": 334.352,
+          "maxMs": 17.475
+        },
+        "UpdateLayoutTree": {
+          "count": 50,
+          "totalMs": 12.418,
+          "maxMs": 1.222
+        }
+      },
+      "rows": 145
+    },
+    {
+      "trial": 3,
+      "contain": false,
+      "stats": {
+        "Layout": {
+          "count": 24,
+          "totalMs": 701.397,
+          "maxMs": 64.736
+        },
+        "Paint": {
+          "count": 60,
+          "totalMs": 396.624,
+          "maxMs": 16.748
+        },
+        "UpdateLayoutTree": {
+          "count": 50,
+          "totalMs": 16.79,
+          "maxMs": 1.928
+        }
+      },
+      "rows": 145
+    }
+  ],
+  "traceFiles": [
+    {
+      "path": "/workspace/perf-audit-20261023/containment/0-trace.json",
+      "sha256": "a16fc587840b1da74c3ee56afe0273d6832791933e810f49ca89e7132fdbfe6f",
+      "bytes": 808408
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/containment/1-trace.json",
+      "sha256": "428a546ff724a4976c522ea3c4a2bea932abc4f041d33402ffed20c0ab6d61e2",
+      "bytes": 837379
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/containment/2-trace.json",
+      "sha256": "d443d2841f1040c732c0a212a139dd9be2d897b3aba21e5285311c584e02d173",
+      "bytes": 833161
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/containment/3-trace.json",
+      "sha256": "363f1e0ba97d341a48bf6b3cd97923d56cf5ae38eedd69378d0b8bd0261b9dc1",
+      "bytes": 837670
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/getters/trace.json",
+      "sha256": "88bf6b663bf52a8fc1d0cfbc839647c81b419cf9f0ad2242ceb9a22ac9431fd1",
+      "bytes": 91352
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/trace/large-trace.json",
+      "sha256": "a7107291b61213c33a01d005b2d47dc93193198a27475116cb947bfc6bfe6151",
+      "bytes": 1862040
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/trace/large-work-trace.json",
+      "sha256": "ef4d828fa23df6c11e3424d3bd3327d4a1efee06ae37cad2449f1a9213bde072",
+      "bytes": 517132
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/trace/small-trace.json",
+      "sha256": "8df093c5dc79ec26f9824ef8072cd7ddf79b798a92fccccf6dd36d690c1d1665",
+      "bytes": 1751343
+    },
+    {
+      "path": "/workspace/perf-audit-20261023/trace/small-work-trace.json",
+      "sha256": "0b2e5cde400ded1021df43241d8ee6c905c12dc463be78378b86102743166f32",
+      "bytes": 570582
+    }
+  ],
+  "limitations": [
+    "Chromium controlled host, CPU 4x timing is not native input-to-paint",
+    "Instrumented getter and method traces diagnose ownership, not speed",
+    "No native Obsidian/iOS/Android/WebKit validation",
+    "No supplied user vault, theme or CSS Snippets",
+    "Whole-source inventory is not an exhaustive proof of every runtime branch",
+    "Existing 1247 behavior checks were not rerun for this audit; runtime unchanged"
+  ],
+  "fixtureControl": "Test-only historical events.push(ref) retains inactive callbacks. Optional metadata-only journal preserves active emitter map/offref semantics and eliminates apparent growth. Production code and tests/host.js unchanged."
+}
