@@ -287,7 +287,7 @@ test at tests/regression.test.mjs:44:72
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -312,7 +312,7 @@ test at tests/regression.test.mjs:44:72
         value: {
           length: 4,
           name: 'migrateValue'
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -330,7 +330,7 @@ test at tests/regression.test.mjs:44:72
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -422,7 +422,7 @@ test at tests/regression.test.mjs:44:72
         value: {
           length: 2,
           name: 'openColorEditor'
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -440,7 +440,7 @@ test at tests/regression.test.mjs:44:72
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -477,7 +477,7 @@ test at tests/regression.test.mjs:44:72
         value: {
           length: 0,
           name: 'renameVaultPropertyValue'
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -495,7 +495,7 @@ test at tests/v52-frozen-api-parity.test.mjs:16:1
   AssertionError [ERR_ASSERTION]: LocalSearchPlugin
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -526,7 +526,7 @@ test at tests/v52-frozen-api-parity.test.mjs:16:1
         name: 'renameVaultPropertyValue',
         type: 'function',
         writable: true
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/v52-frozen-api-parity.test.mjs:18:66)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)

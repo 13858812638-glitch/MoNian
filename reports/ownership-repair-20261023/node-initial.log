@@ -288,7 +288,7 @@
 test at tests/navigator-return-atomic-v1.test.mjs:16:1
 ✖ return projection is limited to real mobile Results -> Filters navigation (3.998276ms)
   AssertionError [ERR_ASSERTION]: The input did not match the regular expression /this\.syncPage\(\);\s*if \(page === "filters"\) \{\s*this\.sync\(\);/. Input:
-  
+
   '// Engineering extraction from frozen GLS Navigator 2026-10-15.7.\n' +
     '// Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.\n' +
     'import { registerPickerCleanup } from "../../core/picker-cleanup.js";\n' +
@@ -468,7 +468,7 @@ test at tests/navigator-return-atomic-v1.test.mjs:16:1
     '        this.resultsButton = createSearchWindowAction(this.footer, "eye", "查看结果");\n' +
     '        this.resultsButton.addClass("local-search-nav-show-results");\n' +
     '        this.resultsButton.addEventListener("click"'... 77083 more characters
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/navigator-return-atomic-v1.test.mjs:18:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -487,7 +487,7 @@ test at tests/regression.test.mjs:44:72
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -512,7 +512,7 @@ test at tests/regression.test.mjs:44:72
         value: {
           length: 4,
           name: 'migrateValue'
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -530,7 +530,7 @@ test at tests/regression.test.mjs:44:72
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -545,7 +545,7 @@ test at tests/regression.test.mjs:44:72
         writable: true
       },
       {
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -563,7 +563,7 @@ test at tests/regression.test.mjs:44:72
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -655,7 +655,7 @@ test at tests/regression.test.mjs:44:72
         value: {
           length: 2,
           name: 'openColorEditor'
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -673,7 +673,7 @@ test at tests/regression.test.mjs:44:72
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -710,7 +710,7 @@ test at tests/regression.test.mjs:44:72
         value: {
           length: 0,
           name: 'renameVaultPropertyValue'
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)
@@ -736,7 +736,7 @@ test at tests/v52-frozen-api-parity.test.mjs:16:1
   AssertionError [ERR_ASSERTION]: LocalSearchPlugin
   + actual - expected
   ... Skipped lines
-  
+
     [
       {
         configurable: true,
@@ -767,7 +767,7 @@ test at tests/v52-frozen-api-parity.test.mjs:16:1
         name: 'renameVaultPropertyValue',
         type: 'function',
         writable: true
-  
+
       at TestContext.<anonymous> (file:///workspace/MoNian/tests/v52-frozen-api-parity.test.mjs:18:66)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)

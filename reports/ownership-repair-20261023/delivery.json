@@ -1,0 +1,14 @@
+{
+  "runtimeCommit": "4e60eae32054e7fc100c4844506eec303052d731",
+  "url": "https://github.com/13858812638-glitch/MoNian/raw/refs/heads/fix/desktop-sidebar/downloads/GLS-Owner-Commit-Repair-20261023.zip",
+  "httpStatus": 200,
+  "bytes": 435422,
+  "sha256": "73220deac4ac4e713f21e6881c75271b5d2634849822c171b8e5d5c2e9fcc826",
+  "downloadMatchesLocal": true,
+  "zipCRC": "PASS",
+  "payloadMatchesDist": true,
+  "entries": [
+    "main.js",
+    "styles.css"
+  ]
+}
