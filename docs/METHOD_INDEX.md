@@ -1,3 +1,5 @@
+> **2026-10-23 工具栏与状态同步优化（未冻结）**：以 `1ab2cd7` 为唯一开发基线。桌面左侧顶部命令栏右对齐，共用右侧动作栏的尺寸 Primitive / Token；统计与条件状态复用共享同值更新函数。153 个 JS 模块、664 条静态依赖；本轮修改 2 个 JS 模块及 CSS。见 [实现、测量与边界](TOOLBAR_PERFORMANCE_20261023.md)。下文保留历史记录。
+
 > **2026-10-23 筛选提交优化（未冻结）**：从 `e38dea9` 唯一基线实施审计结论。共享条件组件保留节点、焦点与实时动作；筛选先复位滚动再写控件，结果提交共用一次窗口预算和已构建节点序列。153 个 JS 模块、661 条静态依赖；CSS 不变。见 [本轮实现与验证](FILTER_COMMIT_20261023.md)。下文保留历史记录。
 
 > **2026-10-22 交互热路径审计**：`setIndicatorLabel` 统一调用 `setDomText`；`syncTypeButtons`、`syncFilterButtons`、`updateFolderButton` 走已有同值属性/属性值写入 Primitive。`_renderFilterPoolHeader` 不再读写 scrollLeft，由保留的滚动容器负责原生位置与边界夹取。`FilterEngine.matches` 仅为启用的类型筛选计算 logicalFileType，空属性 Map 不复制条目。无新增方法、状态、缓存、定时器或平台分支；名称、arity 和描述符均不改变。

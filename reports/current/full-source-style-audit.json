@@ -2,10 +2,10 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34809,
-  "jsBytes": 1614421,
-  "cssBytes": 264925,
-  "cssLines": 7685,
+  "jsLines": 34812,
+  "jsBytes": 1614876,
+  "cssBytes": 265128,
+  "cssLines": 7684,
   "cssParseErrors": [],
   "cssRuleCount": 723,
   "duplicateSelectorsSameContext": [
@@ -14,7 +14,7 @@
       "selector": ":root",
       "lines": [
         1444,
-        7287
+        7286
       ]
     },
     {
@@ -29,17 +29,17 @@
       "context": [],
       "selector": "body.is-mobile",
       "lines": [
-        7115,
-        7295
+        7114,
+        7294
       ]
     }
   ],
   "duplicatePropertiesSameRule": [
     {
-      "line": 3571,
+      "line": 3570,
       "selector": ".local-search-results-shell",
       "property": "overflow",
-      "earlier": 3570
+      "earlier": 3569
     }
   ],
   "styleSettings": {
@@ -151,32 +151,32 @@
     },
     {
       "file": "src/core/search/shell-methods.js",
-      "line": 127,
+      "line": 128,
       "code": "closeBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/core/search/shell-methods.js",
-      "line": 208,
+      "line": 209,
       "code": "this.tagFilterBtn.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/core/search/shell-methods.js",
-      "line": 213,
+      "line": 214,
       "code": "this.propertyFilterBtn.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/core/search/shell-methods.js",
-      "line": 239,
+      "line": 240,
       "code": "this.folderBtn.addEventListener(\"click\", (e) => {"
     },
     {
       "file": "src/core/search/shell-methods.js",
-      "line": 291,
+      "line": 292,
       "code": "this.clearFiltersBtn.addEventListener(\"click\", () => {"
     },
     {
       "file": "src/core/search/shell-methods.js",
-      "line": 309,
+      "line": 310,
       "code": "this.resultsContainer.addEventListener(\"scroll\", e => {"
     },
     {
@@ -746,47 +746,47 @@
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 86,
+      "line": 88,
       "code": "this.batchEntryBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 118,
+      "line": 120,
       "code": "this.externalSubmitBtn.addEventListener(\"click\", () => void this.submitExternalSelection());"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 126,
+      "line": 128,
       "code": "this.batchSelectToggleBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 132,
+      "line": 134,
       "code": "this.expandActionsBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 140,
+      "line": 142,
       "code": "this.tagMetadataBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 146,
+      "line": 148,
       "code": "this.propertyMetadataBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 152,
+      "line": 154,
       "code": "this.moveFilesBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 159,
+      "line": 161,
       "code": "this.deleteFilesBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 171,
+      "line": 173,
       "code": "this.exitBatchBtn.addEventListener(\"click\", event => {"
     },
     {
@@ -1632,9 +1632,9 @@
     },
     {
       "file": "src/core/search/shell-methods.js",
-      "lines": 410,
-      "bytes": 18350,
-      "sha256": "379e956d83bd74fe01fd4089207acc321cf6bb2b32ba14424ca7d912d4fdb3c4"
+      "lines": 411,
+      "bytes": 18583,
+      "sha256": "4e722492417016c342425505b65d282e0ed5be00bdc21de1038600848c5e1c0a"
     },
     {
       "file": "src/core/session-values.js",
@@ -2166,9 +2166,9 @@
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "lines": 543,
-      "bytes": 22904,
-      "sha256": "b4b5e89d816d8ef73b1c31d0414cdb897e1b0a808cb9cc57c319040f01646977"
+      "lines": 545,
+      "bytes": 23126,
+      "sha256": "a1700a101ad6a4e88cca2117a3f06f163a0ece6fbbd6b9082212c3f008b413f5"
     },
     {
       "file": "src/features/sort/SearchSortController.js",
@@ -2484,9 +2484,9 @@
     },
     {
       "file": "src/styles/styles.css",
-      "lines": 7685,
-      "bytes": 264925,
-      "sha256": "da4d7f9fa63b5707675b46104589fb7530aef364aec3035090dd44e01be039d2"
+      "lines": 7684,
+      "bytes": 265128,
+      "sha256": "9bf129113fb50a3d287b9d2164a32cbdf57ac182f5265c93e19c211b55486da8"
     }
   ],
   "mobileContract": {

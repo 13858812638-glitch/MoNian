@@ -1,6 +1,8 @@
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 import { createSearchButton } from "../../ui/components/input-controls.js";
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
+import { setDomProperty, setDomText } from "../../utils/dom.js";
 import { Notice, TFile, setIcon } from "obsidian";
 
 
@@ -206,15 +208,15 @@ export class SearchSelectionController {
         const selectedCount = this.selectedPaths.size;
         const currentCount = core.resultRenderer?.visibleResultCount?.() ?? core.fullResults.filter(result => result?.file).length;
         const totalCount = core._visibleVaultFileCount();
-        if (this.normalCurrentEl) this.normalCurrentEl.textContent = String(currentCount);
-        if (this.normalTotalEl) this.normalTotalEl.textContent = String(totalCount);
-        if (this.batchSelectedEl) this.batchSelectedEl.textContent = String(selectedCount);
-        if (this.batchResultEl) this.batchResultEl.textContent = String(currentCount);
-        this.normalPanel?.querySelector(".local-search-status-items")?.setAttribute(
+        setDomText(this.normalCurrentEl, currentCount);
+        setDomText(this.normalTotalEl, totalCount);
+        setDomText(this.batchSelectedEl, selectedCount);
+        setDomText(this.batchResultEl, currentCount);
+        setSearchAttribute(this.normalPanel?.querySelector(".local-search-status-items"),
             "aria-label",
             `当前结果 ${currentCount}，全部文件 ${totalCount}`
         );
-        this.batchPanel?.querySelector(".local-search-batch-selected")?.setAttribute(
+        setSearchAttribute(this.batchPanel?.querySelector(".local-search-batch-selected"),
             "aria-label",
             `已选 ${selectedCount} 个文件，当前结果 ${currentCount}`
         );
@@ -447,16 +449,16 @@ export class SearchSelectionController {
 
         // disabled 只表达业务本身是否可用；Mutation Gate 不参与视觉或普通交互状态。
         if (this.batchEntryBtn) {
-            this.batchEntryBtn.disabled = !this.batchMode && selectableCount === 0;
+            setDomProperty(this.batchEntryBtn, "disabled", !this.batchMode && selectableCount === 0);
             this.batchEntryBtn.classList.toggle("is-selected", this.batchMode);
-            this.batchEntryBtn.setAttribute("aria-pressed", String(this.batchMode));
-            this.batchEntryBtn.setAttribute("aria-label", this.batchMode ? "退出批量操作" : "进入批量操作");
+            setSearchAttribute(this.batchEntryBtn, "aria-pressed", String(this.batchMode));
+            setSearchAttribute(this.batchEntryBtn, "aria-label", this.batchMode ? "退出批量操作" : "进入批量操作");
         }
         if (this.batchSelectToggleBtn) {
-            this.batchSelectToggleBtn.disabled = selectableCount === 0;
+            setDomProperty(this.batchSelectToggleBtn, "disabled", selectableCount === 0);
             const label = allSelected ? "清空当前选择" : `全选当前结果，共 ${selectableCount} 个文件`;
-            this.batchSelectToggleBtn.setAttribute("aria-label", label);
-            this.batchSelectToggleBtn.setAttribute("title", label);
+            setSearchAttribute(this.batchSelectToggleBtn, "aria-label", label);
+            setSearchAttribute(this.batchSelectToggleBtn, "title", label);
             const nextIcon = allSelected ? "eraser" : "list-checks";
             if (this.batchSelectToggleBtn.dataset.lsIcon !== nextIcon) {
                 this.batchSelectToggleBtn.empty();
@@ -464,19 +466,19 @@ export class SearchSelectionController {
                 this.batchSelectToggleBtn.dataset.lsIcon = nextIcon;
             }
         }
-        if (this.externalSubmitBtn) this.externalSubmitBtn.disabled = count === 0;
-        if (this.tagMetadataBtn) this.tagMetadataBtn.disabled = editableCount === 0;
-        if (this.propertyMetadataBtn) this.propertyMetadataBtn.disabled = editableCount === 0;
-        if (this.moveFilesBtn) this.moveFilesBtn.disabled = count === 0;
-        if (this.deleteFilesBtn) this.deleteFilesBtn.disabled = count === 0;
-        if (this.exitBatchBtn) this.exitBatchBtn.disabled = false;
+        if (this.externalSubmitBtn) setDomProperty(this.externalSubmitBtn, "disabled", count === 0);
+        if (this.tagMetadataBtn) setDomProperty(this.tagMetadataBtn, "disabled", editableCount === 0);
+        if (this.propertyMetadataBtn) setDomProperty(this.propertyMetadataBtn, "disabled", editableCount === 0);
+        if (this.moveFilesBtn) setDomProperty(this.moveFilesBtn, "disabled", count === 0);
+        if (this.deleteFilesBtn) setDomProperty(this.deleteFilesBtn, "disabled", count === 0);
+        if (this.exitBatchBtn) setDomProperty(this.exitBatchBtn, "disabled", false);
         if (this.expandActionsBtn) {
             const expanded = Boolean(core.swipe?.allExpanded);
             const label = expanded ? "收起全部左滑按钮" : "展开全部左滑按钮";
-            this.expandActionsBtn.disabled = selectableCount === 0 || Boolean(core.externalPickHandler);
-            this.expandActionsBtn.setAttribute("aria-pressed", String(expanded));
-            this.expandActionsBtn.setAttribute("aria-label", label);
-            this.expandActionsBtn.setAttribute("title", label);
+            setDomProperty(this.expandActionsBtn, "disabled", selectableCount === 0 || Boolean(core.externalPickHandler));
+            setSearchAttribute(this.expandActionsBtn, "aria-pressed", String(expanded));
+            setSearchAttribute(this.expandActionsBtn, "aria-label", label);
+            setSearchAttribute(this.expandActionsBtn, "title", label);
         }
 
         if (restoreToolbarFocus) {

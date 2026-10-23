@@ -1,9 +1,10 @@
 // Engineering extraction from frozen GLS Navigator 2026-10-15.7.
 // Edit this module, not dist/main.js. See docs/ARCHITECTURE.md.
 import { SearchNavigatorController } from "../../features/navigator/SearchNavigatorController.js";
+import { setSearchAttribute } from "../../interactions/hover-hints.js";
 import { setIndicatorLabel } from "../../ui/components/indicator-label.js";
 import { createSearchButton, createSearchTextField, createSearchWindowAction } from "../../ui/components/input-controls.js";
-import { isDomInput } from "../../utils/dom.js";
+import { isDomInput, setDomProperty } from "../../utils/dom.js";
 // Instance method owner. `this` is the unchanged SearchCore instance. No additional state store.
 export const SearchCore_shell_methods = {
 
@@ -173,11 +174,11 @@ export const SearchCore_shell_methods = {
         this.containerEl.classList.toggle("is-workbench-expanded", Boolean(expanded));
         if (this.workbenchToolsButton) {
             const label = expanded ? "收起筛选工具" : "展开筛选工具";
-            this.workbenchToolsButton.setAttribute("aria-label", label);
-            this.workbenchToolsButton.setAttribute("title", label);
+            setSearchAttribute(this.workbenchToolsButton, "aria-label", label);
+            setSearchAttribute(this.workbenchToolsButton, "title", label);
             this.workbenchToolsButton.classList.toggle("is-selected", Boolean(expanded));
-            this.workbenchToolsButton.setAttribute("aria-expanded", String(Boolean(expanded)));
-            this.workbenchToolsButton.disabled = Boolean(this.createFlow?.isCreateView?.());
+            setSearchAttribute(this.workbenchToolsButton, "aria-expanded", String(Boolean(expanded)));
+            setDomProperty(this.workbenchToolsButton, "disabled", Boolean(this.createFlow?.isCreateView?.()));
         }
     },
 
@@ -368,20 +369,20 @@ this.folderBtn.addEventListener("click", (e) => {
         const visible = hasFilters || channelsVisible;
 
         if (this.resultChannelHost) {
-            this.resultChannelHost.hidden = !channelsVisible;
-            this.resultChannelHost.setAttribute("aria-hidden", String(!channelsVisible));
+            setDomProperty(this.resultChannelHost, "hidden", !channelsVisible);
+            setSearchAttribute(this.resultChannelHost, "aria-hidden", String(!channelsVisible));
         }
         if (this.resultStateSeparator) {
             const separatorVisible = channelsVisible && hasFilters;
-            this.resultStateSeparator.hidden = !separatorVisible;
-            this.resultStateSeparator.setAttribute("aria-hidden", String(!separatorVisible));
+            setDomProperty(this.resultStateSeparator, "hidden", !separatorVisible);
+            setSearchAttribute(this.resultStateSeparator, "aria-hidden", String(!separatorVisible));
         }
         if (this.clearFiltersBtn) {
-            this.clearFiltersBtn.disabled = explicitCreate && Boolean(this.createFlow?._createInFlight);
+            setDomProperty(this.clearFiltersBtn, "disabled", explicitCreate && Boolean(this.createFlow?._createInFlight));
             const hidden = !clearable;
-            this.clearFiltersBtn.toggleAttribute("hidden", hidden);
-            this.clearFiltersBtn.setAttribute("aria-hidden", String(hidden));
-            this.clearFiltersBtn.setAttribute(
+            setDomProperty(this.clearFiltersBtn, "hidden", hidden);
+            setSearchAttribute(this.clearFiltersBtn, "aria-hidden", String(hidden));
+            setSearchAttribute(this.clearFiltersBtn,
                 "aria-label",
                 explicitCreate
                     ? "清空创建条件，类型恢复为笔记，保留创建标题"
@@ -389,8 +390,8 @@ this.folderBtn.addEventListener("click", (e) => {
             );
         }
         if (this.propertyFilterRow) {
-            this.propertyFilterRow.hidden = !visible;
-            this.propertyFilterRow.setAttribute("aria-hidden", String(!visible));
+            setDomProperty(this.propertyFilterRow, "hidden", !visible);
+            setSearchAttribute(this.propertyFilterRow, "aria-hidden", String(!visible));
         }
     },
 

@@ -785,12 +785,13 @@
     ],
     "dependencies": [
       "../../features/navigator/SearchNavigatorController.js",
+      "../../interactions/hover-hints.js",
       "../../ui/components/indicator-label.js",
       "../../ui/components/input-controls.js",
       "../../utils/dom.js"
     ],
-    "lines": 410,
-    "bytes": 18350,
+    "lines": 411,
+    "bytes": 18583,
     "origins": [
       {
         "id": "SearchCore.popupSurfaceHost",
@@ -7803,10 +7804,12 @@
     ],
     "dependencies": [
       "../../ui/components/input-controls.js",
+      "../../interactions/hover-hints.js",
+      "../../utils/dom.js",
       "obsidian"
     ],
-    "lines": 543,
-    "bytes": 22904,
+    "lines": 545,
+    "bytes": 23126,
     "origins": [
       {
         "id": "SEARCH_SELECTION_UI_REF_KEYS",

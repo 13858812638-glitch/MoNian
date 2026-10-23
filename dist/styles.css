@@ -473,7 +473,7 @@ settings:
     format: px
   - id: ls-selection-action-size
     title: 操作栏动作按钮尺寸
-    description: 第三行结果状态 Action Rail 的权威按钮尺寸；主搜索右侧三个动作、排序日历/方向、状态栏、批量操作与结果卡更多入口共同消费。
+    description: 结果状态 Action Rail 的权威按钮尺寸；桌面侧栏顶部命令、主搜索右侧动作、排序日历/方向、状态栏、批量操作与结果卡更多入口共同消费。
     type: variable-number-slider
     default: 26
     min: 14
@@ -482,7 +482,7 @@ settings:
     format: px
   - id: ls-selection-icon-size
     title: 操作栏动作图标尺寸
-    description: 第三行结果状态 Action Rail 的权威图标尺寸；主搜索右侧三个动作、排序日历/方向、状态栏、批量操作与结果卡更多入口共同消费。
+    description: 结果状态 Action Rail 的权威图标尺寸；桌面侧栏顶部命令、主搜索右侧动作、排序日历/方向、状态栏、批量操作与结果卡更多入口共同消费。
     type: variable-number-slider
     default: 15
     min: 6
@@ -2229,6 +2229,7 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
     flex: 0 0 auto;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-end;
     gap: 2px;
     padding: 5px 8px;
     border-bottom: 1px solid var(--ls-divider);
@@ -2240,10 +2241,6 @@ body:not(.is-mobile) .local-search-modal.local-search-modal-resizable > .local-s
 }
 .local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar button.local-search-nav-tool {
     margin: 0;
-    width: 28px;
-    min-width: 28px;
-    height: 28px;
-    padding: 0;
 }
 .local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar button.local-search-nav-tool:is(:hover, [aria-pressed="true"], [aria-expanded="true"]) {
     background: var(--ls-state-active-filter-highlight-bg) !important;
@@ -3319,6 +3316,7 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
     margin-left: auto;
 }
 
+.local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar button.local-search-nav-tool,
 .local-search-content button:is(
     .local-search-status-filter-action,
     .local-search-batch-mode-toggle,
@@ -3354,6 +3352,7 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
 .local-search-content button.local-search-batch-mode-toggle {
     margin-left: auto;
 }
+.local-search-navigator.has-sidebar-toolbar .local-search-nav-mobile-toolbar button.local-search-nav-tool > svg,
 .local-search-content button.local-search-status-filter-action > svg,
 .local-search-content button.local-search-batch-mode-toggle > svg,
 .local-search-content button.local-search-selection-icon-action > svg {

@@ -113,6 +113,7 @@
   ],
   "src/core/search/shell-methods.js": [
     "src/features/navigator/SearchNavigatorController.js",
+    "src/interactions/hover-hints.js",
     "src/ui/components/indicator-label.js",
     "src/ui/components/input-controls.js",
     "src/utils/dom.js"
@@ -735,7 +736,9 @@
     "src/utils/search-text.js"
   ],
   "src/features/selection/SearchSelectionController.js": [
-    "src/ui/components/input-controls.js"
+    "src/ui/components/input-controls.js",
+    "src/interactions/hover-hints.js",
+    "src/utils/dom.js"
   ],
   "src/features/sort/SearchSortController.js": [
     "src/interactions/hover-hints.js",

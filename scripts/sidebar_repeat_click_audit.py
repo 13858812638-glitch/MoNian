@@ -16,6 +16,8 @@ setup = setup.replace('large?2400:36', 'large?2400:161').replace('large?200:6', 
 setup = setup.replace('__makeHost({files,mobile})', '__makeHost({files,mobile,appendIcons:true})')
 if os.environ.get('GLS_REPEAT_SUBJECT'):
     setup = setup.replace("(ROOT/'tests/generated/subject.cjs')", 'Path('+repr(os.environ['GLS_REPEAT_SUBJECT'])+')')
+if os.environ.get('GLS_REPEAT_CSS'):
+    setup = setup.replace("(ROOT / filename).read_text()", "(Path(os.environ['GLS_REPEAT_CSS']) if filename == 'src/styles/styles.css' else ROOT / filename).read_text()")
 exec(setup, scope)
 report = []
 with sync_playwright() as pw:

@@ -1,0 +1,422 @@
+[
+  {
+    "name": "desktop sidebar unchanged toolbar and state row make zero DOM mutations",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "desktop sidebar statistics keep their live text node and correct count",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "desktop sidebar real selection changes update counts, names and enabled actions",
+    "pass": true,
+    "evidence": {
+      "selected": true,
+      "cleared": true,
+      "name": "已选 1 个文件，当前结果 6",
+      "normal": true
+    }
+  },
+  {
+    "name": "desktop sidebar clearing the final condition hides the row and action",
+    "pass": true,
+    "evidence": {
+      "shown": true,
+      "empty": true,
+      "hidden": true,
+      "clearHidden": true,
+      "scope": 0
+    }
+  },
+  {
+    "name": "desktop sidebar 714px icons and buttons match right action rail",
+    "pass": true,
+    "evidence": {
+      "right": 15,
+      "buttons": [
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 342,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 370,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 398,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 426,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 454,
+          "inside": true
+        }
+      ],
+      "expectedRight": 454,
+      "justify": "flex-end",
+      "referenceButton": 26
+    }
+  },
+  {
+    "name": "desktop sidebar 714px commands align right and fit the toolbar",
+    "pass": true,
+    "evidence": {
+      "right": 15,
+      "buttons": [
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 342,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 370,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 398,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 426,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 454,
+          "inside": true
+        }
+      ],
+      "expectedRight": 454,
+      "justify": "flex-end",
+      "referenceButton": 26
+    }
+  },
+  {
+    "name": "desktop sidebar 520px icons and buttons match right action rail",
+    "pass": true,
+    "evidence": {
+      "right": 15,
+      "buttons": [
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 740,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 768,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 796,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 824,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 852,
+          "inside": true
+        }
+      ],
+      "expectedRight": 852,
+      "justify": "flex-end",
+      "referenceButton": 26
+    }
+  },
+  {
+    "name": "desktop sidebar 520px commands align right and fit the toolbar",
+    "pass": true,
+    "evidence": {
+      "right": 15,
+      "buttons": [
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 740,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 768,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 796,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 824,
+          "inside": true
+        },
+        {
+          "w": 26,
+          "h": 26,
+          "svg": 15,
+          "right": 852,
+          "inside": true
+        }
+      ],
+      "expectedRight": 852,
+      "justify": "flex-end",
+      "referenceButton": 26
+    }
+  },
+  {
+    "name": "desktop sidebar existing Style Settings tokens control both toolbars together",
+    "pass": true,
+    "evidence": {
+      "icons": [
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "other": [
+        19,
+        19,
+        19,
+        19
+      ]
+    }
+  },
+  {
+    "name": "desktop sidebar close produces no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "desktop tab unchanged toolbar and state row make zero DOM mutations",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "desktop tab statistics keep their live text node and correct count",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "desktop tab real selection changes update counts, names and enabled actions",
+    "pass": true,
+    "evidence": {
+      "selected": true,
+      "cleared": true,
+      "name": "已选 1 个文件，当前结果 6",
+      "normal": true
+    }
+  },
+  {
+    "name": "desktop tab clearing the final condition hides the row and action",
+    "pass": true,
+    "evidence": {
+      "shown": true,
+      "empty": true,
+      "hidden": true,
+      "clearHidden": true,
+      "scope": 0
+    }
+  },
+  {
+    "name": "desktop tab close produces no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile sidebar unchanged toolbar and state row make zero DOM mutations",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "mobile sidebar statistics keep their live text node and correct count",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "mobile sidebar real selection changes update counts, names and enabled actions",
+    "pass": true,
+    "evidence": {
+      "selected": true,
+      "cleared": true,
+      "name": "已选 1 个文件，当前结果 6",
+      "normal": true
+    }
+  },
+  {
+    "name": "mobile sidebar clearing the final condition hides the row and action",
+    "pass": true,
+    "evidence": {
+      "shown": true,
+      "empty": true,
+      "hidden": true,
+      "clearHidden": true,
+      "scope": 0
+    }
+  },
+  {
+    "name": "mobile sidebar mobile keeps its touch targets and original alignment",
+    "pass": true,
+    "evidence": {
+      "justify": "flex-start",
+      "buttons": [
+        {
+          "size": 44,
+          "icon": 22
+        },
+        {
+          "size": 44,
+          "icon": 22
+        },
+        {
+          "size": 44,
+          "icon": 22
+        },
+        {
+          "size": 44,
+          "icon": 22
+        },
+        {
+          "size": 44,
+          "icon": 22
+        }
+      ]
+    }
+  },
+  {
+    "name": "mobile sidebar close produces no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile tab unchanged toolbar and state row make zero DOM mutations",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "mobile tab statistics keep their live text node and correct count",
+    "pass": true,
+    "evidence": {
+      "mutations": 0,
+      "sameText": true,
+      "count": 6,
+      "expected": 6
+    }
+  },
+  {
+    "name": "mobile tab real selection changes update counts, names and enabled actions",
+    "pass": true,
+    "evidence": {
+      "selected": true,
+      "cleared": true,
+      "name": "已选 1 个文件，当前结果 6",
+      "normal": true
+    }
+  },
+  {
+    "name": "mobile tab clearing the final condition hides the row and action",
+    "pass": true,
+    "evidence": {
+      "shown": true,
+      "empty": true,
+      "hidden": true,
+      "clearHidden": true,
+      "scope": 0
+    }
+  },
+  {
+    "name": "mobile tab close produces no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  }
+]
