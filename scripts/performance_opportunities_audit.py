@@ -16,6 +16,8 @@ setup = (ROOT / 'scripts/desktop_navigator_audit.py').read_text().split('with sy
 setup = setup.replace('large?2400:36', 'large?2400:161').replace('large?200:6', 'large?200:11')
 if os.environ.get('GLS_OPPORTUNITIES_SUBJECT'):
     setup = setup.replace("(ROOT/'tests/generated/subject.cjs')", "Path(os.environ['GLS_OPPORTUNITIES_SUBJECT'])")
+if os.environ.get('GLS_OPPORTUNITIES_CSS'):
+    setup = setup.replace('(ROOT / filename).read_text()', "(Path(os.environ['GLS_OPPORTUNITIES_CSS']) if filename == 'src/styles/styles.css' else ROOT / filename).read_text()")
 exec(setup, scope)
 
 report = []

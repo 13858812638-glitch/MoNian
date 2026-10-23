@@ -1,0 +1,160 @@
+[
+  {
+    "name": "desktop far keyboard focus reveals retained row",
+    "pass": true,
+    "evidence": {
+      "focused": true,
+      "visible": true,
+      "rows": 144,
+      "preserved": true
+    }
+  },
+  {
+    "name": "desktop origin reset avoids scroll extent reads",
+    "pass": false,
+    "evidence": {
+      "zero": 0,
+      "negative": 0,
+      "nan": 0,
+      "zeroReads": {
+        "height": 3,
+        "client": 3
+      },
+      "upper": 283692,
+      "max": 283692,
+      "marker": 283692
+    }
+  },
+  {
+    "name": "desktop positive scroll still clamps to live maximum",
+    "pass": true,
+    "evidence": {
+      "zero": 0,
+      "negative": 0,
+      "nan": 0,
+      "zeroReads": {
+        "height": 3,
+        "client": 3
+      },
+      "upper": 283692,
+      "max": 283692,
+      "marker": 283692
+    }
+  },
+  {
+    "name": "desktop Style Settings row size applies to offscreen rows too",
+    "pass": true,
+    "evidence": [
+      true,
+      true
+    ]
+  },
+  {
+    "name": "desktop 360px result viewport remains filled",
+    "pass": true,
+    "evidence": {
+      "viewport": 499,
+      "start": 0,
+      "end": 16,
+      "first": 0,
+      "last": 4,
+      "input": 38,
+      "nav": 253,
+      "mainBasis": "auto",
+      "shellBasis": "auto",
+      "listBasis": "auto"
+    }
+  },
+  {
+    "name": "desktop 714px result viewport remains filled",
+    "pass": true,
+    "evidence": {
+      "viewport": 753,
+      "start": 0,
+      "end": 16,
+      "first": 0,
+      "last": 6,
+      "input": 38,
+      "nav": 884,
+      "mainBasis": "auto",
+      "shellBasis": "auto",
+      "listBasis": "auto"
+    }
+  },
+  {
+    "name": "desktop 960px result viewport remains filled",
+    "pass": true,
+    "evidence": {
+      "viewport": 753,
+      "start": 0,
+      "end": 16,
+      "first": 0,
+      "last": 6,
+      "input": 38,
+      "nav": 884,
+      "mainBasis": "auto",
+      "shellBasis": "auto",
+      "listBasis": "auto"
+    }
+  },
+  {
+    "name": "desktop close leaves no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile far keyboard focus reveals retained row",
+    "pass": true,
+    "evidence": {
+      "focused": true,
+      "visible": true,
+      "rows": 73,
+      "preserved": true
+    }
+  },
+  {
+    "name": "mobile origin reset avoids scroll extent reads",
+    "pass": false,
+    "evidence": {
+      "zero": 0,
+      "negative": 0,
+      "nan": 0,
+      "zeroReads": {
+        "height": 3,
+        "client": 3
+      },
+      "upper": 272694,
+      "max": 272694,
+      "marker": 272694
+    }
+  },
+  {
+    "name": "mobile positive scroll still clamps to live maximum",
+    "pass": true,
+    "evidence": {
+      "zero": 0,
+      "negative": 0,
+      "nan": 0,
+      "zeroReads": {
+        "height": 3,
+        "client": 3
+      },
+      "upper": 272694,
+      "max": 272694,
+      "marker": 272694
+    }
+  },
+  {
+    "name": "mobile Style Settings row size applies to offscreen rows too",
+    "pass": true,
+    "evidence": [
+      true,
+      true
+    ]
+  },
+  {
+    "name": "mobile close leaves no asynchronous errors",
+    "pass": true,
+    "evidence": []
+  }
+]

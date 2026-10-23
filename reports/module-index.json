@@ -7327,8 +7327,8 @@
       "../../utils/dom.js",
       "./virtualization-config.js"
     ],
-    "lines": 445,
-    "bytes": 18690,
+    "lines": 444,
+    "bytes": 18834,
     "origins": [
       {
         "id": "SearchResultRendererController.getScrollTop",

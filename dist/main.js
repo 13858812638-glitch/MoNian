@@ -18450,11 +18450,14 @@ exports.SearchResultRendererController_viewport_geometry_methods = {
         const list = this.owner?.resultsContainer;
         if (!(0, dom_js_1.isDomHTMLElement)(list))
             return 0;
-        const maxScroll = Math.max(0, list.scrollHeight - list.clientHeight);
-        const next = Math.min(Math.max(0, Number(value) || 0), maxScroll);
-        if (Math.abs((Number(list.scrollTop) || 0) - next) <= 0.25) {
-            return Number(list.scrollTop) || 0;
-        }
+        const requested = Math.max(0, Number(value) || 0);
+        // Origin is valid for every scroll extent, including an empty/hidden
+        // list. Only positive targets require measuring the live upper bound.
+        const next = requested === 0 ? 0
+            : Math.min(requested, Math.max(0, list.scrollHeight - list.clientHeight));
+        const current = Number(list.scrollTop) || 0;
+        if (Math.abs(current - next) <= 0.25)
+            return current;
         this._programmaticScrollTop = next;
         list.scrollTop = next;
         return list.scrollTop;

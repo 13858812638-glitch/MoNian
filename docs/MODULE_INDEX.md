@@ -1,3 +1,5 @@
+> **2026-10-23 滚动测量精简（未冻结）**：唯一开发基线 `176d307`。共享滚动归零省去上界测量与重复位置读取；CSS 试验因收益不稳已撤回。没有新增缓存、延迟提交或第二套组件。见 [实现与测量](SMOOTH_LAYOUT_20261023.md)。下文保留历史记录。
+
 > **2026-10-23 自适应上下分栏调高（未冻结）**：唯一开发基线 `aed6f38`。现有分隔条按布局统一切换横纵轴；上下布局可拖动调高，宽高分别随会话保存。高度变化只同步分隔边界，不触发导航投影或搜索。见 [实现与验证](STACK_PANE_HEIGHT_20261023.md)。下文保留历史记录。
 
 > **2026-10-23 工具栏与状态同步优化（未冻结）**：以 `1ab2cd7` 为唯一开发基线。桌面左侧顶部命令栏右对齐，共用右侧动作栏的尺寸 Primitive / Token；统计与条件状态复用共享同值更新函数。153 个 JS 模块、664 条静态依赖；本轮修改 2 个 JS 模块及 CSS。见 [实现、测量与边界](TOOLBAR_PERFORMANCE_20261023.md)。下文保留历史记录。
@@ -113,7 +115,7 @@
 | `src/features/results/result-card-methods.js` | 208 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS`、`RESULT_CONTENT_IDS`、`RESULT_CONTENT_DEF_MAP`、`VIEW_COMPOSER_SECTION_IDS`、`normalizeResultContentOrder`、`DEFAULT_RESULT_VIEWS`、`normalizeResultViewId`、`normalizeResultViewConfig`、`normalizeResultViews` |
 | `src/features/results/viewport-anchors-methods.js` | 397 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_anchors_methods` |
-| `src/features/results/viewport-geometry-methods.js` | 445 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
+| `src/features/results/viewport-geometry-methods.js` | 444 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
 | `src/features/results/virtual-window-methods.js` | 459 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
 | `src/features/results/virtualization-config.js` | 51 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_WINDOW_MOUNT_MIN`、`RESULT_WINDOW_MOUNT_MAX`、`RESULT_WINDOW_BUFFER_MIN`、`RESULT_ROW_HEIGHT_ESTIMATE`、`FULL_CONTENT_CACHE_LIMIT`、`RESULT_GEOMETRY_CSS_TOKENS` |
 | `src/features/search/QueryState.js` | 19 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `QueryState` |
@@ -620,7 +622,7 @@
 - **导出**：`SearchResultRendererController_viewport_anchors_methods`
 
 ### `src/features/results/viewport-geometry-methods.js`
-- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；445 行，18,690 字节。
+- **职责**：搜索与筛选、Picker 工作流、创建、结果渲染及批量功能；444 行，18,834 字节。
 - **直接依赖**：`../../core/session-values.js`、`../../interactions/SwipeActionCoordinator.js`、`../../utils/dom.js`、`./virtualization-config.js`
 - **导出**：`SearchResultRendererController_viewport_geometry_methods`
 

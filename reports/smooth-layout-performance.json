@@ -1,0 +1,1241 @@
+{
+  "deliveredChange": "Shared _setScrollTop: zero target skips scrollHeight/clientHeight; same-value return reads current scrollTop once. CSS equals baseline.",
+  "claim": "Deterministic removal of redundant geometry getters only; no established end-to-end latency improvement. Necessary synchronous layouts remain.",
+  "rejectedOffscreenTrial": {
+    "baselineCommit": "176d307ef6b37d0b68e21c279d179fe7a4d3e800",
+    "protocol": "After final gates, serial before / after / after / before; pinned JS and CSS; Chromium CPU 4x; 24 folder switches and 24 disclosure clicks per fixture per run; no wrappers in timing pass",
+    "interpretation": "Nested trace event totals must not be added. renderWorkUnionMs merges Layout/UpdateLayoutTree/Paint intervals per thread to avoid double counting; excludes JS/idle and is not input-to-paint latency. Two runs per version demonstrate this fixture only, not a confidence interval or native Obsidian claim.",
+    "rejected": "Root strict containment lowered Layout but increased UpdateLayoutTree; excluded from final production. Exploratory strict/cv candidate preserved under /workspace/smooth-audit/comparison-* and gates-rejected-strict.",
+    "summary": [
+      {
+        "files": 161,
+        "phase": "folder",
+        "operationsPerRun": 24,
+        "runsPerVersion": 2,
+        "Layout": {
+          "beforeSamplesMs": [
+            995.015,
+            946.072
+          ],
+          "afterSamplesMs": [
+            846.949,
+            826.408
+          ],
+          "beforeMeanMs": 970.5435,
+          "afterMeanMs": 836.6785,
+          "reductionPercent": 13.792787237254178
+        },
+        "UpdateLayoutTree": {
+          "beforeSamplesMs": [
+            50.011,
+            40.777
+          ],
+          "afterSamplesMs": [
+            40.894,
+            42.85
+          ],
+          "beforeMeanMs": 45.394000000000005,
+          "afterMeanMs": 41.872,
+          "reductionPercent": 7.7587346345332096
+        },
+        "Paint": {
+          "beforeSamplesMs": [
+            445.264,
+            398.784
+          ],
+          "afterSamplesMs": [
+            372.059,
+            351.639
+          ],
+          "beforeMeanMs": 422.024,
+          "afterMeanMs": 361.84900000000005,
+          "reductionPercent": 14.258667753492682
+        },
+        "renderWorkUnionMs": {
+          "beforeSamplesMs": [
+            1270.501,
+            1188.049
+          ],
+          "afterSamplesMs": [
+            1076.031,
+            1046.103
+          ],
+          "beforeMeanMs": 1229.275,
+          "afterMeanMs": 1061.067,
+          "reductionPercent": 13.683512639563977
+        }
+      },
+      {
+        "files": 161,
+        "phase": "disclosure",
+        "operationsPerRun": 24,
+        "runsPerVersion": 2,
+        "Layout": {
+          "beforeSamplesMs": [
+            186.852,
+            158.232
+          ],
+          "afterSamplesMs": [
+            106.642,
+            92.124
+          ],
+          "beforeMeanMs": 172.542,
+          "afterMeanMs": 99.383,
+          "reductionPercent": 42.40069084628671
+        },
+        "UpdateLayoutTree": {
+          "beforeSamplesMs": [
+            8.894,
+            5.845
+          ],
+          "afterSamplesMs": [
+            57.62,
+            45.293
+          ],
+          "beforeMeanMs": 7.3695,
+          "afterMeanMs": 51.4565,
+          "reductionPercent": -598.2359725897279
+        },
+        "Paint": {
+          "beforeSamplesMs": [
+            110.77,
+            65.98
+          ],
+          "afterSamplesMs": [
+            76.993,
+            59.669
+          ],
+          "beforeMeanMs": 88.375,
+          "afterMeanMs": 68.33099999999999,
+          "reductionPercent": 22.680622347949093
+        },
+        "renderWorkUnionMs": {
+          "beforeSamplesMs": [
+            252.195,
+            196.632
+          ],
+          "afterSamplesMs": [
+            203.489,
+            167.38
+          ],
+          "beforeMeanMs": 224.4135,
+          "afterMeanMs": 185.4345,
+          "reductionPercent": 17.369275912545362
+        }
+      },
+      {
+        "files": 2400,
+        "phase": "folder",
+        "operationsPerRun": 24,
+        "runsPerVersion": 2,
+        "Layout": {
+          "beforeSamplesMs": [
+            727.94,
+            713.32
+          ],
+          "afterSamplesMs": [
+            785.304,
+            753.3
+          ],
+          "beforeMeanMs": 720.6300000000001,
+          "afterMeanMs": 769.3019999999999,
+          "reductionPercent": -6.754090171100257
+        },
+        "UpdateLayoutTree": {
+          "beforeSamplesMs": [
+            39.169,
+            42.188
+          ],
+          "afterSamplesMs": [
+            50.391,
+            52.401
+          ],
+          "beforeMeanMs": 40.6785,
+          "afterMeanMs": 51.396,
+          "reductionPercent": -26.34684169770272
+        },
+        "Paint": {
+          "beforeSamplesMs": [
+            337.19,
+            330.58
+          ],
+          "afterSamplesMs": [
+            372.157,
+            308.871
+          ],
+          "beforeMeanMs": 333.885,
+          "afterMeanMs": 340.514,
+          "reductionPercent": -1.9854141395989695
+        },
+        "renderWorkUnionMs": {
+          "beforeSamplesMs": [
+            936.606,
+            922.635
+          ],
+          "afterSamplesMs": [
+            1023.636,
+            962.111
+          ],
+          "beforeMeanMs": 929.6205,
+          "afterMeanMs": 992.8734999999999,
+          "reductionPercent": -6.80417439159312
+        }
+      },
+      {
+        "files": 2400,
+        "phase": "disclosure",
+        "operationsPerRun": 24,
+        "runsPerVersion": 2,
+        "Layout": {
+          "beforeSamplesMs": [
+            668.553,
+            617.345
+          ],
+          "afterSamplesMs": [
+            322.857,
+            342.319
+          ],
+          "beforeMeanMs": 642.9490000000001,
+          "afterMeanMs": 332.588,
+          "reductionPercent": 48.27148031958989
+        },
+        "UpdateLayoutTree": {
+          "beforeSamplesMs": [
+            12.491999999999999,
+            11.622
+          ],
+          "afterSamplesMs": [
+            217.242,
+            228.59199999999998
+          ],
+          "beforeMeanMs": 12.056999999999999,
+          "afterMeanMs": 222.91699999999997,
+          "reductionPercent": -1748.8595836443562
+        },
+        "Paint": {
+          "beforeSamplesMs": [
+            323.923,
+            306.074
+          ],
+          "afterSamplesMs": [
+            201.044,
+            198.468
+          ],
+          "beforeMeanMs": 314.99850000000004,
+          "afterMeanMs": 199.756,
+          "reductionPercent": 36.58509484965802
+        },
+        "renderWorkUnionMs": {
+          "beforeSamplesMs": [
+            843.225,
+            782.174
+          ],
+          "afterSamplesMs": [
+            641.293,
+            671.098
+          ],
+          "beforeMeanMs": 812.6995,
+          "afterMeanMs": 656.1955,
+          "reductionPercent": 19.2573023608357
+        }
+      }
+    ],
+    "runs": {
+      "before": {
+        "results": [
+          {
+            "files": 161,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 995.015,
+                  "maxMs": 50.393
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 50.011,
+                  "maxMs": 2.127
+                },
+                "Paint": {
+                  "count": 74,
+                  "totalMs": 445.264,
+                  "maxMs": 17.38
+                },
+                "FunctionCall": {
+                  "count": 747,
+                  "totalMs": 739.469,
+                  "maxMs": 47.611
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 729.976,
+                  "maxMs": 61.103
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 24,
+                  "totalMs": 186.852,
+                  "maxMs": 14.984
+                },
+                "UpdateLayoutTree": {
+                  "count": 51,
+                  "totalMs": 8.894,
+                  "maxMs": 1.083
+                },
+                "Paint": {
+                  "count": 54,
+                  "totalMs": 110.77,
+                  "maxMs": 5.08
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 88.835,
+                  "maxMs": 3.752
+                },
+                "EventDispatch": {
+                  "count": 226,
+                  "totalMs": 110.071,
+                  "maxMs": 4.839
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 360,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 15,
+              "mounted": 15,
+              "cacheSize": 90,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 1270.501,
+              "disclosure": 252.195
+            }
+          },
+          {
+            "files": 2400,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 727.94,
+                  "maxMs": 32.514
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 39.169,
+                  "maxMs": 1.931
+                },
+                "Paint": {
+                  "count": 72,
+                  "totalMs": 337.19,
+                  "maxMs": 13.017
+                },
+                "FunctionCall": {
+                  "count": 754,
+                  "totalMs": 728.542,
+                  "maxMs": 36.98
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 698.975,
+                  "maxMs": 50.812
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 24,
+                  "totalMs": 668.553,
+                  "maxMs": 60.922
+                },
+                "UpdateLayoutTree": {
+                  "count": 51,
+                  "totalMs": 12.491999999999999,
+                  "maxMs": 0.992
+                },
+                "Paint": {
+                  "count": 42,
+                  "totalMs": 323.923,
+                  "maxMs": 14.71
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 77.671,
+                  "maxMs": 3.748
+                },
+                "EventDispatch": {
+                  "count": 226,
+                  "totalMs": 97.002,
+                  "maxMs": 4.713
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 288,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 12,
+              "mounted": 12,
+              "cacheSize": 72,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 936.606,
+              "disclosure": 843.225
+            }
+          }
+        ],
+        "contexts": [
+          {
+            "mobile": false,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": false,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          }
+        ]
+      },
+      "after": {
+        "results": [
+          {
+            "files": 161,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 846.949,
+                  "maxMs": 40.256
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 40.894,
+                  "maxMs": 2.675
+                },
+                "Paint": {
+                  "count": 72,
+                  "totalMs": 372.059,
+                  "maxMs": 10.393
+                },
+                "FunctionCall": {
+                  "count": 747,
+                  "totalMs": 661.851,
+                  "maxMs": 48.387
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 664.419,
+                  "maxMs": 66.403
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 33,
+                  "totalMs": 106.642,
+                  "maxMs": 5.149
+                },
+                "UpdateLayoutTree": {
+                  "count": 60,
+                  "totalMs": 57.62,
+                  "maxMs": 5.586
+                },
+                "Paint": {
+                  "count": 60,
+                  "totalMs": 76.993,
+                  "maxMs": 2.993
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 70.215,
+                  "maxMs": 3.745
+                },
+                "EventDispatch": {
+                  "count": 226,
+                  "totalMs": 84.115,
+                  "maxMs": 4.974
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 360,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 15,
+              "mounted": 15,
+              "cacheSize": 90,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 1076.031,
+              "disclosure": 203.489
+            }
+          },
+          {
+            "files": 2400,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 785.304,
+                  "maxMs": 40.63
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 50.391,
+                  "maxMs": 4.655
+                },
+                "Paint": {
+                  "count": 76,
+                  "totalMs": 372.157,
+                  "maxMs": 10.282
+                },
+                "FunctionCall": {
+                  "count": 754,
+                  "totalMs": 873.446,
+                  "maxMs": 50.833
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 833.855,
+                  "maxMs": 70.634
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 39,
+                  "totalMs": 322.857,
+                  "maxMs": 25.179
+                },
+                "UpdateLayoutTree": {
+                  "count": 66,
+                  "totalMs": 217.242,
+                  "maxMs": 28.976
+                },
+                "Paint": {
+                  "count": 51,
+                  "totalMs": 201.044,
+                  "maxMs": 13.859
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 87.57300000000001,
+                  "maxMs": 4.849
+                },
+                "EventDispatch": {
+                  "count": 336,
+                  "totalMs": 113.498,
+                  "maxMs": 4.941
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 288,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 12,
+              "mounted": 12,
+              "cacheSize": 72,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 1023.636,
+              "disclosure": 641.293
+            }
+          }
+        ],
+        "contexts": [
+          {
+            "mobile": false,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": false,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          }
+        ]
+      },
+      "after2": {
+        "results": [
+          {
+            "files": 161,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 826.408,
+                  "maxMs": 37.313
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 42.85,
+                  "maxMs": 2.081
+                },
+                "Paint": {
+                  "count": 74,
+                  "totalMs": 351.639,
+                  "maxMs": 9.0
+                },
+                "FunctionCall": {
+                  "count": 747,
+                  "totalMs": 631.541,
+                  "maxMs": 40.634
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 624.087,
+                  "maxMs": 53.497
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 31,
+                  "totalMs": 92.124,
+                  "maxMs": 4.877
+                },
+                "UpdateLayoutTree": {
+                  "count": 58,
+                  "totalMs": 45.293,
+                  "maxMs": 5.598
+                },
+                "Paint": {
+                  "count": 51,
+                  "totalMs": 59.669,
+                  "maxMs": 4.374
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 71.455,
+                  "maxMs": 3.981
+                },
+                "EventDispatch": {
+                  "count": 226,
+                  "totalMs": 84.516,
+                  "maxMs": 4.409
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 360,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 15,
+              "mounted": 15,
+              "cacheSize": 90,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 1046.103,
+              "disclosure": 167.38
+            }
+          },
+          {
+            "files": 2400,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 753.3,
+                  "maxMs": 38.809
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 52.401,
+                  "maxMs": 2.349
+                },
+                "Paint": {
+                  "count": 76,
+                  "totalMs": 308.871,
+                  "maxMs": 9.266
+                },
+                "FunctionCall": {
+                  "count": 754,
+                  "totalMs": 782.834,
+                  "maxMs": 36.917
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 759.838,
+                  "maxMs": 52.362
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 39,
+                  "totalMs": 342.319,
+                  "maxMs": 23.286
+                },
+                "UpdateLayoutTree": {
+                  "count": 66,
+                  "totalMs": 228.59199999999998,
+                  "maxMs": 31.52
+                },
+                "Paint": {
+                  "count": 51,
+                  "totalMs": 198.468,
+                  "maxMs": 15.907
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 83.20700000000001,
+                  "maxMs": 4.491
+                },
+                "EventDispatch": {
+                  "count": 336,
+                  "totalMs": 109.11,
+                  "maxMs": 6.396
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 288,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 12,
+              "mounted": 12,
+              "cacheSize": 72,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 962.111,
+              "disclosure": 671.098
+            }
+          }
+        ],
+        "contexts": [
+          {
+            "mobile": false,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": false,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          }
+        ]
+      },
+      "before2": {
+        "results": [
+          {
+            "files": 161,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 946.072,
+                  "maxMs": 42.767
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 40.777,
+                  "maxMs": 1.947
+                },
+                "Paint": {
+                  "count": 72,
+                  "totalMs": 398.784,
+                  "maxMs": 10.523
+                },
+                "FunctionCall": {
+                  "count": 747,
+                  "totalMs": 709.212,
+                  "maxMs": 43.511
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 704.318,
+                  "maxMs": 57.687
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 24,
+                  "totalMs": 158.232,
+                  "maxMs": 12.762
+                },
+                "UpdateLayoutTree": {
+                  "count": 51,
+                  "totalMs": 5.845,
+                  "maxMs": 0.704
+                },
+                "Paint": {
+                  "count": 42,
+                  "totalMs": 65.98,
+                  "maxMs": 3.644
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 57.239,
+                  "maxMs": 5.321
+                },
+                "EventDispatch": {
+                  "count": 226,
+                  "totalMs": 72.453,
+                  "maxMs": 6.377
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 360,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 15,
+              "mounted": 15,
+              "cacheSize": 90,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 1188.049,
+              "disclosure": 196.632
+            }
+          },
+          {
+            "files": 2400,
+            "cpuThrottle": 4,
+            "timing": {
+              "folder": {
+                "Layout": {
+                  "count": 48,
+                  "totalMs": 713.32,
+                  "maxMs": 29.539
+                },
+                "UpdateLayoutTree": {
+                  "count": 144,
+                  "totalMs": 42.188,
+                  "maxMs": 1.405
+                },
+                "Paint": {
+                  "count": 74,
+                  "totalMs": 330.58,
+                  "maxMs": 8.682
+                },
+                "FunctionCall": {
+                  "count": 755,
+                  "totalMs": 783.883,
+                  "maxMs": 54.832
+                },
+                "EventDispatch": {
+                  "count": 403,
+                  "totalMs": 761.987,
+                  "maxMs": 70.193
+                }
+              },
+              "disclosure": {
+                "Layout": {
+                  "count": 24,
+                  "totalMs": 617.345,
+                  "maxMs": 46.677
+                },
+                "UpdateLayoutTree": {
+                  "count": 51,
+                  "totalMs": 11.622,
+                  "maxMs": 1.138
+                },
+                "Paint": {
+                  "count": 51,
+                  "totalMs": 306.074,
+                  "maxMs": 13.737
+                },
+                "FunctionCall": {
+                  "count": 648,
+                  "totalMs": 73.35,
+                  "maxMs": 4.401
+                },
+                "EventDispatch": {
+                  "count": 226,
+                  "totalMs": 97.401,
+                  "maxMs": 4.484
+                }
+              }
+            },
+            "work": {
+              "phases": {
+                "folder": {
+                  "renderer._setScrollTop": 24,
+                  "facets.renderPinnedPropertyFilters": 24,
+                  "core._recomputeCurrentResults": 24,
+                  "renderer.renderPage": 24,
+                  "renderer._windowSize": 24,
+                  "renderer._observeShell": 288,
+                  "renderer._syncMountedState": 24,
+                  "core._notifyStateChange": 24,
+                  "nav._renderProjection": 24
+                },
+                "disclosure": {
+                  "core._notifyStateChange": 24
+                }
+              },
+              "conditions": {
+                "syncs": 8,
+                "mutations": 0,
+                "removedNodes": 0,
+                "addedNodes": 0,
+                "sameButton": true,
+                "focusedBefore": true,
+                "focusedAfter": true
+              },
+              "folder": [
+                "Folder005"
+              ],
+              "results": 12,
+              "mounted": 12,
+              "cacheSize": 72,
+              "consistent": true,
+              "synchronousLayoutOwners": {
+                "renderer.renderPage": 24,
+                "outside wrapped methods": 23
+              }
+            },
+            "pageErrors": [],
+            "renderWorkUnionMs": {
+              "folder": 922.635,
+              "disclosure": 782.174
+            }
+          }
+        ],
+        "contexts": [
+          {
+            "mobile": false,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": false,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "sidebar",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          },
+          {
+            "mobile": true,
+            "host": "tab",
+            "visible": true,
+            "focusedBefore": true,
+            "focusedAfter": true,
+            "sameButton": true
+          }
+        ]
+      }
+    },
+    "unverified": [
+      "Native Obsidian",
+      "User vault and actual hardware",
+      "iOS/Android",
+      "WebKit"
+    ]
+  },
+  "otherRejectedExperiments": [
+    "Navigator root strict containment: Layout savings offset by UpdateLayoutTree",
+    "Scrollport size containment, flex-basis, row layout/paint containment: no stable benefit",
+    "Row strict with/without content-visibility: did not remove the folder-switch tradeoff",
+    "Root containment with normal container-type: did not remove offsetting costs"
+  ],
+  "evidenceDirectory": "/workspace/smooth-audit",
+  "unverified": [
+    "Native Obsidian",
+    "Actual user vault/hardware",
+    "Native iOS/Android",
+    "WebKit"
+  ]
+}
