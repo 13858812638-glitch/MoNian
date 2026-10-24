@@ -282,18 +282,17 @@ export const SearchResultRendererController_viewport_anchors_methods = {
 
             // Shelf 实际展开高度计入当前行几何，但不参与稳定行高学习。
             // 所有行都由同一 border-box 测量，纵向让位只消费这一帧实际 padding。
-            const transientSwipe = shell.classList.contains("is-swiping")
-                || shell.classList.contains("is-swipe-open")
-                || shell.classList.contains("is-swipe-trigger-open");
+            const transientSwipe = Boolean(core.swipe && (shell.classList.contains("is-swiping")
+                || shell.classList.contains("is-swipe-open")));
             const normalTrailing = 0; // 连续列表无卡间距，分割线不占布局高度。
             // 普通行直接消费 RO 的 border-box；动作栏过渡才单独测 body。
-            const movingShelf = transientSwipe || shell.matches(".is-swipe-left, .is-swipe-right")
-                || core.swipe?.allExpanded || core.swipe?.closingWrapper === shell;
+            const movingShelf = core.swipe && (transientSwipe || shell.matches(".is-swipe-left, .is-swipe-right")
+                || core.swipe.allExpanded || core.swipe.closingWrapper === shell);
             const item = movingShelf ? shell.querySelector(":scope > .local-search-item") : null;
             const itemHeight = movingShelf
                 ? (isDomHTMLElement(item) ? item.getBoundingClientRect().height : 0)
                 : Math.max(0, height - normalTrailing);
-            this._sampleSwipeReveal(shell, height, itemHeight, normalTrailing, transientSwipe);
+            if (core.swipe) this._sampleSwipeReveal(shell, height, itemHeight, normalTrailing, transientSwipe);
             // 关闭过渡仍高于结果正文，不能作为稳定样本。
             const transientLayout = itemHeight > 0
                 && height > itemHeight + normalTrailing + 1.5;

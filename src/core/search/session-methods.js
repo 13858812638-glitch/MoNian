@@ -109,7 +109,7 @@ export const SearchCore_session_methods = {
         if (this._destroyed) return;
         this._confirmSession?.finish(false, { force: true, restoreFocus: false });
         this.dropdown.close(false, { returnToParent: false, force: true });
-        this.swipe.closeAll({ immediate: true });
+        this.swipe?.closeAll({ immediate: true });
     },
 
 

@@ -20,5 +20,5 @@ test('Swipe shelf edges use the exact card content inset in both directions and 
  assert.match(css,/\.local-search-swipe-actions\.is-edge-left \{\s*left: var\(--ls-result-card-pad-x\)/);
  assert.match(css,/\.local-search-swipe-actions\.is-edge-right \{\s*right: var\(--ls-result-card-pad-x\)/);
  assert.match(css,/width: min\(max\(0px, calc\(100% - var\(--ls-result-card-pad-x\) - var\(--ls-result-card-pad-x\)\)\)/);
- assert.match(css,/\.local-search-content \.local-search-swipe-shell\.has-swipe-actions > \.local-search-item[\s\S]*?var\(--ls-result-card-pad-x\)/);
+ assert.match(css,/\.local-search-content \.local-search-swipe-shell > \.local-search-item[\s\S]*?var\(--ls-result-card-pad-x\)/);
 });

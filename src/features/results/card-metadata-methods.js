@@ -61,23 +61,7 @@ export const SearchResultRendererController_card_metadata_methods = {
         typeButton.dataset.lsNav = "fileType";
         typeButton.dataset.value = typeFilterValue;
 
-        // 同一 DOM / 状态机：触控端由 capability CSS 隐藏，桌面端 Hover / Focus 只显示入口；click 才展开 Shelf。
-        let moreButton = null;
-        if (!core.externalPickHandler) {
-            moreButton = createSearchButton(titleActions, "choice", {
-                cls: "local-search-card-more",
-                attr: {
-                    "aria-label": `更多操作：${result.name || result.path}`,
-                    "aria-expanded": "false"
-                }
-            });
-            const moreIcon = moreButton.createSpan({
-                cls: "local-search-card-more-icon",
-                attr: { "aria-hidden": "true" }
-            });
-            setIcon(moreIcon, "ellipsis");
-        }
-        return { titleRow, typeButton, moreButton };
+        return { titleRow, typeButton };
     },
 
 

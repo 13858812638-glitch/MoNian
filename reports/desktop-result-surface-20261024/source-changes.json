@@ -1,0 +1,47 @@
+[
+  {
+    "file": "src/core/SearchCore.js",
+    "before": "5a81dbc84b6441f73824a3edbfa456a5928e06bc7284d45a80b4f51a6573a65d",
+    "after": "30a623eb21a4a1f8dab49d7c9e8a9634f573848b476e13cd896bf9ab12fe1d33"
+  },
+  {
+    "file": "src/core/search/result-menu-events-methods.js",
+    "before": "f368905d6fc1c52d90f5e75e0714c96cb4904f7568e7a6913805f4fad2d15f10",
+    "after": "cc9f3ac6317faab490ad8c807a9b960a920c3ef3431bef734a189b5119bf65ae"
+  },
+  {
+    "file": "src/core/search/session-methods.js",
+    "before": "cead174449ced749446b564fd9510a5182fc8b367898f0693d7440cf6ab9d4a0",
+    "after": "102cc13f32487e3a7f2d2c9bd37ce67af40fc34c0bb84f5e015ac188e5860c1d"
+  },
+  {
+    "file": "src/features/results/card-metadata-methods.js",
+    "before": "2e8f5a2070ac65acb9e8dd6d014dbec2e73526cc4d516cdadbd104cdaf4fc4b7",
+    "after": "15d5d5e0f54229ae50c2379dbb4d9079fcfd7b294957a9a8e4dcb7ceb56bf915"
+  },
+  {
+    "file": "src/features/results/result-card-methods.js",
+    "before": "8a36a7b91d0f82cc2b962ef4d6591344e74fd3cc233836cf99c67484a6ab390c",
+    "after": "3ddd142e6fcec1b5b3a1be3645f7e307f85754fb0c694a9dd13dfbc83c32ee9f"
+  },
+  {
+    "file": "src/features/results/viewport-anchors-methods.js",
+    "before": "2db93f1a744d7f39c66ff585b4625ccade4cc91bc7c5ad5c07f1d8af48858830",
+    "after": "60fc4312c1da88e8c4c662b1c8c85dabea0154ee589237dec2ee00d681784d44"
+  },
+  {
+    "file": "src/features/selection/SearchSelectionController.js",
+    "before": "a1700a101ad6a4e88cca2117a3f06f163a0ece6fbbd6b9082212c3f008b413f5",
+    "after": "6f839f6bd4711e00e7d3a827e7e6cbfa142d4fc72fd754ba9c97e18deb84d383"
+  },
+  {
+    "file": "src/interactions/SwipeActionCoordinator.js",
+    "before": "4e37bd0e3aa33daa6b4516742077b89751cdf3df3d050b126e8dcd342c4f4b29",
+    "after": "312ba7b44b7c84f71af916a8300502ef40c7094f9dcb9f75dfe3669dd6800408"
+  },
+  {
+    "file": "src/styles/styles.css",
+    "before": "8ccc69f6e764b9705ae53f2573cdb6f38cea476360e5249304803182f7fba116",
+    "after": "f2ca9fecbf9b9581e407fe875b3382ae8dc6546391dd0ad06cafc978b25fc989"
+  }
+]

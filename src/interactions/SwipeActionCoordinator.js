@@ -28,11 +28,7 @@ export class SwipeActionCoordinator {
         this.closingWrapper = null;
         this.ownerDocument = hostDocument(owner.containerEl);
         this.pendingAction = null;
-        this._dismissClickArmed = false;
         this._onDocumentPointerDown = event => {
-            // 新的 pointer 序列开始时，上一轮若没有产生 click，则旧拦截自然失效。
-            // 不使用 timeout / debounce，避免关闭动作引入额外时序状态。
-            this._dismissClickArmed = false;
             if (this.pendingAction || !this.openWrapper || !this.openClose) return;
             const target = event?.target;
             if (target?.nodeType && this.openWrapper.contains(target)) return;
@@ -50,31 +46,11 @@ export class SwipeActionCoordinator {
                 return;
             }
 
-            // “更多操作”入口展开后，第一次点击外部区域只负责收起 Shelf。
-            // pointerdown 先阻止底层控件获取焦点/按压态，随后同一序列的 click
-            // 由当前宿主 capture 吞掉，避免关闭 Shelf 的同时又打开文件、筛选或另一张卡。
-            if (!this.owner?.selection?.batchMode && this.openWrapper.classList.contains("is-swipe-trigger-open")) {
-                event?.preventDefault?.();
-                event?.stopPropagation?.();
-                event?.stopImmediatePropagation?.();
-                this._dismissClickArmed = true;
-                this.openClose();
-                return;
-            }
-
             // 触控在此时还不能区分点击与纵向滚动，不提前收起并缩短滚动范围。
             // 真正点击外部时才由同一 click 入口关闭；滚动不产生 click。
         };
         this._onDocumentClick = event => {
             if (this.pendingAction) return;
-            if (this._dismissClickArmed) {
-                this._dismissClickArmed = false;
-                if (!this._ownsTarget(event?.target)) return;
-                event?.preventDefault?.();
-                event?.stopPropagation?.();
-                event?.stopImmediatePropagation?.();
-                return;
-            }
             const target = event?.target;
             if (this.openWrapper && target?.nodeType && !this.openWrapper.contains(target)) {
                 this.openClose?.();
@@ -174,7 +150,6 @@ export class SwipeActionCoordinator {
             this._onDocumentClick,
             true
         );
-        this._dismissClickArmed = false;
         this.ownerDocument = null;
         this._onDocumentPointerDown = null;
         this._onDocumentClick = null;
@@ -188,20 +163,13 @@ export class SwipeActionCoordinator {
         if (!actions.length) return null;
 
         wrapper.classList.add("has-swipe-actions");
-        const desktopTrigger = options.desktopTrigger
-            && typeof options.desktopTrigger.addEventListener === "function"
-                ? options.desktopTrigger
-                : null;
-
         const consume = event => {
             event?.preventDefault?.();
             event?.stopPropagation?.();
             event?.stopImmediatePropagation?.();
         };
 
-        // Action Shelf 只在第一次真实需要时创建。
-        // 首屏结果卡不再预建 5 个动作按钮 / 图标 / 标签；桌面 More 与触控 Swipe
-        // 仍共用同一套 Shelf、同一状态机，只把 DOM 成本从“打开搜索”移到“第一次操作该卡片”。
+        // Mobile action buttons are built only on the first actual reveal.
         let panel = null;
         let activeDirection = null;
         let close = () => {};
@@ -282,14 +250,13 @@ export class SwipeActionCoordinator {
             panel.style.setProperty("transform", progress === 1 ? "none" : `translate3d(${shift}%, 0, 0)`, "important");
         };
         const setOffset = (value, direction = null) => {
-            const motionDirection = direction === "desktop" ? "left" : direction;
-            const width = motionDirection ? widthFor() : 0;
+            const width = direction ? widthFor() : 0;
             const numeric = Number(value) || 0;
-            const next = Math.round(motionDirection === "left" ? Math.max(-width, Math.min(0, numeric))
-                : motionDirection === "right" ? Math.min(width, Math.max(0, numeric)) : 0);
+            const next = Math.round(direction === "left" ? Math.max(-width, Math.min(0, numeric))
+                : direction === "right" ? Math.min(width, Math.max(0, numeric)) : 0);
             if (next === renderedOffset && direction) return next;
             renderedOffset = next;
-            setPanelProgress(width > 0 ? Math.min(1, Math.abs(next) / width) : 0, motionDirection);
+            setPanelProgress(width > 0 ? Math.min(1, Math.abs(next) / width) : 0, direction);
             return next;
         };
         const setPanelTabState = active => {
@@ -300,14 +267,6 @@ export class SwipeActionCoordinator {
                 button.setAttribute("tabindex", active ? "0" : "-1");
             }
         };
-        const syncDesktopTrigger = expanded => {
-            if (!desktopTrigger) return;
-            desktopTrigger.setAttribute(
-                "aria-expanded",
-                expanded ? "true" : "false"
-            );
-        };
-
         close = (immediate = false) => {
             // 批量展开由工具栏独占控制；动作、外部点击和反向手势不改变全局展示状态。
             if (this.allExpanded) {
@@ -325,8 +284,7 @@ export class SwipeActionCoordinator {
                     ? "right"
                     : activeDirection;
             if (immediate) wrapper.classList.add("is-swipe-no-transition");
-            wrapper.classList.remove("is-swipe-open", "is-swiping", "is-swipe-trigger-open");
-            syncDesktopTrigger(false);
+            wrapper.classList.remove("is-swipe-open", "is-swiping");
             setPanelTabState(false);
             renderedOffset = 0;
             setPanelProgress(0, currentDirection);
@@ -359,13 +317,11 @@ export class SwipeActionCoordinator {
                 this.owner?.resultRenderer?.beginSwipeReveal(wrapper);
             }
             if (this.closingWrapper === wrapper) this.closingWrapper = null;
-            wrapper.classList.remove("is-swipe-trigger-open");
             wrapper.classList.add("is-swipe-open");
             wrapper.classList.remove("is-swiping");
             setDirectionClass(direction);
             setPanelEdge(direction);
             activeDirection = direction;
-            syncDesktopTrigger(false);
             setPanelTabState(true);
             renderedOffset = null;
             setPanelProgress(1, direction);
@@ -374,31 +330,7 @@ export class SwipeActionCoordinator {
                 this.openClose = close;
             }
         };
-        const openFromTrigger = () => {
-            if (this.allExpanded) return;
-            widthCache = null;
-            ensurePanel();
-            this.closeOpen(wrapper);
-            if (!this.allExpanded && !wrapper.matches(".is-swiping, .is-swipe-open")) {
-                this.owner?.resultRenderer?.beginSwipeReveal(wrapper);
-            }
-            if (this.closingWrapper === wrapper) this.closingWrapper = null;
-            wrapper.classList.remove("is-swipe-left", "is-swipe-right", "is-swiping");
-            wrapper.classList.add("is-swipe-open", "is-swipe-trigger-open");
-            setPanelEdge("left");
-            activeDirection = "desktop";
-            renderedOffset = null;
-            setPanelProgress(1, "left");
-            syncDesktopTrigger(true);
-            setPanelTabState(true);
-            if (!this.allExpanded) {
-                this.openWrapper = wrapper;
-                this.openClose = close;
-            }
-        };
-
         row.addEventListener("click", event => {
-            if (event.target?.closest?.(".local-search-card-more")) return;
             if (
                 Date.now() < (wrapper._lsSwipeSuppressClickUntil || 0)
                 || (wrapper.classList.contains("is-swipe-open") && !this.allExpanded && !this.owner?.selection?.batchMode)
@@ -408,22 +340,7 @@ export class SwipeActionCoordinator {
             }
         }, true);
 
-        if (desktopTrigger) {
-            // Dida Master：Hover / Focus 只负责让“…”入口可见；真正展开由 click / Enter / Space 决定。
-            // 展开后由 ownerDocument capture 统一处理外部点击关闭，不用 pointerleave / timeout 补救链。
-            desktopTrigger.addEventListener("click", event => {
-                consume(event);
-                if (!this.enabled || options.canStart?.(event) === false) return;
-                const isCurrentPanelOpen =
-                    wrapper.classList.contains("is-swipe-open")
-                    && wrapper.classList.contains("is-swipe-trigger-open");
-                isCurrentPanelOpen ? close() : openFromTrigger();
-            });
-        }
-
-        // Touch 与 Pointer 分流：触摸设备只走 Touch Events；触控笔使用 Pointer Events。
-        // 鼠标只通过右上角“更多操作”悬浮 / Focus 进入同一 Action Shelf。
-        // 触控左右 Swipe 都进入同一 Shelf；方向只控制 Shelf 从左/右哪一侧滑入。
+        // Touch uses Touch Events; pen input uses Pointer Events.
         let activeTouch = null;
 
         const beginGesture = ({ startX, startY, inputType, pointerId = null }) => {
@@ -436,7 +353,7 @@ export class SwipeActionCoordinator {
                     ? "left"
                     : wrapper.classList.contains("is-swipe-right")
                         ? "right"
-                        : wrapper.classList.contains("is-swipe-trigger-open") ? "left" : null)
+                        : null)
                 : null;
             let startOffset = 0;
             let offset = 0;
@@ -450,8 +367,7 @@ export class SwipeActionCoordinator {
                 if (gestureMode !== "pending" || !next || !hasActions()) return false;
                 startOffset = startedDirection === "left" ? -widthFor() : startedDirection === "right" ? widthFor() : 0;
                 offset = startOffset;
-                wrapper.classList.remove("is-swipe-no-transition", "is-swipe-trigger-open");
-                syncDesktopTrigger(false);
+                wrapper.classList.remove("is-swipe-no-transition");
                 // 只有横滑成立才切换展开卡；触摸另一张卡向上/下滚动不关闭当前 Shelf。
                 this.closeOpen(wrapper);
                 direction = next;
@@ -665,7 +581,7 @@ export class SwipeActionCoordinator {
 
         let expansionRevision = -1;
         const binding = {
-            get panel() { return panel; }, close, open, openFromTrigger,
+            get panel() { return panel; }, close, open,
             syncAllExpanded: () => {
                 if (!this.allExpanded || !wrapper.isConnected || expansionRevision === this.expansionRevision) return;
                 expansionRevision = this.expansionRevision;

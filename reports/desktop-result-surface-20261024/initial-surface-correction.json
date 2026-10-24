@@ -1,0 +1,13 @@
+{
+  "source": "observations recorded in tool output before Token scope correction; not a raw browser report",
+  "failedChecks": [
+    "desktop-light selected surface",
+    "desktop-dark selected surface"
+  ],
+  "actual": {
+    "background": "rgba(0, 0, 0, 0)",
+    "boxShadow": "none"
+  },
+  "cause": "Picker selection tokens were scoped only to Picker/navigation surfaces",
+  "fix": "Extend existing shared token scope to desktop results"
+}

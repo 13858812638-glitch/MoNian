@@ -1,0 +1,141 @@
+[
+  {
+    "mobile": false,
+    "idle1500ms": {
+      "work": {},
+      "domWrites": 0
+    },
+    "resizing": [
+      {
+        "layout": "stack",
+        "work": {
+          "renderer._handleViewportResize": 20,
+          "renderer._syncWindowToViewport": 20
+        },
+        "resultCount": 36
+      },
+      {
+        "layout": "split",
+        "work": {
+          "renderer._handleRowResize": 21,
+          "renderer._handleViewportResize": 20,
+          "renderer.renderPage": 1,
+          "renderer._syncWindowToViewport": 1
+        },
+        "resultCount": 36
+      }
+    ],
+    "closedDOMAfterGC": [
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 33,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 33,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 33,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 33,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 33,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 33,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 33,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "mobile": true,
+    "idle1500ms": {
+      "work": {},
+      "domWrites": 0
+    },
+    "resizing": [],
+    "closedDOMAfterGC": [
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 20,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 20,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 20,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 20,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 20,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 20,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      },
+      {
+        "documents": 1,
+        "nodes": 21,
+        "jsEventListeners": 20,
+        "hostActiveListeners": 7,
+        "activeCores": 0
+      }
+    ],
+    "pageErrors": []
+  }
+]

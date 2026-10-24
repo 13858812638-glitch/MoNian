@@ -1,0 +1,22 @@
+{
+  "mode": "overlay",
+  "file": "downloads/GLS-Desktop-Result-Clean-20261024.zip",
+  "bytes": 434260,
+  "sha256": "ddeb7d4d4a3392e3a20b9f2800a9569cc273bab4bb3733004365108a9216775c",
+  "entries": 2,
+  "crc32": "PASS",
+  "dataJsonIncluded": false,
+  "manifestIncluded": false,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1771633,
+      "sha256": "28b153f4ae15e650b7f4f91c1635bf747b80e9c1beca2f1a27871a5f4211ebf7"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 265166,
+      "sha256": "f2ca9fecbf9b9581e407fe875b3382ae8dc6546391dd0ad06cafc978b25fc989"
+    }
+  ]
+}

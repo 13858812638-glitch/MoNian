@@ -1,0 +1,926 @@
+[
+  {
+    "mobile": false,
+    "phases": [
+      {
+        "name": "folder-switch",
+        "calls": {
+          "core.performSearch": 1,
+          "facets.syncFilterButtons": 1,
+          "facets.renderPinnedPropertyFilters": 1,
+          "core._syncResultStateRow": 2,
+          "facets.syncTypeButtons": 1,
+          "controls.refreshFilterPoolHeader": 1,
+          "core._recomputeCurrentResults": 1,
+          "controls.sync": 1,
+          "sort.sync": 1,
+          "sort.normalize": 1,
+          "controls.syncInputActions": 1,
+          "renderer.refreshResultChannels": 1,
+          "renderer._renderStateChannels": 1,
+          "renderer.renderPage": 1,
+          "selection.syncControls": 1,
+          "selection.updateStats": 1,
+          "core._notifyStateChange": 1,
+          "shared.publish": 1,
+          "shared._capture": 1,
+          "shared._normalize": 2,
+          "shared._remember": 1,
+          "shared.schedule": 1,
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1,
+          "nav._renderProjection": 1,
+          "renderer._syncWindowToViewport": 1
+        },
+        "edges": {
+          "<event> -> core.performSearch": 1,
+          "core.performSearch -> facets.syncFilterButtons": 1,
+          "facets.syncFilterButtons -> facets.renderPinnedPropertyFilters": 1,
+          "facets.renderPinnedPropertyFilters -> core._syncResultStateRow": 1,
+          "facets.syncFilterButtons -> facets.syncTypeButtons": 1,
+          "core.performSearch -> controls.refreshFilterPoolHeader": 1,
+          "core.performSearch -> core._recomputeCurrentResults": 1,
+          "core._recomputeCurrentResults -> controls.sync": 1,
+          "controls.sync -> sort.sync": 1,
+          "sort.sync -> sort.normalize": 1,
+          "controls.sync -> controls.syncInputActions": 1,
+          "core.performSearch -> renderer.refreshResultChannels": 1,
+          "renderer.refreshResultChannels -> renderer._renderStateChannels": 1,
+          "renderer._renderStateChannels -> core._syncResultStateRow": 1,
+          "core.performSearch -> renderer.renderPage": 1,
+          "renderer.renderPage -> selection.syncControls": 1,
+          "selection.syncControls -> selection.updateStats": 1,
+          "core.performSearch -> core._notifyStateChange": 1,
+          "core._notifyStateChange -> shared.publish": 1,
+          "shared.publish -> shared._capture": 1,
+          "shared._capture -> shared._normalize": 1,
+          "shared.publish -> shared._normalize": 1,
+          "shared.publish -> shared._remember": 1,
+          "shared.publish -> shared.schedule": 1,
+          "core._notifyStateChange -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1,
+          "<event> -> nav._renderProjection": 1,
+          "<event> -> renderer._syncWindowToViewport": 1
+        },
+        "mutations": 68,
+        "writes": {
+          "attributes:class:BUTTON": 1,
+          "attributes:aria-pressed:BUTTON": 3,
+          "childList::DIV": 15,
+          "attributes:data-ls-interaction:BUTTON": 1,
+          "childList::BUTTON": 2,
+          "childList::SPAN": 7,
+          "attributes:aria-labelledby:BUTTON": 1,
+          "attributes:hidden:BUTTON": 1,
+          "attributes:aria-hidden:BUTTON": 1,
+          "attributes:hidden:DIV": 1,
+          "attributes:aria-hidden:DIV": 1,
+          "attributes:aria-label:DIV": 2,
+          "attributes:aria-expanded:BUTTON": 2,
+          "attributes:data-virtual-position:DIV": 12,
+          "attributes:class:DIV": 8,
+          "characterData::#text": 9,
+          "attributes:data-has-applied-children:DIV": 1
+        },
+        "renderStates": [
+          {
+            "mainHidden": false,
+            "page": "filters",
+            "generation": 2
+          }
+        ]
+      },
+      {
+        "name": "child-disclosure",
+        "calls": {
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1,
+          "nav._renderProjection": 1
+        },
+        "edges": {
+          "<event> -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1,
+          "<event> -> nav._renderProjection": 1
+        },
+        "mutations": 95,
+        "writes": {
+          "attributes:data-nav-row-key:DIV": 2,
+          "attributes:data-picker-key:DIV": 3,
+          "attributes:tabindex:BUTTON": 4,
+          "attributes:aria-expanded:BUTTON": 3,
+          "childList::SPAN": 9,
+          "childList::BUTTON": 10,
+          "attributes:data-test-icon:BUTTON": 3,
+          "attributes:viewBox:svg": 2,
+          "attributes:fill:svg": 2,
+          "attributes:stroke:svg": 2,
+          "attributes:stroke-width:svg": 2,
+          "childList::svg": 2,
+          "attributes:data-nav-icon:BUTTON": 3,
+          "attributes:data-nav-id:DIV": 2,
+          "attributes:data-sort-key:DIV": 2,
+          "attributes:data-sort-parent:DIV": 2,
+          "attributes:data-sort-depth:DIV": 2,
+          "attributes:data-sort-name:DIV": 2,
+          "attributes:data-test-icon:SPAN": 3,
+          "attributes:data-nav-icon:SPAN": 4,
+          "attributes:hidden:BUTTON": 2,
+          "childList::DIV": 10,
+          "attributes:data-tree-depth:DIV": 1,
+          "attributes:data-level:SPAN": 1,
+          "attributes:style:SPAN": 1,
+          "attributes:style:DIV": 1,
+          "attributes:data-ls-interaction:BUTTON": 3,
+          "attributes:aria-label:BUTTON": 4,
+          "attributes:class:BUTTON": 2,
+          "attributes:aria-labelledby:BUTTON": 3,
+          "attributes:disabled:BUTTON": 1,
+          "attributes:aria-hidden:BUTTON": 1,
+          "attributes:title:BUTTON": 1
+        },
+        "renderStates": []
+      },
+      {
+        "name": "group-disclosure",
+        "calls": {},
+        "edges": {},
+        "mutations": 27,
+        "writes": {
+          "attributes:hidden:DIV": 1,
+          "attributes:aria-expanded:BUTTON": 2,
+          "childList::BUTTON": 3,
+          "attributes:data-test-icon:BUTTON": 1,
+          "attributes:viewBox:svg": 1,
+          "attributes:fill:svg": 1,
+          "attributes:stroke:svg": 1,
+          "attributes:stroke-width:svg": 1,
+          "childList::svg": 1,
+          "attributes:data-nav-icon:BUTTON": 2,
+          "childList::SPAN": 3,
+          "attributes:data-nav-id:DIV": 1,
+          "attributes:data-sort-key:DIV": 1,
+          "attributes:data-sort-parent:DIV": 1,
+          "attributes:data-sort-depth:DIV": 1,
+          "attributes:data-sort-name:DIV": 1,
+          "attributes:data-test-icon:SPAN": 1,
+          "attributes:data-nav-icon:SPAN": 2,
+          "attributes:hidden:BUTTON": 1,
+          "attributes:tabindex:BUTTON": 1
+        },
+        "renderStates": []
+      },
+      {
+        "name": "same-page",
+        "calls": {
+          "nav.setPage": 1,
+          "nav.syncPage": 1,
+          "nav._syncMobileTools": 2,
+          "nav._scopeTitle": 3,
+          "core._syncResultStateRow": 1,
+          "nav.sync": 1
+        },
+        "edges": {
+          "<event> -> nav.setPage": 1,
+          "nav.setPage -> nav.syncPage": 1,
+          "nav.syncPage -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 2,
+          "nav.syncPage -> core._syncResultStateRow": 1,
+          "nav.setPage -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1
+        },
+        "mutations": 0,
+        "writes": {},
+        "renderStates": []
+      },
+      {
+        "name": "same-sort",
+        "calls": {
+          "sort.applyField": 1,
+          "sort.sync": 1,
+          "sort.normalize": 1
+        },
+        "edges": {
+          "<event> -> sort.applyField": 1,
+          "sort.applyField -> sort.sync": 1,
+          "sort.sync -> sort.normalize": 1
+        },
+        "mutations": 4,
+        "writes": {
+          "attributes:aria-label:DIV": 2,
+          "attributes:aria-expanded:BUTTON": 1,
+          "attributes:aria-pressed:BUTTON": 1
+        },
+        "renderStates": []
+      },
+      {
+        "name": "noop-notify",
+        "calls": {
+          "core._notifyStateChange": 1,
+          "shared.publish": 1,
+          "shared._capture": 1,
+          "shared._normalize": 2,
+          "shared.schedule": 1,
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1
+        },
+        "edges": {
+          "<event> -> core._notifyStateChange": 1,
+          "core._notifyStateChange -> shared.publish": 1,
+          "shared.publish -> shared._capture": 1,
+          "shared._capture -> shared._normalize": 1,
+          "shared.publish -> shared._normalize": 1,
+          "shared.publish -> shared.schedule": 1,
+          "core._notifyStateChange -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1
+        },
+        "mutations": 0,
+        "writes": {},
+        "renderStates": []
+      },
+      {
+        "name": "exclude-only",
+        "calls": {
+          "plugin._refreshFolderStateCores": 1,
+          "core._refreshCurrentResultsAfterMutation": 1,
+          "core._recomputeCurrentResults": 1,
+          "controls.sync": 1,
+          "sort.sync": 1,
+          "sort.normalize": 1,
+          "controls.syncInputActions": 1,
+          "renderer.refreshResultChannels": 1,
+          "renderer._renderStateChannels": 1,
+          "core._syncResultStateRow": 1,
+          "renderer.renderPage": 1,
+          "selection.syncControls": 1,
+          "selection.updateStats": 1,
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1,
+          "controls.refreshFilterPoolHeader": 1,
+          "plugin.saveSettings": 1,
+          "plugin._flushIndexQueue": 1,
+          "nav._renderProjection": 1
+        },
+        "edges": {
+          "<event> -> plugin._refreshFolderStateCores": 1,
+          "plugin._refreshFolderStateCores -> core._refreshCurrentResultsAfterMutation": 1,
+          "core._refreshCurrentResultsAfterMutation -> core._recomputeCurrentResults": 1,
+          "core._recomputeCurrentResults -> controls.sync": 1,
+          "controls.sync -> sort.sync": 1,
+          "sort.sync -> sort.normalize": 1,
+          "controls.sync -> controls.syncInputActions": 1,
+          "core._refreshCurrentResultsAfterMutation -> renderer.refreshResultChannels": 1,
+          "renderer.refreshResultChannels -> renderer._renderStateChannels": 1,
+          "renderer._renderStateChannels -> core._syncResultStateRow": 1,
+          "core._refreshCurrentResultsAfterMutation -> renderer.renderPage": 1,
+          "renderer.renderPage -> selection.syncControls": 1,
+          "selection.syncControls -> selection.updateStats": 1,
+          "core._refreshCurrentResultsAfterMutation -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1,
+          "plugin._refreshFolderStateCores -> controls.refreshFilterPoolHeader": 1,
+          "<event> -> plugin.saveSettings": 1,
+          "<event> -> plugin._flushIndexQueue": 1,
+          "<event> -> nav._renderProjection": 1
+        },
+        "mutations": 44,
+        "writes": {
+          "attributes:aria-label:DIV": 2,
+          "attributes:aria-expanded:BUTTON": 2,
+          "attributes:aria-pressed:BUTTON": 1,
+          "attributes:class:DIV": 6,
+          "childList::DIV": 4,
+          "attributes:data-virtual-position:DIV": 6,
+          "characterData::#text": 1,
+          "childList::SPAN": 1,
+          "attributes:data-nav-id:DIV": 3,
+          "attributes:data-sort-key:DIV": 3,
+          "attributes:data-sort-parent:DIV": 3,
+          "attributes:data-sort-depth:DIV": 3,
+          "attributes:data-sort-name:DIV": 3,
+          "attributes:hidden:BUTTON": 3,
+          "attributes:tabindex:BUTTON": 3
+        },
+        "renderStates": [
+          {
+            "mainHidden": false,
+            "page": "filters",
+            "generation": 4
+          }
+        ]
+      },
+      {
+        "name": "channel-keyboard-switch",
+        "calls": {
+          "renderer.refreshResultChannels": 1,
+          "renderer._renderStateChannels": 1,
+          "core._syncResultStateRow": 1,
+          "renderer.renderPage": 1,
+          "selection.syncControls": 1,
+          "selection.updateStats": 1,
+          "core._notifyStateChange": 1,
+          "shared.publish": 1,
+          "shared._capture": 1,
+          "shared._normalize": 2,
+          "shared._remember": 1,
+          "shared.schedule": 1,
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1
+        },
+        "edges": {
+          "<event> -> renderer.refreshResultChannels": 1,
+          "renderer.refreshResultChannels -> renderer._renderStateChannels": 1,
+          "renderer._renderStateChannels -> core._syncResultStateRow": 1,
+          "<event> -> renderer.renderPage": 1,
+          "renderer.renderPage -> selection.syncControls": 1,
+          "selection.syncControls -> selection.updateStats": 1,
+          "<event> -> core._notifyStateChange": 1,
+          "core._notifyStateChange -> shared.publish": 1,
+          "shared.publish -> shared._capture": 1,
+          "shared._capture -> shared._normalize": 1,
+          "shared.publish -> shared._normalize": 1,
+          "shared.publish -> shared._remember": 1,
+          "shared.publish -> shared.schedule": 1,
+          "core._notifyStateChange -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1
+        },
+        "mutations": 41,
+        "writes": {
+          "attributes:class:BUTTON": 2,
+          "attributes:aria-pressed:BUTTON": 2,
+          "childList::DIV": 10,
+          "attributes:data-virtual-position:DIV": 1,
+          "childList::SPAN": 7,
+          "attributes:aria-labelledby:DIV": 2,
+          "attributes:aria-label:DIV": 2,
+          "attributes:title:BUTTON": 2,
+          "childList::BUTTON": 3,
+          "attributes:aria-labelledby:BUTTON": 3,
+          "attributes:aria-label:BUTTON": 3,
+          "attributes:title:SPAN": 1,
+          "attributes:aria-labelledby:SPAN": 1,
+          "attributes:aria-label:SPAN": 1,
+          "attributes:data-lines:DIV": 1
+        },
+        "renderStates": [
+          {
+            "mainHidden": false,
+            "page": "results",
+            "generation": 8
+          }
+        ],
+        "identity": {
+          "oldConnected": true,
+          "focusedOld": true,
+          "focusInsideChannels": true,
+          "bodyExpanded": true,
+          "activeTag": "BUTTON"
+        }
+      }
+    ],
+    "channels": {
+      "best": 1,
+      "body": 1,
+      "count": 2
+    },
+    "sharedFailure": {
+      "throws": 1,
+      "error": "AUDIT intentional builder failure",
+      "afterFailure": {
+        "query": "needle",
+        "applied": null,
+        "revision": 7,
+        "rowsPreserved": true
+      },
+      "retried": true,
+      "afterRetry": {
+        "query": "needle",
+        "applied": 7,
+        "revision": 7,
+        "oldRowsStillVisible": false,
+        "modelCount": 2,
+        "domCount": 1
+      },
+      "immediateOldRows": false,
+      "retryRenders": 1,
+      "captureAfterFailure": {
+        "query": "needle",
+        "filterSnapshot": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "sortField": "relevance",
+        "sortDirection": "desc",
+        "browseSortField": "created",
+        "bodyExpanded": false
+      },
+      "target": {
+        "query": "needle",
+        "filterSnapshot": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "sortField": "relevance",
+        "sortDirection": "desc",
+        "browseSortField": "created",
+        "bodyExpanded": false
+      }
+    },
+    "pageErrors": [],
+    "acceptanceChecks": {
+      "folder_sync_once": true,
+      "disclosure_sync_once_without_query_publication": true,
+      "same_sort_keeps_projection": true,
+      "exclude_only_recomputes_once": true,
+      "channel_keyboard_retains_button_focus": true,
+      "retry_commits_before_acknowledging": true
+    }
+  },
+  {
+    "mobile": true,
+    "phases": [
+      {
+        "name": "folder-switch",
+        "calls": {
+          "nav.setPage": 1,
+          "nav.syncPage": 1,
+          "nav._syncMobileTools": 2,
+          "nav._scopeTitle": 3,
+          "core._syncResultStateRow": 3,
+          "core.performSearch": 1,
+          "facets.syncFilterButtons": 1,
+          "facets.renderPinnedPropertyFilters": 1,
+          "facets.syncTypeButtons": 1,
+          "controls.refreshFilterPoolHeader": 1,
+          "core._recomputeCurrentResults": 1,
+          "controls.sync": 1,
+          "sort.sync": 1,
+          "sort.normalize": 1,
+          "controls.syncInputActions": 1,
+          "renderer.refreshResultChannels": 1,
+          "renderer._renderStateChannels": 1,
+          "renderer.renderPage": 1,
+          "selection.syncControls": 1,
+          "selection.updateStats": 1,
+          "core._notifyStateChange": 1,
+          "shared.publish": 1,
+          "shared._capture": 1,
+          "shared._normalize": 2,
+          "shared._remember": 1,
+          "shared.schedule": 1,
+          "nav.sync": 1,
+          "renderer._syncWindowToViewport": 2
+        },
+        "edges": {
+          "<event> -> nav.setPage": 1,
+          "nav.setPage -> nav.syncPage": 1,
+          "nav.syncPage -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 2,
+          "nav.syncPage -> core._syncResultStateRow": 1,
+          "<event> -> core.performSearch": 1,
+          "core.performSearch -> facets.syncFilterButtons": 1,
+          "facets.syncFilterButtons -> facets.renderPinnedPropertyFilters": 1,
+          "facets.renderPinnedPropertyFilters -> core._syncResultStateRow": 1,
+          "facets.syncFilterButtons -> facets.syncTypeButtons": 1,
+          "core.performSearch -> controls.refreshFilterPoolHeader": 1,
+          "core.performSearch -> core._recomputeCurrentResults": 1,
+          "core._recomputeCurrentResults -> controls.sync": 1,
+          "controls.sync -> sort.sync": 1,
+          "sort.sync -> sort.normalize": 1,
+          "controls.sync -> controls.syncInputActions": 1,
+          "core.performSearch -> renderer.refreshResultChannels": 1,
+          "renderer.refreshResultChannels -> renderer._renderStateChannels": 1,
+          "renderer._renderStateChannels -> core._syncResultStateRow": 1,
+          "core.performSearch -> renderer.renderPage": 1,
+          "renderer.renderPage -> selection.syncControls": 1,
+          "selection.syncControls -> selection.updateStats": 1,
+          "core.performSearch -> core._notifyStateChange": 1,
+          "core._notifyStateChange -> shared.publish": 1,
+          "shared.publish -> shared._capture": 1,
+          "shared._capture -> shared._normalize": 1,
+          "shared.publish -> shared._normalize": 1,
+          "shared.publish -> shared._remember": 1,
+          "shared.publish -> shared.schedule": 1,
+          "core._notifyStateChange -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "<event> -> renderer._syncWindowToViewport": 2
+        },
+        "mutations": 109,
+        "writes": {
+          "attributes:data-nav-page:DIV": 1,
+          "attributes:hidden:BUTTON": 2,
+          "attributes:hidden:DIV": 10,
+          "childList::DIV": 49,
+          "attributes:aria-pressed:BUTTON": 3,
+          "attributes:class:DIV": 8,
+          "characterData::#text": 5,
+          "attributes:title:H2": 1,
+          "attributes:aria-label:DIV": 4,
+          "attributes:class:BUTTON": 1,
+          "attributes:data-ls-interaction:BUTTON": 1,
+          "childList::BUTTON": 1,
+          "attributes:aria-label:BUTTON": 3,
+          "attributes:aria-hidden:BUTTON": 1,
+          "attributes:aria-hidden:DIV": 1,
+          "attributes:aria-expanded:BUTTON": 2,
+          "attributes:data-virtual-position:DIV": 12,
+          "attributes:title:BUTTON": 2,
+          "attributes:title:DIV": 1,
+          "attributes:style:DIV": 1
+        },
+        "renderStates": [
+          {
+            "mainHidden": false,
+            "page": "results",
+            "generation": 2
+          }
+        ]
+      },
+      {
+        "name": "child-disclosure",
+        "calls": {
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1,
+          "nav._renderProjection": 1
+        },
+        "edges": {
+          "<event> -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1,
+          "<event> -> nav._renderProjection": 1
+        },
+        "mutations": 116,
+        "writes": {
+          "attributes:data-nav-row-key:DIV": 2,
+          "attributes:data-picker-key:DIV": 3,
+          "attributes:tabindex:BUTTON": 19,
+          "attributes:aria-expanded:BUTTON": 3,
+          "attributes:aria-label:BUTTON": 2,
+          "childList::BUTTON": 6,
+          "attributes:data-test-icon:BUTTON": 3,
+          "attributes:viewBox:svg": 2,
+          "attributes:fill:svg": 2,
+          "attributes:stroke:svg": 2,
+          "attributes:stroke-width:svg": 2,
+          "childList::svg": 2,
+          "attributes:data-nav-icon:BUTTON": 3,
+          "attributes:data-nav-id:DIV": 2,
+          "attributes:data-sort-key:DIV": 2,
+          "attributes:data-sort-parent:DIV": 2,
+          "attributes:data-sort-depth:DIV": 2,
+          "attributes:data-sort-name:DIV": 2,
+          "childList::SPAN": 5,
+          "attributes:data-test-icon:SPAN": 3,
+          "attributes:data-nav-icon:SPAN": 4,
+          "attributes:hidden:BUTTON": 17,
+          "childList::DIV": 11,
+          "attributes:data-tree-depth:DIV": 1,
+          "attributes:class:SPAN": 1,
+          "attributes:data-level:SPAN": 2,
+          "attributes:style:SPAN": 2,
+          "attributes:style:DIV": 1,
+          "attributes:data-ls-interaction:BUTTON": 3,
+          "attributes:class:BUTTON": 2,
+          "attributes:disabled:BUTTON": 1,
+          "attributes:aria-hidden:BUTTON": 1,
+          "attributes:class:DIV": 1
+        },
+        "renderStates": []
+      },
+      {
+        "name": "group-disclosure",
+        "calls": {},
+        "edges": {},
+        "mutations": 26,
+        "writes": {
+          "attributes:hidden:DIV": 1,
+          "attributes:aria-expanded:BUTTON": 2,
+          "childList::BUTTON": 2,
+          "attributes:data-test-icon:BUTTON": 1,
+          "attributes:viewBox:svg": 1,
+          "attributes:fill:svg": 1,
+          "attributes:stroke:svg": 1,
+          "attributes:stroke-width:svg": 1,
+          "childList::svg": 1,
+          "attributes:data-nav-icon:BUTTON": 2,
+          "attributes:aria-label:BUTTON": 1,
+          "attributes:data-nav-id:DIV": 1,
+          "attributes:data-sort-key:DIV": 1,
+          "attributes:data-sort-parent:DIV": 1,
+          "attributes:data-sort-depth:DIV": 1,
+          "attributes:data-sort-name:DIV": 1,
+          "childList::SPAN": 2,
+          "attributes:data-test-icon:SPAN": 1,
+          "attributes:data-nav-icon:SPAN": 2,
+          "attributes:hidden:BUTTON": 1,
+          "attributes:tabindex:BUTTON": 1
+        },
+        "renderStates": []
+      },
+      {
+        "name": "same-page",
+        "calls": {
+          "nav.setPage": 1,
+          "nav.syncPage": 1,
+          "nav._syncMobileTools": 2,
+          "nav._scopeTitle": 3,
+          "core._syncResultStateRow": 1,
+          "nav.sync": 1
+        },
+        "edges": {
+          "<event> -> nav.setPage": 1,
+          "nav.setPage -> nav.syncPage": 1,
+          "nav.syncPage -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 2,
+          "nav.syncPage -> core._syncResultStateRow": 1,
+          "nav.setPage -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1
+        },
+        "mutations": 0,
+        "writes": {},
+        "renderStates": []
+      },
+      {
+        "name": "same-sort",
+        "calls": {
+          "sort.applyField": 1,
+          "sort.sync": 1,
+          "sort.normalize": 1
+        },
+        "edges": {
+          "<event> -> sort.applyField": 1,
+          "sort.applyField -> sort.sync": 1,
+          "sort.sync -> sort.normalize": 1
+        },
+        "mutations": 3,
+        "writes": {
+          "attributes:aria-label:DIV": 1,
+          "attributes:aria-expanded:BUTTON": 1,
+          "attributes:aria-pressed:BUTTON": 1
+        },
+        "renderStates": []
+      },
+      {
+        "name": "noop-notify",
+        "calls": {
+          "core._notifyStateChange": 1,
+          "shared.publish": 1,
+          "shared._capture": 1,
+          "shared._normalize": 2,
+          "shared.schedule": 1,
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1
+        },
+        "edges": {
+          "<event> -> core._notifyStateChange": 1,
+          "core._notifyStateChange -> shared.publish": 1,
+          "shared.publish -> shared._capture": 1,
+          "shared._capture -> shared._normalize": 1,
+          "shared.publish -> shared._normalize": 1,
+          "shared.publish -> shared.schedule": 1,
+          "core._notifyStateChange -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1
+        },
+        "mutations": 0,
+        "writes": {},
+        "renderStates": []
+      },
+      {
+        "name": "exclude-only",
+        "calls": {
+          "plugin._refreshFolderStateCores": 1,
+          "core._refreshCurrentResultsAfterMutation": 1,
+          "core._recomputeCurrentResults": 1,
+          "controls.sync": 1,
+          "sort.sync": 1,
+          "sort.normalize": 1,
+          "controls.syncInputActions": 1,
+          "renderer.refreshResultChannels": 1,
+          "renderer._renderStateChannels": 1,
+          "core._syncResultStateRow": 1,
+          "renderer.renderPage": 1,
+          "selection.syncControls": 1,
+          "selection.updateStats": 1,
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1,
+          "controls.refreshFilterPoolHeader": 1,
+          "plugin.saveSettings": 1,
+          "plugin._flushIndexQueue": 1,
+          "nav._renderProjection": 1
+        },
+        "edges": {
+          "<event> -> plugin._refreshFolderStateCores": 1,
+          "plugin._refreshFolderStateCores -> core._refreshCurrentResultsAfterMutation": 1,
+          "core._refreshCurrentResultsAfterMutation -> core._recomputeCurrentResults": 1,
+          "core._recomputeCurrentResults -> controls.sync": 1,
+          "controls.sync -> sort.sync": 1,
+          "sort.sync -> sort.normalize": 1,
+          "controls.sync -> controls.syncInputActions": 1,
+          "core._refreshCurrentResultsAfterMutation -> renderer.refreshResultChannels": 1,
+          "renderer.refreshResultChannels -> renderer._renderStateChannels": 1,
+          "renderer._renderStateChannels -> core._syncResultStateRow": 1,
+          "core._refreshCurrentResultsAfterMutation -> renderer.renderPage": 1,
+          "renderer.renderPage -> selection.syncControls": 1,
+          "selection.syncControls -> selection.updateStats": 1,
+          "core._refreshCurrentResultsAfterMutation -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1,
+          "plugin._refreshFolderStateCores -> controls.refreshFilterPoolHeader": 1,
+          "<event> -> plugin.saveSettings": 1,
+          "<event> -> plugin._flushIndexQueue": 1,
+          "<event> -> nav._renderProjection": 1
+        },
+        "mutations": 74,
+        "writes": {
+          "attributes:aria-label:DIV": 2,
+          "attributes:aria-expanded:BUTTON": 2,
+          "attributes:aria-pressed:BUTTON": 1,
+          "attributes:class:DIV": 7,
+          "childList::DIV": 4,
+          "attributes:data-virtual-position:DIV": 6,
+          "characterData::#text": 1,
+          "attributes:data-nav-id:DIV": 3,
+          "attributes:data-sort-key:DIV": 3,
+          "attributes:data-sort-parent:DIV": 3,
+          "attributes:data-sort-depth:DIV": 3,
+          "attributes:data-sort-name:DIV": 3,
+          "attributes:hidden:BUTTON": 18,
+          "attributes:tabindex:BUTTON": 18
+        },
+        "renderStates": [
+          {
+            "mainHidden": true,
+            "page": "filters",
+            "generation": 4
+          }
+        ]
+      },
+      {
+        "name": "channel-keyboard-switch",
+        "calls": {
+          "renderer.refreshResultChannels": 1,
+          "renderer._renderStateChannels": 1,
+          "core._syncResultStateRow": 1,
+          "renderer.renderPage": 1,
+          "selection.syncControls": 1,
+          "selection.updateStats": 1,
+          "core._notifyStateChange": 1,
+          "shared.publish": 1,
+          "shared._capture": 1,
+          "shared._normalize": 2,
+          "shared._remember": 1,
+          "shared.schedule": 1,
+          "nav.sync": 1,
+          "nav._scopeTitle": 2,
+          "nav._syncMobileTools": 1
+        },
+        "edges": {
+          "<event> -> renderer.refreshResultChannels": 1,
+          "renderer.refreshResultChannels -> renderer._renderStateChannels": 1,
+          "renderer._renderStateChannels -> core._syncResultStateRow": 1,
+          "<event> -> renderer.renderPage": 1,
+          "renderer.renderPage -> selection.syncControls": 1,
+          "selection.syncControls -> selection.updateStats": 1,
+          "<event> -> core._notifyStateChange": 1,
+          "core._notifyStateChange -> shared.publish": 1,
+          "shared.publish -> shared._capture": 1,
+          "shared._capture -> shared._normalize": 1,
+          "shared.publish -> shared._normalize": 1,
+          "shared.publish -> shared._remember": 1,
+          "shared.publish -> shared.schedule": 1,
+          "core._notifyStateChange -> nav.sync": 1,
+          "nav.sync -> nav._scopeTitle": 1,
+          "nav.sync -> nav._syncMobileTools": 1,
+          "nav._syncMobileTools -> nav._scopeTitle": 1
+        },
+        "mutations": 14,
+        "writes": {
+          "attributes:class:BUTTON": 2,
+          "attributes:aria-pressed:BUTTON": 2,
+          "childList::DIV": 8,
+          "attributes:data-virtual-position:DIV": 1,
+          "attributes:data-lines:DIV": 1
+        },
+        "renderStates": [
+          {
+            "mainHidden": false,
+            "page": "results",
+            "generation": 8
+          }
+        ],
+        "identity": {
+          "oldConnected": true,
+          "focusedOld": true,
+          "focusInsideChannels": true,
+          "bodyExpanded": true,
+          "activeTag": "BUTTON"
+        }
+      }
+    ],
+    "channels": {
+      "best": 1,
+      "body": 1,
+      "count": 2
+    },
+    "sharedFailure": {
+      "throws": 1,
+      "error": "AUDIT intentional builder failure",
+      "afterFailure": {
+        "query": "needle",
+        "applied": null,
+        "revision": 7,
+        "rowsPreserved": true
+      },
+      "retried": true,
+      "afterRetry": {
+        "query": "needle",
+        "applied": 7,
+        "revision": 7,
+        "oldRowsStillVisible": false,
+        "modelCount": 2,
+        "domCount": 1
+      },
+      "immediateOldRows": false,
+      "retryRenders": 1,
+      "captureAfterFailure": {
+        "query": "needle",
+        "filterSnapshot": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "sortField": "relevance",
+        "sortDirection": "desc",
+        "browseSortField": "created",
+        "bodyExpanded": false
+      },
+      "target": {
+        "query": "needle",
+        "filterSnapshot": {
+          "tags": [],
+          "folders": [],
+          "properties": [],
+          "fileTypes": [],
+          "fileType": "all",
+          "dateRange": null,
+          "tagMatchMode": "all",
+          "propertyMatchMode": "all"
+        },
+        "sortField": "relevance",
+        "sortDirection": "desc",
+        "browseSortField": "created",
+        "bodyExpanded": false
+      }
+    },
+    "pageErrors": [],
+    "acceptanceChecks": {
+      "folder_sync_once": true,
+      "disclosure_sync_once_without_query_publication": true,
+      "same_sort_keeps_projection": true,
+      "exclude_only_recomputes_once": true,
+      "channel_keyboard_retains_button_focus": true,
+      "retry_commits_before_acknowledging": true,
+      "mobile_renders_once_after_reveal": true
+    }
+  }
+]

@@ -1,0 +1,31 @@
+PASS returning to a folder reuses the same unchanged card
+PASS ten warmed folder switches do not rebuild cards
+PASS every folder click still searches once and shows the correct files
+PASS mounted card positions match current results
+PASS reused title opens its current file exactly once
+PASS reused property key still opens the shared picker
+PASS open picker bypasses card reuse
+PASS sorting updates positions and final-row marker
+PASS batch mode uses fresh correctly marked checkboxes
+Traceback (most recent call last):
+  File "/workspace/MoNian/scripts/sidebar_browse_cards_audit.py", line 43, in <module>
+    p.evaluate('''async()=>{C.selection.exitBatchMode();C.swipe.setAllExpanded(true);built=0;C.performSearch('');await waitFixture(40)}''')
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 9385, in evaluate
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_page.py", line 472, in evaluate
+    return await self._main_frame.evaluate(expression, arg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 345, in evaluate
+    await self._channel.send(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.evaluate: TypeError: Cannot read properties of null (reading 'setAllExpanded')
+    at eval (eval at evaluate (:311:30), <anonymous>:1:47)
+    at UtilityScript.evaluate (<anonymous>:318:18)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)

@@ -1,0 +1,26 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 check
+> node scripts/check.mjs
+
+{
+  "status": "PASS-ENGINEERING",
+  "modules": 153,
+  "importEdges": 666,
+  "cycles": [],
+  "external": [
+    "obsidian"
+  ],
+  "unresolvedSymbols": 0,
+  "sourceFragments": 826,
+  "byteExactFragments": 676,
+  "approvedMaintenanceFragments": 148,
+  "cssByteExact": false,
+  "fullTypescriptTypeCheck": "not-applicable: JavaScript sources; unresolved-symbol check only",
+  "manifestStatus": "BLOCKED: absent from uploaded baseline; plugin ID/release version cannot be verified",
+  "failures": []
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

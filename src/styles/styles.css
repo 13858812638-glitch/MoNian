@@ -3671,6 +3671,9 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
     --ls-virtual-trailing-space: 0px;
     --ls-result-row-bg: var(--ls-results-surface);
     --ls-result-action-border: color-mix(in srgb, var(--ls-title) 8%, transparent);
+    transition: none;
+}
+.local-search-swipe-shell.has-swipe-actions {
     transition: padding-bottom 150ms cubic-bezier(.2, .78, .25, 1);
 }
 
@@ -3740,7 +3743,7 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
 /* Dida Master Action Shelf：动作总宽超过卡片时仍保持单排，等比分配到当前卡片宽度。 */
 
 
-/* 单一 Action Shelf：桌面 More 与触控左右 Swipe 都显示同一排动作。
+/* 移动端左右 Swipe 共用同一排动作。
    Swipe 方向只决定 Shelf 从左/右哪一侧进入，不再拆成两套按钮组。 */
 .local-search-swipe-shell.has-swipe-actions:is(.is-swipe-left, .is-swipe-right)
 > .local-search-swipe-actions {
@@ -3808,8 +3811,8 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
 /* Action Button 只用语义前景色区分类别；Pressed 不再切换 Surface，避免中间色。 */
 
 
-/* 连续结果与列表共用背景；选中状态独立，Hover 由标题和 More 提示。 */
-.local-search-content .local-search-swipe-shell.has-swipe-actions > .local-search-item {
+/* Shared result layout; gesture behavior belongs only to bound mobile rows. */
+.local-search-content .local-search-swipe-shell > .local-search-item {
     --ls-control-hover-bg: var(--ls-result-row-bg);
     position: relative;
     z-index: 1;
@@ -3841,14 +3844,20 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
 }
 
 
-.local-search-content .local-search-swipe-shell > .local-search-item.is-selected {
+body.is-mobile .local-search-content .local-search-swipe-shell > .local-search-item.is-selected {
     background: var(--ls-state-selected-bg) !important;
     box-shadow: none !important;
 }
 
-.local-search-content .local-search-swipe-shell > .local-search-item.is-current:not(.is-selected) {
+body.is-mobile .local-search-content .local-search-swipe-shell > .local-search-item.is-current:not(.is-selected) {
     background: var(--ls-result-row-bg);
     box-shadow: none;
+}
+
+body:not(.is-mobile) .local-search-content .local-search-swipe-shell > .local-search-item {
+    --ls-control-hover-bg: var(--ls-control-surface-hover);
+    border-radius: var(--ls-picker-row-radius);
+    touch-action: auto;
 }
 
 /* 结果卡不绘制临时按压反馈；保留批量 Selected 与键盘 Focus-visible。 */
@@ -3874,7 +3883,7 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
     overflow: visible;
 }
 
-/* Dida Master Result Title Row：主体与右侧动作区分栏，类型筛选和 More 共用稳定动作轨。 */
+/* Result title and file-type filter share a stable title row. */
 .local-search-item-title-row {
     display: flex;
     align-items: center;
@@ -3959,54 +3968,6 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
     cursor: pointer;
-}
-
-/* 桌面结果卡 More 只作为同一 Action Shelf 的第二输入入口。
-   节点两端共用同一 DOM；能力差异只由 CSS 决定是否显示。 */
-.local-search-card-more { display: none; }
-@media (hover: hover) and (pointer: fine) {
-    .local-search-content button.local-search-card-more {
-        box-sizing: border-box;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0 0 var(--ls-selection-action-size);
-        width: var(--ls-selection-action-size);
-        min-width: var(--ls-selection-action-size);
-        height: var(--ls-selection-action-size);
-        min-height: var(--ls-selection-action-size);
-        margin: 0 -3px 0 0;
-        padding: 0;
-        border: 0 !important;
-        border-radius: var(--ls-control-radius) !important;
-        outline: 0;
-        background: transparent !important;
-        box-shadow: none !important;
-        color: var(--ls-faint) !important;
-        opacity: 0;
-        pointer-events: none;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-    }
-    .local-search-card-more-icon,
-    .local-search-card-more-icon svg {
-        display: block;
-        width: var(--ls-selection-icon-size);
-        height: var(--ls-selection-icon-size);
-        color: currentColor;
-    }
-    .local-search-swipe-shell:hover .local-search-card-more,
-    .local-search-swipe-shell:focus-within .local-search-card-more,
-    .local-search-swipe-shell.is-swipe-open .local-search-card-more,
-    .local-search-card-more:focus-visible {
-        opacity: 1;
-        pointer-events: auto;
-    }
-}
-.local-search-content button.local-search-card-more[aria-expanded="true"] {
-    background: transparent !important;
-    box-shadow: none !important;
-    color: var(--ls-accent-text) !important;
 }
 
 .local-search-item-snippet {
@@ -4288,7 +4249,7 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
 .local-search-content.is-batch-mode .local-search-swipe-shell > .local-search-item {
     cursor: cell;
 }
-/* 标题、更多操作可点击；元数据点击继续选择当前卡片。 */
+/* 标题可打开；元数据点击继续选择当前卡片。 */
 .local-search-content.is-batch-mode .local-search-item button,
 .local-search-content.is-batch-mode .local-search-item input,
 .local-search-content.is-batch-mode .local-search-item [role="button"],
@@ -4296,7 +4257,7 @@ body.is-ios:has(.workspace-drawer.gls-mobile-sidebar-active) .safe-area-top-cove
     pointer-events: none;
     cursor: cell !important;
 }
-.local-search-content.is-batch-mode .local-search-item :is(button.local-search-batch-title-open, button.local-search-card-more) {
+.local-search-content.is-batch-mode .local-search-item button.local-search-batch-title-open {
     pointer-events: auto;
     cursor: pointer !important;
 }
@@ -7361,7 +7322,8 @@ body.is-mobile .local-search-confirm-dialog.local-search-dialog-surface {
 
 /* Picker selection is a shared row primitive. No selected-state geometry
    changes: neighbouring selections retain the same four-pixel breathing gap. */
-:is(.local-search-picker-dropdown, .local-search-nav-scroll, .dida-bridge-picker-surface, .ui-picker-surface) {
+:is(.local-search-picker-dropdown, .local-search-nav-scroll, .dida-bridge-picker-surface, .ui-picker-surface),
+body:not(.is-mobile) .local-search-results {
     --ui-picker-selected-bg: color-mix(in srgb, var(--text-normal) 11%, var(--background-primary));
     --ui-picker-selected-mark: color-mix(in srgb, var(--text-normal) 55%, var(--interactive-accent));
     --ui-picker-selected-ring: color-mix(in srgb, var(--text-normal) 18%, transparent);
@@ -7369,7 +7331,8 @@ body.is-mobile .local-search-confirm-dialog.local-search-dialog-surface {
 :is(.ui-picker-surface .ui-picker-option,
     :is(.local-search-picker-dropdown, .local-search-nav-scroll) .local-search-move-tree-row,
     .dida-bridge-picker-surface .dida-bridge-picker-tree-row,
-    .dida-bridge-picker-surface .dida-bridge-picker-row).is-selected:not(.is-footer-option) {
+    .dida-bridge-picker-surface .dida-bridge-picker-row).is-selected:not(.is-footer-option),
+body:not(.is-mobile) .local-search-content .local-search-swipe-shell > .local-search-item:is(.is-selected, .is-current) {
     background: var(--ui-picker-selected-bg) !important;
     box-shadow: inset 2px 0 var(--ui-picker-selected-mark), inset 0 0 0 1px var(--ui-picker-selected-ring) !important;
     color: var(--text-normal);

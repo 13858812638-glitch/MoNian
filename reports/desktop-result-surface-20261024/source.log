@@ -1,0 +1,68 @@
+{
+  "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
+  "modules": 153,
+  "sourceFiles": 154,
+  "jsLines": 34749,
+  "jsBytes": 1613285,
+  "cssBytes": 265166,
+  "cssLines": 7678,
+  "cssParseErrors": [],
+  "cssRuleCount": 726,
+  "duplicateSelectorsSameContext": [
+    {
+      "context": [],
+      "selector": ":root",
+      "lines": [
+        1444,
+        7278
+      ]
+    },
+    {
+      "context": [],
+      "selector": ".local-search-navigator .local-search-nav-scroll",
+      "lines": [
+        1918,
+        1939
+      ]
+    },
+    {
+      "context": [],
+      "selector": "body.is-mobile",
+      "lines": [
+        7105,
+        7286
+      ]
+    }
+  ],
+  "duplicatePropertiesSameRule": [
+    {
+      "line": 3600,
+      "selector": ".local-search-results-shell",
+      "property": "overflow",
+      "earlier": 3599
+    }
+  ],
+  "styleSettings": {
+    "sectionName": "本地搜索",
+    "sectionId": "gls-local-search-ui",
+    "headings": 28,
+    "parameters": 143,
+    "duplicateIds": [],
+    "duplicateSectionNamedHeading": [],
+    "missingConsumerCandidates": []
+  },
+  "tokenDefinitionCount": 302,
+  "unconsumedTokenCandidates": [],
+  "notes": [
+    "Selectors are grouped by at-rule context; repeated rules are candidates for ownership review, not proven conflicts.",
+    "Dynamic class/token names and external Style Settings consumers can produce scan false positives.",
+    "DOM-owned listeners may be collected with their element; global listeners require explicit scope cleanup.",
+    "No user theme/CSS snippets/data/manifest were supplied."
+  ],
+  "mobileContract": {
+    "baseHeightToken": true,
+    "keyboardHeightToken": true,
+    "note": "Presence is an inventory check, not a native keyboard/layout acceptance test."
+  }
+}
+resource references 292 literal style candidates 4

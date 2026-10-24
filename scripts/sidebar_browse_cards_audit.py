@@ -21,7 +21,12 @@ with sync_playwright() as pw:
    await go('Folder000');window.first=C.resultEls[0];await go('Folder001');await go('Folder000');
   }''')
   if mobile:
-   check('mobile shares retained-card path',p.evaluate('C.resultEls[0]===first'));p.evaluate('V.onClose()');ctx.close();continue
+   check('mobile shares retained-card path',p.evaluate('C.resultEls[0]===first'))
+   p.evaluate("async()=>{C.swipe.setAllExpanded(true);built=0;C.performSearch('');await waitFixture(40)}")
+   check('mobile expanded action shelves bypass card reuse',p.evaluate('built>0&&!R._browseCardCache'))
+   p.evaluate("async()=>{C.swipe.setAllExpanded(false);C.performSearch('');await waitFixture(40);window.actionCard=C.resultEls[0];actionCard._lsSwipeShell._lsResultBinding.open('left');await go('Folder001');await go('Folder000')}")
+   check('mobile opened action cards are rebuilt',p.evaluate('C.resultEls.find(x=>x.dataset.path===actionCard.dataset.path)!==actionCard'))
+   p.evaluate('V.onClose()');ctx.close();continue
   check('returning to a folder reuses the same unchanged card',p.evaluate('C.resultEls[0]===first'))
   p.evaluate('''async()=>{built=0;searches=0;durations=[];for(let i=0;i<10;i++)await go(i%2?'Folder000':'Folder001')}''')
   measured=p.evaluate('({built,searches,durations,count:C.fullResults.length})')
@@ -40,9 +45,7 @@ with sync_playwright() as pw:
   check('sorting updates positions and final-row marker',p.evaluate("[...C.resultsRail.querySelectorAll('.local-search-swipe-shell')].every(s=>C.fullResults[R._actualIndexAtDisplayPosition(+s.dataset.virtualPosition)]?.path===s.dataset.path&&s.classList.contains('is-last-result')===(+s.dataset.virtualPosition===R.visibleResultCount()-1))"))
   p.evaluate('''async()=>{C.selection.enterBatchMode();built=0;C.performSearch('');await waitFixture(40)}''')
   check('batch mode uses fresh correctly marked checkboxes',p.evaluate("built>0&&!R._browseCardCache&&C.resultEls.every(x=>x.getAttribute('role')==='checkbox')"))
-  p.evaluate('''async()=>{C.selection.exitBatchMode();C.swipe.setAllExpanded(true);built=0;C.performSearch('');await waitFixture(40)}''')
-  check('expanded action shelves bypass card reuse',p.evaluate('built>0&&!R._browseCardCache'))
-  p.evaluate('''async()=>{C.swipe.setAllExpanded(false);C.performSearch('');await waitFixture(50);window.mutableCard=C.resultEls[0];window.mutableMeta=C.fullResults[0];mutableMeta.snippet='updated in place';C.performSearch('');await waitFixture(40)}''')
+  p.evaluate('''async()=>{C.selection.exitBatchMode();C.performSearch('');await waitFixture(50);window.mutableCard=C.resultEls[0];window.mutableMeta=C.fullResults[0];mutableMeta.snippet='updated in place';C.performSearch('');await waitFixture(40)}''')
   check('in-place snippet edits invalidate retained content',p.evaluate("C.resultEls.find(x=>x.dataset.path===mutableMeta.path)!==mutableCard&&C.resultsRail.textContent.includes('updated in place')"))
   p.evaluate('''async()=>{window.previous=C.resultEls[0];const f=H.store.get(previous.dataset.path);await H.app.fileManager.processFrontMatter(f,m=>m.status='changed');P._queueFileIndex(f);await P._flushIndexQueueNow();C.performSearch('');await waitFixture(60)}''')
   check('metadata edits rebuild stale cards',p.evaluate("C.resultEls.find(x=>x.dataset.path===previous.dataset.path)!==previous&&C.resultsRail.textContent.includes('changed')"))
@@ -62,8 +65,8 @@ with sync_playwright() as pw:
   p.evaluate('''async()=>{window.savedChildren=[...C.resultsRail.childNodes];window.savedPositions=savedChildren.map(n=>n.dataset?.virtualPosition);const sync=C.selection.syncControls;C.selection.syncControls=()=>{throw Error('intentional post-commit failure')};try{N.select('folder','Folder001')}catch{}C.selection.syncControls=sync;await waitFixture(30)}''')
   check('post-commit failure rolls back cached card nodes and positions',p.evaluate('savedChildren.length===C.resultsRail.childNodes.length&&savedChildren.every((n,i)=>C.resultsRail.childNodes[i]===n&&n.dataset?.virtualPosition===savedPositions[i])'))
   p.evaluate("async()=>{C.performSearch('');await waitFixture(50);await go('Folder000')}" )
-  p.evaluate('''async()=>{const card=C.resultEls[0];card.querySelector('.local-search-card-more').click();await waitFixture(40);window.actionCard=card;await go('Folder001');await go('Folder000')}''')
-  check('cards with an opened action shelf are rebuilt',p.evaluate('C.resultEls.find(x=>x.dataset.path===actionCard.dataset.path)!==actionCard'))
+  p.evaluate("async()=>{window.actionCard=C.resultEls[0];await go('Folder001');await go('Folder000')}")
+  check('desktop cards have no action lifecycle and remain reusable',p.evaluate('!C.swipe&&!C.containerEl.querySelector(".local-search-card-more,.local-search-swipe-actions")&&C.resultEls.find(x=>x.dataset.path===actionCard.dataset.path)===actionCard&&!actionCard._lsSwipeShell._lsResultBinding'))
   p.evaluate('''async()=>{window.deletedPath=C.resultEls[0].dataset.path;await go('Folder001');await H.app.vault.delete(H.store.get(deletedPath));await P._flushIndexQueueNow();await go('Folder000')}''')
   check('deleted cached file never returns to the result list',p.evaluate('!C.resultEls.some(x=>x.dataset.path===deletedPath)'))
   # Warm many distinct folders without retaining an unbounded detached vault UI.

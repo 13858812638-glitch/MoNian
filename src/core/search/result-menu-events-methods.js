@@ -115,7 +115,7 @@ export const SearchCore_result_menu_events_methods = {
 
             const target = isDomElement(evt.target) ? evt.target : null;
             if (!target) return;
-            if (target.closest("[data-ls-nav], .local-search-batch-title-open, .local-search-card-more")) return;
+            if (target.closest("[data-ls-nav], .local-search-batch-title-open")) return;
 
             const item = target.closest(".local-search-item[data-path]");
             if (!item || !this.resultsContainer.contains(item)) return;
@@ -227,6 +227,13 @@ export const SearchCore_result_menu_events_methods = {
                     this._findCurrentResult(target.path);
                 if (!latest?.file) return;
 
+                // Mouse and keyboard share the existing mounted-result cursor.
+                // Updating its surface does not publish a query or render a page.
+                if (!Platform.isMobile && !itemEl.classList.contains("is-current")) {
+                    this.clearSelected();
+                    this.selectedIndex = this.resultEls.indexOf(itemEl);
+                    itemEl.classList.add("is-current");
+                }
                 await this._openResultFromSearch(latest.file, {
                     newTab: !!(evt.metaKey || evt.ctrlKey),
                     forceKeepOpen: keepSearchOpen,

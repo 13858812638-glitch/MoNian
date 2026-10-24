@@ -1,0 +1,122 @@
+{
+  "baseline": "9fa2631",
+  "engineering": "PASS",
+  "build": "PASS",
+  "node": {
+    "total": 272,
+    "passed": 268,
+    "failed": 4,
+    "historicalFailureNames": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ]
+  },
+  "surface": {
+    "beforePassed": 18,
+    "beforeFailed": 18,
+    "afterPassed": 36,
+    "afterFailed": 0
+  },
+  "nativeObsidian": false,
+  "nativeIOS": false,
+  "nativeAndroid": false,
+  "webkit": false,
+  "executionOrder": "Full UI gates before final desktop-only row measurement short-circuit; final build followed by Node, 36 surface checks, card reuse, lifecycle, source/style audit.",
+  "conditions": {
+    "Bpassed": 144,
+    "Bfailed": 0,
+    "errors": []
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0,
+    "errors": []
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0,
+    "errors": []
+  },
+  "feishu": {
+    "passed": 8,
+    "failed": 0
+  },
+  "caret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "portal": {
+    "passed": 48,
+    "failed": 0
+  },
+  "mobile": {
+    "passed": 96,
+    "failed": 0,
+    "errors": []
+  },
+  "index": {
+    "passed": 7,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 0,
+    "failed": 4,
+    "errors": [
+      {
+        "configuration": "desktop-light",
+        "side": "B",
+        "error": "A/B mismatch: desktop-light 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "mobile-light",
+        "side": "B",
+        "error": "A/B mismatch: mobile-light 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "desktop-dark",
+        "side": "B",
+        "error": "A/B mismatch: desktop-dark 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      },
+      {
+        "configuration": "mobile-dark",
+        "side": "B",
+        "error": "A/B mismatch: mobile-dark 01-initial; snapshots saved",
+        "pageErrors": [],
+        "console": []
+      }
+    ]
+  },
+  "browse": {
+    "passed": 25,
+    "failed": 0
+  },
+  "finalExecutions": [
+    {
+      "name": "browse-final",
+      "exit": 0
+    },
+    {
+      "name": "lifecycle-final",
+      "exit": 0
+    },
+    {
+      "name": "source-final",
+      "exit": 0
+    }
+  ],
+  "retiredSourceReferences": {
+    "local-search-card-more": 0,
+    "desktopTrigger": 0,
+    "openFromTrigger": 0,
+    "is-swipe-trigger-open": 0,
+    "_dismissClickArmed": 0
+  }
+}

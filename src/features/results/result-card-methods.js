@@ -56,7 +56,7 @@ export const SearchResultRendererController_result_card_methods = {
         });
         const content = item.createDiv({ cls: "local-search-item-content" });
         const body = content.createDiv({ cls: "local-search-item-body" });
-        const { moreButton } = this._buildTitleRow(body, result);
+        this._buildTitleRow(body, result);
         const view = core.resultControls.activeViewConfig();
         if (view.snippetLines !== 0 && result.snippet) {
             const snippet = body.createDiv({ cls: "local-search-item-snippet" });
@@ -88,7 +88,6 @@ export const SearchResultRendererController_result_card_methods = {
         // 与 Dida Bridge 结果卡相同：Swipe 生命周期逐卡绑定，
         // 不再由结果容器维护第二套委托状态机。
         core.swipe?.bind(shell, item, {
-            desktopTrigger: moreButton,
             actions: [
                 { key: "rename", icon: "pencil", label: "重命名", shortLabel: "重命名", ariaLabel: `重命名：${result.name || result.path}` },
                 { key: "move", icon: "folder-input", label: "移动到", shortLabel: "移动", ariaLabel: `移动到：${result.name || result.path}` },

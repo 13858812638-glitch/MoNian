@@ -24,7 +24,7 @@ import { SearchCore_search_and_ranking_methods } from "./search/search-and-ranki
 import { SearchCore_session_methods } from "./search/session-methods.js";
 import { SearchCore_shell_methods } from "./search/shell-methods.js";
 import { normalizeModalSearchQuery, normalizeModalViewportAnchor } from "./session-values.js";
-import { Notice } from "obsidian";
+import { Notice, Platform } from "obsidian";
 
 
 // SearchCore owns exactly one list of references it clears on destroy.
@@ -127,7 +127,7 @@ export class SearchCore {
         this.dropdown = new SearchDropdownController(this);
         this.sorting = new SearchSortController(this);
         this.resultControls = new SearchResultControlsController(this);
-        this.swipe = new SwipeActionCoordinator(this);
+        this.swipe = Platform.isMobile ? new SwipeActionCoordinator(this) : null;
         this.resultRenderer = new SearchResultRendererController(this);
         this.facets = new SearchFacetController(this);
         this.batchMetadata = new BatchMetadataController(this);

@@ -130,13 +130,15 @@ export class SearchSelectionController {
             event.stopPropagation();
             this.toggleSelectAll();
         });
-        this.expandActionsBtn = this._iconButton(controls, "panel-bottom-open", "展开全部左滑按钮", "", "choice");
-        this.expandActionsBtn.addEventListener("click", event => {
-            event.preventDefault(); event.stopPropagation();
-            if (!this.batchMode || this.expandActionsBtn.disabled) return;
-            core.swipe?.setAllExpanded(!core.swipe.allExpanded);
-            this.syncControls();
-        });
+        if (core.swipe) {
+            this.expandActionsBtn = this._iconButton(controls, "panel-bottom-open", "展开全部左滑按钮", "", "choice");
+            this.expandActionsBtn.addEventListener("click", event => {
+                event.preventDefault(); event.stopPropagation();
+                if (!this.batchMode || this.expandActionsBtn.disabled) return;
+                core.swipe.setAllExpanded(!core.swipe.allExpanded);
+                this.syncControls();
+            });
+        }
         this.exitBatchBtn = this._iconButton(controls, "x", "退出批量操作", "is-exit", "choice");
 
         this.tagMetadataBtn.addEventListener("click", event => {
@@ -509,7 +511,7 @@ export class SearchSelectionController {
         if (el._lsSelecting !== selecting) {
             el._lsSelecting = selecting;
             for (const control of el.querySelectorAll("button, .local-search-result-metadata-flow")) {
-                if (selecting && !control.matches(".local-search-batch-title-open, .local-search-card-more")) control.tabIndex = -1;
+                if (selecting && !control.matches(".local-search-batch-title-open")) control.tabIndex = -1;
                 else control.removeAttribute("tabindex");
             }
         }

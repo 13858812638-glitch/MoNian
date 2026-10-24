@@ -1,3 +1,7 @@
+> **2026-10-24 桌面结果行交互（未冻结）**：唯一开发基线 `9fa2631`。移除桌面结果侧滑生命周期和悬浮“…”专用路径；桌面结果行共用导航行悬浮/选中样式。移动侧滑保留。见 [实现与验证](DESKTOP_RESULT_SURFACE_20261024.md)。下文保留历史记录。
+
+本轮内部合同：`_buildTitleRow` 返回 `{titleRow,typeButton}`；移动端 `SwipeActionCoordinator.bind` 返回的绑定只保留 `panel/close/open/syncAllExpanded`，退休 `desktopTrigger/openFromTrigger`。类方法名称、arity 与方法装配表不变；桌面 `core.swipe` 为 null，由原生命周期可选消费。
+
 > **2026-10-23 输入与 Picker 重复工作精简（未冻结）**：唯一开发基线 `90f1ade`。待提交输入只保存编辑缓冲，输入显隐不遍历工具栏；页面同值属性不重复写入，Picker 初始测量统一由 ResizeObserver 负责。见 [实现、测量与边界](INTERACTION_EFFICIENCY_20261023.md)。下文保留历史记录。
 
 本轮内部辅助函数 `syncNavigatorQueryVisibility(nav)` 位于 Navigator 模块，不导出、不保存状态；原生 input 与工具栏正式同步共用。`observePickerCountRail(panel,list,property)` 签名及 cleanup 合同不变。所有类方法装配表未变。

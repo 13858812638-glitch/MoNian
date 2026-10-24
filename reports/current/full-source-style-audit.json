@@ -2,19 +2,19 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34842,
-  "jsBytes": 1618133,
-  "cssBytes": 266664,
-  "cssLines": 7715,
+  "jsLines": 34749,
+  "jsBytes": 1613340,
+  "cssBytes": 265166,
+  "cssLines": 7678,
   "cssParseErrors": [],
-  "cssRuleCount": 729,
+  "cssRuleCount": 726,
   "duplicateSelectorsSameContext": [
     {
       "context": [],
       "selector": ":root",
       "lines": [
         1444,
-        7317
+        7278
       ]
     },
     {
@@ -29,8 +29,8 @@
       "context": [],
       "selector": "body.is-mobile",
       "lines": [
-        7144,
-        7325
+        7105,
+        7286
       ]
     }
   ],
@@ -146,7 +146,7 @@
     },
     {
       "file": "src/core/search/result-menu-events-methods.js",
-      "line": 245,
+      "line": 252,
       "code": "this.resultsContainer.addEventListener(\"contextmenu\", evt => {"
     },
     {
@@ -686,12 +686,12 @@
     },
     {
       "file": "src/features/results/card-metadata-methods.js",
-      "line": 173,
+      "line": 157,
       "code": "button.addEventListener(\"click\", e => {"
     },
     {
       "file": "src/features/results/card-metadata-methods.js",
-      "line": 227,
+      "line": 211,
       "code": "expand.addEventListener(\"click\", e => {"
     },
     {
@@ -756,32 +756,32 @@
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 134,
+      "line": 135,
       "code": "this.expandActionsBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 142,
+      "line": 144,
       "code": "this.tagMetadataBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 148,
+      "line": 150,
       "code": "this.propertyMetadataBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 154,
+      "line": 156,
       "code": "this.moveFilesBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 161,
+      "line": 163,
       "code": "this.deleteFilesBtn.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "line": 173,
+      "line": 175,
       "code": "this.exitBatchBtn.addEventListener(\"click\", event => {"
     },
     {
@@ -891,92 +891,87 @@
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 83,
+      "line": 59,
       "code": "this.ownerDocument.addEventListener("
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 88,
+      "line": 64,
       "code": "this.ownerDocument.addEventListener("
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 167,
+      "line": 143,
       "code": "this.ownerDocument?.removeEventListener("
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 172,
+      "line": 148,
       "code": "this.ownerDocument?.removeEventListener("
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 233,
+      "line": 201,
       "code": "button.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 400,
+      "line": 333,
       "code": "row.addEventListener(\"click\", event => {"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 414,
-      "code": "desktopTrigger.addEventListener(\"click\", event => {"
-    },
-    {
-      "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 513,
+      "line": 429,
       "code": "win.removeEventListener(\"pointermove\", pointerMove, true);"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 514,
+      "line": 430,
       "code": "win.removeEventListener(\"pointerup\", pointerEnd, true);"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 515,
+      "line": 431,
       "code": "win.removeEventListener(\"pointercancel\", pointerCancel, true);"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 591,
+      "line": 507,
       "code": "win.addEventListener(\"pointermove\", pointerMove, { capture: true, passive: false });"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 592,
+      "line": 508,
       "code": "win.addEventListener(\"pointerup\", pointerEnd, true);"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 593,
+      "line": 509,
       "code": "win.addEventListener(\"pointercancel\", pointerCancel, true);"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 599,
+      "line": 515,
       "code": "row.addEventListener(\"pointerdown\", event => {"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 617,
+      "line": 533,
       "code": "row.addEventListener(\"touchstart\", event => {"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 638,
+      "line": 554,
       "code": "row.addEventListener(\"touchmove\", event => {"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 650,
+      "line": 566,
       "code": "row.addEventListener(\"touchend\", event => {"
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "line": 658,
+      "line": 574,
       "code": "row.addEventListener(\"touchcancel\", event => {"
     },
     {
@@ -1558,8 +1553,8 @@
     {
       "file": "src/core/SearchCore.js",
       "lines": 220,
-      "bytes": 13130,
-      "sha256": "5a81dbc84b6441f73824a3edbfa456a5928e06bc7284d45a80b4f51a6573a65d"
+      "bytes": 13167,
+      "sha256": "30a623eb21a4a1f8dab49d7c9e8a9634f573848b476e13cd896bf9ab12fe1d33"
     },
     {
       "file": "src/core/SharedSearchStateCoordinator.js",
@@ -1599,9 +1594,9 @@
     },
     {
       "file": "src/core/search/result-menu-events-methods.js",
-      "lines": 269,
-      "bytes": 11710,
-      "sha256": "f368905d6fc1c52d90f5e75e0714c96cb4904f7568e7a6913805f4fad2d15f10"
+      "lines": 276,
+      "bytes": 12123,
+      "sha256": "cc9f3ac6317faab490ad8c807a9b960a920c3ef3431bef734a189b5119bf65ae"
     },
     {
       "file": "src/core/search/search-and-ranking-methods.js",
@@ -1612,8 +1607,8 @@
     {
       "file": "src/core/search/session-methods.js",
       "lines": 129,
-      "bytes": 5816,
-      "sha256": "cead174449ced749446b564fd9510a5182fc8b367898f0693d7440cf6ab9d4a0"
+      "bytes": 5817,
+      "sha256": "102cc13f32487e3a7f2d2c9bd37ce67af40fc34c0bb84f5e015ac188e5860c1d"
     },
     {
       "file": "src/core/search/shell-methods.js",
@@ -2085,9 +2080,9 @@
     },
     {
       "file": "src/features/results/card-metadata-methods.js",
-      "lines": 347,
-      "bytes": 15887,
-      "sha256": "2e8f5a2070ac65acb9e8dd6d014dbec2e73526cc4d516cdadbd104cdaf4fc4b7"
+      "lines": 331,
+      "bytes": 15139,
+      "sha256": "15d5d5e0f54229ae50c2379dbb4d9079fcfd7b294957a9a8e4dcb7ceb56bf915"
     },
     {
       "file": "src/features/results/filter-channels-methods.js",
@@ -2103,9 +2098,9 @@
     },
     {
       "file": "src/features/results/result-card-methods.js",
-      "lines": 208,
-      "bytes": 9822,
-      "sha256": "8a36a7b91d0f82cc2b962ef4d6591344e74fd3cc233836cf99c67484a6ab390c"
+      "lines": 207,
+      "bytes": 9759,
+      "sha256": "3ddd142e6fcec1b5b3a1be3645f7e307f85754fb0c694a9dd13dfbc83c32ee9f"
     },
     {
       "file": "src/features/results/view-config.js",
@@ -2115,9 +2110,9 @@
     },
     {
       "file": "src/features/results/viewport-anchors-methods.js",
-      "lines": 397,
-      "bytes": 18130,
-      "sha256": "2db93f1a744d7f39c66ff585b4625ccade4cc91bc7c5ad5c07f1d8af48858830"
+      "lines": 396,
+      "bytes": 18116,
+      "sha256": "60fc4312c1da88e8c4c662b1c8c85dabea0154ee589237dec2ee00d681784d44"
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
@@ -2151,9 +2146,9 @@
     },
     {
       "file": "src/features/selection/SearchSelectionController.js",
-      "lines": 545,
-      "bytes": 23126,
-      "sha256": "a1700a101ad6a4e88cca2117a3f06f163a0ece6fbbd6b9082212c3f008b413f5"
+      "lines": 547,
+      "bytes": 23164,
+      "sha256": "6f839f6bd4711e00e7d3a827e7e6cbfa142d4fc72fd754ba9c97e18deb84d383"
     },
     {
       "file": "src/features/sort/SearchSortController.js",
@@ -2187,9 +2182,9 @@
     },
     {
       "file": "src/interactions/SwipeActionCoordinator.js",
-      "lines": 679,
-      "bytes": 29113,
-      "sha256": "4e37bd0e3aa33daa6b4516742077b89751cdf3df3d050b126e8dcd342c4f4b29"
+      "lines": 595,
+      "bytes": 24656,
+      "sha256": "312ba7b44b7c84f71af916a8300502ef40c7094f9dcb9f75dfe3669dd6800408"
     },
     {
       "file": "src/interactions/hover-hints.js",
@@ -2469,9 +2464,9 @@
     },
     {
       "file": "src/styles/styles.css",
-      "lines": 7715,
-      "bytes": 266664,
-      "sha256": "8ccc69f6e764b9705ae53f2573cdb6f38cea476360e5249304803182f7fba116"
+      "lines": 7678,
+      "bytes": 265166,
+      "sha256": "f2ca9fecbf9b9581e407fe875b3382ae8dc6546391dd0ad06cafc978b25fc989"
     }
   ],
   "mobileContract": {
