@@ -1,0 +1,17 @@
+{
+  "file": "downloads/GLS-Latest-Source-and-Runtime-20261025.zip",
+  "sourceCommit": "76f83bb974be6eeaa5578ab04cfbcc879fbe8e87",
+  "bytes": 10728778,
+  "sha256": "8ddcd480f368a8427720f00feb25466c27b8b2cafc73b2f958e5bccb5444eabe",
+  "entries": 1203,
+  "sourceFiles": 1199,
+  "crc32": "PASS",
+  "allEntryBytesMatch": true,
+  "runtimeMatchesSourceDist": true,
+  "independentExtractedBuild": {
+    "install": "npm ci --cache /tmp/gls-source-npm-cache --no-audit --no-fund",
+    "build": "npm run build",
+    "runtimeByteIdentical": true,
+    "initialOfflineAttempt": "ENOTCACHED; retried normal locked dependency install successfully"
+  }
+}
