@@ -1,0 +1,135 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 test:browser
+> node scripts/run-browser.mjs
+
+desktop-light A 01-initial
+desktop-light A 02-composition-deferred
+desktop-light A 03-search-results
+desktop-light A 04-folder-picker
+desktop-light A 05-picker-search-focus
+desktop-light A 06-folder-and-erase
+desktop-light A 07-clear-conditions
+desktop-light A 08-batch-range
+desktop-light A 09-batch-all-and-exit
+desktop-light A 10-rename-dialog
+desktop-light A 11-rename-submit
+desktop-light A 12-dialog-cancel
+desktop-light A 13-delete-dialog
+desktop-light A 14-delete-submit
+desktop-light A 15-derived-create
+desktop-light A 16-create-commit
+desktop-light A 17-close-cleanup
+desktop-light A 18-pointer-sort-and-cancel
+desktop-light A 19-swipe-owner-and-native-scroll
+desktop-light A 20-workbench-embedded-api
+desktop-light A completed 20 scenarios
+desktop-light B 01-initial
+FAIL {'configuration': 'desktop-light', 'side': 'B', 'error': 'A/B mismatch: desktop-light 01-initial; snapshots saved', 'pageErrors': [], 'console': []}
+mobile-light A 01-initial
+mobile-light A 02-composition-deferred
+mobile-light A 03-search-results
+mobile-light A 04-folder-picker
+mobile-light A 05-picker-search-focus
+mobile-light A 06-folder-and-erase
+mobile-light A 07-clear-conditions
+mobile-light A 08-batch-range
+mobile-light A 09-batch-all-and-exit
+mobile-light A 10-rename-dialog
+mobile-light A 11-rename-submit
+mobile-light A 12-dialog-cancel
+mobile-light A 13-delete-dialog
+mobile-light A 14-delete-submit
+mobile-light A 15-derived-create
+mobile-light A 16-create-commit
+mobile-light A 17-close-cleanup
+mobile-light A 18-pointer-sort-and-cancel
+mobile-light A 19-swipe-owner-and-native-scroll
+mobile-light A 20-workbench-embedded-api
+mobile-light A completed 20 scenarios
+mobile-light B 01-initial
+FAIL {'configuration': 'mobile-light', 'side': 'B', 'error': 'A/B mismatch: mobile-light 01-initial; snapshots saved', 'pageErrors': [], 'console': []}
+desktop-dark A 01-initial
+desktop-dark A 02-composition-deferred
+desktop-dark A 03-search-results
+desktop-dark A 04-folder-picker
+desktop-dark A 05-picker-search-focus
+desktop-dark A 06-folder-and-erase
+desktop-dark A 07-clear-conditions
+desktop-dark A 08-batch-range
+desktop-dark A 09-batch-all-and-exit
+desktop-dark A 10-rename-dialog
+desktop-dark A 11-rename-submit
+desktop-dark A 12-dialog-cancel
+desktop-dark A 13-delete-dialog
+desktop-dark A 14-delete-submit
+desktop-dark A 15-derived-create
+desktop-dark A 16-create-commit
+desktop-dark A 17-close-cleanup
+desktop-dark A 18-pointer-sort-and-cancel
+desktop-dark A 19-swipe-owner-and-native-scroll
+desktop-dark A 20-workbench-embedded-api
+desktop-dark A completed 20 scenarios
+desktop-dark B 01-initial
+FAIL {'configuration': 'desktop-dark', 'side': 'B', 'error': 'A/B mismatch: desktop-dark 01-initial; snapshots saved', 'pageErrors': [], 'console': []}
+mobile-dark A 01-initial
+mobile-dark A 02-composition-deferred
+mobile-dark A 03-search-results
+mobile-dark A 04-folder-picker
+mobile-dark A 05-picker-search-focus
+mobile-dark A 06-folder-and-erase
+mobile-dark A 07-clear-conditions
+mobile-dark A 08-batch-range
+mobile-dark A 09-batch-all-and-exit
+mobile-dark A 10-rename-dialog
+mobile-dark A 11-rename-submit
+mobile-dark A 12-dialog-cancel
+mobile-dark A 13-delete-dialog
+mobile-dark A 14-delete-submit
+mobile-dark A 15-derived-create
+mobile-dark A 16-create-commit
+mobile-dark A 17-close-cleanup
+mobile-dark A 18-pointer-sort-and-cancel
+mobile-dark A 19-swipe-owner-and-native-scroll
+mobile-dark A 20-workbench-embedded-api
+mobile-dark A completed 20 scenarios
+mobile-dark B 01-initial
+FAIL {'configuration': 'mobile-dark', 'side': 'B', 'error': 'A/B mismatch: mobile-dark 01-initial; snapshots saved', 'pageErrors': [], 'console': []}
+{
+  "passed": 0,
+  "failed": 4,
+  "errors": [
+    {
+      "configuration": "desktop-light",
+      "side": "B",
+      "error": "A/B mismatch: desktop-light 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    },
+    {
+      "configuration": "mobile-light",
+      "side": "B",
+      "error": "A/B mismatch: mobile-light 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    },
+    {
+      "configuration": "desktop-dark",
+      "side": "B",
+      "error": "A/B mismatch: desktop-dark 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    },
+    {
+      "configuration": "mobile-dark",
+      "side": "B",
+      "error": "A/B mismatch: mobile-dark 01-initial; snapshots saved",
+      "pageErrors": [],
+      "console": []
+    }
+  ]
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

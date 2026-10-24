@@ -1,0 +1,16 @@
+PASS desktop held mouse is not a scroll transaction
+PASS desktop click opens and selects without delayed refresh
+PASS desktop non-scrolling key does no work
+PASS desktop button keyboard activation is not scrolling
+PASS desktop real scroll saves position without query publish or navigation sync
+PASS desktop pending index work waits then commits once
+PASS desktop pending shared query still consumed after scroll
+PASS desktop native keyboard scrolling still tracked
+PASS desktop wheel still settles without redundant projections
+PASS desktop close cancels scroll timer with no late work
+PASS desktop no page errors
+PASS mobile real scroll saves position without query publish or navigation sync
+PASS mobile pending index work waits then commits once
+PASS mobile pending shared query still consumed after scroll
+PASS mobile close cancels scroll timer with no late work
+PASS mobile no page errors

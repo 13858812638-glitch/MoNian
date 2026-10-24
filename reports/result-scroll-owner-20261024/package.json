@@ -1,0 +1,21 @@
+{
+  "file": "downloads/GLS-Result-Scroll-Optimized-20261024.zip",
+  "bytes": 434419,
+  "sha256": "2d5ad9491b33ce8c8b76a51194a241bd08024e0893e41d77f178466f78312756",
+  "crc32": "PASS",
+  "exactDist": true,
+  "files": [
+    {
+      "name": "main.js",
+      "bytes": 1771817,
+      "sha256": "4554c6fc8a9e4c8eddb045bf4d55008200e357725d6932d841f56d144018412f"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 265166,
+      "sha256": "f2ca9fecbf9b9581e407fe875b3382ae8dc6546391dd0ad06cafc978b25fc989"
+    }
+  ],
+  "manifestIncluded": false,
+  "dataIncluded": false
+}

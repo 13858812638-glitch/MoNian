@@ -1,0 +1,302 @@
+[
+  {
+    "name": "desktop held mouse is not a scroll transaction",
+    "passed": true,
+    "evidence": {
+      "mark": 0,
+      "settle": 0,
+      "nav": 0,
+      "publish": 0,
+      "save": 0,
+      "commit": 0,
+      "render": 0,
+      "opened": 0,
+      "scrolling": false
+    }
+  },
+  {
+    "name": "desktop click opens and selects without delayed refresh",
+    "passed": true,
+    "evidence": {
+      "mark": 0,
+      "settle": 0,
+      "nav": 0,
+      "publish": 0,
+      "save": 0,
+      "commit": 0,
+      "render": 0,
+      "opened": 1,
+      "selected": 0
+    }
+  },
+  {
+    "name": "desktop non-scrolling key does no work",
+    "passed": true,
+    "evidence": {
+      "mark": 0,
+      "settle": 0,
+      "nav": 0,
+      "publish": 0,
+      "save": 0,
+      "commit": 0,
+      "render": 0,
+      "opened": 0
+    }
+  },
+  {
+    "name": "desktop button keyboard activation is not scrolling",
+    "passed": true,
+    "evidence": {
+      "mark": 0,
+      "settle": 0,
+      "nav": 0,
+      "publish": 0,
+      "save": 0,
+      "commit": 0,
+      "render": 0,
+      "opened": 0
+    }
+  },
+  {
+    "name": "desktop mouse press does not delay a valid index commit",
+    "passed": true,
+    "evidence": {
+      "mark": 0,
+      "settle": 0,
+      "nav": 1,
+      "publish": 0,
+      "save": 0,
+      "commit": 1,
+      "render": 0,
+      "opened": 0,
+      "pending": false
+    }
+  },
+  {
+    "name": "desktop explicit position restore does not start native scrolling",
+    "passed": true,
+    "evidence": {
+      "mark": 0,
+      "settle": 0,
+      "nav": 0,
+      "publish": 0,
+      "save": 0,
+      "commit": 0,
+      "render": 0,
+      "opened": 0,
+      "top": 80
+    }
+  },
+  {
+    "name": "desktop real scroll saves position without query publish or navigation sync",
+    "passed": true,
+    "evidence": {
+      "mark": 1,
+      "settle": 1,
+      "nav": 0,
+      "publish": 0,
+      "save": 1,
+      "commit": 0,
+      "render": 0,
+      "opened": 0,
+      "top": 220,
+      "saved": 220,
+      "timer": null
+    }
+  },
+  {
+    "name": "desktop pending index work waits then commits once",
+    "passed": true,
+    "evidence": {
+      "mark": 1,
+      "settle": 1,
+      "nav": 1,
+      "publish": 0,
+      "save": 1,
+      "commit": 1,
+      "render": 0,
+      "opened": 0,
+      "early": 0,
+      "pending": false
+    }
+  },
+  {
+    "name": "desktop pending shared query still consumed after scroll",
+    "passed": true,
+    "evidence": {
+      "mark": 1,
+      "settle": 1,
+      "nav": 1,
+      "publish": 0,
+      "save": 2,
+      "commit": 0,
+      "render": 1,
+      "opened": 0,
+      "before": "",
+      "after": "note1",
+      "applied": 2,
+      "revision": 2
+    }
+  },
+  {
+    "name": "desktop native keyboard scrolling still tracked",
+    "passed": true,
+    "evidence": {
+      "mark": 9,
+      "settle": 1,
+      "nav": 0,
+      "publish": 0,
+      "save": 1,
+      "commit": 0,
+      "render": 0,
+      "opened": 0,
+      "top": 658
+    }
+  },
+  {
+    "name": "desktop wheel still settles without redundant projections",
+    "passed": true,
+    "evidence": {
+      "mark": 2,
+      "settle": 1,
+      "nav": 0,
+      "publish": 0,
+      "save": 1,
+      "commit": 0,
+      "render": 0,
+      "opened": 0
+    }
+  },
+  {
+    "name": "desktop close cancels scroll timer with no late work",
+    "passed": true,
+    "evidence": {
+      "saved": {
+        "mark": 1,
+        "settle": 0,
+        "nav": 0,
+        "publish": 1,
+        "save": 0,
+        "commit": 0,
+        "render": 0,
+        "opened": 0
+      },
+      "after": {
+        "mark": 1,
+        "settle": 0,
+        "nav": 0,
+        "publish": 1,
+        "save": 0,
+        "commit": 0,
+        "render": 0,
+        "opened": 0
+      },
+      "timer": null,
+      "owner": null
+    }
+  },
+  {
+    "name": "desktop no page errors",
+    "passed": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile explicit position restore does not start native scrolling",
+    "passed": true,
+    "evidence": {
+      "mark": 0,
+      "settle": 0,
+      "nav": 0,
+      "publish": 0,
+      "save": 0,
+      "commit": 0,
+      "render": 0,
+      "opened": 0,
+      "top": 80
+    }
+  },
+  {
+    "name": "mobile real scroll saves position without query publish or navigation sync",
+    "passed": true,
+    "evidence": {
+      "mark": 1,
+      "settle": 1,
+      "nav": 0,
+      "publish": 0,
+      "save": 1,
+      "commit": 0,
+      "render": 0,
+      "opened": 0,
+      "top": 220,
+      "saved": 220,
+      "timer": null
+    }
+  },
+  {
+    "name": "mobile pending index work waits then commits once",
+    "passed": true,
+    "evidence": {
+      "mark": 1,
+      "settle": 1,
+      "nav": 1,
+      "publish": 0,
+      "save": 1,
+      "commit": 1,
+      "render": 0,
+      "opened": 0,
+      "early": 0,
+      "pending": false
+    }
+  },
+  {
+    "name": "mobile pending shared query still consumed after scroll",
+    "passed": true,
+    "evidence": {
+      "mark": 2,
+      "settle": 2,
+      "nav": 1,
+      "publish": 0,
+      "save": 3,
+      "commit": 0,
+      "render": 1,
+      "opened": 0,
+      "before": "",
+      "after": "note1",
+      "applied": 2,
+      "revision": 2
+    }
+  },
+  {
+    "name": "mobile close cancels scroll timer with no late work",
+    "passed": true,
+    "evidence": {
+      "saved": {
+        "mark": 1,
+        "settle": 0,
+        "nav": 0,
+        "publish": 1,
+        "save": 0,
+        "commit": 0,
+        "render": 0,
+        "opened": 0
+      },
+      "after": {
+        "mark": 1,
+        "settle": 0,
+        "nav": 0,
+        "publish": 1,
+        "save": 0,
+        "commit": 0,
+        "render": 0,
+        "opened": 0
+      },
+      "timer": null,
+      "owner": null
+    }
+  },
+  {
+    "name": "mobile no page errors",
+    "passed": true,
+    "evidence": []
+  }
+]

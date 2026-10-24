@@ -1,0 +1,36 @@
+PASS desktop-light controls and bindings follow platform policy
+PASS desktop-light row gesture listeners exist only on mobile
+PASS desktop-light ordinary desktop row sizing skips action-reveal work
+PASS desktop-light result hover uses the filter row surface
+PASS desktop-light click updates one cursor with shared selection styling and no render
+PASS desktop-light hover and selected surfaces do not resize the row
+PASS desktop-light keyboard continues from the clicked cursor
+PASS desktop-light batch selection remains independent
+PASS desktop-light context menu remains available
+PASS desktop-light rebuilt result has no swipe state or stale cursor
+PASS desktop-light desktop host variants create no swipe lifecycle
+PASS desktop-light no page errors
+PASS desktop-dark controls and bindings follow platform policy
+PASS desktop-dark row gesture listeners exist only on mobile
+PASS desktop-dark ordinary desktop row sizing skips action-reveal work
+PASS desktop-dark result hover uses the filter row surface
+PASS desktop-dark click updates one cursor with shared selection styling and no render
+PASS desktop-dark hover and selected surfaces do not resize the row
+PASS desktop-dark keyboard continues from the clicked cursor
+PASS desktop-dark batch selection remains independent
+PASS desktop-dark context menu remains available
+PASS desktop-dark rebuilt result has no swipe state or stale cursor
+PASS desktop-dark desktop host variants create no swipe lifecycle
+PASS desktop-dark no page errors
+PASS mobile-light controls and bindings follow platform policy
+PASS mobile-light row gesture listeners exist only on mobile
+PASS mobile-light ordinary desktop row sizing skips action-reveal work
+PASS mobile-light real touch sequence still reveals five actions
+PASS mobile-light mobile expand-all still works
+PASS mobile-light no page errors
+PASS mobile-dark controls and bindings follow platform policy
+PASS mobile-dark row gesture listeners exist only on mobile
+PASS mobile-dark ordinary desktop row sizing skips action-reveal work
+PASS mobile-dark real touch sequence still reveals five actions
+PASS mobile-dark mobile expand-all still works
+PASS mobile-dark no page errors

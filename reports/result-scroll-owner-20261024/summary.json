@@ -1,0 +1,76 @@
+{
+  "baseline": "b2dee87",
+  "productionChanges": [
+    "src/features/results/viewport-geometry-methods.js"
+  ],
+  "newScrollChecks": {
+    "before": {
+      "total": 19,
+      "passed": 11,
+      "failed": 8
+    },
+    "after": {
+      "total": 19,
+      "passed": 19,
+      "failed": 0
+    }
+  },
+  "desktopResultSurface": {
+    "passed": 36,
+    "failed": 0
+  },
+  "browseCards": {
+    "passed": 25,
+    "failed": 0
+  },
+  "engineering": "pass; 153 modules, 666 imports, 0 unresolved/cycles",
+  "node": {
+    "total": 272,
+    "passed": 268,
+    "failed": 4,
+    "failures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ],
+    "note": "same failures recorded at baseline; no test or frozen baseline relaxation"
+  },
+  "browserAB": "4 historical 01-initial snapshot mismatches; subsequent B scenarios are not claimed tested by this gate",
+  "acceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "focus": {
+    "passed": 56,
+    "failed": 0
+  },
+  "focusRepair": {
+    "passed": 96,
+    "failed": 0
+  },
+  "feishuFocus": {
+    "passed": 8,
+    "failed": 0
+  },
+  "caret": {
+    "passed": 36,
+    "failed": 0
+  },
+  "portal": "Chromium 48 pass; WebKit not run",
+  "mobileSidebar": {
+    "passed": 96,
+    "failed": 0
+  },
+  "indexRetry": "7 pass",
+  "sourceStyle": "pass",
+  "lifecycle": "idle 1500ms no tracked work/DOM writes; 6 close/reopen cycles stable retained DOM/listener counts; fixture journal metadata-only",
+  "notVerified": [
+    "native Obsidian",
+    "iOS",
+    "Android",
+    "WebKit",
+    "user CSS snippets",
+    "native input latency/frame rate"
+  ]
+}

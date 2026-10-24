@@ -1,3 +1,5 @@
+> **2026-10-24 结果滚动职责精简（未冻结）**：以 `b2dee87` 为唯一开发基线。结果区普通鼠标/控件键盘动作不再预先启动滚动事务；停稳仅保存宿主位置，待处理索引与共享查询仍由原调度器兑现。见 [实现与验证](RESULT_SCROLL_OWNER_20261024.md)。下文保留历史记录。
+
 > **2026-10-24 桌面结果行交互（未冻结）**：唯一开发基线 `9fa2631`。移除桌面结果侧滑生命周期和悬浮“…”专用路径；桌面结果行共用导航行悬浮/选中样式。移动侧滑保留。见 [实现与验证](DESKTOP_RESULT_SURFACE_20261024.md)。下文保留历史记录。
 
 > **2026-10-23 输入与 Picker 重复工作精简（未冻结）**：唯一开发基线 `90f1ade`。待提交输入只保存编辑缓冲，输入显隐不遍历工具栏；页面同值属性不重复写入，Picker 初始测量统一由 ResizeObserver 负责。见 [实现、测量与边界](INTERACTION_EFFICIENCY_20261023.md)。下文保留历史记录。
@@ -121,7 +123,7 @@
 | `src/features/results/result-card-methods.js` | 207 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_result_card_methods` |
 | `src/features/results/view-config.js` | 166 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_VIEW_IDS`、`RESULT_VIEW_LABELS`、`RESULT_CONTENT_DEFS`、`RESULT_CONTENT_IDS`、`RESULT_CONTENT_DEF_MAP`、`VIEW_COMPOSER_SECTION_IDS`、`normalizeResultContentOrder`、`DEFAULT_RESULT_VIEWS`、`normalizeResultViewId`、`normalizeResultViewConfig`、`normalizeResultViews` |
 | `src/features/results/viewport-anchors-methods.js` | 396 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_anchors_methods` |
-| `src/features/results/viewport-geometry-methods.js` | 444 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
+| `src/features/results/viewport-geometry-methods.js` | 445 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_viewport_geometry_methods` |
 | `src/features/results/virtual-window-methods.js` | 459 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `SearchResultRendererController_virtual_window_methods` |
 | `src/features/results/virtualization-config.js` | 51 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `RESULT_WINDOW_MOUNT_MIN`、`RESULT_WINDOW_MOUNT_MAX`、`RESULT_WINDOW_BUFFER_MIN`、`RESULT_ROW_HEIGHT_ESTIMATE`、`FULL_CONTENT_CACHE_LIMIT`、`RESULT_GEOMETRY_CSS_TOKENS` |
 | `src/features/search/QueryState.js` | 19 | 搜索与筛选、Picker 工作流、创建、结果渲染及批量功能 | `QueryState` |

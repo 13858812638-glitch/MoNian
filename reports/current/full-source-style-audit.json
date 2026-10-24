@@ -2,8 +2,8 @@
   "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
   "modules": 153,
   "sourceFiles": 154,
-  "jsLines": 34749,
-  "jsBytes": 1613340,
+  "jsLines": 34750,
+  "jsBytes": 1613536,
   "cssBytes": 265166,
   "cssLines": 7678,
   "cssParseErrors": [],
@@ -716,22 +716,22 @@
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
-      "line": 80,
+      "line": 78,
       "code": "for (const [type, fn] of handlers) container.addEventListener(type, fn, { capture: true, passive: true });"
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
-      "line": 82,
+      "line": 80,
       "code": "for (const [type, fn] of handlers) container.removeEventListener(type, fn, true);"
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
-      "line": 118,
+      "line": 116,
       "code": "this._scrollSettleTimer = win.setTimeout(() => {"
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
-      "line": 346,
+      "line": 347,
       "code": "this._geometrySettleTimer = hostWindow(list).setTimeout(() => {"
     },
     {
@@ -2116,9 +2116,9 @@
     },
     {
       "file": "src/features/results/viewport-geometry-methods.js",
-      "lines": 444,
-      "bytes": 18834,
-      "sha256": "e2ca79439a5ae5c0aacd38c40555c762db6fa39462dc4b1d5a55d795c9c307e5"
+      "lines": 445,
+      "bytes": 19030,
+      "sha256": "46dfe99d1c57d0b89247a4619894261b6951355ba6701c961a431c18e62ddc0d"
     },
     {
       "file": "src/features/results/virtual-window-methods.js",

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "node",
+    "command": "npm test",
+    "exit": 1
+  },
+  {
+    "name": "browser",
+    "command": "npm run test:browser",
+    "exit": 1
+  },
+  {
+    "name": "acceptance",
+    "command": "npm run test:acceptance",
+    "exit": 0
+  },
+  {
+    "name": "focus",
+    "command": "npm run test:focus",
+    "exit": 0
+  },
+  {
+    "name": "focusRepair",
+    "command": "npm run test:focus-repair",
+    "exit": 0
+  },
+  {
+    "name": "feishu",
+    "command": "npm run test:feishu-focus",
+    "exit": 0
+  },
+  {
+    "name": "caret",
+    "command": "npm run test:picker-caret",
+    "exit": 0
+  },
+  {
+    "name": "portal",
+    "command": "npm run test:picker-portal",
+    "exit": 0
+  },
+  {
+    "name": "mobile",
+    "command": "npm run test:mobile-sidebar",
+    "exit": 0
+  },
+  {
+    "name": "index",
+    "command": "npm run test:index-retry",
+    "exit": 0
+  },
+  {
+    "name": "surface",
+    "command": "python3 scripts/desktop_result_surface_audit.py",
+    "exit": 0
+  },
+  {
+    "name": "scroll",
+    "command": "python3 scripts/result_scroll_owner_audit.py",
+    "exit": 0
+  },
+  {
+    "name": "browse",
+    "command": "python3 scripts/sidebar_browse_cards_audit.py",
+    "exit": 0
+  },
+  {
+    "name": "lifecycle",
+    "command": "python3 scripts/performance_lifecycle_audit.py",
+    "exit": 0
+  },
+  {
+    "name": "source",
+    "command": "npm run audit:source",
+    "exit": 0
+  }
+]

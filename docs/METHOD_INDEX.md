@@ -1,3 +1,7 @@
+> **2026-10-24 结果滚动职责精简（未冻结）**：以 `b2dee87` 为唯一开发基线。结果区普通鼠标/控件键盘动作不再预先启动滚动事务；停稳仅保存宿主位置，待处理索引与共享查询仍由原调度器兑现。见 [实现与验证](RESULT_SCROLL_OWNER_20261024.md)。下文保留历史记录。
+
+本轮只修改 `attachViewport` 与 `_settleNativeScroll` 方法体，方法签名、装配和构造状态不变。鼠标拖动滚动条与键盘造成的真实滚动仍由 `handleScrollLoad` 认领。
+
 > **2026-10-24 桌面结果行交互（未冻结）**：唯一开发基线 `9fa2631`。移除桌面结果侧滑生命周期和悬浮“…”专用路径；桌面结果行共用导航行悬浮/选中样式。移动侧滑保留。见 [实现与验证](DESKTOP_RESULT_SURFACE_20261024.md)。下文保留历史记录。
 
 本轮内部合同：`_buildTitleRow` 返回 `{titleRow,typeButton}`；移动端 `SwipeActionCoordinator.bind` 返回的绑定只保留 `panel/close/open/syncAllExpanded`，退休 `desktopTrigger/openFromTrigger`。类方法名称、arity 与方法装配表不变；桌面 `core.swipe` 为 null，由原生命周期可选消费。

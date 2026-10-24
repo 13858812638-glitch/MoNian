@@ -1,0 +1,296 @@
+[
+  {
+    "name": "desktop-light controls and bindings follow platform policy",
+    "pass": true,
+    "evidence": {
+      "coordinator": false,
+      "more": 0,
+      "bindings": 0,
+      "rows": 16,
+      "expand": false
+    }
+  },
+  {
+    "name": "desktop-light row gesture listeners exist only on mobile",
+    "pass": true,
+    "evidence": [
+      "keydown"
+    ]
+  },
+  {
+    "name": "desktop-light ordinary desktop row sizing skips action-reveal work",
+    "pass": true,
+    "evidence": 0
+  },
+  {
+    "name": "desktop-light result hover uses the filter row surface",
+    "pass": true,
+    "evidence": {
+      "actual": "rgb(238, 238, 238)",
+      "expected": "rgb(238, 238, 238)"
+    }
+  },
+  {
+    "name": "desktop-light click updates one cursor with shared selection styling and no render",
+    "pass": true,
+    "evidence": {
+      "selected": true,
+      "count": 1,
+      "index": 1,
+      "bg": "color(srgb 0.905961 0.905961 0.905961)",
+      "expectedBg": "color(srgb 0.905961 0.905961 0.905961)",
+      "shadow": "color(srgb 0.259804 0.259804 0.409804) 2px 0px 0px 0px inset, color(srgb 0.145098 0.145098 0.145098 / 0.18) 0px 0px 0px 1px inset",
+      "expectedShadow": "color(srgb 0.259804 0.259804 0.409804) 2px 0px 0px 0px inset, color(srgb 0.145098 0.145098 0.145098 / 0.18) 0px 0px 0px 1px inset",
+      "opens": 2,
+      "renders": 0
+    }
+  },
+  {
+    "name": "desktop-light hover and selected surfaces do not resize the row",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light keyboard continues from the clicked cursor",
+    "pass": true,
+    "evidence": {
+      "index": 2,
+      "count": 1
+    }
+  },
+  {
+    "name": "desktop-light batch selection remains independent",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light context menu remains available",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light rebuilt result has no swipe state or stale cursor",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light desktop host variants create no swipe lifecycle",
+    "pass": true,
+    "evidence": [
+      {
+        "kind": "tab",
+        "swipe": false,
+        "more": false,
+        "expand": false
+      },
+      {
+        "kind": "window",
+        "swipe": false,
+        "more": false,
+        "expand": false
+      },
+      {
+        "kind": "embedded",
+        "swipe": false,
+        "more": false,
+        "expand": false
+      }
+    ]
+  },
+  {
+    "name": "desktop-light no page errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "desktop-dark controls and bindings follow platform policy",
+    "pass": true,
+    "evidence": {
+      "coordinator": false,
+      "more": 0,
+      "bindings": 0,
+      "rows": 16,
+      "expand": false
+    }
+  },
+  {
+    "name": "desktop-dark row gesture listeners exist only on mobile",
+    "pass": true,
+    "evidence": [
+      "keydown"
+    ]
+  },
+  {
+    "name": "desktop-dark ordinary desktop row sizing skips action-reveal work",
+    "pass": true,
+    "evidence": 0
+  },
+  {
+    "name": "desktop-dark result hover uses the filter row surface",
+    "pass": true,
+    "evidence": {
+      "actual": "rgb(60, 60, 60)",
+      "expected": "rgb(60, 60, 60)"
+    }
+  },
+  {
+    "name": "desktop-dark click updates one cursor with shared selection styling and no render",
+    "pass": true,
+    "evidence": {
+      "selected": true,
+      "count": 1,
+      "index": 1,
+      "bg": "color(srgb 0.224824 0.224824 0.224824)",
+      "expectedBg": "color(srgb 0.224824 0.224824 0.224824)",
+      "shadow": "color(srgb 0.693333 0.693333 0.843333) 2px 0px 0px 0px inset, color(srgb 0.933333 0.933333 0.933333 / 0.18) 0px 0px 0px 1px inset",
+      "expectedShadow": "color(srgb 0.693333 0.693333 0.843333) 2px 0px 0px 0px inset, color(srgb 0.933333 0.933333 0.933333 / 0.18) 0px 0px 0px 1px inset",
+      "opens": 2,
+      "renders": 0
+    }
+  },
+  {
+    "name": "desktop-dark hover and selected surfaces do not resize the row",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark keyboard continues from the clicked cursor",
+    "pass": true,
+    "evidence": {
+      "index": 2,
+      "count": 1
+    }
+  },
+  {
+    "name": "desktop-dark batch selection remains independent",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark context menu remains available",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark rebuilt result has no swipe state or stale cursor",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark desktop host variants create no swipe lifecycle",
+    "pass": true,
+    "evidence": [
+      {
+        "kind": "tab",
+        "swipe": false,
+        "more": false,
+        "expand": false
+      },
+      {
+        "kind": "window",
+        "swipe": false,
+        "more": false,
+        "expand": false
+      },
+      {
+        "kind": "embedded",
+        "swipe": false,
+        "more": false,
+        "expand": false
+      }
+    ]
+  },
+  {
+    "name": "desktop-dark no page errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile-light controls and bindings follow platform policy",
+    "pass": true,
+    "evidence": {
+      "coordinator": true,
+      "more": 0,
+      "bindings": 36,
+      "rows": 36,
+      "expand": true
+    }
+  },
+  {
+    "name": "mobile-light row gesture listeners exist only on mobile",
+    "pass": true,
+    "evidence": [
+      "click",
+      "keydown",
+      "pointerdown",
+      "touchstart",
+      "touchmove",
+      "touchend",
+      "touchcancel"
+    ]
+  },
+  {
+    "name": "mobile-light ordinary desktop row sizing skips action-reveal work",
+    "pass": true,
+    "evidence": 36
+  },
+  {
+    "name": "mobile-light real touch sequence still reveals five actions",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light mobile expand-all still works",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light no page errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "mobile-dark controls and bindings follow platform policy",
+    "pass": true,
+    "evidence": {
+      "coordinator": true,
+      "more": 0,
+      "bindings": 36,
+      "rows": 36,
+      "expand": true
+    }
+  },
+  {
+    "name": "mobile-dark row gesture listeners exist only on mobile",
+    "pass": true,
+    "evidence": [
+      "click",
+      "keydown",
+      "pointerdown",
+      "touchstart",
+      "touchmove",
+      "touchend",
+      "touchcancel"
+    ]
+  },
+  {
+    "name": "mobile-dark ordinary desktop row sizing skips action-reveal work",
+    "pass": true,
+    "evidence": 36
+  },
+  {
+    "name": "mobile-dark real touch sequence still reveals five actions",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark mobile expand-all still works",
+    "pass": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark no page errors",
+    "pass": true,
+    "evidence": []
+  }
+]

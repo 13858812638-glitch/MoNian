@@ -1,0 +1,25 @@
+PASS returning to a folder reuses the same unchanged card
+PASS ten warmed folder switches do not rebuild cards
+PASS every folder click still searches once and shows the correct files
+PASS mounted card positions match current results
+PASS reused title opens its current file exactly once
+PASS reused property key still opens the shared picker
+PASS open picker bypasses card reuse
+PASS sorting updates positions and final-row marker
+PASS batch mode uses fresh correctly marked checkboxes
+PASS in-place snippet edits invalidate retained content
+PASS metadata edits rebuild stale cards
+PASS renames never reuse the old path or title
+PASS presentation settings rebuild affected content
+PASS query results never leak their card into browse results
+PASS switching views rebuilds content with the new display flags
+PASS builder failure preserves the complete previous page
+PASS post-commit failure rolls back cached card nodes and positions
+PASS desktop cards have no action lifecycle and remain reusable
+PASS deleted cached file never returns to the result list
+PASS desktop retained card cache stays bounded
+PASS presentation flags do not change shared card reuse
+PASS closing the view releases the retained cards
+PASS mobile shares retained-card path
+PASS mobile expanded action shelves bypass card reuse
+PASS mobile opened action cards are rebuilt

@@ -1,0 +1,207 @@
+{
+  "scope": "modular.4 versus Feishu7.6.5; read-only comparison. Real production GLS modules and Feishu popup/search methods, controlled minimal host and synthetic viewport signals. No real Obsidian, iOS keyboard or caret-paint validation.",
+  "engine": "Chromium 154.0.8037.57",
+  "rows": [
+    {
+      "case": "GLS-main-native-tap-no-keyboard",
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "case": "GLS-2px-viewport-reduction-without-keyboard-events-or-css",
+      "evidence": {
+        "active": true,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "case": "GLS-after-blur-still-2px-reduced",
+      "evidence": {
+        "active": false,
+        "connected": true,
+        "value": "",
+        "selection": [
+          0,
+          0
+        ],
+        "box": [
+          24,
+          62,
+          342,
+          38
+        ],
+        "tapHighlight": "rgba(0, 0, 0, 0)",
+        "caret": "rgb(238, 238, 238)",
+        "font": "16px",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "transform": "none",
+        "transition": "0s",
+        "locked": false,
+        "keyboard": false,
+        "inset": "",
+        "metrics": {
+          "tools": 0,
+          "mutation": 0,
+          "childChanges": 0,
+          "position": 0
+        },
+        "programmatic": [
+          {
+            "action": "blur",
+            "target": "local-search-search-text-input local-search-input"
+          }
+        ],
+        "globalKeyboardListeners": 0
+      }
+    },
+    {
+      "case": "GLS-production-folder-picker-open-from-focused-main",
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "activeClass": "local-search-search-text-input local-search-input",
+        "picker": true
+      }
+    },
+    {
+      "case": "GLS-actual-SearchView-onResize-three-times-during-keyboard",
+      "evidence": {
+        "calls": 3,
+        "rootLockedClass": false,
+        "rootKeyboardClass": false,
+        "controllerMounted": false,
+        "controllerLocked": false,
+        "preserveFrame": null,
+        "popupRepositions": 0,
+        "toolbarUpdates": 0
+      }
+    },
+    {
+      "case": "Feishu765-production-popup-open-from-focused-main-no-GLS-provider",
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "activeClass": "dida-bridge-input",
+        "picker": true,
+        "frameBound": false
+      }
+    },
+    {
+      "case": "Feishu765-picker-tap-no-GLS-provider",
+      "evidence": {
+        "active": true,
+        "caret": "rgb(238, 238, 238)",
+        "font": "12px",
+        "frameBound": false,
+        "programmatic": []
+      }
+    },
+    {
+      "case": "Feishu765-production-popup-open-from-focused-main-with-GLS-provider",
+      "evidence": {
+        "programmatic": [],
+        "mainFocused": true,
+        "frameBound": true
+      }
+    },
+    {
+      "case": "Feishu765-GLS-provider-bound-2px-resize",
+      "evidence": {
+        "active": true,
+        "frameBound": true,
+        "locked": false,
+        "keyboard": false,
+        "height": ""
+      }
+    },
+    {
+      "case": "Feishu765-shared-frame-input-event-attribute-mutations",
+      "evidence": {
+        "mutations": []
+      }
+    },
+    {
+      "case": "Feishu765-actual-tab-handleHostResize-three-times-during-keyboard",
+      "evidence": {
+        "calls": 3,
+        "rootLockedClass": true,
+        "rootKeyboardClass": true,
+        "popupRepositions": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "checks": {
+    "GLS-tiny-viewport-not-keyboard": true,
+    "GLS-open-like-Feishu-no-programmatic-blur": true,
+    "GLS-real-host-resize-zero-repositions": true,
+    "GLS-sidebar-does-not-own-keyboard-frame": true,
+    "Feishu-no-provider-native-open": true,
+    "Feishu-shared-provider-native-open": true,
+    "Feishu-shared-provider-no-tiny-viewport-lock": true,
+    "Feishu-real-host-resize-zero-repositions": true
+  },
+  "passed": 8,
+  "failed": 0
+}

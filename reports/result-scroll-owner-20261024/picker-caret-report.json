@@ -1,0 +1,510 @@
+{
+  "engine": "Chromium 154.0.8037.57",
+  "host": "mock Obsidian",
+  "baseline": false,
+  "nativeIOSValidated": false,
+  "passed": 36,
+  "failed": 0,
+  "results": [
+    {
+      "case": "mobile-light-dialog-focus",
+      "passed": true,
+      "evidence": {
+        "tabindex": null,
+        "panelFocused": false,
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-light-native-editing-stable",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(37, 37, 37)",
+        "color": "rgb(37, 37, 37)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-light-feishu-input-contract",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(37, 37, 37)",
+        "color": "rgb(37, 37, 37)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-light-caret-pixels-with-negative-control",
+      "passed": true,
+      "evidence": {
+        "visibleDifferences": [
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ]
+        ],
+        "transparentDifference": null,
+        "nativeIOS": false
+      }
+    },
+    {
+      "case": "mobile-light-composition-keeps-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "目录",
+        "selection": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "case": "mobile-light-child-return",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "input": true,
+        "portal": true,
+        "connected": true,
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-light-root-portal-release",
+      "passed": true,
+      "evidence": {
+        "connected": false,
+        "hostCleared": true
+      }
+    },
+    {
+      "case": "mobile-light-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": true,
+        "connected": true
+      }
+    },
+    {
+      "case": "mobile-light-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "mobile-dark-dialog-focus",
+      "passed": true,
+      "evidence": {
+        "tabindex": null,
+        "panelFocused": false,
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-dark-native-editing-stable",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(238, 238, 238)",
+        "color": "rgb(238, 238, 238)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-dark-feishu-input-contract",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(238, 238, 238)",
+        "color": "rgb(238, 238, 238)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-dark-caret-pixels-with-negative-control",
+      "passed": true,
+      "evidence": {
+        "visibleDifferences": [
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ]
+        ],
+        "transparentDifference": null,
+        "nativeIOS": false
+      }
+    },
+    {
+      "case": "mobile-dark-composition-keeps-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "目录",
+        "selection": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "case": "mobile-dark-child-return",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "input": true,
+        "portal": true,
+        "connected": true,
+        "calls": []
+      }
+    },
+    {
+      "case": "mobile-dark-root-portal-release",
+      "passed": true,
+      "evidence": {
+        "connected": false,
+        "hostCleared": true
+      }
+    },
+    {
+      "case": "mobile-dark-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": true,
+        "connected": true
+      }
+    },
+    {
+      "case": "mobile-dark-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "desktop-light-dialog-focus",
+      "passed": true,
+      "evidence": {
+        "tabindex": "-1",
+        "panelFocused": true,
+        "calls": [
+          {
+            "action": "focus",
+            "target": "local-search-dropdown local-search-folder-dropdown local-search-picker-dropdown local-search-facet-picker"
+          }
+        ]
+      }
+    },
+    {
+      "case": "desktop-light-native-editing-stable",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(37, 37, 37)",
+        "color": "rgb(37, 37, 37)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "desktop-light-feishu-input-contract",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(37, 37, 37)",
+        "color": "rgb(37, 37, 37)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "desktop-light-caret-pixels-with-negative-control",
+      "passed": true,
+      "evidence": {
+        "visibleDifferences": [
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ]
+        ],
+        "transparentDifference": null,
+        "nativeIOS": false
+      }
+    },
+    {
+      "case": "desktop-light-composition-keeps-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "目录",
+        "selection": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "case": "desktop-light-child-return",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "input": true,
+        "portal": true,
+        "connected": true,
+        "calls": [
+          {
+            "action": "focus",
+            "target": "local-search-search-text-input local-search-picker-search"
+          }
+        ]
+      }
+    },
+    {
+      "case": "desktop-light-root-portal-release",
+      "passed": true,
+      "evidence": {
+        "connected": true,
+        "hostCleared": false
+      }
+    },
+    {
+      "case": "desktop-light-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": false,
+        "connected": true
+      }
+    },
+    {
+      "case": "desktop-light-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "case": "desktop-dark-dialog-focus",
+      "passed": true,
+      "evidence": {
+        "tabindex": "-1",
+        "panelFocused": true,
+        "calls": [
+          {
+            "action": "focus",
+            "target": "local-search-dropdown local-search-folder-dropdown local-search-picker-dropdown local-search-facet-picker"
+          }
+        ]
+      }
+    },
+    {
+      "case": "desktop-dark-native-editing-stable",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(238, 238, 238)",
+        "color": "rgb(238, 238, 238)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "desktop-dark-feishu-input-contract",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "docs",
+        "selection": [
+          4,
+          4
+        ],
+        "caret": "rgb(238, 238, 238)",
+        "color": "rgb(238, 238, 238)",
+        "touch": "manipulation",
+        "font": "12px",
+        "rowFont": "12px",
+        "calls": []
+      }
+    },
+    {
+      "case": "desktop-dark-caret-pixels-with-negative-control",
+      "passed": true,
+      "evidence": {
+        "visibleDifferences": [
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ],
+          [
+            25,
+            12,
+            26,
+            26
+          ]
+        ],
+        "transparentDifference": null,
+        "nativeIOS": false
+      }
+    },
+    {
+      "case": "desktop-dark-composition-keeps-input",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "focused": true,
+        "value": "目录",
+        "selection": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "case": "desktop-dark-child-return",
+      "passed": true,
+      "evidence": {
+        "same": true,
+        "input": true,
+        "portal": true,
+        "connected": true,
+        "calls": [
+          {
+            "action": "focus",
+            "target": "local-search-search-text-input local-search-picker-search"
+          }
+        ]
+      }
+    },
+    {
+      "case": "desktop-dark-root-portal-release",
+      "passed": true,
+      "evidence": {
+        "connected": true,
+        "hostCleared": false
+      }
+    },
+    {
+      "case": "desktop-dark-reopen",
+      "passed": true,
+      "evidence": {
+        "fresh": false,
+        "connected": true
+      }
+    },
+    {
+      "case": "desktop-dark-no-browser-errors",
+      "passed": true,
+      "evidence": []
+    }
+  ]
+}

@@ -69,14 +69,12 @@ export const SearchResultRendererController_viewport_geometry_methods = {
             this._markNativeScroll();
         };
         const wheel = event => { if (event.deltaY) takeOver(); };
-        const pointer = event => { if (event.pointerType === "mouse") takeOver(); };
-        const key = event => {
-            if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)) {
-                takeOver();
-            }
-        };
+        // Mouse presses and control activation are not scroll intent. Scrollbar
+        // dragging and keyboard scrolling enter through handleScrollLoad only
+        // when the viewport actually moves; ordinary clicks must not defer data
+        // updates or arm a later scroll-save transaction.
         const handlers = [["touchstart", start], ["touchmove", move], ["touchend", end],
-            ["touchcancel", end], ["wheel", wheel], ["pointerdown", pointer], ["keydown", key]];
+            ["touchcancel", end], ["wheel", wheel]];
         for (const [type, fn] of handlers) container.addEventListener(type, fn, { capture: true, passive: true });
         this._viewportInputCleanup = () => {
             for (const [type, fn] of handlers) container.removeEventListener(type, fn, true);
@@ -151,7 +149,10 @@ export const SearchResultRendererController_viewport_geometry_methods = {
             this._scheduleGeometryRefresh(pendingGeometry);
         }
         core._scheduleResultIndexUpdate?.();
-        core._notifyStateChange?.();
+        // Scroll is host-local presentation. Resume deferred index/shared work
+        // above, then save the viewport without republishing unchanged query
+        // state or projecting the unrelated navigation tree.
+        core.onStateChange?.();
         return true;
     },
 

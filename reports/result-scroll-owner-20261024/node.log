@@ -1,0 +1,548 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 test
+> node --test tests/*.test.mjs
+
+✔ candidate preserves formal prototype contracts with reviewed cross-key additions and internal retirement (4892.47736ms)
+✔ count rail waits for connected layout and follows real scrollbar changes (1.208666ms)
+✔ height-only resize does not rewrite the same reserve or cache stale style (0.199897ms)
+✔ late observer delivery after cleanup cannot read layout or write DOM (0.826647ms)
+✔ independent modeless host, command and CSS are physically retired (8.499315ms)
+✔ production host registers 7 commands, two workspace views and retains external search API (4672.010094ms)
+✔ even a legacy floating option cannot create a modeless host (2548.132273ms)
+✔ P1 ranked output parity name/asc filtered=false (10.103817ms)
+✔ P1 ranked output parity name/asc filtered=true (6.990333ms)
+✔ P1 ranked output parity name/desc filtered=false (7.341545ms)
+✔ P1 ranked output parity name/desc filtered=true (5.787638ms)
+✔ P1 ranked output parity created/asc filtered=false (6.706909ms)
+✔ P1 ranked output parity created/asc filtered=true (7.396138ms)
+✔ P1 ranked output parity created/desc filtered=false (54.635201ms)
+✔ P1 ranked output parity created/desc filtered=true (8.710203ms)
+✔ P1 ranked output parity contentModified/asc filtered=false (9.444323ms)
+✔ P1 ranked output parity contentModified/asc filtered=true (4.957516ms)
+✔ P1 ranked output parity contentModified/desc filtered=false (5.492423ms)
+✔ P1 ranked output parity contentModified/desc filtered=true (4.472422ms)
+✔ P1 ranked output parity fileModified/asc filtered=false (5.772891ms)
+✔ P1 ranked output parity fileModified/asc filtered=true (4.659724ms)
+✔ P1 ranked output parity fileModified/desc filtered=false (5.519113ms)
+✔ P1 ranked output parity fileModified/desc filtered=true (4.730267ms)
+✔ P1 ranked output parity opened/asc filtered=false (7.828522ms)
+✔ P1 ranked output parity opened/asc filtered=true (4.716822ms)
+✔ P1 ranked output parity opened/desc filtered=false (18.320669ms)
+✔ P1 ranked output parity opened/desc filtered=true (4.831429ms)
+✔ P1 ranked output parity relevance/asc filtered=false (4.733323ms)
+✔ P1 ranked output parity relevance/asc filtered=true (4.540009ms)
+✔ P1 ranked output parity relevance/desc filtered=false (3.762956ms)
+✔ P1 ranked output parity relevance/desc filtered=true (4.316297ms)
+✔ body-only channel never interleaves with title channel even in ascending relevance (4.31237ms)
+✔ large delta falls back to frozen path; whole refresh still recalculates all files (9.556124ms)
+✔ incremental updates do not lose selections or snippet lifecycle guards (3.462571ms)
+✔ unchanged rank/order uses local row refresh instead of whole DOM (2.805213ms)
+✔ deterministic 200-batch differential stress keeps every ranked row and channel stable (2114.638918ms)
+✔ whole rescan with changed opened history stays on full-ranking path (4.374177ms)
+✔ index-cache exact byte parity with frozen v5.2: 0 normal (2.021577ms)
+✔ index-cache exact byte parity with frozen v5.2: 1 normal (0.633643ms)
+✔ index-cache exact byte parity with frozen v5.2: 10 missing (0.943607ms)
+✔ index-cache exact byte parity with frozen v5.2: 500 normal (8.984929ms)
+✔ index-cache exact byte parity with frozen v5.2: 1000 normal (52.569952ms)
+✔ index-cache exact byte parity with frozen v5.2: 2000 large (121.288653ms)
+✔ index-cache exact byte parity with frozen v5.2: 4096 normal (118.484293ms)
+✔ newest save cancels older in-progress snapshot; only latest writes (385.825742ms)
+✔ new debounce request invalidates in-progress serialization without a write (58.495821ms)
+✔ unload during slicing cancels without file writes or timers (107.780096ms)
+✔ old in-flight disk write completes before newest write (1.111794ms)
+✔ future indexData schema automatically falls back to native JSON stringify (192.92627ms)
+✔ adapter failure does not poison serial write chain (0.565515ms)
+✔ old debounce callback waiting for index flush cannot race a newer request (0.440309ms)
+✔ mobile sidebar heading/content gap is a standalone Style Settings token defaulted to 6px (1.1681ms)
+✔ gap belongs only to the expanded mobile section content, never list rows or Picker (0.503168ms)
+✔ mobile navigator headings use sidebar row height rather than 44px mobile Picker height (5.778771ms)
+✔ v5 heading/content gap still defaults to independently controlled 6px (0.424139ms)
+✔ navigation catalog ignores search and precision refinements, folder is its only scope (2.472405ms)
+✔ switching folder replaces browse scope, drops temporary refinements and query (0.619085ms)
+✔ single selection replaces or clears its own facet while other property keys remain (0.715257ms)
+✔ explicit tag multi-select is OR, while property keys remain AND (1.055157ms)
+✔ folder multi-selection also resets temporary tags/properties/time without changing folder OR (0.341172ms)
+✔ metadata folder is visible in navigator, protected from ordinary picker, and globally blocked folder stays hidden (2.133337ms)
+✔ folder direct and recursive physical counts ignore user global exclusion, never result-only hiding (0.585834ms)
+✔ folder icon reflects the real expansion state, not every row as open (0.178656ms)
+✔ navigation folder scope ignores result-only exclusions while search results still respect them (0.872272ms)
+✔ full write integration: A list value enters existing B text, preserves other A values (82.13247ms)
+✔ full write integration: A text moves into B list, never loses existing B elements (22.129ms)
+✔ full write integration: conflicting destination B text blocks *all* files before mutation (18.01873ms)
+✔ Navigator touch feedback uses one existing delegated owner for native primary hit + count (1.191094ms)
+✔ Cancelled drag is excluded from transient pressed only, maintaining Selected and custom backgrounds (0.225064ms)
+✔ Swipe shelf edges use the exact card content inset in both directions and constrain available width (0.606663ms)
+✔ return projection is limited to real mobile Results -> Filters navigation (3.397258ms)
+✔ consume the existing scheduled projection before first visible frame (0.291128ms)
+✔ CSS Snapshot promotes the two requested IDs and their root variables to 6px (0.527013ms)
+✔ unrequested detailed and compact densities retain their defaults (0.31324ms)
+✔ cross key: list A one value -> empty text B; retain other A entries (3.853507ms)
+✔ cross key: text A -> existing list B is append-only, no loss or dup (0.357844ms)
+✔ cross key: existing different text B is a hard preflight conflict (0.650335ms)
+✔ cross key: nontext, date, malformed YAML and system values are blocked (0.56794ms)
+✔ cross key: unmatched A is unchanged and target B not touched (0.201269ms)
+✔ Navigator: same coordinator, local type scope and no independent all-category entry (0.950159ms)
+✔ Navigator: root folder, peer/child tag and key-value creation entry all exposed (0.661144ms)
+✔ Navigator: fixed Picker frame and explicit rename scroll snapshot (2.611117ms)
+✔ Shared inline properties retain the explicit value-drag action (0.822538ms)
+✔ Mobile uses a configurable cancellable timer; desktop keeps contextmenu (1.185152ms)
+✔ Typed object action menu delegates to current facet maintenance owner (0.462631ms)
+✔ Navigator action Picker restores shared fixed-height frame (0.885948ms)
+✔ Text and multitext property collisions retain all unique values (1.42338ms)
+✔ Rename conflicts preserve folder file names, tag hierarchy and property catalog (0.250292ms)
+✔ GLS navigator does not reserve project or owner groups (84.380754ms)
+✔ generic GLS index lists ordinary properties and updates any attribute (76.905287ms)
+✔ empty group is stored solely as an ordinary property catalog value, and value maintenance notifies subscribers (31.888046ms)
+✔ Navigator: leading request happens on first actual scroll; duplicates and zero-delta events do not resave (1.579124ms)
+✔ Navigator: 100 native scroll events in 500ms coalesce into a few bounded layout requests (0.581044ms)
+✔ Navigator: continued scroll is bounded and settle always requests the final position (0.647799ms)
+✔ Navigator: destroying during a trailing window cancels timer/listeners and emits no late callback (0.252195ms)
+✔ Navigator: hidden pane, removed onStateChange and destroyed core do not arm scroll-save timers (0.216278ms)
+✔ Navigator: synchronous destruction by a save callback cannot arm an orphaned timer (0.269307ms)
+✔ Result renderer: one path change rebuilds only that mounted card and refreshes object bindings (2.103731ms)
+✔ Result renderer: offscreen change does not rebuild any mounted card (0.482779ms)
+✔ Result renderer: null paths preserves full mounted refresh semantics (0.547872ms)
+✔ Result renderer: relevance body channel resolves the real index, not display position (0.518386ms)
+✔ Result renderer: stale virtual position falls back to exact path identity (0.626179ms)
+✔ Result renderer: off-DOM rendered-result references use the original full-path fallback (0.69558ms)
+✔ Result renderer: 200 deterministic batches keep mounted identities and rebuild only matching paths (8.782959ms)
+✔ P4: 400 Picker projections produce exactly one last-frame reveal (1.442817ms)
+✔ P4: successful frame settles and a later projection can schedule anew (0.208312ms)
+✔ P4: last frame is cancelled on panel disposal; no late UI work (0.217059ms)
+✔ P4: cleanup remains idempotent and post-close requeue is rejected (0.192432ms)
+✔ P4: detached panels or lists do not run pending work (0.197762ms)
+✔ P4: detached panel or list refuses to arm a new frame (0.222479ms)
+✔ P4: malformed callbacks cannot create work (0.302049ms)
+✔ P4: requestAnimationFrame id zero can still be cancelled correctly (0.284636ms)
+✔ P4: sibling Picker Surfaces have independent frame owners (0.363915ms)
+✔ P4: nested picker cleanup chain continues to release other resources (0.23868ms)
+✔ P4: scheduler never calls native focus, blur or scroll directly (0.249089ms)
+✔ P4: all three tree Picker call sites use the shared cancelable owner (0.722501ms)
+✔ P4 test harness: atomic subject writes use per-process temporary files and rename (11.407611ms)
+✔ P4 test harness: a newly built subject remains readable as a full module (4037.100443ms)
+✔ facet modes: entering multiselect clears maintenance then sort, only once (1.535041ms)
+✔ facet modes: entering maintenance clears selection then sort (0.229973ms)
+✔ facet modes: tag/property sort preserves selection before maintenance (0.179909ms)
+✔ facet modes: folder sort preserves maintenance before selection (0.204124ms)
+✔ all three facet pickers use one mode coordination contract, keeping specialized sort commits (0.678307ms)
+✔ property catalog source name describes ordinary properties; old path is gone (0.362322ms)
+✔ unchanged active view does not measure, project or persist (2.263323ms)
+✔ unchanged view patch does not measure, project or persist (0.433917ms)
+✔ unchanged view reset already at defaults does not measure, project or persist (0.313631ms)
+✔ unchanged filter pools does not measure, project or persist (0.636989ms)
+✔ unchanged sort preferences does not measure, project or persist (0.802261ms)
+✔ changed view and config commit once; resetting changed config still works (0.588267ms)
+✔ preferred ordering keeps the exact numeric Chinese locale comparison, ties and stable inputs (4.499382ms)
+✔ repeated preferred-order comparisons do not reconstruct locale comparison on every pair (4.238632ms)
+✔ GLS navigation has no privileged project-owner grouping and filters old group preferences (55.580942ms)
+✔ raw 项目负责人 YAML is a normal editable property; unrelated virtual properties remain supported (64.848253ms)
+✔ previously grey 项目负责人 key now has the ordinary rename/delete maintenance actions (12.13445ms)
+✔ property real counts do not absorb the previously selected project (63.522366ms)
+✔ one YAML file with two values counts once per value, once under OR (12.90969ms)
+✔ missing vs empty YAML property are separate counted states (12.708581ms)
+✔ catalog-only value count remains zero under a different selected project (11.729727ms)
+✔ prototype contract: SparseHeightIndex (2.688844ms)
+✔ prototype contract: IoPool (0.186421ms)
+✔ prototype contract: BodyIndex (0.197112ms)
+✔ prototype contract: QueryState (0.242427ms)
+✔ prototype contract: FilterState (0.254289ms)
+✔ prototype contract: PointerSortCoordinator (0.174258ms)
+✔ prototype contract: FilterEngine (0.166233ms)
+✔ prototype contract: ResultRanker (0.166273ms)
+✖ prototype contract: BatchMetadataService (2.257862ms)
+✔ prototype contract: SharedSwipeBackPrimitive (0.209765ms)
+✔ prototype contract: LocalSearchSwipeBackPrimitive (0.274296ms)
+✔ prototype contract: SearchDropdownController (0.204836ms)
+✔ prototype contract: BatchMetadataController (0.13258ms)
+✔ prototype contract: SearchFacetController (0.254659ms)
+✔ prototype contract: SearchSortController (0.242046ms)
+✔ prototype contract: SearchResultControlsController (0.194557ms)
+✔ prototype contract: SwipeActionCoordinator (0.131237ms)
+✔ prototype contract: SearchResultRendererController (0.346312ms)
+✔ prototype contract: SearchCreateController (0.282652ms)
+✔ prototype contract: SearchSelectionController (0.166554ms)
+✔ prototype contract: SharedSearchStateCoordinator (0.1329ms)
+✖ prototype contract: NavigatorCustomization (1.485898ms)
+✔ prototype contract: SearchNavigatorController (0.209324ms)
+✔ prototype contract: SearchCore (0.27627ms)
+✔ prototype contract: MobileFrameController (0.09577ms)
+✔ prototype contract: SearchWorkspaceCapabilities (0.112993ms)
+✔ prototype contract: SearchView (0.168397ms)
+✔ prototype contract: SearchWindowSession (0.163488ms)
+✔ prototype contract: SearchModalHost (0.083768ms)
+✔ prototype contract: LocalSearchOverlayHost (0.087705ms)
+✔ prototype contract: LocalSearchSettingTab (0.091893ms)
+✔ prototype contract: FileOperationService (0.09006ms)
+✔ prototype contract: OperationOverlayController (0.083708ms)
+✖ prototype contract: LocalSearchPlugin (3.696982ms)
+✔ prototype contract: SortFeedback (0.094488ms)
+✔ all original top-level symbol types and constants are retained (2.903297ms)
+✔ A/B normalization: normalizeSortFieldOrder (0.785319ms)
+✔ A/B normalization: normalizeHiddenSortFields (0.626079ms)
+✔ A/B normalization: normalizeSortDirection (0.157166ms)
+✔ A/B normalization: normalizeModalSearchQuery (0.157106ms)
+✔ A/B normalization: normalizeModalViewportAnchor (0.406165ms)
+✔ A/B normalization: normalizeGLSMetadataDirectory (0.678638ms)
+✔ A/B normalization: normalizeMetadataPropertyType (0.443746ms)
+✔ A/B normalization: normalizePropertyValueCatalog (0.655785ms)
+✔ A/B normalization: validateEditablePropertyKey (0.475675ms)
+✔ A/B normalization: normalizeEditableTagValue (0.255241ms)
+✔ A/B normalization: editableTagError (0.285718ms)
+✔ A/B normalization: normalizeUniqueStringList (0.23407ms)
+✔ A/B normalization: normalizeStringListMap (0.433897ms)
+✔ A/B normalization: normalizeTagValue (0.199616ms)
+✔ A/B normalization: tagIdentityKey (0.254729ms)
+✔ A/B normalization: normalizeUniqueTagList (0.301978ms)
+✔ A/B normalization: normalizeFilterTagSelection (0.574742ms)
+✔ A/B normalization: normalizeVaultFolderPath (0.409181ms)
+✔ A/B normalization: normalizeHexColor (0.347965ms)
+✔ A/B normalization: normalizeResultFolderColors (0.462521ms)
+✔ A/B normalization: normalizeExcludedFolders (0.710638ms)
+✔ A/B normalization: normalizeResultContentOrder (0.226957ms)
+✔ A/B normalization: normalizeRecentIconIds (0.302109ms)
+✔ A/B normalization: normalizeFilterPoolSelectionMode (0.135726ms)
+✔ A/B normalization: normalizePropertyPoolEntry (0.304303ms)
+✔ A/B normalization: normalizePropertyPoolEntries (0.380376ms)
+✔ A/B normalization: normalizeFilterPoolConfig (0.341754ms)
+✔ A/B normalization: normalizeFilterPools (1.127323ms)
+✔ A/B normalization: normalizeResultViewId (0.230364ms)
+✔ A/B normalization: normalizeResultViews (0.888703ms)
+✔ A/B normalization: normalizeNavigatorToolbars (0.839651ms)
+✔ A/B normalization: normalizeNavigatorVisibleSections (0.287532ms)
+✔ A/B normalization: normalizeNavigatorTimeField (0.204856ms)
+✔ A/B normalization: normalizeFileTypeFilterValue (7.653832ms)
+✔ A/B normalization: normalizeFileTypeFilterSelection (0.631069ms)
+✔ A/B normalization: normalizeFilterMatchMode (0.174489ms)
+✔ A/B normalization: normalizeFilterDate (0.344038ms)
+✔ A/B normalization: normalizeFilterDateRange (0.188294ms)
+✔ A/B normalization: normalizeExcludedAttachmentTypes (0.421263ms)
+✔ A/B normalization: normalizePropertySelection (0.710919ms)
+✔ A/B normalization: normalizeCreateType (0.239071ms)
+✔ A/B normalization: normalizeCreatePropertyTypes (0.280829ms)
+✔ A/B normalization: normalizeCreateMetadataMemory (3.438675ms)
+✔ A/B normalization: normalizeNavigatorCustomization (0.667277ms)
+✔ normalization has meaningful expected results, not only equality (0.382771ms)
+✔ Markdown cleaning, snippets, ranges, drawing parsers A/B (13.990956ms)
+✔ SparseHeightIndex matches an independent prefix-sum reference (28.41672ms)
+✔ query and filter clone/serialization contracts (2.020705ms)
+✔ BodyIndex storage, rename and non-Markdown exclusion (0.636529ms)
+✔ IoPool concurrency, rejection and queued-task recovery (38.349514ms)
+✔ production initialization retires one modeless command; preserves 2 views, generic API and clean unload (142.638236ms)
+✔ settings legacy input and queued writes preserve exact persisted snapshots (34.516136ms)
+✔ settings write failure is reported and the next queued write recovers (31.950415ms)
+✔ ordinary indexed file public API, recent-opened subscription and property writes (66.182275ms)
+✔ full-content LRU cache hit, non-retained read and missing-file identity (42.145262ms)
+✔ file-operation leases reject overlap and release after a failure (60.653113ms)
+✔ build reproducibility and explicitly reviewed CSS source (2260.158275ms)
+✔ virtual provider replacement, stale handles and raw metadata ownership (77.71129ms)
+✔ external API rejects malformed request shapes without creating a session (48.153535ms)
+✔ Canvas property writes use existing metadata sidecar instead of rewriting Canvas content (74.487785ms)
+✔ GLS has no Dida project-catalog coupling and ignores task-only projects (25.870015ms)
+✔ generic file/property catalog API exposes operations without project-specific special contracts (50.20569ms)
+✔ desktop sidebar mounts visible results with half a viewport of buffer on either side (1.017676ms)
+✔ all hosts share mount size, tall and hidden viewports stay covered (0.264257ms)
+✔ frozen sidebar CSS snapshot defaults are 6px and 2px (1.38622ms)
+✔ desktop sidebar publishes an already applied folder without reading result layout; peers still follow (4.653924ms)
+✔ stale sidebar merges its folder with another host query and waits for its open picker (1.209898ms)
+✔ other hosts acknowledge their own commit without reading layout (0.855491ms)
+✔ composer: root one level (1.411007ms)
+✔ composer: under existing parent (0.163267ms)
+✔ composer: under two levels (0.11152ms)
+✔ composer: original full path still works (0.146085ms)
+✔ composer: original quick relative path works (0.508166ms)
+✔ composer: strip leading hashtag (0.118282ms)
+✔ composer: preserve original display case (0.247547ms)
+✔ composer: empty candidate (0.097464ms)
+✔ composer rejects whitespace (0.376039ms)
+✔ composer rejects hash in segment (0.197242ms)
+✔ composer rejects empty slash segment (0.218652ms)
+✔ composer rejects invalid parent segment (0.09515ms)
+✔ drill: type trailing slash (0.142147ms)
+✔ drill: nested shortcut (17.952706ms)
+✔ drill: paste entire hierarchy then slash (0.084969ms)
+✔ drill: not a shortcut (0.681493ms)
+✔ drill: reject repeated slash (0.058299ms)
+✔ drill: reject invalid content (0.05839ms)
+✔ drill: reject empty (0.177264ms)
+✔ breadcrumb chain can return directly to any ancestor (0.925543ms)
+✔ tree navigation reuses real hierarchy and original casing (1.20501ms)
+✔ a virtual parent can become a navigation path without writing a parent tag (0.511664ms)
+✖ v5.2 formal baseline method order, descriptor, name and arity remain unchanged (15.123929ms)
+✔ v5.2 shared UI refs, Collator, tag semantics and modal helper exports unchanged (0.858546ms)
+✔ all six retired module paths absent; controller ownership remains single (0.740986ms)
+✔ top folder section uses the actual vault name, not the static category name (1.517828ms)
+✔ root icon follows the same vault/open-vault convention as Notebook Navigator (0.239331ms)
+✔ non-root groups and stable internal IDs stay unchanged (0.309694ms)
+✔ blank vault names fall back to the original folder caption (0.164018ms)
+ℹ tests 272
+ℹ suites 0
+ℹ pass 268
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33106.334439
+
+✖ failing tests:
+
+test at tests/regression.test.mjs:44:72
+✖ prototype contract: BatchMetadataService (2.257862ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        configurable: true,
+        enumerable: false,
+        get: null,
+  ...
+        get: null,
+  -     key: 'moveValueToKey',
+  -     set: null,
+  -     value: {
+  -       length: 6,
+  -       name: 'moveValueToKey'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+        key: 'migrateValue',
+        set: null,
+        value: {
+          length: 4,
+          name: 'migrateValue'
+  
+      at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'metadataFiles', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeTagList', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_frontmatterTagList', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'summarize', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_mutateFiles', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_editFrontmatter', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_applyMutation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'transformValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'applyMetadataDraft', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'migrateValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renameKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null } ],
+    expected: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'metadataFiles', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeTagList', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_frontmatterTagList', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'summarize', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_mutateFiles', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_editFrontmatter', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_applyMutation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'transformValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'applyMetadataDraft', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'moveValueToKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'migrateValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renameKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/regression.test.mjs:44:72
+✖ prototype contract: NavigatorCustomization (1.485898ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        configurable: true,
+        enumerable: false,
+        get: null,
+  ...
+        enumerable: false,
+  -     get: null,
+  -     key: '_canSort',
+  -     set: null,
+  -     value: {
+  -       length: 1,
+  -       name: '_canSort'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+  -     key: '_canNest',
+  -     set: null,
+  -     value: {
+  -       length: 2,
+  -       name: '_canNest'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+  -     key: 'rowsForKey',
+  -     set: null,
+  -     value: {
+  -       length: 1,
+  -       name: 'rowsForKey'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+  -     key: '_syncSortControls',
+  -     set: null,
+  -     value: {
+  -       length: 0,
+  -       name: '_syncSortControls'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+        get: {
+          length: 0,
+          name: 'get state'
+        },
+        key: 'state',
+  ...
+        get: null,
+  -     key: 'openTagCreator',
+  -     set: null,
+  -     value: {
+  -       length: 2,
+  -       name: 'openTagCreator'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+  -     key: 'openPropertyValueCreator',
+  -     set: null,
+  -     value: {
+  -       length: 1,
+  -       name: 'openPropertyValueCreator'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+        key: 'openColorEditor',
+        set: null,
+        value: {
+          length: 2,
+          name: 'openColorEditor'
+  
+      at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'state', enumerable: false, configurable: true, writable: undefined, value: null, get: [Object], set: null }, { key: '_folderColors', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'descriptor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'beginRender', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'order', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_inheritance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'resolvedAppearance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'decorate', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_maintenanceDefinition', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_maintenanceTarget', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_runMaintenance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_decorateMaintenance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setMaintenanceMode', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renderSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'finishRender', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setSortMode', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_notify', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_write', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setAppearance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'addSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'updateSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'removeSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'commitSort', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_run', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'openMenu', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'openColorEditor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'destroy', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null } ],
+    expected: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_canSort', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_canNest', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'rowsForKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_syncSortControls', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'state', enumerable: false, configurable: true, writable: undefined, value: null, get: [Object], set: null }, { key: '_folderColors', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'descriptor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'beginRender', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'order', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_inheritance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'resolvedAppearance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'decorate', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_maintenanceDefinition', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_maintenanceTarget', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_runMaintenance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_decorateMaintenance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setMaintenanceMode', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renderSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'finishRender', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setSortMode', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_notify', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_write', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setAppearance', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'addSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'updateSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'removeSeparator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'commitSort', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_run', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'openMenu', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'openTagCreator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'openPropertyValueCreator', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'openColorEditor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'destroy', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/regression.test.mjs:44:72
+✖ prototype contract: LocalSearchPlugin (3.696982ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        configurable: true,
+        enumerable: false,
+        get: null,
+  ...
+        get: null,
+  -     key: 'moveVaultPropertyValueToKey',
+  -     set: null,
+  -     value: {
+  -       length: 3,
+  -       name: 'moveVaultPropertyValueToKey'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+  -     key: '_moveVaultPropertyValueToKey',
+  -     set: null,
+  -     value: {
+  -       length: 3,
+  -       name: '_moveVaultPropertyValueToKey'
+  -     },
+  -     writable: true
+  -   },
+  -   {
+  -     configurable: true,
+  -     enumerable: false,
+  -     get: null,
+        key: 'renameVaultPropertyValue',
+        set: null,
+        value: {
+          length: 0,
+          name: 'renameVaultPropertyValue'
+  
+      at TestContext.<anonymous> (file:///workspace/MoNian/tests/regression.test.mjs:53:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setPickerSiblingOrder', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'moveFolderTreeNode', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_tagPathMatchesPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapTagPath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_rewriteInlineTagPositions', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_materializeTagPickerOrder', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_materializePropertyPickerOrders', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_mutatePropertyFilterPoolEntries', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'migrateVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_withPropertyCatalogMutation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_propertyMaintenanceSettingsSnapshot', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_invalidatePropertyCatalogViews', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_savePropertyMaintenanceSettings', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_commandSearchSelectionCore', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_deleteFromCommand', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_openCurrentFileOperation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'onload', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_enforceWorkspaceSingleton', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_latestCreateRecovery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'activateView', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_activateWorkspaceView', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'recoverSearchSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'rememberCreateSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'settleCreateSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeSearchQueries', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeSearchHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeFavoriteSearches', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_sameSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setSearchHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setFavoriteSearches', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'rememberModalSearchSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'recordSearchHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'favoriteSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'unfavoriteSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeRecentOpened', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setRecentOpened', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_touchRecentOpened', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_removeRecentOpenedPath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapRecentOpenedHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_replacePathPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_migrateCorePathState', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_transformSearchFilters', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapStoredSearchPaths', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_migrateRenameSettings', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_settleRename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_clearIndexPathPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_handleFolderDelete', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_handleFolderRename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_handleFileRename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_throttleSaveActivity', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_activeCoreFilterStates', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_settleCoreFilterMutation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_forEachActiveSearchCore', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_refreshSearchCoreResultCards', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_refreshActiveResultCards', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_refreshPickerOrderConsumers', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_publishIndexChanges', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_propertyValueCatalog', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'propertyCatalogType', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'propertyCatalogValues', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'hasPropertyCatalogValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'propertyCatalogKeys', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapPropertyValueCatalog', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'getIndexedFileProperties', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'getIndexedPropertyCatalog', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'patchExternalProperties', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_queueFileIndex', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_flushIndexQueueNow', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_flushIndexQueue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_readFileProperties', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setContentTimeEntry', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_removeContentTimePath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_removeContentTimePathPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_migrateContentTimePath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_markContentTimeCacheDirty', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_flushContentTimeCacheSave', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_pluginDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataHistoryFilename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataContentFilename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataNonMarkdownFilename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_assertMetadataDirectoryDedicated', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_ensureMetadataDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataSidecarFiles', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'changeMetadataDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_markdownTimeFromFile', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_markdownEditorViews', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, ... 82 more items ],
+    expected: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'setPickerSiblingOrder', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'moveFolderTreeNode', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_tagPathMatchesPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapTagPath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_rewriteInlineTagPositions', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_materializeTagPickerOrder', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_materializePropertyPickerOrders', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_mutatePropertyFilterPoolEntries', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'migrateVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_withPropertyCatalogMutation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_propertyMaintenanceSettingsSnapshot', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_invalidatePropertyCatalogViews', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_savePropertyMaintenanceSettings', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'moveVaultPropertyValueToKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_moveVaultPropertyValueToKey', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_commandSearchSelectionCore', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_deleteFromCommand', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_openCurrentFileOperation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'onload', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_enforceWorkspaceSingleton', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_latestCreateRecovery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'activateView', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_activateWorkspaceView', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'recoverSearchSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'rememberCreateSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'settleCreateSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeSearchQueries', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeSearchHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeFavoriteSearches', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_sameSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setSearchHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setFavoriteSearches', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'rememberModalSearchSession', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'recordSearchHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'favoriteSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'unfavoriteSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'deleteSearchQuery', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_normalizeRecentOpened', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setRecentOpened', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_touchRecentOpened', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_removeRecentOpenedPath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapRecentOpenedHistory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_replacePathPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_migrateCorePathState', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_transformSearchFilters', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapStoredSearchPaths', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_migrateRenameSettings', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_settleRename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_clearIndexPathPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_handleFolderDelete', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_handleFolderRename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_handleFileRename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_throttleSaveActivity', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_activeCoreFilterStates', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_settleCoreFilterMutation', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_forEachActiveSearchCore', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_refreshSearchCoreResultCards', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_refreshActiveResultCards', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_refreshPickerOrderConsumers', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_publishIndexChanges', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_propertyValueCatalog', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'propertyCatalogType', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'propertyCatalogValues', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'hasPropertyCatalogValue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'propertyCatalogKeys', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_remapPropertyValueCatalog', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'getIndexedFileProperties', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'getIndexedPropertyCatalog', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'patchExternalProperties', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_queueFileIndex', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_flushIndexQueueNow', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_flushIndexQueue', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_readFileProperties', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_setContentTimeEntry', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_removeContentTimePath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_removeContentTimePathPrefix', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_migrateContentTimePath', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_markContentTimeCacheDirty', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_flushContentTimeCacheSave', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_pluginDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataHistoryFilename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataContentFilename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataNonMarkdownFilename', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_assertMetadataDirectoryDedicated', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_ensureMetadataDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: '_metadataSidecarFiles', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, { key: 'changeMetadataDirectory', enumerable: false, configurable: true, writable: true, value: [Object], get: null, set: null }, ... 84 more items ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v52-frozen-api-parity.test.mjs:16:1
+✖ v5.2 formal baseline method order, descriptor, name and arity remain unchanged (15.123929ms)
+  AssertionError [ERR_ASSERTION]: LocalSearchPlugin
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        configurable: true,
+        enumerable: false,
+        key: 'constructor',
+  ...
+        enumerable: false,
+  +     key: 'moveVaultPropertyValueToKey',
+  +     length: 3,
+  +     name: 'moveVaultPropertyValueToKey',
+  +     type: 'function',
+  +     writable: true
+  +   },
+  +   {
+  +     configurable: true,
+  +     enumerable: false,
+  +     key: '_moveVaultPropertyValueToKey',
+  +     length: 3,
+  +     name: '_moveVaultPropertyValueToKey',
+  +     type: 'function',
+  +     writable: true
+  +   },
+  +   {
+  +     configurable: true,
+  +     enumerable: false,
+        key: 'renameVaultPropertyValue',
+        length: 0,
+        name: 'renameVaultPropertyValue',
+        type: 'function',
+        writable: true
+  
+      at TestContext.<anonymous> (file:///workspace/MoNian/tests/v52-frozen-api-parity.test.mjs:18:66)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, type: 'function', name: 'LocalSearchPlugin', length: 0 }, { key: 'setPickerSiblingOrder', enumerable: false, configurable: true, writable: true, type: 'function', name: 'setPickerSiblingOrder', length: 3 }, { key: 'moveFolderTreeNode', enumerable: false, configurable: true, writable: true, type: 'function', name: 'moveFolderTreeNode', length: 1 }, { key: '_tagPathMatchesPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_tagPathMatchesPrefix', length: 2 }, { key: '_remapTagPath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapTagPath', length: 3 }, { key: '_rewriteInlineTagPositions', enumerable: false, configurable: true, writable: true, type: 'function', name: '_rewriteInlineTagPositions', length: 4 }, { key: '_materializeTagPickerOrder', enumerable: false, configurable: true, writable: true, type: 'function', name: '_materializeTagPickerOrder', length: 0 }, { key: '_materializePropertyPickerOrders', enumerable: false, configurable: true, writable: true, type: 'function', name: '_materializePropertyPickerOrders', length: 0 }, { key: '_mutatePropertyFilterPoolEntries', enumerable: false, configurable: true, writable: true, type: 'function', name: '_mutatePropertyFilterPoolEntries', length: 1 }, { key: 'migrateVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: 'migrateVaultTagTreePrefix', length: 2 }, { key: 'deleteVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteVaultTagTreePrefix', length: 1 }, { key: '_withPropertyCatalogMutation', enumerable: false, configurable: true, writable: true, type: 'function', name: '_withPropertyCatalogMutation', length: 1 }, { key: '_propertyMaintenanceSettingsSnapshot', enumerable: false, configurable: true, writable: true, type: 'function', name: '_propertyMaintenanceSettingsSnapshot', length: 0 }, { key: '_invalidatePropertyCatalogViews', enumerable: false, configurable: true, writable: true, type: 'function', name: '_invalidatePropertyCatalogViews', length: 0 }, { key: '_savePropertyMaintenanceSettings', enumerable: false, configurable: true, writable: true, type: 'function', name: '_savePropertyMaintenanceSettings', length: 3 }, { key: 'renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: 'renameVaultPropertyKey', length: 0 }, { key: '_renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: '_renameVaultPropertyKey', length: 2 }, { key: 'deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteVaultPropertyKey', length: 0 }, { key: '_deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: '_deleteVaultPropertyKey', length: 1 }, { key: 'deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteVaultPropertyValue', length: 0 }, { key: '_deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: '_deleteVaultPropertyValue', length: 2 }, { key: 'moveVaultPropertyValueToKey', enumerable: false, configurable: true, writable: true, type: 'function', name: 'moveVaultPropertyValueToKey', length: 3 }, { key: '_moveVaultPropertyValueToKey', enumerable: false, configurable: true, writable: true, type: 'function', name: '_moveVaultPropertyValueToKey', length: 3 }, { key: 'renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: 'renameVaultPropertyValue', length: 0 }, { key: '_renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: '_renameVaultPropertyValue', length: 3 }, { key: '_commandSearchSelectionCore', enumerable: false, configurable: true, writable: true, type: 'function', name: '_commandSearchSelectionCore', length: 0 }, { key: '_deleteFromCommand', enumerable: false, configurable: true, writable: true, type: 'function', name: '_deleteFromCommand', length: 0 }, { key: '_openCurrentFileOperation', enumerable: false, configurable: true, writable: true, type: 'function', name: '_openCurrentFileOperation', length: 2 }, { key: 'onload', enumerable: false, configurable: true, writable: true, type: 'function', name: 'onload', length: 0 }, { key: '_enforceWorkspaceSingleton', enumerable: false, configurable: true, writable: true, type: 'function', name: '_enforceWorkspaceSingleton', length: 1 }, { key: '_latestCreateRecovery', enumerable: false, configurable: true, writable: true, type: 'function', name: '_latestCreateRecovery', length: 1 }, { key: 'activateView', enumerable: false, configurable: true, writable: true, type: 'function', name: 'activateView', length: 0 }, { key: '_activateWorkspaceView', enumerable: false, configurable: true, writable: true, type: 'function', name: '_activateWorkspaceView', length: 1 }, { key: 'recoverSearchSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'recoverSearchSession', length: 2 }, { key: 'rememberCreateSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'rememberCreateSession', length: 3 }, { key: 'settleCreateSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'settleCreateSession', length: 2 }, { key: '_normalizeSearchQueries', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeSearchQueries', length: 1 }, { key: '_normalizeSearchHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeSearchHistory', length: 1 }, { key: '_normalizeFavoriteSearches', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeFavoriteSearches', length: 1 }, { key: '_sameSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: '_sameSearchQuery', length: 2 }, { key: '_setSearchHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setSearchHistory', length: 1 }, { key: '_setFavoriteSearches', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setFavoriteSearches', length: 1 }, { key: 'rememberModalSearchSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'rememberModalSearchSession', length: 0 }, { key: 'recordSearchHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: 'recordSearchHistory', length: 1 }, { key: 'favoriteSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: 'favoriteSearchQuery', length: 1 }, { key: 'unfavoriteSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: 'unfavoriteSearchQuery', length: 1 }, { key: 'deleteSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteSearchQuery', length: 1 }, { key: '_normalizeRecentOpened', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeRecentOpened', length: 1 }, { key: '_setRecentOpened', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setRecentOpened', length: 2 }, { key: '_touchRecentOpened', enumerable: false, configurable: true, writable: true, type: 'function', name: '_touchRecentOpened', length: 1 }, { key: '_removeRecentOpenedPath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_removeRecentOpenedPath', length: 1 }, { key: '_remapRecentOpenedHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapRecentOpenedHistory', length: 2 }, { key: '_replacePathPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_replacePathPrefix', length: 3 }, { key: '_migrateCorePathState', enumerable: false, configurable: true, writable: true, type: 'function', name: '_migrateCorePathState', length: 2 }, { key: '_transformSearchFilters', enumerable: false, configurable: true, writable: true, type: 'function', name: '_transformSearchFilters', length: 1 }, { key: '_remapStoredSearchPaths', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapStoredSearchPaths', length: 1 }, { key: '_migrateRenameSettings', enumerable: false, configurable: true, writable: true, type: 'function', name: '_migrateRenameSettings', length: 2 }, { key: '_settleRename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_settleRename', length: 2 }, { key: '_clearIndexPathPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_clearIndexPathPrefix', length: 1 }, { key: '_handleFolderDelete', enumerable: false, configurable: true, writable: true, type: 'function', name: '_handleFolderDelete', length: 1 }, { key: '_handleFolderRename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_handleFolderRename', length: 2 }, { key: '_handleFileRename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_handleFileRename', length: 2 }, { key: '_throttleSaveActivity', enumerable: false, configurable: true, writable: true, type: 'function', name: '_throttleSaveActivity', length: 0 }, { key: '_activeCoreFilterStates', enumerable: false, configurable: true, writable: true, type: 'function', name: '_activeCoreFilterStates', length: 1 }, { key: '_settleCoreFilterMutation', enumerable: false, configurable: true, writable: true, type: 'function', name: '_settleCoreFilterMutation', length: 1 }, { key: '_forEachActiveSearchCore', enumerable: false, configurable: true, writable: true, type: 'function', name: '_forEachActiveSearchCore', length: 1 }, { key: '_refreshSearchCoreResultCards', enumerable: false, configurable: true, writable: true, type: 'function', name: '_refreshSearchCoreResultCards', length: 1 }, { key: '_refreshActiveResultCards', enumerable: false, configurable: true, writable: true, type: 'function', name: '_refreshActiveResultCards', length: 0 }, { key: '_refreshPickerOrderConsumers', enumerable: false, configurable: true, writable: true, type: 'function', name: '_refreshPickerOrderConsumers', length: 1 }, { key: '_publishIndexChanges', enumerable: false, configurable: true, writable: true, type: 'function', name: '_publishIndexChanges', length: 0 }, { key: '_publishPropertyCatalogChanges', enumerable: false, configurable: true, writable: true, type: 'function', name: '_publishPropertyCatalogChanges', length: 0 }, { key: 'subscribeIndexChanges', enumerable: false, configurable: true, writable: true, type: 'function', name: 'subscribeIndexChanges', length: 1 }, { key: '_propertyValueCatalog', enumerable: false, configurable: true, writable: true, type: 'function', name: '_propertyValueCatalog', length: 0 }, { key: 'propertyCatalogType', enumerable: false, configurable: true, writable: true, type: 'function', name: 'propertyCatalogType', length: 2 }, { key: 'propertyCatalogValues', enumerable: false, configurable: true, writable: true, type: 'function', name: 'propertyCatalogValues', length: 1 }, { key: 'hasPropertyCatalogValue', enumerable: false, configurable: true, writable: true, type: 'function', name: 'hasPropertyCatalogValue', length: 2 }, { key: 'propertyCatalogKeys', enumerable: false, configurable: true, writable: true, type: 'function', name: 'propertyCatalogKeys', length: 0 }, { key: 'addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, type: 'function', name: 'addPropertyCatalogValues', length: 0 }, { key: '_addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, type: 'function', name: '_addPropertyCatalogValues', length: 0 }, { key: '_remapPropertyValueCatalog', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapPropertyValueCatalog', length: 1 }, { key: 'getIndexedFiles', enumerable: false, configurable: true, writable: true, type: 'function', name: 'getIndexedFiles', length: 0 }, { key: 'getIndexedFileProperties', enumerable: false, configurable: true, writable: true, type: 'function', name: 'getIndexedFileProperties', length: 1 }, { key: 'getIndexedPropertyCatalog', enumerable: false, configurable: true, writable: true, type: 'function', name: 'getIndexedPropertyCatalog', length: 0 }, { key: 'patchExternalProperties', enumerable: false, configurable: true, writable: true, type: 'function', name: 'patchExternalProperties', length: 0 }, { key: '_queueFileIndex', enumerable: false, configurable: true, writable: true, type: 'function', name: '_queueFileIndex', length: 1 }, { key: '_flushIndexQueueNow', enumerable: false, configurable: true, writable: true, type: 'function', name: '_flushIndexQueueNow', length: 0 }, { key: '_flushIndexQueue', enumerable: false, configurable: true, writable: true, type: 'function', name: '_flushIndexQueue', length: 0 }, { key: '_readFileProperties', enumerable: false, configurable: true, writable: true, type: 'function', name: '_readFileProperties', length: 1 }, { key: '_setContentTimeEntry', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setContentTimeEntry', length: 2 }, { key: '_removeContentTimePath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_removeContentTimePath', length: 1 }, { key: '_removeContentTimePathPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_removeContentTimePathPrefix', length: 1 }, { key: '_migrateContentTimePath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_migrateContentTimePath', length: 2 }, { key: '_markContentTimeCacheDirty', enumerable: false, configurable: true, writable: true, type: 'function', name: '_markContentTimeCacheDirty', length: 0 }, { key: '_flushContentTimeCacheSave', enumerable: false, configurable: true, writable: true, type: 'function', name: '_flushContentTimeCacheSave', length: 0 }, { key: '_pluginDirectory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_pluginDirectory', length: 0 }, { key: '_metadataDirectory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataDirectory', length: 0 }, { key: '_metadataHistoryFilename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataHistoryFilename', length: 0 }, { key: '_metadataContentFilename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataContentFilename', length: 0 }, { key: '_metadataNonMarkdownFilename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataNonMarkdownFilename', length: 0 }, { key: '_assertMetadataDirectoryDedicated', enumerable: false, configurable: true, writable: true, type: 'function', name: '_assertMetadataDirectoryDedicated', length: 1 }, ... 87 more items ],
+    expected: [ { key: 'constructor', enumerable: false, configurable: true, writable: true, type: 'function', name: 'LocalSearchPlugin', length: 0 }, { key: 'setPickerSiblingOrder', enumerable: false, configurable: true, writable: true, type: 'function', name: 'setPickerSiblingOrder', length: 3 }, { key: 'moveFolderTreeNode', enumerable: false, configurable: true, writable: true, type: 'function', name: 'moveFolderTreeNode', length: 1 }, { key: '_tagPathMatchesPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_tagPathMatchesPrefix', length: 2 }, { key: '_remapTagPath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapTagPath', length: 3 }, { key: '_rewriteInlineTagPositions', enumerable: false, configurable: true, writable: true, type: 'function', name: '_rewriteInlineTagPositions', length: 4 }, { key: '_materializeTagPickerOrder', enumerable: false, configurable: true, writable: true, type: 'function', name: '_materializeTagPickerOrder', length: 0 }, { key: '_materializePropertyPickerOrders', enumerable: false, configurable: true, writable: true, type: 'function', name: '_materializePropertyPickerOrders', length: 0 }, { key: '_mutatePropertyFilterPoolEntries', enumerable: false, configurable: true, writable: true, type: 'function', name: '_mutatePropertyFilterPoolEntries', length: 1 }, { key: 'migrateVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: 'migrateVaultTagTreePrefix', length: 2 }, { key: 'deleteVaultTagTreePrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteVaultTagTreePrefix', length: 1 }, { key: '_withPropertyCatalogMutation', enumerable: false, configurable: true, writable: true, type: 'function', name: '_withPropertyCatalogMutation', length: 1 }, { key: '_propertyMaintenanceSettingsSnapshot', enumerable: false, configurable: true, writable: true, type: 'function', name: '_propertyMaintenanceSettingsSnapshot', length: 0 }, { key: '_invalidatePropertyCatalogViews', enumerable: false, configurable: true, writable: true, type: 'function', name: '_invalidatePropertyCatalogViews', length: 0 }, { key: '_savePropertyMaintenanceSettings', enumerable: false, configurable: true, writable: true, type: 'function', name: '_savePropertyMaintenanceSettings', length: 3 }, { key: 'renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: 'renameVaultPropertyKey', length: 0 }, { key: '_renameVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: '_renameVaultPropertyKey', length: 2 }, { key: 'deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteVaultPropertyKey', length: 0 }, { key: '_deleteVaultPropertyKey', enumerable: false, configurable: true, writable: true, type: 'function', name: '_deleteVaultPropertyKey', length: 1 }, { key: 'deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteVaultPropertyValue', length: 0 }, { key: '_deleteVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: '_deleteVaultPropertyValue', length: 2 }, { key: 'renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: 'renameVaultPropertyValue', length: 0 }, { key: '_renameVaultPropertyValue', enumerable: false, configurable: true, writable: true, type: 'function', name: '_renameVaultPropertyValue', length: 3 }, { key: '_commandSearchSelectionCore', enumerable: false, configurable: true, writable: true, type: 'function', name: '_commandSearchSelectionCore', length: 0 }, { key: '_deleteFromCommand', enumerable: false, configurable: true, writable: true, type: 'function', name: '_deleteFromCommand', length: 0 }, { key: '_openCurrentFileOperation', enumerable: false, configurable: true, writable: true, type: 'function', name: '_openCurrentFileOperation', length: 2 }, { key: 'onload', enumerable: false, configurable: true, writable: true, type: 'function', name: 'onload', length: 0 }, { key: '_enforceWorkspaceSingleton', enumerable: false, configurable: true, writable: true, type: 'function', name: '_enforceWorkspaceSingleton', length: 1 }, { key: '_latestCreateRecovery', enumerable: false, configurable: true, writable: true, type: 'function', name: '_latestCreateRecovery', length: 1 }, { key: 'activateView', enumerable: false, configurable: true, writable: true, type: 'function', name: 'activateView', length: 0 }, { key: '_activateWorkspaceView', enumerable: false, configurable: true, writable: true, type: 'function', name: '_activateWorkspaceView', length: 1 }, { key: 'recoverSearchSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'recoverSearchSession', length: 2 }, { key: 'rememberCreateSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'rememberCreateSession', length: 3 }, { key: 'settleCreateSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'settleCreateSession', length: 2 }, { key: '_normalizeSearchQueries', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeSearchQueries', length: 1 }, { key: '_normalizeSearchHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeSearchHistory', length: 1 }, { key: '_normalizeFavoriteSearches', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeFavoriteSearches', length: 1 }, { key: '_sameSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: '_sameSearchQuery', length: 2 }, { key: '_setSearchHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setSearchHistory', length: 1 }, { key: '_setFavoriteSearches', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setFavoriteSearches', length: 1 }, { key: 'rememberModalSearchSession', enumerable: false, configurable: true, writable: true, type: 'function', name: 'rememberModalSearchSession', length: 0 }, { key: 'recordSearchHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: 'recordSearchHistory', length: 1 }, { key: 'favoriteSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: 'favoriteSearchQuery', length: 1 }, { key: 'unfavoriteSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: 'unfavoriteSearchQuery', length: 1 }, { key: 'deleteSearchQuery', enumerable: false, configurable: true, writable: true, type: 'function', name: 'deleteSearchQuery', length: 1 }, { key: '_normalizeRecentOpened', enumerable: false, configurable: true, writable: true, type: 'function', name: '_normalizeRecentOpened', length: 1 }, { key: '_setRecentOpened', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setRecentOpened', length: 2 }, { key: '_touchRecentOpened', enumerable: false, configurable: true, writable: true, type: 'function', name: '_touchRecentOpened', length: 1 }, { key: '_removeRecentOpenedPath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_removeRecentOpenedPath', length: 1 }, { key: '_remapRecentOpenedHistory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapRecentOpenedHistory', length: 2 }, { key: '_replacePathPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_replacePathPrefix', length: 3 }, { key: '_migrateCorePathState', enumerable: false, configurable: true, writable: true, type: 'function', name: '_migrateCorePathState', length: 2 }, { key: '_transformSearchFilters', enumerable: false, configurable: true, writable: true, type: 'function', name: '_transformSearchFilters', length: 1 }, { key: '_remapStoredSearchPaths', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapStoredSearchPaths', length: 1 }, { key: '_migrateRenameSettings', enumerable: false, configurable: true, writable: true, type: 'function', name: '_migrateRenameSettings', length: 2 }, { key: '_settleRename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_settleRename', length: 2 }, { key: '_clearIndexPathPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_clearIndexPathPrefix', length: 1 }, { key: '_handleFolderDelete', enumerable: false, configurable: true, writable: true, type: 'function', name: '_handleFolderDelete', length: 1 }, { key: '_handleFolderRename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_handleFolderRename', length: 2 }, { key: '_handleFileRename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_handleFileRename', length: 2 }, { key: '_throttleSaveActivity', enumerable: false, configurable: true, writable: true, type: 'function', name: '_throttleSaveActivity', length: 0 }, { key: '_activeCoreFilterStates', enumerable: false, configurable: true, writable: true, type: 'function', name: '_activeCoreFilterStates', length: 1 }, { key: '_settleCoreFilterMutation', enumerable: false, configurable: true, writable: true, type: 'function', name: '_settleCoreFilterMutation', length: 1 }, { key: '_forEachActiveSearchCore', enumerable: false, configurable: true, writable: true, type: 'function', name: '_forEachActiveSearchCore', length: 1 }, { key: '_refreshSearchCoreResultCards', enumerable: false, configurable: true, writable: true, type: 'function', name: '_refreshSearchCoreResultCards', length: 1 }, { key: '_refreshActiveResultCards', enumerable: false, configurable: true, writable: true, type: 'function', name: '_refreshActiveResultCards', length: 0 }, { key: '_refreshPickerOrderConsumers', enumerable: false, configurable: true, writable: true, type: 'function', name: '_refreshPickerOrderConsumers', length: 1 }, { key: '_publishIndexChanges', enumerable: false, configurable: true, writable: true, type: 'function', name: '_publishIndexChanges', length: 0 }, { key: '_publishPropertyCatalogChanges', enumerable: false, configurable: true, writable: true, type: 'function', name: '_publishPropertyCatalogChanges', length: 0 }, { key: 'subscribeIndexChanges', enumerable: false, configurable: true, writable: true, type: 'function', name: 'subscribeIndexChanges', length: 1 }, { key: '_propertyValueCatalog', enumerable: false, configurable: true, writable: true, type: 'function', name: '_propertyValueCatalog', length: 0 }, { key: 'propertyCatalogType', enumerable: false, configurable: true, writable: true, type: 'function', name: 'propertyCatalogType', length: 2 }, { key: 'propertyCatalogValues', enumerable: false, configurable: true, writable: true, type: 'function', name: 'propertyCatalogValues', length: 1 }, { key: 'hasPropertyCatalogValue', enumerable: false, configurable: true, writable: true, type: 'function', name: 'hasPropertyCatalogValue', length: 2 }, { key: 'propertyCatalogKeys', enumerable: false, configurable: true, writable: true, type: 'function', name: 'propertyCatalogKeys', length: 0 }, { key: 'addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, type: 'function', name: 'addPropertyCatalogValues', length: 0 }, { key: '_addPropertyCatalogValues', enumerable: false, configurable: true, writable: true, type: 'function', name: '_addPropertyCatalogValues', length: 0 }, { key: '_remapPropertyValueCatalog', enumerable: false, configurable: true, writable: true, type: 'function', name: '_remapPropertyValueCatalog', length: 1 }, { key: 'getIndexedFiles', enumerable: false, configurable: true, writable: true, type: 'function', name: 'getIndexedFiles', length: 0 }, { key: 'getIndexedFileProperties', enumerable: false, configurable: true, writable: true, type: 'function', name: 'getIndexedFileProperties', length: 1 }, { key: 'getIndexedPropertyCatalog', enumerable: false, configurable: true, writable: true, type: 'function', name: 'getIndexedPropertyCatalog', length: 0 }, { key: 'patchExternalProperties', enumerable: false, configurable: true, writable: true, type: 'function', name: 'patchExternalProperties', length: 0 }, { key: '_queueFileIndex', enumerable: false, configurable: true, writable: true, type: 'function', name: '_queueFileIndex', length: 1 }, { key: '_flushIndexQueueNow', enumerable: false, configurable: true, writable: true, type: 'function', name: '_flushIndexQueueNow', length: 0 }, { key: '_flushIndexQueue', enumerable: false, configurable: true, writable: true, type: 'function', name: '_flushIndexQueue', length: 0 }, { key: '_readFileProperties', enumerable: false, configurable: true, writable: true, type: 'function', name: '_readFileProperties', length: 1 }, { key: '_setContentTimeEntry', enumerable: false, configurable: true, writable: true, type: 'function', name: '_setContentTimeEntry', length: 2 }, { key: '_removeContentTimePath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_removeContentTimePath', length: 1 }, { key: '_removeContentTimePathPrefix', enumerable: false, configurable: true, writable: true, type: 'function', name: '_removeContentTimePathPrefix', length: 1 }, { key: '_migrateContentTimePath', enumerable: false, configurable: true, writable: true, type: 'function', name: '_migrateContentTimePath', length: 2 }, { key: '_markContentTimeCacheDirty', enumerable: false, configurable: true, writable: true, type: 'function', name: '_markContentTimeCacheDirty', length: 0 }, { key: '_flushContentTimeCacheSave', enumerable: false, configurable: true, writable: true, type: 'function', name: '_flushContentTimeCacheSave', length: 0 }, { key: '_pluginDirectory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_pluginDirectory', length: 0 }, { key: '_metadataDirectory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataDirectory', length: 0 }, { key: '_metadataHistoryFilename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataHistoryFilename', length: 0 }, { key: '_metadataContentFilename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataContentFilename', length: 0 }, { key: '_metadataNonMarkdownFilename', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataNonMarkdownFilename', length: 0 }, { key: '_assertMetadataDirectoryDedicated', enumerable: false, configurable: true, writable: true, type: 'function', name: '_assertMetadataDirectoryDedicated', length: 1 }, { key: '_ensureMetadataDirectory', enumerable: false, configurable: true, writable: true, type: 'function', name: '_ensureMetadataDirectory', length: 0 }, { key: '_metadataSidecarFiles', enumerable: false, configurable: true, writable: true, type: 'function', name: '_metadataSidecarFiles', length: 0 }, ... 85 more items ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
