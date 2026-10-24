@@ -14,3 +14,5 @@
 SHA256：`8ddcd480f368a8427720f00feb25466c27b8b2cafc73b2f958e5bccb5444eabe`。
 
 本次为打包验证，不重复宣称上一轮测试全部通过。历史测试失败与原生环境边界见 RESULT_SCROLL_OWNER_20261024.md。
+
+[下载源码与运行文件合集](https://github.com/13858812638-glitch/MoNian/raw/38bdf36d45ba6fc29b84352d85c3320b177dd375/downloads/GLS-Latest-Source-and-Runtime-20261025.zip)。实际下载 HTTP 200，远端包字节与本地一致，CRC 校验通过。
