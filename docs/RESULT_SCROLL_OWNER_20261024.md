@@ -42,3 +42,5 @@
 运行包只含 `main.js`、`styles.css`，来自本轮构建；CSS 与上一版一致。退出 Obsidian 后覆盖插件目录这两个文件，保留原 `manifest.json` 和 `data.json`，再启动。源码由本分支提交保存。
 
 覆盖包：`GLS-Result-Scroll-Optimized-20261024.zip`；SHA256：`2d5ad9491b33ce8c8b76a51194a241bd08024e0893e41d77f178466f78312756`。CRC 及两项文件与当前 dist 字节校验均通过。
+
+[下载已校验覆盖包](https://github.com/13858812638-glitch/MoNian/raw/ed35d892e1b4afa3f7337997b6e8eef73bfaa152/downloads/GLS-Result-Scroll-Optimized-20261024.zip)。实际 HTTP 下载返回 200，远端文件与本地 ZIP / 当前 dist 内容完全一致。
