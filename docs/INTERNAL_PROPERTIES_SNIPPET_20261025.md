@@ -44,3 +44,9 @@
 - 搜索条件验收 144/144；全量 Node 268/272，4 项为已有冻结 ABI 比较失败。
 - 旧浏览器快照四种配置仍在 01-initial 失败，不声称该门禁后续 B 场景已执行。
 - 插件全源 JS/CSS 静态审计通过；新片段独立解析确认只有一条规则和一个 display:none 声明，未新增 Style Settings。
+
+## 交付包
+
+`downloads/GLS-Property-Snippet-Source-and-Runtime-20261025.zip` 包含 Snippets、Runtime 和完整 Source，共 1229 项。CRC 与全部文件字节校验通过；解压后独立安装锁定依赖并构建，两项运行产物与交付内容一致。
+
+SHA256：`12a2b2467e92b39db7b1d1100589d6d320ffb8addcd6fb5de91498787e0160ba`。

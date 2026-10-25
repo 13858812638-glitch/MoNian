@@ -1,0 +1,12 @@
+{
+  "file": "downloads/GLS-Property-Snippet-Source-and-Runtime-20261025.zip",
+  "sourceCommit": "ab898f7dcc9aa5fa087fe326427a7534b183fbe1",
+  "bytes": 10800717,
+  "sha256": "12a2b2467e92b39db7b1d1100589d6d320ffb8addcd6fb5de91498787e0160ba",
+  "entries": 1229,
+  "crc32": "PASS",
+  "allEntryBytesMatch": true,
+  "runtimeMatchesSourceDist": true,
+  "snippetMatchesSource": true,
+  "independentExtractedBuild": "PASS; locked npm ci and build; JS/CSS byte-identical"
+}
