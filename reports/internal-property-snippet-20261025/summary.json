@@ -1,0 +1,42 @@
+{
+  "baseline": "adb3a0a3077e045a57f38145e9f766a404258a19",
+  "targeted": {
+    "before": {
+      "total": 34,
+      "passed": 12,
+      "failed": 22
+    },
+    "after": {
+      "total": 34,
+      "passed": 34,
+      "failed": 0
+    }
+  },
+  "engineering": "PASS; 153 JS modules, 666 dependencies",
+  "build": "PASS; main.js byte-identical to previous release",
+  "node": {
+    "total": 272,
+    "passed": 268,
+    "failed": 4,
+    "failures": [
+      "prototype contract: BatchMetadataService",
+      "prototype contract: NavigatorCustomization",
+      "prototype contract: LocalSearchPlugin",
+      "v5.2 formal baseline method order, descriptor, name and arity remain unchanged"
+    ],
+    "status": "same historical frozen ABI failures"
+  },
+  "browser": "same four historical 01-initial snapshot mismatches; later B scenarios not executed by this gate",
+  "acceptance": {
+    "passed": 144,
+    "failed": 0
+  },
+  "sourceStyle": "PASS for plugin JS/CSS; standalone snippet separately parsed: one qualified rule, one display:none declaration",
+  "fixtureCorrection": "Playwright rejected empty CSS before snippet existed; baseline now uses a no-rule comment. Initial log preserved.",
+  "notVerified": [
+    "native Obsidian startup ordering",
+    "iOS/Android native WebView",
+    "third-party themes/snippets",
+    "WebKit"
+  ]
+}

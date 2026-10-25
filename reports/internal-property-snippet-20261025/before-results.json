@@ -1,0 +1,260 @@
+[
+  {
+    "name": "standalone snippet exists with no Style Settings or JS dependency",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "plugin CSS retires rule and setting together",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light hides six internal fields before plugin loads",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "flex",
+      "gls_created_source": "flex",
+      "gls_body_modified_at": "flex",
+      "gls_body_fingerprint": "flex",
+      "gls_file_modified_at": "flex",
+      "gls_file_fingerprint": "flex",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  },
+  {
+    "name": "desktop-light ordinary note properties stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light source text, property sidebar and result cards stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light plugin load cannot change snippet result",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light legacy setting class cannot reintroduce startup dependency",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light plugin unload keeps note fields hidden",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light new note fields hide immediately without observers",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop-light disabling snippet reveals fields even with plugin loaded",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "none",
+      "gls_created_source": "none",
+      "gls_body_modified_at": "none",
+      "gls_body_fingerprint": "none",
+      "gls_file_modified_at": "none",
+      "gls_file_fingerprint": "none",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  },
+  {
+    "name": "desktop-dark hides six internal fields before plugin loads",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "flex",
+      "gls_created_source": "flex",
+      "gls_body_modified_at": "flex",
+      "gls_body_fingerprint": "flex",
+      "gls_file_modified_at": "flex",
+      "gls_file_fingerprint": "flex",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  },
+  {
+    "name": "desktop-dark ordinary note properties stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark source text, property sidebar and result cards stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark plugin load cannot change snippet result",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark legacy setting class cannot reintroduce startup dependency",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark plugin unload keeps note fields hidden",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark new note fields hide immediately without observers",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "desktop-dark disabling snippet reveals fields even with plugin loaded",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "none",
+      "gls_created_source": "none",
+      "gls_body_modified_at": "none",
+      "gls_body_fingerprint": "none",
+      "gls_file_modified_at": "none",
+      "gls_file_fingerprint": "none",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  },
+  {
+    "name": "mobile-light hides six internal fields before plugin loads",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "flex",
+      "gls_created_source": "flex",
+      "gls_body_modified_at": "flex",
+      "gls_body_fingerprint": "flex",
+      "gls_file_modified_at": "flex",
+      "gls_file_fingerprint": "flex",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  },
+  {
+    "name": "mobile-light ordinary note properties stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light source text, property sidebar and result cards stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light plugin load cannot change snippet result",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light legacy setting class cannot reintroduce startup dependency",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light plugin unload keeps note fields hidden",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light new note fields hide immediately without observers",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile-light disabling snippet reveals fields even with plugin loaded",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "none",
+      "gls_created_source": "none",
+      "gls_body_modified_at": "none",
+      "gls_body_fingerprint": "none",
+      "gls_file_modified_at": "none",
+      "gls_file_fingerprint": "none",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  },
+  {
+    "name": "mobile-dark hides six internal fields before plugin loads",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "flex",
+      "gls_created_source": "flex",
+      "gls_body_modified_at": "flex",
+      "gls_body_fingerprint": "flex",
+      "gls_file_modified_at": "flex",
+      "gls_file_fingerprint": "flex",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  },
+  {
+    "name": "mobile-dark ordinary note properties stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark source text, property sidebar and result cards stay visible",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark plugin load cannot change snippet result",
+    "passed": true,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark legacy setting class cannot reintroduce startup dependency",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark plugin unload keeps note fields hidden",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark new note fields hide immediately without observers",
+    "passed": false,
+    "evidence": null
+  },
+  {
+    "name": "mobile-dark disabling snippet reveals fields even with plugin loaded",
+    "passed": false,
+    "evidence": {
+      "gls_created_at": "none",
+      "gls_created_source": "none",
+      "gls_body_modified_at": "none",
+      "gls_body_fingerprint": "none",
+      "gls_file_modified_at": "none",
+      "gls_file_fingerprint": "none",
+      "status": "flex",
+      "tags": "flex",
+      "created": "flex",
+      "gls_custom": "flex"
+    }
+  }
+]

@@ -4,49 +4,49 @@
   "sourceFiles": 154,
   "jsLines": 34750,
   "jsBytes": 1613536,
-  "cssBytes": 265166,
-  "cssLines": 7678,
+  "cssBytes": 264354,
+  "cssLines": 7662,
   "cssParseErrors": [],
-  "cssRuleCount": 726,
+  "cssRuleCount": 725,
   "duplicateSelectorsSameContext": [
     {
       "context": [],
       "selector": ":root",
       "lines": [
-        1444,
-        7278
+        1438,
+        7262
       ]
     },
     {
       "context": [],
       "selector": ".local-search-navigator .local-search-nav-scroll",
       "lines": [
-        1918,
-        1939
+        1912,
+        1933
       ]
     },
     {
       "context": [],
       "selector": "body.is-mobile",
       "lines": [
-        7105,
-        7286
+        7099,
+        7270
       ]
     }
   ],
   "duplicatePropertiesSameRule": [
     {
-      "line": 3600,
+      "line": 3594,
       "selector": ".local-search-results-shell",
       "property": "overflow",
-      "earlier": 3599
+      "earlier": 3593
     }
   ],
   "styleSettings": {
     "sectionName": "本地搜索",
     "sectionId": "gls-local-search-ui",
     "headings": 28,
-    "parameters": 143,
+    "parameters": 142,
     "duplicateIds": [],
     "duplicateSectionNamedHeading": [],
     "missingConsumerCandidates": []
@@ -2464,9 +2464,9 @@
     },
     {
       "file": "src/styles/styles.css",
-      "lines": 7678,
-      "bytes": 265166,
-      "sha256": "f2ca9fecbf9b9581e407fe875b3382ae8dc6546391dd0ad06cafc978b25fc989"
+      "lines": 7662,
+      "bytes": 264354,
+      "sha256": "a476cd932e51d18dcc72f1c86a6de62bf098e82bd4f7202c5b5c3bb4f39f46a9"
     }
   ],
   "mobileContract": {

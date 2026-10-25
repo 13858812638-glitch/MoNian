@@ -1,0 +1,22 @@
+[
+  {
+    "name": "node",
+    "command": "npm test",
+    "exit": 1
+  },
+  {
+    "name": "browser",
+    "command": "npm run test:browser",
+    "exit": 1
+  },
+  {
+    "name": "acceptance",
+    "command": "npm run test:acceptance",
+    "exit": 0
+  },
+  {
+    "name": "source",
+    "command": "npm run audit:source",
+    "exit": 0
+  }
+]

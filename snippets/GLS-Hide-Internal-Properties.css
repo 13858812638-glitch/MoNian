@@ -1,0 +1,15 @@
+/* GLS internal note properties — owned exclusively by this Obsidian snippet.
+ * Copy to <vault>/.obsidian/snippets/ and enable in Settings → Appearance.
+ * No GLS / Style Settings startup dependency. Disable this snippet to reveal.
+ * Display only: YAML values, source mode, property sidebar and search stay intact.
+ */
+.workspace-leaf-content[data-type="markdown"] .metadata-container .metadata-property:is(
+    [data-property-key="gls_created_at"],
+    [data-property-key="gls_created_source"],
+    [data-property-key="gls_body_modified_at"],
+    [data-property-key="gls_body_fingerprint"],
+    [data-property-key="gls_file_modified_at"],
+    [data-property-key="gls_file_fingerprint"]
+) {
+    display: none;
+}

@@ -1,0 +1,77 @@
+
+> gls-modular-engineering@0.0.0-formal-nokeyboardfollow.1-sidebar-refine.1 audit:source
+> python3 scripts/audit-source-style.py
+
+{
+  "scope": "all src JavaScript and CSS; read-only inventory, not an all-behavior proof",
+  "modules": 153,
+  "sourceFiles": 154,
+  "jsLines": 34750,
+  "jsBytes": 1613536,
+  "cssBytes": 264354,
+  "cssLines": 7662,
+  "cssParseErrors": [],
+  "cssRuleCount": 725,
+  "duplicateSelectorsSameContext": [
+    {
+      "context": [],
+      "selector": ":root",
+      "lines": [
+        1438,
+        7262
+      ]
+    },
+    {
+      "context": [],
+      "selector": ".local-search-navigator .local-search-nav-scroll",
+      "lines": [
+        1912,
+        1933
+      ]
+    },
+    {
+      "context": [],
+      "selector": "body.is-mobile",
+      "lines": [
+        7099,
+        7270
+      ]
+    }
+  ],
+  "duplicatePropertiesSameRule": [
+    {
+      "line": 3594,
+      "selector": ".local-search-results-shell",
+      "property": "overflow",
+      "earlier": 3593
+    }
+  ],
+  "styleSettings": {
+    "sectionName": "本地搜索",
+    "sectionId": "gls-local-search-ui",
+    "headings": 28,
+    "parameters": 142,
+    "duplicateIds": [],
+    "duplicateSectionNamedHeading": [],
+    "missingConsumerCandidates": []
+  },
+  "tokenDefinitionCount": 302,
+  "unconsumedTokenCandidates": [],
+  "notes": [
+    "Selectors are grouped by at-rule context; repeated rules are candidates for ownership review, not proven conflicts.",
+    "Dynamic class/token names and external Style Settings consumers can produce scan false positives.",
+    "DOM-owned listeners may be collected with their element; global listeners require explicit scope cleanup.",
+    "No user theme/CSS snippets/data/manifest were supplied."
+  ],
+  "mobileContract": {
+    "baseHeightToken": true,
+    "keyboardHeightToken": true,
+    "note": "Presence is an inventory check, not a native keyboard/layout acceptance test."
+  }
+}
+resource references 292 literal style candidates 4
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

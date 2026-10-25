@@ -1,0 +1,34 @@
+FAIL standalone snippet exists with no Style Settings or JS dependency
+FAIL plugin CSS retires rule and setting together
+FAIL desktop-light hides six internal fields before plugin loads
+PASS desktop-light ordinary note properties stay visible
+PASS desktop-light source text, property sidebar and result cards stay visible
+PASS desktop-light plugin load cannot change snippet result
+FAIL desktop-light legacy setting class cannot reintroduce startup dependency
+FAIL desktop-light plugin unload keeps note fields hidden
+FAIL desktop-light new note fields hide immediately without observers
+FAIL desktop-light disabling snippet reveals fields even with plugin loaded
+FAIL desktop-dark hides six internal fields before plugin loads
+PASS desktop-dark ordinary note properties stay visible
+PASS desktop-dark source text, property sidebar and result cards stay visible
+PASS desktop-dark plugin load cannot change snippet result
+FAIL desktop-dark legacy setting class cannot reintroduce startup dependency
+FAIL desktop-dark plugin unload keeps note fields hidden
+FAIL desktop-dark new note fields hide immediately without observers
+FAIL desktop-dark disabling snippet reveals fields even with plugin loaded
+FAIL mobile-light hides six internal fields before plugin loads
+PASS mobile-light ordinary note properties stay visible
+PASS mobile-light source text, property sidebar and result cards stay visible
+PASS mobile-light plugin load cannot change snippet result
+FAIL mobile-light legacy setting class cannot reintroduce startup dependency
+FAIL mobile-light plugin unload keeps note fields hidden
+FAIL mobile-light new note fields hide immediately without observers
+FAIL mobile-light disabling snippet reveals fields even with plugin loaded
+FAIL mobile-dark hides six internal fields before plugin loads
+PASS mobile-dark ordinary note properties stay visible
+PASS mobile-dark source text, property sidebar and result cards stay visible
+PASS mobile-dark plugin load cannot change snippet result
+FAIL mobile-dark legacy setting class cannot reintroduce startup dependency
+FAIL mobile-dark plugin unload keeps note fields hidden
+FAIL mobile-dark new note fields hide immediately without observers
+FAIL mobile-dark disabling snippet reveals fields even with plugin loaded

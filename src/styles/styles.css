@@ -12,12 +12,6 @@ settings:
     level: 1
     collapsed: true
 
-  - id: ls-show-internal-time-properties
-    title: 显示内部时间属性
-    description: 在笔记属性区显示 GLS 管理的时间、来源和指纹。默认隐藏，实际记录仍保留，可在源码模式查看。
-    type: class-toggle
-    default: false
-
   - id: ls-ss-base-window
     title: 主窗口
     description: 用于调整：桌面主窗口的尺寸、圆角、阴影和内容基线。
@@ -7259,16 +7253,6 @@ body.is-phone .local-search-modal-container .local-search-modal {
 .local-search-picker-dropdown > .local-search-dropdown-title {
     margin: 0;
 }
-
-/* GLS 管理的六个内部字段默认不挤占笔记属性区；只隐藏展示，绝不删除 YAML。 */
-body:not(.ls-show-internal-time-properties) .workspace-leaf-content[data-type="markdown"] .metadata-container .metadata-property:is(
-    [data-property-key="gls_created_at"],
-    [data-property-key="gls_created_source"],
-    [data-property-key="gls_body_modified_at"],
-    [data-property-key="gls_body_fingerprint"],
-    [data-property-key="gls_file_modified_at"],
-    [data-property-key="gls_file_fingerprint"]
-) { display: none; }
 
 .local-search-swipe-shell.is-swiping > .local-search-swipe-actions { will-change: transform; }
 
