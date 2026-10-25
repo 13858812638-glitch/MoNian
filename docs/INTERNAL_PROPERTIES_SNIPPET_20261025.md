@@ -50,3 +50,5 @@
 `downloads/GLS-Property-Snippet-Source-and-Runtime-20261025.zip` 包含 Snippets、Runtime 和完整 Source，共 1229 项。CRC 与全部文件字节校验通过；解压后独立安装锁定依赖并构建，两项运行产物与交付内容一致。
 
 SHA256：`12a2b2467e92b39db7b1d1100589d6d320ffb8addcd6fb5de91498787e0160ba`。
+
+[下载片段、运行文件和源码合集](https://github.com/13858812638-glitch/MoNian/raw/f8a78930746f1b60b3e66e41d59c3a096330e554/downloads/GLS-Property-Snippet-Source-and-Runtime-20261025.zip)。实际 HTTP 下载返回 200，远端包与本地字节一致。
